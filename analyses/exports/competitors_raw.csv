@@ -1,0 +1,46 @@
+name,sector,main_competitors,ranking_score
+ByteDance,Media & Entertainment,"Meta, Youtube, Tencent, OpenAI, Google Deepmind",50000.0
+Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce","Pinduoduo,JD.com, ByteDance, Temu, Shein, Amazon, Made-in-China.com , Global Sources",30000.0
+Scale AI,ICT,"Srge AI, Snorkel AI, Data Annotation, Appen, Telus digital, Sama, Cloudfactory, Labelbox, Superannotate, Encord",16000.0
+Wayve,ICT,Waymo,2500.0
+UiPath,"ICT, Manufacturing & Operations, Professional Services",NA,1960.0
+Celonis,"ICT, Manufacturing & Operations, Professional Services","SAP Signavio, Microsoft Power Automate, UiPath , IBM Process Mining, Software AG (ARIS), Appian, ServiceNow , Durable Capital Partners,",1770.0
+YouTube,Media & Entertainment,"TikTok, Instagram, Twitch, Vimeo, Deezer",1680.0
+Cohere,"AI model, Cloud Provider, ICT","Anthropic, Mistral, OpenAI, Meta,",1600.0
+World Labs,AI model,"AMI Labs, Google DeepMind, Odyssey",1230.0
+Harvey,Professional Services,"CoCounsel (Thomson Reuters) , Lexis+ AI / Protégé (LexisNexis), Legora , LegalFly, Spellbook, Robin AI, Luminance",1200.0
+AMD,Hardware,"NVIDIA , Broadcom, Marvell , Intel, Qualcomm, Apple, Alphabet(TPU)",794.0
+ManoMano,Retail & E-commerce,"Leroy Merlin (Groupe Adeo), Groupe Kingfisher, Bricoman , Bricoprivé ,Bricozor / Plomberie-Pro",725.0
+BenevolentAI,"AI model, R&D, Biotech",Exscientia,550.0
+Synthesia,"AI model, Computer vision","HeyGen, OpenAI (Sora), Runway (Gen-2 / Gen-3) , Hour One , Colossyan",536.0
+DeepL,ICT,"Google Translate, Microsoft Translator, Reverso and Yandex, Translate.",415.0
+Hugging Face,"Hardware, ICT","Microsoft (Github Models), Réplicate, TogetherAI, Fireworks AI, civitai, Kaggle,",400.0
+Owkin,"AI model, Health & Social Care","Isomorphic Labs (Royaume-Uni), Exscientia, Recursion Pharmaceuticals, Insilico Medicine , Schrödinger , Iktos (France) , Aqemia (France), BioMap (Europe / Asie) , Tempus (États-Unis), Paige AI (États-Unis) , Tribun Health (France)",305.0
+ARM Holdings,Hardware,NA,253.0
+Adobe,ICT,"Canva, Figma , Apple, Midjourney / Magnific AI , OpenAI (Sora) ,  Runway, Canva, Rephrase.ai (2023)",252.0
+Qualcomm,Hardware,MediaTek; NVIDIA; Apple Silicon; Samsung System LSI; Intel,172.0
+Prophesee,,"Samsung Electronics (Corée du Sud),OmniVision Technologies (États-Unis / Chine) , Sony Group (Japon), iniVation (Suisse) , Oculi (États-Unis), Insightness (Suisse) , Cognex, Keyence, SICK AG",130.0
+Comand AI,"AI model, Aerospace & Defence","Anduril Industries, Palantir Technologies, Thales ,  Airbus Defence and Space (Europe)",124.0
+Ant Group,"Financial Services, AI model, ICT","Tencent, Visa, Mastercard, Stripe,",103.0
+Volta medical,"AI model, Health & Social Care, R&D","Biosense Webster , Johnson & Johnson, Medtronic , Abbott",90.0
+Anysphere,ICT,"Anthropic, OpenAI, Microsoft, Google",60.0
+Art Recognition,ICT,"Startbahn, Verisart , InsightART.",50.0
+DarwinAI,"ICT, Manufacturing & Operations",NA,50.0
+4.screen,"Transport & Mobility, Media & Entertainment","Telenav, Cerence, Connected Travel",42.0
+SoftBank Group,Retail & E-commerce,NA,27.0
+EbenBuild,Health & Social Care,"Dassault Systèmes (Projet Living Heart / Living Lung), InSilicoTrials, Virtonomy",12.0
+Amberscript,AI model,"Happy Scribe, Sonix, Trint, tl;dv , Otter.ai , Transkriptor , GoTranscript",10.0
+20face,"Health & Social Care, IT & Security","brighter AI (Allemagne), BioID (Allemagne), iProov (Royaume-Uni), PrivateID (États-Unis),  Oosto (anciennement AnyVision - Israël/USA), Incode Technologies (États-Unis), Thales Group (France), Cognitec Systems (Allemagne)",8.0
+Nvidia,"Hardware, AI model, ICT","AMD, Intel, Google, Broadcom, Qualcomm",5.0
+3ive AI,"ICT, Manufacturing & Operations, Transport & Mobility","Dassault Systèmes, Siemens Digital Industries Software,  PTC, Simus Systems (Classmate CAD) , CADENAS (PARTsolutions)",5.0
+Apple,ICT,"Google, Microsoft, Samsung, Amazon, Xiaomi, Huawei, Oppo, Vivo, Lenovo, HP , Dell, Spotify, Netflix, Amazon Prime Video, Disney+, meta, OpenAI",4.0
+Alphabet Inc.,ICT,"Microsoft, Amazon, Apple, Meta, Oracle, OpenAI, Anthropic, Microsoft, ByteDance, Amazon",4.0
+Google,ICT,"Bing,",2.0
+Amazon Web Services,"Hardware, ICT","Microsoft Azure, Google Cloud",1.0
+Broadcom,"Hardware, ICT, Manufacturing & Operations",NVIDIA; Qualcomm; Intel; Marvell Technology,1.0
+WhiteFiber,"Cloud Provider, ICT","CoreWeave, Lambda Labs, Voltage Park, IREN Cloud, Equinix DataBank, Google Compute Engine, Microsoft Azure, Amazon Web Services (AWS)",1.0
+Oxford Nanopore Technologies,"AI model, Health & Social Care","Pacific Biosciences, MGI Tech / Complete Genomics , Singular Genomics , Element Biosciences, illumina",1.0
+HughGrants,"AI model, ICT","Grantify, Egrants, OpenGrants",1.0
+Skylab,ICT,"Picterra , Orbify",1.0
+Meta,"AI model, Media & Entertainment, Retail & E-commerce","Alphabet, Google, ByteDance, Snap, X , Apple, SnapChat, Amazon, Apple, Sony, OpenAI, Anthropic, Telegram, WeChat",1.0
+Prognostix AB,R&D,"SKF Ensemble, Ambyint , SparkCognition, Uptake",0.1

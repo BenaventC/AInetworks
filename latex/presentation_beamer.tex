@@ -1,0 +1,255 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+\title{Synthese Statistique\\Reseaux d'Acteurs IA}
+\author{Projet Reseaux d'acteurs}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Plan}
+\tableofcontents
+\end{frame}
+
+\section{Contexte}
+
+\begin{frame}{Perimetre de l'analyse}
+\begin{itemize}
+  \item Source: API locale et notebook d'analyse.
+  \item Population: 1553 entreprises IA.
+  \item Couverture geographique: 26 pays.
+  \item Granularite sectorielle: 238 secteurs.
+  \item Objectif: etablir une vue macro fiable pour prioriser l'enrichissement.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cadre methodologique}
+\begin{itemize}
+  \item Recuperation de donnees depuis l'API avec pagination et segments (pending, validated).
+  \item Uniformisation de la capitalisation en millions (format numerique exploitable).
+  \item Production d'indicateurs de completude, validation, geographie et temporalite.
+  \item Exports CSV pour reutilisation dans les workflows data et reporting.
+\end{itemize}
+\end{frame}
+
+\section{Resultats globaux}
+
+\begin{frame}{Indicateurs globaux}
+\begin{table}
+\centering
+\begin{tabular}{lr}
+\toprule
+Indicateur & Valeur \\
+\midrule
+Nombre d'entreprises & 1553 \\
+Nombre de pays & 26 \\
+Nombre de secteurs & 238 \\
+Periode couverte & 1975 -- 2024 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Lecture macro}
+\begin{itemize}
+  \item Le corpus est volumineux, mais tres concentre geographiquement.
+  \item La couverture sectorielle est riche (238 secteurs), avec un noyau de categories dominantes.
+  \item Le signal temporel est recent (mediane 2020) sur les fiches avec annee renseignee.
+  \item Le principal goulot de qualite se situe sur les donnees financieres structurees.
+\end{itemize}
+\end{frame}
+
+\section{Geographie et secteurs}
+
+\begin{frame}{Top 5 des pays}
+\begin{table}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Pays & Entreprises & Part \\
+\midrule
+Allemagne & 925 & 59.6\% \\
+Suede & 212 & 13.7\% \\
+Pays-Bas & 169 & 10.9\% \\
+Etats-Unis & 135 & 8.7\% \\
+Chine & 16 & 1.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Concentration geographique}
+\begin{itemize}
+  \item L'Allemagne represente la majorite des fiches (59.6\%).
+  \item Les trois premiers pays (Allemagne, Suede, Pays-Bas) concentrent 84.2\% du corpus.
+  \item Les Etats-Unis et la Chine sont presents mais nettement moins representes.
+  \item Implication: les tendances globales refletent fortement la structure du marche allemand.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Top 5 des secteurs}
+\begin{table}
+\centering
+\begin{tabular}{lr}
+\toprule
+Secteur & Entreprises \\
+\midrule
+AI startup Europe & 193 \\
+Human Health \& Social Work Activities & 74 \\
+Entreprise IA cotee (market cap) & 61 \\
+Cross Industry - Operations & 38 \\
+AI startup Europe (Dealroom) & 38 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Lecture sectorielle}
+\begin{itemize}
+  \item Le champ \textit{sector} combine des etiquettes metier et des etiquettes de source.
+  \item Certaines categories sont transverses (Cross Industry), d'autres plus verticales (sante).
+  \item Une harmonisation semantique des secteurs augmenterait la precision analytique.
+  \item Priorite: normaliser les libelles avant comparaison fine inter-secteurs.
+\end{itemize}
+\end{frame}
+
+\section{Temporalite}
+
+\begin{frame}{Dynamique temporelle}
+\begin{itemize}
+  \item Annee moyenne de creation: 2017.5
+  \item Mediane: 2020
+  \item Ecart-type: 8.6
+  \item Creations depuis 2020: 47
+  \item Part des creations depuis 2020: 54.7\% (sur les fiches avec annee renseignee)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Interpretation temporelle}
+\begin{itemize}
+  \item Le corpus exploitable en chronologie est encore limite (faible taux de fiches datees).
+  \item Malgre cela, les donnees disponibles indiquent une acceleration recente.
+  \item La dispersion (ecart-type 8.6) suggere un melange d'acteurs etablis et emergents.
+  \item Axe d'amelioration: augmenter le remplissage de \textit{founded\_year}.
+\end{itemize}
+\end{frame}
+
+\section{Qualite des donnees}
+
+\begin{frame}{Qualite et validation des fiches}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Validation}
+\begin{itemize}
+  \item Fiches validees: 22 (1.4\%)
+  \item Fiches non validees: 1531 (98.6\%)
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{Completude}
+\begin{itemize}
+  \item Description: 88.6\%
+  \item Website: 89.4\%
+  \item Capitalisation renseign\'ee (>0): 9.9\%
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Capitalisation (en millions)}
+\begin{itemize}
+  \item Fiches avec capitalisation > 0: 154 (9.9\%)
+  \item Somme des capitalisations: 20\,948\,446.0 M
+  \item Mediane: 0.0 M
+\end{itemize}
+
+\vspace{0.5em}
+\textit{Lecture: une mediane a 0 confirme qu'une majorite de fiches n'a pas encore de capitalisation exploitable.}
+\end{frame}
+
+\begin{frame}{Completude: points forts et faibles}
+\begin{itemize}
+  \item Champs bien renseignes: \textit{name}, \textit{country}, \textit{description}, \textit{website}.
+  \item Champs fragiles: \textit{founded\_year}, \textit{employees\_count}, \textit{funds\_raised}.
+  \item Donnees financieres encore tres lacunaires malgre la normalisation de format.
+  \item La qualite technique est en hausse; l'enjeu restant est la profondeur documentaire.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Validation: risque et opportunite}
+\begin{itemize}
+  \item 1.4\% de fiches validees uniquement.
+  \item Risque: analyses decisionnelles biais\'ees par des fiches non confirmees.
+  \item Opportunite: industrialiser la revue de fiches par lot (pays/secteur/importance).
+  \item Recommendation: introduire un pipeline de validation en trois niveaux (auto, revue, approbation).
+\end{itemize}
+\end{frame}
+
+\section{Plan d'action}
+
+\begin{frame}{Axes de priorisation}
+\begin{enumerate}
+  \item Augmenter le taux de validation des fiches critiques (top pays / top secteurs).
+  \item Completer en priorite les champs financiers (capitalisation, levees, investisseurs).
+  \item Standardiser les metadonnees temporelles pour renforcer les analyses de tendance.
+  \item Instrumenter un suivi mensuel: croissance du corpus, validation, completude.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Roadmap operationnelle (90 jours)}
+\begin{enumerate}
+  \item Semaines 1--3: nettoyage des libelles secteur et revue des pays dominants.
+  \item Semaines 4--6: campagne de validation ciblee sur les 200 fiches les plus strategiques.
+  \item Semaines 7--9: enrichissement financier prioritaire et consolidation des sources.
+  \item Semaines 10--12: recalcul KPI, comparaison baseline, publication d'un rapport executif.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{KPI de suivi recommandes}
+\begin{table}
+\centering
+\begin{tabular}{lll}
+\toprule
+KPI & Baseline & Cible 90j \\
+\midrule
+Taux de fiches validees & 1.4\% & 15\% \\
+Fiches avec capitalisation > 0 & 9.9\% & 25\% \\
+Fiches avec annee fondee & 5.5\% & 20\% \\
+Fiches avec investisseurs & 1.1\% & 12\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+  \item La base est suffisamment large pour produire des signaux strat\'egiques.
+  \item La prochaine marche de valeur passe par la validation et l'enrichissement financier.
+  \item Le dispositif analytics est en place (notebook + exports) pour piloter la progression.
+  \item La priorisation proposee permet un gain de fiabilite mesurable a court terme.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\centering
+\Large Merci
+
+\vspace{0.5em}
+\normalsize
+Questions / Prochaines etapes
+\end{frame}
+
+\end{document}

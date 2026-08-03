@@ -1,0 +1,237 @@
+name,competitor,count
+ByteDance,Meta Platforms,1
+ByteDance,Alphabet,1
+ByteDance,Tencent,1
+ByteDance,OpenAI,1
+Alibaba,Pinduoduo,1
+Alibaba,Jd.Com,1
+Alibaba,Bytedance,1
+Alibaba,Temu,1
+Alibaba,Shein,1
+Alibaba,Amazon,1
+Alibaba,Made-In-China.Com,1
+Alibaba,Global Sources,1
+Scale AI,Srge Ai,1
+Scale AI,Snorkel Ai,1
+Scale AI,Data Annotation,1
+Scale AI,Appen,1
+Scale AI,Telus Digital,1
+Scale AI,Sama,1
+Scale AI,Cloudfactory,1
+Scale AI,Labelbox,1
+Scale AI,Superannotate,1
+Scale AI,Encord,1
+Wayve,Alphabet,1
+Celonis,Sap Signavio,1
+Celonis,Microsoft Power Automate,1
+Celonis,Uipath,1
+Celonis,Ibm Process Mining,1
+Celonis,Software Ag,1
+Celonis,Appian,1
+Celonis,Servicenow,1
+Celonis,Durable Capital Partners,1
+YouTube,Bytedance,1
+YouTube,Meta Platforms,1
+YouTube,Amazon,1
+YouTube,Vimeo,1
+YouTube,Deezer,1
+Cohere,Anthropic,1
+Cohere,Mistral,1
+Cohere,OpenAI,1
+Cohere,Meta Platforms,1
+World Labs,Ami Labs,1
+World Labs,Alphabet,1
+World Labs,Odyssey,1
+Harvey,Cocounsel,1
+Harvey,Lexis+ Ai,1
+Harvey,Protégé,1
+Harvey,Legora,1
+Harvey,Legalfly,1
+Harvey,Spellbook,1
+Harvey,Robin Ai,1
+Harvey,Luminance,1
+AMD,Nvidia,1
+AMD,Broadcom,1
+AMD,Marvell,1
+AMD,Intel,1
+AMD,Qualcomm,1
+AMD,Apple,1
+AMD,Alphabet,1
+ManoMano,Leroy Merlin,1
+ManoMano,Groupe Kingfisher,1
+ManoMano,Bricoman,1
+ManoMano,Bricoprivé,1
+ManoMano,Bricozor,1
+ManoMano,Plomberie-Pro,1
+BenevolentAI,Exscientia,1
+Synthesia,Heygen,1
+Synthesia,OpenAI,1
+Synthesia,Runway (Gen-2,1
+Synthesia,Gen-3),1
+Synthesia,Hour One,1
+Synthesia,Colossyan,1
+DeepL,Google Translate,1
+DeepL,Microsoft Translator,1
+DeepL,Reverso And Yandex,1
+DeepL,Translate.,1
+Hugging Face,Microsoft,1
+Hugging Face,Réplicate,1
+Hugging Face,Togetherai,1
+Hugging Face,Fireworks Ai,1
+Hugging Face,Civitai,1
+Hugging Face,Kaggle,1
+Owkin,Isomorphic Labs,1
+Owkin,Exscientia,1
+Owkin,Recursion Pharmaceuticals,1
+Owkin,Insilico Medicine,1
+Owkin,Schrödinger,1
+Owkin,Iktos,1
+Owkin,Aqemia,1
+Owkin,Biomap (Europe,1
+Owkin,Asie),1
+Owkin,Tempus,1
+Owkin,Paige Ai,1
+Owkin,Tribun Health,1
+Adobe,Canva,1
+Adobe,Figma,1
+Adobe,Apple,1
+Adobe,Midjourney,1
+Adobe,Magnific Ai,1
+Adobe,OpenAI,1
+Adobe,Runway,1
+Adobe,Rephrase.Ai,1
+Qualcomm,Mediatek,1
+Qualcomm,Nvidia,1
+Qualcomm,Apple Silicon,1
+Qualcomm,Samsung System Lsi,1
+Qualcomm,Intel,1
+Prophesee,Samsung,1
+Prophesee,Omnivision Technologies (États-Unis,1
+Prophesee,Chine),1
+Prophesee,Sony Group,1
+Prophesee,Inivation,1
+Prophesee,Oculi,1
+Prophesee,Insightness,1
+Prophesee,Cognex,1
+Prophesee,Keyence,1
+Prophesee,Sick Ag,1
+Comand AI,Anduril Industries,1
+Comand AI,Palantir Technologies,1
+Comand AI,Thales,1
+Comand AI,Airbus Defence And Space,1
+Ant Group,Tencent,1
+Ant Group,Visa,1
+Ant Group,Mastercard,1
+Ant Group,Stripe,1
+Volta medical,Biosense Webster,1
+Volta medical,Johnson & Johnson,1
+Volta medical,Medtronic,1
+Volta medical,Abbott,1
+Anysphere,Anthropic,1
+Anysphere,OpenAI,1
+Anysphere,Microsoft,1
+Anysphere,Alphabet,1
+Art Recognition,Startbahn,1
+Art Recognition,Verisart,1
+Art Recognition,Insightart.,1
+4.screen,Telenav,1
+4.screen,Cerence,1
+4.screen,Connected Travel,1
+EbenBuild,Dassault Systèmes (Projet Living Heart,1
+EbenBuild,Living Lung),1
+EbenBuild,Insilicotrials,1
+EbenBuild,Virtonomy,1
+Amberscript,Happy Scribe,1
+Amberscript,Sonix,1
+Amberscript,Trint,1
+Amberscript,Tl,1
+Amberscript,Dv,1
+Amberscript,Otter.Ai,1
+Amberscript,Transkriptor,1
+Amberscript,Gotranscript,1
+20face,Brighter Ai,1
+20face,Bioid,1
+20face,Iproov,1
+20face,Privateid,1
+20face,Oosto (Anciennement Anyvision - Israël,1
+20face,Usa),1
+20face,Incode Technologies,1
+20face,Thales Group,1
+20face,Cognitec Systems,1
+Nvidia,Amd,1
+Nvidia,Intel,1
+Nvidia,Alphabet,1
+Nvidia,Broadcom,1
+Nvidia,Qualcomm,1
+3ive AI,Dassault Systèmes,1
+3ive AI,Siemens Digital Industries Software,1
+3ive AI,Ptc,1
+3ive AI,Simus Systems,1
+3ive AI,Cadenas,1
+Apple,Alphabet,1
+Apple,Microsoft,1
+Apple,Samsung,1
+Apple,Amazon,1
+Apple,Xiaomi,1
+Apple,Huawei,1
+Apple,Oppo,1
+Apple,Vivo,1
+Apple,Lenovo,1
+Apple,Hp,1
+Apple,Dell,1
+Apple,Spotify,1
+Apple,Netflix,1
+Apple,Amazon Prime Video,1
+Apple,Disney+,1
+Apple,Meta Platforms,1
+Apple,OpenAI,1
+Alphabet Inc.,Microsoft,1
+Alphabet Inc.,Amazon,1
+Alphabet Inc.,Apple,1
+Alphabet Inc.,Meta Platforms,1
+Alphabet Inc.,Oracle,1
+Alphabet Inc.,OpenAI,1
+Alphabet Inc.,Anthropic,1
+Alphabet Inc.,Bytedance,1
+Google,Microsoft,1
+Amazon Web Services,Microsoft Azure,1
+Amazon Web Services,Alphabet,1
+Broadcom,Nvidia,1
+Broadcom,Qualcomm,1
+Broadcom,Intel,1
+Broadcom,Marvell Technology,1
+WhiteFiber,Coreweave,1
+WhiteFiber,Lambda Labs,1
+WhiteFiber,Voltage Park,1
+WhiteFiber,Iren Cloud,1
+WhiteFiber,Equinix Databank,1
+WhiteFiber,Google Compute Engine,1
+WhiteFiber,Microsoft Azure,1
+WhiteFiber,Amazon,1
+Oxford Nanopore Technologies,Pacific Biosciences,1
+Oxford Nanopore Technologies,Mgi Tech,1
+Oxford Nanopore Technologies,Complete Genomics,1
+Oxford Nanopore Technologies,Singular Genomics,1
+Oxford Nanopore Technologies,Element Biosciences,1
+Oxford Nanopore Technologies,Illumina,1
+HughGrants,Grantify,1
+HughGrants,Egrants,1
+HughGrants,Opengrants,1
+Skylab,Picterra,1
+Skylab,Orbify,1
+Meta,Alphabet,1
+Meta,Bytedance,1
+Meta,Snap,1
+Meta,X,1
+Meta,Apple,1
+Meta,Snapchat,1
+Meta,Amazon,1
+Meta,Sony,1
+Meta,OpenAI,1
+Meta,Anthropic,1
+Meta,Telegram,1
+Meta,Tencent,1
+Prognostix AB,Skf Ensemble,1
+Prognostix AB,Ambyint,1
+Prognostix AB,Sparkcognition,1
+Prognostix AB,Uptake,1

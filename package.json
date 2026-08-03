@@ -1,0 +1,16 @@
+{
+  "name": "ia-enterprises-network",
+  "version": "1.0.0",
+  "description": "Base de données des entreprises d'IA et leurs partenariats",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  }
+}

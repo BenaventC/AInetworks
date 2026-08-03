@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Actors Files</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <div class="header-title">
+          <h1>AI Actors Files</h1>
+          <p class="header-sub">Companies &amp; relationships in the AI landscape</p>
+          <p class="header-author">by <a href="https://www.linkedin.com/in/benavent/" target="_blank" rel="noopener" class="author-link">Christophe Benavent</a></p>
+        </div>
+        <button id="closeBtn" class="btn-close" title="Close">✕</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="enterprises">Companies</button>
+      <button class="tab-btn" data-tab="partnerships">Relationships</button>
+    </nav>
+
+    <!-- ===== COMPANIES TAB ===== -->
+    <section id="enterprises" class="tab-content active">
+      <div class="section-header">
+        <h2>Company Management</h2>
+        <button id="addEnterpriseBtn" class="btn btn-primary">+ Add company</button>
+      </div>
+
+      <!-- Company Form -->
+      <div id="enterpriseForm" class="form-container hidden">
+        <h3 id="formTitle">New Company</h3>
+        <form id="enterpriseInputForm">
+          <!-- IDENTITY & TYPE -->
+          <fieldset class="form-section">
+            <legend>Identity & Type</legend>
+            <div class="form-group">
+              <label for="entName">Company name *</label>
+              <input type="text" id="entName" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entOrganizationType">Organization type</label>
+                <select id="entOrganizationType">
+                  <option value="">Not specified</option>
+                  <option value="Seed">Seed</option>
+                  <option value="Publicly traded company">Publicly traded company</option>
+                  <option value="Private company">Private company</option>
+                  <option value="B-Corp">B-Corp</option>
+                  <option value="NGO">NGO</option>
+                  <option value="Academic">Academic</option>
+                  <option value="Open Science">Open Science</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="entCompanyStatus">Company status</label>
+                <select id="entCompanyStatus">
+                  <option value="Active" selected>Active</option>
+                  <option value="Acquired">Acquired</option>
+                  <option value="Bankrupt">Bankrupt</option>
+                  <option value="Inactive">Inactive</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- LOCATION & DATES -->
+          <fieldset class="form-section">
+            <legend>Location & Timeline</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entCountry">Country</label>
+                <input type="text" id="entCountry" placeholder="e.g. France">
+              </div>
+              <div class="form-group">
+                <label for="entHeadquarterCity">Headquarter city</label>
+                <input type="text" id="entHeadquarterCity" placeholder="e.g. Paris">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entYear">Founded year</label>
+                <input type="number" id="entYear">
+              </div>
+              <div class="form-group">
+                <label for="entEndYear">End year (if applicable)</label>
+                <input type="number" id="entEndYear" placeholder="e.g. 2023">
+              </div>
+              <div class="form-group">
+                <label for="entEndReason">End reason</label>
+                <select id="entEndReason">
+                  <option value="">Not applicable</option>
+                  <option value="Acquisition">Acquisition</option>
+                  <option value="Bankruptcy">Bankruptcy</option>
+                  <option value="Merger">Merger</option>
+                  <option value="Closure">Closure</option>
+                </select>
+              </div>
+            </div>
+            <div id="deadCompanyButtonContainer" class="form-group hidden">
+              <button type="button" id="confirmDeadCompanyBtn" class="btn btn-warning">Confirm dead company</button>
+              <small style="display: block; margin-top: 6px; color: #666;">Auto-fills company status based on end reason</small>
+            </div>
+          </fieldset>
+
+          <!-- SECTORS & CLASSIFICATION -->
+          <fieldset class="form-section">
+            <legend>Sectors & Classification</legend>
+            <div class="form-group">
+              <label for="entSectorLabels">Sector labels</label>
+              <div id="entSectorLabels" class="sector-label-picker" role="listbox" aria-multiselectable="true" aria-describedby="entSectorHelp"></div>
+              <small id="entSectorHelp" class="field-help">Click labels to toggle selection. Maximum 3 labels.</small>
+              <input type="text" id="entSectorCustom" placeholder="Additional labels (optional, comma-separated)">
+            </div>
+          </fieldset>
+
+          <!-- DESCRIPTION -->
+          <fieldset class="form-section">
+            <legend>Description</legend>
+            <div class="form-group">
+              <label for="entDescription">Company description</label>
+              <textarea id="entDescription" rows="4" placeholder="What does the company do? What are its core features or mission?"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- FINANCIALS -->
+          <fieldset class="form-section">
+            <legend>Financials & Scale</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entCapitalization">Market cap (USD millions)</label>
+                <input type="text" id="entCapitalization" placeholder="e.g. 120000 = 120B USD">
+              </div>
+              <div class="form-group">
+                <label for="entFundsRaised">Funds raised</label>
+                <input type="text" id="entFundsRaised" placeholder="e.g. 450 million USD">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entRevenueMillions">Revenue (USD millions)</label>
+                <input type="number" id="entRevenueMillions" placeholder="e.g. 12000 = 12B USD" step="0.01" min="0">
+              </div>
+              <div class="form-group">
+                <label for="entEmployees">Employees</label>
+                <input type="number" id="entEmployees" placeholder="e.g. 1500">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- NETWORK & ECOSYSTEM -->
+          <fieldset class="form-section">
+            <legend>Network & Ecosystem</legend>
+            <div class="form-group">
+              <label for="entMainInvestors">Main investors</label>
+              <textarea id="entMainInvestors" rows="3" placeholder="e.g. Sequoia Capital, Andreessen Horowitz, SoftBank"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="entMainCompetitors">Main competitors</label>
+              <textarea id="entMainCompetitors" rows="3" placeholder="e.g. Databricks, Google BigQuery, Amazon Redshift"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="entParticipation">Participation</label>
+              <textarea id="entParticipation" rows="2" placeholder="e.g. 10% stake, co-investment, strategic minority"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="entMainAcquisitions">Main acquisitions</label>
+              <textarea id="entMainAcquisitions" rows="3" placeholder="e.g. Neeva (2023), Observe (2026)"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="entKeyResources">Key resources</label>
+              <textarea id="entKeyResources" rows="3" placeholder="ex: Global CDN network, DNS resolver, WAF, Zero Trust platform"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="entStrategicPartnerships">Strategic partnerships</label>
+              <textarea id="entStrategicPartnerships" rows="3" placeholder="e.g. Microsoft, NVIDIA, Salesforce"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- LINKS & MEDIA -->
+          <fieldset class="form-section">
+            <legend>Links & Media</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entWebsite">Website</label>
+                <input type="url" id="entWebsite" placeholder="https://...">
+              </div>
+              <div class="form-group">
+                <label for="entLogo">Logo URL</label>
+                <input type="url" id="entLogo" placeholder="https://...">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- VALIDATION & METADATA -->
+          <fieldset class="form-section">
+            <legend>Validation & Metadata</legend>
+            <div class="form-group">
+              <label for="entValidated">Record validation</label>
+              <select id="entValidated">
+                <option value="0">Not validated</option>
+                  <option value="1" selected>Partially validated</option>
+                <option value="2">Validated</option>
+                <option value="3">To review later</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" id="cancelEnterpriseBtn" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Company List -->
+
+      <!-- Company List -->
+      <div class="enterprise-subtabs" id="enterpriseSubtabs">
+        <button class="enterprise-subtab-btn" data-enterprise-segment="partial">Partially validated</button>
+        <button class="enterprise-subtab-btn" data-enterprise-segment="validated">Validated</button>
+        <button class="enterprise-subtab-btn active" data-enterprise-segment="later">To review later</button>
+        <button class="enterprise-subtab-btn" data-enterprise-segment="top100">Top 200</button>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="enterpriseSearch" placeholder="Search a company...">
+      </div>
+
+      <div class="enterprise-filters" id="enterpriseFilters">
+        <p class="filter-note">Options are ranked from most frequent to least frequent.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enterpriseSectorFilter">Filter by sector</label>
+            <select id="enterpriseSectorFilter">
+              <option value="">All sectors</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="enterpriseCountryFilter">Filter by country</label>
+            <select id="enterpriseCountryFilter">
+              <option value="">All countries</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="enterpriseCityFilter">Filter by city</label>
+            <select id="enterpriseCityFilter">
+              <option value="">All cities</option>
+            </select>
+          </div>
+          <div class="form-group" style="display:flex;align-items:flex-end;">
+            <button type="button" id="resetEnterpriseFiltersBtn" class="btn btn-secondary" style="width:100%;">Reset filters</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="enterprisesList" class="list-container">
+        <p class="loading">Loading...</p>
+      </div>
+
+      <div id="enterprisePagination" class="pagination-container"></div>
+    </section>
+
+    <!-- ===== RELATIONSHIPS TAB ===== -->
+    <section id="partnerships" class="tab-content">
+      <div class="section-header">
+        <h2>Relationship Management</h2>
+        <button id="addPartnershipBtn" class="btn btn-primary">+ Add relationship</button>
+      </div>
+
+      <!-- Relationship Form -->
+      <div id="partnershipForm" class="form-container hidden">
+        <h3>New Relationship</h3>
+        <form id="partnershipInputForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="partner1">Focal company *</label>
+              <select id="partner1" required>
+                <option value="">Select a company</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="partner2">Partner *</label>
+              <select id="partner2" required>
+                <option value="">Select a company</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="partRelationType">Relationship type</label>
+              <input type="text" id="partRelationType" placeholder="ex: Strategic alliance, Commercial agreement, Co-development">
+            </div>
+            <div class="form-group">
+              <label for="partType">Partnership category</label>
+              <select id="partType">
+                <option value="">Select a category</option>
+                <option value="Joint Venture">Joint Venture</option>
+                <option value="Investment">Investment</option>
+                <option value="Technology Partnership">Technology Partnership</option>
+                <option value="Distribution">Distribution</option>
+                <option value="R&D">R&D</option>
+                <option value="Acquisition / Integration">Acquisition / Integration</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="partStatus">Status</label>
+              <select id="partStatus">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+                <option value="planned">Planned</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="partValidated">Validation</label>
+              <select id="partValidated">
+                <option value="0">Not validated</option>
+                <option value="1">Partially validated</option>
+                <option value="2">Validated</option>
+                <option value="3">To review later</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="partStartDate">Start date</label>
+              <input type="date" id="partStartDate">
+            </div>
+            <div class="form-group">
+              <label for="partEndYear">End year</label>
+              <input type="number" id="partEndYear" placeholder="e.g. 2030" min="1900" max="3000">
+            </div>
+            <div class="form-group">
+              <label for="partValue">Value (entry in USD millions)</label>
+              <input type="number" id="partValue" placeholder="e.g. 12000 (renders as 12 billion USD)" step="0.01">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="partDescription">Description</label>
+            <textarea id="partDescription" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="partSourcesInfo">Information sources</label>
+            <input type="text" id="partSourcesInfo" placeholder="e.g. LinkedIn, press release, press article...">
+          </div>
+
+          <div class="form-group">
+            <label for="partInfraCommitment">Infrastructure commitment (text)</label>
+            <textarea id="partInfraCommitment" rows="3" placeholder="e.g. 100B USD cloud spend over 10 years"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" id="cancelPartnershipBtn" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Relationship List -->
+      <div class="enterprise-subtabs" id="partnershipSubtabs">
+        <button class="partnership-subtab-btn" data-partnership-segment="partial">Partially validated</button>
+        <button class="partnership-subtab-btn" data-partnership-segment="validated">Validated</button>
+        <button class="partnership-subtab-btn active" data-partnership-segment="later">To review later</button>
+        <button class="partnership-subtab-btn" data-partnership-segment="top100">Top 200</button>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="partnershipSearch" placeholder="Search a relationship...">
+      </div>
+
+      <div id="partnershipsList" class="list-container">
+        <p class="loading">Loading...</p>
+      </div>
+
+      <div id="partnershipPagination" class="pagination-container"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

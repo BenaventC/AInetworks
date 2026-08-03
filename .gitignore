@@ -1,0 +1,9 @@
+node_modules/
+database.db
+*.log
+.DS_Store
+.env
+.env.local
+
+# Sources locales / données brutes non versionnées
+Sources/
