@@ -25,19 +25,27 @@ Prérequis :
 - Node.js 18+
 - npm
 
-Installation :
+### Installation locale
 
 ```bash
+git clone https://github.com/BenaventC/AInetworks.git
+cd AInetworks
 npm install
 ```
 
-Lancement :
+### Lancement local
 
 ```bash
 npm start
 ```
 
 L’application est ensuite accessible sur http://localhost:3000.
+
+### Utilisation locale
+
+1. Ouvrez votre navigateur à l’adresse http://localhost:3000.
+2. La page affiche l’interface locale du projet.
+3. Si vous souhaitez arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
 
 ## Structure du projet
 
