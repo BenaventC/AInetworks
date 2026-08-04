@@ -7,7 +7,7 @@ Ce dépôt rassemble un projet d’exploration des acteurs de l’IA, leurs part
 L’objectif est de fournir une base de travail ouverte pour :
 
 - cartographier les entreprises et organisations de l’IA,
-- documenter leurs partenariats et relations,
+- documenter leurs positions concurrrentielles, leurs réseaux de partenariats et relations financières.
 - produire des analyses locales et des exports structurés,
 - permettre une exploration simple via une interface web locale.
 
@@ -58,6 +58,59 @@ L’application est ensuite accessible sur http://localhost:3000.
 ├── archives/
 └── exports/
 ```
+
+## Analyses
+
+Le dossier `analyses/` contient les notebooks principaux pour explorer la base sous différents angles.
+
+### 1. Analyse concurrentielle
+
+Notebook : `analyses/competition_analysis.ipynb`
+
+Objectif : cartographier les relations entreprise-concurrent et projeter l'espace concurrentiel en 2D.
+
+Sorties principales (dans `analyses/exports/`) :
+- `competitors_raw.csv`
+- `competitors_long.csv`
+- `competitors_aggregated.csv`
+- `cooccurrence_matrix.csv`
+- `coords_2d.csv`
+- `competition_map_2d.html`
+
+### 2. Analyse de similarité sémantique
+
+Notebook : `analyses/semantic_similarity_analysis.ipynb`
+
+Objectif : mesurer la proximité sémantique entre entreprises à partir des descriptions textuelles, avec embeddings multilingues.
+
+Filtre principal : entreprises avec valorisation/fonds > 100 et description non vide.
+
+Sorties principales (dans `analyses/exports/`) :
+- `semantic_raw.csv`
+- `semantic_distance_matrix.csv`
+- `semantic_coords_2d.csv`
+- `semantic_similarity_pairs.csv`
+- `semantic_similarity_map_2d.html`
+
+### 3. Alignement Procruste des deux espaces
+
+Notebook : `analyses/procrustes_alignment_analysis.ipynb`
+
+Objectif : aligner l'espace concurrentiel et l'espace sémantique sur l'intersection des entreprises communes, puis mesurer les écarts résiduels par entreprise.
+
+Sorties principales (dans `analyses/exports/`) :
+- `procrustes_aligned_positions.csv`
+- `procrustes_top_gaps.csv`
+- `procrustes_summary.csv`
+- `procrustes_robust_comparison.csv`
+
+### Ordre recommandé d'exécution
+
+1. `competition_analysis.ipynb`
+2. `semantic_similarity_analysis.ipynb`
+3. `procrustes_alignment_analysis.ipynb`
+
+Cet ordre garantit la présence des fichiers exportés nécessaires aux analyses croisées.
 
 ## Méthodologie de constitution du corpus
 
