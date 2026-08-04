@@ -59,6 +59,58 @@ L’application est ensuite accessible sur http://localhost:3000.
 └── exports/
 ```
 
+## Méthodologie de constitution du corpus
+
+La base de données a été constituée selon un processus itératif en six étapes :
+
+### 1. Compilation de sources multiples
+
+Le corpus initial provient de la fusion de plusieurs listes d'entreprises de l'IA :
+- **Listes internationales** : Forbes AI 50, CB Insights AI 100, Crunchbase AI startups
+- **Listes nationales et régionales** : AI Startups Europe, Sifted AI 100, listes par pays
+- **Licornes et entreprises à forte capitalisation** : CompaniesMarketCap, données boursières
+- **Sources Wikipedia** : catégories d'entreprises d'IA, pages thématiques
+
+### 2. Nettoyage et déduplication
+
+Les listes compilées ont été nettoyées par des scripts automatisés :
+- Déduplication des noms d'entreprises (variantes orthographiques, casse, diacritiques)
+- Normalisation des champs géographiques (pays, villes) vers des formes canoniques
+- Harmonisation des noms de partenaires, concurrents et investisseurs
+- Suppression des doublons et consolidation des enregistrements
+
+### 3. Enrichissement automatisé
+
+Les champs manquants ont été complétés via GitHub Copilot et ses outils de recherche :
+- Extraction de données structurées depuis Wikipedia, Wikidata
+- Requêtes ciblées sur des sources publiques (sites officiels, bases de données ouvertes)
+- Mapping automatique de la capitalisation boursière et des montants de levée de fonds
+- Remplissage des métadonnées (année de création, secteur, description)
+
+### 4. Correction manuelle systématique
+
+Chaque fiche a été révisée manuellement avec l'assistance d'outils IA :
+- Utilisation de Google AI Search pour valider et corriger les informations
+- Application d'un prompt systématique reprenant tous les champs de la base
+- Vérification incidente des incohérences et des données aberrantes
+- Préférence pour `NA` en cas de doute plutôt que des valeurs hypothétiques
+
+### 5. Révisions itératives des acteurs majeurs
+
+Les 200 premières entreprises (par capitalisation ou montant cumulé de levées de fonds) ont bénéficié de révisions approfondies :
+- Plusieurs passages de vérification et d'enrichissement
+- Mise à jour continue au fil des informations collectées
+- Validation croisée des partenariats et relations concurrentielles
+- Documentation des sources et arbitrage en cas de divergences
+
+### 6. Maintenance collaborative future
+
+La base est conçue pour évoluer avec des contributions ciblées :
+- Mise à jour manuelle par segments : pays, marchés, technologies
+- Contributions étudiantes et académiques sur des périmètres définis
+- Processus de révision et validation des modifications
+- Documentation des changements et traçabilité des sources
+
 ## Disclaimer
 
 Ce projet est une compilation de recherche et de données issues de sources variées. Les informations peuvent être incomplètes, obsolètes, partielles ou sujettes à erreur.

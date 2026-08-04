@@ -626,29 +626,35 @@ async function submitEnterpriseForm(e) {
     return;
   }
 
+  const name = document.getElementById('entName').value.trim();
+  if (!name) {
+    showError('Company name is required');
+    return;
+  }
+
   const data = {
-    name: document.getElementById('entName').value,
+    name,
     sector: selectedSectorLabels.length > 0 ? selectedSectorLabels.join(', ') : null,
-    organization_type: document.getElementById('entOrganizationType').value || null,
-    company_status: document.getElementById('entCompanyStatus').value || null,
-    country: document.getElementById('entCountry').value || null,
-    headquarter_city: document.getElementById('entHeadquarterCity').value || null,
-    founded_year: parseInt(document.getElementById('entYear').value) || null,
-    end_year: parseInt(document.getElementById('entEndYear').value) || null,
-    end_reason: document.getElementById('entEndReason').value || null,
-    description: document.getElementById('entDescription').value || null,
-    main_investors: document.getElementById('entMainInvestors').value || null,
-    main_competitors: document.getElementById('entMainCompetitors').value || null,
-    participation: document.getElementById('entParticipation').value || null,
-    main_acquisitions: document.getElementById('entMainAcquisitions').value || null,
-    key_resources: document.getElementById('entKeyResources').value || null,
-    strategic_partnerships: document.getElementById('entStrategicPartnerships').value || null,
-    website: document.getElementById('entWebsite').value || null,
-    logo_url: document.getElementById('entLogo').value || null,
-    capitalization: document.getElementById('entCapitalization').value || null,
-    funds_raised: document.getElementById('entFundsRaised').value || null,
+    organization_type: document.getElementById('entOrganizationType').value?.trim() || null,
+    company_status: document.getElementById('entCompanyStatus').value?.trim() || null,
+    country: document.getElementById('entCountry').value?.trim() || null,
+    headquarter_city: document.getElementById('entHeadquarterCity').value?.trim() || null,
+    founded_year: document.getElementById('entYear').value ? parseInt(document.getElementById('entYear').value, 10) : null,
+    end_year: document.getElementById('entEndYear').value ? parseInt(document.getElementById('entEndYear').value, 10) : null,
+    end_reason: document.getElementById('entEndReason').value?.trim() || null,
+    description: document.getElementById('entDescription').value?.trim() || null,
+    main_investors: document.getElementById('entMainInvestors').value?.trim() || null,
+    main_competitors: document.getElementById('entMainCompetitors').value?.trim() || null,
+    participation: document.getElementById('entParticipation').value?.trim() || null,
+    main_acquisitions: document.getElementById('entMainAcquisitions').value?.trim() || null,
+    key_resources: document.getElementById('entKeyResources').value?.trim() || null,
+    strategic_partnerships: document.getElementById('entStrategicPartnerships').value?.trim() || null,
+    website: document.getElementById('entWebsite').value?.trim() || null,
+    logo_url: document.getElementById('entLogo').value?.trim() || null,
+    capitalization: document.getElementById('entCapitalization').value?.trim() || null,
+    funds_raised: document.getElementById('entFundsRaised').value?.trim() || null,
     revenue_millions: document.getElementById('entRevenueMillions').value ? parseFloat(document.getElementById('entRevenueMillions').value) : null,
-    employees_count: parseInt(document.getElementById('entEmployees').value) || null,
+    employees_count: document.getElementById('entEmployees').value ? parseInt(document.getElementById('entEmployees').value, 10) : null,
     is_validated: normalizeValidationLevel(document.getElementById('entValidated').value)
   };
 
@@ -668,14 +674,23 @@ async function submitEnterpriseForm(e) {
       });
     }
 
+    const responseBody = await response.text();
+    let parsedBody = null;
+    try {
+      parsedBody = responseBody ? JSON.parse(responseBody) : null;
+    } catch (err) {
+      parsedBody = null;
+    }
+
     if (response.ok) {
       showSuccess(isEditingEnterprise ? 'Company updated ✓' : 'Company created ✓');
       closeEnterpriseForm();
       refreshEnterpriseSegmentCounts();
       loadEnterprises();
     } else {
-      const error = await response.json();
-      showError(error.error || 'Error while saving');
+      const message = parsedBody?.error || responseBody || 'Error while saving';
+      showError(message);
+      console.error('Save failed:', message);
     }
   } catch (error) {
     console.error('Error:', error);
