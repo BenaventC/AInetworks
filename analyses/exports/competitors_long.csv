@@ -266,7 +266,7 @@ pair_id,name,competitor,sector,ranking_score
 264,Broadcom,Marvell Technology,"Hardware, ICT, Manufacturing & Operations",1.0
 265,SpaceX,Boeing,"Cloud Provider, Data, Aerospace",1.0
 266,SpaceX,Arianegroup,"Cloud Provider, Data, Aerospace",1.0
-267,SpaceX,Amazon,"Cloud Provider, Data, Aerospace",1.0
+267,SpaceX,Amazon Web Services,"Cloud Provider, Data, Aerospace",1.0
 268,SpaceX,Microsoft,"Cloud Provider, Data, Aerospace",1.0
 269,SpaceX,Google,"Cloud Provider, Data, Aerospace",1.0
 270,SpaceX,Coreweave,"Cloud Provider, Data, Aerospace",1.0
@@ -279,7 +279,7 @@ pair_id,name,competitor,sector,ranking_score
 277,WhiteFiber,Equinix Databank,"Cloud Provider, ICT",1.0
 278,WhiteFiber,Google Compute Engine,"Cloud Provider, ICT",1.0
 279,WhiteFiber,Microsoft,"Cloud Provider, ICT",1.0
-280,WhiteFiber,Amazon,"Cloud Provider, ICT",1.0
+280,WhiteFiber,Amazon Web Services,"Cloud Provider, ICT",1.0
 281,Oxford Nanopore Technologies,Pacific Biosciences,"AI model, Health & Social Care",1.0
 282,Oxford Nanopore Technologies,Mgi Tech,"AI model, Health & Social Care",1.0
 283,Oxford Nanopore Technologies,Complete Genomics,"AI model, Health & Social Care",1.0
