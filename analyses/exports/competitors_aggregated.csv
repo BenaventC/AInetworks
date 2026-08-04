@@ -28,6 +28,17 @@ Cerebras,Google . Amazon Web Services,1
 Cerebras,Microsoft,1
 Cerebras,Google,1
 Cerebras,Coreweave,1
+Mistral AI,OpenAI,1
+Mistral AI,Cohere,1
+Mistral AI,Anthropic,1
+Mistral AI,Google,1
+Mistral AI,Meta,1
+Mistral AI,Aleph Alpha,1
+Mistral AI,H Company,1
+Mistral AI,Poolside,1
+Mistral AI,Deepl,1
+Mistral AI,Helsing,1
+Mistral AI,Black Forest Labs,1
 Wayve,Google,1
 UiPath,N,1
 UiPath,A,1
@@ -91,10 +102,25 @@ Synthesia,Runway (Gen-2,1
 Synthesia,Gen-3),1
 Synthesia,Hour One,1
 Synthesia,Colossyan,1
+Black Forest Labs,Midjourney,1
+Black Forest Labs,OpenAI,1
+Black Forest Labs,Stability Ai,1
+Black Forest Labs,Google,1
+Black Forest Labs,Kuaishou,1
+Black Forest Labs,Shengshu Technology,1
+Black Forest Labs,Zhipu Ai,1
+Black Forest Labs,Alibaba,1
+Black Forest Labs,Tencent,1
+Black Forest Labs,ByteDance,1
 DeepL,Google,1
 DeepL,Microsoft,1
 DeepL,Reverso And Yandex,1
 DeepL,Translate.,1
+Oracle,Amazon,1
+Oracle,Google,1
+Oracle,Microsoft,1
+Oracle,Sap,1
+Oracle,Saleforce,1
 Hugging Face,Microsoft,1
 Hugging Face,Replicate,1
 Hugging Face,Togetherai,1
@@ -110,6 +136,14 @@ Sakana AI,Cognition Ai,1
 Sakana AI,Poolside,1
 Sakana AI,Hugging Face,1
 Sakana AI,Cohere,1
+Palantir,Lockheed Martin,1
+Palantir,Raytheon,1
+Palantir,Booz Allen Hamilton,1
+Palantir,Chapsvision,1
+Palantir,Snowflake,1
+Palantir,Databricks,1
+Palantir,Microsoft,1
+Palantir,Amazon,1
 Owkin,Isomorphic Labs,1
 Owkin,Exscientia,1
 Owkin,Recursion Pharmaceuticals,1
@@ -122,8 +156,11 @@ Owkin,Asie),1
 Owkin,Tempus,1
 Owkin,Paige Ai,1
 Owkin,Tribun Health,1
-ARM Holdings,N,1
-ARM Holdings,A,1
+ARM Holdings,INtel,1
+ARM Holdings,Amd,1
+ARM Holdings,Meta,1
+ARM Holdings,Google,1
+ARM Holdings,Qualcomm,1
 Adobe,Canva,1
 Adobe,Figma,1
 Adobe,Apple,1
@@ -184,6 +221,12 @@ Doubleword,Fireworks Ai,1
 Doubleword,Liquid Ai,1
 Doubleword,Scale Ai,1
 Doubleword,Comet,1
+Kuaishou,ByteDance,1
+Kuaishou,Meta,1
+Kuaishou,OpenAI,1
+Kuaishou,Black Forest Labs,1
+Kuaishou,Runway,1
+Kuaishou,Midjourney,1
 EbenBuild,Dassault Systèmes (Projet Living Heart,1
 EbenBuild,Living Lung),1
 EbenBuild,Insilicotrials,1
@@ -251,6 +294,8 @@ Alphabet Inc.,Oracle,1
 Alphabet Inc.,OpenAI,1
 Alphabet Inc.,Anthropic,1
 Alphabet Inc.,ByteDance,1
+Alphabet Inc.,Tesla,1
+Alphabet Inc.,Baidu,1
 Microsoft,Amazon,1
 Microsoft,Google,1
 Microsoft,Meta,1

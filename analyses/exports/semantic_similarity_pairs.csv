@@ -1,0 +1,3487 @@
+company_1,company_2,similarity,distance
+Xelix,SiPearl,0.99468845,0.0053115487
+Xelix,Nabla,0.993914,0.006085992
+SiPearl,Tessl,0.9927677,0.0072323084
+SiPearl,Nabla,0.98963404,0.010365963
+Xelix,Tessl,0.9891846,0.010815382
+Tessl,Nabla,0.98782176,0.012178242
+Scale AI,Hugging Face,0.83952713,0.16047287
+Perplexity,Perplexity AI,0.8369127,0.16308731
+MiniMax,Hailo Technologies,0.81632626,0.18367374
+BuildOps,PlanRadar,0.7536385,0.2463615
+Scale AI,ManoMano,0.7431595,0.25684053
+Procore,PlanRadar,0.73556125,0.26443875
+Black Forest Labs,Black Forest AI GmbH,0.72315705,0.27684295
+Apollo,Cognism,0.70190597,0.29809403
+OpenAI,Anthropic,0.69443506,0.30556494
+Anthropic,Hugging Face,0.68898416,0.31101584
+01.AI,Sakana AI,0.6772359,0.3227641
+Cerebras,Celonis,0.67425174,0.32574826
+Mistral AI,01.AI,0.67223364,0.32776636
+Procore,BuildOps,0.6709557,0.32904428
+Owkin,Aqemia,0.66500735,0.33499265
+Scale AI,Appen,0.6632693,0.33673072
+Hugging Face,Appen,0.65067154,0.34932846
+Sidetrade,Shift Technology,0.64733076,0.35266924
+UiPath,Appen,0.6383569,0.36164308
+01.AI,Hailo Technologies,0.6372106,0.3627894
+World Labs,AMI - Advanced Machine Intelligence,0.63617927,0.36382073
+Mistral AI,Synthesia,0.63321584,0.36678416
+5C,Hugging Face,0.62454474,0.37545526
+Nscale,Hugging Face,0.62208366,0.37791634
+Scale AI,Anthropic,0.6200449,0.3799551
+1X Technologies,Hailo Technologies,0.61983204,0.38016796
+PhotoRoom,Prophesee,0.61302114,0.38697886
+World Labs,Hugging Face,0.6119255,0.38807452
+MiniMax,01.AI,0.6118338,0.3881662
+Synthesia,01.AI,0.6115983,0.3884017
+Scale AI,5C,0.61097264,0.38902736
+Scale AI,AMI - Advanced Machine Intelligence,0.6109552,0.38904482
+AMI - Advanced Machine Intelligence,Hugging Face,0.60929716,0.39070284
+ManoMano,Hugging Face,0.6084319,0.39156812
+Owkin,Prophesee,0.6076424,0.3923576
+OpenAI,Mistral AI,0.6048019,0.3951981
+Scale AI,Comand AI,0.6044005,0.39559948
+UiPath,Hugging Face,0.6039681,0.39603192
+01.AI,Appen,0.6030946,0.39690542
+Anthropic,AMI - Advanced Machine Intelligence,0.6026698,0.39733022
+Scale AI,World Labs,0.60148036,0.39851964
+Shift Technology,Lightspeed,0.6010279,0.3989721
+UiPath,Sakana AI,0.59974957,0.40025043
+Alibaba,Ant Group,0.59738594,0.40261406
+Anthropic,01.AI,0.5973217,0.4026783
+Databricks,Anthropic,0.5913509,0.4086491
+Physical Intelligence,World Labs,0.59036994,0.40963006
+AMI - Advanced Machine Intelligence,Black Forest Labs,0.5896887,0.41031128
+Scale AI,Groq,0.5891661,0.4108339
+Hugging Face,Comand AI,0.58782846,0.41217154
+Sakana AI,Comand AI,0.58691883,0.41308117
+World Labs,Prophesee,0.5860026,0.4139974
+Groq,Hugging Face,0.5857785,0.41422153
+Y combinator,Palantir,0.58507055,0.41492945
+World Labs,ManoMano,0.58503455,0.41496545
+Mistral AI,Sakana AI,0.5845978,0.41540217
+Lightspeed,Apollo,0.58448225,0.41551775
+Scale AI,UiPath,0.5829521,0.41704792
+Waymo,Wayve,0.5795726,0.42042738
+RobCo GmbH,Exotec,0.57924837,0.42075163
+Hailo Technologies,H Company,0.57816416,0.42183584
+World Labs,Owkin,0.57789826,0.42210174
+AMI - Advanced Machine Intelligence,Owkin,0.5768389,0.4231611
+AMI - Advanced Machine Intelligence,Aqemia,0.574974,0.425026
+OpenAI,01.AI,0.57489836,0.42510164
+Physical Intelligence,AMI - Advanced Machine Intelligence,0.5682379,0.4317621
+Scale AI,Lightspeed,0.5679132,0.43208683
+Aleph Alpha,Hugging Face,0.5675802,0.43241978
+Celonis,AMI - Advanced Machine Intelligence,0.5672155,0.4327845
+Groq,Sakana AI,0.56704074,0.43295926
+OpenAI,Sakana AI,0.5669226,0.4330774
+Scale AI,Owkin,0.56527025,0.43472975
+Mistral AI,Hailo Technologies,0.5647301,0.4352699
+Cerebras,Nscale,0.5644038,0.43559623
+UiPath,ARM Holdings,0.5641011,0.4358989
+Physical Intelligence,01.AI,0.5640138,0.43598622
+Wayve,Hugging Face,0.5640006,0.4359994
+MiniMax,Comand AI,0.56376976,0.43623024
+Scale AI,Physical Intelligence,0.5636771,0.43632293
+Scale AI,01.AI,0.5628229,0.43717712
+01.AI,Comand AI,0.5620907,0.4379093
+Physical Intelligence,Prophesee,0.5620039,0.4379961
+Synthesia,Hailo Technologies,0.5613841,0.43861592
+1X Technologies,RobCo GmbH,0.5611795,0.43882048
+Cerebras,ARM Holdings,0.5599196,0.4400804
+UiPath,01.AI,0.5595779,0.44042212
+Cerebras,AMI - Advanced Machine Intelligence,0.5581146,0.4418854
+Hailo Technologies,Comand AI,0.5574434,0.44255662
+Appen,SiPearl,0.55666214,0.44333786
+OpenAI,Hugging Face,0.55644363,0.44355637
+Mistral AI,Appen,0.5564362,0.44356382
+Appen,Tessl,0.555304,0.444696
+OpenAI,Scale AI,0.55506885,0.44493115
+Hugging Face,ARM Holdings,0.55493474,0.44506526
+Cerebras,Hugging Face,0.55469257,0.44530743
+Anthropic,Y combinator,0.55428547,0.44571453
+BenevolentAI,01.AI,0.5535181,0.44648188
+Nscale,AMI - Advanced Machine Intelligence,0.5531499,0.44685012
+UiPath,Comand AI,0.55312055,0.44687945
+Sidetrade,Apollo,0.5525933,0.4474067
+Scale AI,Shift Technology,0.55184704,0.44815296
+01.AI,H Company,0.55107063,0.44892937
+Scale AI,Wayve,0.55081946,0.44918054
+Appen,Nabla,0.550734,0.44926602
+Synthesia,Comand AI,0.549822,0.45017803
+Groq,Comand AI,0.5465206,0.4534794
+Cerebras,Groq,0.54541916,0.45458084
+Appen,Xelix,0.54482186,0.45517814
+Nscale,World Labs,0.5447402,0.4552598
+Appen,Comand AI,0.5441409,0.45585912
+Databricks,Oracle,0.54191464,0.45808536
+Hailo Technologies,ARM Holdings,0.54095495,0.45904505
+OpenAI,Synthesia,0.5399123,0.46008772
+Mistral AI,Black Forest Labs,0.53899,0.46100998
+AMD,ARM Holdings,0.5387028,0.4612972
+01.AI,Hugging Face,0.53761363,0.46238637
+World Labs,Aleph Alpha,0.53691566,0.46308434
+Cerebras,Physical Intelligence,0.53678495,0.46321505
+Appen,Ant Group,0.5366575,0.4633425
+Hailo Technologies,Sakana AI,0.5363215,0.46367848
+Multiverse Computing,AMI - Advanced Machine Intelligence,0.53629404,0.46370596
+World Labs,Black Forest Labs,0.5355023,0.4644977
+Perplexity AI,Comand AI,0.53537136,0.46462864
+Anthropic,5C,0.53515446,0.46484554
+Scale AI,ARM Holdings,0.53484917,0.46515083
+Cerebras,AMD,0.53440094,0.46559906
+Scale AI,Prophesee,0.5343718,0.4656282
+5C,Appen,0.53357023,0.46642977
+Mistral AI,Comand AI,0.53318757,0.46681243
+Anthropic,Mistral AI,0.5328847,0.46711528
+Scale AI,Sakana AI,0.5327059,0.4672941
+Hugging Face,Nabla,0.5324518,0.4675482
+AMD,Hugging Face,0.5320781,0.4679219
+Scale AI,Nscale,0.53199947,0.46800053
+Hugging Face,Black Forest AI GmbH,0.5312821,0.46871787
+OpenAI,Physical Intelligence,0.5308675,0.46913248
+Anthropic,World Labs,0.5302662,0.46973377
+Black Forest AI GmbH,Comand AI,0.5300279,0.46997207
+Synthesia,Sakana AI,0.52886564,0.47113436
+Hugging Face,SiPearl,0.5281361,0.47186393
+Anthropic,Sakana AI,0.5280564,0.47194362
+PolyAI,Parloa,0.5277917,0.47220832
+Anthropic,Physical Intelligence,0.52773005,0.47226995
+01.AI,Lightspeed,0.5275457,0.4724543
+MiniMax,Synthesia,0.5269044,0.4730956
+Anthropic,Black Forest Labs,0.52687657,0.47312343
+Databricks,Hugging Face,0.52662146,0.47337854
+MiniMax,1X Technologies,0.52637535,0.47362465
+Hugging Face,Xelix,0.5257158,0.47428417
+Sidetrade,Lightspeed,0.5253891,0.47461092
+Hugging Face,Tessl,0.5248889,0.47511113
+AMI - Advanced Machine Intelligence,Black Forest AI GmbH,0.52469903,0.47530097
+Mistral AI,UiPath,0.5242871,0.4757129
+Black Forest Labs,Hugging Face,0.5234112,0.4765888
+1X Technologies,H Company,0.52313036,0.47686964
+Hugging Face,Lightspeed,0.52310187,0.47689813
+Scale AI,Cerebras,0.5230958,0.4769042
+AMI - Advanced Machine Intelligence,Prophesee,0.52299196,0.47700804
+Anthropic,Appen,0.522914,0.477086
+Lightspeed,Comand AI,0.52182806,0.47817194
+Mistral AI,AMI - Advanced Machine Intelligence,0.52146816,0.47853184
+ManoMano,Prophesee,0.5204172,0.4795828
+Synthesia,Appen,0.5203887,0.47961128
+OpenAI,AMI - Advanced Machine Intelligence,0.5202866,0.47971338
+Physical Intelligence,Groq,0.5187212,0.48127878
+Scale AI,Apollo,0.5186444,0.4813556
+Cerebras,Sakana AI,0.5177502,0.4822498
+1X Technologies,01.AI,0.51760274,0.48239726
+BuildOps,Cognism,0.5173948,0.48260522
+BenevolentAI,Sakana AI,0.5168677,0.4831323
+1X Technologies,Comand AI,0.5167854,0.48321462
+MiniMax,Sakana AI,0.5166952,0.4833048
+Hugging Face,Sakana AI,0.516659,0.48334098
+MiniMax,H Company,0.5165415,0.48345852
+Databricks,5C,0.5156291,0.4843709
+Anthropic,Cerebras,0.5145175,0.4854825
+Perplexity,Comand AI,0.51405674,0.48594326
+ARM Holdings,Appen,0.5135006,0.48649943
+Scale AI,RobCo GmbH,0.5134113,0.48658872
+ManoMano,RobCo GmbH,0.5133796,0.48662043
+Mistral AI,Hugging Face,0.51299554,0.48700446
+OpenAI,Appen,0.5129364,0.4870636
+Scale AI,AMD,0.5124536,0.48754638
+UiPath,5C,0.512357,0.487643
+Anthropic,UiPath,0.512216,0.48778403
+Hugging Face,Palantir,0.5119166,0.48808342
+Physical Intelligence,PhotoRoom,0.51184076,0.48815924
+Synthesia,RobCo GmbH,0.51171744,0.48828256
+Groq,Palantir,0.5108395,0.48916048
+Anthropic,Oracle,0.5108168,0.4891832
+AMI - Advanced Machine Intelligence,ManoMano,0.51017296,0.48982704
+ManoMano,Aleph Alpha,0.51014775,0.48985225
+Oracle,ARM Holdings,0.5101157,0.48988432
+Applied Intuition,Perplexity AI,0.5100206,0.4899794
+OpenAI,Black Forest Labs,0.509805,0.49019498
+Black Forest Labs,Prophesee,0.5096977,0.49030232
+PolyAI,Synthesia,0.5095322,0.4904678
+ManoMano,Comand AI,0.5093254,0.49067461
+Cohere,ContentSquare,0.50883913,0.49116087
+ManoMano,PhotoRoom,0.50872195,0.49127805
+Anthropic,Black Forest AI GmbH,0.50843304,0.49156696
+Scale AI,Hailo Technologies,0.5080336,0.49196643
+MiniMax,Lightspeed,0.50719476,0.49280524
+UiPath,BenevolentAI,0.5071272,0.49287277
+PolyAI,Appen,0.5068991,0.49310088
+AMI - Advanced Machine Intelligence,Palantir,0.5065607,0.49343932
+Groq,Appen,0.5060617,0.49393833
+Perplexity,Synthesia,0.50579,0.49421
+Scale AI,PhotoRoom,0.5051797,0.4948203
+Scale AI,Mistral AI,0.5044798,0.49552017
+Physical Intelligence,Owkin,0.50441813,0.49558187
+Y combinator,Hugging Face,0.50433016,0.49566984
+OpenAI,World Labs,0.5029225,0.49707752
+Lightspeed,Clay,0.5027726,0.49722737
+PhotoRoom,Adobe,0.5027573,0.4972427
+Anthropic,ARM Holdings,0.5027248,0.49727517
+Synthesia,PhotoRoom,0.5024859,0.49751413
+Mistral AI,Black Forest AI GmbH,0.50224674,0.49775326
+Perplexity,Applied Intuition,0.5021196,0.4978804
+ManoMano,Appen,0.5019288,0.4980712
+Physical Intelligence,Sakana AI,0.50191027,0.49808973
+OpenAI,UiPath,0.50185305,0.49814695
+OpenAI,PolyAI,0.5014458,0.49855423
+1X Technologies,Synthesia,0.50062156,0.49937844
+Anthropic,Wayve,0.50046957,0.49953043
+Scale AI,Tessl,0.5003378,0.49966222
+Mistral AI,Physical Intelligence,0.50030136,0.49969864
+Physical Intelligence,Hailo Technologies,0.50001436,0.49998564
+OpenAI,Wayve,0.49998915,0.50001085
+Scale AI,MiniMax,0.49962604,0.50037396
+Groq,BenevolentAI,0.499127,0.50087297
+Apollo,Comand AI,0.49838826,0.5016117
+Oracle,Hugging Face,0.4983361,0.5016639
+01.AI,ARM Holdings,0.49697632,0.5030237
+ManoMano,Owkin,0.49690044,0.50309956
+Groq,Hailo Technologies,0.4968433,0.50315666
+Scale AI,Nabla,0.49680337,0.5031966
+Scale AI,SiPearl,0.49636915,0.5036309
+Scale AI,Perplexity AI,0.4962257,0.5037743
+Hailo Technologies,Hugging Face,0.49545172,0.5045483
+5C,ARM Holdings,0.49481374,0.50518626
+Anthropic,Nscale,0.49420926,0.5057907
+Physical Intelligence,Multiverse Computing,0.49409595,0.5059041
+PolyAI,01.AI,0.49409077,0.5059092
+5C,PolyAI,0.49380517,0.50619483
+Synthesia,H Company,0.49370235,0.50629765
+Procore,Cognism,0.49367848,0.50632155
+Scale AI,H Company,0.49352118,0.5064788
+ManoMano,Apollo,0.49339166,0.50660837
+Shift Technology,Comand AI,0.49322003,0.50677997
+5C,Comand AI,0.4929442,0.50705576
+OpenAI,Groq,0.49268475,0.5073153
+UiPath,Hailo Technologies,0.49261397,0.507386
+Cerebras,Prophesee,0.49257225,0.50742775
+Sakana AI,Appen,0.4915436,0.5084564
+01.AI,Apollo,0.49153,0.50847
+AMI - Advanced Machine Intelligence,AMD,0.49122262,0.5087774
+AMI - Advanced Machine Intelligence,01.AI,0.49114296,0.508857
+Physical Intelligence,1X Technologies,0.49027494,0.5097251
+Exotec,BuildOps,0.48969474,0.5103053
+Databricks,Cohere,0.48918623,0.5108138
+Nscale,5C,0.48886627,0.51113373
+Scale AI,Synthesia,0.48841873,0.5115813
+Applied Intuition,Exotec,0.48834383,0.51165617
+Mistral AI,MiniMax,0.48746175,0.51253825
+5C,Y combinator,0.48711506,0.512885
+Cerebras,Palantir,0.48687118,0.5131288
+Physical Intelligence,Black Forest Labs,0.48656586,0.5134342
+Perplexity AI,Lightspeed,0.48597264,0.51402736
+Scale AI,Black Forest AI GmbH,0.48536113,0.5146389
+World Labs,Aqemia,0.48516044,0.51483953
+Scale AI,Xelix,0.48497236,0.51502764
+Exotec,H Company,0.4849428,0.5150572
+Groq,5C,0.4848674,0.5151326
+5C,Sakana AI,0.48474437,0.51525563
+UiPath,Groq,0.48455277,0.51544726
+Cognism,PlanRadar,0.48453218,0.5154678
+1X Technologies,BenevolentAI,0.48438233,0.51561767
+AMI - Advanced Machine Intelligence,Sakana AI,0.48419955,0.5158005
+Physical Intelligence,H Company,0.48414028,0.5158597
+Anthropic,Palantir,0.48339173,0.51660824
+Scale AI,Clay,0.48337793,0.51662207
+Scale AI,Black Forest Labs,0.48251015,0.51748985
+AMD,Appen,0.48247394,0.51752603
+Nscale,Prophesee,0.48194963,0.5180504
+Anthropic,Lightspeed,0.48191732,0.5180827
+Wayve,Sidetrade,0.4816459,0.51835406
+Physical Intelligence,RobCo GmbH,0.48106897,0.51893103
+World Labs,Comand AI,0.48099956,0.5190004
+ManoMano,Lightspeed,0.4803442,0.5196558
+Nscale,Physical Intelligence,0.47994354,0.5200565
+Groq,Synthesia,0.4795554,0.52044463
+5C,Hailo Technologies,0.4794841,0.5205159
+Perplexity AI,Shift Technology,0.47926533,0.52073467
+UiPath,Synthesia,0.4790587,0.52094126
+Apollo,Clay,0.47903728,0.5209627
+BenevolentAI,Comand AI,0.47888723,0.5211128
+Celonis,Black Forest AI GmbH,0.47862485,0.5213752
+PhotoRoom,Lightspeed,0.47840887,0.5215911
+Physical Intelligence,Comand AI,0.47809583,0.5219042
+Mistral AI,Perplexity,0.47788385,0.5221162
+Comand AI,Tessl,0.47717208,0.5228279
+OpenAI,Perplexity AI,0.47707692,0.5229231
+Shift Technology,Clay,0.47707507,0.5229249
+Anthropic,Multiverse Computing,0.4770088,0.5229912
+Groq,Owkin,0.4766603,0.5233397
+AMI - Advanced Machine Intelligence,Y combinator,0.4765931,0.52340686
+UiPath,AMD,0.4765652,0.52343476
+Physical Intelligence,Synthesia,0.47651136,0.52348864
+Shift Technology,Apollo,0.4762254,0.5237746
+Scale AI,Perplexity,0.4760089,0.5239911
+Scale AI,Aleph Alpha,0.47594926,0.5240507
+Lightspeed,Appen,0.4758779,0.5241221
+UiPath,H Company,0.47587186,0.52412814
+UiPath,Palantir,0.47572777,0.5242722
+BenevolentAI,Hailo Technologies,0.47537667,0.52462333
+Hugging Face,Apollo,0.47528958,0.5247104
+Wayve,Comand AI,0.47458383,0.52541614
+OpenAI,Black Forest AI GmbH,0.47432795,0.5256721
+Sidetrade,Hugging Face,0.47366676,0.5263332
+Physical Intelligence,ARM Holdings,0.47357967,0.52642035
+Anthropic,Comand AI,0.4733429,0.5266571
+Databricks,Scale AI,0.473175,0.526825
+Anthropic,Groq,0.47266647,0.5273335
+SiPearl,Comand AI,0.4723731,0.5276269
+Comand AI,Nabla,0.47220126,0.5277988
+World Labs,Black Forest AI GmbH,0.47156444,0.5284356
+01.AI,Tessl,0.4712956,0.5287044
+Hailo Technologies,Black Forest AI GmbH,0.47117293,0.5288271
+Scale AI,Y combinator,0.47111312,0.5288869
+Applied Intuition,RobCo GmbH,0.47082952,0.5291705
+Groq,01.AI,0.47062168,0.5293783
+5C,H Company,0.47022584,0.5297742
+UiPath,AMI - Advanced Machine Intelligence,0.4700451,0.5299549
+Hailo Technologies,Black Forest Labs,0.47004044,0.52995956
+Cerebras,Black Forest Labs,0.46991065,0.5300894
+Physical Intelligence,Hugging Face,0.4695317,0.53046834
+01.AI,SiPearl,0.46951982,0.53048015
+UiPath,SiPearl,0.46949443,0.53050554
+Anthropic,MiniMax,0.4692985,0.5307015
+Groq,Black Forest AI GmbH,0.46923634,0.5307636
+Anthropic,ManoMano,0.4688366,0.5311634
+Physical Intelligence,BenevolentAI,0.46873283,0.53126717
+BenevolentAI,Synthesia,0.468674,0.531326
+Groq,Black Forest Labs,0.46867245,0.53132755
+Nscale,Groq,0.46852508,0.53147495
+UiPath,Nabla,0.4681123,0.5318877
+Celonis,Hugging Face,0.46806815,0.5319319
+Groq,AMI - Advanced Machine Intelligence,0.46771127,0.53228873
+Celonis,Exotec,0.4676208,0.5323792
+01.AI,Aleph Alpha,0.46752262,0.5324774
+Anthropic,Hailo Technologies,0.46749657,0.5325034
+Mistral AI,Multiverse Computing,0.4674282,0.5325718
+Perplexity,01.AI,0.46735317,0.53264683
+OpenAI,Lightspeed,0.4672925,0.5327075
+Black Forest Labs,Sakana AI,0.46718916,0.5328108
+Groq,Apollo,0.46706662,0.53293335
+AMI - Advanced Machine Intelligence,Appen,0.46650112,0.5334989
+Physical Intelligence,PolyAI,0.4662756,0.5337244
+Sakana AI,H Company,0.46555242,0.53444755
+Anthropic,Celonis,0.46520013,0.5347999
+Qualified,Cognism,0.4651551,0.5348449
+OpenAI,Aqemia,0.46480662,0.5351934
+BenevolentAI,H Company,0.46475196,0.53524804
+Hailo Technologies,Lightspeed,0.46465257,0.53534746
+UiPath,Xelix,0.46436104,0.5356389
+Synthesia,Lightspeed,0.46415523,0.5358448
+UiPath,Tessl,0.46388155,0.53611845
+ManoMano,H Company,0.46379697,0.536203
+Physical Intelligence,5C,0.463542,0.536458
+Physical Intelligence,ManoMano,0.4635312,0.5364688
+Perplexity,Appen,0.4633526,0.53664744
+Physical Intelligence,Aqemia,0.46286967,0.53713036
+Scale AI,Indium,0.462501,0.537499
+Celonis,Palantir,0.46217525,0.53782475
+Celonis,BuildOps,0.46203062,0.53796935
+Hugging Face,Owkin,0.46185842,0.5381416
+ARM Holdings,Cambricon Technologies,0.4617808,0.5382192
+Xelix,Comand AI,0.4616653,0.5383347
+5C,Black Forest Labs,0.46155697,0.538443
+Anthropic,Synthesia,0.4615048,0.5384952
+OpenAI,Exotec,0.46128362,0.5387164
+AMI - Advanced Machine Intelligence,5C,0.46100217,0.5389978
+Aqemia,Prophesee,0.46079025,0.5392097
+Groq,H Company,0.46057203,0.539428
+Cohere,Comand AI,0.46045676,0.5395433
+Mistral AI,BenevolentAI,0.4603963,0.5396037
+MiniMax,Hugging Face,0.46018335,0.5398166
+AMI - Advanced Machine Intelligence,Tessl,0.45989498,0.540105
+Scale AI,PolyAI,0.45967174,0.54032826
+ManoMano,Perplexity AI,0.45933792,0.54066205
+Black Forest Labs,Owkin,0.45914993,0.54085004
+AMI - Advanced Machine Intelligence,SiPearl,0.4589412,0.5410588
+OpenAI,Owkin,0.45891884,0.5410812
+RobCo GmbH,BuildOps,0.45883268,0.5411673
+1X Technologies,Exotec,0.4588058,0.5411942
+5C,01.AI,0.45876795,0.54123205
+OpenAI,Hailo Technologies,0.45849675,0.54150325
+OpenAI,Perplexity,0.45831043,0.5416896
+MiniMax,World Labs,0.45779952,0.54220045
+AMI - Advanced Machine Intelligence,Comand AI,0.45774737,0.54225266
+01.AI,Xelix,0.45754153,0.5424585
+Celonis,Black Forest Labs,0.4574135,0.5425865
+Scale AI,Sidetrade,0.45719048,0.5428095
+Databricks,Clay,0.45705834,0.5429417
+PolyAI,RobCo GmbH,0.45690757,0.5430924
+ByteDance,Cohere,0.45656064,0.5434394
+Cerebras,Mistral AI,0.45638007,0.54361993
+Applied Intuition,Shift Technology,0.45628068,0.5437193
+01.AI,Nabla,0.45626464,0.5437354
+World Labs,Multiverse Computing,0.4558403,0.5441597
+Mistral AI,ARM Holdings,0.45564026,0.54435974
+Cohere,Hugging Face,0.4556291,0.5443709
+Wayve,ManoMano,0.45524228,0.5447577
+Sidetrade,Clay,0.4550978,0.5449022
+Physical Intelligence,Black Forest AI GmbH,0.45475248,0.54524755
+Anthropic,AMD,0.45436946,0.5456306
+Shift Technology,Hugging Face,0.4542311,0.54576886
+Cerebras,Comand AI,0.45398626,0.5460137
+Celonis,Groq,0.45397457,0.5460254
+ManoMano,Indium,0.4539214,0.54607856
+BenevolentAI,Palantir,0.4536336,0.5463664
+AMI - Advanced Machine Intelligence,Nabla,0.45329642,0.5467036
+Perplexity AI,Apollo,0.45275456,0.54724544
+Perplexity AI,Appen,0.45272064,0.54727936
+OpenAI,Y combinator,0.45270416,0.5472958
+H Company,BuildOps,0.4525381,0.54746187
+Black Forest Labs,Lightspeed,0.4523622,0.5476378
+Aleph Alpha,Black Forest AI GmbH,0.45218813,0.54781187
+Celonis,H Company,0.45186937,0.54813063
+AMD,Oracle,0.4513426,0.5486574
+Waymo,Applied Intuition,0.45093614,0.54906386
+2CRSI,Apollo,0.45081156,0.54918844
+Hugging Face,Clay,0.4505451,0.5494549
+Physical Intelligence,AMD,0.45047447,0.5495255
+OpenAI,Palantir,0.45013726,0.54986274
+Nscale,Black Forest Labs,0.4499856,0.5500144
+Shift Technology,Appen,0.44990155,0.5500984
+OpenAI,Parloa,0.44978726,0.55021274
+UiPath,1X Technologies,0.44922745,0.55077255
+AMI - Advanced Machine Intelligence,Xelix,0.44914964,0.5508504
+Multiverse Computing,Aqemia,0.4491488,0.5508512
+OpenAI,5C,0.44910443,0.5508956
+Cohere,5C,0.44887882,0.5511212
+01.AI,Black Forest AI GmbH,0.4485874,0.5514126
+Synthesia,Shift Technology,0.44846714,0.55153286
+Physical Intelligence,UiPath,0.4483997,0.55160034
+BenevolentAI,Owkin,0.44824347,0.5517565
+Wayve,Appen,0.44818488,0.55181515
+Apollo,Appen,0.44804272,0.55195725
+UiPath,Y combinator,0.44743285,0.5525671
+UiPath,Acronis,0.44738325,0.5526167
+Cerebras,5C,0.4472413,0.5527587
+H Company,Comand AI,0.44668272,0.5533173
+MiniMax,Aleph Alpha,0.44638172,0.5536183
+MiniMax,Black Forest Labs,0.44613943,0.55386055
+Anthropic,Prophesee,0.44602948,0.5539705
+RobCo GmbH,H Company,0.44588497,0.55411506
+Hailo Technologies,Appen,0.4458799,0.55412006
+Scale AI,Applied Intuition,0.44577196,0.55422807
+OpenAI,ManoMano,0.4457359,0.55426407
+Wayve,UiPath,0.44464174,0.5553583
+Anthropic,PhotoRoom,0.44456717,0.5554328
+Cerebras,Hailo Technologies,0.4444732,0.5555268
+Hugging Face,Prophesee,0.44426155,0.55573845
+Anthropic,Aleph Alpha,0.4441996,0.55580044
+MiniMax,Groq,0.4441518,0.55584824
+Cohere,01.AI,0.4440004,0.55599964
+Scale AI,Exotec,0.4438858,0.5561142
+1X Technologies,PolyAI,0.44375736,0.55624264
+ARM Holdings,Comand AI,0.44364652,0.55635345
+World Labs,PhotoRoom,0.44345886,0.55654114
+UiPath,Celonis,0.44299442,0.5570056
+Scale AI,Palantir,0.44204777,0.5579522
+World Labs,01.AI,0.44188297,0.55811703
+AMD,Cambricon Technologies,0.4417851,0.5582149
+Databricks,PhotoRoom,0.44157764,0.5584223
+OpenAI,BenevolentAI,0.44142956,0.55857044
+Apollo,Black Forest AI GmbH,0.4409303,0.5590697
+Sakana AI,ARM Holdings,0.44092476,0.55907524
+01.AI,Black Forest Labs,0.44083312,0.5591669
+Perplexity AI,01.AI,0.4407705,0.5592295
+Groq,Lightspeed,0.44068682,0.5593132
+Anthropic,Cohere,0.44023496,0.55976504
+ManoMano,Shift Technology,0.43976462,0.5602354
+Anthropic,H Company,0.4395869,0.5604131
+OpenAI,MiniMax,0.4393443,0.5606557
+Mistral AI,World Labs,0.43929553,0.56070447
+Cohere,Synthesia,0.438972,0.561028
+Synthesia,Prophesee,0.4387099,0.5612901
+AMD,01.AI,0.43860918,0.5613908
+Mistral AI,5C,0.43856806,0.56143194
+1X Technologies,Sakana AI,0.4384032,0.5615968
+Hailo Technologies,RobCo GmbH,0.43824166,0.56175834
+Alibaba,01.AI,0.4381659,0.5618341
+Wayve,Aleph Alpha,0.43805426,0.56194574
+AMI - Advanced Machine Intelligence,Hailo Technologies,0.43775934,0.56224066
+MiniMax,5C,0.4377516,0.5622484
+PolyAI,BenevolentAI,0.4377154,0.5622846
+Anthropic,Owkin,0.43719614,0.56280386
+Scale AI,Celonis,0.4369889,0.5630111
+Synthesia,Exotec,0.43672538,0.5632746
+Wayve,01.AI,0.43634075,0.56365925
+01.AI,Shift Technology,0.43613303,0.563867
+Wayve,AMI - Advanced Machine Intelligence,0.43613002,0.56386995
+OpenAI,Comand AI,0.43595228,0.5640477
+5C,Lightspeed,0.43585643,0.56414354
+2CRSI,Cognism,0.43568185,0.5643182
+1X Technologies,BuildOps,0.43554524,0.5644548
+Groq,Ant Group,0.4353585,0.5646415
+Hugging Face,BuildOps,0.43518782,0.5648122
+Synthesia,Hugging Face,0.4351767,0.56482327
+1X Technologies,2CRSI,0.43505144,0.56494856
+BenevolentAI,Aqemia,0.4349094,0.5650906
+Scale AI,BenevolentAI,0.4346687,0.56533134
+Mistral AI,Owkin,0.434503,0.56549704
+Alibaba,Hugging Face,0.4343235,0.5656765
+Physical Intelligence,Lightspeed,0.4341604,0.5658396
+5C,Nabla,0.43414545,0.56585455
+Wayve,Einride,0.4334758,0.5665242
+OpenAI,Applied Intuition,0.43329674,0.56670326
+Anthropic,Ant Group,0.43309125,0.5669087
+Scale AI,Aqemia,0.43287885,0.56712115
+Wayve,Lightspeed,0.43286264,0.56713736
+Black Forest Labs,Comand AI,0.43252096,0.567479
+MiniMax,Black Forest AI GmbH,0.4323773,0.56762266
+Mistral AI,Oracle,0.4323684,0.5676316
+Physical Intelligence,Perplexity,0.4323136,0.56768644
+AMD,Hailo Technologies,0.43206057,0.5679394
+ByteDance,Anthropic,0.43205112,0.5679489
+MiniMax,Appen,0.43197507,0.56802493
+Groq,Aleph Alpha,0.43115875,0.5688412
+Nscale,ManoMano,0.43114063,0.56885934
+UiPath,Ant Group,0.4311322,0.5688678
+Wayve,Groq,0.43106973,0.56893027
+Mistral AI,Groq,0.43090934,0.56909066
+5C,Black Forest AI GmbH,0.43086404,0.56913596
+Cerebras,World Labs,0.4306024,0.56939757
+Perplexity,Lightspeed,0.43042257,0.56957746
+OpenAI,H Company,0.4303037,0.5696963
+AMI - Advanced Machine Intelligence,2CRSI,0.4302545,0.56974554
+Nscale,ARM Holdings,0.42988282,0.5701172
+Sidetrade,Comand AI,0.42963904,0.57036096
+Nscale,Multiverse Computing,0.42955053,0.5704495
+Synthesia,Black Forest Labs,0.42946967,0.5705303
+1X Technologies,Appen,0.42925316,0.57074684
+Mistral AI,DeepL,0.42921788,0.5707821
+Perplexity,ManoMano,0.42921603,0.570784
+Alibaba,Appen,0.42883992,0.5711601
+Hugging Face,H Company,0.4288211,0.5711789
+AMD,Sakana AI,0.4286398,0.57136023
+5C,Tessl,0.42855543,0.5714446
+Shift Technology,RobCo GmbH,0.42843488,0.57156515
+AMD,Palantir,0.42802382,0.5719762
+PhotoRoom,Hugging Face,0.42780343,0.5721966
+OpenAI,Clay,0.42768887,0.57231116
+Aleph Alpha,Hailo Technologies,0.42757955,0.5724205
+Alibaba,Groq,0.42752993,0.57247007
+Scale AI,Oracle,0.42726633,0.57273364
+Cerebras,Multiverse Computing,0.42722103,0.57277894
+Applied Intuition,01.AI,0.42712435,0.5728756
+Exotec,Clay,0.42705482,0.5729452
+Mistral AI,Palantir,0.42700833,0.57299167
+Groq,World Labs,0.4266562,0.5733438
+Cerebras,UiPath,0.42646852,0.5735315
+Physical Intelligence,Y combinator,0.42644712,0.57355285
+AMI - Advanced Machine Intelligence,ARM Holdings,0.42632103,0.573679
+Synthesia,ARM Holdings,0.42630452,0.5736955
+RobCo GmbH,PhotoRoom,0.4262299,0.5737701
+Apollo,Qualified,0.42613947,0.5738605
+H Company,Appen,0.4258576,0.5741424
+Physical Intelligence,MiniMax,0.42579263,0.57420737
+World Labs,5C,0.42578664,0.5742134
+5C,Oracle,0.4257354,0.5742646
+Groq,1X Technologies,0.4257287,0.5742713
+BuildOps,Qualified,0.425629,0.574371
+OpenAI,Cerebras,0.4254436,0.5745564
+Nscale,Hailo Technologies,0.4252451,0.5747549
+Celonis,Sakana AI,0.42487788,0.5751221
+Groq,Exotec,0.42473486,0.57526517
+Cerebras,Synthesia,0.42469206,0.57530797
+Physical Intelligence,Shift Technology,0.42467463,0.57532537
+Owkin,Comand AI,0.4245052,0.57549477
+Hailo Technologies,PhotoRoom,0.42448848,0.5755115
+Wayve,World Labs,0.4244021,0.5755979
+OpenAI,Celonis,0.4240662,0.5759338
+Sakana AI,Ant Group,0.42383775,0.5761622
+UiPath,ManoMano,0.42369956,0.57630044
+ByteDance,Databricks,0.423508,0.576492
+Mistral AI,Aleph Alpha,0.42338926,0.57661074
+PhotoRoom,Apollo,0.42333153,0.5766685
+ByteDance,Cambricon Technologies,0.42312413,0.57687587
+Cerebras,Black Forest AI GmbH,0.42285472,0.5771453
+Applied Intuition,Apollo,0.4227343,0.57726574
+Hugging Face,Indium,0.42249167,0.57750833
+OpenAI,1X Technologies,0.42241266,0.57758737
+Hailo Technologies,BuildOps,0.42225283,0.57774717
+PolyAI,Lightspeed,0.422084,0.577916
+Mistral AI,Aqemia,0.4219357,0.5780643
+PolyAI,Perplexity AI,0.42161688,0.5783831
+5C,1X Technologies,0.42146477,0.5785352
+Lightspeed,Black Forest AI GmbH,0.42127246,0.57872754
+BuildOps,Clay,0.42121607,0.5787839
+Databricks,Lightspeed,0.42121485,0.5787852
+ARM Holdings,Apollo,0.42118332,0.57881665
+Synthesia,Perplexity AI,0.42106307,0.57893693
+Anthropic,BenevolentAI,0.42091537,0.57908463
+World Labs,Lightspeed,0.42071393,0.5792861
+Sakana AI,Black Forest AI GmbH,0.42064124,0.57935876
+Hailo Technologies,Exotec,0.42058346,0.5794165
+Groq,2CRSI,0.42054713,0.5794529
+OpenAI,Databricks,0.42053956,0.57946044
+Mistral AI,1X Technologies,0.42046878,0.5795312
+Acronis,2CRSI,0.42039785,0.5796021
+UiPath,Black Forest AI GmbH,0.42019287,0.57980716
+Procore,Hugging Face,0.42001384,0.57998616
+AMD,Comand AI,0.42000306,0.57999694
+Groq,ARM Holdings,0.41981706,0.5801829
+5C,SiPearl,0.41969386,0.5803062
+AMD,Y combinator,0.41948894,0.5805111
+ManoMano,Exotec,0.41936606,0.58063394
+Anthropic,Adobe,0.4193166,0.5806834
+World Labs,Tessl,0.41909418,0.5809058
+Perplexity,PolyAI,0.41901603,0.580984
+AMI - Advanced Machine Intelligence,H Company,0.4189061,0.5810939
+5C,Xelix,0.418892,0.581108
+5C,Synthesia,0.4188603,0.5811397
+Scale AI,Einride,0.41873524,0.58126473
+MiniMax,BenevolentAI,0.41872698,0.581273
+Groq,ManoMano,0.41833147,0.5816685
+ByteDance,Hailo Technologies,0.41831678,0.5816832
+Wayve,BenevolentAI,0.4183139,0.58168614
+2CRSI,BenevolentAI,0.4181834,0.5818166
+Applied Intuition,ManoMano,0.4180958,0.5819042
+Databricks,Mistral AI,0.4179975,0.5820025
+Cerebras,1X Technologies,0.41799393,0.5820061
+Oracle,Palantir,0.41790625,0.5820937
+Perplexity,Hugging Face,0.4179042,0.5820958
+ByteDance,01.AI,0.4178662,0.58213377
+Cerebras,Cambricon Technologies,0.41766402,0.58233595
+Nscale,Lightspeed,0.41750577,0.58249426
+Scale AI,1X Technologies,0.41741636,0.58258367
+H Company,Apollo,0.41737607,0.58262396
+Multiverse Computing,Palantir,0.41733745,0.5826626
+5C,Clay,0.41728067,0.5827193
+Shift Technology,Hailo Technologies,0.41717863,0.58282137
+AMI - Advanced Machine Intelligence,Aleph Alpha,0.41717625,0.58282375
+Nscale,Comand AI,0.41716278,0.5828372
+Mistral AI,PolyAI,0.4171376,0.5828624
+Cerebras,ManoMano,0.41713598,0.58286405
+Physical Intelligence,Appen,0.41684854,0.58315146
+Wayve,Gousto,0.41625524,0.58374476
+PolyAI,Clay,0.41620997,0.58379006
+MiniMax,ManoMano,0.41617358,0.5838264
+Multiverse Computing,Oracle,0.41592646,0.58407354
+OpenAI,PhotoRoom,0.41587552,0.58412445
+Applied Intuition,Lightspeed,0.41577652,0.5842235
+Mistral AI,Prophesee,0.41574743,0.5842526
+Physical Intelligence,Clay,0.41566446,0.58433557
+ManoMano,Synthesia,0.4155775,0.58442247
+Mistral AI,ManoMano,0.4155706,0.5844294
+01.AI,Ant Group,0.41553673,0.58446324
+Black Forest Labs,Aqemia,0.41537017,0.58462983
+Aleph Alpha,Owkin,0.41523412,0.5847659
+Palantir,H Company,0.41502947,0.58497053
+Sakana AI,Prophesee,0.41501474,0.58498526
+Nscale,Owkin,0.41489458,0.5851054
+Cerebras,Oracle,0.41472948,0.5852705
+Physical Intelligence,Palantir,0.4146431,0.5853569
+Sakana AI,Apollo,0.41462168,0.5853783
+Aleph Alpha,Xelix,0.4145732,0.5854268
+Applied Intuition,Comand AI,0.41446385,0.5855361
+01.AI,Oracle,0.41432908,0.58567095
+Cerebras,2CRSI,0.41432288,0.58567715
+Anthropic,1X Technologies,0.4142488,0.5857512
+World Labs,SiPearl,0.4142214,0.5857786
+Wayve,Owkin,0.4141421,0.58585787
+Nscale,Sakana AI,0.4140542,0.58594584
+Groq,Applied Intuition,0.41400215,0.5859978
+Groq,AMD,0.41392478,0.5860752
+AMD,Black Forest Labs,0.41386145,0.58613855
+Anthropic,Perplexity,0.4138329,0.5861671
+Mistral AI,SiPearl,0.41379866,0.5862013
+PolyAI,Hailo Technologies,0.41340452,0.5865955
+Hailo Technologies,Oracle,0.41294438,0.5870556
+Black Forest Labs,PhotoRoom,0.41289183,0.58710814
+Owkin,Black Forest AI GmbH,0.41268066,0.5873194
+ManoMano,DentalMonitoring,0.41262636,0.5873736
+Aleph Alpha,Nabla,0.4125577,0.5874423
+Databricks,PlanRadar,0.41251656,0.5874834
+Cohere,Clay,0.4125012,0.5874988
+Cerebras,01.AI,0.41238037,0.58761966
+Applied Intuition,Appen,0.41226912,0.5877309
+PhotoRoom,Indium,0.41177082,0.5882292
+Nscale,2CRSI,0.41153118,0.5884688
+Groq,Perplexity AI,0.41145355,0.58854645
+Indium,Lightspeed,0.41119173,0.5888083
+Perplexity,RobCo GmbH,0.41116834,0.58883166
+World Labs,Nabla,0.41101384,0.58898616
+Groq,Perplexity,0.41031927,0.58968073
+World Labs,Perplexity AI,0.41028833,0.58971167
+UiPath,Black Forest Labs,0.40987647,0.59012353
+Groq,Sidetrade,0.40980777,0.5901922
+Databricks,World Labs,0.40962946,0.59037054
+Wayve,Shift Technology,0.4094515,0.5905485
+Aleph Alpha,SiPearl,0.40944082,0.5905592
+Physical Intelligence,Oracle,0.40914863,0.59085137
+Mistral AI,Lightspeed,0.4089645,0.5910355
+Y combinator,Black Forest Labs,0.40881494,0.5911851
+Synthesia,Adobe,0.40866107,0.59133893
+Mistral AI,Nabla,0.40847695,0.59152305
+Procore,Sakana AI,0.4083325,0.59166753
+5C,BuildOps,0.40829048,0.5917095
+AMI - Advanced Machine Intelligence,Oracle,0.4082718,0.5917282
+Prophesee,Comand AI,0.4082287,0.5917713
+Databricks,Black Forest Labs,0.4081225,0.59187746
+Shift Technology,Indium,0.40811604,0.59188396
+MiniMax,PolyAI,0.4080968,0.5919032
+Databricks,Black Forest AI GmbH,0.40773088,0.5922691
+Sidetrade,Appen,0.4075941,0.5924059
+Physical Intelligence,Celonis,0.40754804,0.59245193
+Celonis,Oracle,0.4074139,0.5925861
+Groq,Parloa,0.40735438,0.59264565
+Synthesia,Aqemia,0.40714604,0.59285396
+Cerebras,Wayve,0.40708986,0.5929102
+5C,RobCo GmbH,0.40704492,0.5929551
+Nscale,Palantir,0.40691218,0.5930878
+Mistral AI,Perplexity AI,0.406895,0.59310496
+World Labs,Xelix,0.40676743,0.5932326
+Y combinator,Black Forest AI GmbH,0.4066565,0.5933435
+Mistral AI,Tessl,0.40650448,0.5934955
+Exotec,Lightspeed,0.40642095,0.59357905
+Mistral AI,Cohere,0.40628582,0.5937142
+PhotoRoom,Cambricon Technologies,0.40614593,0.59385407
+Scale AI,Cohere,0.4061432,0.5938568
+Perplexity,BenevolentAI,0.40612972,0.5938703
+Groq,Harvey,0.4059683,0.5940317
+Multiverse Computing,Y combinator,0.40595496,0.59404504
+Wayve,H Company,0.4058709,0.5941291
+ManoMano,01.AI,0.4057245,0.5942755
+Physical Intelligence,2CRSI,0.40571108,0.59428895
+01.AI,RobCo GmbH,0.40567476,0.59432524
+Celonis,Acronis,0.40530607,0.5946939
+Wayve,Palantir,0.40515065,0.59484935
+Hailo Technologies,Apollo,0.4051489,0.59485114
+5C,Palantir,0.4050382,0.59496176
+Exotec,Black Forest AI GmbH,0.40503582,0.59496415
+Mistral AI,Xelix,0.40492332,0.5950767
+Scale AI,BuildOps,0.40474573,0.5952543
+5C,Procore,0.40456438,0.5954356
+Synthesia,Cambricon Technologies,0.40444005,0.59555995
+Alibaba,MiniMax,0.40441886,0.5955812
+Waymo,ManoMano,0.40432733,0.59567267
+PolyAI,Hugging Face,0.404203,0.595797
+Aleph Alpha,H Company,0.4041775,0.5958225
+UiPath,MiniMax,0.40407026,0.59592974
+Perplexity,Sakana AI,0.40399504,0.59600496
+Synthesia,BuildOps,0.40358105,0.596419
+World Labs,Y combinator,0.40347368,0.5965263
+Adobe,Clay,0.40321112,0.5967889
+Wayve,Exotec,0.40290803,0.597092
+Physical Intelligence,Applied Intuition,0.40285432,0.5971457
+UiPath,Cohere,0.4027425,0.5972575
+Multiverse Computing,Black Forest Labs,0.40266114,0.59733886
+2CRSI,H Company,0.4022581,0.5977419
+Synthesia,Black Forest AI GmbH,0.40192157,0.5980784
+Perplexity,Shift Technology,0.40176207,0.59823793
+Wayve,Applied Intuition,0.4016583,0.5983417
+UiPath,Perplexity,0.40163416,0.59836584
+Shift Technology,Sakana AI,0.40158883,0.5984112
+Multiverse Computing,Prophesee,0.40158737,0.59841263
+Applied Intuition,Black Forest AI GmbH,0.40148422,0.59851575
+Groq,Aqemia,0.40142402,0.59857595
+Einride,Aleph Alpha,0.40125746,0.59874254
+Lightspeed,H Company,0.4011515,0.59884846
+Celonis,ARM Holdings,0.4010591,0.5989409
+Wayve,Black Forest AI GmbH,0.40084806,0.59915197
+UiPath,Clay,0.4005349,0.59946513
+PolyAI,Qualified,0.40038064,0.5996194
+2CRSI,Synthesia,0.40025422,0.59974575
+OpenAI,Prophesee,0.400243,0.59975696
+Black Forest AI GmbH,Appen,0.4001635,0.59983647
+PhotoRoom,ARM Holdings,0.40016136,0.5998386
+Indium,Appen,0.40013582,0.5998642
+Alibaba,Hailo Technologies,0.39998573,0.60001427
+Wayve,Cohere,0.39984944,0.6001506
+AMI - Advanced Machine Intelligence,1X Technologies,0.39971823,0.6002818
+OpenAI,Multiverse Computing,0.399649,0.600351
+AMI - Advanced Machine Intelligence,PhotoRoom,0.39960843,0.60039157
+Cerebras,Appen,0.39952838,0.6004716
+Mistral AI,Celonis,0.3993195,0.6006805
+BenevolentAI,Hugging Face,0.3992167,0.6007833
+Oracle,Sakana AI,0.3989938,0.6010062
+Synthesia,Apollo,0.39875853,0.60124147
+Cerebras,H Company,0.3984454,0.60155463
+Oracle,H Company,0.3983468,0.6016532
+Waymo,Lightspeed,0.3982536,0.60174644
+Clay,Appen,0.3978166,0.6021834
+Anthropic,Aqemia,0.39774063,0.6022594
+Scale AI,Procore,0.39769304,0.60230696
+PolyAI,ManoMano,0.39768502,0.60231495
+Cohere,Groq,0.39764377,0.6023562
+Databricks,AMI - Advanced Machine Intelligence,0.3976392,0.60236084
+OpenAI,Cohere,0.3975423,0.6024577
+BenevolentAI,Appen,0.39750913,0.6024909
+Perplexity AI,Hugging Face,0.39700577,0.6029942
+PolyAI,Comand AI,0.39693362,0.6030664
+Aleph Alpha,Tessl,0.3967757,0.6032243
+ByteDance,UiPath,0.39667833,0.6033217
+World Labs,Synthesia,0.3965104,0.60348964
+Waymo,Scale AI,0.39648986,0.60351014
+Palantir,Black Forest AI GmbH,0.3964828,0.6035172
+World Labs,Perplexity,0.396425,0.603575
+Aleph Alpha,Lightspeed,0.39639896,0.60360104
+Apollo,BuildOps,0.39628267,0.6037173
+MiniMax,PhotoRoom,0.39624855,0.6037514
+Palantir,Owkin,0.39614576,0.60385424
+Shift Technology,PhotoRoom,0.39609012,0.60390985
+H Company,Cognism,0.39568254,0.6043174
+ManoMano,Clay,0.39554542,0.6044546
+Sakana AI,Lightspeed,0.39537254,0.6046275
+Parloa,Qualified,0.3949654,0.6050346
+ContentSquare,Perplexity,0.39490354,0.60509646
+ContentSquare,2CRSI,0.39480847,0.6051915
+MiniMax,Apollo,0.39480346,0.60519654
+Alibaba,Apollo,0.39466238,0.6053376
+Hugging Face,Ant Group,0.3942329,0.60576713
+Aleph Alpha,Comand AI,0.39418018,0.6058198
+5C,PlanRadar,0.39413804,0.60586196
+OpenAI,ARM Holdings,0.39395562,0.6060444
+Black Forest Labs,ARM Holdings,0.39364046,0.60635954
+Applied Intuition,Hugging Face,0.39350152,0.6064985
+Physical Intelligence,Perplexity AI,0.39331564,0.6066843
+Wayve,Hailo Technologies,0.393314,0.606686
+Perplexity AI,Sakana AI,0.39325812,0.6067419
+Cohere,Hailo Technologies,0.3931388,0.60686123
+Physical Intelligence,Apollo,0.3930663,0.6069337
+PhotoRoom,Cognism,0.3930417,0.60695827
+UiPath,Oracle,0.39295465,0.60704535
+Nscale,AMD,0.39294422,0.6070558
+Aleph Alpha,Black Forest Labs,0.39291018,0.6070898
+Scale AI,Adobe,0.39252377,0.60747623
+Databricks,BuildOps,0.39251572,0.6074843
+Scale AI,Harvey,0.39173645,0.60826355
+Anthropic,Clay,0.3914113,0.6085887
+Cerebras,Aqemia,0.39136654,0.60863346
+Mistral AI,H Company,0.3913621,0.6086379
+Groq,Shift Technology,0.39130056,0.60869944
+Cerebras,Owkin,0.39092895,0.609071
+ManoMano,Black Forest AI GmbH,0.39088508,0.6091149
+Nscale,Y combinator,0.3907136,0.6092864
+5C,PhotoRoom,0.39068636,0.6093136
+UiPath,PolyAI,0.39064643,0.60935354
+Applied Intuition,Clay,0.39058667,0.6094133
+Databricks,Physical Intelligence,0.39033228,0.6096677
+1X Technologies,Lightspeed,0.3901128,0.60988724
+Oracle,Appen,0.39010134,0.6098987
+Nscale,Mistral AI,0.38991627,0.6100837
+Celonis,AMD,0.38951653,0.61048347
+OpenAI,Nscale,0.38950574,0.61049426
+Aleph Alpha,Appen,0.38942626,0.61057377
+Cohere,Lightspeed,0.38916355,0.61083645
+ManoMano,BuildOps,0.38910148,0.6108985
+World Labs,Sakana AI,0.38895983,0.6110402
+H Company,Black Forest AI GmbH,0.38889325,0.61110675
+Nscale,Black Forest AI GmbH,0.38884923,0.61115074
+Mistral AI,AMD,0.3886717,0.6113283
+OpenAI,Apollo,0.38862917,0.6113708
+Y combinator,Oracle,0.38856608,0.6114339
+Wayve,Synthesia,0.3880769,0.6119231
+Wayve,Sakana AI,0.38803345,0.61196655
+Celonis,2CRSI,0.38792747,0.6120725
+Berkshire Hathaway,UiPath,0.3879243,0.6120757
+Cohere,2CRSI,0.38791218,0.61208785
+AMI - Advanced Machine Intelligence,Exotec,0.38779545,0.61220455
+ContentSquare,Indium,0.38776842,0.6122316
+Alibaba,5C,0.38774943,0.61225057
+Multiverse Computing,AMD,0.3877081,0.61229193
+Y combinator,Procore,0.3876101,0.6123899
+Celonis,Hailo Technologies,0.3872626,0.6127374
+Waymo,Comand AI,0.38703254,0.6129675
+Shift Technology,ARM Holdings,0.38680166,0.61319834
+World Labs,Appen,0.38669676,0.61330324
+Databricks,01.AI,0.38649213,0.61350787
+Celonis,Prophesee,0.38624674,0.61375326
+01.AI,Aqemia,0.38616946,0.61383057
+ContentSquare,Lightspeed,0.38616496,0.61383504
+Synthesia,Clay,0.38589567,0.61410433
+5C,AMD,0.38580847,0.61419153
+Lightspeed,ARM Holdings,0.38577345,0.6142266
+2CRSI,Clay,0.38576698,0.614233
+Waymo,Shift Technology,0.38564548,0.6143545
+Databricks,ContentSquare,0.3855539,0.6144461
+Black Forest Labs,Appen,0.38550958,0.6144904
+Physical Intelligence,Exotec,0.38536453,0.61463547
+Hugging Face,Adobe,0.3853611,0.6146389
+Anthropic,Apollo,0.38514772,0.6148523
+ARM Holdings,H Company,0.38514316,0.61485684
+Databricks,Palantir,0.38499162,0.61500835
+RobCo GmbH,Lightspeed,0.3849319,0.6150681
+PolyAI,H Company,0.38491192,0.6150881
+OpenAI,Aleph Alpha,0.38490257,0.6150974
+Hugging Face,Aqemia,0.3846874,0.6153126
+Groq,Oracle,0.38457534,0.61542463
+RobCo GmbH,Appen,0.38448048,0.6155195
+World Labs,Applied Intuition,0.3844684,0.61553156
+5C,ManoMano,0.38436487,0.61563516
+Scale AI,2CRSI,0.38435286,0.61564714
+Groq,Clay,0.38423416,0.6157658
+Wayve,AMD,0.38395634,0.6160437
+Exotec,Appen,0.38388827,0.61611176
+Cerebras,BenevolentAI,0.38377994,0.61622006
+ManoMano,Aqemia,0.38356692,0.6164331
+Sidetrade,Black Forest AI GmbH,0.38314956,0.61685044
+ManoMano,Hailo Technologies,0.3829773,0.6170227
+ARM Holdings,Black Forest AI GmbH,0.38297606,0.61702394
+Cerebras,Exotec,0.3827478,0.61725223
+Databricks,Groq,0.3826525,0.6173475
+Multiverse Computing,Hugging Face,0.38257852,0.6174215
+Applied Intuition,1X Technologies,0.38250697,0.61749303
+Prophesee,Cambricon Technologies,0.38228267,0.6177173
+Nscale,Cognism,0.3822495,0.6177505
+ManoMano,Black Forest Labs,0.3821164,0.61788356
+OpenAI,Oracle,0.3820455,0.6179545
+Nscale,1X Technologies,0.3818453,0.6181547
+DeepL,Comand AI,0.3818015,0.6181985
+OpenAI,DeepL,0.38179028,0.6182097
+Celonis,Owkin,0.38169685,0.6183032
+Exotec,Hugging Face,0.3815705,0.61842954
+Perplexity AI,Black Forest AI GmbH,0.3815679,0.6184321
+PhotoRoom,BuildOps,0.38148427,0.61851573
+Berkshire Hathaway,Y combinator,0.38138938,0.6186106
+Perplexity,1X Technologies,0.38132823,0.6186718
+Alibaba,Scale AI,0.38130954,0.6186905
+ARM Holdings,Ant Group,0.3812959,0.6187041
+Aleph Alpha,Aqemia,0.38125074,0.61874926
+PhotoRoom,Owkin,0.38114485,0.6188551
+OpenAI,AMD,0.38096753,0.6190325
+Groq,Y combinator,0.380713,0.619287
+Celonis,BenevolentAI,0.38062325,0.6193768
+Cohere,Aleph Alpha,0.38061383,0.6193862
+Cohere,Perplexity,0.38030392,0.6196961
+Cohere,Sakana AI,0.37990573,0.6200943
+ByteDance,ARM Holdings,0.3797812,0.6202188
+Cerebras,RobCo GmbH,0.3797377,0.62026227
+Perplexity AI,Owkin,0.37968326,0.62031674
+ManoMano,Sakana AI,0.3796489,0.6203511
+AMI - Advanced Machine Intelligence,RobCo GmbH,0.37964204,0.620358
+Wayve,MiniMax,0.3795039,0.6204961
+Adobe,BuildOps,0.37950018,0.62049985
+OpenAI,RobCo GmbH,0.37932482,0.6206752
+BenevolentAI,Black Forest AI GmbH,0.379248,0.620752
+UiPath,Exotec,0.37913302,0.620867
+Groq,Procore,0.37904745,0.62095255
+Sidetrade,Cognism,0.3790031,0.6209969
+Parloa,Synthesia,0.3789763,0.6210237
+Sidetrade,Exotec,0.3789049,0.62109506
+Lightspeed,Adobe,0.37885806,0.6211419
+Alibaba,Anthropic,0.37864652,0.6213535
+ContentSquare,Adobe,0.37864408,0.6213559
+Wayve,Black Forest Labs,0.37864196,0.62135804
+UiPath,Perplexity AI,0.3785176,0.6214824
+Multiverse Computing,Black Forest AI GmbH,0.3784143,0.6215857
+Celonis,Aqemia,0.37841022,0.6215898
+Scale AI,Ant Group,0.3783298,0.6216702
+2CRSI,Sidetrade,0.37825075,0.6217493
+Indium,Clay,0.37822548,0.62177455
+Multiverse Computing,1X Technologies,0.37811297,0.621887
+RobCo GmbH,Comand AI,0.3780265,0.6219735
+Anthropic,BuildOps,0.3777145,0.6222855
+Wayve,5C,0.3776347,0.6223653
+UiPath,Shift Technology,0.37747267,0.62252736
+Perplexity,Black Forest AI GmbH,0.37729782,0.6227022
+Cohere,Appen,0.37717545,0.62282455
+Harvey,H Company,0.37714398,0.622856
+Waymo,Aleph Alpha,0.37707028,0.6229297
+Celonis,ManoMano,0.37702116,0.6229788
+Applied Intuition,Sidetrade,0.37690118,0.62309885
+Adobe,Appen,0.37622088,0.6237791
+Indium,Adobe,0.3758622,0.62413776
+Multiverse Computing,01.AI,0.37568617,0.62431383
+Databricks,Procore,0.37549788,0.6245021
+BenevolentAI,Black Forest Labs,0.37531358,0.6246864
+Scale AI,Cognism,0.37529838,0.6247016
+Sakana AI,Clay,0.3751678,0.6248322
+BuildOps,Black Forest AI GmbH,0.37437487,0.62562513
+Celonis,5C,0.37426856,0.62573147
+Sidetrade,Xelix,0.37417927,0.62582076
+Palantir,Comand AI,0.37416562,0.62583435
+Anthropic,PolyAI,0.3741004,0.6258996
+5C,Apollo,0.37406868,0.6259313
+Sakana AI,SiPearl,0.37404513,0.62595487
+Perplexity,Owkin,0.3735112,0.6264888
+Wayve,Physical Intelligence,0.37348506,0.6265149
+Sakana AI,Owkin,0.37341934,0.62658066
+Databricks,Hailo Technologies,0.37320703,0.62679297
+RobCo GmbH,Black Forest AI GmbH,0.37318027,0.62681973
+Synthesia,Aleph Alpha,0.37315676,0.6268432
+ByteDance,ContentSquare,0.372972,0.627028
+World Labs,DeepL,0.372959,0.627041
+Celonis,RobCo GmbH,0.37269863,0.62730134
+Wayve,DeepL,0.3726215,0.62737846
+ManoMano,Adobe,0.37253112,0.6274689
+Databricks,Comand AI,0.3721403,0.6278597
+UiPath,Owkin,0.3718891,0.6281109
+PhotoRoom,Clay,0.37185553,0.6281445
+Waymo,World Labs,0.37182042,0.62817955
+World Labs,Hailo Technologies,0.37177262,0.62822735
+Perplexity AI,Clay,0.37148783,0.62851214
+Databricks,Cerebras,0.37122753,0.6287725
+Nscale,MiniMax,0.37121734,0.62878263
+1X Technologies,ARM Holdings,0.3712057,0.6287943
+Celonis,PolyAI,0.3711304,0.6288696
+World Labs,Apollo,0.37092528,0.6290747
+Celonis,Parloa,0.3707645,0.6292355
+Sidetrade,SiPearl,0.37064546,0.62935454
+Shift Technology,DentalMonitoring,0.37047777,0.6295222
+UiPath,Einride,0.37029603,0.629704
+UiPath,2CRSI,0.37006798,0.62993205
+BenevolentAI,Oracle,0.37002137,0.62997866
+Clay,PlanRadar,0.36999154,0.63000846
+Parloa,Exotec,0.36998928,0.6300107
+Physical Intelligence,Cambricon Technologies,0.36977482,0.6302252
+Cerebras,PolyAI,0.3697352,0.63026476
+ByteDance,Multiverse Computing,0.36953482,0.63046515
+ContentSquare,Clay,0.3694871,0.6305129
+Perplexity AI,Sidetrade,0.3693923,0.6306077
+Sidetrade,Tessl,0.36908716,0.63091284
+Y combinator,Prophesee,0.36882958,0.6311704
+RobCo GmbH,ARM Holdings,0.368512,0.63148797
+MiniMax,RobCo GmbH,0.36843428,0.6315657
+Black Forest Labs,Palantir,0.36834073,0.63165927
+Harvey,BenevolentAI,0.36821765,0.63178235
+2CRSI,Hugging Face,0.36813876,0.6318612
+Procore,Clay,0.3680834,0.63191664
+Databricks,Sakana AI,0.36798579,0.6320142
+Harvey,Applied Intuition,0.36798126,0.63201874
+Hugging Face,Cognism,0.36792907,0.6320709
+Nscale,PhotoRoom,0.36760125,0.6323987
+Nscale,Tessl,0.36759874,0.6324012
+Wayve,Prophesee,0.3675328,0.6324672
+AMD,Prophesee,0.3674413,0.6325587
+MiniMax,Shift Technology,0.36743796,0.63256204
+ManoMano,ARM Holdings,0.3673062,0.63269377
+Perplexity AI,Indium,0.36677736,0.63322264
+Cohere,Perplexity AI,0.36654112,0.63345885
+UiPath,Applied Intuition,0.36645693,0.6335431
+Waymo,Indium,0.36634478,0.6336552
+World Labs,H Company,0.3663384,0.6336616
+Anthropic,Procore,0.36633098,0.633669
+Databricks,Nscale,0.3663205,0.6336795
+Oracle,Black Forest AI GmbH,0.36629432,0.6337057
+OpenAI,Ant Group,0.36616442,0.63383555
+OpenAI,Shift Technology,0.36603066,0.6339693
+MiniMax,Perplexity,0.36601612,0.63398385
+AMI - Advanced Machine Intelligence,BenevolentAI,0.36598426,0.63401574
+Nscale,Nabla,0.36589786,0.6341021
+Hugging Face,PlanRadar,0.3654546,0.6345454
+UiPath,Sidetrade,0.36544675,0.63455325
+Cerebras,Ant Group,0.36539224,0.6346078
+2CRSI,Exotec,0.36532837,0.6346716
+ByteDance,AMD,0.36515918,0.63484085
+Groq,Indium,0.36506605,0.63493395
+01.AI,Sidetrade,0.3646089,0.6353911
+ManoMano,Qualified,0.36456636,0.6354337
+1X Technologies,Apollo,0.36432126,0.63567877
+ManoMano,Sidetrade,0.3642349,0.6357651
+ContentSquare,Perplexity AI,0.36403748,0.6359625
+Procore,Apollo,0.36403507,0.63596493
+Wayve,Perplexity,0.36402395,0.6359761
+PolyAI,Sakana AI,0.36370245,0.6362976
+Nscale,SiPearl,0.36357725,0.63642275
+Synthesia,Owkin,0.3633809,0.6366191
+Celonis,Comand AI,0.3633403,0.63665974
+1X Technologies,AMD,0.36308318,0.6369168
+Wayve,PhotoRoom,0.36301333,0.6369867
+Groq,BuildOps,0.36299375,0.6370063
+01.AI,Palantir,0.36280087,0.63719916
+Sakana AI,Palantir,0.3627089,0.6372911
+Anthropic,PlanRadar,0.3625968,0.6374032
+Multiverse Computing,Hailo Technologies,0.3622678,0.6377322
+Einride,Hugging Face,0.36225685,0.6377431
+Waymo,Hugging Face,0.36198425,0.63801575
+Sakana AI,Tessl,0.36189964,0.6381004
+Sakana AI,Xelix,0.36162922,0.63837075
+RobCo GmbH,Apollo,0.36158738,0.6384126
+Lightspeed,Cognism,0.36153248,0.63846755
+Waymo,Sidetrade,0.3615165,0.6384835
+Wayve,Celonis,0.36151272,0.6384873
+UiPath,Apollo,0.36151138,0.63848865
+Cohere,Adobe,0.36142445,0.63857555
+2CRSI,PlanRadar,0.36141226,0.6385877
+Anthropic,Tessl,0.36118647,0.6388135
+Palantir,ARM Holdings,0.36101526,0.63898474
+Appen,Qualified,0.36087254,0.6391275
+Nscale,Apollo,0.36072162,0.6392784
+Sidetrade,Nabla,0.36060905,0.63939095
+Oracle,BuildOps,0.36032954,0.6396705
+Perplexity AI,DentalMonitoring,0.36028153,0.6397185
+01.AI,Clay,0.36026424,0.63973576
+ManoMano,Y combinator,0.3601188,0.6398812
+Parloa,H Company,0.36003855,0.6399615
+Aleph Alpha,Indium,0.35995004,0.64004993
+Einride,Hailo Technologies,0.35992858,0.6400714
+Anthropic,SiPearl,0.3599192,0.6400808
+Waymo,Exotec,0.35978416,0.6402159
+Mistral AI,PhotoRoom,0.35975066,0.6402494
+Applied Intuition,Synthesia,0.35971084,0.6402892
+BenevolentAI,Apollo,0.35962752,0.6403725
+Black Forest Labs,Oracle,0.35948727,0.6405127
+Anthropic,DeepL,0.35947803,0.640522
+ByteDance,OpenAI,0.35946813,0.6405319
+2CRSI,Procore,0.3593605,0.64063954
+Celonis,Synthesia,0.359325,0.640675
+BuildOps,Comand AI,0.3592053,0.6407947
+Black Forest Labs,Apollo,0.3592051,0.6407949
+MiniMax,ARM Holdings,0.35899356,0.64100647
+Physical Intelligence,Harvey,0.35882857,0.64117146
+5C,Shift Technology,0.35843983,0.6415602
+Databricks,Y combinator,0.35833782,0.6416622
+Wayve,PolyAI,0.35802126,0.64197874
+Cerebras,Perplexity,0.35791934,0.64208066
+1X Technologies,PhotoRoom,0.35787946,0.64212054
+Hailo Technologies,Prophesee,0.35780543,0.64219457
+Y combinator,Owkin,0.35765982,0.6423402
+PolyAI,Apollo,0.35758692,0.6424131
+Cerebras,Adobe,0.35758215,0.64241785
+Alibaba,Sakana AI,0.3574197,0.6425803
+Wayve,Ant Group,0.35733515,0.64266485
+BenevolentAI,Lightspeed,0.35706583,0.6429342
+Cohere,World Labs,0.35705334,0.64294666
+ByteDance,Wayve,0.3569481,0.64305186
+Aleph Alpha,DeepL,0.3567956,0.6432044
+Harvey,Comand AI,0.35675916,0.6432408
+Databricks,ARM Holdings,0.35674104,0.6432589
+1X Technologies,Aqemia,0.35673046,0.64326954
+World Labs,RobCo GmbH,0.35665685,0.64334315
+Groq,Prophesee,0.35660812,0.64339185
+ContentSquare,Owkin,0.3565638,0.6434362
+Palantir,Nabla,0.3565054,0.6434946
+Celonis,Appen,0.35624015,0.64375985
+Palantir,Xelix,0.3561701,0.64382994
+ManoMano,Procore,0.35604596,0.64395404
+Clay,Cognism,0.35576537,0.64423466
+Lightspeed,Prophesee,0.35572374,0.64427626
+Anthropic,RobCo GmbH,0.35564774,0.64435226
+Sakana AI,Nabla,0.35563147,0.6443685
+World Labs,1X Technologies,0.35554707,0.6444529
+Black Forest AI GmbH,Prophesee,0.3554797,0.6445203
+Nscale,Xelix,0.35539407,0.64460593
+UiPath,Lightspeed,0.35530126,0.64469874
+Einride,01.AI,0.35517597,0.644824
+Black Forest AI GmbH,Aqemia,0.3551,0.64489996
+Black Forest AI GmbH,Nabla,0.35496122,0.6450388
+UiPath,Aleph Alpha,0.35492295,0.64507705
+PolyAI,Exotec,0.35492182,0.6450782
+Nscale,UiPath,0.35488683,0.64511317
+5C,2CRSI,0.3546349,0.6453651
+Harvey,Indium,0.35460418,0.6453958
+Perplexity,Black Forest Labs,0.3545509,0.6454491
+Groq,Multiverse Computing,0.35448688,0.6455131
+Databricks,Appen,0.3543655,0.64563453
+BuildOps,Appen,0.35412073,0.64587927
+Anthropic,Perplexity AI,0.3540291,0.64597094
+Procore,Qualified,0.35376027,0.64623976
+Cohere,BuildOps,0.35372326,0.6462767
+Apollo,Tessl,0.35368904,0.6463109
+1X Technologies,ManoMano,0.35362142,0.6463786
+Wayve,ARM Holdings,0.3535746,0.64642537
+PolyAI,Adobe,0.35348156,0.64651847
+Sidetrade,PlanRadar,0.35340273,0.64659727
+MiniMax,Applied Intuition,0.35339662,0.64660335
+Perplexity AI,Aqemia,0.35327125,0.64672875
+Mistral AI,RobCo GmbH,0.35322744,0.64677256
+Black Forest AI GmbH,Xelix,0.35317287,0.6468271
+Alibaba,H Company,0.3530105,0.64698946
+1X Technologies,Hugging Face,0.3530062,0.64699376
+Celonis,1X Technologies,0.3529999,0.6470001
+2CRSI,BuildOps,0.3529611,0.64703894
+RobCo GmbH,Clay,0.3528469,0.64715314
+Applied Intuition,Sakana AI,0.35283908,0.6471609
+2CRSI,Comand AI,0.3524181,0.64758193
+Palantir,Appen,0.35236096,0.64763904
+ContentSquare,PhotoRoom,0.35223383,0.6477662
+Wayve,RobCo GmbH,0.35195646,0.6480435
+Perplexity,Aqemia,0.3518892,0.6481108
+Y combinator,Aleph Alpha,0.35187194,0.64812803
+Applied Intuition,Indium,0.35183564,0.6481644
+Databricks,2CRSI,0.35178456,0.6482154
+Perplexity,Prophesee,0.35172805,0.6482719
+PolyAI,Shift Technology,0.3516615,0.6483385
+Black Forest Labs,Cambricon Technologies,0.35162985,0.64837015
+Sakana AI,Aqemia,0.35149184,0.6485082
+PolyAI,2CRSI,0.35134432,0.64865565
+1X Technologies,Black Forest Labs,0.35113862,0.6488614
+ARM Holdings,Prophesee,0.35102051,0.6489795
+01.AI,Owkin,0.35075697,0.649243
+AMI - Advanced Machine Intelligence,Synthesia,0.3504825,0.64951754
+Acronis,Procore,0.3502166,0.6497834
+2CRSI,ARM Holdings,0.3498458,0.65015423
+Wayve,1X Technologies,0.34967244,0.65032756
+Anthropic,Nabla,0.34942272,0.6505773
+Cohere,Black Forest AI GmbH,0.34934074,0.65065926
+Databricks,Owkin,0.3490992,0.65090084
+Parloa,Perplexity AI,0.3487939,0.65120614
+Anthropic,2CRSI,0.3487229,0.65127707
+Mistral AI,Shift Technology,0.34864375,0.6513562
+PolyAI,BuildOps,0.34861735,0.6513827
+ManoMano,2CRSI,0.34859818,0.6514018
+UiPath,BuildOps,0.34820077,0.6517992
+PhotoRoom,PlanRadar,0.34819546,0.65180457
+Groq,Cambricon Technologies,0.3480394,0.6519606
+Mistral AI,Wayve,0.34778902,0.65221095
+Black Forest AI GmbH,SiPearl,0.34759453,0.6524055
+Multiverse Computing,Owkin,0.34722283,0.6527772
+UiPath,Adobe,0.34714416,0.6528559
+Owkin,DentalMonitoring,0.3470047,0.6529953
+Mistral AI,Apollo,0.34697318,0.6530268
+MiniMax,DeepL,0.3468496,0.65315044
+Anthropic,Exotec,0.34677517,0.6532248
+Nscale,Aleph Alpha,0.34672734,0.6532726
+Celonis,Cohere,0.34663057,0.6533694
+Y combinator,Nabla,0.3464237,0.6535763
+Adobe,PlanRadar,0.34631702,0.65368295
+Parloa,Hailo Technologies,0.34630242,0.6536976
+Anthropic,Cambricon Technologies,0.34614334,0.65385664
+Aqemia,Comand AI,0.34609982,0.65390015
+Hailo Technologies,Palantir,0.34591985,0.65408015
+2CRSI,Cambricon Technologies,0.34590074,0.6540992
+Groq,PhotoRoom,0.3456968,0.6543032
+Aqemia,Cambricon Technologies,0.34547916,0.65452087
+Alibaba,Lightspeed,0.34547693,0.6545231
+01.AI,PhotoRoom,0.34545773,0.65454227
+Groq,PolyAI,0.34534568,0.6546543
+AMD,Black Forest AI GmbH,0.34516993,0.6548301
+Databricks,1X Technologies,0.34499398,0.65500605
+Waymo,Einride,0.34483457,0.65516543
+Palantir,SiPearl,0.3447917,0.6552083
+Cohere,MiniMax,0.3447724,0.6552276
+Nscale,Oracle,0.34473023,0.65526974
+Harvey,Black Forest Labs,0.344483,0.655517
+Cohere,Owkin,0.34423482,0.6557652
+Applied Intuition,Owkin,0.34418288,0.65581715
+Black Forest AI GmbH,Tessl,0.34417352,0.65582645
+Shift Technology,Black Forest AI GmbH,0.34401992,0.6559801
+1X Technologies,PlanRadar,0.34401444,0.6559856
+Shift Technology,Exotec,0.3438543,0.6561457
+Hailo Technologies,Aqemia,0.34373748,0.6562625
+Aleph Alpha,Apollo,0.34368426,0.65631574
+Harvey,Apollo,0.3435666,0.6564334
+2CRSI,Appen,0.34349802,0.656502
+Anthropic,Xelix,0.34348878,0.6565112
+Apollo,SiPearl,0.34348506,0.65651494
+Harvey,Aleph Alpha,0.34347218,0.6565278
+Nscale,Appen,0.34342173,0.6565783
+Indium,Aqemia,0.3433981,0.6566019
+Aqemia,Appen,0.34335804,0.65664196
+Exotec,Aqemia,0.34315538,0.6568446
+Apollo,Xelix,0.3430908,0.6569092
+Palantir,Tessl,0.34304175,0.6569582
+Anthropic,Einride,0.34296954,0.65703046
+Nscale,Wayve,0.34295413,0.65704584
+Applied Intuition,ARM Holdings,0.3428057,0.65719426
+World Labs,Palantir,0.34270358,0.6572964
+ByteDance,Oracle,0.34258524,0.6574148
+PhotoRoom,Comand AI,0.34244338,0.65755665
+Databricks,MiniMax,0.34228086,0.65771914
+Mistral AI,Applied Intuition,0.342134,0.657866
+Y combinator,ARM Holdings,0.34207606,0.65792394
+ByteDance,Synthesia,0.34207577,0.65792423
+AMD,H Company,0.34200463,0.65799534
+Y combinator,Appen,0.34174725,0.6582527
+ByteDance,Groq,0.34171426,0.65828574
+BenevolentAI,Aleph Alpha,0.3416573,0.6583427
+ManoMano,Cognism,0.34153736,0.65846264
+Waymo,RobCo GmbH,0.3414208,0.65857923
+Oracle,Owkin,0.34138158,0.65861845
+Synthesia,DeepL,0.3413431,0.6586569
+Berkshire Hathaway,AMD,0.34124723,0.6587528
+Applied Intuition,BenevolentAI,0.3411906,0.6588094
+MiniMax,Exotec,0.34095865,0.65904135
+Multiverse Computing,Sakana AI,0.3409174,0.6590826
+Cerebras,Lightspeed,0.34080517,0.6591948
+Shift Technology,H Company,0.3406984,0.65930164
+ByteDance,1X Technologies,0.3405356,0.65946436
+Groq,RobCo GmbH,0.34047452,0.6595255
+1X Technologies,Clay,0.34039047,0.65960956
+World Labs,Indium,0.34030226,0.6596978
+Applied Intuition,Hailo Technologies,0.3402239,0.6597761
+Clay,Comand AI,0.34000495,0.6599951
+Hailo Technologies,Cognism,0.33952498,0.660475
+OpenAI,Adobe,0.3392632,0.6607368
+BenevolentAI,Prophesee,0.33922595,0.66077405
+Y combinator,Xelix,0.3391799,0.6608201
+Perplexity,Apollo,0.33913064,0.66086936
+2CRSI,PhotoRoom,0.33909053,0.6609095
+Databricks,Indium,0.33902973,0.6609703
+Cerebras,MiniMax,0.33899397,0.66100603
+BenevolentAI,RobCo GmbH,0.338951,0.661049
+Acronis,Exotec,0.338849,0.661151
+Groq,DeepL,0.3388279,0.6611721
+Harvey,RobCo GmbH,0.33878615,0.6612139
+Harvey,Palantir,0.3387545,0.66124547
+AMI - Advanced Machine Intelligence,Lightspeed,0.3385081,0.6614919
+Apollo,PlanRadar,0.33835465,0.66164535
+Black Forest Labs,H Company,0.3383313,0.66166866
+ARM Holdings,BuildOps,0.33795804,0.66204196
+Y combinator,Tessl,0.3378857,0.66211426
+H Company,Aqemia,0.33769435,0.66230565
+Cohere,PolyAI,0.33761162,0.6623884
+Lightspeed,Tessl,0.3376046,0.66239536
+UiPath,Procore,0.3375141,0.6624859
+Scale AI,PlanRadar,0.33728853,0.6627115
+Exotec,Indium,0.33728394,0.66271603
+Acronis,Fal,0.33719543,0.6628046
+Indium,Comand AI,0.33706543,0.66293454
+World Labs,Cambricon Technologies,0.3369351,0.6630649
+1X Technologies,Black Forest AI GmbH,0.3368736,0.6631264
+Sidetrade,BuildOps,0.33682752,0.6631725
+ByteDance,Physical Intelligence,0.33670282,0.6632972
+1X Technologies,Shift Technology,0.3365297,0.66347027
+Y combinator,Aqemia,0.33642256,0.66357744
+Qualcomm,Cambricon Technologies,0.33627358,0.66372645
+Harvey,1X Technologies,0.33624735,0.6637527
+Einride,ARM Holdings,0.33599132,0.6640087
+Oracle,Lightspeed,0.3359388,0.6640612
+ByteDance,AMI - Advanced Machine Intelligence,0.33591157,0.6640884
+Exotec,Comand AI,0.3358539,0.66414607
+AMD,Aqemia,0.3358406,0.6641594
+Anthropic,Applied Intuition,0.33576444,0.6642356
+ByteDance,Hugging Face,0.33576307,0.6642369
+YouTube,Synthesia,0.33567184,0.66432816
+Black Forest Labs,DeepL,0.3356255,0.6643745
+Alibaba,Exotec,0.33558497,0.664415
+Waymo,Black Forest AI GmbH,0.33541846,0.66458154
+Alibaba,Databricks,0.33537883,0.6646212
+OpenAI,Sidetrade,0.33520496,0.66479504
+Y combinator,SiPearl,0.33508828,0.66491175
+Procore,H Company,0.33506924,0.66493076
+World Labs,PolyAI,0.3350365,0.6649635
+AMI - Advanced Machine Intelligence,Indium,0.33503488,0.66496515
+RobCo GmbH,Indium,0.33500692,0.66499305
+Aleph Alpha,Sidetrade,0.3349126,0.6650874
+AMI - Advanced Machine Intelligence,Cambricon Technologies,0.33490297,0.665097
+Cohere,1X Technologies,0.33485553,0.66514444
+Nscale,Celonis,0.33431828,0.6656817
+Databricks,Wayve,0.33429712,0.6657029
+5C,Cognism,0.3342377,0.6657623
+ManoMano,Tessl,0.33415174,0.66584826
+Perplexity,Sidetrade,0.3341323,0.6658677
+Black Forest Labs,Adobe,0.33396798,0.666032
+DentalMonitoring,Prophesee,0.33387887,0.6661211
+Qualified,PlanRadar,0.33380672,0.66619325
+ManoMano,Einride,0.33364147,0.66635853
+ManoMano,BenevolentAI,0.33338708,0.6666129
+Mistral AI,Y combinator,0.33317578,0.6668242
+Lightspeed,SiPearl,0.33310598,0.666894
+Celonis,Procore,0.3329755,0.6670245
+MiniMax,Perplexity AI,0.33287844,0.6671215
+Databricks,Cognism,0.33275282,0.6672472
+Nscale,Adobe,0.3327394,0.6672606
+H Company,Ant Group,0.3326397,0.6673603
+Cerebras,Apollo,0.3324371,0.6675629
+Harvey,01.AI,0.3323822,0.6676178
+Procore,Comand AI,0.33204994,0.66795003
+Hailo Technologies,Owkin,0.3317253,0.6682747
+Nscale,01.AI,0.33148578,0.66851425
+World Labs,Harvey,0.3313515,0.6686485
+World Labs,ARM Holdings,0.3312018,0.6687982
+Clay,Qualified,0.3311144,0.6688856
+Perplexity,Clay,0.33095235,0.66904765
+Y combinator,H Company,0.3307825,0.66921747
+Apollo,Nabla,0.33075085,0.6692492
+Cohere,Indium,0.33068088,0.66931915
+RobCo GmbH,Hugging Face,0.3306595,0.6693405
+Exotec,ARM Holdings,0.33065304,0.6693469
+1X Technologies,Parloa,0.33062747,0.66937256
+01.AI,Exotec,0.3306235,0.6693765
+Palantir,Aqemia,0.33052936,0.66947067
+Applied Intuition,Einride,0.3304086,0.6695914
+PhotoRoom,H Company,0.33034047,0.6696595
+Cerebras,PhotoRoom,0.33023533,0.66976464
+MiniMax,Prophesee,0.3302158,0.6697842
+Harvey,Lightspeed,0.3301392,0.66986084
+AMI - Advanced Machine Intelligence,Ant Group,0.32994187,0.67005813
+Wayve,Aqemia,0.3298541,0.67014587
+5C,BenevolentAI,0.3297966,0.6702034
+Celonis,Multiverse Computing,0.32974508,0.67025495
+1X Technologies,Adobe,0.32956788,0.6704321
+ManoMano,SiPearl,0.32948905,0.67051095
+Acronis,Synthesia,0.32948685,0.67051315
+Scale AI,Cambricon Technologies,0.32941303,0.67058694
+ManoMano,PlanRadar,0.32935053,0.67064947
+Perplexity,Exotec,0.32934275,0.6706573
+Acronis,BenevolentAI,0.32915413,0.67084587
+MiniMax,Sidetrade,0.32899266,0.67100734
+PhotoRoom,Exotec,0.32885554,0.6711445
+01.AI,Prophesee,0.32877108,0.6712289
+Lightspeed,Nabla,0.32865754,0.6713425
+Wayve,PlanRadar,0.3283965,0.6716035
+ManoMano,Nabla,0.3283546,0.6716454
+Anthropic,Shift Technology,0.32835236,0.67164767
+YouTube,Adobe,0.32822582,0.67177415
+Einride,Lightspeed,0.32818997,0.67181003
+Parloa,Clay,0.3280312,0.6719688
+Databricks,Sidetrade,0.3279978,0.6720022
+Celonis,Y combinator,0.32796016,0.67203987
+Owkin,Appen,0.32768062,0.6723194
+Wayve,2CRSI,0.3274154,0.6725846
+ByteDance,Clay,0.32730657,0.67269343
+Sidetrade,Hailo Technologies,0.32726166,0.6727383
+RobCo GmbH,PlanRadar,0.3271268,0.6728732
+Oracle,Cognism,0.3270665,0.67293346
+Lightspeed,BuildOps,0.32704616,0.67295384
+ByteDance,BuildOps,0.326938,0.67306197
+Appen,Cambricon Technologies,0.32687786,0.67312217
+Cohere,ManoMano,0.3268522,0.6731478
+ContentSquare,Exotec,0.32680705,0.673193
+UiPath,World Labs,0.32672095,0.67327905
+UiPath,RobCo GmbH,0.32663554,0.67336446
+AMD,BenevolentAI,0.32640475,0.67359525
+01.AI,DeepL,0.32632527,0.6736747
+Celonis,PhotoRoom,0.3261285,0.6738715
+Cohere,Apollo,0.32609585,0.6739042
+Parloa,BuildOps,0.3259125,0.6740875
+5C,Aleph Alpha,0.3257943,0.67420566
+5C,Ant Group,0.32568964,0.6743103
+Waymo,Perplexity,0.32551616,0.67448384
+ContentSquare,Synthesia,0.32549223,0.67450774
+Cohere,Black Forest Labs,0.3252947,0.67470527
+AMI - Advanced Machine Intelligence,BuildOps,0.32524914,0.67475086
+Perplexity,Hailo Technologies,0.32518542,0.6748146
+UiPath,Aqemia,0.32515472,0.6748453
+Cohere,Procore,0.3250487,0.6749513
+Alibaba,Black Forest AI GmbH,0.32496643,0.67503357
+Nscale,Synthesia,0.3248627,0.6751373
+ContentSquare,Apollo,0.32478127,0.6752187
+Cohere,H Company,0.32473916,0.67526084
+Alibaba,Cerebras,0.32462332,0.67537665
+Cohere,AMI - Advanced Machine Intelligence,0.32451445,0.67548555
+Y combinator,PlanRadar,0.32448104,0.675519
+Cohere,DeepL,0.32445762,0.67554235
+Perplexity AI,RobCo GmbH,0.32443044,0.67556953
+PhotoRoom,Black Forest AI GmbH,0.32442853,0.67557144
+BenevolentAI,Sidetrade,0.3244031,0.6755969
+Mistral AI,2CRSI,0.32438892,0.6756111
+Lightspeed,Xelix,0.32434508,0.6756549
+5C,Adobe,0.3242771,0.6757229
+Wayve,Adobe,0.32423815,0.6757618
+Mistral AI,Exotec,0.32397288,0.6760271
+Sidetrade,Black Forest Labs,0.32281232,0.6771877
+AMD,Ant Group,0.32272622,0.67727375
+DeepL,Hugging Face,0.32265192,0.6773481
+Owkin,Apollo,0.32246664,0.6775334
+Synthesia,Sidetrade,0.32245633,0.67754364
+Shift Technology,Cognism,0.3224376,0.67756236
+MiniMax,AMI - Advanced Machine Intelligence,0.3223483,0.6776517
+Cerebras,BuildOps,0.32231542,0.67768455
+2CRSI,01.AI,0.32230362,0.67769635
+Multiverse Computing,BenevolentAI,0.32226846,0.6777315
+Nscale,Aqemia,0.32215467,0.67784536
+Physical Intelligence,Tessl,0.3221028,0.6778972
+Owkin,H Company,0.32209888,0.67790115
+Oracle,Clay,0.3220017,0.6779983
+Groq,Fal,0.3218642,0.6781358
+Databricks,Prophesee,0.32167447,0.67832553
+Physical Intelligence,SiPearl,0.32166716,0.6783328
+Nscale,Clay,0.321644,0.678356
+Aleph Alpha,Palantir,0.32160145,0.67839855
+Cerebras,Y combinator,0.32154128,0.6784587
+5C,DeepL,0.3212494,0.67875063
+PhotoRoom,Appen,0.3210202,0.6789798
+UiPath,Prophesee,0.32064766,0.67935234
+Perplexity,H Company,0.3205066,0.6794934
+H Company,PlanRadar,0.32042328,0.67957675
+Palantir,Prophesee,0.32039034,0.67960966
+AMD,ManoMano,0.3203162,0.6796838
+2CRSI,Prophesee,0.32025805,0.679742
+Groq,ContentSquare,0.32017547,0.67982453
+Hailo Technologies,Clay,0.3201738,0.6798262
+Exotec,Apollo,0.32015625,0.6798438
+Sidetrade,Gousto,0.3201496,0.6798504
+ByteDance,BenevolentAI,0.31993857,0.68006146
+Multiverse Computing,SiPearl,0.3197798,0.6802202
+Shift Technology,Procore,0.31946868,0.6805313
+World Labs,AMD,0.3192782,0.68072176
+ManoMano,Xelix,0.3192123,0.6807877
+Celonis,Aleph Alpha,0.31913704,0.68086296
+BenevolentAI,Perplexity AI,0.31908175,0.6809182
+Databricks,Apollo,0.31885663,0.6811434
+OpenAI,Qualified,0.31876698,0.68123305
+ByteDance,2CRSI,0.31866124,0.6813388
+Multiverse Computing,Tessl,0.31861237,0.68138766
+2CRSI,Hailo Technologies,0.3183673,0.6816327
+AMI - Advanced Machine Intelligence,Adobe,0.3183577,0.6816423
+Cohere,PhotoRoom,0.31814823,0.68185174
+RobCo GmbH,Prophesee,0.3181044,0.6818956
+Groq,Cognism,0.31804785,0.6819521
+MiniMax,Parloa,0.31802112,0.6819789
+ARM Holdings,Clay,0.31793383,0.6820662
+Harvey,Owkin,0.31789318,0.68210685
+Scale AI,DentalMonitoring,0.31763938,0.68236065
+Harvey,AMD,0.31754616,0.6824539
+Databricks,Celonis,0.3173581,0.68264186
+Nscale,H Company,0.31728232,0.6827177
+Nscale,PolyAI,0.31727982,0.6827202
+PhotoRoom,Sakana AI,0.31718704,0.6828129
+Exotec,Ant Group,0.3171657,0.68283427
+Owkin,Lightspeed,0.31713772,0.6828623
+1X Technologies,Prophesee,0.31713647,0.68286353
+Cerebras,Acronis,0.31707314,0.6829269
+Mistral AI,Ant Group,0.31698248,0.6830175
+Perplexity,Indium,0.31679586,0.6832042
+Black Forest Labs,Cognism,0.31646398,0.68353605
+DeepL,Lightspeed,0.31636673,0.68363327
+Waymo,Groq,0.31633598,0.683664
+Shift Technology,PlanRadar,0.3162132,0.6837868
+ByteDance,RobCo GmbH,0.31620055,0.68379945
+Multiverse Computing,Nabla,0.31611288,0.6838871
+2CRSI,Aqemia,0.31592086,0.6840792
+Black Forest AI GmbH,Cognism,0.31586796,0.68413204
+Databricks,DeepL,0.31555107,0.68444896
+Multiverse Computing,Xelix,0.31549773,0.68450224
+Y combinator,Synthesia,0.31548777,0.68451226
+Perplexity,DeepL,0.31528825,0.68471175
+Cohere,BenevolentAI,0.31522298,0.684777
+Groq,Acronis,0.31511065,0.6848893
+Alibaba,ARM Holdings,0.31503168,0.68496835
+Synthesia,Indium,0.3146669,0.68533313
+Acronis,Cambricon Technologies,0.3145604,0.6854396
+AMD,Synthesia,0.3145553,0.6854447
+OpenAI,Cambricon Technologies,0.31433418,0.68566585
+5C,Owkin,0.31433406,0.68566597
+Y combinator,Sakana AI,0.31428638,0.68571365
+AMD,Einride,0.3142798,0.6857202
+Hailo Technologies,DeepL,0.31395575,0.6860442
+Perplexity AI,Black Forest Labs,0.3137991,0.68620086
+Einride,Comand AI,0.3137821,0.6862179
+2CRSI,Adobe,0.3136325,0.6863675
+RobCo GmbH,Sakana AI,0.31361604,0.68638396
+Parloa,RobCo GmbH,0.31358138,0.68641865
+1X Technologies,Perplexity AI,0.31350413,0.6864959
+Acronis,Comand AI,0.3134786,0.6865214
+Databricks,Synthesia,0.31318772,0.6868123
+Celonis,01.AI,0.313174,0.686826
+5C,Sidetrade,0.31312588,0.68687415
+Harvey,Appen,0.31308562,0.6869144
+Physical Intelligence,Nabla,0.31282264,0.68717736
+Black Forest Labs,Nabla,0.31281945,0.6871805
+PolyAI,Sidetrade,0.31272402,0.687276
+ByteDance,Exotec,0.3125643,0.6874357
+Hailo Technologies,Cambricon Technologies,0.31254333,0.68745667
+Applied Intuition,PolyAI,0.31236553,0.68763447
+Synthesia,Procore,0.31232053,0.68767947
+Wayve,Perplexity AI,0.3121674,0.6878326
+Perplexity AI,Aleph Alpha,0.3119919,0.68800807
+Multiverse Computing,Aleph Alpha,0.31190225,0.6880977
+DeepL,Aqemia,0.31188118,0.6881188
+Celonis,Lightspeed,0.31185272,0.6881473
+ByteDance,Celonis,0.31182075,0.68817925
+Nscale,BuildOps,0.3118052,0.6881948
+Owkin,ARM Holdings,0.31179106,0.68820894
+Black Forest Labs,RobCo GmbH,0.3117518,0.68824816
+Cohere,ARM Holdings,0.31161782,0.68838215
+01.AI,Cambricon Technologies,0.3115013,0.68849874
+World Labs,Clay,0.31136817,0.68863183
+Apollo,Cambricon Technologies,0.31136507,0.68863493
+Harvey,BuildOps,0.31126493,0.68873507
+Anthropic,Sidetrade,0.31082878,0.6891712
+H Company,Qualified,0.31076768,0.68923235
+Black Forest Labs,Xelix,0.31061116,0.6893889
+Berkshire Hathaway,Hugging Face,0.31060433,0.68939567
+ManoMano,Ant Group,0.31052718,0.6894728
+Lightspeed,Qualified,0.31040192,0.6895981
+ManoMano,Palantir,0.31038064,0.68961936
+Alibaba,PhotoRoom,0.31035653,0.6896435
+OpenAI,BuildOps,0.31026813,0.68973184
+Oracle,Apollo,0.31021363,0.6897864
+ContentSquare,Sidetrade,0.31021127,0.6897887
+BenevolentAI,ARM Holdings,0.31007046,0.68992954
+H Company,Clay,0.310021,0.68997896
+World Labs,Shift Technology,0.30994472,0.69005525
+2CRSI,Shift Technology,0.3098786,0.6901214
+ByteDance,Cerebras,0.30985183,0.6901482
+Y combinator,BenevolentAI,0.30956653,0.6904335
+AMD,BuildOps,0.30926213,0.69073784
+ContentSquare,ManoMano,0.30926174,0.69073826
+Black Forest Labs,Exotec,0.30921867,0.69078135
+Waymo,Owkin,0.30921096,0.69078904
+RobCo GmbH,Cognism,0.30914807,0.6908519
+Black Forest Labs,SiPearl,0.30910844,0.69089156
+Sidetrade,Indium,0.3089784,0.69102156
+MiniMax,Owkin,0.3088238,0.6911762
+Acronis,Hugging Face,0.3088186,0.6911814
+Berkshire Hathaway,Xelix,0.308418,0.69158196
+Black Forest AI GmbH,PlanRadar,0.30798298,0.692017
+Multiverse Computing,Synthesia,0.307881,0.692119
+Scale AI,Qualified,0.30773067,0.6922693
+World Labs,Sidetrade,0.30761978,0.6923802
+Perplexity,5C,0.30738372,0.6926163
+ContentSquare,BuildOps,0.3069323,0.69306767
+Waymo,Appen,0.30690584,0.69309413
+Databricks,Exotec,0.30679783,0.69320214
+Oracle,Comand AI,0.3064827,0.6935173
+Harvey,Black Forest AI GmbH,0.30647758,0.69352245
+Celonis,Qualified,0.30639,0.69361
+Einride,Prophesee,0.30629808,0.6937019
+Adobe,Ant Group,0.30622143,0.6937786
+PolyAI,PhotoRoom,0.30601165,0.6939883
+Shift Technology,BuildOps,0.30570027,0.6942997
+Anthropic,Cognism,0.30558515,0.69441485
+Alibaba,Black Forest Labs,0.30556875,0.69443125
+World Labs,Adobe,0.30514213,0.69485784
+ContentSquare,Comand AI,0.30489564,0.69510436
+Acronis,Appen,0.3048014,0.6951986
+Black Forest AI GmbH,Ant Group,0.30470052,0.6952995
+Waymo,Physical Intelligence,0.30450174,0.6954982
+Cerebras,Cohere,0.3044775,0.6955225
+Perplexity,PhotoRoom,0.3043571,0.6956429
+2CRSI,Black Forest Labs,0.30425113,0.69574887
+Aqemia,Qualcomm,0.3041548,0.6958452
+ByteDance,MiniMax,0.30412918,0.6958708
+Comand AI,Cambricon Technologies,0.3040985,0.6959015
+Groq,Adobe,0.30405152,0.6959485
+BenevolentAI,PhotoRoom,0.30399194,0.6960081
+Alibaba,Sidetrade,0.30390334,0.69609666
+Indium,BuildOps,0.30380496,0.696195
+5C,Perplexity AI,0.30377677,0.69622326
+ByteDance,Aqemia,0.3036677,0.69633234
+Celonis,Cambricon Technologies,0.30358338,0.6964166
+Alibaba,YouTube,0.30354822,0.6964518
+Perplexity,Aleph Alpha,0.30334207,0.6966579
+Berkshire Hathaway,Palantir,0.30331784,0.69668216
+Anthropic,Harvey,0.30313966,0.6968603
+Perplexity,Multiverse Computing,0.30308685,0.6969131
+MiniMax,AMD,0.30305925,0.6969408
+Physical Intelligence,BuildOps,0.3029246,0.69707537
+2CRSI,Owkin,0.30291682,0.6970832
+Physical Intelligence,Xelix,0.30287954,0.6971204
+MiniMax,Adobe,0.30286747,0.6971325
+Perplexity,DentalMonitoring,0.30277115,0.69722885
+Alibaba,Synthesia,0.30261824,0.69738173
+Perplexity,AMI - Advanced Machine Intelligence,0.3024721,0.6975279
+Alibaba,Cambricon Technologies,0.30246344,0.6975366
+RobCo GmbH,Cambricon Technologies,0.30244818,0.69755185
+Palantir,BuildOps,0.30238938,0.6976106
+Oracle,Prophesee,0.3022885,0.69771147
+Mistral AI,Parloa,0.3022883,0.6977117
+PhotoRoom,Oracle,0.30225345,0.6977465
+Acronis,BuildOps,0.30221206,0.69778794
+Oracle,Ant Group,0.30219778,0.6978022
+Databricks,Aqemia,0.3020455,0.69795454
+Sidetrade,H Company,0.30191356,0.69808644
+Databricks,Multiverse Computing,0.30190784,0.69809216
+Berkshire Hathaway,Nabla,0.30178002,0.69822
+Databricks,H Company,0.30177423,0.69822574
+Adobe,Prophesee,0.30173114,0.6982689
+5C,Parloa,0.30157325,0.6984267
+Oracle,Aqemia,0.30145612,0.6985439
+Alibaba,Adobe,0.30131865,0.69868135
+Sidetrade,Sakana AI,0.30121037,0.6987896
+Physical Intelligence,Cohere,0.30115622,0.6988438
+Sakana AI,Cambricon Technologies,0.3010728,0.69892716
+ByteDance,Palantir,0.30106318,0.6989368
+Black Forest Labs,Ant Group,0.3010244,0.69897556
+Multiverse Computing,Qualcomm,0.30099145,0.6990086
+5C,Qualified,0.3009774,0.6990226
+Wayve,Y combinator,0.30084306,0.69915694
+Applied Intuition,H Company,0.3006153,0.6993847
+Sidetrade,Fal,0.30048853,0.69951147
+ContentSquare,Aqemia,0.30047607,0.6995239
+PolyAI,PlanRadar,0.30042878,0.69957125
+1X Technologies,Owkin,0.30036288,0.6996371
+ByteDance,Sakana AI,0.3003476,0.69965243
+Waymo,1X Technologies,0.30022997,0.69977003
+MiniMax,Ant Group,0.3002172,0.6997828
+Black Forest Labs,Tessl,0.30017775,0.69982225
+Owkin,Clay,0.30003843,0.69996154
+AMI - Advanced Machine Intelligence,Einride,0.30003405,0.69996595
+Nscale,Cohere,0.29981062,0.70018935
+ByteDance,PhotoRoom,0.29979914,0.70020086
+Procore,Black Forest AI GmbH,0.29977745,0.70022255
+UiPath,PlanRadar,0.29962862,0.7003714
+Harvey,Adobe,0.29959974,0.70040023
+Wayve,Cambricon Technologies,0.29951617,0.7004838
+Adobe,Qualified,0.2994583,0.70054173
+Y combinator,Qualified,0.29942217,0.70057786
+Physical Intelligence,Ant Group,0.2993612,0.7006388
+ContentSquare,Appen,0.29908392,0.70091605
+Cohere,Prophesee,0.2990022,0.7009978
+Hailo Technologies,Ant Group,0.29899013,0.70100987
+Nscale,BenevolentAI,0.2988322,0.7011678
+Multiverse Computing,Appen,0.29878083,0.7012192
+ManoMano,Cambricon Technologies,0.29877722,0.7012228
+Apollo,DentalMonitoring,0.29867357,0.70132643
+Harvey,PolyAI,0.29853508,0.7014649
+Harvey,Hugging Face,0.29851958,0.7014804
+OpenAI,SiPearl,0.2983426,0.7016574
+Synthesia,Palantir,0.29818103,0.70181894
+Perplexity AI,Prophesee,0.29811907,0.70188093
+Celonis,Cognism,0.29808944,0.70191056
+AMD,Nabla,0.29805493,0.70194507
+1X Technologies,Palantir,0.2978807,0.7021193
+Berkshire Hathaway,Tessl,0.29787415,0.70212585
+Sidetrade,RobCo GmbH,0.29772955,0.70227045
+Apollo,Prophesee,0.2975683,0.7024317
+AMD,Xelix,0.29751864,0.7024814
+Scale AI,Parloa,0.2974885,0.7025115
+MiniMax,Cognism,0.297388,0.70261204
+YouTube,Lightspeed,0.29697907,0.70302093
+Adobe,Cognism,0.29685834,0.7031417
+Acronis,PlanRadar,0.2968547,0.70314527
+AMI - Advanced Machine Intelligence,DeepL,0.2966542,0.7033458
+Berkshire Hathaway,SiPearl,0.29656228,0.7034377
+Waymo,PolyAI,0.29654557,0.70345443
+Sidetrade,ARM Holdings,0.2965076,0.7034924
+Anthropic,Qualified,0.29645988,0.7035401
+Waymo,Acronis,0.2964358,0.70356417
+Waymo,Cohere,0.29622048,0.7037795
+Wayve,Harvey,0.29578447,0.7042155
+AMD,Tessl,0.29569435,0.70430565
+AMD,SiPearl,0.29567185,0.7043282
+Procore,Appen,0.29554784,0.70445216
+Harvey,ManoMano,0.29549432,0.7045057
+ContentSquare,Hugging Face,0.29547837,0.70452166
+Einride,Owkin,0.29536012,0.7046399
+World Labs,DentalMonitoring,0.29524806,0.70475197
+Waymo,ContentSquare,0.2952462,0.70475376
+Wayve,Apollo,0.29523063,0.7047694
+UiPath,Multiverse Computing,0.2948839,0.7051161
+1X Technologies,Einride,0.29478317,0.7052168
+DeepL,Appen,0.294595,0.705405
+Synthesia,Cognism,0.29449084,0.7055092
+DeepL,H Company,0.29431057,0.70568943
+Shift Technology,Black Forest Labs,0.29422516,0.70577484
+OpenAI,Tessl,0.29420182,0.70579815
+World Labs,BenevolentAI,0.2941164,0.7058836
+AMD,Apollo,0.2939556,0.70604444
+Cerebras,Procore,0.2938952,0.70610476
+Wayve,Clay,0.2933322,0.7066678
+Databricks,UiPath,0.29315647,0.7068435
+Cohere,Applied Intuition,0.29310754,0.7068925
+ByteDance,Mistral AI,0.29308844,0.70691156
+Aleph Alpha,Sakana AI,0.29300177,0.7069982
+Cerebras,Harvey,0.2929098,0.7070902
+Palantir,Ant Group,0.29274517,0.7072548
+ContentSquare,BenevolentAI,0.29273412,0.70726585
+ByteDance,Appen,0.29265168,0.70734835
+Exotec,Adobe,0.29263455,0.70736545
+Celonis,PlanRadar,0.2923535,0.7076465
+Synthesia,Oracle,0.29222962,0.70777035
+Harvey,Perplexity,0.29220903,0.707791
+AMD,Lightspeed,0.2921956,0.70780444
+Wayve,Indium,0.29179826,0.70820177
+2CRSI,Sakana AI,0.291685,0.708315
+2CRSI,Lightspeed,0.29139164,0.7086084
+Owkin,Tessl,0.29131886,0.7086811
+MiniMax,Harvey,0.29116675,0.7088332
+Waymo,Nscale,0.2910172,0.7089828
+Acronis,Sakana AI,0.29095957,0.7090404
+5C,Prophesee,0.2909495,0.70905054
+Synthesia,Ant Group,0.29086053,0.70913947
+Groq,Nabla,0.29075417,0.7092458
+Multiverse Computing,ARM Holdings,0.29055488,0.7094451
+Cerebras,Aleph Alpha,0.290481,0.709519
+Physical Intelligence,Aleph Alpha,0.29034117,0.70965886
+Shift Technology,Tessl,0.29030582,0.70969415
+Perplexity AI,Exotec,0.28995413,0.7100459
+Perplexity,Adobe,0.28992823,0.7100718
+Sidetrade,Procore,0.28984472,0.71015525
+Applied Intuition,PhotoRoom,0.28975734,0.7102426
+Alibaba,Comand AI,0.28969014,0.71030986
+Mistral AI,Einride,0.28966588,0.7103341
+ARM Holdings,Cognism,0.28950804,0.71049196
+Owkin,Indium,0.28949898,0.710501
+5C,Exotec,0.28948867,0.7105113
+Groq,SiPearl,0.2894013,0.7105987
+BenevolentAI,BuildOps,0.28930694,0.71069306
+DeepL,Black Forest AI GmbH,0.28927797,0.710722
+UiPath,Cambricon Technologies,0.28924125,0.71075875
+Multiverse Computing,5C,0.2892097,0.7107903
+PhotoRoom,Procore,0.28914782,0.71085215
+Databricks,RobCo GmbH,0.28914353,0.71085644
+Acronis,Shift Technology,0.28904113,0.71095884
+Parloa,Palantir,0.28897244,0.71102756
+Einride,RobCo GmbH,0.2888393,0.71116066
+Black Forest Labs,Indium,0.28871804,0.71128196
+Owkin,Nabla,0.28866687,0.71133316
+Mistral AI,Cambricon Technologies,0.28855237,0.7114476
+MiniMax,BuildOps,0.288523,0.71147704
+Y combinator,Ant Group,0.28837413,0.7116259
+Apollo,Ant Group,0.2883011,0.7116989
+Cerebras,Perplexity AI,0.28829497,0.711705
+H Company,Tessl,0.28827772,0.71172225
+Shift Technology,Prophesee,0.28821102,0.711789
+Einride,Appen,0.28820583,0.71179414
+Einride,Y combinator,0.28819522,0.71180475
+ContentSquare,PlanRadar,0.28815088,0.7118491
+Sakana AI,Adobe,0.28813472,0.7118653
+BenevolentAI,Ant Group,0.28813422,0.7118658
+Alibaba,BuildOps,0.2880304,0.7119696
+Black Forest Labs,BuildOps,0.28788486,0.71211517
+AMI - Advanced Machine Intelligence,Acronis,0.28788465,0.71211535
+Owkin,SiPearl,0.287859,0.71214104
+Aqemia,SiPearl,0.2878495,0.7121505
+Mistral AI,Clay,0.28784257,0.7121574
+Cohere,Parloa,0.28766087,0.71233916
+Applied Intuition,BuildOps,0.28761545,0.7123846
+World Labs,Oracle,0.28733146,0.71266854
+PolyAI,Aleph Alpha,0.2873236,0.7126764
+Adobe,Apollo,0.2871715,0.7128285
+Exotec,Cambricon Technologies,0.28717124,0.71282876
+Cohere,Oracle,0.28704888,0.7129511
+Shift Technology,Nabla,0.28668576,0.71331424
+Scale AI,Multiverse Computing,0.28666645,0.71333355
+Shift Technology,SiPearl,0.28653073,0.71346927
+OpenAI,Xelix,0.28617966,0.71382034
+Celonis,Clay,0.28613725,0.7138628
+Perplexity,Parloa,0.28597456,0.71402544
+Databricks,Perplexity,0.2859327,0.71406734
+UiPath,PhotoRoom,0.28592145,0.71407855
+AMI - Advanced Machine Intelligence,Procore,0.28576884,0.71423113
+Owkin,Cambricon Technologies,0.28573552,0.7142645
+Groq,Xelix,0.28565916,0.7143408
+ContentSquare,PolyAI,0.28556323,0.71443677
+ContentSquare,Applied Intuition,0.28553277,0.7144672
+Scale AI,Acronis,0.28537485,0.7146251
+AMD,RobCo GmbH,0.28536108,0.71463895
+ARM Holdings,Adobe,0.2853412,0.7146588
+2CRSI,Oracle,0.2853222,0.7146778
+1X Technologies,Sidetrade,0.28522158,0.7147784
+DentalMonitoring,Comand AI,0.28516996,0.71483004
+Lightspeed,DentalMonitoring,0.2848175,0.71518254
+Y combinator,BuildOps,0.28471786,0.71528214
+OpenAI,Waymo,0.28464255,0.7153574
+5C,Qualcomm,0.28442177,0.7155782
+Y combinator,PhotoRoom,0.28434893,0.71565104
+Cohere,RobCo GmbH,0.28416383,0.71583617
+Hailo Technologies,PlanRadar,0.28408912,0.7159109
+Anthropic,ContentSquare,0.28407907,0.7159209
+Berkshire Hathaway,ARM Holdings,0.28372514,0.71627486
+OpenAI,Procore,0.28350326,0.7164967
+Clay,DentalMonitoring,0.28346646,0.71653354
+Berkshire Hathaway,Mistral AI,0.28345397,0.71654606
+ByteDance,YouTube,0.283438,0.71656203
+MiniMax,Clay,0.28331706,0.7166829
+PhotoRoom,Aqemia,0.28330672,0.7166933
+Harvey,Perplexity AI,0.28330368,0.7166963
+Wayve,Acronis,0.28316474,0.71683526
+1X Technologies,Oracle,0.28310925,0.71689075
+BenevolentAI,Shift Technology,0.28307682,0.7169232
+Cohere,Einride,0.282997,0.717003
+Databricks,ManoMano,0.28295234,0.7170477
+Perplexity AI,H Company,0.28294727,0.7170527
+Cerebras,Shift Technology,0.2826512,0.7173488
+ContentSquare,Gousto,0.2826413,0.7173587
+Physical Intelligence,Adobe,0.28257653,0.71742344
+Shift Technology,Owkin,0.28257045,0.7174295
+Owkin,Ant Group,0.2825553,0.71744466
+OpenAI,Nabla,0.28241554,0.7175845
+Celonis,Harvey,0.28215384,0.71784616
+Cohere,Cambricon Technologies,0.28212473,0.71787524
+AMI - Advanced Machine Intelligence,Perplexity AI,0.28209063,0.71790934
+OpenAI,Einride,0.28176945,0.71823055
+Celonis,World Labs,0.28166425,0.71833575
+ARM Holdings,Qualcomm,0.28157407,0.7184259
+ByteDance,Scale AI,0.28131482,0.71868515
+Wayve,BuildOps,0.2811535,0.7188465
+Aqemia,Tessl,0.28113928,0.71886075
+Perplexity AI,SiPearl,0.2811231,0.7188769
+Parloa,Hugging Face,0.28111923,0.7188808
+H Company,SiPearl,0.2810689,0.7189311
+PolyAI,Black Forest Labs,0.28105134,0.71894866
+Owkin,Adobe,0.28101492,0.7189851
+Parloa,Procore,0.28092456,0.71907544
+RobCo GmbH,Adobe,0.28072762,0.7192724
+Parloa,Sidetrade,0.28061217,0.7193878
+Perplexity AI,Tessl,0.28053147,0.71946853
+Anthropic,Indium,0.28047684,0.7195232
+Indium,PlanRadar,0.2804473,0.7195527
+DeepL,Indium,0.2803205,0.7196795
+01.AI,BuildOps,0.28019077,0.71980923
+1X Technologies,Cognism,0.28018445,0.71981555
+01.AI,Adobe,0.28008795,0.71991205
+World Labs,2CRSI,0.2799285,0.7200715
+Nscale,Qualcomm,0.27975717,0.72024286
+Mistral AI,Sidetrade,0.27966502,0.720335
+Celonis,Indium,0.27943105,0.72056895
+Waymo,BenevolentAI,0.27922404,0.72077596
+Scale AI,ContentSquare,0.27894965,0.7210504
+Groq,PlanRadar,0.27883387,0.72116613
+Cohere,PlanRadar,0.2787744,0.7212256
+Owkin,Xelix,0.278698,0.72130203
+AMD,PhotoRoom,0.27832446,0.7216755
+Sidetrade,DeepL,0.27830687,0.72169316
+Parloa,01.AI,0.27830288,0.7216971
+Acronis,ARM Holdings,0.27829435,0.7217057
+Nscale,Perplexity,0.27827865,0.72172135
+Indium,Black Forest AI GmbH,0.27793336,0.72206664
+5C,Indium,0.27789122,0.7221088
+ByteDance,Alibaba,0.27780005,0.7221999
+Cerebras,Einride,0.2776709,0.72232914
+Waymo,MiniMax,0.27758422,0.7224158
+Databricks,BenevolentAI,0.27748945,0.7225106
+PolyAI,Black Forest AI GmbH,0.27741814,0.72258186
+Applied Intuition,PlanRadar,0.27730513,0.7226949
+Aqemia,Xelix,0.27721217,0.72278786
+Cohere,AMD,0.27718008,0.7228199
+Perplexity AI,Nabla,0.27716997,0.72283006
+Cerebras,Qualcomm,0.27712515,0.7228749
+Wayve,Nabla,0.27675477,0.72324526
+Physical Intelligence,ContentSquare,0.27670828,0.72329175
+Acronis,PhotoRoom,0.27667367,0.7233263
+OpenAI,2CRSI,0.27662012,0.72337985
+H Company,Xelix,0.2765151,0.7234849
+Nscale,Procore,0.2764104,0.7235896
+Exotec,Fal,0.27639374,0.7236062
+2CRSI,RobCo GmbH,0.27612394,0.72387606
+BenevolentAI,Exotec,0.27603054,0.72396946
+Mistral AI,Adobe,0.27600524,0.72399473
+Scale AI,DeepL,0.27596894,0.7240311
+Y combinator,Comand AI,0.2759651,0.7240349
+Wayve,Xelix,0.275843,0.724157
+Black Forest Labs,Clay,0.27571517,0.7242848
+H Company,Nabla,0.27564892,0.72435105
+Sakana AI,BuildOps,0.27560908,0.7243909
+Cohere,Exotec,0.27549264,0.72450733
+Alibaba,Qualcomm,0.2753794,0.7246206
+Aleph Alpha,Oracle,0.2753709,0.7246291
+Aleph Alpha,ARM Holdings,0.2753195,0.72468054
+Shift Technology,Xelix,0.27507916,0.72492087
+Cambricon Technologies,Ant Group,0.27481157,0.72518843
+Exotec,Owkin,0.2747845,0.7252155
+Harvey,Hailo Technologies,0.2746126,0.7253874
+MiniMax,Aqemia,0.2745345,0.72546554
+Perplexity AI,Hailo Technologies,0.2744268,0.7255732
+Y combinator,Cognism,0.27424502,0.725755
+Hugging Face,Cambricon Technologies,0.27416688,0.7258331
+Appen,Prophesee,0.27410355,0.7258965
+Nscale,RobCo GmbH,0.27399272,0.7260073
+Celonis,Adobe,0.27395085,0.7260492
+Procore,Lightspeed,0.27385908,0.7261409
+Wayve,Tessl,0.27384812,0.7261519
+Lightspeed,Cambricon Technologies,0.27381244,0.7261876
+Multiverse Computing,PhotoRoom,0.2738111,0.7261889
+Parloa,Sakana AI,0.2737711,0.7262289
+Alibaba,Oracle,0.27371514,0.72628486
+ByteDance,Ant Group,0.27369073,0.7263093
+Parloa,PlanRadar,0.27367744,0.72632253
+Groq,Tessl,0.27351767,0.72648233
+Wayve,ContentSquare,0.2734658,0.7265342
+AMI - Advanced Machine Intelligence,PolyAI,0.27336323,0.72663677
+OpenAI,ContentSquare,0.27302763,0.72697234
+1X Technologies,Acronis,0.27302217,0.7269778
+Shift Technology,DeepL,0.27295834,0.72704166
+Nscale,Cambricon Technologies,0.27280378,0.7271962
+Parloa,Black Forest AI GmbH,0.2727773,0.7272227
+Applied Intuition,Aleph Alpha,0.27276793,0.7272321
+Waymo,Perplexity AI,0.27274832,0.72725165
+Hailo Technologies,Procore,0.27233508,0.72766495
+Waymo,H Company,0.27181345,0.72818655
+Cohere,Sidetrade,0.27165228,0.7283477
+Berkshire Hathaway,Appen,0.2715194,0.7284806
+Exotec,PlanRadar,0.27141744,0.72858256
+Appen,Cognism,0.2713834,0.7286166
+Alibaba,Cohere,0.27130064,0.7286993
+Celonis,Perplexity,0.27111447,0.72888553
+Wayve,SiPearl,0.27110398,0.728896
+Nscale,DeepL,0.27108014,0.72891986
+Perplexity AI,PhotoRoom,0.27093536,0.72906464
+Waymo,Apollo,0.27077872,0.7292213
+Berkshire Hathaway,Hailo Technologies,0.2707621,0.7292379
+AMI - Advanced Machine Intelligence,Apollo,0.27076182,0.72923815
+Aleph Alpha,Shift Technology,0.27075356,0.72924644
+5C,Cambricon Technologies,0.27071702,0.729283
+Harvey,ARM Holdings,0.27037063,0.7296294
+Perplexity,Acronis,0.2703344,0.72966564
+Parloa,Appen,0.2702763,0.7297237
+Apollo,Aqemia,0.27013412,0.7298659
+ByteDance,Gousto,0.27011338,0.72988665
+Aqemia,Nabla,0.2700802,0.7299198
+Fal,Ant Group,0.2700636,0.72993636
+Anthropic,Parloa,0.26995492,0.7300451
+ByteDance,5C,0.2699493,0.7300507
+MiniMax,Einride,0.26994276,0.73005724
+ContentSquare,World Labs,0.2698273,0.7301727
+Black Forest AI GmbH,Qualified,0.26979372,0.73020625
+Alibaba,Wayve,0.26974297,0.73025703
+Parloa,Aleph Alpha,0.26966524,0.73033476
+Synthesia,PlanRadar,0.26956162,0.73043835
+Applied Intuition,Ant Group,0.2695353,0.7304647
+Indium,ARM Holdings,0.2695219,0.7304781
+MiniMax,Oracle,0.2687723,0.7312277
+Aleph Alpha,Exotec,0.2687122,0.73128784
+Applied Intuition,Adobe,0.2686284,0.73137164
+Harvey,Sakana AI,0.26856512,0.7314349
+Adobe,Comand AI,0.26850605,0.73149395
+Cerebras,Nabla,0.26847643,0.7315236
+Black Forest Labs,PlanRadar,0.26846066,0.73153937
+Alibaba,Celonis,0.26829964,0.73170036
+1X Technologies,Indium,0.2681525,0.7318475
+World Labs,Parloa,0.26814276,0.73185724
+Cohere,Y combinator,0.2680066,0.73199344
+Y combinator,Hailo Technologies,0.2679881,0.7320119
+PolyAI,ARM Holdings,0.2679026,0.7320974
+Black Forest AI GmbH,Cambricon Technologies,0.26774612,0.7322539
+Databricks,PolyAI,0.26752123,0.73247874
+DeepL,Owkin,0.2674941,0.7325059
+Waymo,01.AI,0.26746875,0.73253125
+YouTube,ContentSquare,0.26745582,0.7325442
+Hailo Technologies,Adobe,0.2674135,0.7325865
+Waymo,Cerebras,0.2672178,0.73278224
+MiniMax,Cambricon Technologies,0.26718456,0.73281544
+Sidetrade,PhotoRoom,0.26716307,0.73283696
+01.AI,Indium,0.26711175,0.7328882
+ManoMano,Oracle,0.2670585,0.7329415
+BenevolentAI,Tessl,0.26703236,0.7329676
+Einride,Shift Technology,0.26703036,0.73296964
+Aleph Alpha,Ant Group,0.26702383,0.7329762
+Alibaba,AMI - Advanced Machine Intelligence,0.2666646,0.7333354
+Einride,H Company,0.26666296,0.73333704
+Comand AI,PlanRadar,0.26664323,0.7333568
+Appen,PlanRadar,0.26663628,0.73336375
+Waymo,Anthropic,0.26658025,0.7334198
+Procore,Palantir,0.26653224,0.73346776
+Perplexity AI,Xelix,0.2665136,0.7334864
+Celonis,Apollo,0.26645896,0.733541
+PolyAI,Nabla,0.26631966,0.73368037
+01.AI,Cognism,0.266296,0.733704
+Berkshire Hathaway,Oracle,0.2661104,0.7338896
+ByteDance,Qualcomm,0.26607972,0.7339203
+ByteDance,Y combinator,0.2660107,0.7339893
+Perplexity,AMD,0.26594973,0.7340503
+PhotoRoom,Palantir,0.26591244,0.7340876
+Cohere,Qualified,0.26583353,0.7341665
+RobCo GmbH,Qualified,0.26580024,0.73419976
+Hugging Face,Qualified,0.26577738,0.73422265
+5C,Einride,0.26543874,0.73456126
+AMI - Advanced Machine Intelligence,Sidetrade,0.265428,0.734572
+Clay,Black Forest AI GmbH,0.2653358,0.7346642
+Physical Intelligence,Sidetrade,0.26529118,0.7347088
+Cerebras,SiPearl,0.2649894,0.7350106
+Mistral AI,BuildOps,0.26491407,0.73508596
+BenevolentAI,SiPearl,0.26485276,0.73514724
+World Labs,Exotec,0.26485205,0.73514795
+BenevolentAI,Xelix,0.2647394,0.7352606
+Einride,Nabla,0.26467282,0.7353272
+OpenAI,Harvey,0.2646478,0.73535216
+BenevolentAI,Nabla,0.26462227,0.7353777
+ContentSquare,1X Technologies,0.26458812,0.7354119
+Einride,SiPearl,0.26454806,0.73545194
+PolyAI,Procore,0.26446933,0.7355307
+Perplexity AI,Qualified,0.2644549,0.7355451
+OpenAI,Cognism,0.26395962,0.73604035
+Indium,Apollo,0.26385173,0.73614824
+ARM Holdings,Aqemia,0.26357153,0.7364285
+Perplexity,BuildOps,0.26355988,0.7364401
+Berkshire Hathaway,ByteDance,0.26349244,0.73650753
+Parloa,Apollo,0.26331526,0.73668474
+Nscale,Exotec,0.26327553,0.7367245
+Waymo,Clay,0.2632306,0.73676944
+Nscale,Shift Technology,0.2632017,0.7367983
+Exotec,Sakana AI,0.2631672,0.7368328
+OpenAI,Alibaba,0.263099,0.736901
+Cerebras,Cognism,0.26299646,0.73700356
+YouTube,PhotoRoom,0.26279166,0.73720837
+Harvey,PlanRadar,0.2627612,0.73723876
+BenevolentAI,Gousto,0.26271906,0.73728096
+Physical Intelligence,DeepL,0.26261407,0.7373859
+Indium,Cambricon Technologies,0.2624939,0.7375061
+Y combinator,Clay,0.26245886,0.73754114
+Alibaba,UiPath,0.26231223,0.73768777
+Physical Intelligence,PlanRadar,0.26223692,0.73776305
+Databricks,AMD,0.262183,0.737817
+Perplexity AI,DeepL,0.2620724,0.73792756
+Xelix,Cognism,0.26196697,0.73803306
+Harvey,DeepL,0.2617828,0.73821723
+Einride,Tessl,0.2617695,0.73823047
+PolyAI,Tessl,0.26172805,0.73827195
+Harvey,AMI - Advanced Machine Intelligence,0.26165187,0.7383481
+Celonis,MiniMax,0.26139075,0.73860925
+Y combinator,01.AI,0.26128578,0.7387142
+MiniMax,SiPearl,0.26101765,0.7389823
+Applied Intuition,DentalMonitoring,0.26100996,0.73899007
+Perplexity,Oracle,0.2610051,0.7389949
+Perplexity,ARM Holdings,0.26099378,0.7390062
+Sidetrade,Qualified,0.2608521,0.7391479
+Waymo,PlanRadar,0.26071775,0.73928225
+Einride,BenevolentAI,0.26069894,0.7393011
+Cognism,Tessl,0.26047006,0.73952997
+ContentSquare,AMI - Advanced Machine Intelligence,0.26043254,0.73956746
+Physical Intelligence,Indium,0.2602672,0.7397328
+Einride,Xelix,0.26002204,0.73997796
+Palantir,PlanRadar,0.25992766,0.74007237
+Harvey,5C,0.25983682,0.7401632
+Harvey,Shift Technology,0.25941408,0.7405859
+Aqemia,Ant Group,0.25924718,0.7407528
+Wayve,Fal,0.25882187,0.74117815
+ContentSquare,Parloa,0.25875512,0.7412449
+Anthropic,YouTube,0.25859594,0.74140406
+Shift Technology,Aqemia,0.25834265,0.7416574
+Databricks,Shift Technology,0.2579895,0.7420105
+BenevolentAI,Clay,0.25794268,0.7420573
+Procore,Adobe,0.25775716,0.7422428
+Text,Indium,0.25770345,0.7422966
+Applied Intuition,Parloa,0.25750193,0.74249804
+AMI - Advanced Machine Intelligence,Clay,0.25748032,0.7425197
+Celonis,Einride,0.2572896,0.7427104
+Nscale,Sidetrade,0.2571403,0.7428597
+ByteDance,Prophesee,0.25710025,0.7428998
+Berkshire Hathaway,Black Forest AI GmbH,0.2570752,0.7429248
+Exotec,Palantir,0.25671545,0.7432846
+Celonis,Sidetrade,0.25645792,0.7435421
+Einride,Exotec,0.25634912,0.7436509
+H Company,Prophesee,0.2562578,0.7437422
+World Labs,Cognism,0.25613198,0.743868
+Cerebras,Xelix,0.25605905,0.74394095
+Perplexity,Ant Group,0.25603867,0.74396133
+2CRSI,Gousto,0.25596547,0.7440345
+Waymo,Synthesia,0.2559549,0.74404514
+2CRSI,Black Forest AI GmbH,0.25584024,0.74415976
+Einride,Indium,0.2558038,0.7441962
+Applied Intuition,5C,0.2557246,0.7442754
+2CRSI,DeepL,0.25569135,0.74430865
+Cerebras,Tessl,0.2555282,0.7444718
+Alibaba,ManoMano,0.25552043,0.74447954
+Shift Technology,Cambricon Technologies,0.25550216,0.74449784
+Black Forest AI GmbH,Qualcomm,0.25537467,0.74462533
+YouTube,Apollo,0.25527024,0.74472976
+MiniMax,Xelix,0.2552208,0.7447792
+Cohere,Ant Group,0.25513417,0.74486583
+ContentSquare,Procore,0.2551148,0.7448852
+Databricks,YouTube,0.255056,0.744944
+AMD,Owkin,0.25505537,0.74494463
+Cerebras,Fal,0.2548746,0.7451254
+Perplexity AI,Ant Group,0.25445795,0.74554205
+Waymo,Aqemia,0.2540776,0.7459224
+Cohere,Palantir,0.2540719,0.7459281
+Exotec,Gousto,0.25398627,0.74601376
+2CRSI,Indium,0.25392678,0.74607325
+Groq,Qualified,0.253888,0.746112
+PolyAI,Palantir,0.2537199,0.7462801
+ContentSquare,Qualified,0.25356632,0.7464337
+Hailo Technologies,Xelix,0.25354585,0.7464541
+Celonis,Ant Group,0.25347272,0.7465273
+SiPearl,Cognism,0.25342736,0.7465726
+SiPearl,Ant Group,0.2534069,0.7465931
+ByteDance,Nscale,0.25336766,0.74663234
+Databricks,Parloa,0.2532632,0.74673676
+ByteDance,Black Forest AI GmbH,0.2532489,0.74675107
+Physical Intelligence,Procore,0.2532234,0.7467766
+Acronis,Prophesee,0.25318775,0.7468122
+ContentSquare,Cognism,0.25305817,0.7469418
+MiniMax,Tessl,0.25303227,0.74696773
+Hailo Technologies,SiPearl,0.25268546,0.7473146
+MiniMax,Nabla,0.25258014,0.74741983
+Waymo,UiPath,0.25250342,0.7474966
+Hailo Technologies,Nabla,0.25219443,0.7478056
+Applied Intuition,Oracle,0.25196323,0.74803674
+World Labs,Qualcomm,0.25189444,0.7481055
+Parloa,PhotoRoom,0.2514188,0.7485812
+Groq,Gousto,0.25123036,0.74876964
+1X Technologies,Procore,0.2511412,0.7488588
+ByteDance,Black Forest Labs,0.25102815,0.7489718
+Prophesee,Tessl,0.2509336,0.7490664
+Cohere,Aqemia,0.2507173,0.7492827
+Applied Intuition,Prophesee,0.25050142,0.7494986
+AMD,Shift Technology,0.25049278,0.7495072
+Y combinator,RobCo GmbH,0.25047007,0.74952996
+Cognism,Nabla,0.25045916,0.7495408
+Physical Intelligence,Einride,0.2503986,0.74960136
+Acronis,Aqemia,0.25031725,0.7496828
+Wayve,Cognism,0.25031364,0.74968636
+YouTube,Groq,0.2503029,0.7496971
+Synthesia,DentalMonitoring,0.25029957,0.7497004
+Applied Intuition,Cognism,0.25003466,0.7499653
+Einride,Ant Group,0.24996713,0.7500329
+ARM Holdings,Tessl,0.24962382,0.75037616
+World Labs,PlanRadar,0.24951468,0.7504853
+Comand AI,Ant Group,0.24928728,0.75071275
+PolyAI,SiPearl,0.24927634,0.75072366
+UiPath,Harvey,0.24922858,0.7507714
+Alibaba,Indium,0.2490277,0.7509723
+Berkshire Hathaway,Celonis,0.24891938,0.75108063
+Cohere,Cognism,0.24883285,0.7511672
+ARM Holdings,PlanRadar,0.24871941,0.7512806
+RobCo GmbH,Owkin,0.24865296,0.75134706
+Celonis,ContentSquare,0.24857104,0.75142896
+Databricks,Einride,0.24853028,0.75146973
+Wayve,Multiverse Computing,0.2483507,0.7516493
+PolyAI,Xelix,0.24829686,0.75170314
+ManoMano,Parloa,0.2482675,0.75173247
+SiPearl,Prophesee,0.24812259,0.7518774
+DeepL,Sakana AI,0.24810527,0.7518947
+World Labs,Procore,0.24804188,0.75195813
+UiPath,Babylon,0.24797574,0.7520243
+Applied Intuition,Aqemia,0.2479452,0.7520548
+Databricks,Adobe,0.2475463,0.7524537
+Sidetrade,Owkin,0.24739672,0.7526033
+Berkshire Hathaway,Multiverse Computing,0.24729817,0.7527018
+5C,Acronis,0.24729112,0.7527089
+Applied Intuition,Black Forest Labs,0.24723971,0.7527603
+Anthropic,Acronis,0.24701066,0.75298935
+Adobe,H Company,0.2469218,0.7530782
+ContentSquare,Prophesee,0.24679744,0.75320256
+Oracle,SiPearl,0.24655098,0.753449
+Xelix,Ant Group,0.24650992,0.7534901
+1X Technologies,Cambricon Technologies,0.24638446,0.75361556
+Nscale,ContentSquare,0.2461165,0.7538835
+Harvey,Einride,0.24602482,0.75397515
+BuildOps,Cambricon Technologies,0.24599223,0.75400776
+ARM Holdings,SiPearl,0.24580517,0.75419486
+Berkshire Hathaway,H Company,0.24575819,0.7542418
+Prophesee,Nabla,0.24565803,0.75434196
+Sidetrade,DentalMonitoring,0.24556808,0.7544319
+Clay,Ant Group,0.24553047,0.7544695
+Nabla,Ant Group,0.24548277,0.7545172
+Fal,Appen,0.24513975,0.7548603
+MiniMax,Multiverse Computing,0.24499379,0.7550062
+Acronis,Indium,0.2449664,0.7550336
+Hailo Technologies,Tessl,0.24461058,0.75538945
+Perplexity,Palantir,0.24459042,0.7554096
+RobCo GmbH,Palantir,0.24455172,0.7554483
+Tessl,Ant Group,0.24437211,0.7556279
+Cognism,Prophesee,0.24431384,0.75568616
+Parloa,Lightspeed,0.24413717,0.75586283
+OpenAI,DentalMonitoring,0.24406703,0.755933
+Perplexity,2CRSI,0.24382313,0.7561769
+Sidetrade,Aqemia,0.24379168,0.7562083
+Celonis,Fal,0.24377945,0.7562206
+MiniMax,PlanRadar,0.24368413,0.7563159
+Harvey,Qualified,0.2436411,0.7563589
+ManoMano,Acronis,0.24349815,0.75650185
+AMI - Advanced Machine Intelligence,Shift Technology,0.24342768,0.7565723
+Einride,Aqemia,0.24332954,0.7566705
+Harvey,Synthesia,0.24312258,0.7568774
+Multiverse Computing,PolyAI,0.2430789,0.7569211
+Wayve,Parloa,0.24301192,0.75698805
+ARM Holdings,Nabla,0.24283306,0.7571669
+Synthesia,Tessl,0.24279639,0.7572036
+Einride,Black Forest Labs,0.24255604,0.75744396
+AMD,2CRSI,0.24253589,0.7574641
+Waymo,2CRSI,0.24238284,0.7576172
+Parloa,DeepL,0.24223755,0.75776243
+Berkshire Hathaway,Einride,0.24203394,0.75796604
+RobCo GmbH,Procore,0.24174444,0.75825554
+Harvey,PhotoRoom,0.24147049,0.75852954
+Databricks,Applied Intuition,0.24142577,0.75857425
+Sakana AI,PlanRadar,0.24121663,0.75878334
+Cognism,Comand AI,0.24098404,0.759016
+Procore,Indium,0.2408881,0.7591119
+Databricks,Qualified,0.24083528,0.7591647
+Cerebras,Parloa,0.24078615,0.75921386
+Alibaba,ContentSquare,0.24072443,0.75927556
+Acronis,Sidetrade,0.24065746,0.75934255
+Acronis,Black Forest Labs,0.2405414,0.7594586
+OpenAI,YouTube,0.24048114,0.75951886
+AMI - Advanced Machine Intelligence,Cognism,0.24043618,0.7595638
+Alibaba,Cognism,0.24026215,0.75973785
+2CRSI,Aleph Alpha,0.24017453,0.75982547
+Databricks,Ant Group,0.24010357,0.7598964
+Multiverse Computing,2CRSI,0.24004263,0.7599574
+Acronis,Owkin,0.23997617,0.76002383
+Alibaba,AMD,0.23996101,0.760039
+Wayve,Procore,0.23994802,0.76005197
+YouTube,MiniMax,0.23983581,0.7601642
+ByteDance,Einride,0.2396915,0.7603085
+PolyAI,Prophesee,0.23955229,0.76044774
+Lightspeed,PlanRadar,0.23935145,0.76064855
+BenevolentAI,Procore,0.23928754,0.76071244
+2CRSI,Palantir,0.23913822,0.76086175
+Aleph Alpha,Qualified,0.23910664,0.76089334
+Scale AI,Fal,0.23888737,0.76111263
+Cerebras,Applied Intuition,0.23888293,0.7611171
+ByteDance,Apollo,0.23868233,0.7613177
+World Labs,Einride,0.2385369,0.7614631
+Acronis,Clay,0.23844115,0.76155883
+Cerebras,Sidetrade,0.23836482,0.7616352
+OpenAI,Indium,0.23824248,0.7617575
+Multiverse Computing,Comand AI,0.23803812,0.7619619
+Groq,Einride,0.23793897,0.762061
+PolyAI,Indium,0.23789413,0.7621059
+AMD,Aleph Alpha,0.23779738,0.7622026
+ByteDance,Lightspeed,0.2377781,0.76222193
+Waymo,Prophesee,0.23760842,0.76239157
+Palantir,Cognism,0.23756696,0.76243305
+Procore,ARM Holdings,0.23748522,0.76251477
+Databricks,SiPearl,0.23739037,0.7626096
+Cerebras,Clay,0.23726848,0.76273155
+AMD,Exotec,0.23721012,0.76278985
+Synthesia,SiPearl,0.2371668,0.7628332
+1X Technologies,DeepL,0.23702888,0.7629711
+Perplexity AI,Adobe,0.23700999,0.76299
+Parloa,Shift Technology,0.2368645,0.7631355
+Perplexity,Tessl,0.2368355,0.7631645
+ByteDance,Sidetrade,0.23680131,0.7631987
+Xelix,Prophesee,0.23673451,0.7632655
+Indium,Cognism,0.23662063,0.76337934
+DeepL,Cognism,0.236479,0.763521
+Synthesia,Nabla,0.23629764,0.7637024
+Einride,Black Forest AI GmbH,0.23604766,0.7639524
+Celonis,Qualcomm,0.23588945,0.76411057
+BuildOps,Aqemia,0.23566374,0.7643362
+Shift Technology,Adobe,0.23562263,0.76437736
+PolyAI,Owkin,0.23555623,0.76444376
+Cerebras,Indium,0.23526667,0.7647333
+Oracle,Xelix,0.23484756,0.76515245
+Aleph Alpha,Prophesee,0.23443355,0.76556647
+AMI - Advanced Machine Intelligence,PlanRadar,0.23406574,0.7659342
+Berkshire Hathaway,Anthropic,0.23405825,0.76594174
+Perplexity,SiPearl,0.23391426,0.76608574
+Nscale,Acronis,0.23375039,0.7662496
+OpenAI,PlanRadar,0.23368153,0.76631844
+Oracle,Qualified,0.23366798,0.76633203
+World Labs,Ant Group,0.23357631,0.7664237
+Oracle,Nabla,0.23353735,0.7664627
+Acronis,Adobe,0.23324798,0.766752
+AMI - Advanced Machine Intelligence,Applied Intuition,0.23318443,0.76681554
+1X Technologies,Y combinator,0.23301685,0.76698315
+Adobe,Cambricon Technologies,0.232909,0.76709104
+Perplexity,Nabla,0.23276478,0.7672352
+Multiverse Computing,RobCo GmbH,0.23275019,0.7672498
+Alibaba,Nscale,0.23253104,0.7674689
+Indium,Prophesee,0.23251751,0.7674825
+2CRSI,Qualified,0.23223908,0.76776093
+Physical Intelligence,Cognism,0.23208837,0.7679116
+Black Forest Labs,Procore,0.2320339,0.7679661
+Mistral AI,Harvey,0.23186553,0.7681345
+Databricks,Tessl,0.23172604,0.76827395
+Nscale,Ant Group,0.23171309,0.76828694
+Databricks,Xelix,0.23145616,0.76854384
+DeepL,Apollo,0.23144633,0.7685537
+Waymo,Harvey,0.23140976,0.7685902
+Multiverse Computing,ManoMano,0.23123999,0.76876
+Alibaba,Shift Technology,0.23100813,0.7689919
+Alibaba,1X Technologies,0.23095432,0.7690457
+Synthesia,Qualified,0.23092224,0.7690778
+PhotoRoom,DentalMonitoring,0.23074424,0.76925576
+ARM Holdings,Xelix,0.23054053,0.7694595
+RobCo GmbH,Aqemia,0.23048803,0.76951194
+Perplexity,Cambricon Technologies,0.2304732,0.7695268
+Alibaba,Clay,0.23029217,0.7697078
+Indium,Nabla,0.2302189,0.7697811
+Oracle,Adobe,0.23017313,0.7698269
+Gousto,Cognism,0.23003823,0.7699618
+Alibaba,Perplexity AI,0.23000911,0.7699909
+Synthesia,Xelix,0.22991467,0.77008533
+Acronis,Hailo Technologies,0.22984043,0.7701596
+AMI - Advanced Machine Intelligence,Qualcomm,0.22963957,0.7703604
+Lightspeed,Aqemia,0.22962041,0.7703796
+Harvey,Cambricon Technologies,0.22951786,0.7704821
+BenevolentAI,PlanRadar,0.22933373,0.77066624
+Oracle,Procore,0.22931068,0.7706893
+Cerebras,PlanRadar,0.22926907,0.7707309
+Exotec,Qualified,0.22897142,0.7710286
+1X Technologies,Aleph Alpha,0.22878587,0.7712141
+Einride,Sakana AI,0.22877944,0.77122056
+Alibaba,Procore,0.2285529,0.7714471
+PolyAI,Oracle,0.22852007,0.77147996
+Sakana AI,Cognism,0.22834909,0.7716509
+Fal,ARM Holdings,0.22809461,0.7719054
+01.AI,Procore,0.2279971,0.77200294
+Cohere,Multiverse Computing,0.22781372,0.7721863
+Berkshire Hathaway,BuildOps,0.22777218,0.7722278
+Einride,Sidetrade,0.22772777,0.7722722
+Waymo,DeepL,0.22755438,0.7724456
+BenevolentAI,Adobe,0.22743493,0.77256507
+Aleph Alpha,RobCo GmbH,0.22738573,0.77261424
+DentalMonitoring,Appen,0.22721775,0.77278227
+Waymo,ARM Holdings,0.22713871,0.7728613
+Celonis,Nabla,0.2269624,0.7730376
+Oracle,Tessl,0.22690815,0.77309185
+Applied Intuition,Cambricon Technologies,0.22672854,0.77327144
+AMD,Adobe,0.2265619,0.7734381
+Fal,H Company,0.22654897,0.77345103
+Sidetrade,Ant Group,0.22641146,0.77358854
+Berkshire Hathaway,Comand AI,0.22640188,0.77359813
+ByteDance,PlanRadar,0.2263208,0.7736792
+Groq,Qualcomm,0.22623985,0.77376014
+2CRSI,Y combinator,0.22607356,0.77392644
+2CRSI,Fal,0.22571424,0.7742858
+Einride,Palantir,0.22558084,0.7744192
+01.AI,PlanRadar,0.22553778,0.7744622
+Wayve,Oracle,0.22547702,0.77452296
+Databricks,Nabla,0.22532107,0.77467895
+Alibaba,BenevolentAI,0.22523853,0.77476144
+DeepL,Gousto,0.22505964,0.7749404
+Aleph Alpha,Cognism,0.22494525,0.77505475
+MiniMax,Palantir,0.22483593,0.77516407
+ByteDance,World Labs,0.22481862,0.7751814
+Mistral AI,Cognism,0.2247958,0.7752042
+UiPath,Indium,0.22470789,0.7752921
+World Labs,BuildOps,0.2246921,0.7753079
+Databricks,Cambricon Technologies,0.2246578,0.7753422
+BenevolentAI,Cognism,0.22459783,0.7754022
+Alibaba,Nabla,0.22447334,0.77552664
+Acronis,Cognism,0.22437474,0.7756252
+Alibaba,Xelix,0.2243187,0.7756813
+Indium,DentalMonitoring,0.22405776,0.7759422
+YouTube,Clay,0.22390948,0.7760905
+PhotoRoom,Qualified,0.22388531,0.7761147
+1X Technologies,Qualified,0.22386652,0.7761335
+BuildOps,Qualcomm,0.22343333,0.7765667
+Parloa,Indium,0.22326067,0.77673936
+RobCo GmbH,Ant Group,0.22301967,0.77698034
+Perplexity AI,Cambricon Technologies,0.22301362,0.77698636
+Celonis,Perplexity AI,0.22280414,0.7771959
+Cohere,Gousto,0.22278255,0.77721745
+ContentSquare,5C,0.22272708,0.77727294
+AMI - Advanced Machine Intelligence,Qualified,0.222635,0.77736497
+Aleph Alpha,Clay,0.22255321,0.7774468
+Wayve,Babylon,0.22251505,0.77748495
+Alibaba,2CRSI,0.2223785,0.7776215
+Lightspeed,Ant Group,0.22218461,0.7778154
+Applied Intuition,Procore,0.22198413,0.77801585
+Hugging Face,Gousto,0.22194488,0.77805513
+Waymo,Gousto,0.22189556,0.7781044
+AMI - Advanced Machine Intelligence,Parloa,0.22182047,0.7781795
+Indium,SiPearl,0.22176965,0.77823037
+1X Technologies,Ant Group,0.22153467,0.77846533
+Celonis,Shift Technology,0.2215241,0.7784759
+Berkshire Hathaway,1X Technologies,0.22120358,0.77879643
+Alibaba,SiPearl,0.2211171,0.7788829
+YouTube,Cohere,0.2210873,0.77891266
+UiPath,Cognism,0.22094686,0.77905315
+Celonis,Xelix,0.22091413,0.7790859
+Berkshire Hathaway,Scale AI,0.22088361,0.7791164
+Multiverse Computing,Cambricon Technologies,0.2203438,0.7796562
+Aqemia,Cognism,0.22005083,0.7799492
+AMD,Fal,0.22002123,0.77997875
+UiPath,ContentSquare,0.21989831,0.78010166
+Waymo,BuildOps,0.21958643,0.78041357
+ContentSquare,Black Forest AI GmbH,0.21956593,0.7804341
+Physical Intelligence,Parloa,0.21950337,0.7804966
+Clay,Cambricon Technologies,0.21924743,0.78075254
+Celonis,SiPearl,0.21887496,0.78112507
+Sakana AI,Fal,0.21884055,0.78115946
+ByteDance,Cognism,0.21883112,0.7811689
+Mistral AI,ContentSquare,0.21853524,0.78146476
+Nscale,Indium,0.21837492,0.7816251
+Waymo,5C,0.21822582,0.78177416
+Cohere,Nabla,0.21816352,0.7818365
+World Labs,Qualified,0.21793267,0.7820673
+Indium,Xelix,0.21785948,0.7821405
+AMD,Acronis,0.21780464,0.7821953
+AMD,Perplexity AI,0.21734668,0.78265333
+Anthropic,Gousto,0.21717873,0.7828213
+Parloa,Comand AI,0.21717791,0.7828221
+UiPath,Qualified,0.21708305,0.78291696
+Black Forest Labs,Qualcomm,0.21707304,0.782927
+AMD,Cognism,0.21704455,0.78295547
+Exotec,Oracle,0.2170367,0.7829633
+1X Technologies,DentalMonitoring,0.21700092,0.7829991
+Palantir,Adobe,0.21695963,0.7830404
+PolyAI,DeepL,0.21692663,0.78307337
+BenevolentAI,DeepL,0.21691073,0.7830893
+Nscale,PlanRadar,0.2168975,0.7831025
+Alibaba,Physical Intelligence,0.2167633,0.7832367
+Einride,Oracle,0.21665154,0.78334844
+Alibaba,Einride,0.21664998,0.78335
+Databricks,Perplexity AI,0.21664307,0.7833569
+MiniMax,2CRSI,0.21660769,0.7833923
+AMI - Advanced Machine Intelligence,Fal,0.21653558,0.78346443
+Nscale,Perplexity AI,0.21635208,0.7836479
+Indium,Tessl,0.21631302,0.783687
+Palantir,Clay,0.21630725,0.7836927
+Exotec,Cognism,0.21626118,0.78373885
+OpenAI,Acronis,0.21592309,0.7840769
+Berkshire Hathaway,Black Forest Labs,0.2158142,0.78418577
+Einride,Synthesia,0.21577136,0.7842286
+Hugging Face,Fal,0.21576309,0.7842369
+Oracle,PlanRadar,0.21575609,0.78424394
+Applied Intuition,Palantir,0.21569684,0.7843032
+OpenAI,Gousto,0.21564701,0.784353
+Alibaba,PolyAI,0.21561982,0.7843802
+DeepL,Oracle,0.21542306,0.78457695
+Cohere,Shift Technology,0.21535778,0.7846422
+Waymo,Black Forest Labs,0.21524355,0.7847564
+BenevolentAI,Cambricon Technologies,0.21514118,0.7848588
+Glean,Gousto,0.21496566,0.78503436
+Acronis,Black Forest AI GmbH,0.21495415,0.78504586
+Perplexity,Xelix,0.2146701,0.7853299
+ContentSquare,DeepL,0.21462373,0.78537625
+Palantir,Apollo,0.2144382,0.7855618
+Alibaba,Tessl,0.21441078,0.7855892
+Sidetrade,Adobe,0.21416166,0.78583837
+Nscale,Applied Intuition,0.21403398,0.78596604
+Celonis,Tessl,0.21369278,0.7863072
+Parloa,Cognism,0.21362524,0.78637475
+Sidetrade,Palantir,0.21352838,0.7864716
+Exotec,Procore,0.21351117,0.78648883
+Adobe,DentalMonitoring,0.21333338,0.78666663
+ByteDance,Comand AI,0.21326622,0.78673375
+Harvey,Procore,0.21311337,0.78688663
+ByteDance,H Company,0.21289298,0.787107
+Mistral AI,Qualified,0.2126187,0.7873813
+ContentSquare,Palantir,0.21254203,0.78745794
+ContentSquare,RobCo GmbH,0.21221313,0.78778684
+RobCo GmbH,DentalMonitoring,0.21221103,0.787789
+Fal,BuildOps,0.21193124,0.7880688
+Y combinator,DeepL,0.21182229,0.7881777
+Parloa,Adobe,0.21177708,0.7882229
+Cohere,SiPearl,0.21168867,0.78831136
+Alibaba,Applied Intuition,0.2114338,0.78856623
+Aleph Alpha,Gousto,0.21136257,0.7886374
+ByteDance,Glean,0.21136053,0.7886395
+Nscale,Qualified,0.21107699,0.788923
+Sidetrade,Oracle,0.21104333,0.78895664
+AMD,Qualcomm,0.21103677,0.7889632
+Waymo,Nabla,0.21096832,0.7890317
+Berkshire Hathaway,01.AI,0.21089274,0.78910726
+Cohere,Xelix,0.21088652,0.78911346
+Harvey,Sidetrade,0.21040015,0.78959984
+Owkin,Cognism,0.21001935,0.78998065
+Cohere,Fal,0.20988078,0.79011923
+DeepL,Clay,0.20982042,0.7901796
+Alibaba,Fal,0.20977639,0.7902236
+Celonis,DeepL,0.20976608,0.7902339
+Acronis,RobCo GmbH,0.20943245,0.7905675
+Berkshire Hathaway,Qualified,0.20932552,0.79067445
+DeepL,BuildOps,0.20915656,0.7908434
+UiPath,Parloa,0.20910384,0.7908962
+BuildOps,DentalMonitoring,0.20814988,0.7918501
+Sidetrade,Cambricon Technologies,0.20804039,0.79195964
+5C,Aqemia,0.20796435,0.79203564
+Acronis,Palantir,0.2077065,0.7922935
+PolyAI,Cognism,0.2076493,0.7923507
+Exotec,DeepL,0.20759495,0.79240507
+Waymo,Cambricon Technologies,0.20753016,0.79246986
+Waymo,PhotoRoom,0.20732287,0.79267716
+DentalMonitoring,Aqemia,0.20703912,0.7929609
+Aleph Alpha,PlanRadar,0.20690179,0.7930982
+Prophesee,Ant Group,0.20683885,0.79316115
+Procore,Cambricon Technologies,0.20675404,0.793246
+Hugging Face,Qualcomm,0.20673227,0.7932677
+Physical Intelligence,DentalMonitoring,0.20672068,0.7932793
+ContentSquare,H Company,0.20630834,0.79369164
+Alibaba,Aqemia,0.20606871,0.7939313
+Alibaba,Mistral AI,0.20593363,0.79406637
+Harvey,Aqemia,0.20587246,0.7941275
+Harvey,Cognism,0.20585123,0.7941488
+Cohere,Tessl,0.2056855,0.7943145
+Berkshire Hathaway,5C,0.20566891,0.7943311
+Parloa,DentalMonitoring,0.20563772,0.7943623
+2CRSI,Perplexity AI,0.20557061,0.7944294
+ByteDance,Applied Intuition,0.20523305,0.79476696
+Multiverse Computing,H Company,0.20497334,0.79502666
+Harvey,Exotec,0.20475653,0.7952435
+Glean,Y combinator,0.20459197,0.795408
+Gousto,Clay,0.20458467,0.79541534
+Applied Intuition,AMD,0.2042854,0.7957146
+MiniMax,DentalMonitoring,0.2042834,0.7957166
+2CRSI,Tessl,0.20418854,0.7958115
+Harvey,Parloa,0.20417382,0.7958262
+Perplexity,PlanRadar,0.20403796,0.79596204
+Waymo,Palantir,0.20393448,0.7960655
+Mistral AI,Procore,0.2038831,0.7961169
+Multiverse Computing,Ant Group,0.20380217,0.79619783
+MiniMax,Qualified,0.2037743,0.79622567
+Gousto,H Company,0.20359103,0.79640895
+Hailo Technologies,Qualcomm,0.2033172,0.79668283
+Procore,DentalMonitoring,0.2032994,0.7967006
+YouTube,01.AI,0.20314547,0.7968545
+UiPath,Fal,0.2029189,0.7970811
+Sakana AI,DentalMonitoring,0.20285165,0.79714835
+Procore,Xelix,0.20284826,0.79715174
+Waymo,Celonis,0.20273316,0.79726684
+ByteDance,Adobe,0.20261937,0.7973806
+Parloa,Black Forest Labs,0.20252556,0.79747444
+Einride,PhotoRoom,0.20241077,0.79758924
+Shift Technology,Oracle,0.2023122,0.79768777
+Gousto,Qualified,0.20217653,0.7978235
+ByteDance,ManoMano,0.20201994,0.79798007
+ByteDance,Owkin,0.201916,0.798084
+Clay,SiPearl,0.20175053,0.7982495
+Procore,Nabla,0.2017144,0.7982856
+ContentSquare,Black Forest Labs,0.20133768,0.7986623
+MiniMax,Y combinator,0.20118454,0.7988155
+Applied Intuition,Qualified,0.20114264,0.79885733
+AMD,Sidetrade,0.20111866,0.79888135
+YouTube,Hugging Face,0.20074965,0.79925036
+Mistral AI,Indium,0.20073086,0.79926914
+Waymo,AMI - Advanced Machine Intelligence,0.2007249,0.7992751
+Multiverse Computing,Lightspeed,0.20029561,0.7997044
+Procore,Tessl,0.20015937,0.7998406
+ByteDance,Waymo,0.19974168,0.80025834
+Waymo,Xelix,0.1996436,0.8003564
+RobCo GmbH,DeepL,0.19951689,0.8004831
+Aleph Alpha,BuildOps,0.19950436,0.8004956
+Procore,SiPearl,0.1994738,0.8005262
+Hailo Technologies,Qualified,0.19943726,0.80056274
+PhotoRoom,Ant Group,0.19929276,0.8007072
+Fal,Clay,0.19923775,0.80076224
+2CRSI,SiPearl,0.19923064,0.8007693
+1X Technologies,Qualcomm,0.1991953,0.80080473
+Clay,Aqemia,0.19919169,0.8008083
+Celonis,Applied Intuition,0.19883028,0.80116975
+MiniMax,Procore,0.19858743,0.8014126
+Berkshire Hathaway,Aleph Alpha,0.19843794,0.8015621
+Alibaba,PlanRadar,0.19836463,0.8016354
+Parloa,Text,0.19818315,0.8018168
+Gousto,Lightspeed,0.19797394,0.80202603
+DentalMonitoring,Cambricon Technologies,0.19789529,0.8021047
+Aleph Alpha,Procore,0.19779819,0.8022018
+PolyAI,Fal,0.19745962,0.80254036
+ContentSquare,Ant Group,0.1974061,0.8025939
+Waymo,SiPearl,0.19710693,0.80289304
+Oracle,Indium,0.19710584,0.8028942
+PolyAI,Acronis,0.19708396,0.80291605
+Aleph Alpha,Adobe,0.19707292,0.8029271
+Procore,Fal,0.19644119,0.8035588
+Palantir,Qualified,0.19623622,0.80376375
+Y combinator,Lightspeed,0.19622634,0.80377364
+Parloa,Aqemia,0.19617848,0.8038215
+Berkshire Hathaway,AMI - Advanced Machine Intelligence,0.19594006,0.8040599
+ByteDance,Perplexity,0.19592977,0.80407023
+PolyAI,Cambricon Technologies,0.19580013,0.8041999
+Y combinator,Apollo,0.19548093,0.80451906
+Gousto,Adobe,0.19548067,0.8045193
+ContentSquare,DentalMonitoring,0.19532107,0.8046789
+ContentSquare,01.AI,0.19513598,0.80486405
+YouTube,Hailo Technologies,0.19507855,0.80492145
+PhotoRoom,DeepL,0.19507729,0.8049227
+Berkshire Hathaway,PlanRadar,0.19489767,0.80510235
+Babylon,H Company,0.19482057,0.8051794
+Waymo,Tessl,0.19480498,0.80519503
+Cognism,Cambricon Technologies,0.19391295,0.806087
+Alibaba,Aleph Alpha,0.19387017,0.8061298
+Celonis,DentalMonitoring,0.1936715,0.80632854
+Aleph Alpha,Text,0.19356047,0.8064395
+Fal,Aqemia,0.19339462,0.8066054
+Multiverse Computing,Adobe,0.1933774,0.8066226
+Nscale,Gousto,0.19321232,0.80678767
+Waymo,Fal,0.19317189,0.80682814
+Mistral AI,Acronis,0.19309889,0.8069011
+PolyAI,Aqemia,0.19276774,0.80723226
+Qualified,Tessl,0.19275361,0.8072464
+Clay,Tessl,0.19244078,0.80755925
+DeepL,Procore,0.1924226,0.8075774
+Berkshire Hathaway,ManoMano,0.19239585,0.80760413
+Babylon,BenevolentAI,0.1923145,0.8076855
+ManoMano,DeepL,0.1922809,0.8077191
+DeepL,SiPearl,0.19215363,0.80784637
+Physical Intelligence,Qualcomm,0.19194332,0.8080567
+Fal,Apollo,0.19191152,0.8080885
+Procore,Owkin,0.19166142,0.8083386
+PolyAI,Y combinator,0.1916449,0.8083551
+Hugging Face,DentalMonitoring,0.19148187,0.8085181
+PolyAI,DentalMonitoring,0.19142805,0.80857193
+Fal,Qualcomm,0.1907507,0.8092493
+Groq,DentalMonitoring,0.19068225,0.80931777
+AMI - Advanced Machine Intelligence,DentalMonitoring,0.19026452,0.8097355
+Physical Intelligence,Acronis,0.19023596,0.809764
+Exotec,Prophesee,0.19019619,0.80980384
+Acronis,Ant Group,0.1900942,0.80990577
+Fal,Comand AI,0.18999404,0.81000596
+2CRSI,Nabla,0.18951993,0.81048006
+AMD,Indium,0.1894689,0.8105311
+Mistral AI,PlanRadar,0.189128,0.810872
+YouTube,5C,0.18909058,0.8109094
+Alibaba,World Labs,0.18879569,0.8112043
+Gousto,Palantir,0.18853527,0.8114647
+Perplexity AI,ARM Holdings,0.1885223,0.8114777
+Einride,Adobe,0.18843201,0.811568
+Clay,Nabla,0.18843198,0.811568
+Parloa,Owkin,0.18814047,0.81185955
+ByteDance,PolyAI,0.18795034,0.8120496
+2CRSI,Xelix,0.1877795,0.8122205
+2CRSI,Ant Group,0.18753447,0.81246555
+1X Technologies,Tessl,0.18753006,0.81246996
+Harvey,Oracle,0.18698688,0.81301314
+UiPath,DeepL,0.18691099,0.813089
+Applied Intuition,Acronis,0.18683407,0.8131659
+ByteDance,Qualified,0.18625936,0.8137406
+Databricks,Aleph Alpha,0.186241,0.81375897
+Qualified,Xelix,0.18613383,0.81386614
+DeepL,PlanRadar,0.18597314,0.81402683
+Apollo,Qualcomm,0.18595657,0.8140434
+Perplexity AI,Oracle,0.18584391,0.81415606
+Clay,Xelix,0.18579876,0.81420124
+Qualified,Comand AI,0.18571402,0.814286
+ByteDance,Indium,0.18544692,0.8145531
+Cerebras,ContentSquare,0.18523961,0.8147604
+DeepL,Xelix,0.18522057,0.8147794
+Y combinator,Adobe,0.18494284,0.81505716
+Owkin,BuildOps,0.18488407,0.8151159
+Acronis,Apollo,0.18486571,0.8151343
+YouTube,World Labs,0.1848626,0.8151374
+Applied Intuition,SiPearl,0.18476571,0.8152343
+Waymo,Parloa,0.18456712,0.8154329
+Hailo Technologies,Fal,0.1843463,0.8156537
+Shift Technology,Ant Group,0.18420197,0.81579804
+Multiverse Computing,BuildOps,0.18412098,0.815879
+DeepL,Nabla,0.18404163,0.8159584
+Berkshire Hathaway,Wayve,0.18372475,0.81627524
+Applied Intuition,Nabla,0.18367997,0.81632006
+ContentSquare,Shift Technology,0.18359213,0.81640786
+Harvey,Y combinator,0.18339479,0.8166052
+MiniMax,Acronis,0.18309695,0.81690305
+DeepL,Tessl,0.1829675,0.8170325
+Gousto,Apollo,0.18241876,0.81758124
+Berkshire Hathaway,Sidetrade,0.18238783,0.8176122
+MiniMax,Fal,0.18224569,0.8177543
+Applied Intuition,Tessl,0.18221244,0.8177875
+YouTube,Ant Group,0.18218526,0.8178147
+Waymo,Hailo Technologies,0.18174848,0.8182515
+Harvey,Ant Group,0.1816605,0.81833947
+Qualified,SiPearl,0.18151696,0.81848305
+Alibaba,RobCo GmbH,0.18140347,0.81859654
+DeepL,Palantir,0.181316,0.818684
+Black Forest Labs,DentalMonitoring,0.18124998,0.81875
+Qualified,Nabla,0.18114842,0.8188516
+YouTube,H Company,0.1808614,0.8191386
+Waymo,AMD,0.18083192,0.8191681
+Einride,PlanRadar,0.180693,0.81930697
+AMD,PlanRadar,0.18046103,0.81953895
+Perplexity,Procore,0.18041976,0.81958026
+Fal,Adobe,0.18041356,0.81958646
+Databricks,Harvey,0.18037699,0.819623
+Alibaba,Parloa,0.18034245,0.81965756
+Owkin,Qualified,0.18033284,0.81966716
+Wayve,DentalMonitoring,0.18022993,0.8197701
+BenevolentAI,Qualified,0.18017621,0.8198238
+Berkshire Hathaway,OpenAI,0.17998174,0.8200183
+Acronis,H Company,0.17996572,0.82003427
+Parloa,BenevolentAI,0.17961091,0.8203891
+Multiverse Computing,Perplexity AI,0.17957918,0.8204208
+Multiverse Computing,Einride,0.17952527,0.82047474
+Procore,Prophesee,0.17938903,0.820611
+Applied Intuition,Xelix,0.17937094,0.82062906
+ManoMano,Fal,0.1792903,0.8207097
+Y combinator,Shift Technology,0.1792052,0.8207948
+Parloa,Gousto,0.17884447,0.82115555
+UiPath,DentalMonitoring,0.1787094,0.8212906
+Perplexity AI,Text,0.17817329,0.8218267
+Applied Intuition,Fal,0.17813721,0.8218628
+MiniMax,Indium,0.17801985,0.8219801
+DeepL,ARM Holdings,0.17752005,0.82247996
+AMD,DeepL,0.17748496,0.822515
+Waymo,Ant Group,0.17744575,0.82255423
+Nscale,Fal,0.17744374,0.82255626
+Acronis,Lightspeed,0.17736621,0.8226338
+Berkshire Hathaway,Exotec,0.17730786,0.82269216
+1X Technologies,SiPearl,0.17684777,0.82315224
+Indium,Qualified,0.17666276,0.82333726
+World Labs,Fal,0.17658052,0.82341945
+Acronis,Aleph Alpha,0.17640105,0.823599
+ContentSquare,Oracle,0.17625579,0.8237442
+YouTube,Qualified,0.1762528,0.8237472
+Fal,PlanRadar,0.1759837,0.82401633
+AMD,PolyAI,0.1759092,0.8240908
+Palantir,Lightspeed,0.17579539,0.8242046
+Gousto,Aqemia,0.17571898,0.82428104
+01.AI,DentalMonitoring,0.17571077,0.8242892
+Waymo,Databricks,0.17565987,0.8243401
+Perplexity AI,Palantir,0.17558561,0.8244144
+Waymo,DentalMonitoring,0.17543313,0.82456684
+Clay,Prophesee,0.17513911,0.8248609
+Physical Intelligence,Qualified,0.1749029,0.8250971
+Scale AI,Gousto,0.17482442,0.8251756
+Einride,Apollo,0.17446159,0.8255384
+BuildOps,Ant Group,0.17427358,0.8257264
+Synthesia,Qualcomm,0.17423852,0.8257615
+Parloa,Oracle,0.1740216,0.8259784
+Y combinator,Indium,0.1739874,0.8260126
+Applied Intuition,2CRSI,0.17397438,0.8260256
+Y combinator,Parloa,0.17314741,0.82685256
+AMD,Procore,0.17299908,0.8270009
+Qualified,Ant Group,0.172791,0.827209
+Cerebras,DeepL,0.17268677,0.82731324
+H Company,DentalMonitoring,0.1725605,0.8274395
+Waymo,Sakana AI,0.1718892,0.8281108
+Adobe,Nabla,0.17158091,0.8284191
+DeepL,Fal,0.17151342,0.82848656
+YouTube,Black Forest Labs,0.17149165,0.8285084
+BenevolentAI,Indium,0.17115952,0.8288405
+MiniMax,ContentSquare,0.17088702,0.829113
+ByteDance,Aleph Alpha,0.1704953,0.8295047
+Black Forest Labs,Fal,0.17040169,0.8295983
+H Company,Cambricon Technologies,0.17021672,0.82978326
+Perplexity AI,Procore,0.16991773,0.8300823
+MiniMax,Gousto,0.16991064,0.83008933
+Babylon,Hailo Technologies,0.16979177,0.83020824
+Palantir,Qualcomm,0.16972047,0.8302795
+Groq,Glean,0.16969298,0.830307
+2CRSI,Parloa,0.16942538,0.83057463
+ContentSquare,Acronis,0.16926901,0.830731
+ContentSquare,Y combinator,0.1691833,0.8308167
+Multiverse Computing,Sidetrade,0.1691082,0.8308918
+Multiverse Computing,Acronis,0.16909406,0.8309059
+Multiverse Computing,Applied Intuition,0.16884379,0.8311562
+Aleph Alpha,Fal,0.16872333,0.83127666
+Babylon,Glean,0.16866352,0.8313365
+Berkshire Hathaway,MiniMax,0.1686491,0.8313509
+Waymo,Cognism,0.16860907,0.8313909
+PolyAI,Ant Group,0.16855869,0.8314413
+Hailo Technologies,Gousto,0.1680007,0.8319993
+Anthropic,Fal,0.16745232,0.83254766
+Gousto,Owkin,0.16732313,0.8326769
+OpenAI,Fal,0.16707197,0.83292806
+Acronis,Nabla,0.1669786,0.8330214
+Waymo,Qualcomm,0.16687445,0.83312553
+Synthesia,Gousto,0.16682734,0.8331727
+Qualcomm,Cognism,0.1667667,0.8332333
+Acronis,SiPearl,0.16668484,0.83331513
+ContentSquare,Multiverse Computing,0.16646102,0.833539
+Hailo Technologies,Indium,0.1664056,0.8335944
+Alibaba,Perplexity,0.16628389,0.8337161
+Nscale,Parloa,0.16615772,0.8338423
+Adobe,Tessl,0.16597068,0.8340293
+Berkshire Hathaway,Cohere,0.16585176,0.8341482
+1X Technologies,Nabla,0.16559398,0.834406
+YouTube,Aleph Alpha,0.16549054,0.8345095
+1X Technologies,Xelix,0.16546845,0.83453155
+Nscale,Text,0.1654351,0.8345649
+World Labs,Text,0.16542137,0.83457863
+Multiverse Computing,Parloa,0.1654199,0.83458006
+OpenAI,Qualcomm,0.16506866,0.8349314
+Parloa,Fal,0.16464551,0.8353545
+1X Technologies,Gousto,0.16448076,0.83551925
+Multiverse Computing,Qualified,0.16438657,0.8356134
+YouTube,Glean,0.1640807,0.8359193
+BuildOps,Prophesee,0.16405867,0.8359413
+Harvey,Fal,0.16395383,0.83604616
+Einride,DeepL,0.16376169,0.8362383
+Multiverse Computing,Exotec,0.16361436,0.8363856
+ContentSquare,Fal,0.16346376,0.8365362
+Berkshire Hathaway,Databricks,0.16337931,0.8366207
+Fal,Qualified,0.16323312,0.8367669
+Mistral AI,DentalMonitoring,0.16318248,0.8368175
+Einride,Procore,0.162935,0.837065
+Indium,Ant Group,0.16283861,0.8371614
+Alibaba,Palantir,0.16277984,0.8372202
+Berkshire Hathaway,Cerebras,0.16242056,0.8375794
+5C,Fal,0.16236603,0.83763397
+World Labs,Acronis,0.1623208,0.8376792
+Acronis,Perplexity AI,0.16224952,0.8377505
+YouTube,DeepL,0.16182545,0.8381746
+Glean,Palantir,0.16162224,0.8383778
+Acronis,Xelix,0.16149728,0.8385027
+AMD,Clay,0.16126937,0.83873063
+Adobe,Black Forest AI GmbH,0.16066213,0.8393379
+ByteDance,DeepL,0.16037238,0.8396276
+RobCo GmbH,Oracle,0.16029133,0.8397087
+Shift Technology,Qualified,0.16017416,0.83982587
+YouTube,Cognism,0.1600806,0.8399194
+ByteDance,Acronis,0.16001172,0.8399883
+Tessl,PlanRadar,0.1598285,0.8401715
+Berkshire Hathaway,Nscale,0.1598061,0.84019387
+Indium,H Company,0.15954053,0.84045947
+Perplexity,Qualified,0.1592354,0.8407646
+Physical Intelligence,YouTube,0.15915486,0.8408451
+YouTube,BenevolentAI,0.15874666,0.84125334
+Sakana AI,Qualified,0.15846664,0.84153336
+ByteDance,Parloa,0.15814596,0.84185404
+RobCo GmbH,Qualcomm,0.15810692,0.8418931
+Berkshire Hathaway,Ant Group,0.15791647,0.8420835
+5C,Gousto,0.1576011,0.8423989
+Multiverse Computing,Gousto,0.15751804,0.842482
+Cohere,Acronis,0.15749559,0.8425044
+Perplexity,Einride,0.15735355,0.8426465
+Alibaba,Qualified,0.15729833,0.8427017
+Cerebras,Qualified,0.15672831,0.8432717
+Wayve,Qualified,0.15668462,0.84331536
+Einride,Cambricon Technologies,0.15634426,0.8436557
+DentalMonitoring,Cognism,0.15618151,0.8438185
+Cohere,Harvey,0.15605967,0.8439403
+Acronis,Tessl,0.1559477,0.8440523
+Einride,2CRSI,0.15555048,0.8444495
+Applied Intuition,Y combinator,0.15551075,0.8444892
+Black Forest Labs,Qualified,0.15536433,0.84463567
+ARM Holdings,Qualified,0.15525822,0.84474176
+DentalMonitoring,Black Forest AI GmbH,0.15516812,0.8448319
+Alibaba,Prophesee,0.15508601,0.84491396
+DeepL,Prophesee,0.15473647,0.84526354
+Procore,Aqemia,0.1544406,0.8455594
+BuildOps,Tessl,0.15403369,0.84596634
+Fal,Lightspeed,0.15358783,0.8464122
+Harvey,Prophesee,0.15352707,0.8464729
+PhotoRoom,Qualcomm,0.1532834,0.8467166
+ByteDance,Procore,0.15322343,0.8467766
+Y combinator,Sidetrade,0.15317352,0.8468265
+DentalMonitoring,PlanRadar,0.1529699,0.8470301
+Waymo,Adobe,0.1525999,0.84740007
+RobCo GmbH,Tessl,0.15215385,0.84784615
+Owkin,PlanRadar,0.15213755,0.8478625
+Gousto,BuildOps,0.15189822,0.8481018
+01.AI,Qualified,0.15189177,0.84810823
+Exotec,DentalMonitoring,0.15165001,0.84835
+Harvey,DentalMonitoring,0.15163194,0.84836805
+Adobe,SiPearl,0.15162787,0.8483721
+Nabla,PlanRadar,0.15160982,0.84839016
+Prophesee,PlanRadar,0.15133196,0.84866804
+Alibaba,Waymo,0.15131614,0.84868383
+Berkshire Hathaway,Cognism,0.15116015,0.8488399
+Berkshire Hathaway,RobCo GmbH,0.15107499,0.848925
+Cohere,Qualcomm,0.15086237,0.84913766
+BenevolentAI,Fal,0.15065432,0.8493457
+Scale AI,YouTube,0.15051283,0.8494872
+Adobe,Xelix,0.15051004,0.8494899
+Gousto,Black Forest AI GmbH,0.1504441,0.8495559
+Y combinator,Cambricon Technologies,0.1503286,0.84967136
+Cohere,DentalMonitoring,0.15024187,0.84975815
+Multiverse Computing,DeepL,0.1502096,0.8497904
+MiniMax,Babylon,0.15008882,0.8499112
+Parloa,Prophesee,0.14969614,0.8503039
+Procore,Ant Group,0.14935064,0.85064936
+Berkshire Hathaway,Sakana AI,0.14928278,0.8507172
+Palantir,Cambricon Technologies,0.14903893,0.8509611
+Owkin,Qualcomm,0.14896141,0.8510386
+Babylon,Sakana AI,0.14894876,0.8510512
+Perplexity AI,BuildOps,0.1487907,0.8512093
+Sidetrade,Prophesee,0.14863984,0.85136014
+Palantir,Indium,0.14817877,0.85182124
+Xelix,PlanRadar,0.1481538,0.8518462
+Waymo,Procore,0.14815132,0.85184866
+Qualcomm,Prophesee,0.1477764,0.85222363
+Harvey,Tessl,0.1471584,0.8528416
+Y combinator,Exotec,0.14712305,0.85287696
+ContentSquare,Text,0.14708853,0.8529115
+Babylon,DeepL,0.1468086,0.8531914
+Berkshire Hathaway,BenevolentAI,0.14655738,0.8534426
+Harvey,Nabla,0.14632949,0.8536705
+Einride,Cognism,0.1462243,0.8537757
+Harvey,Text,0.14598028,0.8540197
+Exotec,Qualcomm,0.14560997,0.85439
+Shift Technology,Fal,0.14550115,0.85449886
+PolyAI,Text,0.14548942,0.85451055
+Babylon,Gousto,0.14514591,0.8548541
+Alibaba,Gousto,0.14508572,0.8549143
+Physical Intelligence,Fal,0.14499557,0.85500443
+Berkshire Hathaway,Physical Intelligence,0.14471203,0.85528797
+Perplexity,Text,0.1446047,0.8553953
+Berkshire Hathaway,Synthesia,0.14434813,0.85565186
+SiPearl,PlanRadar,0.14434607,0.85565394
+DeepL,Cambricon Technologies,0.14432035,0.85567963
+Aleph Alpha,DentalMonitoring,0.14420931,0.8557907
+Aleph Alpha,PhotoRoom,0.14418389,0.8558161
+BuildOps,Xelix,0.14398839,0.8560116
+DeepL,Qualified,0.1436869,0.8563131
+Applied Intuition,DeepL,0.14319433,0.8568057
+DentalMonitoring,Qualified,0.14309488,0.8569051
+Alibaba,Owkin,0.14306532,0.85693467
+Einride,BuildOps,0.14301364,0.85698634
+Sakana AI,Indium,0.14295416,0.8570458
+Gousto,Appen,0.14286545,0.8571346
+BuildOps,SiPearl,0.14276144,0.85723853
+Acronis,DentalMonitoring,0.14212744,0.85787255
+DeepL,DentalMonitoring,0.14193594,0.85806406
+Babylon,Y combinator,0.14172307,0.85827696
+RobCo GmbH,Nabla,0.14143568,0.8585643
+Fal,Owkin,0.1413448,0.8586552
+ManoMano,Text,0.14126715,0.8587328
+Aqemia,PlanRadar,0.14118041,0.8588196
+2CRSI,DentalMonitoring,0.14112298,0.858877
+BuildOps,Nabla,0.14103551,0.8589645
+UiPath,Gousto,0.14098641,0.85901356
+Fal,Indium,0.14097545,0.8590245
+Anthropic,Babylon,0.14090025,0.85909975
+BenevolentAI,DentalMonitoring,0.14079477,0.85920525
+Harvey,Multiverse Computing,0.14066118,0.8593388
+PolyAI,Einride,0.14063385,0.8593662
+Perplexity,Y combinator,0.14056374,0.8594363
+Indium,Qualcomm,0.13984321,0.8601568
+YouTube,Exotec,0.1391545,0.8608455
+YouTube,Perplexity AI,0.13904409,0.8609559
+Cambricon Technologies,PlanRadar,0.13889667,0.8611033
+Cohere,Text,0.13885038,0.8611496
+Perplexity,Cognism,0.13867457,0.86132544
+Einride,Perplexity AI,0.13841055,0.86158943
+Gousto,Fal,0.13816454,0.8618355
+Anthropic,Qualcomm,0.13814062,0.8618594
+YouTube,Perplexity,0.13790528,0.8620947
+Mistral AI,Qualcomm,0.1375953,0.8624047
+Harvey,Xelix,0.13740972,0.8625903
+Adobe,Aqemia,0.13728833,0.86271167
+DeepL,Text,0.1370926,0.8629074
+Acronis,Y combinator,0.13661937,0.8633806
+ContentSquare,Hailo Technologies,0.1365899,0.8634101
+RobCo GmbH,SiPearl,0.13655536,0.8634446
+Shift Technology,Palantir,0.1363092,0.8636908
+YouTube,Gousto,0.13613126,0.8638687
+Acronis,Einride,0.13560908,0.8643909
+Multiverse Computing,Glean,0.1356005,0.8643995
+PhotoRoom,Text,0.13557138,0.86442864
+YouTube,PolyAI,0.13542433,0.8645757
+YouTube,Oracle,0.13476819,0.8652318
+Acronis,DeepL,0.1345986,0.8654014
+YouTube,Owkin,0.1341978,0.86580217
+Mistral AI,YouTube,0.13384657,0.8661534
+Scale AI,Text,0.13353999,0.86646
+Multiverse Computing,Apollo,0.13336568,0.8666343
+RobCo GmbH,Xelix,0.13321155,0.86678845
+Qualcomm,Appen,0.1326832,0.8673168
+Parloa,Ant Group,0.13268001,0.86732
+Celonis,Text,0.13243598,0.867564
+Nscale,Harvey,0.13223827,0.86776173
+Databricks,Acronis,0.13211489,0.8678851
+Einride,Gousto,0.13185087,0.86814916
+Harvey,SiPearl,0.13162029,0.8683797
+Qualcomm,Comand AI,0.13130754,0.86869246
+2CRSI,Qualcomm,0.13130158,0.8686984
+Text,Qualified,0.1312129,0.8687871
+Scale AI,Qualcomm,0.13103394,0.86896604
+Babylon,Hugging Face,0.1309802,0.8690198
+Text,Qualcomm,0.13054867,0.86945134
+Exotec,SiPearl,0.1302288,0.8697712
+Perplexity,Gousto,0.13007462,0.8699254
+PhotoRoom,Fal,0.12994257,0.87005746
+Fal,Cognism,0.12985739,0.8701426
+Alibaba,DeepL,0.12974648,0.8702535
+1X Technologies,Fal,0.12974495,0.87025505
+Exotec,Nabla,0.12960656,0.87039346
+Perplexity AI,PlanRadar,0.12960067,0.87039936
+ContentSquare,Nabla,0.12955466,0.8704454
+Synthesia,Fal,0.12949906,0.8705009
+Nscale,Babylon,0.12928474,0.87071526
+ContentSquare,Tessl,0.12871565,0.87128437
+ManoMano,Gousto,0.12869932,0.8713007
+Nscale,DentalMonitoring,0.12837014,0.87162983
+Qualcomm,Qualified,0.12828004,0.87171996
+Harvey,Acronis,0.12817018,0.8718298
+Babylon,PlanRadar,0.12802973,0.8719703
+Babylon,Oracle,0.12781243,0.87218755
+YouTube,Prophesee,0.12774695,0.87225306
+Exotec,Xelix,0.1276535,0.8723465
+Parloa,ARM Holdings,0.12760605,0.87239397
+PhotoRoom,Gousto,0.12744458,0.87255543
+YouTube,RobCo GmbH,0.12696807,0.8730319
+Y combinator,Fal,0.12686893,0.87313104
+Babylon,2CRSI,0.12678596,0.873214
+Exotec,Tessl,0.12674387,0.87325615
+Harvey,Glean,0.12658685,0.87341315
+Waymo,Qualified,0.12641701,0.87358296
+Qualcomm,Ant Group,0.1264116,0.8735884
+PhotoRoom,Tessl,0.12640107,0.87359893
+Nscale,YouTube,0.12639354,0.87360644
+YouTube,Sakana AI,0.12559241,0.8744076
+Multiverse Computing,Cognism,0.12558481,0.87441516
+ContentSquare,Sakana AI,0.12549487,0.87450516
+Babylon,Synthesia,0.124957874,0.87504214
+Waymo,Y combinator,0.124666795,0.8753332
+YouTube,Parloa,0.12388969,0.8761103
+Multiverse Computing,PlanRadar,0.12357527,0.87642473
+Babylon,1X Technologies,0.12347872,0.8765213
+Fal,Cambricon Technologies,0.12340975,0.87659025
+YouTube,Babylon,0.12326067,0.8767393
+Anthropic,DentalMonitoring,0.12310373,0.87689626
+YouTube,Sidetrade,0.12305202,0.876948
+Babylon,5C,0.12279638,0.87720364
+Hailo Technologies,DentalMonitoring,0.122625455,0.87737453
+Y combinator,Perplexity AI,0.12260969,0.8773903
+Perplexity,Fal,0.122434415,0.87756556
+Alibaba,Multiverse Computing,0.12212516,0.87787485
+YouTube,1X Technologies,0.1220042,0.8779958
+AMD,DentalMonitoring,0.12200376,0.87799627
+Harvey,Clay,0.12196199,0.878038
+Text,H Company,0.12159887,0.87840116
+ContentSquare,Aleph Alpha,0.121451996,0.878548
+ContentSquare,SiPearl,0.12132345,0.87867653
+Berkshire Hathaway,Waymo,0.12120385,0.87879616
+DentalMonitoring,SiPearl,0.12068544,0.87931454
+Shift Technology,Gousto,0.12065912,0.8793409
+Alibaba,Acronis,0.12054362,0.8794564
+Alibaba,Harvey,0.12038235,0.87961763
+Text,Adobe,0.12036631,0.87963367
+Cohere,Babylon,0.120337136,0.8796629
+DentalMonitoring,Tessl,0.120242804,0.87975717
+ContentSquare,Xelix,0.12022848,0.87977153
+Fal,Palantir,0.12008743,0.87991256
+Lightspeed,Qualcomm,0.11915348,0.8808465
+Aleph Alpha,Cambricon Technologies,0.11869631,0.88130367
+Databricks,Qualcomm,0.11855241,0.8814476
+Acronis,Gousto,0.11823625,0.88176376
+Gousto,Ant Group,0.11769513,0.88230485
+Acronis,01.AI,0.11747801,0.882522
+YouTube,Y combinator,0.117104426,0.8828956
+Synthesia,Text,0.11698965,0.8830103
+Applied Intuition,Qualcomm,0.116795085,0.88320494
+ContentSquare,Cambricon Technologies,0.11674277,0.8832572
+Acronis,Oracle,0.1159309,0.8840691
+Einride,Fal,0.11554395,0.88445604
+ByteDance,Shift Technology,0.115181595,0.88481843
+ContentSquare,Einride,0.11482096,0.88517904
+Babylon,AMD,0.11454657,0.88545346
+Multiverse Computing,Fal,0.11446888,0.8855311
+DentalMonitoring,Nabla,0.114465944,0.88553405
+Glean,Hailo Technologies,0.114247896,0.8857521
+Babylon,01.AI,0.11422746,0.8857725
+Berkshire Hathaway,Clay,0.11409129,0.8859087
+PlanRadar,Ant Group,0.11380532,0.8861947
+DentalMonitoring,Xelix,0.11338644,0.88661355
+Berkshire Hathaway,Groq,0.11328034,0.88671964
+ARM Holdings,DentalMonitoring,0.11327837,0.8867216
+Databricks,Gousto,0.11242116,0.88757885
+Scale AI,Babylon,0.11169787,0.88830215
+Applied Intuition,Gousto,0.11152982,0.8884702
+Babylon,Acronis,0.1112285,0.8887715
+Glean,Black Forest Labs,0.111132294,0.88886774
+RobCo GmbH,Gousto,0.11105869,0.8889413
+Fal,Black Forest AI GmbH,0.11100258,0.88899744
+Mistral AI,Text,0.11079745,0.88920254
+YouTube,Shift Technology,0.11024498,0.889755
+Acronis,Qualified,0.109657906,0.8903421
+DeepL,Qualcomm,0.109469086,0.89053094
+YouTube,BuildOps,0.10917248,0.89082754
+Gousto,Comand AI,0.109088406,0.8909116
+Nscale,Einride,0.10900811,0.89099187
+Berkshire Hathaway,2CRSI,0.10898422,0.89101577
+Cognism,Ant Group,0.108749546,0.89125043
+Waymo,Mistral AI,0.108400926,0.89159906
+Text,Comand AI,0.1081981,0.8918019
+PhotoRoom,SiPearl,0.10790181,0.8920982
+Text,Appen,0.10779638,0.8922036
+AMI - Advanced Machine Intelligence,Gousto,0.107599184,0.8924008
+Databricks,Fal,0.107575566,0.89242446
+Multiverse Computing,Indium,0.10743503,0.89256495
+Perplexity AI,Cognism,0.10714559,0.8928544
+Black Forest Labs,Gousto,0.10708913,0.89291084
+Gousto,Indium,0.10695525,0.89304477
+01.AI,Gousto,0.10678198,0.89321804
+Multiverse Computing,Procore,0.10660626,0.89339375
+01.AI,Qualcomm,0.10652997,0.89347005
+YouTube,Appen,0.10628058,0.89371943
+YouTube,2CRSI,0.10626638,0.8937336
+Qualified,Cambricon Technologies,0.105465114,0.8945349
+AMI - Advanced Machine Intelligence,Text,0.10454953,0.8954505
+H Company,Qualcomm,0.104290806,0.8957092
+PhotoRoom,Nabla,0.10405213,0.8959479
+01.AI,Fal,0.103860565,0.89613944
+Babylon,Clay,0.10342216,0.89657784
+Gousto,Cambricon Technologies,0.103418685,0.8965813
+Y combinator,Qualcomm,0.10331012,0.8966899
+Multiverse Computing,Clay,0.10285308,0.89714694
+ContentSquare,Qualcomm,0.10263239,0.8973676
+MiniMax,Qualcomm,0.10181884,0.89818114
+Berkshire Hathaway,PolyAI,0.10006388,0.89993614
+ByteDance,Fal,0.09985413,0.9001459
+Text,Cambricon Technologies,0.09955605,0.900444
+Harvey,2CRSI,0.099309035,0.900691
+Aqemia,Qualified,0.09821467,0.9017853
+PhotoRoom,Xelix,0.09820423,0.90179574
+Babylon,ARM Holdings,0.09819324,0.9018068
+Acronis,Parloa,0.09807483,0.90192515
+Y combinator,Gousto,0.09803074,0.90196925
+Parloa,Qualcomm,0.09777149,0.90222853
+Gousto,ARM Holdings,0.09759259,0.9024074
+Text,Lightspeed,0.09682485,0.9031752
+Oracle,Qualcomm,0.09653068,0.9034693
+PolyAI,Qualcomm,0.09651798,0.903482
+Babylon,Comand AI,0.096135825,0.90386415
+Sidetrade,Qualcomm,0.09529461,0.9047054
+DeepL,Adobe,0.09516149,0.9048385
+Perplexity AI,Fal,0.094461784,0.9055382
+Alibaba,Y combinator,0.09436154,0.90563846
+Celonis,Gousto,0.094129086,0.9058709
+Berkshire Hathaway,PhotoRoom,0.0940056,0.9059944
+Berkshire Hathaway,Alibaba,0.094004445,0.90599555
+Harvey,Qualcomm,0.09373904,0.90626097
+Berkshire Hathaway,Adobe,0.09357328,0.9064267
+DeepL,Ant Group,0.09336697,0.906633
+Hugging Face,Text,0.093232885,0.90676713
+Glean,RobCo GmbH,0.092989124,0.90701085
+ManoMano,Qualcomm,0.092671126,0.90732884
+Gousto,Qualcomm,0.092542,0.907458
+Fal,Prophesee,0.092249334,0.90775067
+RobCo GmbH,Fal,0.09205093,0.9079491
+Cerebras,Text,0.09196656,0.90803343
+Babylon,Palantir,0.09154636,0.90845364
+YouTube,DentalMonitoring,0.091322355,0.90867764
+YouTube,Black Forest AI GmbH,0.09119356,0.90880644
+YouTube,Harvey,0.09088878,0.9091112
+ByteDance,Babylon,0.0901747,0.9098253
+Oracle,DentalMonitoring,0.090136066,0.90986395
+Groq,Babylon,0.089812,0.910188
+Qualcomm,Nabla,0.089602076,0.91039795
+Babylon,Procore,0.08933584,0.91066414
+Einride,Clay,0.089093916,0.9109061
+Glean,Black Forest AI GmbH,0.08905487,0.9109451
+Harvey,Babylon,0.088858254,0.91114175
+PolyAI,Gousto,0.08867486,0.91132516
+Berkshire Hathaway,Apollo,0.08865936,0.91134065
+ContentSquare,ARM Holdings,0.088554144,0.91144586
+Qualcomm,Tessl,0.0876607,0.9123393
+Berkshire Hathaway,Gousto,0.08598227,0.91401774
+Berkshire Hathaway,Harvey,0.08593265,0.9140673
+Qualcomm,Xelix,0.08592205,0.91407794
+YouTube,PlanRadar,0.08588699,0.914113
+Babylon,Adobe,0.08586726,0.9141327
+Glean,Sakana AI,0.085769,0.914231
+AMD,Glean,0.08558179,0.9144182
+5C,DentalMonitoring,0.08549688,0.9145031
+YouTube,Palantir,0.08543821,0.9145618
+Nscale,Glean,0.085305676,0.9146943
+Y combinator,DentalMonitoring,0.083958454,0.91604155
+MiniMax,Glean,0.08352902,0.916471
+Waymo,Babylon,0.08337626,0.9166237
+01.AI,Text,0.08329658,0.9167034
+Babylon,PolyAI,0.08273026,0.9172697
+AMD,Qualified,0.082684666,0.91731536
+Mistral AI,Gousto,0.08230668,0.9176933
+UiPath,Glean,0.08199807,0.91800195
+Mistral AI,Fal,0.08191806,0.91808194
+ByteDance,Perplexity AI,0.08179771,0.9182023
+DentalMonitoring,Ant Group,0.08124006,0.91875994
+Berkshire Hathaway,Acronis,0.0804953,0.9195047
+Fal,Nabla,0.08014947,0.9198505
+Sakana AI,Gousto,0.07990877,0.9200912
+Shift Technology,Qualcomm,0.07975321,0.9202468
+Groq,Text,0.07972955,0.92027044
+1X Technologies,Glean,0.07947589,0.9205241
+Berkshire Hathaway,Cambricon Technologies,0.07939312,0.92060685
+Fal,Tessl,0.07911793,0.92088205
+Cambricon Technologies,Tessl,0.07910637,0.9208936
+Physical Intelligence,Glean,0.078375995,0.921624
+Harvey,Gousto,0.078089796,0.9219102
+YouTube,Procore,0.0774394,0.9225606
+Multiverse Computing,Shift Technology,0.077392995,0.922607
+Qualified,Prophesee,0.07710826,0.92289174
+Aleph Alpha,Qualcomm,0.07699935,0.92300063
+ContentSquare,Harvey,0.076575994,0.923424
+UiPath,YouTube,0.075710125,0.9242899
+Berkshire Hathaway,Prophesee,0.074847244,0.9251528
+SiPearl,Cambricon Technologies,0.07473501,0.925265
+Acronis,Qualcomm,0.07454803,0.925452
+Oracle,Cambricon Technologies,0.07444596,0.92555404
+Berkshire Hathaway,World Labs,0.074296996,0.925703
+Perplexity AI,Gousto,0.07381568,0.9261843
+YouTube,Multiverse Computing,0.07362052,0.9263795
+Qualcomm,SiPearl,0.07309496,0.92690504
+Cambricon Technologies,Nabla,0.072667286,0.9273327
+Glean,Cognism,0.07200886,0.92799115
+Fal,SiPearl,0.071366355,0.92863363
+Waymo,Multiverse Computing,0.07116757,0.9288324
+Fal,Xelix,0.07102416,0.9289758
+Text,Palantir,0.07095128,0.9290487
+Clay,Qualcomm,0.07021822,0.9297818
+Oracle,Gousto,0.07019407,0.92980593
+Babylon,Lightspeed,0.06995371,0.9300463
+Text,Fal,0.06990117,0.93009883
+Berkshire Hathaway,Aqemia,0.06973505,0.93026495
+UiPath,Qualcomm,0.0689099,0.9310901
+Babylon,BuildOps,0.0687486,0.9312514
+Oracle,Fal,0.068695806,0.9313042
+Glean,BenevolentAI,0.06852719,0.9314728
+UiPath,Text,0.06841837,0.9315816
+YouTube,Applied Intuition,0.06802338,0.9319766
+BenevolentAI,Qualcomm,0.06785794,0.9321421
+YouTube,Comand AI,0.06750201,0.932498
+Parloa,Cambricon Technologies,0.067457564,0.93254244
+Xelix,Cambricon Technologies,0.06733689,0.9326631
+Berkshire Hathaway,Lightspeed,0.0660707,0.9339293
+MiniMax,Text,0.06598377,0.9340162
+Cohere,Glean,0.0658399,0.9341601
+Berkshire Hathaway,Indium,0.065740325,0.93425965
+5C,Text,0.0655482,0.9344518
+RobCo GmbH,Text,0.06484753,0.9351525
+ByteDance,SiPearl,0.064506635,0.93549335
+OpenAI,Babylon,0.0644116,0.9355884
+Sidetrade,Text,0.064171486,0.9358285
+YouTube,Qualcomm,0.06405983,0.93594015
+Glean,Procore,0.063772045,0.936228
+ByteDance,Xelix,0.06367348,0.9363265
+Cerebras,DentalMonitoring,0.06363953,0.9363605
+World Labs,Gousto,0.06334833,0.93665165
+Berkshire Hathaway,Owkin,0.063330255,0.93666977
+Parloa,Xelix,0.060764015,0.939236
+Berkshire Hathaway,Babylon,0.060323246,0.93967676
+Waymo,Oracle,0.05911646,0.9408835
+Babylon,Owkin,0.05904063,0.9409594
+Cerebras,Gousto,0.05822748,0.9417725
+Text,Nabla,0.05809795,0.94190204
+Einride,Parloa,0.05758999,0.94241
+Parloa,Nabla,0.05747861,0.9425214
+Gousto,PlanRadar,0.05649485,0.94350517
+Celonis,YouTube,0.056275915,0.9437241
+Berkshire Hathaway,Procore,0.056200285,0.94379973
+Text,Apollo,0.05613207,0.9438679
+Mistral AI,Babylon,0.055802733,0.9441973
+Sakana AI,Qualcomm,0.054470588,0.9455294
+Databricks,Babylon,0.054462757,0.94553727
+Parloa,Tessl,0.054451905,0.9455481
+ContentSquare,Babylon,0.05398999,0.94601
+Text,Tessl,0.053773034,0.94622695
+Text,BuildOps,0.053133175,0.9468668
+YouTube,Cambricon Technologies,0.052971907,0.9470281
+Parloa,SiPearl,0.05277725,0.94722277
+ByteDance,Tessl,0.05261643,0.9473836
+Databricks,DentalMonitoring,0.052224074,0.9477759
+Berkshire Hathaway,Glean,0.05161649,0.9483835
+Multiverse Computing,DentalMonitoring,0.051447608,0.94855237
+OpenAI,Text,0.050826102,0.9491739
+Gousto,Text,0.050395414,0.9496046
+Cerebras,YouTube,0.049947586,0.95005244
+Glean,DeepL,0.049747847,0.9502522
+Wayve,Qualcomm,0.048932515,0.9510675
+Berkshire Hathaway,Applied Intuition,0.048545115,0.9514549
+Berkshire Hathaway,Shift Technology,0.04793754,0.9520625
+Qualcomm,PlanRadar,0.047032584,0.9529674
+Babylon,Qualified,0.046880964,0.95311904
+Waymo,Text,0.046006434,0.95399356
+Gousto,Prophesee,0.045910735,0.9540893
+Glean,PlanRadar,0.045624398,0.9543756
+World Labs,Glean,0.04550992,0.95449007
+Babylon,Aleph Alpha,0.04535559,0.95464444
+Glean,H Company,0.04487721,0.95512277
+Text,SiPearl,0.04397269,0.9560273
+Gousto,Nabla,0.04396723,0.95603275
+Babylon,Ant Group,0.04376193,0.9562381
+YouTube,AMI - Advanced Machine Intelligence,0.04366222,0.9563378
+Wayve,YouTube,0.043018762,0.95698124
+ByteDance,Nabla,0.043013647,0.95698637
+Gousto,Tessl,0.042715397,0.9572846
+YouTube,Xelix,0.042572893,0.9574271
+AMD,Text,0.042498913,0.9575011
+YouTube,ARM Holdings,0.041679353,0.9583206
+Gousto,SiPearl,0.041511346,0.95848864
+Waymo,YouTube,0.041227836,0.9587722
+Text,Owkin,0.041015044,0.958985
+YouTube,Aqemia,0.04078801,0.959212
+Gousto,Xelix,0.0404866,0.9595134
+5C,Glean,0.040455528,0.9595445
+Babylon,Fal,0.040298913,0.95970106
+Babylon,Cognism,0.04019015,0.95980984
+Procore,Qualcomm,0.040135674,0.9598643
+Text,Xelix,0.039768815,0.9602312
+Berkshire Hathaway,ContentSquare,0.03962755,0.96037245
+YouTube,SiPearl,0.039062727,0.96093726
+Glean,ARM Holdings,0.03837099,0.96162903
+2CRSI,Text,0.038270697,0.9617293
+Glean,01.AI,0.038259126,0.96174085
+Perplexity,Qualcomm,0.037720814,0.9622792
+Babylon,PhotoRoom,0.037393544,0.96260643
+Glean,Owkin,0.0373063,0.9626937
+Einride,Qualified,0.036955412,0.9630446
+Shift Technology,Text,0.036848787,0.9631512
+Glean,Qualified,0.036650635,0.96334934
+Wayve,Text,0.035923652,0.96407634
+Glean,Adobe,0.03585395,0.9641461
+AMI - Advanced Machine Intelligence,Babylon,0.03573344,0.96426654
+YouTube,Tessl,0.035641726,0.96435827
+Hailo Technologies,Text,0.03551763,0.96448237
+Glean,Aleph Alpha,0.0351873,0.9648127
+Alibaba,Text,0.034250546,0.96574944
+AMD,Gousto,0.034132797,0.9658672
+Babylon,Appen,0.03362365,0.96637636
+Einride,Qualcomm,0.031600766,0.9683992
+YouTube,Nabla,0.03143558,0.9685644
+Physical Intelligence,Babylon,0.031418394,0.9685816
+Procore,Gousto,0.03069275,0.96930724
+Exotec,Text,0.030376865,0.96962315
+Glean,Prophesee,0.03026906,0.9697309
+OpenAI,Glean,0.029737135,0.9702629
+World Labs,Babylon,0.029403877,0.97059613
+Babylon,Prophesee,0.029344812,0.9706552
+YouTube,ManoMano,0.02897105,0.9710289
+Text,ARM Holdings,0.02789653,0.9721035
+Text,Cognism,0.027834844,0.97216517
+Glean,Einride,0.02717365,0.97282636
+Babylon,Apollo,0.02640015,0.97359985
+Berkshire Hathaway,Perplexity,0.02608747,0.97391254
+Glean,Parloa,0.02560261,0.97439736
+Physical Intelligence,Text,0.024084505,0.9759155
+Babylon,RobCo GmbH,0.023965301,0.9760347
+Text,Aqemia,0.023761777,0.97623825
+Babylon,Black Forest Labs,0.022440199,0.9775598
+Berkshire Hathaway,Qualcomm,0.022263085,0.9777369
+AMI - Advanced Machine Intelligence,Glean,0.022169258,0.97783077
+YouTube,Fal,0.021695683,0.9783043
+ContentSquare,AMD,0.020946462,0.97905356
+Anthropic,Glean,0.019688249,0.98031175
+ByteDance,DentalMonitoring,0.017994018,0.98200595
+Databricks,Glean,0.017479945,0.98252004
+Text,DentalMonitoring,0.017280763,0.98271924
+Wayve,Glean,0.01715926,0.9828407
+Berkshire Hathaway,DeepL,0.017114379,0.9828856
+Babylon,Black Forest AI GmbH,0.016918955,0.98308104
+Alibaba,DentalMonitoring,0.0149073545,0.98509264
+Perplexity AI,Qualcomm,0.014444881,0.9855551
+Text,Black Forest AI GmbH,0.012978486,0.9870215
+YouTube,Indium,0.012377812,0.9876222
+Glean,Aqemia,0.012131592,0.9878684
+Mistral AI,Glean,0.011872885,0.9881271
+1X Technologies,Text,0.010824851,0.98917514
+ByteDance,Text,0.010173208,0.9898268
+Fal,DentalMonitoring,0.009466667,0.99053335
+Berkshire Hathaway,Parloa,0.0094003705,0.99059963
+Databricks,Text,0.009282469,0.99071753
+Babylon,Parloa,0.008984308,0.9910157
+Cerebras,Glean,0.0077814865,0.9922185
+Adobe,Qualcomm,0.0073687024,0.9926313
+Text,Clay,0.0060934555,0.99390656
+Babylon,Einride,0.0042365687,0.9957634
+Glean,Ant Group,0.0038697326,0.9961303
+Applied Intuition,Glean,0.0029028761,0.99709713
+Physical Intelligence,Gousto,0.0026639157,0.9973361
+YouTube,AMD,0.0013019713,0.99869806
+Palantir,DentalMonitoring,0.0012241149,0.9987759
+Glean,Synthesia,0.00087121857,0.99912876
+Scale AI,Glean,-0.0019716013,1.0019716
+YouTube,Acronis,-0.002472391,1.0024724
+Berkshire Hathaway,YouTube,-0.0025088703,1.0025089
+Berkshire Hathaway,Fal,-0.0034062108,1.0034062
+Glean,BuildOps,-0.0040428047,1.0040429
+Babylon,Exotec,-0.0048241024,1.0048242
+Celonis,Babylon,-0.005883159,1.0058832
+DentalMonitoring,Qualcomm,-0.0066673993,1.0066674
+Procore,Text,-0.008494267,1.0084943
+Einride,Text,-0.008899305,1.0088993
+Babylon,ManoMano,-0.008993214,1.0089933
+Oracle,Text,-0.009187502,1.0091875
+Anthropic,Text,-0.009853668,1.0098537
+Text,Prophesee,-0.010685787,1.0106858
+Perplexity,Babylon,-0.01162977,1.0116298
+Glean,Hugging Face,-0.015279112,1.015279
+Celonis,Glean,-0.015341811,1.0153418
+ByteDance,Harvey,-0.017182073,1.0171821
+AMD,Parloa,-0.017645065,1.0176451
+Sakana AI,Text,-0.017752215,1.0177522
+Multiverse Computing,Text,-0.0177917,1.0177917
+Alibaba,Babylon,-0.018147048,1.018147
+Glean,Qualcomm,-0.01841809,1.0184181
+Cerebras,Babylon,-0.019685518,1.0196855
+Einride,DentalMonitoring,-0.020712582,1.0207126
+Glean,Nabla,-0.02193994,1.02194
+Babylon,Text,-0.022006443,1.0220064
+Black Forest Labs,Text,-0.022423502,1.0224235
+Glean,Indium,-0.02277143,1.0227715
+Glean,Exotec,-0.024771715,1.0247717
+Babylon,Shift Technology,-0.026717246,1.0267172
+Glean,Oracle,-0.026999207,1.0269992
+Glean,Acronis,-0.027719364,1.0277194
+Acronis,Text,-0.027945781,1.0279458
+Babylon,Cambricon Technologies,-0.02821854,1.0282185
+Glean,Cambricon Technologies,-0.029882208,1.0298822
+Gousto,DentalMonitoring,-0.031961475,1.0319614
+YouTube,Einride,-0.0331091,1.0331091
+Glean,Xelix,-0.03380382,1.0338038
+Waymo,Glean,-0.035709698,1.0357097
+Babylon,Perplexity AI,-0.037456237,1.0374563
+Berkshire Hathaway,Perplexity AI,-0.040177587,1.0401776
+Perplexity,Glean,-0.04073015,1.0407301
+YouTube,Text,-0.040772855,1.0407729
+Babylon,DentalMonitoring,-0.04357747,1.0435774
+Babylon,Sidetrade,-0.04619831,1.0461984
+Glean,Fal,-0.046305224,1.0463052
+Berkshire Hathaway,Text,-0.046899084,1.0468991
+Glean,SiPearl,-0.04952212,1.0495222
+BenevolentAI,Text,-0.055985793,1.0559858
+Glean,Tessl,-0.05628934,1.0562893
+Glean,PhotoRoom,-0.058473147,1.0584731
+ContentSquare,Glean,-0.058753777,1.0587537
+Y combinator,Text,-0.060998112,1.0609981
+Babylon,Aqemia,-0.062169984,1.06217
+Glean,2CRSI,-0.062348716,1.0623487
+Glean,Apollo,-0.063963585,1.0639635
+Alibaba,Glean,-0.06588348,1.0658835
+Babylon,Applied Intuition,-0.06751994,1.0675199
+Glean,Text,-0.06807525,1.0680753
+Text,PlanRadar,-0.06878022,1.0687802
+Glean,Sidetrade,-0.06881688,1.0688169
+Glean,Clay,-0.0792615,1.0792615
+Text,Ant Group,-0.08018994,1.08019
+Applied Intuition,Text,-0.0805398,1.0805398
+Glean,PolyAI,-0.080991566,1.0809915
+Glean,Appen,-0.08606311,1.0860631
+Glean,Comand AI,-0.0861269,1.0861269
+Glean,ManoMano,-0.09333567,1.0933356
+Glean,Perplexity AI,-0.097827405,1.0978274
+Multiverse Computing,Babylon,-0.10058617,1.1005862
+Babylon,Nabla,-0.10064946,1.1006495
+Babylon,Tessl,-0.1068304,1.1068304
+Glean,DentalMonitoring,-0.107422404,1.1074224
+Glean,Shift Technology,-0.111368634,1.1113687
+Babylon,Qualcomm,-0.113507144,1.1135072
+Babylon,SiPearl,-0.11486789,1.1148679
+Babylon,Xelix,-0.11504031,1.1150403
+Babylon,Indium,-0.12172559,1.1217256
+Glean,Lightspeed,-0.12803003,1.1280301
+Berkshire Hathaway,DentalMonitoring,-0.16021565,1.1602156
