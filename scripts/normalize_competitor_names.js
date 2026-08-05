@@ -3,16 +3,90 @@ const sqlite3 = require('sqlite3').verbose();
 const APPLY = process.argv.includes('--apply');
 const DB_PATH = 'database.db';
 
-function normalizeKey(name) {
-  // Retire le contenu entre parenthèses et normalise
+const LEGAL_SUFFIX_RE = /\b(incorporated|inc|corp|corporation|company|co|llc|ltd|limited|plc|gmbh|ag|sa|sas|sasu|sarl|spa|srl|bv|nv|oy|ab|pte|kg|kgaa)\b/g;
+
+function normalizeWhitespace(value) {
+  return value.replace(/[\u00A0\u202F]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function hasWeirdMixedCaseToken(name) {
+  return name.split(' ').some((token) => /[A-Z]{2,}[a-z]+/.test(token) || /[a-z]+[A-Z]{2,}/.test(token));
+}
+
+function canonicalDisplayScore(name) {
+  let score = 0;
+  if (hasWeirdMixedCaseToken(name)) score += 50;
+  if (/\([^)]*\)/.test(name)) score += 5;
+  score += Math.min(name.length, 40) / 100;
+  return score;
+}
+
+function repairMixedCaseToken(token) {
+  if (/^[A-Z]{2,}[a-z]+$/.test(token) || /^[a-z]+[A-Z]{2,}$/.test(token)) {
+    return token.charAt(0).toUpperCase() + token.slice(1).toLowerCase();
+  }
+  return token;
+}
+
+function repairDisplayCase(name) {
   return name
+    .split(' ')
+    .map((token) => repairMixedCaseToken(token))
+    .join(' ');
+}
+
+function normalizeKey(name) {
+  // Retire le contenu entre parenthèses, les suffixes légaux et normalise.
+  return name
+    .replace(/['’`]/g, '')
+    .replace(/&/g, ' and ')
     .replace(/\s*\([^)]*\)/g, '')
-    .trim()
+    .replace(LEGAL_SUFFIX_RE, ' ')
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\b(and|the)\b/g, ' ')
     .replace(/\s+/g, ' ')
     .replace(/[^a-z0-9\s]/g, '');
+}
+
+function parseCompetitorItems(value) {
+  if (!value || typeof value !== 'string') {
+    return [];
+  }
+
+  const items = [];
+  let current = '';
+
+  for (let i = 0; i < value.length; i++) {
+    const ch = value[i];
+    const next = value[i + 1] || '';
+
+    const isComma = ch === ',';
+    const isPipe = ch === '|';
+    const isNewline = ch === '\n' || ch === '\r';
+    // Le ';' est considéré séparateur seulement s'il est suivi d'un espace
+    // (évite de casser des noms comme "tl;dv").
+    const isSemicolonSeparator = ch === ';' && /\s/.test(next);
+
+    if (isComma || isPipe || isNewline || isSemicolonSeparator) {
+      const trimmed = normalizeWhitespace(current);
+      if (trimmed) {
+        items.push(trimmed);
+      }
+      current = '';
+      continue;
+    }
+
+    current += ch;
+  }
+
+  const tail = normalizeWhitespace(current);
+  if (tail) {
+    items.push(tail);
+  }
+
+  return items;
 }
 
 function buildCanonicalMap(db) {
@@ -25,11 +99,26 @@ function buildCanonicalMap(db) {
 
       const map = new Map();
       rows.forEach((row) => {
-        const key = normalizeKey(row.name);
         // Utilise le nom de base sans parenthèses comme forme canonique
-        const baseName = row.name.replace(/\s*\([^)]*\)/g, '').trim();
-        if (!map.has(key)) {
-          map.set(key, baseName);
+        const baseName = repairDisplayCase(normalizeWhitespace(row.name.replace(/\s*\([^)]*\)/g, ' ')));
+        const aliases = [row.name, baseName];
+
+        aliases.forEach((alias) => {
+          const key = normalizeKey(alias);
+          if (!key) {
+            return;
+          }
+
+          const existing = map.get(key);
+          if (!existing || canonicalDisplayScore(baseName) < canonicalDisplayScore(existing)) {
+            map.set(key, baseName);
+          }
+        });
+
+        const legalStripped = normalizeWhitespace(baseName.replace(LEGAL_SUFFIX_RE, ' '));
+        const legalStrippedKey = normalizeKey(legalStripped);
+        if (legalStrippedKey && !map.has(legalStrippedKey)) {
+          map.set(legalStrippedKey, baseName);
         }
       });
 
@@ -38,26 +127,36 @@ function buildCanonicalMap(db) {
   });
 }
 
-function normalizeCompetitorList(value, canonicalMap) {
+function normalizeCompetitorList(value, canonicalMap, focalName) {
   if (!value || typeof value !== 'string') {
     return value;
   }
 
-  const items = value.split(',').map((item) => item.trim()).filter(Boolean);
-  const normalized = items.map((item) => {
+  const focalKey = normalizeKey(focalName || '');
+  const seen = new Set();
+  const normalized = [];
+
+  parseCompetitorItems(value).forEach((item) => {
     // Préserve le contenu entre parenthèses
     const parenMatch = item.match(/^(.+?)(\s*\(.+\))$/);
-    const baseName = parenMatch ? parenMatch[1].trim() : item;
+    const baseName = parenMatch ? normalizeWhitespace(parenMatch[1]) : item;
     const suffix = parenMatch ? parenMatch[2] : '';
 
     const key = normalizeKey(baseName);
+    if (!key || key === focalKey || seen.has(key)) {
+      return;
+    }
+
     const canonical = canonicalMap.get(key);
 
     if (canonical) {
-      return canonical + suffix;
+      normalized.push(canonical + suffix);
+      seen.add(key);
+      return;
     }
 
-    return item;
+    normalized.push(item);
+    seen.add(key);
   });
 
   return normalized.join(', ');
@@ -83,7 +182,7 @@ async function main() {
 
         const updates = [];
         rows.forEach((row) => {
-          const normalized = normalizeCompetitorList(row.main_competitors, canonicalMap);
+          const normalized = normalizeCompetitorList(row.main_competitors, canonicalMap, row.name);
           if (normalized !== row.main_competitors) {
             updates.push({ id: row.id, name: row.name, from: row.main_competitors, to: normalized });
           }

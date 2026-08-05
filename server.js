@@ -565,6 +565,10 @@ function normalizeOrganizationType(value) {
     return 'Private company';
   }
 
+  if (normalized === 'subsidiary' || normalized === 'subsidiary company' || normalized === 'filiale') {
+    return 'Subsidiary';
+  }
+
   if (normalized === 'b-corp' || normalized === 'b corp' || normalized === 'bcorp') {
     return 'B-Corp';
   }

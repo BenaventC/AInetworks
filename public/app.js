@@ -84,6 +84,13 @@ function normalizeValidationLevel(value) {
   return level;
 }
 
+function getValidationLevelForSegment(segment) {
+  if (segment === 'partial') return 1;
+  if (segment === 'validated') return 2;
+  if (segment === 'later') return 3;
+  return 0;
+}
+
 function parseMillionsValue(value) {
   if (value === null || value === undefined) {
     return null;
@@ -543,6 +550,7 @@ function openEnterpriseForm() {
   currentEditingId = null;
   document.getElementById('formTitle').textContent = 'New Company';
   clearEnterpriseForm();
+  document.getElementById('entValidated').value = String(getValidationLevelForSegment(enterpriseSegment));
   setEnterpriseSectorFromValue('');
   document.getElementById('enterpriseForm').classList.remove('hidden');
 }
@@ -1155,6 +1163,7 @@ function updatePartnershipSelects() {
 function openPartnershipForm() {
   currentEditingId = null;
   clearPartnershipForm();
+  document.getElementById('partValidated').value = String(getValidationLevelForSegment(partnershipSegment));
   document.getElementById('partnershipForm').classList.remove('hidden');
   ensureEnterpriseOptionsLoaded();
 }
