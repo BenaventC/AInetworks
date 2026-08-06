@@ -1,0 +1,96 @@
+actor,community,country,sector,ranking_score,x,y
+Apple,0,United States,ICT,4000000.0,-1.7613981,-5.786357
+ByteDance,0,China,Media & Entertainment,550000.0,10.034941,-20.283815
+OpenAI,0,United States,Unknown,157000.0,9.465469,-29.59776
+Ant Group,0,China,Financial Services,103000.0,4.371551,-41.204052
+Anysphere,0,United States,AI model,60000.0,10.971697,-11.597852
+DeepSeek,0,China,AI model,60000.0,41.45965,-18.938358
+GitHub,0,United States,AI model,35000.0,28.45261,-50.159157
+SoftBank Group,0,Japan,Retail & E-commerce,27000.0,-16.953485,-61.96118
+Cognition AI,0,United States,Professional Services,26000.0,22.770601,-48.96544
+Cohere,0,Canada,AI model,20000.0,18.698593,-16.669056
+Celonis,0,Germany,ICT,12000.0,-39.91886,-108.10911
+Mistral AI,0,France,AI model,11700.0,22.685303,-24.976713
+Cognex,0,United States,Computer Vision,9600.0,53.149784,-74.078636
+UiPath,0,United States,ICT,6430.0,-16.953485,-61.96118
+Synthesia,0,United Kingdom,AI model,4000.0,40.505672,-31.944927
+AMI labs,0,France,AI model,3500.0,19.26596,-7.589973
+Black Forest Labs,0,Germany,AI model,3250.0,-1.2767957,-27.348146
+Sakana AI,0,Japan,AI model,2700.0,28.579008,-16.116302
+Aleph Alpha,0,Germany,AI model,2000.0,32.889072,-21.965555
+Weibo,0,China,Media & Entertainment,1900.0,-7.7036014,-40.759243
+Prophesee,0,United States,Computer Vision,130.0,55.87195,-69.0816
+DarwinAI,0,Canada,ICT,50.0,-16.953485,-61.96118
+4.screen,0,Germany,Transport & Mobility,42.0,60.658844,-116.69389
+20face,0,Netherlands,Health & Social Care,8.0,95.913086,-80.62368
+AI Medical Technology,0,Sweden,AI model,1.0,11.594057,-119.037254
+Google,1,United States,AI model,4560000.0,-19.091406,39.22255
+Alphabet Inc.,1,United States,Cloud Provider,4120000.0,-13.53003,41.904823
+Microsoft,1,United States,Cloud Provider,3450000.0,-5.058219,37.987854
+Amazon,1,United States,Unknown,2900000.0,0.11992893,3.1031055
+Meta,1,United States,AI model,1503000.0,-1.7505165,45.148956
+AWS,1,United States,Hardware,1200000.0,-2.307393,12.368585
+Tesla,1,United States,Energy & Utilities,1180000.0,18.177898,30.3665
+Oracle,1,United States,Cloud Provider,408000.0,-16.649431,20.269958
+YouTube,1,United States,Media & Entertainment,400000.0,-20.116335,51.115887
+Palantir,1,United States,Defence,318020.0,-29.640877,27.682116
+Alibaba,1,China,Cloud Provider,282750.0,-20.67468,59.628506
+Adobe,1,United States,ICT,252800.0,-41.626034,49.83117
+IBM,1,United States,AI model,213000.0,-0.98691624,22.36542
+Salesforce,1,United States,Professional Services,180000.0,-8.372741,20.209442
+Shopify,1,Canada,Retail & E-commerce,160000.0,-5.2494283,59.780273
+Cloudflare,1,United States,Cloud Provider,103500.0,-25.48599,20.562592
+Kuaishou,1,China,AI model,26000.0,-34.784943,48.585613
+Wayve,1,United Kingdom,ICT,8600.0,18.463442,20.944864
+Ineffable Intelligence,1,United Kingdom,AI model,5100.0,26.86159,18.503197
+World Labs,1,United States,AI model,5000.0,26.86159,18.503197
+DeepL,1,Germany,ICT,2000.0,-12.804646,9.147841
+PolyAI,1,United Kingdom,AI model,750.0,12.66907,13.430038
+Nvidia,2,United States,Hardware,5000000.0,43.105267,42.13986
+Broadcom,2,United States,Hardware,1835000.0,53.911198,54.154305
+Samsung Electronics,2,South Korea,Hardware,1000300.0,45.425552,72.75305
+AMD,2,United States,Hardware,794000.0,45.73089,50.07663
+Intel,2,United States,Hardware,508000.0,56.075325,62.475895
+ARM Holdings,2,United Kingdom,Hardware,253350.0,40.298733,36.317596
+Qualcomm,2,United States,Hardware,172240.0,46.118263,60.14498
+Figure AI,2,United States,Robotics,39000.0,15.446557,80.856125
+Boston Dynamics,2,United States,Robotics,20000.0,16.872711,75.20034
+Cerebras,2,United States,Hardware,18000.0,49.408436,33.942497
+Mobileye,2,Israel,Computer Vision,6700.0,53.949783,46.057262
+Owkin,2,France,AI model,1000.0,82.11477,-6.335129
+Comand AI,2,France,AI model,124.0,45.480816,7.3489943
+Arago,2,France,Hardware,70.0,59.70183,34.116623
+Art Recognition,2,Switzerland,ICT,50.0,121.53994,34.10388
+BenevolentAI,2,United Kingdom,AI model,13.0,76.32405,-7.1868105
+Amberscript,2,Netherlands,AI model,10.0,112.83108,-44.249397
+3ive AI,2,Germany,ICT,5.0,133.10193,-9.533867
+PharmAI,2,Germany,Biotech,5.0,89.6202,-5.1510086
+Y combinator,3,United States,Unknown,600000.0,-195.11438,-75.364494
+Scale AI,3,United States,Data,29000.0,-195.11438,-75.364494
+Harvey,3,United States,Professional Services,11000.0,-195.11438,-75.364494
+Tempus AI,3,United States,Biotech,8490.0,-195.11438,-75.364494
+ManoMano,3,France,Retail & E-commerce,2600.0,-195.11438,-75.364494
+Semrush,3,Unknown,Data,1960.0,-195.11438,-75.364494
+Job&Talent,3,Spain,ICT,1500.0,-195.11438,-75.364494
+Oxford Nanopore Technologies,3,United Kingdom,AI model,1440.0,-195.11438,-75.364494
+DentalMonitoring,3,France,AI model,1200.0,-195.11438,-75.364494
+Gleamer,3,Unknown,AI model,230.0,-195.11438,-75.364494
+Volta medical,3,France,AI model,90.0,-195.11438,-75.364494
+OLLAMA,3,Unknown,AI model,88.0,-195.11438,-75.364494
+Paige AI,3,Unknown,Biotech,81.0,-195.11438,-75.364494
+EbenBuild,3,Germany,Health & Social Care,12.0,-195.11438,-75.364494
+Dexter,3,Germany,Financial Services,5.0,-195.11438,-75.364494
+HughGrants,3,Sweden,AI model,1.0,-195.11438,-75.364494
+Skylab,3,Germany,ICT,1.0,-195.11438,-75.364494
+Prognostix AB,3,Sweden,R&D,0.1,-195.11438,-75.364494
+SpaceX,4,United States,Cloud Provider,1480000.0,-21.402464,-16.256607
+Cisco,4,United States,Unknown,465000.0,-21.939209,1.3675897
+Abridge,4,United States,Health & Social Care,5300.0,-45.22261,-16.772621
+Hugging Face,4,United States,Hardware,4500.0,-44.854813,12.762316
+Doctolib,4,France,Health & Social Care,3600.0,-44.664806,-7.883946
+Ambiance Healthcare,4,United States,Health & Social Care,1400.0,-49.52453,-24.230587
+WhiteFiber,4,United States,Cloud Provider,1060.0,-27.520536,-17.542654
+Corti,4,Danemark,Health & Social Care,300.0,-51.45057,-14.563115
+Nabla,4,France,AI model,120.0,-52.550995,-32.115612
+Doubleword,4,United Kingdom,AI model,27.0,-52.31242,15.070698
+Altavo GmbH,4,Germany,AI model,10.0,-108.034645,6.7471333

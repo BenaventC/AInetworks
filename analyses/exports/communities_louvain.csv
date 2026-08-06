@@ -1,0 +1,96 @@
+actor,community,country,sector,ranking_score
+20face,0,Netherlands,Health & Social Care,8.0
+3ive AI,1,Germany,ICT,5.0
+4.screen,2,Germany,Transport & Mobility,42.0
+AI Medical Technology,3,Sweden,AI model,1.0
+Google,4,United States,AI model,4560000.0
+Alphabet Inc.,4,United States,Cloud Provider,4120000.0
+Apple,4,United States,ICT,4000000.0
+Microsoft,4,United States,Cloud Provider,3450000.0
+Amazon,4,United States,Unknown,2900000.0
+Samsung Electronics,4,South Korea,Hardware,1000300.0
+YouTube,4,United States,Media & Entertainment,400000.0
+Alibaba,4,China,Cloud Provider,282750.0
+Shopify,4,Canada,Retail & E-commerce,160000.0
+Figure AI,4,United States,Robotics,39000.0
+Boston Dynamics,4,United States,Robotics,20000.0
+Cognex,4,United States,Computer Vision,9600.0
+Prophesee,4,United States,Computer Vision,130.0
+Altavo GmbH,5,Germany,AI model,10.0
+Amberscript,6,Netherlands,AI model,10.0
+Art Recognition,7,Switzerland,ICT,50.0
+Owkin,8,France,AI model,1000.0
+BenevolentAI,8,United Kingdom,AI model,13.0
+PharmAI,8,Germany,Biotech,5.0
+Celonis,9,Germany,ICT,12000.0
+DentalMonitoring,10,France,AI model,1200.0
+Dexter,11,Germany,Financial Services,5.0
+EbenBuild,12,Germany,Health & Social Care,12.0
+Gleamer,13,Unknown,AI model,230.0
+Harvey,14,United States,Professional Services,11000.0
+HughGrants,15,Sweden,AI model,1.0
+Job&Talent,16,Spain,ICT,1500.0
+ManoMano,17,France,Retail & E-commerce,2600.0
+OLLAMA,18,Unknown,AI model,88.0
+Oxford Nanopore Technologies,19,United Kingdom,AI model,1440.0
+Paige AI,20,Unknown,Biotech,81.0
+Prognostix AB,21,Sweden,R&D,0.1
+Meta,22,United States,AI model,1503000.0
+ByteDance,22,China,Media & Entertainment,550000.0
+Adobe,22,United States,ICT,252800.0
+OpenAI,22,United States,Unknown,157000.0
+Ant Group,22,China,Financial Services,103000.0
+Anysphere,22,United States,AI model,60000.0
+DeepSeek,22,China,AI model,60000.0
+GitHub,22,United States,AI model,35000.0
+Kuaishou,22,China,AI model,26000.0
+Cohere,22,Canada,AI model,20000.0
+Mistral AI,22,France,AI model,11700.0
+Synthesia,22,United Kingdom,AI model,4000.0
+AMI labs,22,France,AI model,3500.0
+Black Forest Labs,22,Germany,AI model,3250.0
+Sakana AI,22,Japan,AI model,2700.0
+Aleph Alpha,22,Germany,AI model,2000.0
+SpaceX,23,United States,Cloud Provider,1480000.0
+AWS,23,United States,Hardware,1200000.0
+Cisco,23,United States,Unknown,465000.0
+Oracle,23,United States,Cloud Provider,408000.0
+Palantir,23,United States,Defence,318020.0
+IBM,23,United States,AI model,213000.0
+Salesforce,23,United States,Professional Services,180000.0
+Cloudflare,23,United States,Cloud Provider,103500.0
+Cognition AI,23,United States,Professional Services,26000.0
+Abridge,23,United States,Health & Social Care,5300.0
+Hugging Face,23,United States,Hardware,4500.0
+Doctolib,23,France,Health & Social Care,3600.0
+DeepL,23,Germany,ICT,2000.0
+Ambiance Healthcare,23,United States,Health & Social Care,1400.0
+WhiteFiber,23,United States,Cloud Provider,1060.0
+Corti,23,Danemark,Health & Social Care,300.0
+Comand AI,23,France,AI model,124.0
+Nabla,23,France,AI model,120.0
+Doubleword,23,United Kingdom,AI model,27.0
+Scale AI,24,United States,Data,29000.0
+Semrush,25,Unknown,Data,1960.0
+Skylab,26,Germany,ICT,1.0
+SoftBank Group,27,Japan,Retail & E-commerce,27000.0
+UiPath,27,United States,ICT,6430.0
+Weibo,27,China,Media & Entertainment,1900.0
+DarwinAI,27,Canada,ICT,50.0
+Tempus AI,28,United States,Biotech,8490.0
+Volta medical,29,France,AI model,90.0
+Nvidia,30,United States,Hardware,5000000.0
+Broadcom,30,United States,Hardware,1835000.0
+Tesla,30,United States,Energy & Utilities,1180000.0
+AMD,30,United States,Hardware,794000.0
+Intel,30,United States,Hardware,508000.0
+ARM Holdings,30,United Kingdom,Hardware,253350.0
+Qualcomm,30,United States,Hardware,172240.0
+Cerebras,30,United States,Hardware,18000.0
+Wayve,30,United Kingdom,ICT,8600.0
+Mobileye,30,Israel,Computer Vision,6700.0
+Ineffable Intelligence,30,United Kingdom,AI model,5100.0
+World Labs,30,United States,AI model,5000.0
+PolyAI,30,United Kingdom,AI model,750.0
+Arago,30,France,Hardware,70.0
+Y combinator,31,United States,Unknown,600000.0

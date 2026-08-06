@@ -1,5 +1,13 @@
 # AI Networks
 
+<p align="center">
+	<a href="analyses/exports/competition_map_2d_kmeans.html">
+		<img src="analyses/exports/competition_map_2d.png" alt="Carte concurrentielle IA" width="100%" />
+	</a>
+</p>
+
+<p align="center"><em>Carte concurrentielle 2D des acteurs IA (cliquer pour ouvrir la version interactive).</em></p>
+
 Ce dépôt rassemble un projet d’exploration des acteurs de l’IA, leurs partenariats, leurs secteurs, ainsi que des analyses et exports associés.
 
 ## Objectif

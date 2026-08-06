@@ -1,208 +1,227 @@
 sector,nombre_entreprises,annee_creation_min,annee_creation_max,annee_creation_moyenne,capitalisation_millions_totale,capitalisation_millions_moyenne,nombre_non_validees,nombre_validees_partiellement,nombre_validees,taux_validees_partiellement_pct,taux_validees_pct
-ICT,374,1976.0,2024.0,2017.6,4801993.2,12839.6,374,0,0,0.0,0.0
-Cross Industry,100,1995.0,2023.0,2012.2,4120770.0,41207.7,100,0,0,0.0,0.0
-"ICT, Operations",57,,,,0.0,0.0,57,0,0,0.0,0.0
-"Cross Industry, ICT",52,,,,0.0,0.0,52,0,0,0.0,0.0
-"ICT, R&D",44,2016.0,2023.0,2020.7,12470.0,283.4,44,0,0,0.0,0.0
-"ICT, Manufacturing, Operations",35,,,,0.0,0.0,35,0,0,0.0,0.0
-"Cross Industry, ICT, Operations",35,,,,0.0,0.0,35,0,0,0.0,0.0
-Operations,29,,,,1.0,0.0,29,0,0,0.0,0.0
-"ICT, Manufacturing",29,2005.0,2024.0,2017.3,11375.0,392.2,29,0,0,0.0,0.0
-"ICT, IT & Security",23,,,,0.0,0.0,23,0,0,0.0,0.0
-R&D,23,,,,0.0,0.0,23,0,0,0.0,0.0
-"Manufacturing, Operations",19,,,,0.0,0.0,19,0,0,0.0,0.0
-"ICT, Marketing",19,,,,0.0,0.0,19,0,0,0.0,0.0
-"ICT, Health & Social Care",18,,,,0.0,0.0,18,0,0,0.0,0.0
-"ICT, Sales",16,,,,0.0,0.0,16,0,0,0.0,0.0
-"ICT, Transport & Mobility",15,2017.0,2017.0,2017.0,1468.0,97.9,15,0,0,0.0,0.0
-Transport & Mobility,14,2002.0,2013.0,2009.1,0.0,0.0,14,0,0,0.0,0.0
-"Cross Industry, ICT, Sales",13,,,,0.0,0.0,13,0,0,0.0,0.0
-Retail & E-commerce,13,1998.0,2015.0,2008.9,0.0,0.0,13,0,0,0.0,0.0
-"Hardware, ICT, Manufacturing",13,2016.0,2021.0,2018.5,4000.0,307.7,13,0,0,0.0,0.0
-"Cross Industry, ICT, R&D",12,,,,0.0,0.0,12,0,0,0.0,0.0
-"Cross Industry, Operations",12,,,,0.0,0.0,12,0,0,0.0,0.0
-"ICT, Media & Entertainment",11,,,,564.0,51.3,11,0,0,0.0,0.0
-"Cross Industry, ICT, Marketing",11,,,,0.0,0.0,11,0,0,0.0,0.0
-"Cross Industry, AI model, ICT",11,,,,0.0,0.0,11,0,0,0.0,0.0
-"ICT, Energy & Utilities, Operations",11,2022.0,2022.0,2022.0,0.3,0.0,11,0,0,0.0,0.0
-"Cross Industry, ICT, IT & Security",10,,,,0.0,0.0,10,0,0,0.0,0.0
-"ICT, Education",10,,,,0.0,0.0,10,0,0,0.0,0.0
-"ICT, Energy & Utilities",10,,,,0.0,0.0,10,0,0,0.0,0.0
-"ICT, Transport & Mobility, Operations",10,,,,0.0,0.0,10,0,0,0.0,0.0
-Media & Entertainment,10,1903.0,2021.0,1995.0,330.0,33.0,10,0,0,0.0,0.0
-"Transport & Mobility, Operations",9,,,,0.0,0.0,9,0,0,0.0,0.0
-"ICT, Retail & E-commerce, Operations",9,,,,0.0,0.0,9,0,0,0.0,0.0
-"ICT, Retail & E-commerce",9,,,,0.0,0.0,9,0,0,0.0,0.0
-"ICT, Financial Services",9,2014.0,2014.0,2014.0,500.0,55.6,9,0,0,0.0,0.0
-Manufacturing,8,,,,0.0,0.0,8,0,0,0.0,0.0
-Sales,8,,,,0.0,0.0,8,0,0,0.0,0.0
-"ICT, Public Sector & Aerospace",8,,,,0.0,0.0,8,0,0,0.0,0.0
-"ICT, Manufacturing, Transport & Mobility",8,,,,0.0,0.0,8,0,0,0.0,0.0
-"Hardware, ICT",8,2003.0,2021.0,2012.0,1626500.0,203312.5,8,0,0,0.0,0.0
-"Energy & Utilities, Operations",7,,,,0.0,0.0,7,0,0,0.0,0.0
-"ICT, Manufacturing, R&D",7,,,,0.0,0.0,7,0,0,0.0,0.0
-"AI model, ICT",7,2004.0,2023.0,2017.8,2000.0,285.7,7,0,0,0.0,0.0
-"ICT, Transport & Mobility, R&D",6,,,,0.0,0.0,6,0,0,0.0,0.0
-"ICT, Health & Social Care, R&D",6,,,,0.0,0.0,6,0,0,0.0,0.0
-"Cross Industry, ICT, Health & Social Care",6,,,,0.0,0.0,6,0,0,0.0,0.0
-"ICT, Real Estate Activities",6,,,,0.0,0.0,6,0,0,0.0,0.0
-Public Sector & Aerospace,5,,,,0.0,0.0,5,0,0,0.0,0.0
-"ICT, Construction, Operations",5,,,,0.0,0.0,5,0,0,0.0,0.0
-"ICT, Health & Social Care, Operations",5,,,,0.0,0.0,5,0,0,0.0,0.0
-"ICT, Retail & E-commerce, Sales",5,,,,0.0,0.0,5,0,0,0.0,0.0
-Energy & Utilities,5,,,,0.0,0.0,5,0,0,0.0,0.0
-"Cross Industry, R&D",4,,,,0.0,0.0,4,0,0,0.0,0.0
-Health & Social Care,4,,,,0.0,0.0,4,0,0,0.0,0.0
-Education,4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Construction",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Agriculture & Forestry",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Media & Entertainment, Operations",4,,,,0.0,0.0,4,0,0,0.0,0.0
-Construction,4,,,,0.0,0.0,4,0,0,0.0,0.0
-"Cross Industry, IT & Security",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"Cross Industry, ICT, Professional Services",4,,,,0.0,0.0,4,0,0,0.0,0.0
-Marketing,4,,,,0.0,0.0,4,0,0,0.0,0.0
-"Health & Social Care, Operations",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Financial Services, Transport & Mobility",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Professional Services, R&D",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Sales, Marketing",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"Manufacturing, R&D",4,,,,0.0,0.0,4,0,0,0.0,0.0
-IT & Security,4,,,,0.0,0.0,4,0,0,0.0,0.0
-"ICT, Real Estate Activities, Operations",4,,,,0.0,0.0,4,0,0,0.0,0.0
-"Cross Industry, Hardware, ICT",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Hardware, ICT, Health & Social Care",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Cross Industry, ICT, Retail & E-commerce",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Cross Industry, ICT, Manufacturing",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Energy & Utilities, R&D",3,,,,0.0,0.0,3,0,0,0.0,0.0
-Financial Services,3,2010.0,2014.0,2012.0,0.0,0.0,3,0,0,0.0,0.0
-"ICT, Operations, Sales",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"ICT, Operations, IT & Security",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"ICT, Public Sector & Aerospace, Operations",3,,,,0.0,0.0,3,0,0,0.0,0.0
-Real Estate Activities,3,,,,0.0,0.0,3,0,0,0.0,0.0
-"ICT, Professional Services",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Manufacturing, Transport & Mobility, Operations",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Transport & Mobility, R&D",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Retail & E-commerce, Marketing",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"ICT, Media & Entertainment, R&D",3,,,,0.0,0.0,3,0,0,0.0,0.0
-"Media & Entertainment, Marketing",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, R&D, IT & Security",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Real Estate Activities, Operations",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"R&D, Marketing",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Energy & Utilities, Real Estate Activities",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Cross Industry, ICT, Media & Entertainment",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Hardware, Manufacturing, Operations",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Cross Industry, Sales",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Cross Industry, ICT, Public Sector & Aerospace",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"AI model, ICT, Retail & E-commerce",2,2023.0,2023.0,2023.0,0.0,0.0,2,0,0,0.0,0.0
-"Cross Industry, Marketing",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"AI model, ICT, Operations",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Cloud Provider, ICT, Energy & Utilities",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"AI model, ICT, Manufacturing",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"AI model, ICT, IT & Security",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Manufacturing, Retail & E-commerce, Operations",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Manufacturing, Energy & Utilities",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Manufacturing, Operations, Sales",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Retail & E-commerce, IT & Security",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Financial Services, Operations",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Manufacturing, Energy & Utilities",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Manufacturing, Professional Services",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Media & Entertainment, Marketing",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Operations, R&D",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Manufacturing, Education",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Energy & Utilities, R&D",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"ICT, Health & Social Care, IT & Security",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Cloud Provider, ICT",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"AI model, ICT, R&D",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"Cross Industry, Education",2,,,,0.0,0.0,2,0,0,0.0,0.0
-"AI model, ICT, Professional Services",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Agriculture & Forestry, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"AI model, ICT, Real Estate Activities",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"AI model, Hardware, ICT",1,2023.0,2023.0,2023.0,0.0,0.0,1,0,0,0.0,0.0
-"AI model, ICT, Financial Services",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"AI model, ICT, Transport & Mobility",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Financial Services, Retail & E-commerce, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Public Sector & Aerospace",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Operations, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Media & Entertainment",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, R&D, Marketing",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Education, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Energy & Utilities, Real Estate Activities, Construction",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Retail & E-commerce, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cloud Provider, Transport & Mobility, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Hardware",1,,,,1627000.0,1627000.0,1,0,0,0.0,0.0
-"Cross Industry, Hardware, Cloud Provider",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Cloud Provider, ICT",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cloud Provider, Retail & E-commerce",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cloud Provider, ICT, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Construction, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cloud Provider, ICT, Retail & E-commerce",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, ICT, Transport & Mobility",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Construction",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Education, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, ICT, Construction",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Manufacturing, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cross Industry, Manufacturing, Media & Entertainment",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Cloud Provider, ICT, Financial Services",1,1999.0,1999.0,1999.0,282750.0,282750.0,1,0,0,0.0,0.0
-"Health & Social Care, Financial Services",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Hardware, Manufacturing, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Hardware, Manufacturing",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Hardware, Manufacturing, Energy & Utilities",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Hardware, ICT, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Energy & Utilities, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Hardware, Financial Services",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Financial Services, Transport & Mobility, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Energy & Utilities, Real Estate Activities, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Manufacturing, Public Sector & Aerospace",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Public Sector & Aerospace, Energy & Utilities",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Public Sector & Aerospace, Media & Entertainment",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Public Sector & Aerospace, Education",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Professional Services, Energy & Utilities",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Professional Services, Public Sector & Aerospace",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Professional Services, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Health & Social Care, Financial Services, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Energy & Utilities, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Education, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Construction, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Health & Social Care, Media & Entertainment",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Health & Social Care, Manufacturing, Transport & Mobility",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Health & Social Care, Manufacturing, Energy & Utilities",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Agriculture & Forestry, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Education, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Media & Entertainment, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Financial Services, Public Sector & Aerospace",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Financial Services, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Financial Services, Retail & E-commerce",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Health & Social Care, Professional Services",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Health & Social Care, Public Sector & Aerospace",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Health & Social Care, Transport & Mobility",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, R&D, Marketing",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Public Sector & Aerospace, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Public Sector & Aerospace, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Energy & Utilities, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Transport & Mobility, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Transport & Mobility, Public Sector & Aerospace",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Operations, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Retail & E-commerce, Media & Entertainment",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Retail & E-commerce, Marketing",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Retail & E-commerce, Energy & Utilities",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, R&D, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Transport & Mobility, Construction",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"ICT, Transport & Mobility, Media & Entertainment",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Agriculture & Forestry",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Construction, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"R&D, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Public Sector & Aerospace, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Professional Services, Education, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Media & Entertainment, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Transport & Mobility, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Manufacturing, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Media & Entertainment, R&D",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Real Estate Activities, Construction",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Sales, Marketing",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Retail & E-commerce, Operations, Sales",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Retail & E-commerce, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Transport & Mobility, Energy & Utilities, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Transport & Mobility, IT & Security",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Transport & Mobility, Public Sector & Aerospace, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
-"Transport & Mobility, Retail & E-commerce",1,2010.0,2010.0,2010.0,0.0,0.0,1,0,0,0.0,0.0
-"Transport & Mobility, Retail & E-commerce, Operations",1,,,,0.0,0.0,1,0,0,0.0,0.0
+ICT,417,1976.0,2024.0,2015.4,9121925.2,21875.1,0,24,9,5.8,2.2
+Unknown,288,1984.0,2023.0,2010.7,4298575.0,14925.6,0,24,5,8.3,1.7
+"ICT, Manufacturing & Operations",160,2017.0,2023.0,2020.0,4871.0,30.4,0,5,0,3.1,0.0
+AI model,70,2016.0,2025.0,2022.0,7228.0,103.3,0,2,6,2.9,8.6
+Manufacturing & Operations,69,2016.0,2016.0,2016.0,1001.0,14.5,0,1,1,1.4,1.4
+"ICT, Sales & Marketing",67,2015.0,2018.0,2016.5,641.0,9.6,0,1,0,1.5,0.0
+"ICT, R&D",54,2016.0,2023.0,2019.8,12470.0,230.9,0,2,1,3.7,1.9
+"ICT, IT & Security",32,,,,0.0,0.0,0,0,0,0.0,0.0
+R&D,28,,,,0.0,0.0,0,1,0,3.6,0.0
+"Health & Social Care, ICT",23,,,,0.0,0.0,0,1,0,4.3,0.0
+"ICT, Manufacturing & Operations, Transport & Mobility",20,2014.0,2014.0,2014.0,825.0,41.2,0,0,2,0.0,10.0
+"AI model, ICT",20,2004.0,2025.0,2020.3,91200.0,4560.0,0,2,4,10.0,20.0
+Sales & Marketing,18,2018.0,2018.0,2018.0,163.0,9.1,0,0,0,0.0,0.0
+"ICT, Transport & Mobility",16,2017.0,2017.0,2017.0,1468.0,91.8,0,0,0,0.0,0.0
+Retail & E-commerce,15,1998.0,2015.0,2008.9,162600.0,10840.0,0,0,2,0.0,13.3
+"ICT, Media & Entertainment",14,2021.0,2021.0,2021.0,564.0,40.3,0,0,1,0.0,7.1
+"Hardware, ICT, Manufacturing & Operations",14,1961.0,2021.0,2003.2,1835000.0,131071.4,0,3,0,21.4,0.0
+"ICT, Retail & E-commerce",14,2012.0,2019.0,2015.5,0.0,0.0,0,0,1,0.0,7.1
+Transport & Mobility,14,2002.0,2013.0,2009.1,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, ICT, Manufacturing & Operations",13,2022.0,2022.0,2022.0,0.3,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, Transport & Mobility",12,,,,0.0,0.0,0,0,0,0.0,0.0
+"Hardware, ICT",12,2006.0,2021.0,2014.3,1344400.0,112033.3,0,2,2,16.7,16.7
+"Aerospace & Defence, ICT, Public Sector",11,,,,0.0,0.0,0,2,0,18.2,0.0
+"Energy & Utilities, ICT",11,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, Manufacturing & Operations",10,,,,0.0,0.0,0,0,0,0.0,0.0
+"Education, ICT",10,,,,0.0,0.0,0,1,0,10.0,0.0
+"ICT, Manufacturing & Operations, Retail & E-commerce",10,2019.0,2019.0,2019.0,0.0,0.0,0,1,0,10.0,0.0
+Media & Entertainment,10,2005.0,2021.0,2010.3,952230.0,95223.0,0,2,2,20.0,20.0
+"Construction, ICT",9,2003.0,2020.0,2012.0,524.6,58.3,0,2,0,22.2,0.0
+IT & Security,9,2020.0,2020.0,2020.0,0.0,0.0,0,1,0,11.1,0.0
+"ICT, Manufacturing & Operations, R&D",9,2019.0,2019.0,2019.0,0.0,0.0,0,1,0,11.1,0.0
+"Financial Services, ICT",9,2014.0,2014.0,2014.0,500.0,55.6,0,0,0,0.0,0.0
+"ICT, Retail & E-commerce, Sales & Marketing",8,2021.0,2021.0,2021.0,1.0,0.1,0,2,1,25.0,12.5
+"ICT, Professional Services",8,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, R&D, Transport & Mobility",7,,,,0.0,0.0,0,1,1,14.3,14.3
+Health & Social Care,7,2019.0,2020.0,2019.5,5000.0,714.3,0,1,2,14.3,28.6
+Education,7,,,,20.0,2.9,0,0,1,0.0,14.3
+"Health & Social Care, ICT, R&D",6,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, Health & Social Care",6,2013.0,2026.0,2018.0,2670.0,445.0,0,1,5,16.7,83.3
+"Aerospace & Defence, Public Sector",6,,,,0.0,0.0,0,1,0,16.7,0.0
+"ICT, Real Estate Activities",6,,,,0.0,0.0,0,0,0,0.0,0.0
+Construction,5,2024.0,2024.0,2024.0,10.0,2.0,0,0,1,0.0,20.0
+"Construction, ICT, Manufacturing & Operations",5,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, ICT, Manufacturing & Operations",5,,,,0.0,0.0,0,0,0,0.0,0.0
+Hardware,5,1969.0,1990.0,1978.2,2220500.0,444100.0,0,1,4,20.0,80.0
+"ICT, Manufacturing & Operations, Professional Services",5,2005.0,2019.0,2011.7,18430.0,3686.0,0,2,1,40.0,20.0
+"Manufacturing & Operations, R&D",5,,,,0.0,0.0,0,0,0,0.0,0.0
+Energy & Utilities,5,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, Manufacturing & Operations",4,2023.0,2023.0,2023.0,0.0,0.0,0,1,0,25.0,0.0
+"AI model, R&D",4,2014.0,2026.0,2020.5,9115.0,2278.8,0,2,2,50.0,50.0
+"Financial Services, ICT, Transport & Mobility",4,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, Manufacturing & Operations",4,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Manufacturing & Operations, Sales & Marketing",4,2023.0,2023.0,2023.0,11.1,2.8,0,1,0,25.0,0.0
+"ICT, Professional Services, R&D",4,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Manufacturing & Operations, Real Estate Activities",4,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, Retail & E-commerce",4,2020.0,2020.0,2020.0,0.5,0.1,0,0,1,0.0,25.0
+"R&D, Transport & Mobility",4,2017.0,2017.0,2017.0,0.0,0.0,0,0,1,0.0,25.0
+"R&D, Sales & Marketing",4,,,,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, ICT",4,2024.0,2024.0,2024.0,1060.0,265.0,0,1,1,25.0,25.0
+"Agriculture & Forestry, ICT",4,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Manufacturing & Operations, Media & Entertainment",4,,,,0.0,0.0,0,0,0,0.0,0.0
+Real Estate Activities,3,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Media & Entertainment, R&D",3,,,,0.0,0.0,0,0,0,0.0,0.0
+"Media & Entertainment, Sales & Marketing",3,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, Sales & Marketing",3,,,,0.0,0.0,0,0,0,0.0,0.0
+"Hardware, Manufacturing & Operations",3,2022.0,2022.0,2022.0,0.0,0.0,0,1,0,33.3,0.0
+"Retail & E-commerce, Sales & Marketing",3,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, IT & Security, Manufacturing & Operations",3,,,,0.0,0.0,0,0,0,0.0,0.0
+"Hardware, Health & Social Care, ICT",3,,,,0.0,0.0,0,1,0,33.3,0.0
+"Energy & Utilities, R&D",3,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, ICT, Manufacturing & Operations, Public Sector",3,2021.0,2021.0,2021.0,0.0,0.0,0,1,0,33.3,0.0
+"ICT, R&D, Sales & Marketing",2,,,,0.0,0.0,0,0,0,0.0,0.0
+Financial Services,2,2010.0,2010.0,2010.0,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, ICT, Manufacturing & Operations",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Media & Entertainment, Sales & Marketing",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, IT & Security, R&D",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, IT & Security, Retail & E-commerce",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, ICT, IT & Security",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, Real Estate Activities",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, ICT, R&D",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, IT & Security",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, Retail & E-commerce",2,2023.0,2023.0,2023.0,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, Energy & Utilities, ICT",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, Sales & Marketing",2,2006.0,2025.0,2015.5,0.0,0.0,0,2,0,100.0,0.0
+"Agriculture & Forestry, Manufacturing & Operations",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, Hardware",2,2024.0,2024.0,2024.0,14000.0,7000.0,0,0,1,0.0,50.0
+"Construction, Manufacturing & Operations",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, R&D",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, Computer vision",2,2017.0,2021.0,2019.0,14300.0,7150.0,0,0,2,0.0,100.0
+"AI model, Hardware, ICT",2,2022.0,2024.0,2023.0,21000.0,10500.0,0,1,1,50.0,50.0
+"AI model, Inference",2,2021.0,2021.0,2021.0,0.0,0.0,0,2,0,100.0,0.0
+"AI model, Manufacturing & Operations",2,2017.0,2025.0,2021.0,50.0,25.0,0,0,2,0.0,100.0
+"Education, R&D",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"Education, ICT, Manufacturing & Operations",2,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, Real Estate Activities",2,,,,0.0,0.0,0,0,0,0.0,0.0
+Robotics,2,2022.0,2022.0,2022.0,39000.0,19500.0,0,0,1,0.0,50.0
+"AI model, Computer Vision",1,2011.0,2011.0,2011.0,26000.0,26000.0,0,0,1,0.0,100.0
+"AI model, Biotech, Oncology",1,2020.0,2020.0,2020.0,0.0,0.0,0,0,1,0.0,100.0
+"Energy & Utilities, Hardware, Manufacturing & Operations",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Education, Manufacturing & Operations, Professional Services",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Education, ICT, IT & Security",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Education, ICT, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Data, Annotation",1,2016.0,2016.0,2016.0,29000.0,29000.0,0,1,0,100.0,0.0
+"Data, Professional Services",1,2022.0,2022.0,2022.0,0.0,0.0,0,0,1,0.0,100.0
+"Data, Sales & Marketing",1,,,,1960.0,1960.0,0,1,0,100.0,0.0
+"Defence, Professional Services, AI model",1,2003.0,2003.0,2003.0,318020.0,318020.0,0,0,1,0.0,100.0
+"Construction, Real Estate Activities",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Construction, Sales & Marketing",1,2015.0,2015.0,2015.0,0.0,0.0,0,1,0,100.0,0.0
+"Cloud Provider, Media & Entertainment, Advertising",1,2015.0,2015.0,2015.0,4120000.0,4120000.0,0,0,1,0.0,100.0
+"Computer Vision, AI model",1,1987.0,1987.0,1987.0,9600.0,9600.0,0,0,1,0.0,100.0
+"Computer Vision, Transport & Mobility, Hardware",1,1999.0,1999.0,1999.0,6700.0,6700.0,0,1,0,100.0,0.0
+"Computer Vision, AI model, Robotics",1,,,,0.0,0.0,0,0,1,0.0,100.0
+"Construction, Energy & Utilities, Real Estate Activities",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Construction, ICT, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, ICT, Sales & Marketing",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, ICT, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, ICT, IT & Security",1,2009.0,2009.0,2009.0,95960.0,95960.0,0,0,1,0.0,100.0
+"Cloud Provider, Manufacturing & Operations, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Cloud Provider, Professional Services, Database",1,1977.0,1977.0,1977.0,408000.0,408000.0,0,0,1,0.0,100.0
+"Cloud Provider, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Agriculture & Forestry, ICT, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, Manufacturing & Operations, Public Sector, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Biotech, AI model, Oncology",1,,,,0.0,0.0,0,1,0,100.0,0.0
+"Biotech, AI model",1,2019.0,2019.0,2019.0,0.0,0.0,0,1,0,100.0,0.0
+"Biotech, Health & Social Care, Oncology",1,,,,81.0,81.0,0,0,1,0.0,100.0
+"Biotech, Oncology",1,2012.0,2012.0,2012.0,0.0,0.0,0,1,0,100.0,0.0
+"Cloud Provider, Data, Aerospace",1,2002.0,2002.0,2002.0,1480000.0,1480000.0,0,0,1,0.0,100.0
+"Cloud Provider, AI model, Professional Services",1,1975.0,1975.0,1975.0,3450000.0,3450000.0,0,0,1,0.0,100.0
+"Cloud Provider, Energy & Utilities",1,,,,0.0,0.0,0,0,1,0.0,100.0
+"Cloud Provider, Financial Services, Retail & E-commerce",1,1999.0,1999.0,1999.0,282750.0,282750.0,0,0,1,0.0,100.0
+"AI model, Sales & Marketing, Voice",1,2018.0,2018.0,2018.0,750.0,750.0,0,0,1,0.0,100.0
+"AI model, R&D, Computer Vision",1,2024.0,2024.0,2024.0,3250.0,3250.0,0,0,1,0.0,100.0
+"Aerospace & Defence, Energy & Utilities, ICT, Public Sector",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, Data",1,2017.0,2017.0,2017.0,0.0,0.0,0,0,1,0.0,100.0
+"AI model, R&D, Biotech",1,2013.0,2013.0,2013.0,13.0,13.0,0,0,1,0.0,100.0
+"Aerospace & Defence, ICT, Media & Entertainment, Public Sector",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, Financial Services, ICT, Public Sector",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, Health & Social Care, ICT, Public Sector",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, ICT, Public Sector, R&D",1,2018.0,2018.0,2018.0,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, ICT, Public Sector, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+Biotech,1,2015.0,2015.0,2015.0,8490.0,8490.0,0,0,1,0.0,100.0
+"Aerospace & Defence, ICT, Professional Services, Public Sector",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, IT & Security, Public Sector",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Aerospace & Defence, Manufacturing & Operations, Public Sector",1,,,,0.0,0.0,0,1,0,100.0,0.0
+"AI model, Code, Saas",1,2022.0,2022.0,2022.0,60000.0,60000.0,0,0,1,0.0,100.0
+"AI model, Cloud Provider, ICT",1,2019.0,2019.0,2019.0,20000.0,20000.0,0,0,1,0.0,100.0
+"AI model, Health & Social Care, dental",1,2017.0,2017.0,2017.0,1200.0,1200.0,0,0,1,0.0,100.0
+"AI model, Health & Social Care, R&D",1,2019.0,2019.0,2019.0,180.0,180.0,0,0,1,0.0,100.0
+"AI model, Health & Social Care, ICT",1,2008.0,2008.0,2008.0,0.0,0.0,0,1,0,100.0,0.0
+"AI model, Health & Social Care, Cardio",1,2016.0,2016.0,2016.0,0.0,0.0,0,0,1,0.0,100.0
+"AI model, Hardware, Inference Server",1,2023.0,2023.0,2023.0,0.0,0.0,0,1,0,100.0,0.0
+"AI model, Computer Vision, Health & Social Care",1,2021.0,2021.0,2021.0,0.0,0.0,0,0,0,0.0,0.0
+"AI model, Financial Services, ICT",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, Professional Services",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, ICT, Real Estate Activities",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"AI model, Media & Entertainment, Advertising",1,2021.0,2021.0,2021.0,1503000.0,1503000.0,0,0,1,0.0,100.0
+"AI model, Media & Entertainment",1,2002.0,2002.0,2002.0,345.0,345.0,0,1,0,100.0,0.0
+"AI model, Professional Services",1,2008.0,2008.0,2008.0,35000.0,35000.0,0,0,1,0.0,100.0
+"AI model, Professional Services, HRM",1,2020.0,2020.0,2020.0,2.0,2.0,0,0,1,0.0,100.0
+"AI model, Professional Services, Legal",1,2017.0,2017.0,2017.0,0.0,0.0,0,0,0,0.0,0.0
+"AI model, Public Sector",1,,,,2700.0,2700.0,0,0,1,0.0,100.0
+"AI model, Hardware",1,2024.0,2024.0,2024.0,11000.0,11000.0,0,0,1,0.0,100.0
+"AI model, Aerospace & Defence",1,2023.0,2023.0,2023.0,124.0,124.0,0,0,1,0.0,100.0
+"ICT, IT & Security, Media & Entertainment",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Financial Services",1,2017.0,2017.0,2017.0,50.0,50.0,0,0,1,0.0,100.0
+"Health & Social Care, Media & Entertainment",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, AI model",1,2018.0,2018.0,2018.0,5300.0,5300.0,0,0,1,0.0,100.0
+"Health & Social Care, ICT, Professional Services",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, ICT, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Hardware, Photonic",1,2024.0,2024.0,2024.0,70.0,70.0,0,0,1,0.0,100.0
+"Hardware, IT & Security, Manufacturing & Operations",1,,,,0.0,0.0,0,1,0,100.0,0.0
+"Hardware, ICT, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Hardware, GPU",1,2016.0,2016.0,2016.0,18000.0,18000.0,0,0,1,0.0,100.0
+"Energy & Utilities, ICT, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, ICT, Professional Services",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, Health & Social Care, Manufacturing & Operations",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, ICT, IT & Security",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, AI model, ICT",1,2004.0,2004.0,2004.0,103000.0,103000.0,0,0,1,0.0,100.0
+"Energy & Utilities, Transport & Mobility, Robotics",1,2003.0,2003.0,2003.0,1180000.0,1180000.0,0,0,1,0.0,100.0
+"Energy & Utilities, Sales & Marketing",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Energy & Utilities, Manufacturing & Operations, Real Estate Activities",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, Hardware, Transport & Mobility",1,,,,1300.0,1300.0,0,1,0,100.0,0.0
+"Financial Services, Hardware",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, AI model, Professional Services",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, Capital resource",1,,,,110000.0,110000.0,0,0,1,0.0,100.0
+"Financial Services, Health & Social Care",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, Health & Social Care, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, ICT, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, ICT, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, Manufacturing & Operations, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Financial Services, Manufacturing & Operations, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Hardware, AI model, ICT",1,1993.0,1993.0,1993.0,5000000.0,5000000.0,0,0,1,0.0,100.0
+"Hardware, CPU, GPU",1,1969.0,1969.0,1969.0,508000.0,508000.0,0,0,1,0.0,100.0
+"Energy & Utilities, Manufacturing & Operations, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, Manufacturing & Operations, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Health & Social Care, IT & Security",1,2016.0,2016.0,2016.0,8.0,8.0,0,0,1,0.0,100.0
+"Manufacturing & Operations, Media & Entertainment",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, R&D, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, R&D, Biotech",1,,,,0.0,0.0,0,0,1,0.0,100.0
+"Manufacturing & Operations, Aerospace, Aerospace & Defence",1,,,,0.0,0.0,0,1,0,100.0,0.0
+"IT & Security, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Sales & Marketing, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Media & Entertainment, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Media & Entertainment, Transport & Mobility",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"ICT, Professional Services, Sales & Marketing",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, AI model",1,2017.0,2017.0,2017.0,0.0,0.0,0,1,0,100.0,0.0
+"IT & Security, Manufacturing & Operations",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"IT & Security, Retail & E-commerce",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, Retail & E-commerce, Transport & Mobility",1,,,,0.0,0.0,0,1,0,100.0,0.0
+"R&D, Biotech",1,,,,0.0,0.0,0,1,0,100.0,0.0
+"R&D, AI model",1,1985.0,1985.0,1985.0,0.0,0.0,0,1,0,100.0,0.0
+"Professional Services, Sales & Marketing, CRM",1,1999.0,1999.0,1999.0,180000.0,180000.0,0,0,1,0.0,100.0
+"Professional Services, Retail & E-commerce",1,,,,1350.0,1350.0,0,1,0,100.0,0.0
+"Professional Services, AI model, Code",1,2023.0,2023.0,2023.0,26000.0,26000.0,0,0,1,0.0,100.0
+"Professional Services, Legal tech",1,2022.0,2022.0,2022.0,11000.0,11000.0,0,0,1,0.0,100.0
+Professional Services,1,,,,0.0,0.0,0,1,0,100.0,0.0
+"Media & Entertainment, R&D",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Manufacturing & Operations, Retail & E-commerce, Sales & Marketing",1,,,,0.0,0.0,0,0,0,0.0,0.0
+"Retail & E-commerce, Transport & Mobility",1,2010.0,2010.0,2010.0,0.0,0.0,0,0,0,0.0,0.0
+"R&D, Biotech, Oncology",1,2023.0,2023.0,2023.0,50.0,50.0,0,0,1,0.0,100.0
+"Retail & E-commerce, Investor",1,1981.0,1981.0,1981.0,27000.0,27000.0,0,1,0,100.0,0.0
+"Robotics, ICT",1,,,,110.0,110.0,0,1,0,100.0,0.0
+"Robotics, AI model",1,1992.0,1992.0,1992.0,20000.0,20000.0,0,0,1,0.0,100.0
+"Transport & Mobility, AI model",1,2016.0,2016.0,2016.0,126000.0,126000.0,0,0,1,0.0,100.0
+"Transport & Mobility, Media & Entertainment",1,2020.0,2020.0,2020.0,0.0,0.0,0,1,0,100.0,0.0
