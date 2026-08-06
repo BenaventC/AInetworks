@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="analyses/exports/competition_map_2d_kmeans.html">
-    <img src="analyses/exports/competition_map_2d.png" alt="AI competition map" width="100%" />
+    <img src="analyses/exports/competition_map_2d.png?v=20260806" alt="AI competition map" width="100%" />
   </a>
 </p>
 
