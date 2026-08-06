@@ -1,39 +1,39 @@
 # AI Networks
 
 <p align="center">
-	<a href="analyses/exports/competition_map_2d_kmeans.html">
-		<img src="analyses/exports/competition_map_2d.png" alt="Carte concurrentielle IA" width="100%" />
-	</a>
+  <a href="analyses/exports/competition_map_2d_kmeans.html">
+    <img src="analyses/exports/competition_map_2d.png" alt="AI competition map" width="100%" />
+  </a>
 </p>
 
-<p align="center"><em>Carte concurrentielle 2D des acteurs IA (cliquer pour ouvrir la version interactive).</em></p>
+<p align="center"><em>2D competition map of AI actors (click to open the interactive version).</em></p>
 
-Ce dépôt rassemble un projet d’exploration des acteurs de l’IA, leurs partenariats, leurs secteurs, ainsi que des analyses et exports associés.
+This repository contains an AI actor exploration project, including company relationships, partnerships, sectors, and analysis exports.
 
-## Objectif
+## Goal
 
-L’objectif est de fournir une base de travail ouverte pour :
+Provide an open working base to:
 
-- cartographier les entreprises et organisations de l’IA,
-- documenter leurs positions concurrrentielles, leurs réseaux de partenariats et relations financières.
-- produire des analyses locales et des exports structurés,
-- permettre une exploration simple via une interface web locale.
+- map AI companies and organizations,
+- document competitive positions, partnership networks, and financial signals,
+- produce local analyses and structured exports,
+- enable simple exploration through a local web interface.
 
-## Contenu du dépôt
+## Repository Content
 
-- application web locale : serveur Express + interface web,
-- données et exports : entreprises, partenariats, analyses,
-- scripts de nettoyage, normalisation et enrichissement,
-- notebooks d’analyse.
+- local web application: Express server and web UI,
+- data and exports: companies, partnerships, analysis outputs,
+- scripts for cleaning, normalization, and enrichment,
+- analysis notebooks.
 
-## Démarrage rapide
+## Quick Start
 
-Prérequis :
+Requirements:
 
 - Node.js 18+
 - npm
 
-### Installation locale
+### Local Installation
 
 ```bash
 git clone https://github.com/BenaventC/AInetworks.git
@@ -41,21 +41,21 @@ cd AInetworks
 npm install
 ```
 
-### Lancement local
+### Run Locally
 
 ```bash
 npm start
 ```
 
-L’application est ensuite accessible sur http://localhost:3000.
+The app is available at http://localhost:3000.
 
-### Utilisation locale
+### Local Usage
 
-1. Ouvrez votre navigateur à l’adresse http://localhost:3000.
-2. La page affiche l’interface locale du projet.
-3. Si vous souhaitez arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
+1. Open http://localhost:3000 in your browser.
+2. Explore the local project interface.
+3. Press Ctrl+C in the terminal to stop the server.
 
-## Structure du projet
+## Project Structure
 
 ```text
 .
@@ -69,124 +69,128 @@ L’application est ensuite accessible sur http://localhost:3000.
 
 ## Analyses
 
-Le dossier `analyses/` contient les notebooks principaux pour explorer la base sous différents angles.
+The `analyses/` folder contains the main notebooks used to explore the database from different perspectives.
 
-### 1. Analyse concurrentielle
+### 1. Competition Analysis
 
-Notebook : `analyses/competition_analysis.ipynb`
+Notebook: `analyses/competition_analysis.ipynb`
 
-Objectif : cartographier les relations entreprise-concurrent et projeter l'espace concurrentiel en 2D.
+Goal: map company-competitor relationships and produce the final community map using:
+- 3D t-SNE geometry for community detection,
+- Louvain communities on a 3D k-NN graph,
+- 2D rendering for interpretability.
 
-Sorties principales (dans `analyses/exports/`) :
+Main outputs in `analyses/exports/`:
 - `competitors_raw.csv`
 - `competitors_long.csv`
 - `competitors_aggregated.csv`
 - `cooccurrence_matrix.csv`
-- `coords_2d.csv`
-- `competition_map_2d.html`
+- `coords_3d.csv`
+- `communities_kmeans_2d.csv`
+- `community_labels_short.csv`
+- `competition_map_2d_kmeans.html`
 
-### 2. Analyse de similarité sémantique
+### 2. Semantic Similarity Analysis
 
-Notebook : `analyses/semantic_similarity_analysis.ipynb`
+Notebook: `analyses/semantic_similarity_analysis.ipynb`
 
-Objectif : mesurer la proximité sémantique entre entreprises à partir des descriptions textuelles, avec embeddings multilingues.
+Goal: measure semantic proximity between companies from textual descriptions using multilingual embeddings.
 
-Filtre principal : entreprises avec valorisation/fonds > 100 et description non vide.
+Main filter: companies with valuation/funding > 100 and a non-empty description.
 
-Sorties principales (dans `analyses/exports/`) :
+Main outputs in `analyses/exports/`:
 - `semantic_raw.csv`
 - `semantic_distance_matrix.csv`
 - `semantic_coords_2d.csv`
 - `semantic_similarity_pairs.csv`
 - `semantic_similarity_map_2d.html`
 
-### 3. Alignement Procruste des deux espaces
+### 3. Procrustes Alignment of Both Spaces
 
-Notebook : `analyses/procrustes_alignment_analysis.ipynb`
+Notebook: `analyses/procrustes_alignment_analysis.ipynb`
 
-Objectif : aligner l'espace concurrentiel et l'espace sémantique sur l'intersection des entreprises communes, puis mesurer les écarts résiduels par entreprise.
+Goal: align competition and semantic spaces on common companies, then measure residual gaps per company.
 
-Sorties principales (dans `analyses/exports/`) :
+Main outputs in `analyses/exports/`:
 - `procrustes_aligned_positions.csv`
 - `procrustes_top_gaps.csv`
 - `procrustes_summary.csv`
 - `procrustes_robust_comparison.csv`
 
-### Ordre recommandé d'exécution
+### Recommended Execution Order
 
 1. `competition_analysis.ipynb`
 2. `semantic_similarity_analysis.ipynb`
 3. `procrustes_alignment_analysis.ipynb`
 
-Cet ordre garantit la présence des fichiers exportés nécessaires aux analyses croisées.
+This order ensures all required exports are available for cross-analysis.
 
-## Méthodologie de constitution du corpus
+## Dataset Construction Methodology
 
-La base de données a été constituée selon un processus itératif en six étapes :
+The database was built through an iterative six-step process.
 
-### 1. Compilation de sources multiples
+### 1. Multi-source Compilation
 
-Le corpus initial provient de la fusion de plusieurs listes d'entreprises de l'IA :
-- **Listes internationales** : Forbes AI 50, CB Insights AI 100, Crunchbase AI startups
-- **Listes nationales et régionales** : AI Startups Europe, Sifted AI 100, listes par pays
-- **Licornes et entreprises à forte capitalisation** : CompaniesMarketCap, données boursières
-- **Sources Wikipedia** : catégories d'entreprises d'IA, pages thématiques
+Initial data was assembled by merging multiple AI company lists:
+- international lists: Forbes AI 50, CB Insights AI 100, Crunchbase AI startups,
+- regional lists: AI Startups Europe, Sifted AI 100, country-level lists,
+- unicorn and high-capitalization sources: CompaniesMarketCap and market data,
+- Wikipedia sources: AI company categories and thematic pages.
 
-### 2. Nettoyage et déduplication
+### 2. Cleaning and Deduplication
 
-Les listes compilées ont été nettoyées par des scripts automatisés :
-- Déduplication des noms d'entreprises (variantes orthographiques, casse, diacritiques)
-- Normalisation des champs géographiques (pays, villes) vers des formes canoniques
-- Harmonisation des noms de partenaires, concurrents et investisseurs
-- Suppression des doublons et consolidation des enregistrements
+Compiled lists were cleaned with automated scripts:
+- company-name deduplication (spelling variants, case, diacritics),
+- normalization of geographic fields (countries, cities),
+- harmonization of partner, competitor, and investor names,
+- duplicate removal and record consolidation.
 
-### 3. Enrichissement automatisé
+### 3. Automated Enrichment
 
-Les champs manquants ont été complétés via GitHub Copilot et ses outils de recherche :
-- Extraction de données structurées depuis Wikipedia, Wikidata
-- Requêtes ciblées sur des sources publiques (sites officiels, bases de données ouvertes)
-- Mapping automatique de la capitalisation boursière et des montants de levée de fonds
-- Remplissage des métadonnées (année de création, secteur, description)
+Missing fields were enriched with GitHub Copilot-assisted research:
+- structured extraction from Wikipedia and Wikidata,
+- targeted queries on public sources,
+- mapping of market capitalization and funding amounts,
+- metadata completion (founded year, sector, description).
 
-### 4. Correction manuelle systématique
+### 4. Systematic Manual Review
 
-Chaque fiche a été révisée manuellement avec l'assistance d'outils IA :
-- Utilisation de Google AI Search pour valider et corriger les informations
-- Application d'un prompt systématique reprenant tous les champs de la base
-- Vérification incidente des incohérences et des données aberrantes
-- Préférence pour `NA` en cas de doute plutôt que des valeurs hypothétiques
+Each profile was manually reviewed with AI-assisted tools:
+- additional verification and correction of key fields,
+- consistency checks and anomaly detection,
+- preference for `NA` when uncertainty remains.
 
-### 5. Révisions itératives des acteurs majeurs
+### 5. Iterative Review of Major Actors
 
-Les 200 premières entreprises (par capitalisation ou montant cumulé de levées de fonds) ont bénéficié de révisions approfondies :
-- Plusieurs passages de vérification et d'enrichissement
-- Mise à jour continue au fil des informations collectées
-- Validation croisée des partenariats et relations concurrentielles
-- Documentation des sources et arbitrage en cas de divergences
+Top companies (by capitalization or cumulative funding) received deeper iterative review:
+- repeated verification and enrichment passes,
+- continuous updates based on new information,
+- cross-checking of partnerships and competition relationships,
+- documented source arbitration when data conflicts appeared.
 
-### 6. Maintenance collaborative future
+### 6. Future Collaborative Maintenance
 
-La base est conçue pour évoluer avec des contributions ciblées :
-- Mise à jour manuelle par segments : pays, marchés, technologies
-- Contributions étudiantes et académiques sur des périmètres définis
-- Processus de révision et validation des modifications
-- Documentation des changements et traçabilité des sources
+The dataset is designed to evolve through focused contributions:
+- manual updates by country, market, or technology segment,
+- student and academic contributions on scoped subsets,
+- review and validation process for updates,
+- source traceability and change documentation.
 
 ## Disclaimer
 
-Ce projet est une compilation de recherche et de données issues de sources variées. Les informations peuvent être incomplètes, obsolètes, partielles ou sujettes à erreur.
+This project compiles research data from multiple sources. Information may be incomplete, outdated, partial, or inaccurate.
 
-Aucune garantie n’est donnée sur l’exhaustivité, la précision ou la validité des données. En cas de doute, il est recommandé de vérifier les informations auprès de sources primaires avant toute utilisation dans un contexte professionnel, académique ou commercial.
+No guarantee is provided regarding completeness, precision, or validity. For professional, academic, or commercial use, verify critical information against primary sources.
 
-Lorsqu’une information est incertaine, le projet privilégie l’usage de `NA` plutôt qu’une hypothèse non vérifiée.
+When information is uncertain, the project prefers `NA` over unverified assumptions.
 
-## Licence
+## License
 
-Le contenu de ce dépôt, y compris les données, exports, analyses et documents, est publié sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
+All repository content, including data, exports, analyses, and documents, is released under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-Vous êtes autorisé à partager et adapter le contenu à condition de mentionner l’origine, de citer le dépôt BenaventC/AInetworks et d’indiquer les modifications apportées.
+You may share and adapt the content with proper attribution, including a reference to `BenaventC/AInetworks` and indication of changes.
 
-## Remerciements
+## Acknowledgments
 
-Merci à toutes les personnes et sources ayant contribué à la collecte, à la normalisation et à l’enrichissement de ces données.
+Thanks to all contributors and public sources that supported data collection, normalization, and enrichment.
 

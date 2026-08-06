@@ -1,0 +1,10 @@
+community,label_short,n_actors,top_country,top_sector,sample_actors
+0,AI Cloud Platforms,12,United States,AI model,"Meta, SpaceX, YouTube, Alibaba, OpenAI"
+1,Foundation Model Ecosystem - Apple,8,United States,AI model,"Apple, Microsoft, Tesla, Wayve, Ineffable Intelligence"
+2,AI Health and Biotech - Abridge,7,United States,Health & Social Care,"Abridge, Doctolib, Job&Talent, Ambiance Healthcare, WhiteFiber"
+3,Foundation Model Ecosystem - Adobe,9,United States,AI model,"Adobe, Cloudflare, Anysphere, GitHub, Cognition AI"
+4,AI Mobility and Robotics,12,United States,Robotics,"Samsung Electronics, Intel, Oracle, Figure AI, Kuaishou"
+5,AI Health and Biotech - Shopify,9,Germany,ICT,"Shopify, Ant Group, SoftBank Group, UiPath, Owkin"
+6,Foundation Model Ecosystem - Google,11,United States,AI model,"Google, Alphabet Inc., Amazon, ByteDance, DeepSeek"
+7,AI Chip Infrastructure,17,United States,Hardware,"Nvidia, Broadcom, AWS, AMD, Cisco"
+8,Foundation Model Ecosystem - Y combinator,10,Unknown,AI model,"Y combinator, Scale AI, Tempus AI, Semrush, Oxford Nanopore Technologies"
