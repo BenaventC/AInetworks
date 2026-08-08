@@ -133,14 +133,14 @@ header h1 {
   background: var(--rose-pale);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 12px 12px 10px; margin-bottom: 12px;
+  padding: 10px 10px 8px; margin-bottom: 10px;
 }
 .form-container.hidden { display: none; }
-.form-container h3 { font-size: 1.25em; color: var(--rose-dark); margin-bottom: 18px; }
+.form-container h3 { font-size: 1.1em; color: var(--rose-dark); margin-bottom: 10px; }
 
 .form-section {
   border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 8px 10px 6px; margin-bottom: 8px; background: var(--surface);
+  padding: 7px 9px 5px; margin-bottom: 7px; background: var(--surface);
 }
 .form-section legend {
   font-size: 0.82em; font-weight: 700;
@@ -148,27 +148,37 @@ header h1 {
   text-transform: uppercase; letter-spacing: 0.7px;
 }
 
-.form-group { margin-bottom: 6px; }
+.form-group { margin-bottom: 4px; }
 
 .form-row {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 6px; margin-bottom: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px 8px;
+  margin-bottom: 5px;
 }
 
+.form-group.span-2 { grid-column: span 2; }
+.form-group.span-4 { grid-column: 1 / -1; }
+
 .form-group label {
-  display: block; margin-bottom: 5px;
-  font-weight: 500; font-size: 0.82em;
+  display: block; margin-bottom: 3px;
+  font-weight: 500; font-size: 0.78em;
   color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%; padding: 4px 7px;
+  width: 100%; padding: 3px 6px;
   border: 1px solid var(--border); border-radius: 4px;
-  font-size: 0.88em; font-family: inherit;
+  font-size: 0.84em; font-family: inherit;
+  line-height: 1.2;
   background: #fff; color: var(--ink);
   transition: border-color .2s, box-shadow .2s;
+}
+.form-group input,
+.form-group select {
+  height: 28px;
 }
 .form-group input:focus,
 .form-group select:focus,
@@ -177,12 +187,24 @@ header h1 {
   border-color: var(--rose);
   box-shadow: 0 0 0 3px rgba(184,114,122,.14);
 }
-.form-group textarea { resize: vertical; }
+.form-group textarea { resize: vertical; min-height: 52px; }
 
 .field-help { display: block; margin: 4px 0 7px; color: var(--muted); font-size: 0.80em; font-style: italic; }
 
-.form-actions { display: flex; gap: 10px; margin-top: 18px; }
-.form-actions button { flex: 1; }
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: nowrap;
+}
+.form-actions button {
+  flex: 0 0 auto;
+  min-width: 112px;
+  padding: 6px 10px;
+  font-size: 0.8em;
+}
 
 /* ── SECTOR CHIPS ────────────────────────────────────────────────────────── */
 .sector-label-picker {
@@ -249,18 +271,77 @@ header h1 {
 .card:hover { box-shadow: var(--shadow); border-left-color: var(--rose); }
 
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .card-title   { font-size: 1.0em; font-weight: 600; color: var(--ink); }
 .card-subtitle{ color: var(--muted); font-size: 0.82em; margin-top: 1px; }
 .card-actions { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 6px; }
 .card-content { margin-bottom: 8px; }
 
+.rank-sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.rank-sticker-top1 {
+  background: linear-gradient(135deg, #d4af37, #f3d87a);
+  color: #2b1d00;
+}
+
+.rank-sticker-top5 {
+  background: linear-gradient(135deg, #8e9aa3, #c7d0d6);
+  color: #12202b;
+}
+
+.rank-sticker-top10 {
+  background: linear-gradient(135deg, #b8754a, #dea989);
+  color: #2f1400;
+}
+
+.rank-sticker-default {
+  background: var(--chart);
+  color: #fff;
+}
+
 /* ── FIELDS ──────────────────────────────────────────────────────────────── */
+.enterprise-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px 8px;
+  align-items: start;
+}
+
 .field { margin-bottom: 4px; }
+.enterprise-fields-grid .field { margin-bottom: 0; min-width: 0; }
+.field-wide { grid-column: span 2; }
+.field-full { grid-column: 1 / -1; }
 .field-label {
   font-weight: 600; color: var(--muted);
   font-size: 0.66em; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1px;
 }
 .field-value { color: var(--ink); font-size: 0.86em; line-height: 1.35; word-break: break-word; }
+.logo-field-value {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo-field-value img {
+  max-width: 150px;
+  max-height: 100px;
+  border-radius: 4px;
+  object-fit: contain;
+}
 
 .field-timestamps { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
 .timestamp-grid {
@@ -312,8 +393,13 @@ header h1 {
   body { padding: 12px; }
   header h1 { font-size: 1.7em; }
   .section-header { flex-direction: column; gap: 10px; }
-  .section-header .btn, .form-actions button { width: 100%; }
+  .section-header .btn { width: 100%; }
   .form-row, .timestamp-grid { grid-template-columns: 1fr; }
+  .form-group.span-2, .form-group.span-4 { grid-column: auto; }
+  .enterprise-fields-grid { grid-template-columns: 1fr; }
+  .field-wide, .field-full { grid-column: auto; }
+  .form-actions { justify-content: stretch; flex-wrap: wrap; }
+  .form-actions button { width: 100%; }
   .tabs { flex-wrap: wrap; }
   .tab-btn { flex: 1 1 auto; min-width: 130px; }
   .card-header { flex-direction: column; }
@@ -321,4 +407,10 @@ header h1 {
   .partnership-row { grid-template-columns: 1fr; }
   .pagination-content { flex-direction: column; }
   .partnership-arrow { display: none; }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-group.span-2, .form-group.span-4 { grid-column: auto; }
+  .enterprise-fields-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

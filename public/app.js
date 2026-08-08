@@ -33,6 +33,7 @@ const partnershipSegmentCounts = {
   top100: 0
 };
 const selectedSectorLabels = new Set();
+const TOP_RANKING_SEGMENTS = new Set(['top100', 'top50']);
 const SECTOR_LABEL_OPTIONS = [
   'Aerospace',
   'Agriculture & Forestry',
@@ -91,6 +92,29 @@ function getValidationLevelForSegment(segment) {
   return 0;
 }
 
+function isTopRankingSegment(segment) {
+  return TOP_RANKING_SEGMENTS.has(segment);
+}
+
+function getRankTierClass(rank, total) {
+  if (!Number.isFinite(rank) || rank <= 0 || !Number.isFinite(total) || total <= 0) {
+    return { cssClass: 'rank-sticker-default', percentile: 100 };
+  }
+
+  const percentile = (rank / total) * 100;
+  if (percentile <= 1) {
+    return { cssClass: 'rank-sticker-top1', percentile };
+  }
+  if (percentile <= 5) {
+    return { cssClass: 'rank-sticker-top5', percentile };
+  }
+  if (percentile <= 10) {
+    return { cssClass: 'rank-sticker-top10', percentile };
+  }
+
+  return { cssClass: 'rank-sticker-default', percentile };
+}
+
 function parseMillionsValue(value) {
   if (value === null || value === undefined) {
     return null;
@@ -105,9 +129,36 @@ function parseMillionsValue(value) {
     return null;
   }
 
-  const sanitized = text
+  let sanitized = text
     .replace(/[^0-9,.-]/g, '')
-    .replace(/,/g, '.');
+    .replace(/\s+/g, '');
+
+  const lastComma = sanitized.lastIndexOf(',');
+  const lastDot = sanitized.lastIndexOf('.');
+
+  if (lastComma !== -1 && lastDot !== -1) {
+    if (lastComma > lastDot) {
+      sanitized = sanitized.replace(/\./g, '').replace(',', '.');
+    } else {
+      sanitized = sanitized.replace(/,/g, '');
+    }
+  } else if (lastComma !== -1) {
+    const isThousandsGrouping = /^-?\d{1,3}(,\d{3})+$/.test(sanitized);
+    if (isThousandsGrouping) {
+      sanitized = sanitized.replace(/,/g, '');
+    } else if (/^-?\d+,\d+$/.test(sanitized)) {
+      sanitized = sanitized.replace(',', '.');
+    } else {
+      sanitized = sanitized.replace(/,/g, '');
+    }
+  } else if (lastDot !== -1) {
+    const isThousandsGrouping = /^-?\d{1,3}(\.\d{3})+$/.test(sanitized);
+    if (isThousandsGrouping) {
+      sanitized = sanitized.replace(/\./g, '');
+    } else if (!/^-?\d+\.\d+$/.test(sanitized)) {
+      sanitized = sanitized.replace(/\./g, '');
+    }
+  }
 
   const parsed = Number.parseFloat(sanitized);
   return Number.isFinite(parsed) ? parsed : null;
@@ -120,24 +171,58 @@ function formatNumberFr(value, maxFractionDigits = 3) {
   }).format(value);
 }
 
-function formatMillionsAsBillions(value) {
+function formatMillionsUsd(value) {
   const millions = parseMillionsValue(value);
   if (millions === null) {
     return 'N/A';
   }
 
-  const billions = millions / 1000;
-  return `${formatNumberFr(billions, 3)} billion USD`;
+  if (millions >= 1000) {
+    const billions = millions / 1000;
+    return `${formatNumberFr(billions, 3)} billion USD`;
+  }
+
+  if (millions >= 1) {
+    return `${formatNumberFr(millions, 3)} million USD`;
+  }
+
+  const thousands = millions * 1000;
+  return `${formatNumberFr(thousands, 3)} thousand USD`;
 }
 
-function formatAbsoluteUsdAsBillions(value) {
+function formatAbsoluteUsd(value) {
   const numeric = typeof value === 'number' ? value : Number.parseFloat(value);
   if (!Number.isFinite(numeric) || numeric <= 0) {
     return 'N/A';
   }
 
-  const billions = numeric / 1_000_000_000;
-  return `${formatNumberFr(billions, 3)} billion USD`;
+  if (numeric >= 1_000_000_000) {
+    const billions = numeric / 1_000_000_000;
+    return `${formatNumberFr(billions, 3)} billion USD`;
+  }
+
+  if (numeric >= 1_000_000) {
+    const millions = numeric / 1_000_000;
+    return `${formatNumberFr(millions, 3)} million USD`;
+  }
+
+  const thousands = numeric / 1_000;
+  return `${formatNumberFr(thousands, 3)} thousand USD`;
+}
+
+function parseMillionsInputValue(elementId, fieldLabel) {
+  const raw = document.getElementById(elementId).value.trim();
+  if (!raw) {
+    return null;
+  }
+
+  const normalized = raw.replace(',', '.');
+  const parsed = Number.parseFloat(normalized);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    throw new Error(`${fieldLabel} must be a numeric value in USD millions`);
+  }
+
+  return parsed;
 }
 
 function formatAuditTimestamp(value) {
@@ -358,11 +443,21 @@ function renderEnterprises() {
     return;
   }
 
-  container.innerHTML = filteredEnterprises.map(ent => `
+  const totalRankedItems = filteredEnterprises.length;
+  const topRankingSegment = isTopRankingSegment(enterpriseSegment);
+
+  container.innerHTML = filteredEnterprises.map((ent, index) => {
+    const rank = index + 1;
+    const rankTier = getRankTierClass(rank, totalRankedItems);
+
+    return `
     <div class="card">
       <div class="card-header">
         <div>
-          <div class="card-title">${ent.name}</div>
+          <div class="card-title-row">
+            <div class="card-title">${ent.name}</div>
+            ${topRankingSegment ? `<span class="rank-sticker ${rankTier.cssClass}" title="Top ${rankTier.percentile.toFixed(1)}%">#${rank}</span>` : ''}
+          </div>
           <div class="card-subtitle">
             ${ent.sector ? `<span class="badge badge-sector">${ent.sector}</span>` : ''}
             ${ent.organization_type ? `<span class="badge">${escapeHtml(ent.organization_type)}</span>` : ''}
@@ -378,32 +473,35 @@ function renderEnterprises() {
         </div>
       </div>
       <div class="card-content">
-        ${ent.description ? `<div class="field"><div class="field-label">Description</div><div class="field-value">${escapeHtml(ent.description)}</div></div>` : ''}
-        ${ent.organization_type ? `<div class="field"><div class="field-label">Organization type</div><div class="field-value">${escapeHtml(ent.organization_type)}</div></div>` : ''}
-        ${ent.headquarter_city ? `<div class="field"><div class="field-label">Headquarter city</div><div class="field-value">${escapeHtml(ent.headquarter_city)}</div></div>` : ''}
-        ${ent.main_investors ? `<div class="field"><div class="field-label">Main investors</div><div class="field-value">${escapeHtml(ent.main_investors)}</div></div>` : ''}
-        ${ent.main_competitors ? `<div class="field"><div class="field-label">Main competitors</div><div class="field-value">${escapeHtml(ent.main_competitors)}</div></div>` : ''}
-        ${ent.participation ? `<div class="field"><div class="field-label">Participation</div><div class="field-value">${escapeHtml(ent.participation)}</div></div>` : ''}
-        ${ent.main_acquisitions ? `<div class="field"><div class="field-label">Main acquisitions</div><div class="field-value">${escapeHtml(ent.main_acquisitions)}</div></div>` : ''}
-        ${ent.key_resources ? `<div class="field"><div class="field-label">Key resources</div><div class="field-value">${escapeHtml(ent.key_resources)}</div></div>` : ''}
-        ${ent.strategic_partnerships ? `<div class="field"><div class="field-label">Strategic partnerships</div><div class="field-value">${escapeHtml(ent.strategic_partnerships)}</div></div>` : ''}
-        ${enterpriseSegment === 'top100' ? `<div class="field"><div class="field-label">Top100 ranking score</div><div class="field-value">${formatAbsoluteUsdAsBillions(ent.ranking_score)}</div></div>` : ''}
-        <div class="field"><div class="field-label">Market cap</div><div class="field-value">${formatMillionsAsBillions(ent.capitalization)}</div></div>
-        <div class="field"><div class="field-label">Funds raised</div><div class="field-value">${ent.funds_raised ? escapeHtml(ent.funds_raised) : 'N/A'}</div></div>
-        <div class="field"><div class="field-label">Revenue</div><div class="field-value">${formatMillionsAsBillions(ent.revenue_millions)}</div></div>
-        ${ent.employees_count ? `<div class="field"><div class="field-label">Employees</div><div class="field-value">${ent.employees_count}</div></div>` : ''}
-        ${ent.website ? `<div class="field"><div class="field-label">Website</div><div class="field-value"><a href="${ent.website}" target="_blank">${ent.website}</a></div></div>` : ''}
-        ${ent.logo_url ? `<div class="field"><div class="field-label">Logo</div><div class="field-value"><img src="${ent.logo_url}" alt="${ent.name}" style="max-width: 150px; max-height: 100px; border-radius: 4px;"></div></div>` : ''}
-        <div class="field field-timestamps">
-          <div class="field-label">Record tracking</div>
+        <div class="enterprise-fields-grid">
+        ${ent.description ? `<div class="field field-full"><div class="field-label">Description</div><div class="field-value">${escapeHtml(ent.description)}</div></div>` : ''}
+        ${ent.organization_type ? `<div class="field"><div class="field-label">Org type</div><div class="field-value">${escapeHtml(ent.organization_type)}</div></div>` : ''}
+        ${ent.headquarter_city ? `<div class="field"><div class="field-label">HQ city</div><div class="field-value">${escapeHtml(ent.headquarter_city)}</div></div>` : ''}
+        ${ent.main_investors ? `<div class="field field-wide"><div class="field-label">Investors</div><div class="field-value">${escapeHtml(ent.main_investors)}</div></div>` : ''}
+        ${ent.main_competitors ? `<div class="field field-wide"><div class="field-label">Competitors</div><div class="field-value">${escapeHtml(ent.main_competitors)}</div></div>` : ''}
+        ${ent.participation ? `<div class="field field-wide"><div class="field-label">Participation</div><div class="field-value">${escapeHtml(ent.participation)}</div></div>` : ''}
+        ${ent.main_acquisitions ? `<div class="field field-wide"><div class="field-label">Acquisitions</div><div class="field-value">${escapeHtml(ent.main_acquisitions)}</div></div>` : ''}
+        ${ent.key_resources ? `<div class="field field-wide"><div class="field-label">Key resources</div><div class="field-value">${escapeHtml(ent.key_resources)}</div></div>` : ''}
+        ${ent.strategic_partnerships ? `<div class="field field-wide"><div class="field-label">Strategic partners</div><div class="field-value">${escapeHtml(ent.strategic_partnerships)}</div></div>` : ''}
+        ${topRankingSegment ? `<div class="field"><div class="field-label">Top score</div><div class="field-value">${formatAbsoluteUsd(ent.ranking_score)}</div></div>` : ''}
+        <div class="field"><div class="field-label">Mkt cap</div><div class="field-value">${formatMillionsUsd(ent.capitalization)}</div></div>
+        <div class="field"><div class="field-label">Funds</div><div class="field-value">${formatMillionsUsd(ent.funds_raised)}</div></div>
+        <div class="field"><div class="field-label">Revenue</div><div class="field-value">${formatMillionsUsd(ent.revenue_millions)}</div></div>
+        ${ent.employees_count ? `<div class="field"><div class="field-label">Staff</div><div class="field-value">${ent.employees_count}</div></div>` : ''}
+        ${ent.website ? `<div class="field field-wide"><div class="field-label">Website</div><div class="field-value"><a href="${ent.website}" target="_blank">${ent.website}</a></div></div>` : ''}
+        ${ent.logo_url ? `<div class="field field-wide"><div class="field-label">Logo</div><div class="field-value logo-field-value"><img src="${ent.logo_url}" alt="${ent.name}"></div></div>` : ''}
+        <div class="field field-timestamps field-full">
+          <div class="field-label">Tracking</div>
           <div class="field-value timestamp-grid">
             <span><strong>Created:</strong> ${formatAuditTimestamp(ent.created_at)}</span>
             <span><strong>Last updated:</strong> ${formatAuditTimestamp(ent.updated_at)}</span>
           </div>
         </div>
+        </div>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   renderEnterprisePagination();
 }
@@ -581,9 +679,9 @@ function editEnterprise(id) {
     document.getElementById('entStrategicPartnerships').value = ent.strategic_partnerships || '';
     document.getElementById('entWebsite').value = ent.website || '';
     document.getElementById('entLogo').value = ent.logo_url || '';
-    document.getElementById('entCapitalization').value = ent.capitalization || '';
-    document.getElementById('entFundsRaised').value = ent.funds_raised || '';
-    document.getElementById('entRevenueMillions').value = ent.revenue_millions ?? '';
+    document.getElementById('entCapitalization').value = parseMillionsValue(ent.capitalization) ?? '';
+    document.getElementById('entFundsRaised').value = parseMillionsValue(ent.funds_raised) ?? '';
+    document.getElementById('entRevenueMillions').value = parseMillionsValue(ent.revenue_millions) ?? '';
     document.getElementById('entEmployees').value = ent.employees_count || '';
     document.getElementById('entValidated').value = String(normalizeValidationLevel(ent.is_validated));
     document.getElementById('enterpriseForm').classList.remove('hidden');
@@ -640,6 +738,19 @@ async function submitEnterpriseForm(e) {
     return;
   }
 
+  let capitalizationMillions;
+  let fundsRaisedMillions;
+  let revenueMillions;
+
+  try {
+    capitalizationMillions = parseMillionsInputValue('entCapitalization', 'Market cap');
+    fundsRaisedMillions = parseMillionsInputValue('entFundsRaised', 'Funds raised');
+    revenueMillions = parseMillionsInputValue('entRevenueMillions', 'Revenue');
+  } catch (error) {
+    showError(error.message);
+    return;
+  }
+
   const data = {
     name,
     sector: selectedSectorLabels.length > 0 ? selectedSectorLabels.join(', ') : null,
@@ -659,9 +770,9 @@ async function submitEnterpriseForm(e) {
     strategic_partnerships: document.getElementById('entStrategicPartnerships').value?.trim() || null,
     website: document.getElementById('entWebsite').value?.trim() || null,
     logo_url: document.getElementById('entLogo').value?.trim() || null,
-    capitalization: document.getElementById('entCapitalization').value?.trim() || null,
-    funds_raised: document.getElementById('entFundsRaised').value?.trim() || null,
-    revenue_millions: document.getElementById('entRevenueMillions').value ? parseFloat(document.getElementById('entRevenueMillions').value) : null,
+    capitalization: capitalizationMillions,
+    funds_raised: fundsRaisedMillions,
+    revenue_millions: revenueMillions,
     employees_count: document.getElementById('entEmployees').value ? parseInt(document.getElementById('entEmployees').value, 10) : null,
     is_validated: normalizeValidationLevel(document.getElementById('entValidated').value)
   };
@@ -989,18 +1100,20 @@ function renderPartnerships() {
         </div>
       </div>
       <div class="card-content">
-        ${part.start_date ? `<div class="field"><div class="field-label">Start date</div><div class="field-value">${part.start_date}</div></div>` : ''}
-        ${part.end_year ? `<div class="field"><div class="field-label">End year</div><div class="field-value">${part.end_year}</div></div>` : ''}
-        ${part.value_millions ? `<div class="field"><div class="field-label">Value</div><div class="field-value">${formatMillionsAsBillions(part.value_millions)}</div></div>` : ''}
-        ${part.infra_commitment_text ? `<div class="field"><div class="field-label">Infrastructure commitment</div><div class="field-value">${escapeHtml(part.infra_commitment_text)}</div></div>` : ''}
-        ${part.description ? `<div class="field"><div class="field-label">Description</div><div class="field-value">${escapeHtml(part.description)}</div></div>` : ''}
-        ${part.sources_information ? `<div class="field"><div class="field-label">Information sources</div><div class="field-value">${escapeHtml(part.sources_information)}</div></div>` : ''}
-        <div class="field field-timestamps">
-          <div class="field-label">Record tracking</div>
+        <div class="enterprise-fields-grid">
+        ${part.start_date ? `<div class="field"><div class="field-label">Start</div><div class="field-value">${part.start_date}</div></div>` : ''}
+        ${part.end_year ? `<div class="field"><div class="field-label">End yr</div><div class="field-value">${part.end_year}</div></div>` : ''}
+        ${part.value_millions ? `<div class="field"><div class="field-label">Value</div><div class="field-value">${formatMillionsUsd(part.value_millions)}</div></div>` : ''}
+        ${part.infra_commitment_text ? `<div class="field field-wide"><div class="field-label">Infra</div><div class="field-value">${escapeHtml(part.infra_commitment_text)}</div></div>` : ''}
+        ${part.description ? `<div class="field field-wide"><div class="field-label">Description</div><div class="field-value">${escapeHtml(part.description)}</div></div>` : ''}
+        ${part.sources_information ? `<div class="field field-wide"><div class="field-label">Sources</div><div class="field-value">${escapeHtml(part.sources_information)}</div></div>` : ''}
+        <div class="field field-timestamps field-full">
+          <div class="field-label">Tracking</div>
           <div class="field-value timestamp-grid">
             <span><strong>Creation:</strong> ${formatAuditTimestamp(part.created_at)}</span>
             <span><strong>Last updated:</strong> ${formatAuditTimestamp(part.updated_at)}</span>
           </div>
+        </div>
         </div>
       </div>
     </div>

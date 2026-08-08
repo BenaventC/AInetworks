@@ -46,8 +46,8 @@
               <input type="text" id="entName" required>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label for="entOrganizationType">Organization type</label>
+              <div class="form-group span-2">
+                <label for="entOrganizationType">Org type</label>
                 <select id="entOrganizationType">
                   <option value="">Not specified</option>
                   <option value="Seed">Seed</option>
@@ -61,8 +61,8 @@
                   <option value="Open Science">Open Science</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="entCompanyStatus">Company status</label>
+              <div class="form-group span-2">
+                <label for="entCompanyStatus">Status</label>
                 <select id="entCompanyStatus">
                   <option value="Active" selected>Active</option>
                   <option value="Acquired">Acquired</option>
@@ -77,25 +77,25 @@
           <fieldset class="form-section">
             <legend>Location & Timeline</legend>
             <div class="form-row">
-              <div class="form-group">
+              <div class="form-group span-2">
                 <label for="entCountry">Country</label>
                 <input type="text" id="entCountry" placeholder="e.g. France">
               </div>
-              <div class="form-group">
-                <label for="entHeadquarterCity">Headquarter city</label>
+              <div class="form-group span-2">
+                <label for="entHeadquarterCity">HQ city</label>
                 <input type="text" id="entHeadquarterCity" placeholder="e.g. Paris">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="entYear">Founded year</label>
+                <label for="entYear">Founded</label>
                 <input type="number" id="entYear">
               </div>
               <div class="form-group">
-                <label for="entEndYear">End year (if applicable)</label>
+                <label for="entEndYear">End yr</label>
                 <input type="number" id="entEndYear" placeholder="e.g. 2023">
               </div>
-              <div class="form-group">
+              <div class="form-group span-2">
                 <label for="entEndReason">End reason</label>
                 <select id="entEndReason">
                   <option value="">Not applicable</option>
@@ -115,7 +115,7 @@
           <!-- SECTORS & CLASSIFICATION -->
           <fieldset class="form-section">
             <legend>Sectors & Classification</legend>
-            <div class="form-group">
+            <div class="form-group span-4">
               <label for="entSectorLabels">Sector labels</label>
               <div id="entSectorLabels" class="sector-label-picker" role="listbox" aria-multiselectable="true" aria-describedby="entSectorHelp"></div>
               <small id="entSectorHelp" class="field-help">Click labels to toggle selection. Maximum 3 labels.</small>
@@ -126,9 +126,9 @@
           <!-- DESCRIPTION -->
           <fieldset class="form-section">
             <legend>Description</legend>
-            <div class="form-group">
+            <div class="form-group span-4">
               <label for="entDescription">Company description</label>
-              <textarea id="entDescription" rows="4" placeholder="What does the company do? What are its core features or mission?"></textarea>
+              <textarea id="entDescription" rows="3" placeholder="What does the company do? What are its core features or mission?"></textarea>
             </div>
           </fieldset>
 
@@ -136,22 +136,23 @@
           <fieldset class="form-section">
             <legend>Financials & Scale</legend>
             <div class="form-row">
-              <div class="form-group">
-                <label for="entCapitalization">Market cap (USD millions)</label>
-                <input type="text" id="entCapitalization" placeholder="e.g. 120000 = 120B USD">
+              <div class="form-group span-2">
+                <label for="entCapitalization">Mkt cap (USD M)</label>
+                <input type="number" id="entCapitalization" placeholder="e.g. 1000 for 1B USD" step="0.001" min="0">
               </div>
-              <div class="form-group">
-                <label for="entFundsRaised">Funds raised</label>
-                <input type="text" id="entFundsRaised" placeholder="e.g. 450 million USD">
+              <div class="form-group span-2">
+                <label for="entFundsRaised">Funds (USD M)</label>
+                <input type="number" id="entFundsRaised" placeholder="e.g. 450" step="0.001" min="0">
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label for="entRevenueMillions">Revenue (USD millions)</label>
+              <div class="form-group span-2">
+                <label for="entRevenueMillions">Revenue (USD M)</label>
                 <input type="number" id="entRevenueMillions" placeholder="e.g. 12000 = 12B USD" step="0.01" min="0">
+                <small class="field-help">Base unit is million USD for all financial fields (example: 1 billion = 1000).</small>
               </div>
-              <div class="form-group">
-                <label for="entEmployees">Employees</label>
+              <div class="form-group span-2">
+                <label for="entEmployees">Staff</label>
                 <input type="number" id="entEmployees" placeholder="e.g. 1500">
               </div>
             </div>
@@ -160,29 +161,35 @@
           <!-- NETWORK & ECOSYSTEM -->
           <fieldset class="form-section">
             <legend>Network & Ecosystem</legend>
-            <div class="form-group">
-              <label for="entMainInvestors">Main investors</label>
-              <textarea id="entMainInvestors" rows="3" placeholder="e.g. Sequoia Capital, Andreessen Horowitz, SoftBank"></textarea>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="entMainInvestors">Investors</label>
+                <textarea id="entMainInvestors" rows="2" placeholder="e.g. Sequoia Capital, Andreessen Horowitz, SoftBank"></textarea>
+              </div>
+              <div class="form-group span-2">
+                <label for="entMainCompetitors">Competitors</label>
+                <textarea id="entMainCompetitors" rows="2" placeholder="e.g. Databricks, Google BigQuery, Amazon Redshift"></textarea>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="entMainCompetitors">Main competitors</label>
-              <textarea id="entMainCompetitors" rows="3" placeholder="e.g. Databricks, Google BigQuery, Amazon Redshift"></textarea>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="entParticipation">Participation</label>
+                <textarea id="entParticipation" rows="2" placeholder="e.g. 10% stake, co-investment, strategic minority"></textarea>
+              </div>
+              <div class="form-group span-2">
+                <label for="entMainAcquisitions">Acquisitions</label>
+                <textarea id="entMainAcquisitions" rows="2" placeholder="e.g. Neeva (2023), Observe (2026)"></textarea>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="entParticipation">Participation</label>
-              <textarea id="entParticipation" rows="2" placeholder="e.g. 10% stake, co-investment, strategic minority"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="entMainAcquisitions">Main acquisitions</label>
-              <textarea id="entMainAcquisitions" rows="3" placeholder="e.g. Neeva (2023), Observe (2026)"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="entKeyResources">Key resources</label>
-              <textarea id="entKeyResources" rows="3" placeholder="ex: Global CDN network, DNS resolver, WAF, Zero Trust platform"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="entStrategicPartnerships">Strategic partnerships</label>
-              <textarea id="entStrategicPartnerships" rows="3" placeholder="e.g. Microsoft, NVIDIA, Salesforce"></textarea>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="entKeyResources">Key resources</label>
+                <textarea id="entKeyResources" rows="2" placeholder="ex: Global CDN network, DNS resolver, WAF, Zero Trust platform"></textarea>
+              </div>
+              <div class="form-group span-2">
+                <label for="entStrategicPartnerships">Strategic partners</label>
+                <textarea id="entStrategicPartnerships" rows="2" placeholder="e.g. Microsoft, NVIDIA, Salesforce"></textarea>
+              </div>
             </div>
           </fieldset>
 
@@ -190,11 +197,11 @@
           <fieldset class="form-section">
             <legend>Links & Media</legend>
             <div class="form-row">
-              <div class="form-group">
+              <div class="form-group span-2">
                 <label for="entWebsite">Website</label>
                 <input type="url" id="entWebsite" placeholder="https://...">
               </div>
-              <div class="form-group">
+              <div class="form-group span-2">
                 <label for="entLogo">Logo URL</label>
                 <input type="url" id="entLogo" placeholder="https://...">
               </div>
@@ -204,8 +211,8 @@
           <!-- VALIDATION & METADATA -->
           <fieldset class="form-section">
             <legend>Validation & Metadata</legend>
-            <div class="form-group">
-              <label for="entValidated">Record validation</label>
+            <div class="form-group span-2">
+              <label for="entValidated">Validation</label>
               <select id="entValidated">
                 <option value="0">Not validated</option>
                   <option value="1" selected>Partially validated</option>
@@ -277,13 +284,13 @@
         <h3>New Relationship</h3>
         <form id="partnershipInputForm">
           <div class="form-row">
-            <div class="form-group">
-              <label for="partner1">Focal company *</label>
+            <div class="form-group span-2">
+              <label for="partner1">Company *</label>
               <select id="partner1" required>
                 <option value="">Select a company</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="form-group span-2">
               <label for="partner2">Partner *</label>
               <select id="partner2" required>
                 <option value="">Select a company</option>
@@ -292,12 +299,12 @@
           </div>
 
           <div class="form-row">
-            <div class="form-group">
-              <label for="partRelationType">Relationship type</label>
+            <div class="form-group span-2">
+              <label for="partRelationType">Rel. type</label>
               <input type="text" id="partRelationType" placeholder="ex: Strategic alliance, Commercial agreement, Co-development">
             </div>
-            <div class="form-group">
-              <label for="partType">Partnership category</label>
+            <div class="form-group span-2">
+              <label for="partType">Category</label>
               <select id="partType">
                 <option value="">Select a category</option>
                 <option value="Joint Venture">Joint Venture</option>
@@ -330,32 +337,35 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label for="partStartDate">Start date</label>
+              <label for="partStartDate">Start</label>
               <input type="date" id="partStartDate">
             </div>
             <div class="form-group">
-              <label for="partEndYear">End year</label>
+              <label for="partEndYear">End yr</label>
               <input type="number" id="partEndYear" placeholder="e.g. 2030" min="1900" max="3000">
             </div>
-            <div class="form-group">
-              <label for="partValue">Value (entry in USD millions)</label>
+            <div class="form-group span-2">
+              <label for="partValue">Value (USD M)</label>
               <input type="number" id="partValue" placeholder="e.g. 12000 (renders as 12 billion USD)" step="0.01">
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="partDescription">Description</label>
-            <textarea id="partDescription" rows="4"></textarea>
+          <div class="form-row">
+            <div class="form-group span-4">
+              <label for="partDescription">Description</label>
+              <textarea id="partDescription" rows="2"></textarea>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="partSourcesInfo">Information sources</label>
-            <input type="text" id="partSourcesInfo" placeholder="e.g. LinkedIn, press release, press article...">
-          </div>
-
-          <div class="form-group">
-            <label for="partInfraCommitment">Infrastructure commitment (text)</label>
-            <textarea id="partInfraCommitment" rows="3" placeholder="e.g. 100B USD cloud spend over 10 years"></textarea>
+          <div class="form-row">
+            <div class="form-group span-2">
+              <label for="partSourcesInfo">Sources</label>
+              <input type="text" id="partSourcesInfo" placeholder="e.g. LinkedIn, press release, press article...">
+            </div>
+            <div class="form-group span-2">
+              <label for="partInfraCommitment">Infra commitment</label>
+              <textarea id="partInfraCommitment" rows="2" placeholder="e.g. 100B USD cloud spend over 10 years"></textarea>
+            </div>
           </div>
 
           <div class="form-actions">

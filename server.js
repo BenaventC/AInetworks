@@ -37,8 +37,8 @@ function initializeDatabase() {
       description TEXT,
       website TEXT,
       logo_url TEXT,
-      capitalization TEXT,
-      funds_raised TEXT,
+      capitalization REAL,
+      funds_raised REAL,
       revenue_millions REAL,
       employees_count INTEGER,
       main_investors TEXT,
@@ -86,7 +86,7 @@ function initializeDatabase() {
           });
         }
         if (!columns.has('funds_raised')) {
-          db.run('ALTER TABLE enterprises ADD COLUMN funds_raised TEXT', (err) => {
+          db.run('ALTER TABLE enterprises ADD COLUMN funds_raised REAL', (err) => {
             if (err && !err.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE funds_raised:', err.message);
             }
@@ -164,7 +164,7 @@ function initializeDatabase() {
             }
           });
 
-          normalizeEnterpriseCapitalizations();
+          normalizeEnterpriseFinancialFields();
         };
 
         if (!columns.has('is_validated')) {
@@ -362,15 +362,19 @@ function parseLocaleNumber(value) {
       text = text.replace(/,/g, '');
     }
   } else if (lastComma !== -1) {
-    const decimalCandidate = text.length - lastComma - 1;
-    if (decimalCandidate > 0 && decimalCandidate <= 3) {
+    const isThousandsGrouping = /^-?\d{1,3}(,\d{3})+$/.test(text);
+    if (isThousandsGrouping) {
+      text = text.replace(/,/g, '');
+    } else if (/^-?\d+,\d+$/.test(text)) {
       text = text.replace(',', '.');
     } else {
       text = text.replace(/,/g, '');
     }
   } else if (lastDot !== -1) {
-    const decimalCandidate = text.length - lastDot - 1;
-    if (!(decimalCandidate > 0 && decimalCandidate <= 3)) {
+    const isThousandsGrouping = /^-?\d{1,3}(\.\d{3})+$/.test(text);
+    if (isThousandsGrouping) {
+      text = text.replace(/\./g, '');
+    } else if (!/^-?\d+\.\d+$/.test(text)) {
       text = text.replace(/\./g, '');
     }
   }
@@ -378,18 +382,32 @@ function parseLocaleNumber(value) {
   return Number.parseFloat(text);
 }
 
-function parseCapitalizationToMillions(value) {
+function parseFinancialToMillions(value, options = {}) {
+  const {
+    autoDetectAbsoluteUsd = false,
+    absoluteUsdThresholdInMillions = 10_000_000
+  } = options;
+
   if (value === null || value === undefined) {
-    return 0;
+    return null;
   }
 
   if (typeof value === 'number') {
-    return Number.isFinite(value) && value > 0 ? value : 0;
+    if (!Number.isFinite(value) || value <= 0) {
+      return null;
+    }
+
+    let inMillions = value;
+    if (autoDetectAbsoluteUsd && inMillions >= absoluteUsdThresholdInMillions) {
+      inMillions = inMillions / 1_000_000;
+    }
+
+    return Number(inMillions.toFixed(6));
   }
 
   const text = String(value).trim();
   if (!text) {
-    return 0;
+    return null;
   }
 
   const normalized = text
@@ -400,17 +418,18 @@ function parseCapitalizationToMillions(value) {
     .replace(/[\$€]/g, '')
     .trim();
 
-  const match = normalized.match(/(-?\d[\d\s.,]*)\s*(trillion|trillions|\bt\b|billion|billions|\bbn\b|\bb\b|milliard|milliards|million|millions|\bmn\b|\bm\b)?/);
+  const match = normalized.match(/(-?\d[\d\s.,]*)\s*(trillion|trillions|\bt\b|billion|billions|\bbn\b|\bb\b|milliard|milliards|million|millions|\bmn\b|\bm\b|thousand|\bk\b)?/);
   if (!match) {
-    return 0;
+    return null;
   }
 
   const numericValue = parseLocaleNumber(match[1]);
   if (!Number.isFinite(numericValue) || numericValue <= 0) {
-    return 0;
+    return null;
   }
 
   const unit = match[2] || '';
+  const hasUnit = Boolean(unit);
   let multiplier = 1;
 
   if (unit === 'trillion' || unit === 'trillions' || unit === 't') {
@@ -419,56 +438,81 @@ function parseCapitalizationToMillions(value) {
     multiplier = 1_000;
   } else if (unit === 'million' || unit === 'millions' || unit === 'mn' || unit === 'm') {
     multiplier = 1;
+  } else if (unit === 'thousand' || unit === 'k') {
+    multiplier = 0.001;
   }
 
   const inMillions = numericValue * multiplier;
-  return Number.isFinite(inMillions) && inMillions > 0 ? inMillions : 0;
-}
-
-function formatMillionsFr(value) {
-  const safe = Number.isFinite(value) && value > 0 ? value : 0;
-  return new Intl.NumberFormat('fr-FR', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 3
-  }).format(safe).replace(/[\u202f\u00a0]/g, ' ');
-}
-
-function normalizeCapitalizationField(value) {
-  if (value === null || value === undefined) {
+  if (!Number.isFinite(inMillions) || inMillions <= 0) {
     return null;
   }
 
-  const text = String(value).trim();
-  if (!text) {
-    return null;
+  let normalizedMillions = inMillions;
+  if (autoDetectAbsoluteUsd && !hasUnit && normalizedMillions >= absoluteUsdThresholdInMillions) {
+    normalizedMillions = normalizedMillions / 1_000_000;
   }
 
-  const millions = parseCapitalizationToMillions(text);
+  return Number(normalizedMillions.toFixed(6));
+}
+
+function parseCapitalizationToMillions(value) {
+  return parseFinancialToMillions(value);
+}
+
+function normalizeMillionsField(value, options = {}) {
+  const millions = parseFinancialToMillions(value, options);
   if (!Number.isFinite(millions) || millions <= 0) {
     return null;
   }
 
-  return formatMillionsFr(millions);
+  return Number(millions.toFixed(6));
 }
 
-function normalizeEnterpriseCapitalizations() {
-  db.all('SELECT id, capitalization FROM enterprises', (err, rows) => {
+function normalizeEnterpriseFinancialFields() {
+  db.all('SELECT id, capitalization, funds_raised, revenue_millions FROM enterprises', (err, rows) => {
     if (err) {
-      console.error('Erreur SELECT capitalizations:', err.message);
+      console.error('Erreur SELECT normalisation finance:', err.message);
       return;
     }
 
     rows.forEach((row) => {
-      const normalized = normalizeCapitalizationField(row.capitalization);
-      const current = row.capitalization === null || row.capitalization === undefined ? '' : String(row.capitalization).trim();
-      const normalizedText = normalized === null ? '' : normalized;
-      if (current !== normalizedText) {
+      const normalizedCapitalization = normalizeMillionsField(row.capitalization);
+      const normalizedFundsRaised = normalizeMillionsField(row.funds_raised);
+      const normalizedRevenue = normalizeMillionsField(row.revenue_millions, { autoDetectAbsoluteUsd: true });
+
+      const currentCapitalization = row.capitalization === null || row.capitalization === undefined
+        ? null
+        : parseLocaleNumber(row.capitalization);
+      const currentFundsRaised = row.funds_raised === null || row.funds_raised === undefined
+        ? null
+        : parseLocaleNumber(row.funds_raised);
+      const currentRevenue = row.revenue_millions === null || row.revenue_millions === undefined
+        ? null
+        : parseLocaleNumber(row.revenue_millions);
+
+      const hasCapitalizationRaw = row.capitalization !== null && row.capitalization !== undefined && String(row.capitalization).trim() !== '';
+      const hasFundsRaisedRaw = row.funds_raised !== null && row.funds_raised !== undefined && String(row.funds_raised).trim() !== '';
+      const hasRevenueRaw = row.revenue_millions !== null && row.revenue_millions !== undefined && String(row.revenue_millions).trim() !== '';
+
+      const shouldRewriteCapitalization = typeof row.capitalization === 'string' && (normalizedCapitalization !== null || hasCapitalizationRaw);
+      const shouldRewriteFundsRaised = typeof row.funds_raised === 'string' && (normalizedFundsRaised !== null || hasFundsRaisedRaw);
+      const shouldRewriteRevenue = typeof row.revenue_millions === 'string' && (normalizedRevenue !== null || hasRevenueRaw);
+
+      const changed =
+        (Number.isFinite(currentCapitalization) ? Number(currentCapitalization.toFixed(6)) : null) !== normalizedCapitalization ||
+        (Number.isFinite(currentFundsRaised) ? Number(currentFundsRaised.toFixed(6)) : null) !== normalizedFundsRaised ||
+        (Number.isFinite(currentRevenue) ? Number(currentRevenue.toFixed(6)) : null) !== normalizedRevenue ||
+        shouldRewriteCapitalization ||
+        shouldRewriteFundsRaised ||
+        shouldRewriteRevenue;
+
+      if (changed) {
         db.run(
-          'UPDATE enterprises SET capitalization = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
-          [normalized, row.id],
+          'UPDATE enterprises SET capitalization = ?, funds_raised = ?, revenue_millions = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+          [normalizedCapitalization, normalizedFundsRaised, normalizedRevenue, row.id],
           (updateErr) => {
             if (updateErr) {
-              console.error(`Erreur normalisation capitalization id=${row.id}:`, updateErr.message);
+              console.error(`Erreur normalisation finance id=${row.id}:`, updateErr.message);
             }
           }
         );
@@ -520,8 +564,13 @@ function sanitizeTextField(value, fieldName) {
 }
 
 function sanitizeEnterprisePayload(payload) {
-  const normalizedCapitalization = normalizeCapitalizationField(payload.capitalization);
-  const revenueMillions = parseLocaleNumber(payload.revenue_millions);
+  const sanitizedCapitalization = sanitizeTextField(payload.capitalization, 'capitalization');
+  const sanitizedFundsRaised = sanitizeTextField(payload.funds_raised, 'funds_raised');
+  const sanitizedRevenueMillions = sanitizeTextField(payload.revenue_millions, 'revenue_millions');
+
+  const normalizedCapitalization = normalizeMillionsField(sanitizedCapitalization);
+  const normalizedFundsRaised = normalizeMillionsField(sanitizedFundsRaised);
+  const normalizedRevenueMillions = normalizeMillionsField(sanitizedRevenueMillions, { autoDetectAbsoluteUsd: true });
   return {
     ...payload,
     name: sanitizeTextField(payload.name, 'name'),
@@ -533,8 +582,8 @@ function sanitizeEnterprisePayload(payload) {
     website: sanitizeTextField(payload.website, 'website'),
     logo_url: sanitizeTextField(payload.logo_url, 'logo_url'),
     capitalization: normalizedCapitalization,
-    funds_raised: nullIfEmptyText(sanitizeTextField(payload.funds_raised, 'funds_raised')),
-    revenue_millions: Number.isFinite(revenueMillions) ? revenueMillions : null,
+    funds_raised: normalizedFundsRaised,
+    revenue_millions: normalizedRevenueMillions,
     main_investors: sanitizeTextField(payload.main_investors, 'main_investors'),
     main_competitors: sanitizeTextField(payload.main_competitors, 'main_competitors'),
     participation: sanitizeTextField(payload.participation, 'participation'),
@@ -641,7 +690,8 @@ function parseValidationLevel(value, fallback = 0) {
 
 function parseCapitalizationScore(value) {
   // La valeur est stockée en millions. Score absolu = millions * 1e6 pour trier de façon homogène.
-  return parseCapitalizationToMillions(value) * 1_000_000;
+  const millions = parseCapitalizationToMillions(value);
+  return Number.isFinite(millions) ? millions * 1_000_000 : 0;
 }
 
 function parseEnterpriseTopScore(capitalizationValue, fundsRaisedValue) {
