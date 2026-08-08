@@ -75,19 +75,26 @@ The `analyses/` folder contains the main notebooks used to explore the database 
 
 Notebook: `analyses/competition_analysis.ipynb`
 
-Goal: map company-competitor relationships and produce the final community map using:
-- 3D t-SNE geometry for community detection,
-- Louvain communities on a 3D k-NN graph,
-- 2D rendering for interpretability.
+Goal: map company-competitor relationships and produce a fully 2D final community map.
+
+Current pipeline (simple view):
+- clean and normalize competitor names,
+- build a directed matrix (`company -> competitor`),
+- apply sample selection rules (exclude investor profiles and isolated companies),
+- project actors with 2D t-SNE,
+- detect Louvain communities on a 2D k-NN graph,
+- render multicolor blob communities with thematic labels (no company names in community labels).
 
 Main outputs in `analyses/exports/`:
 - `competitors_raw.csv`
 - `competitors_long.csv`
 - `competitors_aggregated.csv`
 - `cooccurrence_matrix.csv`
-- `coords_3d.csv`
+- `coords_2d.csv`
 - `communities_kmeans_2d.csv`
 - `community_labels_short.csv`
+- `selection_audit_summary.csv`
+- `selection_audit_details.csv`
 - `competition_map_2d_kmeans.html`
 
 ### 2. Semantic Similarity Analysis
@@ -177,6 +184,8 @@ The dataset is designed to evolve through focused contributions:
 - source traceability and change documentation.
 
 ## Disclaimer
+
+At this stage, the data is not yet complete or fully validated; this is an ongoing process focused on the 200 companies with the highest market capitalization and fundraising levels.
 
 This project compiles research data from multiple sources. Information may be incomplete, outdated, partial, or inaccurate.
 
