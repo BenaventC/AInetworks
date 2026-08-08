@@ -9,6 +9,22 @@ description: "Complete and enrich enterprise records in the Réseaux d'Acteurs I
 
 Ce skill guide le processus complet pour identifier et compléter les fiches d'entreprises incomplètes dans la base de données **Réseaux d'Acteurs IA**. L'approche couvre aussi l'import de nouvelles entreprises depuis des listes externes fiables (Wikipedia, Wikidata, Forbes AI 50, CompaniesMarketCap, AI Startups Europe), la normalisation des valeurs et le dédoublonnage.
 
+## Norme d'Encodage Projet (OBLIGATOIRE)
+
+**UTF-8 est la norme d'encodage pour tout le projet** (scripts, CSV, JSON, Markdown, LaTeX, exports, logs).
+
+Règles opérationnelles :
+
+- Toujours lire/écrire les fichiers texte en UTF-8.
+- Éviter les séquences d'échappement d'accents quand le format supporte UTF-8 (ex: LaTeX, Markdown, JSON).
+- Pour les appels API texte : `Content-Type: application/json; charset=utf-8`.
+- En PowerShell, forcer UTF-8 lors des opérations sensibles d'import/export.
+- Contrôle qualité systématique des caractères corrompus (`Ã©`, `Ã¨`, `â€™`, `�`) après traitement.
+
+Règle de correction :
+
+- Si un artefact d'encodage est détecté, corriger immédiatement la source et régénérer l'export concerné.
+
 ## Workflows Disponibles
 
 - **Complétion qualitative (Wikipedia)** : enrichir description, website, capitalization, employees_count.
@@ -105,6 +121,17 @@ Chaque enrichissement doit conserver dans le script/log :
 - raison du choix en cas d'arbitrage.
 
 ## Workflow Recommandé
+
+## Convention Visuelle Pays
+
+Quand un script ou un notebook produit une visualisation par pays, réutiliser la convention du notebook d'analyse compétitive :
+
+- couleurs forcées pour les pays hors Europe les plus structurants,
+- palette verte pour les pays européens,
+- palette de repli stable pour les autres pays,
+- même libellé pays dans les légendes et les exports.
+
+Si un helper partagé existe dans `analyses/country_palette.py`, le réutiliser plutôt que redéfinir une palette locale.
 
 ### 1. Identifier les Fiches Incomplètes
 

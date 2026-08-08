@@ -1,0 +1,29 @@
+id,enterprise,source,target,confidence,reason
+1,Cerebras,Google (TPU). AWS,Google Cloud,high,parenthetical cloud hint
+1,Cerebras,Google Cloud,Google Cloud,high,explicit cloud mention
+3,Mistral AI,Google,DeepMind,high,peer list indicates ai-model competitors
+5,Microsoft,Google,Google,low,mixed peer signals
+8,DeepL,Google Translate,Google Translate,high,explicit product mention
+9,AWS,Google Cloud,Google Cloud,high,explicit cloud mention
+15,IBM,Google,Google Cloud,high,peer list indicates cloud competitors
+17,Nvidia,Google,Google,low,no clear peer signal
+20,Cohere,Google(Deemind),DeepMind,high,explicit deepmind mention
+52,Anysphere,Google(Antigravity),Google (Antigravity),medium,parenthetical unrecognized
+105,Sakana AI,Google DeepMind,DeepMind,high,explicit deepmind mention
+114,ARM Holdings,Google,DeepMind,high,peer list indicates ai-model competitors
+126,Black Forest Labs,Google,Google,low,mixed peer signals
+157,World Labs,Google DeepMind,DeepMind,high,explicit deepmind mention
+158,Apple,Google,Google,low,mixed peer signals
+159,SpaceX,Google Cloud,Google Cloud,high,explicit cloud mention
+160,Tesla,Google(Waymo),Waymo,high,explicit subsidiary mention
+161,Oracle,Google,Google Cloud,high,peer list indicates cloud competitors
+184,WhiteFiber,Google Compute Engine,Google Cloud,high,explicit cloud mention
+228,Ineffable Intelligence,Google(DeepMind),DeepMind,high,explicit deepmind mention
+1568,Snowflake,Google BigQuery,Google Cloud,high,explicit cloud mention
+1573,ByteDance,Google(DeepMind),DeepMind,high,explicit deepmind mention
+1607,Siri,Google Assistant,Google Assistant,high,explicit product mention
+1615,Amazon,Google,Google,low,mixed peer signals
+1668,Meta,Google,Google,low,mixed peer signals
+1836,PolyAI,Google Cloud(Contact Center AI),Google Cloud,high,explicit cloud mention
+1922,AMI labs,Google(DeepMind),DeepMind,high,explicit deepmind mention
+1922,AMI labs,meta(OpenAI & Google DeepMind),DeepMind,high,explicit deepmind mention

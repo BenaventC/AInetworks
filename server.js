@@ -577,6 +577,10 @@ function normalizeOrganizationType(value) {
     return 'NGO';
   }
 
+  if (normalized === 'investor' || normalized === 'investment firm' || normalized === 'venture capital' || normalized === 'vc' || normalized === 'fonds d\'investissement') {
+    return 'Investor';
+  }
+
   return sanitized;
 }
 
@@ -646,6 +650,46 @@ function parseEnterpriseTopScore(capitalizationValue, fundsRaisedValue) {
   return Math.max(capitalizationScore, fundsRaisedScore);
 }
 
+function hasEmptyCompetitorsField(value) {
+  return !String(value || '').trim();
+}
+
+function shouldIncludeCompetitionWithoutEnterprise(row) {
+  return String(row.main_competitors || '').trim().length < 5;
+}
+
+function sortCompetitionWithoutEnterprises(a, b) {
+  const capA = parseCapitalizationToMillions(a.capitalization);
+  const capB = parseCapitalizationToMillions(b.capitalization);
+  if (capB !== capA) {
+    return capB - capA;
+  }
+
+  const fundsA = parseCapitalizationToMillions(a.funds_raised);
+  const fundsB = parseCapitalizationToMillions(b.funds_raised);
+  if (fundsB !== fundsA) {
+    return fundsB - fundsA;
+  }
+
+  return (a.name || '').localeCompare(b.name || '');
+}
+
+function buildEnterpriseNameSearchClause(searchQuery) {
+  const trimmedQuery = String(searchQuery || '').trim();
+  if (!trimmedQuery) {
+    return null;
+  }
+
+  const compactQuery = trimmedQuery
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '');
+
+  return {
+    clause: '(LOWER(TRIM(IFNULL(name, ""))) LIKE LOWER(TRIM(?)) OR LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRIM(IFNULL(name, "")), " ", ""), "-", ""), ".", ""), ",", ""), char(39), "")) LIKE ?)',
+    params: [`${trimmedQuery}%`, `${compactQuery}%`]
+  };
+}
+
 // Récupérer les entreprises avec pagination
 app.get('/api/enterprises', (req, res) => {
   const page = parsePositiveInteger(req.query.page, 1);
@@ -654,10 +698,7 @@ app.get('/api/enterprises', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
-  const cityFilter = (req.query.city || '').trim();
   const segment = req.query.segment || 'pending';
-  const hasSearch = searchQuery.length > 0;
-  const searchValue = `%${searchQuery}%`;
 
   const conditions = [];
   const params = [];
@@ -674,9 +715,10 @@ app.get('/api/enterprises', (req, res) => {
     conditions.push('IFNULL(is_validated, 0) IN (1, 2, 3)');
   }
 
-  if (hasSearch) {
-    conditions.push('(name LIKE ? OR sector LIKE ? OR organization_type LIKE ? OR country LIKE ? OR headquarter_city LIKE ? OR main_investors LIKE ? OR main_competitors LIKE ? OR participation LIKE ? OR main_acquisitions LIKE ? OR key_resources LIKE ? OR strategic_partnerships LIKE ? OR description LIKE ? OR capitalization LIKE ? OR funds_raised LIKE ? OR CAST(revenue_millions AS TEXT) LIKE ?)');
-    params.push(searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue);
+  const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
+  if (nameSearch) {
+    conditions.push(nameSearch.clause);
+    params.push(...nameSearch.params);
   }
 
   if (sectorFilter) {
@@ -694,41 +736,52 @@ app.get('/api/enterprises', (req, res) => {
     params.push(countryFilter);
   }
 
-  if (cityFilter) {
-    conditions.push('LOWER(TRIM(IFNULL(headquarter_city, ""))) = LOWER(TRIM(?))');
-    params.push(cityFilter);
-  }
-
-  if (segment === 'top100' || segment === 'top50') {
+  if (segment === 'top100' || segment === 'top50' || segment === 'companieswithoutcompetitors') {
     const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
     db.all(`SELECT * FROM enterprises ${whereClause}`, params, (err, rows) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
 
-      const sorted = rows
-        .map((row) => ({
-          ...row,
-          ranking_score: parseEnterpriseTopScore(row.capitalization, row.funds_raised)
-        }))
-        .filter((row) => row.ranking_score > 0)
-        .sort((a, b) => {
-          if (b.ranking_score !== a.ranking_score) {
-            return b.ranking_score - a.ranking_score;
-          }
-          return (a.name || '').localeCompare(b.name || '');
-        })
-        .slice(0, 200);
+      let sorted;
+
+      if (segment === 'companieswithoutcompetitors') {
+        sorted = rows
+          .filter(shouldIncludeCompetitionWithoutEnterprise)
+          .sort(sortCompetitionWithoutEnterprises);
+      } else {
+        sorted = rows
+          .map((row) => ({
+            ...row,
+            ranking_score: parseEnterpriseTopScore(row.capitalization, row.funds_raised)
+          }))
+          .filter((row) => row.ranking_score > 0)
+          .sort((a, b) => {
+            if (b.ranking_score !== a.ranking_score) {
+              return b.ranking_score - a.ranking_score;
+            }
+            return (a.name || '').localeCompare(b.name || '');
+          })
+          .slice(0, 200);
+      }
+
+      const total = sorted.length;
+      const totalPages = Math.max(1, Math.ceil(total / limit));
+      const safePage = Math.min(page, totalPages);
+      const safeOffset = (safePage - 1) * limit;
+      const pageItems = segment === 'top100' || segment === 'top50'
+        ? sorted.slice(0, 200)
+        : sorted.slice(safeOffset, safeOffset + limit);
 
       return res.json({
-        items: sorted,
+        items: pageItems,
         pagination: {
-          page: 1,
-          limit: 100,
-          total: sorted.length,
-          totalPages: 1,
-          hasNextPage: false,
-          hasPreviousPage: false
+          page: segment === 'top100' || segment === 'top50' ? 1 : safePage,
+          limit: segment === 'top100' || segment === 'top50' ? 100 : limit,
+          total,
+          totalPages: segment === 'top100' || segment === 'top50' ? 1 : totalPages,
+          hasNextPage: segment === 'top100' || segment === 'top50' ? false : safePage < totalPages,
+          hasPreviousPage: segment === 'top100' || segment === 'top50' ? false : safePage > 1
         }
       });
     });
@@ -776,9 +829,6 @@ app.get('/api/enterprises/filters', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
-  const cityFilter = (req.query.city || '').trim();
-  const hasSearch = searchQuery.length > 0;
-  const searchValue = `%${searchQuery}%`;
 
   const addSectorCondition = (conditions, params, value) => {
     if (!value) return;
@@ -791,13 +841,16 @@ app.get('/api/enterprises/filters', (req, res) => {
     );
   };
 
-  const buildWhere = ({ includeSearch, includeSector, includeCountry, includeCity }) => {
+  const buildWhere = ({ includeSearch, includeSector, includeCountry }) => {
     const conditions = [];
     const params = [];
 
-    if (includeSearch && hasSearch) {
-      conditions.push('(name LIKE ? OR sector LIKE ? OR country LIKE ? OR headquarter_city LIKE ? OR main_investors LIKE ? OR main_competitors LIKE ? OR participation LIKE ? OR main_acquisitions LIKE ? OR key_resources LIKE ? OR strategic_partnerships LIKE ? OR description LIKE ? OR capitalization LIKE ? OR funds_raised LIKE ? OR CAST(revenue_millions AS TEXT) LIKE ?)');
-      params.push(searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue);
+    if (includeSearch) {
+      const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
+      if (nameSearch) {
+        conditions.push(nameSearch.clause);
+        params.push(...nameSearch.params);
+      }
     }
 
     if (includeSector) {
@@ -807,11 +860,6 @@ app.get('/api/enterprises/filters', (req, res) => {
     if (includeCountry && countryFilter) {
       conditions.push('LOWER(TRIM(IFNULL(country, ""))) = LOWER(TRIM(?))');
       params.push(countryFilter);
-    }
-
-    if (includeCity && cityFilter) {
-      conditions.push('LOWER(TRIM(IFNULL(headquarter_city, ""))) = LOWER(TRIM(?))');
-      params.push(cityFilter);
     }
 
     const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
@@ -853,21 +901,18 @@ app.get('/api/enterprises/filters', (req, res) => {
       .sort(sortByCountThenName);
   };
 
-  const sectorScope = buildWhere({ includeSearch: true, includeSector: false, includeCountry: true, includeCity: true });
-  const countryScope = buildWhere({ includeSearch: true, includeSector: true, includeCountry: false, includeCity: true });
-  const cityScope = buildWhere({ includeSearch: true, includeSector: true, includeCountry: true, includeCity: false });
+  const sectorScope = buildWhere({ includeSearch: true, includeSector: false, includeCountry: true });
+  const countryScope = buildWhere({ includeSearch: true, includeSector: true, includeCountry: false });
 
   Promise.all([
     runQuery(`SELECT sector FROM enterprises ${sectorScope.whereClause}`, sectorScope.params),
-    runQuery(`SELECT country FROM enterprises ${countryScope.whereClause}`, countryScope.params),
-    runQuery(`SELECT headquarter_city FROM enterprises ${cityScope.whereClause}`, cityScope.params)
+    runQuery(`SELECT country FROM enterprises ${countryScope.whereClause}`, countryScope.params)
   ])
-    .then(([sectorRows, countryRows, cityRows]) => {
+    .then(([sectorRows, countryRows]) => {
       const sectors = aggregateFromRows(sectorRows, (row) => String(row.sector || '').split(','));
       const countries = aggregateFromRows(countryRows, (row) => [row.country]);
-      const cities = aggregateFromRows(cityRows, (row) => [row.headquarter_city]);
 
-      res.json({ sectors, countries, cities });
+      res.json({ sectors, countries });
     })
     .catch((err) => {
       res.status(500).json({ error: err.message });

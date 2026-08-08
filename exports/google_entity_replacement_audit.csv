@@ -1,0 +1,29 @@
+id,enterprise,source,target,confidence,reason
+1,Cerebras,Google (TPU). AWS,Google Cloud,high,parenthetical cloud hint
+1,Cerebras,Google Cloud,Google Cloud,high,explicit cloud product mention
+3,Mistral AI,Google,Google,low,mixed ai/cloud context
+5,Microsoft,Google,Google Cloud,medium,cloud-peers context
+8,DeepL,Google Translate,Google Translate,high,explicit product mention
+9,AWS,Google Cloud,Google Cloud,high,explicit cloud product mention
+15,IBM,Google,Google,low,mixed ai/cloud context
+17,Nvidia,Google,Google,low,insufficient context
+20,Cohere,Google(Deemind),Google DeepMind,high,explicit deepmind mention
+52,Anysphere,Google(Antigravity),Google (Antigravity),medium,parenthetical unrecognized
+105,Sakana AI,Google DeepMind,Google DeepMind,high,explicit deepmind mention
+114,ARM Holdings,Google,Google,low,insufficient context
+126,Black Forest Labs,Google,Google,low,mixed ai/cloud context
+157,World Labs,Google DeepMind,Google DeepMind,high,explicit deepmind mention
+158,Apple,Google,Google DeepMind,medium,ai-peers context
+159,SpaceX,Google Cloud,Google Cloud,high,explicit cloud product mention
+160,Tesla,Google(Waymo),Waymo,high,explicit subsidiary mention
+161,Oracle,Google,Google,low,mixed ai/cloud context
+184,WhiteFiber,Google Compute Engine,Google Cloud,high,explicit cloud product mention
+228,Ineffable Intelligence,Google(DeepMind),Google DeepMind,high,explicit deepmind mention
+1568,Snowflake,Google BigQuery,Google Cloud,high,explicit cloud product mention
+1573,ByteDance,Google(DeepMind),Google DeepMind,high,explicit deepmind mention
+1607,Siri,Google Assistant,Google Assistant,high,explicit product mention
+1615,Amazon,Google,Google Cloud,medium,cloud-peers context
+1668,Meta,Google,Google,low,mixed ai/cloud context
+1836,PolyAI,Google Cloud(Contact Center AI),Google Cloud,high,explicit cloud product mention
+1922,AMI labs,Google(DeepMind),Google DeepMind,high,explicit deepmind mention
+1922,AMI labs,meta(OpenAI & Google DeepMind),Google DeepMind,high,explicit deepmind mention

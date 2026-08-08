@@ -1,0 +1,29 @@
+id,enterprise,source,target,confidence,reason,peers_sample
+1,Cerebras,Google (TPU). AWS,Google Cloud,high,parenthetical cloud hint,Nvidia | AMD | Intel | Microsoft(Azure) | Google Cloud | CoreWeave
+1,Cerebras,Google Cloud,Google Cloud,high,explicit cloud mention,Nvidia | AMD | Intel | Google (TPU). AWS | Microsoft(Azure) | CoreWeave
+3,Mistral AI,Google,Google DeepMind,high,peer list indicates ai-model competitors,OpenAI | Cohere | Anthropic | Meta | Aleph Alpha | H company | Poolside | DeepL
+5,Microsoft,Google,Google,low,mixed peer signals,Amazon | Meta | Apple | Sony | Oracle
+8,DeepL,Google Translate,Google Translate,high,explicit product mention,Microsoft Translator | Reverso and Yandex | Translate.
+9,AWS,Google Cloud,Google Cloud,high,explicit cloud mention,Microsoft Azure | Alibaba | IBM | Oracle
+15,IBM,Google,Google Cloud,high,peer list indicates cloud competitors,Microsoft | Oracle | SAP | Accenture | Capgemini | Infosy | Cognizant | Tata
+17,Nvidia,Google,Google,low,no clear peer signal,AMD | Intel | Broadcom | Qualcomm
+20,Cohere,Google(Deemind),Google DeepMind,high,explicit deepmind mention,Anthropic | Mistral | OpenAI | Meta
+52,Anysphere,Google(Antigravity),Google (Antigravity),medium,parenthetical unrecognized,Microsoft(GitHub Copilot) | Anthropic(Claude Code) | Windsurf | Codeium | OpenAI | meta(Muse)
+105,Sakana AI,Google DeepMind,Google DeepMind,high,explicit deepmind mention,OpenAI | Anthropic | Mistral AI | Ineffable Intelligence | Cognition AI | Poolside | Hugging Face | Cohere
+114,ARM Holdings,Google,Google DeepMind,high,peer list indicates ai-model competitors,Intel | AMD | Meta | Qualcomm
+126,Black Forest Labs,Google,Google,low,mixed peer signals,Midjourney | OpenAI | Stability AI | Kuaishou | Shengshu Technology | Zhipu AI | Alibaba | Tencent
+157,World Labs,Google DeepMind,Google DeepMind,high,explicit deepmind mention,AMI Labs | Odyssey
+158,Apple,Google,Google,low,mixed peer signals,Microsoft | Samsung | Amazon | Xiaomi | Huawei | Oppo | Vivo | Lenovo
+159,SpaceX,Google Cloud,Google Cloud,high,explicit cloud mention,Boeing | ArianeGroup | AWS(AWS) | Microsoft Azure | CoreWeave | Lambda Labs | OpenAI
+160,Tesla,Google(Waymo),Waymo,high,explicit subsidiary mention,BYD | Volkswagen Group | BMW | Hyundai-Kia | Toyota | Rivian | Lucid Motors | Nio
+161,Oracle,Google,Google Cloud,high,peer list indicates cloud competitors,Amazon | Microsoft | SAP | Saleforce
+184,WhiteFiber,Google Compute Engine,Google Cloud,high,explicit cloud mention,CoreWeave | Lambda Labs | Voltage Park | IREN Cloud | Equinix DataBank | Microsoft Azure | AWS(AWS)
+228,Ineffable Intelligence,Google(DeepMind),Google DeepMind,high,explicit deepmind mention,Recursive Superintelligence | AMI Labs
+1568,Snowflake,Google BigQuery,Google Cloud,high,explicit cloud mention,Databricks | Amazon Redshift
+1573,ByteDance,Google(DeepMind),Google DeepMind,high,explicit deepmind mention,Meta | YouTube | Tencent | OpenAI
+1607,Siri,Google Assistant,Google Assistant,high,explicit product mention,Amazon Alexa | Samsung Bixby
+1615,Amazon,Google,Google,low,mixed peer signals,Walmart | Temu | Shein | Alibaba | Microsoft | Netflix | Disney | Apple
+1668,Meta,Google,Google,low,mixed peer signals,ByteDance | Snap | X | Apple | SnapChat | Amazon | Sony | OpenAI
+1836,PolyAI,Google Cloud(Contact Center AI),Google Cloud,high,explicit cloud mention,Bland AI | Vapi | Retell AI | Parloa | IBM(watsonx)
+1922,AMI labs,Google(DeepMind),Google DeepMind,high,explicit deepmind mention,Ineffable Intelligence | Thinking Machines Lab | OpenAI | meta(OpenAI & Google DeepMind)
+1922,AMI labs,meta(OpenAI & Google DeepMind),Google DeepMind,high,explicit deepmind mention,Ineffable Intelligence | Thinking Machines Lab | OpenAI | Google(DeepMind)

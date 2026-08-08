@@ -13,7 +13,6 @@ let enterpriseSearchDebounceTimer = null;
 let enterpriseSegment = 'later';
 let enterpriseSectorFilter = '';
 let enterpriseCountryFilter = '';
-let enterpriseCityFilter = '';
 let enterpriseFilterOptionsLoadingPromise = null;
 let partnershipSearchQuery = '';
 let partnershipSearchDebounceTimer = null;
@@ -23,6 +22,7 @@ const enterpriseSegmentCounts = {
   partial: 0,
   validated: 0,
   later: 0,
+  companieswithoutcompetitors: 0,
   top100: 0
 };
 const partnershipSegmentCounts = {
@@ -279,7 +279,6 @@ function initEventListeners() {
   document.getElementById('enterpriseSearch').addEventListener('input', searchEnterprises);
   document.getElementById('enterpriseSectorFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('enterpriseCountryFilter').addEventListener('change', onEnterpriseFiltersChanged);
-  document.getElementById('enterpriseCityFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('resetEnterpriseFiltersBtn').addEventListener('click', resetEnterpriseFilters);
   document.querySelectorAll('.enterprise-subtab-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -323,9 +322,6 @@ async function loadEnterprises() {
     }
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
-    }
-    if (enterpriseCityFilter) {
-      params.set('city', enterpriseCityFilter);
     }
 
     const response = await fetch(`/api/enterprises?${params.toString()}`);
@@ -422,6 +418,9 @@ function getEnterpriseEmptyLabel() {
   if (enterpriseSegment === 'later') {
     return 'No company marked for later review';
   }
+  if (enterpriseSegment === 'companieswithoutcompetitors') {
+    return 'No company without competitors';
+  }
   if (enterpriseSegment === 'top100') {
     return 'No available valuation for Top100';
   }
@@ -443,6 +442,7 @@ function renderEnterpriseSubtabCounters() {
     partial: 'Partially validated',
     validated: 'Validated',
     later: 'To review later',
+    companieswithoutcompetitors: 'Companies without competitors',
     top100: 'Top100'
   };
 
@@ -465,9 +465,6 @@ async function refreshEnterpriseSegmentCounts() {
     if (enterpriseCountryFilter) {
       filterParams.set('country', enterpriseCountryFilter);
     }
-    if (enterpriseCityFilter) {
-      filterParams.set('city', enterpriseCityFilter);
-    }
 
     const withFilters = (segment) => {
       const params = new URLSearchParams(filterParams);
@@ -477,23 +474,25 @@ async function refreshEnterpriseSegmentCounts() {
       return `/api/enterprises?${params.toString()}`;
     };
 
-    const [pendingRes, partialRes, validatedRes, laterRes, top100Res] = await Promise.all([
+    const [pendingRes, partialRes, validatedRes, laterRes, competitionWithoutRes, top100Res] = await Promise.all([
       fetch(withFilters('pending')),
       fetch(withFilters('partial')),
       fetch(withFilters('validated')),
       fetch(withFilters('later')),
+      fetch(withFilters('companieswithoutcompetitors')),
       fetch(withFilters('top100'))
     ]);
 
-    const [pendingData, partialData, validatedData, laterData, top100Data] = await Promise.all([
+    const [pendingData, partialData, validatedData, laterData, competitionWithoutData, top100Data] = await Promise.all([
       pendingRes.json(),
       partialRes.json(),
       validatedRes.json(),
       laterRes.json(),
+      competitionWithoutRes.json(),
       top100Res.json()
     ]);
 
-    if (!pendingRes.ok || !partialRes.ok || !validatedRes.ok || !laterRes.ok || !top100Res.ok) {
+    if (!pendingRes.ok || !partialRes.ok || !validatedRes.ok || !laterRes.ok || !competitionWithoutRes.ok || !top100Res.ok) {
       throw new Error('Error while loading counters');
     }
 
@@ -501,6 +500,7 @@ async function refreshEnterpriseSegmentCounts() {
     enterpriseSegmentCounts.partial = partialData.pagination?.total || 0;
     enterpriseSegmentCounts.validated = validatedData.pagination?.total || 0;
     enterpriseSegmentCounts.later = laterData.pagination?.total || 0;
+    enterpriseSegmentCounts.companieswithoutcompetitors = competitionWithoutData.pagination?.total || 0;
     enterpriseSegmentCounts.top100 = top100Data.pagination?.total || 0;
     renderEnterpriseSubtabCounters();
   } catch (error) {
@@ -767,7 +767,6 @@ function searchEnterprises(e) {
 async function onEnterpriseFiltersChanged() {
   enterpriseSectorFilter = document.getElementById('enterpriseSectorFilter').value;
   enterpriseCountryFilter = document.getElementById('enterpriseCountryFilter').value;
-  enterpriseCityFilter = document.getElementById('enterpriseCityFilter').value;
   enterprisePagination.page = 1;
   await loadEnterpriseFilterOptions();
   syncEnterpriseFilterStateFromInputs();
@@ -779,18 +778,15 @@ async function resetEnterpriseFilters() {
   enterpriseSearchQuery = '';
   enterpriseSectorFilter = '';
   enterpriseCountryFilter = '';
-  enterpriseCityFilter = '';
   enterprisePagination.page = 1;
 
   const searchInput = document.getElementById('enterpriseSearch');
   const sectorSelect = document.getElementById('enterpriseSectorFilter');
   const countrySelect = document.getElementById('enterpriseCountryFilter');
-  const citySelect = document.getElementById('enterpriseCityFilter');
 
   if (searchInput) searchInput.value = '';
   if (sectorSelect) sectorSelect.value = '';
   if (countrySelect) countrySelect.value = '';
-  if (citySelect) citySelect.value = '';
 
   await loadEnterpriseFilterOptions();
   syncEnterpriseFilterStateFromInputs();
@@ -815,9 +811,6 @@ async function loadEnterpriseFilterOptions() {
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
     }
-    if (enterpriseCityFilter) {
-      params.set('city', enterpriseCityFilter);
-    }
 
     const response = await fetch(`/api/enterprises/filters?${params.toString()}`);
     const payload = await response.json();
@@ -828,7 +821,6 @@ async function loadEnterpriseFilterOptions() {
 
     populateEnterpriseFilterSelect('enterpriseSectorFilter', payload.sectors || [], 'All sectors');
     populateEnterpriseFilterSelect('enterpriseCountryFilter', payload.countries || [], 'All countries');
-    populateEnterpriseFilterSelect('enterpriseCityFilter', payload.cities || [], 'All cities');
   })();
 
   try {
@@ -844,11 +836,9 @@ async function loadEnterpriseFilterOptions() {
 function syncEnterpriseFilterStateFromInputs() {
   const sectorSelect = document.getElementById('enterpriseSectorFilter');
   const countrySelect = document.getElementById('enterpriseCountryFilter');
-  const citySelect = document.getElementById('enterpriseCityFilter');
 
   enterpriseSectorFilter = sectorSelect ? sectorSelect.value : '';
   enterpriseCountryFilter = countrySelect ? countrySelect.value : '';
-  enterpriseCityFilter = citySelect ? citySelect.value : '';
 }
 
 function populateEnterpriseFilterSelect(selectId, values, defaultLabel) {

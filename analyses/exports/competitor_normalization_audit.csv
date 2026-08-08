@@ -1,0 +1,92 @@
+company,source,normalized,reason
+Google,Perpexity AI,Perplexity AI,alias_raw
+SpaceX,AWS(AWS),AWS,alias_raw
+SpaceX,Microsoft Azure,Microsoft,alias_raw
+AWS,Microsoft Azure,Microsoft,alias_raw
+AMD,Alphabet(TPU),Google,alphabet_to_google
+ByteDance,YouTube,Google,alias_raw
+Oracle,Azure,Microsoft,alias_raw
+YouTube,Instagram,Meta,alias_raw
+Adobe,OpenAI(Sora),OpenAI,alias_base
+Adobe,Rephrase.ai(2023),Rephrase.ai,canonical_base
+IBM,OpenIA,OpenAI,alias_raw
+Databricks,Google Cloud(BigQuery),Google Cloud,google_cloud_hint
+Databricks,Azure,Microsoft,alias_raw
+Salesforce,Microsoft (Dynamics 365),Microsoft,canonical_base
+Salesforce,Oracle (CX Cloud),Oracle,canonical_base
+Salesforce,SAP (Customer Experience),SAP,canonical_base
+OpenAI,Llama,Meta,alias_raw
+Snowflake,Amazon(Redshift),Amazon,canonical_base
+Cambricon Technologies,Alibaba Group (T-Head),Alibaba Group,fallback_clean
+Cloudflare,Amazon(AWS Shield),Amazon,canonical_base
+Cloudflare,Microsoft(Azure),Microsoft,alias_raw
+DeepSeek,Moonshot AI (Kimi),Moonshot AI,canonical_base
+DeepSeek,Alibaba(Qwen).,Alibaba.,fallback_clean
+Anysphere,Google(Antigravity),DeepMind,google_deepmind_hint
+Anysphere,Microsoft(GitHub Copilot),Microsoft,canonical_base
+Anysphere,Anthropic(Claude Code),Anthropic,canonical_base
+Anysphere,meta(Muse),Meta,canonical_base
+Figure AI,Tesla (Optimus),Tesla,canonical_base
+Figure AI,Boston Dynamics (Atlas),Boston Dynamics,canonical_base
+Figure AI,Agility Robotics (Digit),Agility Robotics,fallback_clean
+Cognition AI,GitHub,Microsoft,alias_raw
+Perplexity,OpenAI(Chatgpt),OpenAI,alias_base
+Perplexity,Deepmind(Gemini),DeepMind,alias_base
+Perplexity,Microsoft(Copilot),Microsoft,canonical_base
+Perplexity,Anthropic(Claude),Anthropic,canonical_base
+Boston Dynamics,Tesla(Optimus),Tesla,canonical_base
+Anthropic,Alibaba(Qwen),Alibaba,canonical_base
+Cerebras,Microsoft(Azure),Microsoft,alias_raw
+Langfuse,WandB Prompts (Weights & Biases),WandB Prompts,fallback_clean
+Nscale,Lambda Labs (Lambda),Lambda Labs,fallback_clean
+Nscale,Nebius Group (Nebius),Nebius Group,fallback_clean
+Celonis,SAP(Signavio),SAP,canonical_base
+Celonis,Microsoft( Power Automate),Microsoft,canonical_base
+Celonis,IBM (Process Mining),IBM,canonical_base
+Celonis,Software AG(ARIS),Software AG,fallback_clean
+Harvey,CoCounsel(Thomson Reuters),CoCounsel,fallback_clean
+Harvey,Lexis+ AI / Protégé(LexisNexis),Lexis+ AI / Protégé,fallback_clean
+"Midjourney, Inc.",openAI(DAall-e),OpenAI,alias_base
+"Midjourney, Inc.",Adobe(firefly),Adobe,canonical_base
+1X Technologies,Tesla(Optimus),Tesla,canonical_base
+Cognition,Anysphere(Cursor),Anysphere,canonical_base
+Cognition,Anthropic(Claude),Anthropic,canonical_base
+Cognition,Githbub(Copilot),Githbub,fallback_clean
+Tempus AI,Roche (Flatiron Health ),Roche,fallback_clean
+SentinelOne,Microsoft(Defender),Microsoft,canonical_base
+UiPath,Microsoft( Power Automate),Microsoft,canonical_base
+ContentSquare,Azure(Microsoft Clarity),Microsoft,alias_base
+Abridge,Microsoft(Nuance DAX Copilot),Microsoft,canonical_base
+Hugging Face,Microsoft(Github Models),Microsoft,canonical_base
+Synthesia,OpenAI(Sora),OpenAI,alias_base
+Synthesia,Runway(Gen-2 / Gen-3),Runway,canonical_base
+Doctolib,Microsoft(Nuance),Microsoft,canonical_base
+SoundHound AI,Azure,Microsoft,alias_raw
+ManoMano,Leroy Merlin(Groupe Adeo),Leroy Merlin,fallback_clean
+DeepL,Google Translate,Google,google_core_product
+DeepL,Microsoft Translator,Microsoft,alias_raw
+Kaola,JD Worldwide (groupe JD.com),JD Worldwide,fallback_clean
+Kaola,Xiaohongshu (Little Red Book),Xiaohongshu,fallback_clean
+Kaola,Bytedance (Douyin),ByteDance,canonical_base
+Pasqal,IBM(Quantum),IBM,canonical_base
+Pasqal,Google(Quantum AI),Google,google_core_product
+WeRide,Baidu (Apollo Go),Baidu,fallback_clean
+Weibo,Tencent(wechat),Tencent,fallback_clean
+Ambiance Healthcare,Microsoft(Nuance DAX copilot),Microsoft,canonical_base
+Lightspeed,Adobe(Magento),Adobe,canonical_base
+WhiteFiber,Microsoft Azure,Microsoft,alias_raw
+WhiteFiber,AWS(AWS),AWS,alias_raw
+01.AI,LLama,Meta,alias_raw
+Black Forest AI GmbH,Kuaishou (Kling AI),Kuaishou,canonical_base
+Black Forest AI GmbH,MiniMax (Video),MiniMax,canonical_base
+Glean,Amazon(Kendra),Amazon,canonical_base
+Glean,Google(Gemini),DeepMind,google_deepmind_hint
+PolyAI,IBM(watsonx),IBM,canonical_base
+Corti,Microsoft(DAX),Microsoft,canonical_base
+Corti,AWS(AWS HealthScribe),AWS,alias_base
+Prophesee,iniVation(Suisse),iniVation,fallback_clean
+Comand AI,Airbus (Defence and Space),Airbus,fallback_clean
+Yseop,grandes CRO (Clinical Research Organizations),grandes CRO,fallback_clean
+Nabla,Microsoft(Nuance/DAX Epic) & Oracle (Oracle Health),Microsoft & Oracle,fallback_clean
+OLLAMA,Huggingface(Transformers),Huggingface,fallback_clean
+EbenBuild,Dassault Systèmes(Projet Living Heart / Living Lung),Dassault Systèmes,canonical_base

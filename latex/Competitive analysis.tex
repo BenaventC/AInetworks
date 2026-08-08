@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+
+\geometry{margin=2.5cm}
+\onehalfspacing
+
+\title{Competitive Analysis\\\large Vers une mesure relationnelle de la rivalit\'e strat\'egique}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Cet article propose un cadre d'analyse de la comp\'etition fond\'e sur les perceptions crois\'ees de rivalit\'e entre entreprises. Nous formulons la question suivante: comment d\'ecrire, sur une base reproductible, la structure de la rivalit\'e strat\'egique \`a partir des d\'eclarations \``qui consid\`ere qui comme concurrent''? La contribution est double: (i) une formalisation en deux dimensions, la vuln\'erabilit\'e et le clout, et (ii) une op\'erationnalisation sur matrice dirig\'ee de cooccurrence concurrentielle. L'illustration empirique montre que cette grille distingue des profils strat\'egiques diff\'erenci\'es (dominance relationnelle, centralit\'e sous tension, fragilit\'e concurrentielle), et fournit une base de suivi dynamique des rapports de force.
+\end{abstract}
+
+\section{Introduction}
+La litt\'erature en strat\'egie consid\`ere la rivalit\'e comme un ph\'enom\`ene relationnel et dynamique, structur\'e par des actions-r\'eactions entre acteurs interd\'ependants \citep{porter1980,chenmacmillan1992,chenmiller2012}. Pourtant, une grande partie des diagnostics comp\'etitifs reste descriptive et faiblement mesur\'ee, en particulier lorsque les fronti\`eres sectorielles sont mouvantes (plateformes, IA, convergence techno-industrielle).
+
+Ce travail traite la question de recherche suivante: \emph{dans quelle mesure les perceptions d'interd\'ependance concurrentielle permettent-elles de construire des m\'etriques robustes de position strat\'egique?}
+
+Nous d\'efendons trois id\'ees directrices. Premi\`erement, la concurrence est un processus de r\'eaction \`a l'action des autres. Deuxi\`emement, l'intensit\'e concurrentielle r\'esulte de l'articulation entre agressivit\'e et vuln\'erabilit\'e. Troisi\`emement, ces dimensions peuvent \^etre mesur\'ees de mani\`ere transparente par sommes de lignes et de colonnes d'une matrice dirig\'ee.
+
+\section{La concurrence: une question de r\'eaction \`a l'action des autres}
+Dans une lecture strat\'egique, la concurrence n'est pas seulement un \''etat du march\'e, mais un processus dynamique de r\'eactions crois\'ees. Une entreprise agit (innovation, prix, extension, alliance, acquisition), et ces actions modifient les anticipations adverses. La performance devient d\`es lors contextuelle: une m\^eme d\'ecision produit des effets diff\'erenci\'es selon la configuration de rivalit\'e.
+
+L'unit\'e d'analyse pertinente est donc la position relative d'un acteur dans un r\'eseau d'interd\'ependances. La donn\'ee \``qui cite qui comme concurrent'' capture pr\'ecis\'ement cette dimension relationnelle: elle observe la rivalit\'e per\c cue, c'est-\`a-dire la carte cognitive qui guide les r\'eponses strat\'egiques effectives \citep{chen1996amr,kilduff2010}.
+
+\section{La concurrence: le fruit de l'agressivit\'e et de la vuln\'erabilit\'e}
+Une concurrence intense se manifeste souvent par la combinaison de deux forces: l'agressivit\'e strat\'egique et la vuln\'erabilit\'e structurelle.
+
+L'agressivit\'e (ou \emph{clout concurrentiel}) d\'ecrit la capacit\'e d'un acteur \`a appara\^itre fr\'equemment dans le radar concurrentiel des autres. Un acteur agressif n'est pas n\'ecessairement celui qui attaque explicitement, mais celui dont la pr\'esence, la trajectoire ou les ressources obligent un grand nombre d'entreprises \`a se repositionner.
+
+La vuln\'erabilit\'e d\'ecrit, \`a l'inverse, le degr\'e d'exposition d'une entreprise \`a la pression concurrentielle per\c cue. Une entreprise vuln\'erable est une entreprise qui reconna\^it de nombreux concurrents significatifs, ce qui peut signaler une pression forte sur ses marges de manoeuvre, son territoire de diff\'erenciation, ou son rythme d'innovation.
+
+Ces deux dimensions ne sont pas oppos\'ees: un acteur peut \^etre simultan\'ement tr\`es visible (fort clout) et tr\`es expos\'e (forte vuln\'erabilit\'e). Cette articulation conduit \`a quatre configurations strat\'egiques (dominance, centralit\'e sous tension, fragilit\'e, p\'eriph\'erie).
+
+\subsection*{Propositions de recherche}
+Pour inscrire l'analyse dans un format acad\'emique testable, nous formulons quatre propositions:
+\begin{itemize}
+    \item \textbf{H1}: plus la vuln\'erabilit\'e d'un acteur est \`elev\'ee, plus son environnement concurrentiel per\c cu est dense;
+    \item \textbf{H2}: plus le clout d'un acteur est \`elev\'e, plus il occupe une position de menace centrale dans le champ comp\'etitif;
+    \item \textbf{H3}: les acteurs \`a fort clout et faible vuln\'erabilit\'e sont associ\'es \`a des positions de domination relative;
+    \item \textbf{H4}: les acteurs \`a faible clout et forte vuln\'erabilit\'e pr\'esentent une fragilit\'e concurrentielle accrue.
+\end{itemize}
+
+\section{Construire les m\'etriques}
+On repr\'esente le syst\`eme concurrentiel par une matrice dirig\'ee $M \in \mathbb{R}^{n \times p}$, o\`u chaque ligne $i$ correspond \`a une entreprise focale et chaque colonne $j$ \`a un acteur per\c cu comme concurrent. L'entr\'ee $M_{ij}$ mesure l'intensit\'e (ici, la fr\'equence) avec laquelle l'entreprise $i$ associe l'acteur $j$ \`a son espace de rivalit\'e.
+
+\subsection*{Vuln\'erabilit\'e}
+La vuln\'erabilit\'e de l'entreprise $i$ est la somme de sa ligne:
+\[
+V_i = \sum_j M_{ij}.
+\]
+Cette quantit\'e mesure l'ampleur de la pression concurrentielle per\c cue par $i$. Plus $V_i$ est \`elev\'e, plus l'entreprise d\'eclare un environnement concurrentiel dense.
+
+\subsection*{Clout}
+Le clout de l'acteur $j$ est la somme de sa colonne:
+\[
+C_j = \sum_i M_{ij}.
+\]
+Cette quantit\'e mesure la fr\'equence avec laquelle $j$ est per\c cu comme concurrent par les autres. Plus $C_j$ est \`elev\'e, plus $j$ occupe une place centrale dans la perception concurrentielle globale.
+
+\subsection*{Lecture strat\'egique conjointe}
+La mise en regard de $(V_i, C_i)$ pour un m\^eme acteur permet un diagnostic strat\'egique simple et robuste:
+\begin{itemize}
+    \item fort $C_i$, faible $V_i$: position d'influence concurrentielle;
+    \item fort $C_i$, fort $V_i$: acteur central sous forte tension;
+    \item faible $C_i$, fort $V_i$: position vuln\'erable et peu prescriptive;
+    \item faible $C_i$, faible $V_i$: niche ou position p\'eriph\'erique.
+\end{itemize}
+
+Cette grille peut ensuite \^etre enrichie par des normalisations (taille, secteur, g\'eographie), des pond\'erations par r\'ecence, et des analyses dynamiques pour suivre l'\'evolution des rapports de force.
+
+\subsection*{Strat\'egie empirique et reproductibilit\'e}
+L'op\'erationnalisation suit trois \`etapes: (i) extraction d'une table longue entreprise--concurrent, (ii) construction de la matrice dirig\'ee $M$, (iii) export des indicateurs de lignes et colonnes. Les sorties \texttt{cooccurrence\_row\_sums.csv}, \texttt{cooccurrence\_column\_sums.csv} et \texttt{enterprise\_vulnerability\_clout.csv} garantissent la reproductibilit\'e des r\'esultats et la tra\c cabilit\'e des transformations.
+
+\subsection*{Exemple empirique (exports actuels)}
+Les exports produits dans l'analyse permettent une premi\`ere lecture op\'erationnelle de ces deux dimensions.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lrrl}
+\toprule
+Acteur & Vulnerability & Clout & Lecture strat\'egique \\
+\midrule
+Apple & 16 & 9 & Expos\'e et visible \\
+Tesla & 14 & 6 & Exposition \`a surveiller \\
+Scale AI & 13 & 1 & Forte exposition, faible centralit\'e \\
+OpenAI & 12 & 19 & Influence \'elev\'ee sous tension \\
+Meta & 12 & 13 & Acteur central bilat\'eral \\
+\bottomrule
+\end{tabular}
+\caption{Illustration \`a partir de \texttt{enterprise\_vulnerability\_clout.csv}.}
+\end{table}
+
+En compl\'ement, l'export \texttt{cooccurrence\_column\_sums.csv} montre des acteurs souvent per\c cus comme concurrents (par exemple Google, Microsoft, OpenAI). Cela sugg\`ere une structure de march\'e o\`u quelques r\'ef\'erences concentrent une part importante de l'attention concurrentielle.
+
+\section{Discussion}
+Les r\'esultats appuient une lecture relationnelle de la concurrence: la centralit\'e de menace (clout) et l'exposition per\c cue (vuln\'erabilit\'e) ne se confondent pas. Cette dissociation est strat\'egiquement utile car elle \`evite de r\'eduire l'intensit\'e concurrentielle \`a la seule taille d'acteur ou \`a la seule notori\'et\'e.
+
+Sur le plan manag\'erial, la matrice $(V_i, C_i)$ permet de prioriser des actions distinctes: consolidation de position pour les acteurs dominants, d\'efense de front pour les acteurs sous tension, ou sp\'ecialisation pour les profils vuln\'erables.
+
+\subsection*{Validit\'e et limites}
+Trois limites principales doivent \^etre explicites:
+\begin{itemize}
+    \item \textbf{Biais de d\'eclaration}: la matrice refl\`ete des perceptions d'acteurs, pas une \``v\'erit\'e'' objective unique;
+    \item \textbf{Effets de notori\'et\'e}: certains noms tr\`es visibles sont sur-cit\'es, ind\'ependamment de la proximit\'e comp\'etitive r\'eelle;
+    \item \textbf{H\'et\'erog\'en\'eit\'e des libell\'es}: les variantes nominales peuvent diluer ou gonfler les scores si la normalisation n'est pas stricte.
+\end{itemize}
+
+Ces limites sont document\'ees dans la litt\'erature sur la rivalit\'e per\c cue, qui recommande des validations crois\'ees et une triangulation par sources compl\'ementaires \citep{kilduff2010,porter2008}.
+
+\subsection*{Pistes d'am\'elioration}
+Pour une utilisation d\'ecisionnelle, il est recommand\'e de:
+\begin{itemize}
+    \item normaliser les scores par taille d'entreprise ou intensit\'e de couverture m\'ediatique;
+    \item introduire une pond\'eration temporelle pour capter la r\'ecence des signaux;
+    \item suivre les trajectoires $\Delta V_i$ et $\Delta C_i$ pour d\'etecter les bascules strat\'egiques.
+\end{itemize}
+
+\section{Conclusion}
+Cet article propose une formalisation simple, tra\c cable et extensible de la rivalit\'e strat\'egique \`a partir des perceptions concurrentielles. La distinction entre vuln\'erabilit\'e et clout permet de produire des diagnostics plus fins que les approches unidimensionnelles de concurrence. La prochaine \`etape de recherche consiste \`a tester syst\'ematiquement les propositions H1--H4 sur plusieurs fen\^etres temporelles et univers sectoriels afin d'\'evaluer la stabilit\'e externe des r\'esultats.
+
+\bibliographystyle{plainnat}
+\bibliography{competitive_analysis}
+
+\end{document}

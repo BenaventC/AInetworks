@@ -51,6 +51,7 @@
                 <select id="entOrganizationType">
                   <option value="">Not specified</option>
                   <option value="Seed">Seed</option>
+                  <option value="Investor">Investor</option>
                   <option value="Publicly traded company">Publicly traded company</option>
                   <option value="Private company">Private company</option>
                   <option value="Subsidiary">Subsidiary</option>
@@ -228,6 +229,7 @@
         <button class="enterprise-subtab-btn" data-enterprise-segment="partial">Partially validated</button>
         <button class="enterprise-subtab-btn" data-enterprise-segment="validated">Validated</button>
         <button class="enterprise-subtab-btn active" data-enterprise-segment="later">To review later</button>
+        <button class="enterprise-subtab-btn" data-enterprise-segment="companieswithoutcompetitors">Companies without competitors</button>
         <button class="enterprise-subtab-btn" data-enterprise-segment="top100">Top 200</button>
       </div>
 
@@ -248,12 +250,6 @@
             <label for="enterpriseCountryFilter">Filter by country</label>
             <select id="enterpriseCountryFilter">
               <option value="">All countries</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="enterpriseCityFilter">Filter by city</label>
-            <select id="enterpriseCityFilter">
-              <option value="">All cities</option>
             </select>
           </div>
           <div class="form-group" style="display:flex;align-items:flex-end;">
