@@ -489,7 +489,7 @@ function renderEnterprises() {
         <div class="field"><div class="field-label">Revenue</div><div class="field-value">${formatMillionsUsd(ent.revenue_millions)}</div></div>
         ${ent.employees_count ? `<div class="field"><div class="field-label">Staff</div><div class="field-value">${ent.employees_count}</div></div>` : ''}
         ${ent.website ? `<div class="field field-wide"><div class="field-label">Website</div><div class="field-value"><a href="${ent.website}" target="_blank">${ent.website}</a></div></div>` : ''}
-        ${ent.logo_url ? `<div class="field field-wide"><div class="field-label">Logo</div><div class="field-value logo-field-value"><img src="${ent.logo_url}" alt="${ent.name}"></div></div>` : ''}
+        ${ent.logo_url ? `<div class="field field-full field-logo"><div class="field-label">Logo</div><div class="field-value logo-field-value"><div class="logo-frame"><img src="${ent.logo_url}" alt="${ent.name}" loading="lazy"></div></div></div>` : ''}
         <div class="field field-timestamps field-full">
           <div class="field-label">Tracking</div>
           <div class="field-value timestamp-grid">
