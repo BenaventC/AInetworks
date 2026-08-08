@@ -1,12 +1,12 @@
 # AI Networks
 
 <p align="center">
-  <a href="analyses/exports/competition_map_2d_kmeans.html">
-    <img src="analyses/exports/competition_map_2d.png?v=20260806" alt="AI competition map" width="100%" />
+  <a href="analyses/exports/competition_map_2d_voronoi.html">
+    <img src="analyses/exports/competition_map_2d_voronoi.png?v=20260808" alt="AI competition map (Voronoi)" width="100%" />
   </a>
 </p>
 
-<p align="center"><em>2D competition map of AI actors (click to open the interactive version).</em></p>
+<p align="center"><em>2D competition map of AI actors with Voronoi community regions (click to open the interactive version).</em></p>
 
 This repository contains an AI actor exploration project, including company relationships, partnerships, sectors, and analysis exports.
 
