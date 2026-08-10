@@ -50,6 +50,13 @@ function normalizeKey(name) {
     .replace(/[^a-z0-9\s]/g, '');
 }
 
+const CUSTOM_COMPETITOR_ALIASES = new Map([
+  [normalizeKey('Microsoft Azure'), 'Microsoft Azure'],
+  [normalizeKey('Azure'), 'Microsoft Azure'],
+  [normalizeKey('Cerebras'), 'Cerebras'],
+  [normalizeKey('Cerebras Systems'), 'Cerebras']
+]);
+
 function parseCompetitorItems(value) {
   if (!value || typeof value !== 'string') {
     return [];
@@ -144,6 +151,13 @@ function normalizeCompetitorList(value, canonicalMap, focalName) {
 
     const key = normalizeKey(baseName);
     if (!key || key === focalKey || seen.has(key)) {
+      return;
+    }
+
+    const customAlias = CUSTOM_COMPETITOR_ALIASES.get(key);
+    if (customAlias) {
+      normalized.push(customAlias + suffix);
+      seen.add(key);
       return;
     }
 

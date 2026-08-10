@@ -36,30 +36,40 @@ const selectedSectorLabels = new Set();
 const TOP_RANKING_SEGMENTS = new Set(['top100', 'top50']);
 const SECTOR_LABEL_OPTIONS = [
   'Aerospace',
+  'Aerospace & Defence',
   'Agriculture & Forestry',
   'AI model',
+  'Artificial Intelligence',
   'Biotech',
   'Cloud Provider',
   'Computer Vision',
   'Construction',
   'Data',
   'Defence',
+  'Drone',
   'Education',
   'Energy & Utilities',
   'Financial Services',
+  'GPU',
   'Hardware',
   'Health & Social Care',
+  'ICT',
+  'Image generation',
+  'Inference',
   'IT & Security',
   'Manufacturing & Operations',
   'Media & Entertainment',
+  'Oncology',
   'Professional Services',
   'Public Sector',
+  'Quantic',
   'R&D',
   'Real Estate Activities',
   'Retail & E-commerce',
   'Robotics',
   'Sales & Marketing',
   'Transport & Mobility',
+  'Voice',
 ];
 const enterprisePagination = {
   page: 1,
@@ -727,8 +737,8 @@ async function submitEnterpriseForm(e) {
   e.preventDefault();
 
   const selectedSectorLabels = getEnterpriseSectorLabels();
-  if (selectedSectorLabels.length > 3) {
-    showError('Please select up to 3 sector labels');
+  if (selectedSectorLabels.length > 5) {
+    showError('Please select up to 5 sector labels');
     return;
   }
 
@@ -1583,8 +1593,8 @@ function onSectorLabelPickerClick(event) {
   const label = chip.dataset.sectorLabel;
   const isSelected = selectedSectorLabels.has(label);
 
-  if (!isSelected && selectedSectorLabels.size >= 3) {
-    showError('Maximum 3 sector labels');
+  if (!isSelected && selectedSectorLabels.size >= 5) {
+    showError('Maximum 5 sector labels');
     return;
   }
 
