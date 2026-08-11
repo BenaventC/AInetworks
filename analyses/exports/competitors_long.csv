@@ -38,16 +38,16 @@ pair_id,name,competitor,sector,ranking_score
 36,Microsoft,Sony,"Cloud Provider, AI model, Professional Services",3450000.0
 37,Microsoft,Oracle,"Cloud Provider, AI model, Professional Services",3450000.0
 38,Microsoft,Open source (Libre Office,"Cloud Provider, AI model, Professional Services",3450000.0
-39,Amazon,Walmart,,2900000.0
-40,Amazon,Temu,,2900000.0
-41,Amazon,Shein,,2900000.0
-42,Amazon,Alibaba,,2900000.0
-43,Amazon,Microsoft,,2900000.0
-44,Amazon,Google,,2900000.0
-45,Amazon,Netflix,,2900000.0
-46,Amazon,Disney,,2900000.0
-47,Amazon,Apple,,2900000.0
-48,Amazon,Meta,,2900000.0
+39,Amazon,Walmart,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+40,Amazon,Temu,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+41,Amazon,Shein,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+42,Amazon,Alibaba,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+43,Amazon,Microsoft,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+44,Amazon,Google,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+45,Amazon,Netflix,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+46,Amazon,Disney,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+47,Amazon,Apple,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
+48,Amazon,Meta,"Retail & E-commerce, Cloud Provider, Sales & Marketing",2900000.0
 49,TSMC,Samsung Electronics,"Hardware, Chip",2170000.0
 50,TSMC,SMIC,"Hardware, Chip",2170000.0
 51,TSMC,Intel,"Hardware, Chip",2170000.0
@@ -700,392 +700,427 @@ pair_id,name,competitor,sector,ranking_score
 698,SPACE42,SES Satellites,"Data, Space",2130.0
 699,SPACE42,Palantir,"Data, Space",2130.0
 700,SPACE42,AST SpaceMobile,"Data, Space",2130.0
-701,DeepL,Google,ICT,2000.0
-702,DeepL,Microsoft,ICT,2000.0
-703,DeepL,Reverso and Yandex,ICT,2000.0
-704,DeepL,Translate.,ICT,2000.0
-705,Aleph Alpha,Anthropic,AI model,2000.0
-706,Aleph Alpha,Cohere,AI model,2000.0
-707,Aleph Alpha,Mistral,AI model,2000.0
-708,Aleph Alpha,OpenAI,AI model,2000.0
-709,Kaola,JD Worldwide,Retail & E-commerce,2000.0
-710,Kaola,VIP.com,Retail & E-commerce,2000.0
-711,Kaola,Tmall Global,Retail & E-commerce,2000.0
-712,Kaola,Xiaohongshu,Retail & E-commerce,2000.0
-713,Kaola,ByteDance,Retail & E-commerce,2000.0
-714,5C Group,CoreWeave,"Hardware, Infrastructure",2000.0
-715,5C Group,Lambda Labs,"Hardware, Infrastructure",2000.0
-716,5C Group,Nebius,"Hardware, Infrastructure",2000.0
-717,5C Group,Crusoe Energy,"Hardware, Infrastructure",2000.0
-718,5C Group,AWS,"Hardware, Infrastructure",2000.0
-719,5C Group,Microsoft,"Hardware, Infrastructure",2000.0
-720,5C Group,Google Cloud,"Hardware, Infrastructure",2000.0
-721,Pasqal,Infleqtion,Quantic,2000.0
-722,Pasqal,Atom Computing,Quantic,2000.0
-723,Pasqal,Quantinuum,Quantic,2000.0
-724,Pasqal,IBM,Quantic,2000.0
-725,Pasqal,Rigetti Computing,Quantic,2000.0
-726,Pasqal,Google,Quantic,2000.0
-727,Semrush,Ahrefs,"Data, Sales & Marketing",1960.0
-728,Semrush,similarweb,"Data, Sales & Marketing",1960.0
-729,Semrush,SE ranking,"Data, Sales & Marketing",1960.0
-730,Semrush,HubSpot AEO,"Data, Sales & Marketing",1960.0
-731,Semrush,Rankfender,"Data, Sales & Marketing",1960.0
-732,Semrush,xSeek,"Data, Sales & Marketing",1960.0
-733,Semrush,Surfer SEO,"Data, Sales & Marketing",1960.0
-734,Semrush,MarketMuse,"Data, Sales & Marketing",1960.0
-735,Semrush,Blazy AI,"Data, Sales & Marketing",1960.0
-736,WeRide,Pony.ai,Transport & Mobility,1940.0
-737,WeRide,Baidu,Transport & Mobility,1940.0
-738,WeRide,Waymo,Transport & Mobility,1940.0
-739,Weibo,N/Baidu,Media & Entertainment,1900.0
-740,Weibo,Zhihu,Media & Entertainment,1900.0
-741,Weibo,Douyin,Media & Entertainment,1900.0
-742,Weibo,Kuaishou,Media & Entertainment,1900.0
-743,Weibo,Bilibili,Media & Entertainment,1900.0
-744,Weibo,Xiaohongshu,Media & Entertainment,1900.0
-745,Weibo,Tencent,Media & Entertainment,1900.0
-746,IQM Quantum Computers,Rigetti Computing,"Hardware, Quantic",1800.0
-747,IQM Quantum Computers,Quantinuum,"Hardware, Quantic",1800.0
-748,IQM Quantum Computers,Pasqal,"Hardware, Quantic",1800.0
-749,Domyn,Mistral AI,ICT,1700.0
-750,Domyn,Helsing AI,ICT,1700.0
-751,Domyn,Sierra AI,ICT,1700.0
-752,Domyn,Rasa,ICT,1700.0
-753,Domyn,Deppseek,ICT,1700.0
-754,Domyn,Alibaba,ICT,1700.0
-755,Job&Talent,MisterTempo,ICT,1500.0
-756,Job&Talent,GoJob,ICT,1500.0
-757,Job&Talent,Plany,ICT,1500.0
-758,Job&Talent,Bruce,ICT,1500.0
-759,Job&Talent,Adecco,ICT,1500.0
-760,Job&Talent,Manpower,ICT,1500.0
-761,Job&Talent,Randstad,ICT,1500.0
-762,Job&Talent,StaffMe,ICT,1500.0
-763,Job&Talent,Brigad,ICT,1500.0
-764,Harvey AI,Luminance,"Professional Services, LawTech",1500.0
-765,Harvey AI,Noxtua,"Professional Services, LawTech",1500.0
-766,Harvey AI,Thonson Reuteur,"Professional Services, LawTech",1500.0
-767,Harvey AI,Lawx,"Professional Services, LawTech",1500.0
-768,Oxford Nanopore Technologies,Pacific Biosciences,"AI model, Health & Social Care",1440.0
-769,Oxford Nanopore Technologies,MGI Tech / Complete Genomics,"AI model, Health & Social Care",1440.0
-770,Oxford Nanopore Technologies,Singular Genomics,"AI model, Health & Social Care",1440.0
-771,Oxford Nanopore Technologies,Element Biosciences,"AI model, Health & Social Care",1440.0
-772,Oxford Nanopore Technologies,illumina,"AI model, Health & Social Care",1440.0
-773,Harmattan AI,Helsing,"Defence, Drone",1400.0
-774,Harmattan AI,Anduril Industries,"Defence, Drone",1400.0
-775,Harmattan AI,Delair,"Defence, Drone",1400.0
-776,Ambiance Healthcare,Positionnement,Health & Social Care,1400.0
-777,Ambiance Healthcare,Abridge,Health & Social Care,1400.0
-778,Ambiance Healthcare,Microsoft,Health & Social Care,1400.0
-779,Ambiance Healthcare,Nabla,Health & Social Care,1400.0
-780,Ambiance Healthcare,Suki,Health & Social Care,1400.0
-781,Ambiance Healthcare,Epic Systems,Health & Social Care,1400.0
-782,Ambiance Healthcare,Oracle Health,Health & Social Care,1400.0
-783,Ambiance Healthcare,Athnahealth,Health & Social Care,1400.0
-784,Lightspeed,Shopify,"Professional Services, Retail & E-commerce",1350.0
-785,Lightspeed,Square,"Professional Services, Retail & E-commerce",1350.0
-786,Lightspeed,Clover,"Professional Services, Retail & E-commerce",1350.0
-787,Lightspeed,Toast,"Professional Services, Retail & E-commerce",1350.0
-788,Lightspeed,Zelty,"Professional Services, Retail & E-commerce",1350.0
-789,Lightspeed,Mews,"Professional Services, Retail & E-commerce",1350.0
-790,Lightspeed,Adobe,"Professional Services, Retail & E-commerce",1350.0
-791,Lightspeed,BigCommerce,"Professional Services, Retail & E-commerce",1350.0
-792,C3 AI,Palentir,ICT,1330.0
-793,C3 AI,Salesforce,ICT,1330.0
-794,C3 AI,SAP,ICT,1330.0
-795,DentalMonitoring,Grin,"AI model, Health & Social Care, dental",1200.0
-796,DentalMonitoring,Dentalai,"AI model, Health & Social Care, dental",1200.0
-797,DentalMonitoring,InHand Dental,"AI model, Health & Social Care, dental",1200.0
-798,DentalMonitoring,Align Technology,"AI model, Health & Social Care, dental",1200.0
-799,DentalMonitoring,Straumann Group,"AI model, Health & Social Care, dental",1200.0
-800,WhiteFiber,CoreWeave,"Cloud Provider, ICT",1060.0
-801,WhiteFiber,Lambda Labs,"Cloud Provider, ICT",1060.0
-802,WhiteFiber,Voltage Park,"Cloud Provider, ICT",1060.0
-803,WhiteFiber,IREN Cloud,"Cloud Provider, ICT",1060.0
-804,WhiteFiber,Equinix DataBank,"Cloud Provider, ICT",1060.0
-805,WhiteFiber,Google Cloud,"Cloud Provider, ICT",1060.0
-806,WhiteFiber,Microsoft,"Cloud Provider, ICT",1060.0
-807,WhiteFiber,AWS,"Cloud Provider, ICT",1060.0
-808,01.AI,Moonshot AI,"AI model, ICT",1000.0
-809,01.AI,Z.ai,"AI model, ICT",1000.0
-810,01.AI,MiniMax,"AI model, ICT",1000.0
-811,01.AI,Baichuan Intelligence,"AI model, ICT",1000.0
-812,01.AI,StepFun,"AI model, ICT",1000.0
-813,01.AI,DeepSeek,"AI model, ICT",1000.0
-814,01.AI,Alibaba Cloud,"AI model, ICT",1000.0
-815,01.AI,Tencent,"AI model, ICT",1000.0
-816,01.AI,Meta,"AI model, ICT",1000.0
-817,01.AI,MistralAI,"AI model, ICT",1000.0
-818,Owkin,Isomorphic Labs,"AI model, Health & Social Care",1000.0
-819,Owkin,Exscientia,"AI model, Health & Social Care",1000.0
-820,Owkin,Recursion Pharmaceuticals,"AI model, Health & Social Care",1000.0
-821,Owkin,Insilico Medicine,"AI model, Health & Social Care",1000.0
-822,Owkin,Schrödinger,"AI model, Health & Social Care",1000.0
-823,Owkin,Iktos,"AI model, Health & Social Care",1000.0
-824,Owkin,Aqemia,"AI model, Health & Social Care",1000.0
-825,Owkin,BioMap,"AI model, Health & Social Care",1000.0
-826,Owkin,Tempus,"AI model, Health & Social Care",1000.0
-827,Owkin,Paige AI,"AI model, Health & Social Care",1000.0
-828,Owkin,Tribun Health,"AI model, Health & Social Care",1000.0
-829,4Paradigm,DataRobot,"AI model, Professional Services",1000.0
-830,4Paradigm,H2O.AI,"AI model, Professional Services",1000.0
-831,4Paradigm,Dataiky,"AI model, Professional Services",1000.0
-832,4Paradigm,Baidu,"AI model, Professional Services",1000.0
-833,4Paradigm,Alibaba Cloud,"AI model, Professional Services",1000.0
-834,4Paradigm,Tencent Cloud,"AI model, Professional Services",1000.0
-835,Stability AI,Midjourney,,1000.0
-836,Stability AI,BlackForect Labs,,1000.0
-837,Stability AI,OpenAI,,1000.0
-838,Franka Emika,Agile Robots,"Manufacturing & Operations, Robotics",1000.0
-839,Franka Emika,KUKA,"Manufacturing & Operations, Robotics",1000.0
-840,Franka Emika,Kinova,"Manufacturing & Operations, Robotics",1000.0
-841,Franka Emika,Universal Robots,"Manufacturing & Operations, Robotics",1000.0
-842,Franka Emika,Doosan Robotics,"Manufacturing & Operations, Robotics",1000.0
-843,Franka Emika,Fanuc,"Manufacturing & Operations, Robotics",1000.0
-844,Dash0,Datadog,AI model,1000.0
-845,Dash0,New Relic,AI model,1000.0
-846,Dash0,Dynatrace,AI model,1000.0
-847,Dash0,Middleware,AI model,1000.0
-848,Dash0,Better Stack,AI model,1000.0
-849,Dash0,Resolve AI,AI model,1000.0
-850,Dash0,incident.io,AI model,1000.0
-851,Glean,Guru,,770.0
-852,Glean,Amazon,,770.0
-853,Glean,Coveo,,770.0
-854,Glean,Sinequa,,770.0
-855,Glean,Slack AI,,770.0
-856,Glean,DeepMind,,770.0
-857,PolyAI,Bland AI,"AI model, Sales & Marketing, Voice",750.0
-858,PolyAI,Vapi,"AI model, Sales & Marketing, Voice",750.0
-859,PolyAI,Retell AI,"AI model, Sales & Marketing, Voice",750.0
-860,PolyAI,Parloa,"AI model, Sales & Marketing, Voice",750.0
-861,PolyAI,IBM,"AI model, Sales & Marketing, Voice",750.0
-862,PolyAI,Google Cloud,"AI model, Sales & Marketing, Voice",750.0
-863,Run:ai,dstack,AI tools,700.0
-864,Run:ai,ClearML,AI tools,700.0
-865,Run:ai,SkyPilot,AI tools,700.0
-866,Run:ai,Kubeflow.,AI tools,700.0
-867,Graphcore,Nvidia,ICT,682.0
-868,Graphcore,Google Cloud,ICT,682.0
-869,Graphcore,AWS,ICT,682.0
-870,Graphcore,Meta,ICT,682.0
-871,Graphcore,Groq,ICT,682.0
-872,Graphcore,Cerebras,ICT,682.0
-873,Graphcore,Tenstorrent,ICT,682.0
-874,PhotoRoom,Pixelcut,"Media & Entertainment, Image generation",500.0
-875,PhotoRoom,Playyy,"Media & Entertainment, Image generation",500.0
-876,PhotoRoom,WizStudio,"Media & Entertainment, Image generation",500.0
-877,PhotoRoom,Jasper,"Media & Entertainment, Image generation",500.0
-878,PhotoRoom,Flair.ai,"Media & Entertainment, Image generation",500.0
-879,PhotoRoom,Pebblely,"Media & Entertainment, Image generation",500.0
-880,PhotoRoom,Canva,"Media & Entertainment, Image generation",500.0
-881,PhotoRoom,Adobe,"Media & Entertainment, Image generation",500.0
-882,PhotoRoom,Firefly,"Media & Entertainment, Image generation",500.0
-883,Luminance,Harvey AI,,500.0
-884,Luminance,Noxtua,,500.0
-885,Luminance,Jus Mundi,,500.0
-886,Luminance,Lawx,,500.0
-887,Cradle,EvolutionaryScale,Biotech,420.0
-888,Cradle,Generate Biomedicines,Biotech,420.0
-889,Cradle,Nimbus Therapeutics,Biotech,420.0
-890,Cradle,DeepMind,Biotech,420.0
-891,Dust,Glean,"Health & Social Care, Agentic",300.0
-892,Dust,Twin,"Health & Social Care, Agentic",300.0
-893,Dust,Manus,"Health & Social Care, Agentic",300.0
-894,Dust,Metaflow AI,"Health & Social Care, Agentic",300.0
-895,Corti,Microsoft,"Health & Social Care, AI model",300.0
-896,Corti,AWS,"Health & Social Care, AI model",300.0
-897,Corti,Huma,"Health & Social Care, AI model",300.0
-898,Corti,MedeAnalytics,"Health & Social Care, AI model",300.0
-899,Corti,Suki AI,"Health & Social Care, AI model",300.0
-900,Corti,Nabla,"Health & Social Care, AI model",300.0
-901,Kyutai,Lalal.ai,"AI model, Voice",300.0
-902,Kyutai,Audimee,"AI model, Voice",300.0
-903,Kyutai,Ace Studio,"AI model, Voice",300.0
-904,Kyutai,Controlla.xyz,"AI model, Voice",300.0
-905,Kyutai,Lalals.com,"AI model, Voice",300.0
-906,LightOn,Yseop,AI model,288.0
-907,LightOn,Mistral AI,AI model,288.0
-908,LightOn,Dust,AI model,288.0
-909,LightOn,Pryon,AI model,288.0
-910,Appen,Scale AI,ICT,263.0
-911,Appen,Labelbox,ICT,263.0
-912,Appen,Snorkel AI,ICT,263.0
-913,Appen,Dataloop,ICT,263.0
-914,Appen,Centaur Labs,ICT,263.0
-915,Appen,Isahit,ICT,263.0
-916,Gleamer,Aidoc,"AI model, Health & Social Care",230.0
-917,Gleamer,RapidAI,"AI model, Health & Social Care",230.0
-918,Gleamer,Rad AI,"AI model, Health & Social Care",230.0
-919,Gleamer,Annalise.ai,"AI model, Health & Social Care",230.0
-920,4.screen,Telenav,"Transport & Mobility, Media & Entertainment",150.0
-921,4.screen,Cerence,"Transport & Mobility, Media & Entertainment",150.0
-922,4.screen,Connected Travel,"Transport & Mobility, Media & Entertainment",150.0
-923,4.screen,Here technologies,"Transport & Mobility, Media & Entertainment",150.0
-924,4.screen,Google,"Transport & Mobility, Media & Entertainment",150.0
-925,4.screen,Apple,"Transport & Mobility, Media & Entertainment",150.0
-926,Prophesee,Samsung Electronics,"Computer Vision, AI model, Robotics",130.0
-927,Prophesee,OmniVision Technologies,"Computer Vision, AI model, Robotics",130.0
-928,Prophesee,Sony,"Computer Vision, AI model, Robotics",130.0
-929,Prophesee,iniVation,"Computer Vision, AI model, Robotics",130.0
-930,Prophesee,Oculi,"Computer Vision, AI model, Robotics",130.0
-931,Prophesee,Insightness,"Computer Vision, AI model, Robotics",130.0
-932,Prophesee,Cognex,"Computer Vision, AI model, Robotics",130.0
-933,Prophesee,Keyence,"Computer Vision, AI model, Robotics",130.0
-934,Prophesee,SICK AG,"Computer Vision, AI model, Robotics",130.0
-935,Comand AI,Anduril Industries,"AI model, Aerospace & Defence",124.0
-936,Comand AI,Palantir,"AI model, Aerospace & Defence",124.0
-937,Comand AI,Thales,"AI model, Aerospace & Defence",124.0
-938,Comand AI,Airbus,"AI model, Aerospace & Defence",124.0
-939,Yseop,Wisedocs,"AI model, Health & Social Care",120.0
-940,Yseop,Pryon,"AI model, Health & Social Care",120.0
-941,Yseop,LightOn,"AI model, Health & Social Care",120.0
-942,Yseop,grandes CRO,"AI model, Health & Social Care",120.0
-943,Yseop,Cognizant,"AI model, Health & Social Care",120.0
-944,Nabla,Abridge,"AI model, Health & Social Care",120.0
-945,Nabla,Microsoft & Oracle,"AI model, Health & Social Care",120.0
-946,AMC Robotics Corporation,Boston Dynamics,Robotics,110.0
-947,AMC Robotics Corporation,Unitree Robotics,Robotics,110.0
-948,AMC Robotics Corporation,Symbotic,Robotics,110.0
-949,Quantum Diamonds,KLA Corporation,"R&D, Quantic",104.0
-950,Quantum Diamonds,Applied Materials,"R&D, Quantic",104.0
-951,Quantum Diamonds,ASML,"R&D, Quantic",104.0
-952,Quantum Diamonds,Quantum Design,"R&D, Quantic",104.0
-953,Quantum Diamonds,NVision Imaging,"R&D, Quantic",104.0
-954,Multiverse Computing,SandboxAQ,Quantic,100.0
-955,Multiverse Computing,Zapata Computing,Quantic,100.0
-956,Multiverse Computing,QC Ware,Quantic,100.0
-957,Multiverse Computing,Neural Magic,Quantic,100.0
-958,Multiverse Computing,Deci AI,Quantic,100.0
-959,Multiverse Computing,Pasqal,Quantic,100.0
-960,Multiverse Computing,IQM,Quantic,100.0
-961,Volta medical,Biosense Webster,"AI model, Health & Social Care, Cardio",90.0
-962,Volta medical,Johnson & Johnson,"AI model, Health & Social Care, Cardio",90.0
-963,Volta medical,Medtronic,"AI model, Health & Social Care, Cardio",90.0
-964,Volta medical,Abbott,"AI model, Health & Social Care, Cardio",90.0
-965,OLLAMA,VLLM,"AI model, Inference",88.0
-966,OLLAMA,Llama.ccp,"AI model, Inference",88.0
-967,OLLAMA,LM studio,"AI model, Inference",88.0
-968,OLLAMA,LangChain,"AI model, Inference",88.0
-969,OLLAMA,LLAMAIndex,"AI model, Inference",88.0
-970,OLLAMA,Huggingface,"AI model, Inference",88.0
-971,Paige AI,PathAI,"Biotech, Health & Social Care, Oncology",81.0
-972,Paige AI,Ibex Medical Analytics,"Biotech, Health & Social Care, Oncology",81.0
-973,Paige AI,Proscia,"Biotech, Health & Social Care, Oncology",81.0
-974,Arago,Lightmatter,"Hardware, Photonic",70.0
-975,Arago,Luminous Computing,"Hardware, Photonic",70.0
-976,Arago,Rain AI,"Hardware, Photonic",70.0
-977,Arago,Groq,"Hardware, Photonic",70.0
-978,Arago,Nvidia,"Hardware, Photonic",70.0
-979,Arago,AMD,"Hardware, Photonic",70.0
-980,Bodyguard.ai,Tisane Labs,"IT & Security, Cyber",55.0
-981,Bodyguard.ai,Besedo,"IT & Security, Cyber",55.0
-982,Bodyguard.ai,Two Hat,"IT & Security, Cyber",55.0
-983,Bodyguard.ai,OpenAI Moderation API,"IT & Security, Cyber",55.0
-984,Art Recognition,Startbahn,"IT & Security, Art",50.0
-985,Art Recognition,Verisart,"IT & Security, Art",50.0
-986,Art Recognition,InsightART.,"IT & Security, Art",50.0
-987,Art Recognition,Hephaestus Analytical,"IT & Security, Art",50.0
-988,DarwinAI,Landing AI,"Manufacturing & Operations, ICT",50.0
-989,DarwinAI,Edge Impulse,"Manufacturing & Operations, ICT",50.0
-990,DarwinAI,Instrumental,"Manufacturing & Operations, ICT",50.0
-991,DarwinAI,Neural Magic,"Manufacturing & Operations, ICT",50.0
-992,DarwinAI,Deci AI,"Manufacturing & Operations, ICT",50.0
-993,Oriole Networks,Cisco,"Hardware, Photonic",35.0
-994,Oriole Networks,Nvidia,"Hardware, Photonic",35.0
-995,Oriole Networks,Ciena,"Hardware, Photonic",35.0
-996,Colossyan,Synthesia,,30.0
-997,Colossyan,HeyGen,,30.0
-998,Colossyan,DeepBrain AI,,30.0
-999,Colossyan,Runway,,30.0
-1000,Doubleword,Baseten Technologies,"AI model, Inference",27.0
-1001,Doubleword,Fireworks AI,"AI model, Inference",27.0
-1002,Doubleword,Liquid AI,"AI model, Inference",27.0
-1003,Doubleword,Scale AI,"AI model, Inference",27.0
-1004,Doubleword,Comet,"AI model, Inference",27.0
-1005,Zapia AI,Luzia,AI model,19.0
-1006,Zapia AI,Memorae AI,AI model,19.0
-1007,Zapia AI,Notis,AI model,19.0
-1008,Zapia AI,Poke,AI model,19.0
-1009,Zapia AI,The Librarian,AI model,19.0
-1010,Teraki,Hailo,"Transport & Mobility, AV",16.0
-1011,Teraki,Blaize,"Transport & Mobility, AV",16.0
-1012,Teraki,Ambarella,"Transport & Mobility, AV",16.0
-1013,Teraki,Deepen AI,"Transport & Mobility, AV",16.0
-1014,Teraki,Scale AI,"Transport & Mobility, AV",16.0
-1015,Teraki,Numurus,"Transport & Mobility, AV",16.0
-1016,Teraki,Oxa,"Transport & Mobility, AV",16.0
-1017,Teraki,Applied Intuition,"Transport & Mobility, AV",16.0
-1018,BenevolentAI,Exscientia,"AI model, R&D, Biotech",13.0
-1019,EbenBuild,Dassault Systèmes,Health & Social Care,12.0
-1020,EbenBuild,InSilicoTrials,Health & Social Care,12.0
-1021,EbenBuild,Virtonomy,Health & Social Care,12.0
-1022,Alpine Eagle,Anduril Industries,"Manufacturing & Operations, Defence, Drone",11.0
-1023,Alpine Eagle,Helsing AI,"Manufacturing & Operations, Defence, Drone",11.0
-1024,Alpine Eagle,Epirus,"Manufacturing & Operations, Defence, Drone",11.0
-1025,Alpine Eagle,D-Fend Solutions,"Manufacturing & Operations, Defence, Drone",11.0
-1026,Alpine Eagle,Dedrone,"Manufacturing & Operations, Defence, Drone",11.0
-1027,Altavo GmbH,Atos Medical,"AI model, Computer Vision, Health & Social Care",10.0
-1028,Altavo GmbH,Lip Reading systems,"AI model, Computer Vision, Health & Social Care",10.0
-1029,Amberscript,Happy Scribe,AI model,10.0
-1030,Amberscript,Sonix,AI model,10.0
-1031,Amberscript,Trint,AI model,10.0
-1032,Amberscript,tl,AI model,10.0
-1033,Amberscript,dv,AI model,10.0
-1034,Amberscript,Otter.ai,AI model,10.0
-1035,Amberscript,Transkriptor,AI model,10.0
-1036,Amberscript,GoTranscript,AI model,10.0
-1037,Quantistry,PhaseCraft,"R&D, AI model, Chemistry",10.0
-1038,Quantistry,SandboxAQ,"R&D, AI model, Chemistry",10.0
-1039,Quantistry,Pasqal,"R&D, AI model, Chemistry",10.0
-1040,Ameba,Decagon AI & Sierra AI,Logistics,9.0
-1041,Ameba,Blue Yonder,Logistics,9.0
-1042,Ameba,Manhattan Associates,Logistics,9.0
-1043,Ameba,Sourceful,Logistics,9.0
-1044,Ameba,Zencargo,Logistics,9.0
-1045,20face,brighter AI,"Health & Social Care, IT & Security",8.0
-1046,20face,BioID,"Health & Social Care, IT & Security",8.0
-1047,20face,iProov,"Health & Social Care, IT & Security",8.0
-1048,20face,PrivateID,"Health & Social Care, IT & Security",8.0
-1049,20face,Oosto,"Health & Social Care, IT & Security",8.0
-1050,20face,Incode Technologies,"Health & Social Care, IT & Security",8.0
-1051,20face,Thales Group,"Health & Social Care, IT & Security",8.0
-1052,20face,Cognitec Systems,"Health & Social Care, IT & Security",8.0
-1053,Lawx,Harvey AI,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1054,Lawx,Noxtua,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1055,Lawx,Datev,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1056,Lawx,LexisNexis,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1057,Lawx,Wolters Kluwer,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1058,Lawx,Septeo,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1059,Lawx,Luminance,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1060,Lawx,Definely,"Manufacturing & Operations, Professional Services, LawTech",7.5
-1061,3ive AI,Dassault Systèmes,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
-1062,3ive AI,Siemens Digital Industries Software,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
-1063,3ive AI,PTC,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
-1064,3ive AI,Simus Systems,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
-1065,3ive AI,CADENAS,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
-1066,Dexter,Workato,"Financial Services, AI model, Professional Services",5.0
-1067,Dexter,Automation Anywhere,"Financial Services, AI model, Professional Services",5.0
-1068,Dexter,Coupa Software,"Financial Services, AI model, Professional Services",5.0
-1069,PharmAI,Isomorphic Labs,"Biotech, AI model",5.0
-1070,PharmAI,Chai Discovery,"Biotech, AI model",5.0
-1071,PharmAI,Xaira Therapeutics,"Biotech, AI model",5.0
-1072,Accentize GmbH,iZotope,"Manufacturing & Operations, R&D, ICT",1.0
-1073,Accentize GmbH,Goyo AI,"Manufacturing & Operations, R&D, ICT",1.0
-1074,Accentize GmbH,Waves Audio,"Manufacturing & Operations, R&D, ICT",1.0
-1075,Accentize GmbH,Adobe,"Manufacturing & Operations, R&D, ICT",1.0
-1076,AI Medical Technology,Skin Analytics,"AI model, Biotech, Oncology",1.0
-1077,AI Medical Technology,DermaSensor,"AI model, Biotech, Oncology",1.0
-1078,AI Medical Technology,MetaOptima / DermEngine,"AI model, Biotech, Oncology",1.0
-1079,AI Medical Technology,Miiskin,"AI model, Biotech, Oncology",1.0
-1080,AI Medical Technology,SkinIO,"AI model, Biotech, Oncology",1.0
-1081,HughGrants,Grantify,"AI model, ICT",1.0
-1082,HughGrants,Egrants,"AI model, ICT",1.0
-1083,HughGrants,OpenGrants,"AI model, ICT",1.0
-1084,Skylab,Picterra,ICT,1.0
-1085,Skylab,Orbify,ICT,1.0
-1086,Prognostix AB,SKF Ensemble,R&D,0.1
-1087,Prognostix AB,Ambyint,R&D,0.1
-1088,Prognostix AB,SparkCognition,R&D,0.1
-1089,Prognostix AB,Uptake,R&D,0.1
+701,Innodata,Scale AI,"Data, Annotation",2070.0
+702,Innodata,Appen,"Data, Annotation",2070.0
+703,Innodata,DataLoop,"Data, Annotation",2070.0
+704,Innodata,Labelbox,"Data, Annotation",2070.0
+705,Innodata,Cognizant,"Data, Annotation",2070.0
+706,Innodata,Infosys,"Data, Annotation",2070.0
+707,Innodata,Wipro,"Data, Annotation",2070.0
+708,DeepL,Google,ICT,2000.0
+709,DeepL,Microsoft,ICT,2000.0
+710,DeepL,Reverso and Yandex,ICT,2000.0
+711,DeepL,Translate.,ICT,2000.0
+712,Aleph Alpha,Anthropic,AI model,2000.0
+713,Aleph Alpha,Cohere,AI model,2000.0
+714,Aleph Alpha,Mistral,AI model,2000.0
+715,Aleph Alpha,OpenAI,AI model,2000.0
+716,Kaola,JD Worldwide,Retail & E-commerce,2000.0
+717,Kaola,VIP.com,Retail & E-commerce,2000.0
+718,Kaola,Tmall Global,Retail & E-commerce,2000.0
+719,Kaola,Xiaohongshu,Retail & E-commerce,2000.0
+720,Kaola,ByteDance,Retail & E-commerce,2000.0
+721,5C Group,CoreWeave,"Hardware, Infrastructure",2000.0
+722,5C Group,Lambda Labs,"Hardware, Infrastructure",2000.0
+723,5C Group,Nebius,"Hardware, Infrastructure",2000.0
+724,5C Group,Crusoe Energy,"Hardware, Infrastructure",2000.0
+725,5C Group,AWS,"Hardware, Infrastructure",2000.0
+726,5C Group,Microsoft,"Hardware, Infrastructure",2000.0
+727,5C Group,Google Cloud,"Hardware, Infrastructure",2000.0
+728,Pasqal,Infleqtion,Quantic,2000.0
+729,Pasqal,Atom Computing,Quantic,2000.0
+730,Pasqal,Quantinuum,Quantic,2000.0
+731,Pasqal,IBM,Quantic,2000.0
+732,Pasqal,Rigetti Computing,Quantic,2000.0
+733,Pasqal,Google,Quantic,2000.0
+734,Semrush,Ahrefs,"Data, Sales & Marketing",1960.0
+735,Semrush,similarweb,"Data, Sales & Marketing",1960.0
+736,Semrush,SE ranking,"Data, Sales & Marketing",1960.0
+737,Semrush,HubSpot AEO,"Data, Sales & Marketing",1960.0
+738,Semrush,Rankfender,"Data, Sales & Marketing",1960.0
+739,Semrush,xSeek,"Data, Sales & Marketing",1960.0
+740,Semrush,Surfer SEO,"Data, Sales & Marketing",1960.0
+741,Semrush,MarketMuse,"Data, Sales & Marketing",1960.0
+742,Semrush,Blazy AI,"Data, Sales & Marketing",1960.0
+743,WeRide,Pony.ai,Transport & Mobility,1940.0
+744,WeRide,Baidu,Transport & Mobility,1940.0
+745,WeRide,Waymo,Transport & Mobility,1940.0
+746,Weibo,N/Baidu,Media & Entertainment,1900.0
+747,Weibo,Zhihu,Media & Entertainment,1900.0
+748,Weibo,Douyin,Media & Entertainment,1900.0
+749,Weibo,Kuaishou,Media & Entertainment,1900.0
+750,Weibo,Bilibili,Media & Entertainment,1900.0
+751,Weibo,Xiaohongshu,Media & Entertainment,1900.0
+752,Weibo,Tencent,Media & Entertainment,1900.0
+753,IQM Quantum Computers,Rigetti Computing,"Hardware, Quantic",1800.0
+754,IQM Quantum Computers,Quantinuum,"Hardware, Quantic",1800.0
+755,IQM Quantum Computers,Pasqal,"Hardware, Quantic",1800.0
+756,Domyn,Mistral AI,ICT,1700.0
+757,Domyn,Helsing AI,ICT,1700.0
+758,Domyn,Sierra AI,ICT,1700.0
+759,Domyn,Rasa,ICT,1700.0
+760,Domyn,Deppseek,ICT,1700.0
+761,Domyn,Alibaba,ICT,1700.0
+762,BigBear.ai,Palantir,Defence,1550.0
+763,BigBear.ai,C3.ai,Defence,1550.0
+764,BigBear.ai,Boeing,Defence,1550.0
+765,BigBear.ai,Lockheed Martin,Defence,1550.0
+766,BigBear.ai,Anduril Industries,Defence,1550.0
+767,Job&Talent,MisterTempo,ICT,1500.0
+768,Job&Talent,GoJob,ICT,1500.0
+769,Job&Talent,Plany,ICT,1500.0
+770,Job&Talent,Bruce,ICT,1500.0
+771,Job&Talent,Adecco,ICT,1500.0
+772,Job&Talent,Manpower,ICT,1500.0
+773,Job&Talent,Randstad,ICT,1500.0
+774,Job&Talent,StaffMe,ICT,1500.0
+775,Job&Talent,Brigad,ICT,1500.0
+776,Harvey AI,Luminance,"Professional Services, LawTech",1500.0
+777,Harvey AI,Noxtua,"Professional Services, LawTech",1500.0
+778,Harvey AI,Thonson Reuteur,"Professional Services, LawTech",1500.0
+779,Harvey AI,Lawx,"Professional Services, LawTech",1500.0
+780,Oxford Nanopore Technologies,Pacific Biosciences,"AI model, Health & Social Care",1440.0
+781,Oxford Nanopore Technologies,MGI Tech / Complete Genomics,"AI model, Health & Social Care",1440.0
+782,Oxford Nanopore Technologies,Singular Genomics,"AI model, Health & Social Care",1440.0
+783,Oxford Nanopore Technologies,Element Biosciences,"AI model, Health & Social Care",1440.0
+784,Oxford Nanopore Technologies,illumina,"AI model, Health & Social Care",1440.0
+785,Harmattan AI,Helsing,"Defence, Drone",1400.0
+786,Harmattan AI,Anduril Industries,"Defence, Drone",1400.0
+787,Harmattan AI,Delair,"Defence, Drone",1400.0
+788,Ambiance Healthcare,Positionnement,Health & Social Care,1400.0
+789,Ambiance Healthcare,Abridge,Health & Social Care,1400.0
+790,Ambiance Healthcare,Microsoft,Health & Social Care,1400.0
+791,Ambiance Healthcare,Nabla,Health & Social Care,1400.0
+792,Ambiance Healthcare,Suki,Health & Social Care,1400.0
+793,Ambiance Healthcare,Epic Systems,Health & Social Care,1400.0
+794,Ambiance Healthcare,Oracle Health,Health & Social Care,1400.0
+795,Ambiance Healthcare,Athnahealth,Health & Social Care,1400.0
+796,Lightspeed,Shopify,"Professional Services, Retail & E-commerce",1350.0
+797,Lightspeed,Square,"Professional Services, Retail & E-commerce",1350.0
+798,Lightspeed,Clover,"Professional Services, Retail & E-commerce",1350.0
+799,Lightspeed,Toast,"Professional Services, Retail & E-commerce",1350.0
+800,Lightspeed,Zelty,"Professional Services, Retail & E-commerce",1350.0
+801,Lightspeed,Mews,"Professional Services, Retail & E-commerce",1350.0
+802,Lightspeed,Adobe,"Professional Services, Retail & E-commerce",1350.0
+803,Lightspeed,BigCommerce,"Professional Services, Retail & E-commerce",1350.0
+804,C3 AI,Palentir,ICT,1330.0
+805,C3 AI,Salesforce,ICT,1330.0
+806,C3 AI,SAP,ICT,1330.0
+807,Einride,Waymo,"Transport & Mobility, Trucks",1315.0
+808,Einride,Kodiak Robotics,"Transport & Mobility, Trucks",1315.0
+809,Einride,Waabi,"Transport & Mobility, Trucks",1315.0
+810,Einride,Aurora Innovation,"Transport & Mobility, Trucks",1315.0
+811,DentalMonitoring,Grin,"AI model, Health & Social Care, dental",1200.0
+812,DentalMonitoring,Dentalai,"AI model, Health & Social Care, dental",1200.0
+813,DentalMonitoring,InHand Dental,"AI model, Health & Social Care, dental",1200.0
+814,DentalMonitoring,Align Technology,"AI model, Health & Social Care, dental",1200.0
+815,DentalMonitoring,Straumann Group,"AI model, Health & Social Care, dental",1200.0
+816,WhiteFiber,CoreWeave,"Cloud Provider, ICT",1060.0
+817,WhiteFiber,Lambda Labs,"Cloud Provider, ICT",1060.0
+818,WhiteFiber,Voltage Park,"Cloud Provider, ICT",1060.0
+819,WhiteFiber,IREN Cloud,"Cloud Provider, ICT",1060.0
+820,WhiteFiber,Equinix DataBank,"Cloud Provider, ICT",1060.0
+821,WhiteFiber,Google Cloud,"Cloud Provider, ICT",1060.0
+822,WhiteFiber,Microsoft,"Cloud Provider, ICT",1060.0
+823,WhiteFiber,AWS,"Cloud Provider, ICT",1060.0
+824,01.AI,Moonshot AI,"AI model, ICT",1000.0
+825,01.AI,Z.ai,"AI model, ICT",1000.0
+826,01.AI,MiniMax,"AI model, ICT",1000.0
+827,01.AI,Baichuan Intelligence,"AI model, ICT",1000.0
+828,01.AI,StepFun,"AI model, ICT",1000.0
+829,01.AI,DeepSeek,"AI model, ICT",1000.0
+830,01.AI,Alibaba Cloud,"AI model, ICT",1000.0
+831,01.AI,Tencent,"AI model, ICT",1000.0
+832,01.AI,Meta,"AI model, ICT",1000.0
+833,01.AI,MistralAI,"AI model, ICT",1000.0
+834,Owkin,Isomorphic Labs,"AI model, Health & Social Care",1000.0
+835,Owkin,Exscientia,"AI model, Health & Social Care",1000.0
+836,Owkin,Recursion Pharmaceuticals,"AI model, Health & Social Care",1000.0
+837,Owkin,Insilico Medicine,"AI model, Health & Social Care",1000.0
+838,Owkin,Schrödinger,"AI model, Health & Social Care",1000.0
+839,Owkin,Iktos,"AI model, Health & Social Care",1000.0
+840,Owkin,Aqemia,"AI model, Health & Social Care",1000.0
+841,Owkin,BioMap,"AI model, Health & Social Care",1000.0
+842,Owkin,Tempus,"AI model, Health & Social Care",1000.0
+843,Owkin,Paige AI,"AI model, Health & Social Care",1000.0
+844,Owkin,Tribun Health,"AI model, Health & Social Care",1000.0
+845,Shift Technology,Guidewire,"Financial Services, Legal tech",1000.0
+846,Shift Technology,Duck Creek,"Financial Services, Legal tech",1000.0
+847,Shift Technology,Descartes Underwriting,"Financial Services, Legal tech",1000.0
+848,Shift Technology,Friss,"Financial Services, Legal tech",1000.0
+849,Shift Technology,Akur8,"Financial Services, Legal tech",1000.0
+850,4Paradigm,DataRobot,"AI model, Professional Services",1000.0
+851,4Paradigm,H2O.AI,"AI model, Professional Services",1000.0
+852,4Paradigm,Dataiky,"AI model, Professional Services",1000.0
+853,4Paradigm,Baidu,"AI model, Professional Services",1000.0
+854,4Paradigm,Alibaba Cloud,"AI model, Professional Services",1000.0
+855,4Paradigm,Tencent Cloud,"AI model, Professional Services",1000.0
+856,Stability AI,Midjourney,,1000.0
+857,Stability AI,BlackForect Labs,,1000.0
+858,Stability AI,OpenAI,,1000.0
+859,Franka Emika,Agile Robots,"Manufacturing & Operations, Robotics",1000.0
+860,Franka Emika,KUKA,"Manufacturing & Operations, Robotics",1000.0
+861,Franka Emika,Kinova,"Manufacturing & Operations, Robotics",1000.0
+862,Franka Emika,Universal Robots,"Manufacturing & Operations, Robotics",1000.0
+863,Franka Emika,Doosan Robotics,"Manufacturing & Operations, Robotics",1000.0
+864,Franka Emika,Fanuc,"Manufacturing & Operations, Robotics",1000.0
+865,Dash0,Datadog,AI model,1000.0
+866,Dash0,New Relic,AI model,1000.0
+867,Dash0,Dynatrace,AI model,1000.0
+868,Dash0,Middleware,AI model,1000.0
+869,Dash0,Better Stack,AI model,1000.0
+870,Dash0,Resolve AI,AI model,1000.0
+871,Dash0,incident.io,AI model,1000.0
+872,Glean,Guru,,770.0
+873,Glean,Amazon,,770.0
+874,Glean,Coveo,,770.0
+875,Glean,Sinequa,,770.0
+876,Glean,Slack AI,,770.0
+877,Glean,DeepMind,,770.0
+878,PolyAI,Bland AI,"AI model, Sales & Marketing, Voice",750.0
+879,PolyAI,Vapi,"AI model, Sales & Marketing, Voice",750.0
+880,PolyAI,Retell AI,"AI model, Sales & Marketing, Voice",750.0
+881,PolyAI,Parloa,"AI model, Sales & Marketing, Voice",750.0
+882,PolyAI,IBM,"AI model, Sales & Marketing, Voice",750.0
+883,PolyAI,Google Cloud,"AI model, Sales & Marketing, Voice",750.0
+884,Run:ai,dstack,AI tools,700.0
+885,Run:ai,ClearML,AI tools,700.0
+886,Run:ai,SkyPilot,AI tools,700.0
+887,Run:ai,Kubeflow.,AI tools,700.0
+888,Graphcore,Nvidia,ICT,682.0
+889,Graphcore,Google Cloud,ICT,682.0
+890,Graphcore,AWS,ICT,682.0
+891,Graphcore,Meta,ICT,682.0
+892,Graphcore,Groq,ICT,682.0
+893,Graphcore,Cerebras,ICT,682.0
+894,Graphcore,Tenstorrent,ICT,682.0
+895,PhotoRoom,Pixelcut,"Media & Entertainment, Image generation",500.0
+896,PhotoRoom,Playyy,"Media & Entertainment, Image generation",500.0
+897,PhotoRoom,WizStudio,"Media & Entertainment, Image generation",500.0
+898,PhotoRoom,Jasper,"Media & Entertainment, Image generation",500.0
+899,PhotoRoom,Flair.ai,"Media & Entertainment, Image generation",500.0
+900,PhotoRoom,Pebblely,"Media & Entertainment, Image generation",500.0
+901,PhotoRoom,Canva,"Media & Entertainment, Image generation",500.0
+902,PhotoRoom,Adobe,"Media & Entertainment, Image generation",500.0
+903,PhotoRoom,Firefly,"Media & Entertainment, Image generation",500.0
+904,Luminance,Harvey AI,,500.0
+905,Luminance,Noxtua,,500.0
+906,Luminance,Jus Mundi,,500.0
+907,Luminance,Lawx,,500.0
+908,Cradle,EvolutionaryScale,Biotech,420.0
+909,Cradle,Generate Biomedicines,Biotech,420.0
+910,Cradle,Nimbus Therapeutics,Biotech,420.0
+911,Cradle,DeepMind,Biotech,420.0
+912,Kandou AI,Astera Labs,"Hardware, Chip",400.0
+913,Kandou AI,Broadcom,"Hardware, Chip",400.0
+914,Kandou AI,Marvell Technology,"Hardware, Chip",400.0
+915,Kandou AI,Alphawave Semi,"Hardware, Chip",400.0
+916,Kandou AI,Rambus,"Hardware, Chip",400.0
+917,Dust,Glean,"Health & Social Care, Agentic",300.0
+918,Dust,Twin,"Health & Social Care, Agentic",300.0
+919,Dust,Manus,"Health & Social Care, Agentic",300.0
+920,Dust,Metaflow AI,"Health & Social Care, Agentic",300.0
+921,Corti,Microsoft,"Health & Social Care, AI model",300.0
+922,Corti,AWS,"Health & Social Care, AI model",300.0
+923,Corti,Huma,"Health & Social Care, AI model",300.0
+924,Corti,MedeAnalytics,"Health & Social Care, AI model",300.0
+925,Corti,Suki AI,"Health & Social Care, AI model",300.0
+926,Corti,Nabla,"Health & Social Care, AI model",300.0
+927,Kyutai,Lalal.ai,"AI model, Voice",300.0
+928,Kyutai,Audimee,"AI model, Voice",300.0
+929,Kyutai,Ace Studio,"AI model, Voice",300.0
+930,Kyutai,Controlla.xyz,"AI model, Voice",300.0
+931,Kyutai,Lalals.com,"AI model, Voice",300.0
+932,LightOn,Yseop,AI model,288.0
+933,LightOn,Mistral AI,AI model,288.0
+934,LightOn,Dust,AI model,288.0
+935,LightOn,Pryon,AI model,288.0
+936,Appen,Scale AI,ICT,263.0
+937,Appen,Labelbox,ICT,263.0
+938,Appen,Snorkel AI,ICT,263.0
+939,Appen,Dataloop,ICT,263.0
+940,Appen,Centaur Labs,ICT,263.0
+941,Appen,Isahit,ICT,263.0
+942,Gleamer,Aidoc,"AI model, Health & Social Care",230.0
+943,Gleamer,RapidAI,"AI model, Health & Social Care",230.0
+944,Gleamer,Rad AI,"AI model, Health & Social Care",230.0
+945,Gleamer,Annalise.ai,"AI model, Health & Social Care",230.0
+946,4.screen,Telenav,"Transport & Mobility, Media & Entertainment",150.0
+947,4.screen,Cerence,"Transport & Mobility, Media & Entertainment",150.0
+948,4.screen,Connected Travel,"Transport & Mobility, Media & Entertainment",150.0
+949,4.screen,Here technologies,"Transport & Mobility, Media & Entertainment",150.0
+950,4.screen,Google,"Transport & Mobility, Media & Entertainment",150.0
+951,4.screen,Apple,"Transport & Mobility, Media & Entertainment",150.0
+952,Prophesee,Samsung Electronics,"Computer Vision, AI model, Robotics",130.0
+953,Prophesee,OmniVision Technologies,"Computer Vision, AI model, Robotics",130.0
+954,Prophesee,Sony,"Computer Vision, AI model, Robotics",130.0
+955,Prophesee,iniVation,"Computer Vision, AI model, Robotics",130.0
+956,Prophesee,Oculi,"Computer Vision, AI model, Robotics",130.0
+957,Prophesee,Insightness,"Computer Vision, AI model, Robotics",130.0
+958,Prophesee,Cognex,"Computer Vision, AI model, Robotics",130.0
+959,Prophesee,Keyence,"Computer Vision, AI model, Robotics",130.0
+960,Prophesee,SICK AG,"Computer Vision, AI model, Robotics",130.0
+961,Comand AI,Anduril Industries,"AI model, Aerospace & Defence",124.0
+962,Comand AI,Palantir,"AI model, Aerospace & Defence",124.0
+963,Comand AI,Thales,"AI model, Aerospace & Defence",124.0
+964,Comand AI,Airbus,"AI model, Aerospace & Defence",124.0
+965,Yseop,Wisedocs,"AI model, Health & Social Care",120.0
+966,Yseop,Pryon,"AI model, Health & Social Care",120.0
+967,Yseop,LightOn,"AI model, Health & Social Care",120.0
+968,Yseop,grandes CRO,"AI model, Health & Social Care",120.0
+969,Yseop,Cognizant,"AI model, Health & Social Care",120.0
+970,Nabla,Abridge,"AI model, Health & Social Care",120.0
+971,Nabla,Microsoft & Oracle,"AI model, Health & Social Care",120.0
+972,AMC Robotics Corporation,Boston Dynamics,Robotics,110.0
+973,AMC Robotics Corporation,Unitree Robotics,Robotics,110.0
+974,AMC Robotics Corporation,Symbotic,Robotics,110.0
+975,Quantum Diamonds,KLA Corporation,"R&D, Quantic",104.0
+976,Quantum Diamonds,Applied Materials,"R&D, Quantic",104.0
+977,Quantum Diamonds,ASML,"R&D, Quantic",104.0
+978,Quantum Diamonds,Quantum Design,"R&D, Quantic",104.0
+979,Quantum Diamonds,NVision Imaging,"R&D, Quantic",104.0
+980,Multiverse Computing,SandboxAQ,Quantic,100.0
+981,Multiverse Computing,Zapata Computing,Quantic,100.0
+982,Multiverse Computing,QC Ware,Quantic,100.0
+983,Multiverse Computing,Neural Magic,Quantic,100.0
+984,Multiverse Computing,Deci AI,Quantic,100.0
+985,Multiverse Computing,Pasqal,Quantic,100.0
+986,Multiverse Computing,IQM,Quantic,100.0
+987,Volta medical,Biosense Webster,"AI model, Health & Social Care, Cardio",90.0
+988,Volta medical,Johnson & Johnson,"AI model, Health & Social Care, Cardio",90.0
+989,Volta medical,Medtronic,"AI model, Health & Social Care, Cardio",90.0
+990,Volta medical,Abbott,"AI model, Health & Social Care, Cardio",90.0
+991,OLLAMA,VLLM,"AI model, Inference",88.0
+992,OLLAMA,Llama.ccp,"AI model, Inference",88.0
+993,OLLAMA,LM studio,"AI model, Inference",88.0
+994,OLLAMA,LangChain,"AI model, Inference",88.0
+995,OLLAMA,LLAMAIndex,"AI model, Inference",88.0
+996,OLLAMA,Huggingface,"AI model, Inference",88.0
+997,Paige AI,PathAI,"Biotech, Health & Social Care, Oncology",81.0
+998,Paige AI,Ibex Medical Analytics,"Biotech, Health & Social Care, Oncology",81.0
+999,Paige AI,Proscia,"Biotech, Health & Social Care, Oncology",81.0
+1000,Arago,Lightmatter,"Hardware, Photonic",70.0
+1001,Arago,Luminous Computing,"Hardware, Photonic",70.0
+1002,Arago,Rain AI,"Hardware, Photonic",70.0
+1003,Arago,Groq,"Hardware, Photonic",70.0
+1004,Arago,Nvidia,"Hardware, Photonic",70.0
+1005,Arago,AMD,"Hardware, Photonic",70.0
+1006,Bodyguard.ai,Tisane Labs,"IT & Security, Cyber",55.0
+1007,Bodyguard.ai,Besedo,"IT & Security, Cyber",55.0
+1008,Bodyguard.ai,Two Hat,"IT & Security, Cyber",55.0
+1009,Bodyguard.ai,OpenAI Moderation API,"IT & Security, Cyber",55.0
+1010,Art Recognition,Startbahn,"IT & Security, Art",50.0
+1011,Art Recognition,Verisart,"IT & Security, Art",50.0
+1012,Art Recognition,InsightART.,"IT & Security, Art",50.0
+1013,Art Recognition,Hephaestus Analytical,"IT & Security, Art",50.0
+1014,DarwinAI,Landing AI,"Manufacturing & Operations, ICT",50.0
+1015,DarwinAI,Edge Impulse,"Manufacturing & Operations, ICT",50.0
+1016,DarwinAI,Instrumental,"Manufacturing & Operations, ICT",50.0
+1017,DarwinAI,Neural Magic,"Manufacturing & Operations, ICT",50.0
+1018,DarwinAI,Deci AI,"Manufacturing & Operations, ICT",50.0
+1019,Oriole Networks,Cisco,"Hardware, Photonic",35.0
+1020,Oriole Networks,Nvidia,"Hardware, Photonic",35.0
+1021,Oriole Networks,Ciena,"Hardware, Photonic",35.0
+1022,Colossyan,Synthesia,,30.0
+1023,Colossyan,HeyGen,,30.0
+1024,Colossyan,DeepBrain AI,,30.0
+1025,Colossyan,Runway,,30.0
+1026,Doubleword,Baseten Technologies,"AI model, Inference",27.0
+1027,Doubleword,Fireworks AI,"AI model, Inference",27.0
+1028,Doubleword,Liquid AI,"AI model, Inference",27.0
+1029,Doubleword,Scale AI,"AI model, Inference",27.0
+1030,Doubleword,Comet,"AI model, Inference",27.0
+1031,Zapia AI,Luzia,AI model,19.0
+1032,Zapia AI,Memorae AI,AI model,19.0
+1033,Zapia AI,Notis,AI model,19.0
+1034,Zapia AI,Poke,AI model,19.0
+1035,Zapia AI,The Librarian,AI model,19.0
+1036,Teraki,Hailo,"Transport & Mobility, AV",16.0
+1037,Teraki,Blaize,"Transport & Mobility, AV",16.0
+1038,Teraki,Ambarella,"Transport & Mobility, AV",16.0
+1039,Teraki,Deepen AI,"Transport & Mobility, AV",16.0
+1040,Teraki,Scale AI,"Transport & Mobility, AV",16.0
+1041,Teraki,Numurus,"Transport & Mobility, AV",16.0
+1042,Teraki,Oxa,"Transport & Mobility, AV",16.0
+1043,Teraki,Applied Intuition,"Transport & Mobility, AV",16.0
+1044,BenevolentAI,Exscientia,"AI model, R&D, Biotech",13.0
+1045,EbenBuild,Dassault Systèmes,Health & Social Care,12.0
+1046,EbenBuild,InSilicoTrials,Health & Social Care,12.0
+1047,EbenBuild,Virtonomy,Health & Social Care,12.0
+1048,Alpine Eagle,Anduril Industries,"Manufacturing & Operations, Defence, Drone",11.0
+1049,Alpine Eagle,Helsing AI,"Manufacturing & Operations, Defence, Drone",11.0
+1050,Alpine Eagle,Epirus,"Manufacturing & Operations, Defence, Drone",11.0
+1051,Alpine Eagle,D-Fend Solutions,"Manufacturing & Operations, Defence, Drone",11.0
+1052,Alpine Eagle,Dedrone,"Manufacturing & Operations, Defence, Drone",11.0
+1053,Altavo GmbH,Atos Medical,"AI model, Computer Vision, Health & Social Care",10.0
+1054,Altavo GmbH,Lip Reading systems,"AI model, Computer Vision, Health & Social Care",10.0
+1055,Amberscript,Happy Scribe,AI model,10.0
+1056,Amberscript,Sonix,AI model,10.0
+1057,Amberscript,Trint,AI model,10.0
+1058,Amberscript,tl,AI model,10.0
+1059,Amberscript,dv,AI model,10.0
+1060,Amberscript,Otter.ai,AI model,10.0
+1061,Amberscript,Transkriptor,AI model,10.0
+1062,Amberscript,GoTranscript,AI model,10.0
+1063,Brainial,DeepJudge,"Professional Services, Legal tech, tender",10.0
+1064,Brainial,Harvey,"Professional Services, Legal tech, tender",10.0
+1065,Brainial,AutogenAI,"Professional Services, Legal tech, tender",10.0
+1066,Brainial,Responsive,"Professional Services, Legal tech, tender",10.0
+1067,Brainial,Loopio,"Professional Services, Legal tech, tender",10.0
+1068,Quantistry,PhaseCraft,"R&D, AI model, Chemistry",10.0
+1069,Quantistry,SandboxAQ,"R&D, AI model, Chemistry",10.0
+1070,Quantistry,Pasqal,"R&D, AI model, Chemistry",10.0
+1071,Ameba,Decagon AI & Sierra AI,Logistics,9.0
+1072,Ameba,Blue Yonder,Logistics,9.0
+1073,Ameba,Manhattan Associates,Logistics,9.0
+1074,Ameba,Sourceful,Logistics,9.0
+1075,Ameba,Zencargo,Logistics,9.0
+1076,20face,brighter AI,"Health & Social Care, IT & Security",8.0
+1077,20face,BioID,"Health & Social Care, IT & Security",8.0
+1078,20face,iProov,"Health & Social Care, IT & Security",8.0
+1079,20face,PrivateID,"Health & Social Care, IT & Security",8.0
+1080,20face,Oosto,"Health & Social Care, IT & Security",8.0
+1081,20face,Incode Technologies,"Health & Social Care, IT & Security",8.0
+1082,20face,Thales Group,"Health & Social Care, IT & Security",8.0
+1083,20face,Cognitec Systems,"Health & Social Care, IT & Security",8.0
+1084,Lawx,Harvey AI,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1085,Lawx,Noxtua,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1086,Lawx,Datev,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1087,Lawx,LexisNexis,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1088,Lawx,Wolters Kluwer,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1089,Lawx,Septeo,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1090,Lawx,Luminance,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1091,Lawx,Definely,"Manufacturing & Operations, Professional Services, LawTech",7.5
+1092,3ive AI,Dassault Systèmes,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
+1093,3ive AI,Siemens Digital Industries Software,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
+1094,3ive AI,PTC,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
+1095,3ive AI,Simus Systems,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
+1096,3ive AI,CADENAS,"ICT, Manufacturing & Operations, Transport & Mobility",5.0
+1097,Dexter,Workato,"Financial Services, AI model, Professional Services",5.0
+1098,Dexter,Automation Anywhere,"Financial Services, AI model, Professional Services",5.0
+1099,Dexter,Coupa Software,"Financial Services, AI model, Professional Services",5.0
+1100,PharmAI,Isomorphic Labs,"Biotech, AI model",5.0
+1101,PharmAI,Chai Discovery,"Biotech, AI model",5.0
+1102,PharmAI,Xaira Therapeutics,"Biotech, AI model",5.0
+1103,Accentize GmbH,iZotope,"Manufacturing & Operations, R&D, ICT",1.0
+1104,Accentize GmbH,Goyo AI,"Manufacturing & Operations, R&D, ICT",1.0
+1105,Accentize GmbH,Waves Audio,"Manufacturing & Operations, R&D, ICT",1.0
+1106,Accentize GmbH,Adobe,"Manufacturing & Operations, R&D, ICT",1.0
+1107,AI Medical Technology,Skin Analytics,"AI model, Biotech, Oncology",1.0
+1108,AI Medical Technology,DermaSensor,"AI model, Biotech, Oncology",1.0
+1109,AI Medical Technology,MetaOptima / DermEngine,"AI model, Biotech, Oncology",1.0
+1110,AI Medical Technology,Miiskin,"AI model, Biotech, Oncology",1.0
+1111,AI Medical Technology,SkinIO,"AI model, Biotech, Oncology",1.0
+1112,Captain AI,Orca AI,"Transport & Mobility, Marine",1.0
+1113,Captain AI,Captain's Eye,"Transport & Mobility, Marine",1.0
+1114,Captain AI,MindChip,"Transport & Mobility, Marine",1.0
+1115,Captain AI,Sea Machines Robotics,"Transport & Mobility, Marine",1.0
+1116,HughGrants,Grantify,"AI model, ICT",1.0
+1117,HughGrants,Egrants,"AI model, ICT",1.0
+1118,HughGrants,OpenGrants,"AI model, ICT",1.0
+1119,Skylab,Picterra,ICT,1.0
+1120,Skylab,Orbify,ICT,1.0
+1121,Prognostix AB,SKF Ensemble,R&D,0.1
+1122,Prognostix AB,Ambyint,R&D,0.1
+1123,Prognostix AB,SparkCognition,R&D,0.1
+1124,Prognostix AB,Uptake,R&D,0.1

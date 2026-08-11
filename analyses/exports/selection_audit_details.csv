@@ -9,6 +9,8 @@ Ameba,excluded_no_shared_competitor,False,True,False
 Art Recognition,excluded_no_shared_competitor,False,True,False
 BlackRock,excluded_no_shared_competitor,False,True,False
 Bodyguard.ai,excluded_no_shared_competitor,False,True,False
+Brainial,excluded_no_shared_competitor,False,True,False
+Captain AI,excluded_no_shared_competitor,False,True,False
 DentalMonitoring,excluded_no_shared_competitor,False,True,False
 Dust,excluded_no_shared_competitor,False,True,False
 EliseAI,excluded_no_shared_competitor,False,True,False
@@ -27,6 +29,7 @@ Prognostix AB,excluded_no_shared_competitor,False,True,False
 Quantum Diamonds,excluded_no_shared_competitor,False,True,False
 Run:ai,excluded_no_shared_competitor,False,True,False
 Semrush,excluded_no_shared_competitor,False,True,False
+Shift Technology,excluded_no_shared_competitor,False,True,False
 Skylab,excluded_no_shared_competitor,False,True,False
 Tempus AI,excluded_no_shared_competitor,False,True,False
 Upstart,excluded_no_shared_competitor,False,True,False
@@ -62,6 +65,7 @@ Apple,kept,False,False,True
 Arago,kept,False,False,True
 Aurora Innovation,kept,False,False,True
 BenevolentAI,kept,False,False,True
+BigBear.ai,kept,False,False,True
 Black Forest Labs,kept,False,False,True
 Boston Dynamics,kept,False,False,True
 Broadcom,kept,False,False,True
@@ -95,6 +99,7 @@ Domyn,kept,False,False,True
 Doubleword,kept,False,False,True
 Dynatrace,kept,False,False,True
 EbenBuild,kept,False,False,True
+Einride,kept,False,False,True
 Fermi Inc.,kept,False,False,True
 Figure AI,kept,False,False,True
 GitHub,kept,False,False,True
@@ -111,7 +116,9 @@ Hugging Face,kept,False,False,True
 IBM,kept,False,False,True
 IQM Quantum Computers,kept,False,False,True
 Ineffable Intelligence,kept,False,False,True
+Innodata,kept,False,False,True
 Intel,kept,False,False,True
+Kandou AI,kept,False,False,True
 Kaola,kept,False,False,True
 Kling AI,kept,False,False,True
 Kraken Technologies,kept,False,False,True

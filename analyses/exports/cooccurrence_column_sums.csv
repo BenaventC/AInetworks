@@ -10,165 +10,166 @@ Google,11.0
 Amazon,11.0
 Apple,9.0
 Tesla,9.0
-Baidu,8.0
 AWS,8.0
 ByteDance,8.0
-SAP,8.0
 Runway,8.0
+SAP,8.0
+Baidu,8.0
+Alibaba,7.0
 MiniMax,7.0
 Intel,7.0
-Alibaba,7.0
-Waymo,6.0
+Waymo,7.0
 Adobe,6.0
-Tencent,6.0
 CoreWeave,6.0
+Palantir,6.0
 DeepSeek,6.0
+Tencent,6.0
+AMD,5.0
+Cohere,5.0
 Lambda Labs,5.0
 Moonshot AI,5.0
-Cohere,5.0
-IBM,5.0
-AMD,5.0
-Salesforce,5.0
-Palantir,5.0
 Qualcomm,5.0
+IBM,5.0
 Oracle,5.0
+Salesforce,5.0
+Scale AI,4.0
 Samsung Electronics,4.0
-Zhipu AI,4.0
+Anduril Industries,4.0
 Luminance,4.0
 Huawei,4.0
 Nabla,4.0
-Exscientia,3.0
-Anduril Industries,3.0
-Sony,3.0
-Boston Dynamics,3.0
-Agility Robotics,3.0
-Alibaba Cloud,3.0
-Helsing,3.0
-Mistral AI,3.0
-Ineffable Intelligence,3.0
-Figure AI,3.0
+Zhipu AI,4.0
 Luma AI,3.0
+Kuaishou,3.0
+Ineffable Intelligence,3.0
+AMI Labs,3.0
+Sony,3.0
+Bland AI,3.0
+Lockheed Martin,3.0
+Boston Dynamics,3.0
 Netflix,3.0
+Noxtua,3.0
+Boeing,3.0
+Cognizant,3.0
+Figure AI,3.0
+Retell AI,3.0
+Alibaba Cloud,3.0
+Exscientia,3.0
+Helsing,3.0
+Fireworks AI,3.0
+Harvey AI,3.0
+Labelbox,3.0
 Midjourney,3.0
 Cerebras,3.0
-Harvey AI,3.0
-Noxtua,3.0
 Pasqal,3.0
-Bland AI,3.0
-Fireworks AI,3.0
-Retell AI,3.0
-Kuaishou,3.0
-Scale AI,3.0
-AMI Labs,3.0
-Datadog,2.0
-ElevenLabs,2.0
-Anduril,2.0
-Dassault Systèmes,2.0
-Helsing AI,2.0
-Xiaohongshu,2.0
-Cognizant,2.0
-HeyGen,2.0
-Hugging Face,2.0
-Hailuo AI,2.0
-Apptronik,2.0
-Canva,2.0
-Tenstorrent,2.0
-Isomorphic Labs,2.0
-TSMC,2.0
-Keyence,2.0
-Labelbox,2.0
-Groq,2.0
-Lawx,2.0
-LexisNexis,2.0
-Automation Anywhere,2.0
-Lockheed Martin,2.0
-Thales,2.0
-Mirendil,2.0
-Mistral,2.0
-Workato,2.0
-MistralAI,2.0
-Kling AI,2.0
-Nebius Group,2.0
-Abridge,2.0
-Neural Magic,2.0
-New Relic,2.0
-Equinix,2.0
-Cruise,2.0
-Ada Support,2.0
-Snorkel AI,2.0
-Snowflake,2.0
-Temu,2.0
-Splunk,2.0
-Mobileye,2.0
-WeRide,2.0
-Coveo,2.0
-Cisco,2.0
-Boeing,2.0
-Parloa,2.0
+Agility Robotics,3.0
+Mistral AI,3.0
+Ricursive Intelligence,2.0
 Zoox,2.0
-Gitlab,2.0
-Vapi,2.0
-Skild AI,2.0
-Cursor,2.0
-Palentir,2.0
+Abridge,2.0
+Automation Anywhere,2.0
+SICK AG,2.0
+Rigetti Computing,2.0
+RunPod,2.0
+Wolters Kluwer,2.0
+Workato,2.0
+SandboxAQ,2.0
 Raytheon,2.0
+Splunk,2.0
+Canva,2.0
+Broadcom,2.0
+Snowflake,2.0
+Mistral,2.0
+New Relic,2.0
+Neural Magic,2.0
+Nebius Group,2.0
+Snorkel AI,2.0
+Skild AI,2.0
+Mirendil,2.0
+Black Forest Labs,2.0
+Mobileye,2.0
+MistralAI,2.0
+Appen,2.0
+Anduril,2.0
+Aurora Innovation,2.0
+Apptronik,2.0
+Xiaomi,2.0
+Xiaohongshu,2.0
+World Labs,2.0
 Recursive Superintelligence,2.0
 Poolside,2.0
 Pryon,2.0
-Wolters Kluwer,2.0
-Ricursive Intelligence,2.0
-Unitree Robotics,2.0
-RunPod,2.0
-Quantinuum,2.0
-Elastic,2.0
-SandboxAQ,2.0
-World Labs,2.0
-Schrödinger,2.0
 Shein,2.0
-Xiaomi,2.0
-Z.ai,2.0
+Schrödinger,2.0
+Quantinuum,2.0
+Palentir,2.0
+WeRide,2.0
+Parloa,2.0
+Kling AI,2.0
+Keyence,2.0
+Cisco,2.0
+Coveo,2.0
+Helsing AI,2.0
+HeyGen,2.0
+Isomorphic Labs,2.0
 Insilico Medicine,2.0
-Databricks,2.0
-Black Forest Labs,2.0
+Temu,2.0
+Tenstorrent,2.0
+TSMC,2.0
+Marvell Technology,2.0
+LexisNexis,2.0
+Lawx,2.0
+Vapi,2.0
+Waabi,2.0
+Thales,2.0
+Hugging Face,2.0
+Unitree Robotics,2.0
 Constellation Energy,2.0
+Datadog,2.0
+Databricks,2.0
+Dassault Systèmes,2.0
+Hailuo AI,2.0
+Groq,2.0
+Gitlab,2.0
+Cursor,2.0
+Cruise,2.0
+Equinix,2.0
 Deci AI,2.0
-SICK AG,2.0
-Rigetti Computing,2.0
-Cortex XDR,1.0
-Coupa Software,1.0
-Covariant,1.0
-Centaur Labs,1.0
-Cerence,1.0
-Chai Discovery,1.0
-ChapsVision,1.0
-Character.ai,1.0
-Check Point,1.0
-Ciena,1.0
-ClickUp,1.0
-D-Fend Solutions,1.0
-Data Annotation,1.0
-DataRobot,1.0
-Dataiky,1.0
-Dataloop,1.0
-Cogngy,1.0
-Cognition AI,1.0
-Cognugy,1.0
-Colossyan,1.0
-Comet,1.0
-Connected Travel,1.0
-DeepBrain AI,1.0
-DeepL,1.0
-DeepScribe,1.0
-Deepen AI,1.0
-Deezer,1.0
-Definely,1.0
-Delair,1.0
-Cresta AI,1.0
-CrowdStrike,1.0
-CrowdStrike Falcon,1.0
-Crusoe,1.0
-Crusoe Energy,1.0
-Digital Realty,1.0
+ElevenLabs,2.0
+Elastic,2.0
+Ada Support,2.0
+Z.ai,2.0
+AIVA,1.0
+Zhihu,1.0
+Zendesk AI,1.0
+Zelty,1.0
+Zapier,1.0
+Zapata Computing,1.0
+Yseop,1.0
+Xpeng,1.0
+Ambarella,1.0
+Alterx,1.0
+Alphawave Semi,1.0
+Alibaba Group,1.0
+Reverso and Yandex,1.0
+1X Technologies,1.0
+pendo,1.0
+Ambience Healthcare,1.0
+Amplitude,1.0
+Anysphere,1.0
+Appian,1.0
+Apple Silicon,1.0
+Applied Intuition,1.0
+Airbus,1.0
+Akamai,1.0
+Aleph Alpha,1.0
+Sakana AI,1.0
+Sama,1.0
+SambaNova,1.0
+Samsung,1.0
+Saunoto,1.0
+Rasa,1.0
+Recraft AI,1.0
 Digital Realty Trust,1.0
 Disney,1.0
 Docplanner,1.0
@@ -178,35 +179,47 @@ Durable Capital Partners,1.0
 Dust,1.0
 Dust / Gumloop,1.0
 Dynatrace,1.0
-Datev,1.0
-Decagon,1.0
 Dedrone,1.0
 Deep Green,1.0
 Deep Mind,1.0
-Equinix DataBank,1.0
+DeepBrain AI,1.0
+DeepL,1.0
+DeepScribe,1.0
+Deepen AI,1.0
+UNISOC,1.0
+Udio,1.0
+UiPath,1.0
+Unitree,1.0
 VIP.com,1.0
-Valo Health,1.0
-Vidu,1.0
-Vimeo,1.0
-Virtonomy,1.0
-Visa,1.0
-Vision One,1.0
-Volkswagen Group,1.0
-Voltage Park,1.0
-Waabi,1.0
-Dell,1.0
-Deppseek,1.0
-Firefly,1.0
-Flair.ai,1.0
-Flux,1.0
-Fortinet,1.0
 Edge Impulse,1.0
 Einride,1.0
 Elasticsearch,1.0
 Eleven Labs,1.0
 Encord,1.0
 Enflame,1.0
+Epic Systems,1.0
 Epirus,1.0
+Equinix DataBank,1.0
+Deppseek,1.0
+Digital Realty,1.0
+Flux,1.0
+Fortinet,1.0
+Translate.,1.0
+Tribun Health,1.0
+Twitch,1.0
+Data Annotation,1.0
+DataLoop,1.0
+DataRobot,1.0
+Dataiky,1.0
+Dataloop,1.0
+Datev,1.0
+Decagon,1.0
+Cognugy,1.0
+Colossyan,1.0
+Comet,1.0
+Connected Travel,1.0
+Freed,1.0
+Fullstoryn,1.0
 Gatik,1.0
 Generate Biomedicines,1.0
 Githbub,1.0
@@ -219,79 +232,42 @@ Fastly,1.0
 Fermi Inc.,1.0
 Field AI,1.0
 Figma,1.0
-Heidi Health,1.0
-TogetherAI,1.0
-TopDoctors,1.0
-Torc Robotics,1.0
-Toyota,1.0
-Translate.,1.0
-Tribun Health,1.0
-Twitch,1.0
-UNISOC,1.0
-Udio,1.0
-UiPath,1.0
-Unitree,1.0
-Freed,1.0
-Fullstoryn,1.0
-Hour One,1.0
-HubSpot,1.0
-Huma,1.0
-Hygon Information Technology,1.0
-Hyperstack,1.0
-Guru,1.0
+Firefly,1.0
+Flair.ai,1.0
 H Company,1.0
 H2O.AI,1.0
 HP,1.0
 HPE,1.0
 Hailo,1.0
 Harmattan AI,1.0
-Hyundai-Kia,1.0
-IQM,1.0
-IREN Cloud,1.0
-Ideogram,1.0
-Ideogram AI,1.0
-Iktos,1.0
-Imperva,1.0
-InSilicoTrials,1.0
-Inceptio technology,1.0
-Heptabase,1.0
-Here technologies,1.0
-Epic Systems,1.0
-Hisense,1.0
-JD Worldwide,1.0
-JD.com,1.0
-Jasper,1.0
-Jimeng,1.0
-Juniper Networks,1.0
-1X Technologies,1.0
-Tencent Cloud,1.0
-pendo,1.0
-Sama,1.0
-AST SpaceMobile,1.0
 Thinking Machines Lab,1.0
 Thonson Reuteur,1.0
 TikTok,1.0
 Tmall Global,1.0
 Toast,1.0
 Together AI,1.0
-Kiri Engine,1.0
-Accenture,1.0
-Kodiak Robitics,1.0
-KodiakRobotics,1.0
-Kore.AI,1.0
-AgiBot,1.0
-LG lectronics,1.0
-Infleqtion,1.0
-Infosy,1.0
-Inmarsat,1.0
-Insightness,1.0
-Airbus,1.0
-Instrumental,1.0
-Akamai,1.0
-Isahit,1.0
-civitai,1.0
-grandes CRO,1.0
-Talen Energy,1.0
+TogetherAI,1.0
+TopDoctors,1.0
+Torc Robotics,1.0
+Toyota,1.0
+Hour One,1.0
+HubSpot,1.0
+Cortex XDR,1.0
+Coupa Software,1.0
+Covariant,1.0
+Cresta AI,1.0
+CrowdStrike,1.0
+CrowdStrike Falcon,1.0
+ChapsVision,1.0
+Character.ai,1.0
+Check Point,1.0
+Ciena,1.0
+ClickUp,1.0
+Cloudfactory,1.0
+Clover,1.0
+Guru,1.0
+InSilicoTrials,1.0
+Inceptio technology,1.0
 Talkdesk,1.0
 Tandem Health,1.0
 Tata,1.0
@@ -301,384 +277,430 @@ Telegram,1.0
 Telenav,1.0
 Telus digital,1.0
 Tempus,1.0
-gridX,1.0
+Tencent Cloud,1.0
+Heidi Health,1.0
+Heptabase,1.0
+Here technologies,1.0
+Hisense,1.0
+Inmarsat,1.0
+Insightness,1.0
+Instrumental,1.0
+Isahit,1.0
+JD Worldwide,1.0
+JD.com,1.0
+Huma,1.0
+Hygon Information Technology,1.0
+Hyperstack,1.0
+Hyundai-Kia,1.0
+IQM,1.0
+IREN Cloud,1.0
+Ideogram,1.0
+Ideogram AI,1.0
+Iktos,1.0
+Imperva,1.0
+Volkswagen Group,1.0
+Voltage Park,1.0
+Legora,1.0
+Jasper,1.0
+Jimeng,1.0
+Juniper Networks,1.0
 Jus Mundi,1.0
 Kaggle,1.0
 Kaluza,1.0
-iMerit,1.0
-Luminous Computing,1.0
-Mach Industries,1.0
-Made-in-China.com,1.0
-Maiia,1.0
-iZotope,1.0
-AtlassianBitBucket,1.0
+Kiri Engine,1.0
+Kodiak Robitics,1.0
+Kodiak Robotics,1.0
+KodiakRobotics,1.0
+Infleqtion,1.0
+Infosy,1.0
+Infosys,1.0
+Talen Energy,1.0
+Kore.AI,1.0
+LG lectronics,1.0
 Landing AI,1.0
-Aleph Alpha,1.0
 LegalFly,1.0
-Legora,1.0
-Lenovo,1.0
+CoCounsel,1.0
+Codeium,1.0
+Cognex,1.0
+Cogngy,1.0
+Cognition AI,1.0
+Valo Health,1.0
+Vidu,1.0
+Vimeo,1.0
+Virtonomy,1.0
+Visa,1.0
+Vision One,1.0
 Lexis+ AI / Protégé,1.0
-Alibaba Group,1.0
-Synapse Medicine,1.0
-Synthesia,1.0
-TCL,1.0
-Symbotic,1.0
-Make,1.0
-Marvell,1.0
-Marvell Technology,1.0
-Mastercard,1.0
-MedeAnalytics,1.0
-MediaTek,1.0
-Alterx,1.0
-MetaAI,1.0
 LightOn,1.0
 Lightmatter,1.0
 Liquid AI,1.0
-Ambarella,1.0
 Lucid Motors,1.0
-Ambience Healthcare,1.0
-Amplitude,1.0
-MioDottore,1.0
-Xaira Therapeutics,1.0
-Xiaimi,1.0
-Baseten Technologies,1.0
-Basler,1.0
-Mixpanel,1.0
-Squarespace,1.0
-Stability AI,1.0
-Stabilitye AI,1.0
-Stack AV,1.0
+Luminous Computing,1.0
 StepFun,1.0
 Stripe,1.0
 Suki,1.0
 Suki AI,1.0
 Superannotate,1.0
 Surge AI,1.0
-N/Baidu,1.0
-Beatoven.ai,1.0
-Nebius,1.0
-Better Stack,1.0
-Anysphere,1.0
-Appen,1.0
-Appian,1.0
-Nimbus Therapeutics,1.0
-Mews,1.0
-Micron technology,1.0
-Apple Silicon,1.0
-Microsoft & Oracle,1.0
-Middleware,1.0
-Applied Intuition,1.0
-Midjourney / Magnific AI,1.0
-Aqemia,1.0
-SnapChat,1.0
-Arcadia,1.0
-ArianeGroup,1.0
-Snthflow,1.0
-Software AG,1.0
-Arista Networks,1.0
-Sophos Endpoint,1.0
-Spellbook,1.0
+Symbotic,1.0
+Synapse Medicine,1.0
+Synthesia,1.0
+TCL,1.0
 Spheron,1.0
-Athnahealth,1.0
 Spotify,1.0
 Square,1.0
-Biren Technology,1.0
+Squarespace,1.0
+Stability AI,1.0
+Stabilitye AI,1.0
+Stack AV,1.0
+Mach Industries,1.0
+Made-in-China.com,1.0
+Maiia,1.0
+Make,1.0
+Marvell,1.0
+Mastercard,1.0
+MedeAnalytics,1.0
+MediaTek,1.0
+Lenovo,1.0
+Midjourney / Magnific AI,1.0
+Software AG,1.0
+Sophos Endpoint,1.0
+Spellbook,1.0
+Walmart,1.0
+Waves Audio,1.0
+Wayve,1.0
+BytesDance,1.0
+C3 AI,1.0
+C3.ai,1.0
+CADENAS,1.0
+CSM.ai,1.0
+Capgemini,1.0
+Centaur Labs,1.0
+Cerence,1.0
+Chai Discovery,1.0
 BlackForect Labs,1.0
-Moore Threads Technology,1.0
 Blaize,1.0
-POly AI,1.0
-PTC,1.0
-Nio,1.0
-Nokia,1.0
+Bloomberg,1.0
+Booz Allen Hamilton,1.0
+Bosch,1.0
+BMW,1.0
+BYD,1.0
+Baichuan Intelligence,1.0
+Baseten Technologies,1.0
+Basler,1.0
+N/Baidu,1.0
+MetaAI,1.0
+Mews,1.0
+Micron technology,1.0
+Microsoft & Oracle,1.0
+Middleware,1.0
 Northrop Grumman,1.0
 Notion,1.0
-Bloomberg,1.0
 Numerion Labs,1.0
 Numurus,1.0
+SiliconFlow,1.0
+Simus Systems,1.0
+Sinequa,1.0
+Skydio,1.0
+Slack AI,1.0
+Snap,1.0
+SnapChat,1.0
+Snthflow,1.0
+MioDottore,1.0
+Mixpanel,1.0
+Moore Threads Technology,1.0
+Mureka,1.0
+Woocommerce,1.0
+Pebblely,1.0
 Nuro,1.0
-Booz Allen Hamilton,1.0
 OVHcloud,1.0
 Oculi,1.0
 Odyssey,1.0
 OmniVision Technologies,1.0
 Omron,1.0
-Bosch,1.0
-Atom Computing,1.0
-Pebblely,1.0
-PhaseCraft,1.0
-Physical Intelligence,1.0
-Pika Labs,1.0
-Pinduoduo,1.0
-Pixelcut,1.0
 Open source (Libre Office,1.0
-Aurora Innovation,1.0
 OpenAI(Sora,1.0
 Openhands,1.0
 Oppo,1.0
-BMW,1.0
-Oracle Health,1.0
-Oxa,1.0
+Nebius,1.0
+Nimbus Therapeutics,1.0
+Nio,1.0
+Nokia,1.0
+POly AI,1.0
+PTC,1.0
+Paige AI,1.0
+Palo alto Networks,1.0
+Beatoven.ai,1.0
+Better Stack,1.0
+BigCommerce,1.0
+Bilibili,1.0
+BioMap,1.0
+Biren Technology,1.0
+WeChat,1.0
+Windsurf,1.0
+Wipro,1.0
+Wisedocs,1.0
+Wix ecommerce,1.0
+WizStudio,1.0
+PolyAI,1.0
+Pony.AI,1.0
+Pony.ai,1.0
+Scaleway,1.0
+Scribe Médical,1.0
+Semiconductors,1.0
+Septeo,1.0
+ServiceNow,1.0
+Shengshu Technology,1.0
 Shield AI,1.0
 Shopify,1.0
 Siemens Digital Industries Software,1.0
 Sierra,1.0
 Sierra AI,1.0
-SiliconFlow,1.0
-Simus Systems,1.0
-Sinequa,1.0
-BYD,1.0
-Skydio,1.0
-Slack AI,1.0
-Snap,1.0
-Paige AI,1.0
-Baichuan Intelligence,1.0
-Wayve,1.0
-Palo alto Networks,1.0
-Rasa,1.0
-WeChat,1.0
-Recraft AI,1.0
-Recursion Pharmaceuticals,1.0
-Windsurf,1.0
-Playyy,1.0
-Poly AI,1.0
-PolyAI,1.0
-Pony.AI,1.0
-Pony.ai,1.0
-Wisedocs,1.0
+Oracle Health,1.0
+Oxa,1.0
+Resolve AI,1.0
 Positionnement,1.0
-Wix ecommerce,1.0
 PublicAI,1.0
 QC Ware,1.0
-Mureka,1.0
-Rephrase.ai,1.0
-Replicate,1.0
-Resolve AI,1.0
-WizStudio,1.0
-Reverso and Yandex,1.0
-Rhoda AI,1.0
-Woocommerce,1.0
-X,1.0
-Rivian,1.0
-Robin AI,1.0
-BigCommerce,1.0
-Bilibili,1.0
 Quantum Systems,1.0
 Quantum metric,1.0
 RAsa,1.0
 Rain AI,1.0
-SambaNova,1.0
-Samsung,1.0
-BioMap,1.0
-Cloudfactory,1.0
-Saunoto,1.0
-Clover,1.0
-Scaleway,1.0
-CoCounsel,1.0
-Scribe Médical,1.0
-Semiconductors,1.0
-Septeo,1.0
-ServiceNow,1.0
-Codeium,1.0
-Shengshu Technology,1.0
+Rambus,1.0
+PhaseCraft,1.0
+Physical Intelligence,1.0
+Pika Labs,1.0
+Pinduoduo,1.0
+Pixelcut,1.0
+Playyy,1.0
+Poly AI,1.0
+Recursion Pharmaceuticals,1.0
 Refuel,1.0
 Relay Therapeutics,1.0
-Cognex,1.0
-Xpeng,1.0
-Yseop,1.0
-Broadcom,1.0
-Zapata Computing,1.0
-Zapier,1.0
-Zelty,1.0
-Zendesk AI,1.0
-Zhihu,1.0
-BytesDance,1.0
-Zocdoc,1.0
-Zoom,1.0
-AMS,1.0
-C3 AI,1.0
-CADENAS,1.0
-AIVA,1.0
-incident.io,1.0
-iniVation,1.0
+Rephrase.ai,1.0
+X,1.0
+Xaira Therapeutics,1.0
+Xiaimi,1.0
+Aqemia,1.0
+Arcadia,1.0
+ArianeGroup,1.0
+Arista Networks,1.0
+Astera Labs,1.0
+Athnahealth,1.0
+AtlassianBitBucket,1.0
+Atom Computing,1.0
+Replicate,1.0
 n8n,1.0
-CSM.ai,1.0
+you.com,1.0
+civitai,1.0
+AMS,1.0
+AST SpaceMobile,1.0
+Zoom,1.0
+Rhoda AI,1.0
+Rivian,1.0
+Robin AI,1.0
 S&P Global,1.0
-Capgemini,1.0
 SES Satellites,1.0
-Walmart,1.0
 SK hynix,1.0
 SMIC,1.0
 SPACE42,1.0
 SS&C Blue Prism,1.0
 SSI,1.0
-Sakana AI,1.0
-Waves Audio,1.0
-you.com,1.0
+Deezer,1.0
+Definely,1.0
+Delair,1.0
+Dell,1.0
+Crusoe,1.0
+Crusoe Energy,1.0
+D-Fend Solutions,1.0
+Zocdoc,1.0
+Accenture,1.0
+AgiBot,1.0
+grandes CRO,1.0
+gridX,1.0
+iMerit,1.0
+iZotope,1.0
+incident.io,1.0
+iniVation,1.0
+500 Global,0.0
+ASML,0.0
 Abbott,0.0
 Ace Studio,0.0
 Adecco,0.0
-Agile Robots,0.0
-Ahrefs,0.0
-Aidoc,0.0
-brighter AI,0.0
-dstack,0.0
 dv,0.0
 iProov,0.0
 illumina,0.0
 onsemi,0.0
-ASML,0.0
+similarweb,0.0
+tl,0.0
+xSeek,0.0
+Responsive,0.0
+Roche,0.0
 SE ranking,0.0
 SKF Ensemble,0.0
 SMEE,0.0
 STMicroelectronics,0.0
-Sequoia,0.0
-Renesas Electronics,0.0
-ResiDesk,0.0
-Roche,0.0
-Quantum Design,0.0
-Rad AI,0.0
 Randstad,0.0
 Rankfender,0.0
 RapidAI,0.0
 RealPage,0.0
-Plomberie-Pro,0.0
-Poke,0.0
+Renesas Electronics,0.0
+ResiDesk,0.0
 PrivateID,0.0
 Proscia,0.0
 Prosper,0.0
+Quantum Design,0.0
+Rad AI,0.0
+Phreesia,0.0
+Picterra,0.0
+Plany,0.0
+Plomberie-Pro,0.0
+Poke,0.0
+Sea Machines Robotics,0.0
+Sequoia,0.0
+Orbify,0.0
+Orca AI,0.0
+Otter.ai,0.0
+Pacific Biosciences,0.0
+PathAI,0.0
+Oosto,0.0
+OpenAI Moderation API,0.0
+OpenGrants,0.0
+Nikon,0.0
+Notable,0.0
+Notis,0.0
 Singular Genomics,0.0
 Skin Analytics,0.0
 SkinIO,0.0
 SkyPilot,0.0
-PathAI,0.0
-Phreesia,0.0
-Picterra,0.0
-Plany,0.0
-Oosto,0.0
-OpenAI Moderation API,0.0
-OpenGrants,0.0
-Orbify,0.0
-Otter.ai,0.0
-Pacific Biosciences,0.0
-Notable,0.0
-Notis,0.0
 SoFi,0.0
-Sonix,0.0
-Sourceful,0.0
-SparkCognition,0.0
+MisterTempo,0.0
 NVision Imaging,0.0
 NXP Semiconductors,0.0
 Natera,0.0
-Nikon,0.0
-Miiskin,0.0
-MisterTempo,0.0
-StaffMe,0.0
-Startbahn,0.0
-State Street Global Advisors,0.0
-Straumann Group,0.0
-Surfer SEO,0.0
-Manhattan Associates,0.0
-Manpower,0.0
-Manus,0.0
-MarketMuse,0.0
 Medtronic,0.0
 Memorae AI,0.0
 MetaOptima / DermEngine,0.0
 Metaflow AI,0.0
-Lip Reading systems,0.0
-Llama.ccp,0.0
+Miiskin,0.0
+MindChip,0.0
+Sonix,0.0
+Sourceful,0.0
+SparkCognition,0.0
+StaffMe,0.0
 Luzia,0.0
 MGI Tech / Complete Genomics,0.0
 MLflow,0.0
+Manhattan Associates,0.0
+Manpower,0.0
+Manus,0.0
+MarketMuse,0.0
+LendingClub,0.0
+Leroy Merlin,0.0
+Lip Reading systems,0.0
+Llama.ccp,0.0
+Loopio,0.0
+Startbahn,0.0
+State Street Global Advisors,0.0
+Straumann Group,0.0
+Surfer SEO,0.0
+Kubeflow.,0.0
+LLAMAIndex,0.0
 LM studio,0.0
 Lalal.ai,0.0
 Lalals.com,0.0
 LangChain,0.0
 LangSmith.Arize Phoenix,0.0
-LendingClub,0.0
-Leroy Merlin,0.0
-Techstars,0.0
+Johnson & Johnson,0.0
 KLA Corporation,0.0
 KUKA,0.0
 Kinova,0.0
-Kubeflow.,0.0
-LLAMAIndex,0.0
+Incode Technologies,0.0
+Infineon Technologies,0.0
 InsightART.,0.0
-Johnson & Johnson,0.0
-Texas Instruments,0.0
-Thales Group,0.0
-The Librarian,0.0
-The Vanguard Group,0.0
-Tisane Labs,0.0
 Hyro AI,0.0
 Ibex Medical Analytics,0.0
 InHand Dental,0.0
-Incode Technologies,0.0
-Infineon Technologies,0.0
+Techstars,0.0
+Texas Instruments,0.0
 Hephaestus Analytical,0.0
 Horowitz,0.0
 HubSpot AEO,0.0
 Huggingface,0.0
+Grantify,0.0
 Grin,0.0
 Groupe Kingfisher,0.0
 Guardant Health,0.0
+Guidewire,0.0
 Happy Scribe,0.0
+Harvey,0.0
+Thales Group,0.0
+The Librarian,0.0
+The Vanguard Group,0.0
+Tisane Labs,0.0
 Transkriptor,0.0
-Trint,0.0
-Trulens,0.0
-Twin,0.0
-Two Hat,0.0
+Friss,0.0
 Funnel Leasing,0.0
 Glean,0.0
 GoJob,0.0
 GoTranscript,0.0
-Grantify,0.0
 Fanuc,0.0
 Fidelity Investments,0.0
 Flexbone AI,0.0
+Trint,0.0
+Trulens,0.0
+Twin,0.0
+Two Hat,0.0
+Universal Robots,0.0
+Uptake,0.0
+VLLM,0.0
 Egrants,0.0
 Element Biosciences,0.0
 Entrata,0.0
 Entrepreneur First,0.0
-Universal Robots,0.0
-Uptake,0.0
-VLLM,0.0
-Verisart,0.0
-Dentalai,0.0
 DermaSensor,0.0
+Descartes Underwriting,0.0
 DoorLoop,0.0
 Doosan Robotics,0.0
+Duck Creek,0.0
+DeepJudge,0.0
+Dentalai,0.0
 Decagon AI & Sierra AI,0.0
-Credibly,0.0
-Cognitec Systems,0.0
 Controlla.xyz,0.0
+Credibly,0.0
 ClearML,0.0
+Cognitec Systems,0.0
+Verisart,0.0
+WandB Prompts,0.0
+Brookfield Asset Management,0.0
+Bruce,0.0
+Canon,0.0
+Captain's Eye,0.0
+Blazy AI,0.0
+Blue Yonder,0.0
 Bricoman,0.0
 Bricoprivé,0.0
 Bricozor,0.0
 Brigad,0.0
-Brookfield Asset Management,0.0
-Bruce,0.0
-Canon,0.0
-WandB Prompts,0.0
-BioID,0.0
-Biosense Webster,0.0
-Blazy AI,0.0
-Blue Yonder,0.0
-Atos Medical,0.0
-Audimee,0.0
-Avant,0.0
 Besedo,0.0
 BetterBot,0.0
-Antler,0.0
-Applied Materials,0.0
+BioID,0.0
+Biosense Webster,0.0
 Assort Health,0.0
-Align Technology,0.0
+Atos Medical,0.0
+Audimee,0.0
+AutogenAI,0.0
+Avant,0.0
 Ambyint,0.0
 Analog Devices,0.0
 Annalise.ai,0.0
+Antler,0.0
+Applied Materials,0.0
+Agile Robots,0.0
+Ahrefs,0.0
+Aidoc,0.0
+Akur8,0.0
+Align Technology,0.0
 Zencargo,0.0
-similarweb,0.0
-tl,0.0
-xSeek,0.0
-500 Global,0.0
+brighter AI,0.0
+dstack,0.0

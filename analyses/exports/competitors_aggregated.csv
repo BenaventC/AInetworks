@@ -700,6 +700,13 @@ SPACE42,Inmarsat,1
 SPACE42,SES Satellites,1
 SPACE42,Palantir,1
 SPACE42,AST SpaceMobile,1
+Innodata,Scale AI,1
+Innodata,Appen,1
+Innodata,DataLoop,1
+Innodata,Labelbox,1
+Innodata,Cognizant,1
+Innodata,Infosys,1
+Innodata,Wipro,1
 DeepL,Google,1
 DeepL,Microsoft,1
 DeepL,Reverso and Yandex,1
@@ -754,6 +761,11 @@ Domyn,Sierra AI,1
 Domyn,Rasa,1
 Domyn,Deppseek,1
 Domyn,Alibaba,1
+BigBear.ai,Palantir,1
+BigBear.ai,C3.ai,1
+BigBear.ai,Boeing,1
+BigBear.ai,Lockheed Martin,1
+BigBear.ai,Anduril Industries,1
 Job&Talent,MisterTempo,1
 Job&Talent,GoJob,1
 Job&Talent,Plany,1
@@ -794,6 +806,10 @@ Lightspeed,BigCommerce,1
 C3 AI,Palentir,1
 C3 AI,Salesforce,1
 C3 AI,SAP,1
+Einride,Waymo,1
+Einride,Kodiak Robotics,1
+Einride,Waabi,1
+Einride,Aurora Innovation,1
 DentalMonitoring,Grin,1
 DentalMonitoring,Dentalai,1
 DentalMonitoring,InHand Dental,1
@@ -828,6 +844,11 @@ Owkin,BioMap,1
 Owkin,Tempus,1
 Owkin,Paige AI,1
 Owkin,Tribun Health,1
+Shift Technology,Guidewire,1
+Shift Technology,Duck Creek,1
+Shift Technology,Descartes Underwriting,1
+Shift Technology,Friss,1
+Shift Technology,Akur8,1
 4Paradigm,DataRobot,1
 4Paradigm,H2O.AI,1
 4Paradigm,Dataiky,1
@@ -890,6 +911,11 @@ Cradle,EvolutionaryScale,1
 Cradle,Generate Biomedicines,1
 Cradle,Nimbus Therapeutics,1
 Cradle,DeepMind,1
+Kandou AI,Astera Labs,1
+Kandou AI,Broadcom,1
+Kandou AI,Marvell Technology,1
+Kandou AI,Alphawave Semi,1
+Kandou AI,Rambus,1
 Dust,Glean,1
 Dust,Twin,1
 Dust,Manus,1
@@ -1036,6 +1062,11 @@ Amberscript,dv,1
 Amberscript,Otter.ai,1
 Amberscript,Transkriptor,1
 Amberscript,GoTranscript,1
+Brainial,DeepJudge,1
+Brainial,Harvey,1
+Brainial,AutogenAI,1
+Brainial,Responsive,1
+Brainial,Loopio,1
 Quantistry,PhaseCraft,1
 Quantistry,SandboxAQ,1
 Quantistry,Pasqal,1
@@ -1080,6 +1111,10 @@ AI Medical Technology,DermaSensor,1
 AI Medical Technology,MetaOptima / DermEngine,1
 AI Medical Technology,Miiskin,1
 AI Medical Technology,SkinIO,1
+Captain AI,Orca AI,1
+Captain AI,Captain's Eye,1
+Captain AI,MindChip,1
+Captain AI,Sea Machines Robotics,1
 HughGrants,Grantify,1
 HughGrants,Egrants,1
 HughGrants,OpenGrants,1

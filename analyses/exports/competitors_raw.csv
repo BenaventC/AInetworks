@@ -4,7 +4,7 @@ Google,"AI model, Media & Entertainment, Sales & Marketing","Microsoft, OpenAI, 
 Apple,ICT,"Google, Microsoft, Samsung (smartphone), Xiaomi(smartphone), Huawei(smartphone), Dell(PC), Lenovo(PC), HP(PC), Spotify (Entertainment), Netflix(Entertainment), Amazon(Entertainment)",4500000.0
 Alphabet,"Cloud Provider, Sales & Marketing, Advertising","Microsoft, Amazon, Apple, Meta, ByteDance, Tesla, Alibaba",4120000.0
 Microsoft,"Cloud Provider, AI model, Professional Services","Amazon, Google, Meta, Apple, Sony, Oracle, Open source (Libre Office",3450000.0
-Amazon,,"Walmart, Temu, Shein, Alibaba, Microsoft, Google, Netflix, Disney, Apple, Meta",2900000.0
+Amazon,"Retail & E-commerce, Cloud Provider, Sales & Marketing","Walmart, Temu, Shein, Alibaba, Microsoft, Google, Netflix, Disney, Apple, Meta",2900000.0
 TSMC,"Hardware, Chip","Samsung Electronics, SMIC, Intel",2170000.0
 Broadcom,"Hardware, ICT, Manufacturing & Operations","Nvidia, Qualcomm, Intel, Marvell Technology",1835000.0
 Meta,"AI model, Media & Entertainment, Advertising","Google, ByteDance, Snap, X, Apple, SnapChat, Amazon, Sony, OpenAI, Anthropic, Telegram, WeChat",1503000.0
@@ -104,6 +104,7 @@ Sakana AI,"AI model, Agentic, RSI","OpenAI, Anthropic, DeepMind, Mistral AI, Ine
 ManoMano,Retail & E-commerce,"Leroy Merlin(Groupe Adeo), Groupe Kingfisher, Bricoman, Bricoprivé, Bricozor, Plomberie-Pro",2600.0
 EliseAI,"Real Estate Activities, Health & Social Care, Chatbot","Funnel Leasing, RealPage, BetterBot, ResiDesk, Entrata, DoorLoop, Hyro AI, Flexbone AI, Assort Health, Notable, Phreesia",2200.0
 SPACE42,"Data, Space","Inmarsat, SES Satellites, Palantir, AST SpaceMobile",2130.0
+Innodata,"Data, Annotation","Scale AI, Appen, DataLoop , Labelbox , Cognizant, Infosys,  Wipro,",2070.0
 DeepL,ICT,"Google Translate, Microsoft Translator, Reverso and Yandex, Translate.",2000.0
 Aleph Alpha,AI model,"Anthropic, Cohere, Mistral, OpenAI",2000.0
 Kaola,Retail & E-commerce,"JD Worldwide (groupe JD.com), VIP.com, Tmall Global, Xiaohongshu (Little Red Book), ByteDance (Douyin)",2000.0
@@ -114,6 +115,7 @@ WeRide,Transport & Mobility,"Pony.ai, Baidu (Apollo Go), Waymo",1940.0
 Weibo,Media & Entertainment,"N/Baidu, Zhihu, Douyin, Kuaishou, Bilibili, Xiaohongshu, Tencent(wechat)",1900.0
 IQM Quantum Computers,"Hardware, Quantic","Rigetti Computing, Quantinuum, Pasqal",1800.0
 Domyn,ICT,"Mistral AI, Helsing AI, Sierra AI, Rasa, Deppseek, Alibaba(Qwen)",1700.0
+BigBear.ai,Defence,"Palantir, C3.ai , Boeing , Lockheed Martin, Anduril Industries",1550.0
 Job&Talent,ICT,"MisterTempo, GoJob, Plany, Bruce, Adecco, Manpower, Randstad, StaffMe, Brigad",1500.0
 Harvey AI,"Professional Services, LawTech","Luminance, Noxtua, Thonson Reuteur, Lawx",1500.0
 Oxford Nanopore Technologies,"AI model, Health & Social Care","Pacific Biosciences, MGI Tech / Complete Genomics, Singular Genomics, Element Biosciences, illumina",1440.0
@@ -121,10 +123,12 @@ Harmattan AI,"Defence, Drone","Helsing, Anduril Industries, Delair",1400.0
 Ambiance Healthcare,Health & Social Care,"Positionnement, Abridge, Microsoft(Nuance DAX copilot), Nabla, Suki, Epic Systems, Oracle Health, Athnahealth",1400.0
 Lightspeed,"Professional Services, Retail & E-commerce","Shopify, Square, Clover, Toast, Zelty, Mews, Adobe(Magento), BigCommerce",1350.0
 C3 AI,ICT,"Palentir, Salesforce, SAP",1330.0
+Einride,"Transport & Mobility, Trucks","Waymo, Kodiak Robotics, Waabi, Aurora Innovation",1315.0
 DentalMonitoring,"AI model, Health & Social Care, dental","Grin, Dentalai, InHand Dental, Align Technology, Straumann Group",1200.0
 WhiteFiber,"Cloud Provider, ICT","CoreWeave, Lambda Labs, Voltage Park, IREN Cloud, Equinix DataBank, Google Cloud, Microsoft Azure, AWS(AWS)",1060.0
 01.AI,"AI model, ICT","Moonshot AI, Z.ai, MiniMax, Baichuan Intelligence, StepFun, DeepSeek, Alibaba Cloud, Tencent, LLama, MistralAI",1000.0
 Owkin,"AI model, Health & Social Care","Isomorphic Labs, Exscientia, Recursion Pharmaceuticals, Insilico Medicine, Schrödinger, Iktos, Aqemia, BioMap, Tempus, Paige AI, Tribun Health",1000.0
+Shift Technology,"Financial Services, Legal tech","Guidewire, Duck Creek, Descartes Underwriting, Friss, Akur8",1000.0
 4Paradigm,"AI model, Professional Services","DataRobot, H2O.AI, Dataiky, Baidu, Alibaba Cloud, Tencent Cloud",1000.0
 Stability AI,,"Midjourney, BlackForect Labs, OpenAI",1000.0
 Franka Emika,"Manufacturing & Operations, Robotics","Agile Robots, KUKA, Kinova, Universal Robots, Doosan Robotics, Fanuc",1000.0
@@ -136,6 +140,7 @@ Graphcore,ICT,"Nvidia, Google Cloud, AWS, Meta, Groq, Cerebras, Tenstorrent",682
 PhotoRoom,"Media & Entertainment, Image generation","Pixelcut, Playyy, WizStudio, Jasper, Flair.ai, Pebblely, Canva, Adobe, Firefly",500.0
 Luminance,,"Harvey AI, Noxtua, Jus Mundi, Lawx",500.0
 Cradle,Biotech,"EvolutionaryScale, Generate Biomedicines, Nimbus Therapeutics, DeepMind(Alphafold)",420.0
+Kandou AI,"Hardware, Chip","Astera Labs, Broadcom,  Marvell Technology, Alphawave Semi , Rambus",400.0
 Dust,"Health & Social Care, Agentic","Glean, Twin, Manus, Metaflow AI",300.0
 Corti,"Health & Social Care, AI model","Microsoft(DAX), AWS(AWS HealthScribe), Huma, MedeAnalytics, Suki AI, Nabla",300.0
 Kyutai,"AI model, Voice","Lalal.ai, Audimee, Ace Studio, Controlla.xyz, Lalals.com",300.0
@@ -167,6 +172,7 @@ EbenBuild,Health & Social Care,"Dassault Systèmes(Projet Living Heart / Living 
 Alpine Eagle,"Manufacturing & Operations, Defence, Drone","Anduril Industries, Helsing AI, Epirus, D-Fend Solutions, Dedrone",11.0
 Altavo GmbH,"AI model, Computer Vision, Health & Social Care","Atos Medical, Lip Reading systems",10.0
 Amberscript,AI model,"Happy Scribe, Sonix, Trint, tl;dv, Otter.ai, Transkriptor, GoTranscript",10.0
+Brainial,"Professional Services, Legal tech, tender","DeepJudge ,  Harvey, AutogenAI, Responsive , Loopio",10.0
 Quantistry,"R&D, AI model, Chemistry","PhaseCraft, SandboxAQ, Pasqal",10.0
 Ameba,Logistics,"Decagon AI & Sierra AI, Blue Yonder, Manhattan Associates, Sourceful, Zencargo",9.0
 20face,"Health & Social Care, IT & Security","brighter AI(Allemagne), BioID(Allemagne), iProov(Royaume-Uni), PrivateID(États-Unis), Oosto(anciennement AnyVision - Israël/USA), Incode Technologies(États-Unis), Thales Group(France), Cognitec Systems(Allemagne)",8.0
@@ -176,6 +182,7 @@ Dexter,"Financial Services, AI model, Professional Services","Workato, Automatio
 PharmAI,"Biotech, AI model","Isomorphic Labs(Royaume-Uni), Chai Discovery(États-Unis), Xaira Therapeutics(États-Unis)",5.0
 Accentize GmbH,"Manufacturing & Operations, R&D, ICT","iZotope, Goyo AI, Waves Audio, Adobe (Enhance Speech)",1.0
 AI Medical Technology,"AI model, Biotech, Oncology","Skin Analytics, DermaSensor, MetaOptima / DermEngine, Miiskin, SkinIO",1.0
+Captain AI,"Transport & Mobility, Marine","Orca AI , Captain's Eye, MindChip, Sea Machines Robotics",1.0
 HughGrants,"AI model, ICT","Grantify, Egrants, OpenGrants",1.0
 Skylab,ICT,"Picterra, Orbify",1.0
 Prognostix AB,R&D,"SKF Ensemble, Ambyint, SparkCognition, Uptake",0.1
