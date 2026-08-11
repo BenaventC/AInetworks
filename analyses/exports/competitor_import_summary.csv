@@ -1,0 +1,858 @@
+competitor,frequency,source_company,sector_labels,status
+N/A,32,SenseTime,ICT,existing
+OpenAI,30,Anthropic,"Hardware, ICT",existing
+Microsoft,21,Cerebras,"Hardware, GPU",existing
+Anthropic,17,Mistral AI,"AI model, ICT",existing
+Tesla,17,Google,"AI model, Media & Entertainment, Sales & Marketing",existing
+Meta,15,Mistral AI,"AI model, ICT",existing
+Nvidia,15,Cerebras,"Hardware, GPU",existing
+Alibaba,13,Anthropic,"Hardware, ICT",existing
+Amazon,13,Google,"AI model, Media & Entertainment, Sales & Marketing",existing
+Apple,13,Google,"AI model, Media & Entertainment, Sales & Marketing",existing
+Google Cloud,13,Cerebras,"Hardware, GPU",existing
+Anduril Industries,12,BigBear.ai,Defence,existing
+Google,12,Microsoft,"Cloud Provider, AI model, Professional Services",existing
+EliseAI,11,Assort Health,"Real Estate Activities, Health & Social Care, Chatbot",existing
+IBM,11,AWS,"Hardware, ICT",existing
+Runway,11,MiniMax,"AI model, Image generation",existing
+Samsung Electronics,10,Qualcomm,Hardware,existing
+AWS,9,Groq,"AI model, Inference",existing
+Crusoe,9,Nscale,"Cloud Provider, neocloud",existing
+Job&Talent,9,Adecco,ICT,existing
+Palantir,9,IBM,"AI model, Cloud Provider, Professional Services",existing
+Qualcomm,9,Broadcom,"Hardware, ICT, Manufacturing & Operations",existing
+Semrush,9,Ahrefs,"Data, Sales & Marketing",existing
+20face,8,BioID,"Health & Social Care, IT & Security",existing
+Baidu,8,Google,"AI model, Media & Entertainment, Sales & Marketing",existing
+Cisco,8,Dynatrace,Saas,existing
+DeepMind,8,Mistral AI,"AI model, ICT",existing
+Deepmind,8,Anthropic,"Hardware, ICT",existing
+Doctolib,8,Docplanner,Health & Social Care,existing
+Intel,8,Cerebras,"Hardware, GPU",existing
+Microsoft Azure,8,AWS,"Hardware, ICT",existing
+SAP,8,IBM,"AI model, Cloud Provider, Professional Services",existing
+SoundHound AI,8,Vapi,"AI model, Voice",existing
+Waymo,8,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Adobe,7,"Midjourney, Inc.","AI model, Computer Vision",existing
+Guard Technology,7,CrowdStrike,"IT & Security, Cyber",existing
+Lawx,7,Harvey AI,"Professional Services, LawTech",existing
+Microchip Technology Inc,7,Analog Devices,"Hardware, ICT",existing
+MiniMax,7,OpenAI,ICT,existing
+PhotoRoom,7,Firefly,"Media & Entertainment, Image generation",existing
+Scale AI,7,Innodata,"Data, Annotation",existing
+UiPath,7,H Company,"AI model, Agentic",existing
+AMD,6,Cerebras,"Hardware, GPU",existing
+Amberscript,6,GoTranscript,AI model,existing
+Aurora Innovation,6,Pony AI,Transport & Mobility,existing
+ByteDance,6,Black Forest Labs,"AI model, Computer Vision, Image generation",existing
+Cohere,6,Anthropic,"Hardware, ICT",existing
+ContentSquare,6,Amplitude,Sales & Marketing,existing
+CoreWeave,6,Cerebras,"Hardware, GPU",existing
+Decagon,6,Sierra,Sales & Marketing,existing
+DeepSeek,6,Anthropic,"Hardware, ICT",existing
+Figure AI,6,1X Technologies,Robotics,existing
+Harvey,6,Brainial,"Professional Services, Legal tech, tender",existing
+Indium,6,Coforge,Data,existing
+Luma AI,6,Runway,"Media & Entertainment, AI model, Image generation",existing
+ManoMano,6,Bricoman,Retail & E-commerce,existing
+Midjourney,6,Stability AI,"AI model, Biotech, Image generation",existing
+Multiverse Computing,6,Deci AI,Quantic,existing
+Owkin,6,Insilico Medicine,"AI model, Health & Social Care",existing
+Prophesee,6,Keyence,"Computer Vision, AI model, Robotics",existing
+Salesforce,6,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+Tencent,6,OpenAI,ICT,existing
+Teraki,6,Ambarella,"Transport & Mobility, AV",existing
+AI Medical Technology,5,DermaSensor,"AI model, Biotech, Oncology",existing
+Abridge,5,Nabla,"AI model, Health & Social Care",existing
+Ambiance Healthcare,5,Athnahealth,Health & Social Care,existing
+Ameba,5,Blue Yonder,Logistics,existing
+Black Forest Labs,5,Mistral AI,"AI model, ICT",existing
+Cambricon Technologies,5,Alibaba Group,"Hardware, ICT",existing
+DeepL,5,Mistral AI,"AI model, ICT",existing
+DentalMonitoring,5,Align Technology,"AI model, Health & Social Care, dental",existing
+Dynatrace,5,Dash0,AI model,existing
+Franka Emika,5,Universal Robots,"Manufacturing & Operations, Robotics",existing
+Glean Technologies,5,Coveo,"Professional Services, AI model",existing
+Kyutai,5,Ace Studio,"AI model, Voice",existing
+Lambda Labs,5,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Lightspeed,5,BigCommerce,"Professional Services, Retail & E-commerce",existing
+Luminance,5,Harvey,"Professional Services, Legal tech",existing
+Mistral AI,5,H Company,"AI model, Agentic",existing
+Moonshot AI,5,OpenAI,Artificial Intelligence,existing
+Nabla,5,Abridge,"Health & Social Care, AI model",existing
+OLLAMA,5,VLLM,"AI model, Hardware, Inference Server",existing
+Oracle,5,Microsoft,"Cloud Provider, AI model, Professional Services",existing
+Oxford Nanopore Technologies,5,Element Biosciences,"AI model, Health & Social Care",existing
+Pasqal,5,Multiverse Computing,Quantic,existing
+Suno AI,5,AIVA,"AI model, Music",existing
+Upstart,5,Avant,Financial Services,existing
+Waves Audio,5,Accentize GmbH,"Manufacturing & Operations, R&D, ICT",existing
+Y combinator,5,500 Global,ICT,existing
+Zapia AI,5,Luzia,AI model,existing
+3ive AI,4,CADENAS,"ICT, Manufacturing & Operations, Transport & Mobility",existing
+4Paradigm,4,DataRobot,"AI model, Professional Services",existing
+ASML,4,Quantum Diamonds,"R&D, Quantic",existing
+Appen,4,Scale AI,"Data, Annotation",existing
+Bodyguard.ai,4,Besedo,"IT & Security, Cyber",existing
+Captain AI,4,Captain's Eye,"Transport & Mobility, Marine",existing
+Celonis,4,Appian,"Manufacturing & Operations, Professional Services",existing
+Cognex,4,Prophesee,"Computer Vision, AI model, Robotics",existing
+Cognizant,4,IBM,"AI model, Cloud Provider, Professional Services",existing
+Dash0,4,Better Stack,AI model,existing
+GitHub,4,Cognition AI,"AI model, Code",existing
+Glean,4,Dust,"Health & Social Care, Agentic",existing
+Groq,4,Graphcore,ICT,existing
+Harvey AI,4,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+Helsing,4,Mistral AI,"AI model, ICT",existing
+Huawei,4,Nvidia,"Hardware, AI model, GPU",existing
+Kaola,4,Xiaohongshu,Retail & E-commerce,existing
+Kling AI,4,Runway,"Media & Entertainment, AI model, Image generation",existing
+Langfuse,4,LangSmith.Arize Phoenix,AI model,existing
+Nscale,4,Hyperstack,"Cloud Provider, neocloud",existing
+Paige AI,4,Owkin,"AI model, Health & Social Care",existing
+Quantum Diamonds,4,Applied Materials,"R&D, Quantic",existing
+Recursion Pharmaceuticals,4,Owkin,"AI model, Health & Social Care",existing
+SPACE42,4,Presight AI,"Energy & Utilities, Financial Services, Smart city",existing
+Sakana AI,4,Recursive Superintelligence,"AI model, RSI, Agentic",existing
+SentinelOne,4,Cortex XDR,Cybersécurité,existing
+Shopify,4,Lightspeed,"Professional Services, Retail & E-commerce",existing
+Ubble,4,IDnow,"AI model, IDV",existing
+Volta medical,4,Abbott,"AI model, Health & Social Care, Cardio",existing
+World Labs,4,Runway,"Media & Entertainment, AI model, Image generation",existing
+Zhipu AI,4,DeepSeek,"AI model, ICT",existing
+dstack,4,Run:ai,AI tools,existing
+AIME,3,5C,"Manufacturing & Operations, Professional Services, ICT",existing
+AMI Labs,3,World Labs,AI model,existing
+Agility Robotics,3,Figure AI,Robotics,existing
+Alibaba Cloud,3,OpenAI,Cloud Provider,existing
+Alpine Eagle,3,D-Fend Solutions,"Manufacturing & Operations, Defence, Drone",existing
+Ant Group,3,Mastercard,"Financial Services, AI model, ICT",existing
+Anysphere,3,Cognition,ICT,existing
+Arago,3,Lightmatter,"Hardware, Photonic",existing
+BlackRock,3,Brookfield Asset Management,ICT,existing
+Bland AI,3,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+Boeing,3,Anduril Industries,"Defence, AI model, Drone",existing
+Boston Dynamics,3,Figure AI,Robotics,existing
+Brainial,3,AutogenAI,"Professional Services, Legal tech, tender",existing
+Cerebras,3,Nvidia,"Hardware, AI model, GPU",existing
+Cloudflare,3,Akamai,"Cloud Provider, IT & Security",existing
+Corti,3,Huma,"Health & Social Care, AI model",existing
+Cradle,3,EvolutionaryScale,Biotech,existing
+DarwinAI,3,Edge Impulse,"Manufacturing & Operations, ICT",existing
+Domyn,3,Helsing AI,ICT,existing
+Dust,3,LightOn,AI model,existing
+Exscientia,3,Owkin,"AI model, Health & Social Care",existing
+Fireworks AI,3,Hugging Face,"Hardware, ICT",existing
+Gleamer,3,Annalise.ai,"AI model, Health & Social Care",existing
+Hugging Face,3,GitHub,"AI model, Professional Services",existing
+Inc.,3,Flux,"AI model, Computer Vision",existing
+Ineffable Intelligence,3,Sakana AI,"AI model, Agentic, RSI",existing
+Innodata,3,DataLoop,"Data, Annotation",existing
+Kandou AI,3,Alphawave Semi,"Hardware, Chip",existing
+Kraken Technologies,3,Arcadia,ICT,existing
+Kuaishou,3,MiniMax,"AI model, Image generation",existing
+Labelbox,3,Scale AI,"Data, Annotation",existing
+Lockheed Martin,3,Anduril Industries,"Defence, AI model, Drone",existing
+Netflix,3,Google,"AI model, Media & Entertainment, Sales & Marketing",existing
+Noxtua,3,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+Physical Intelligence,3,AMI,"AI model, World Model",existing
+Retell AI,3,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+RobCo GmbH,3,Augmentus,"ICT, Manufacturing & Operations",existing
+Run:ai,3,dstack,"Hardware, AI tools",existing
+Shift Technology,3,Duck Creek,"Financial Services, Legal tech",existing
+Sierra,3,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+Siri,3,Amazon Alexa,ICT,existing
+Sony,3,Microsoft,"Cloud Provider, AI model, Professional Services",existing
+TSMC,3,Intel,"Hardware, GPU, CPU",existing
+VLLM,3,OLLAMA,"AI model, Inference",existing
+Weibo,3,Douyin,Media & Entertainment,existing
+WhiteFiber,3,Equinix DataBank,"Cloud Provider, ICT",existing
+Yseop,3,LightOn,AI model,existing
+01.AI,2,Baichuan Intelligence,"AI model, ICT",existing
+1X Technologies,2,Physical Intelligence,"AI model, Robotics",existing
+5C Group,2,Crusoe Energy,"Hardware, Infrastructure",existing
+AMC Robotics Corporation,2,Unitree Robotics,Robotics,existing
+Accentize GmbH,2,iZotope,"Manufacturing & Operations, R&D, ICT",existing
+Ada Support,2,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+Agile Robots,2,Franka Emika,"Manufacturing & Operations, Robotics",existing
+Altavo GmbH,2,Atos Medical,"AI model, Computer Vision, Health & Social Care",existing
+Anduril,2,Helsing,"Public Sector, Manufacturing & Operations, Defence",existing
+Apptronik,2,1X Technologies,Robotics,existing
+Automation Anywhere,2,UiPath,"Manufacturing & Operations, Professional Services, ICT",existing
+Broadcom,2,Kandou AI,"Hardware, Chip",existing
+Canva,2,Adobe,ICT,existing
+Cognition,2,Githbub,ICT,existing
+Colossyan,2,Synthesia,"AI model, Computer vision",existing
+Constellation Energy,2,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Coveo,2,Glean Technologies,"Professional Services, AI model",existing
+CrowdStrike,2,Guard Technology,"IT & Security, Cyber",existing
+Cruise,2,Waymo,"Transport & Mobility, AI model",existing
+Cursor,2,GitHub,"AI model, Professional Services",existing
+Dassault Systèmes,2,3ive AI,"ICT, Manufacturing & Operations, Transport & Mobility",existing
+Databricks,2,Dataiku,ICT,existing
+Datadog,2,Dynatrace,Saas,existing
+Dataiku,2,Palentir,ICT,existing
+Deci AI,2,Multiverse Computing,Quantic,existing
+Doubleword,2,Baseten Technologies,"AI model, Inference",existing
+Einride,2,Aurora Innovation,"R&D, ICT",existing
+Elastic,2,Dynatrace,Saas,existing
+ElevenLabs,2,MiniMax,"AI model, Image generation",existing
+Equinix,2,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Fermi Inc.,2,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Flux,2,"Midjourney, Inc.","AI model, Computer Vision",existing
+Fortinet,2,Guard Technology,"IT & Security, Cyber",existing
+Gitlab,2,GitHub,"AI model, Professional Services",existing
+Hailuo AI,2,Runway,"Media & Entertainment, AI model, Image generation",existing
+Harmattan AI,2,Helsing,"Public Sector, Manufacturing & Operations, Defence",existing
+Helsing AI,2,Domyn,ICT,existing
+HeyGen,2,Synthesia,"AI model, Computer vision",existing
+Huggingface,2,VLLM,"AI model, Hardware, Inference Server",existing
+IQM Quantum Computers,2,Quantinuum,"Hardware, Quantic",existing
+Insilico Medicine,2,Owkin,"AI model, Health & Social Care",existing
+Isomorphic Labs,2,Owkin,"AI model, Health & Social Care",existing
+Keyence,2,Prophesee,"Computer Vision, AI model, Robotics",existing
+LegalFly,2,Harvey,"Professional Services, Legal tech",existing
+LexisNexis,2,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+LightOn,2,Yseop,"AI model, Health & Social Care",existing
+Maigon AB,2,Jimini AI,Legal tech,existing
+Marvell Technology,2,Broadcom,"Hardware, ICT, Manufacturing & Operations",existing
+Mirendil,2,Sakana AI,"AI model, Agentic, RSI",existing
+Mistral,2,Cohere,"AI model, Cloud Provider, ICT",existing
+MistralAI,2,Anthropic,"Hardware, ICT",existing
+Mobileye,2,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Nebius Group,2,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Neural Magic,2,Multiverse Computing,Quantic,existing
+New Relic,2,Dynatrace,Saas,existing
+Palentir,2,Dataiku,ICT,existing
+Parloa,2,Sierra,Sales & Marketing,existing
+Pony AI,2,Inceptio technology,Transport & Mobility,existing
+Poolside,2,Mistral AI,"AI model, ICT",existing
+Pryon,2,LightOn,AI model,existing
+Quantinuum,2,IQM Quantum Computers,"Hardware, Quantic",existing
+Raytheon,2,Anduril Industries,"Defence, AI model, Drone",existing
+Recursive Superintelligence,2,Sakana AI,"AI model, Agentic, RSI",existing
+Replicate,2,Hugging Face,"Hardware, ICT",existing
+Ricursive Intelligence,2,Sakana AI,"AI model, Agentic, RSI",existing
+Rigetti Computing,2,IQM Quantum Computers,"Hardware, Quantic",existing
+Robin AI,2,Harvey,"Professional Services, Legal tech",existing
+RunPod,2,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+SICK AG,2,Prophesee,"Computer Vision, AI model, Robotics",existing
+SandboxAQ,2,Multiverse Computing,Quantic,existing
+Schrödinger,2,Owkin,"AI model, Health & Social Care",existing
+Shein,2,Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce",existing
+Silica Corpora,2,Adimab,"R&D, Biotech",existing
+Skild AI,2,Physical Intelligence,"AI model, Robotics",existing
+SkyPilot,2,dstack,"Hardware, AI tools",existing
+Snorkel AI,2,Scale AI,"Data, Annotation",existing
+Snowflake,2,Dataiku,ICT,existing
+Splunk,2,Dynatrace,Saas,existing
+Stability AI,2,Black Forest Labs,"AI model, Computer Vision, Image generation",existing
+Synthesia,2,Colossyan,ICT,existing
+Tempus AI,2,Natera,Biotech,existing
+Temu,2,Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce",existing
+Tenstorrent,2,Groq,"AI model, Inference",existing
+Thales,2,Palantir,"Defence, Professional Services, AI model",existing
+Thomson Reuters,2,Dow Jones,"Data, Media & Entertainment, News",existing
+Unitree Robotics,2,AMC Robotics Corporation,Robotics,existing
+Universal Robots,2,Franka Emika,"Manufacturing & Operations, Robotics",existing
+Vapi,2,SoundHound AI,"AI model, Voice",existing
+Waabi,2,Aurora Innovation,"R&D, ICT",existing
+Wayve,2,Aurora Innovation,"R&D, ICT",existing
+WeRide,2,Waymo,"Transport & Mobility, AI model",existing
+Wolters Kluwer,2,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+Workato,2,UiPath,"Manufacturing & Operations, Professional Services, ICT",existing
+Xiaohongshu,2,Kaola,Retail & E-commerce,existing
+Xiaomi,2,Apple,ICT,existing
+YouTube,2,ByteDance,Media & Entertainment,existing
+Z.ai,2,OpenAI,Artificial Intelligence,existing
+Zoox,2,Waymo,"Transport & Mobility, AI model",existing
+iZotope,2,Accentize GmbH,"Manufacturing & Operations, R&D, ICT",existing
+2CRSI,1,AIME,"Manufacturing & Operations, Professional Services, ICT",existing
+4.screen,1,Here technologies,"Transport & Mobility, Media & Entertainment",existing
+500 Global,1,Y combinator,ICT,existing
+5C,1,AIME,"Manufacturing & Operations, Professional Services, ICT",existing
+AIVA,1,Suno AI,"AI model, Music",existing
+AMI,1,MetaAI,"AI model, World Model",existing
+AMS,1,Intel,"Hardware, GPU, CPU",existing
+AST SpaceMobile,1,SPACE42,"Data, Space",existing
+Abbott,1,Volta medical,"AI model, Health & Social Care, Cardio",existing
+Accentize,1,Waves Audio,Audio,existing
+Accenture,1,IBM,"AI model, Cloud Provider, Professional Services",existing
+Ace Studio,1,Kyutai,"AI model, Voice",existing
+Adecco,1,Job&Talent,ICT,existing
+Adimab,1,Silica Corpora,"R&D, Biotech",existing
+AgiBot,1,Figure AI,Robotics,existing
+Ahrefs,1,Semrush,"Data, Sales & Marketing",existing
+Aidoc,1,Gleamer,"AI model, Health & Social Care",existing
+Airbus,1,Comand AI,"AI model, Aerospace & Defence",existing
+Akamai,1,Cloudflare,"Cloud Provider, IT & Security",existing
+Akur8,1,Shift Technology,"Financial Services, Legal tech",existing
+Aleph Alpha,1,Mistral AI,"AI model, ICT",existing
+Alibaba Group,1,Cambricon Technologies,"Hardware, ICT",existing
+Align Technology,1,DentalMonitoring,"AI model, Health & Social Care, dental",existing
+Alphabet,1,AMD,Hardware,existing
+Alphawave Semi,1,Kandou AI,"Hardware, Chip",existing
+Alterx,1,Dataiku,ICT,existing
+Amazon Alexa,1,Siri,ICT,existing
+Ambarella,1,Teraki,"Transport & Mobility, AV",existing
+Ambience Healthcare,1,Abridge,"Health & Social Care, AI model",existing
+Ambyint,1,Prognostix AB,R&D,existing
+Amplitude,1,ContentSquare,Sales & Marketing,existing
+Analog Devices,1,Microchip Technology Inc,ICT,existing
+Annalise.ai,1,Gleamer,"AI model, Health & Social Care",existing
+Antler,1,Y combinator,ICT,existing
+Appian,1,Celonis,"Manufacturing & Operations, Professional Services",existing
+Apple Silicon,1,Qualcomm,Hardware,existing
+Applied Intuition,1,Teraki,"Transport & Mobility, AV",existing
+Applied Materials,1,Quantum Diamonds,"R&D, Quantic",existing
+Aqemia,1,Owkin,"AI model, Health & Social Care",existing
+Arcadia,1,Kraken Technologies,ICT,existing
+ArianeGroup,1,SpaceX,"Cloud Provider, Data, Aerospace",existing
+Arista Networks,1,Cisco,ICT,existing
+Art Recognition,1,Hephaestus Analytical,"IT & Security, Art",existing
+Assort Health,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Astera Labs,1,Kandou AI,"Hardware, Chip",existing
+Athnahealth,1,Ambiance Healthcare,Health & Social Care,existing
+AtlassianBitBucket,1,GitHub,"AI model, Professional Services",existing
+Atom Computing,1,Pasqal,Quantic,existing
+Atos Medical,1,Altavo GmbH,"AI model, Computer Vision, Health & Social Care",existing
+Audimee,1,Kyutai,"AI model, Voice",existing
+Augmentus,1,RobCo GmbH,"ICT, Manufacturing & Operations",existing
+AutogenAI,1,Brainial,"Professional Services, Legal tech, tender",existing
+Avant,1,Upstart,Financial Services,existing
+BMW,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+BYD,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Baichuan Intelligence,1,01.AI,"AI model, ICT",existing
+Baseten Technologies,1,Doubleword,"AI model, Inference",existing
+Basler,1,Cognex,"Computer Vision, AI model",existing
+Beatoven.ai,1,Suno AI,"AI model, Music",existing
+Besedo,1,Bodyguard.ai,"IT & Security, Cyber",existing
+Better Stack,1,Dash0,AI model,existing
+BetterBot,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+BigCommerce,1,Lightspeed,"Professional Services, Retail & E-commerce",existing
+BigHat Biosciences,1,Silica Corpora,"R&D, Biotech",existing
+Bilibili,1,Weibo,Media & Entertainment,existing
+BioID,1,20face,"Health & Social Care, IT & Security",existing
+BioMap,1,Owkin,"AI model, Health & Social Care",existing
+Biosense Webster,1,Volta medical,"AI model, Health & Social Care, Cardio",existing
+Biren Technology,1,Cambricon Technologies,"Hardware, ICT",existing
+BlackForest Labs,1,Stability AI,"AI model, Biotech, Image generation",existing
+Blaize,1,Teraki,"Transport & Mobility, AV",existing
+Blazy AI,1,Semrush,"Data, Sales & Marketing",existing
+Bloomberg,1,Thomson Reuters,"Data, Media & Entertainment, News",existing
+Blue Yonder,1,Ameba,Logistics,existing
+Booz Allen Hamilton,1,Palantir,"Defence, Professional Services, AI model",existing
+Bosch,1,Wayve,ICT,existing
+Bricoman,1,ManoMano,Retail & E-commerce,existing
+Bricoprivé,1,ManoMano,Retail & E-commerce,existing
+Bricozor,1,ManoMano,Retail & E-commerce,existing
+Brigad,1,Job&Talent,ICT,existing
+Brookfield Asset Management,1,BlackRock,ICT,existing
+Bruce,1,Job&Talent,ICT,existing
+Bytedanse,1,OpenAI,ICT,existing
+BytesDance,1,Kling AI,Image generation,existing
+C3 AI,1,Dataiku,ICT,existing
+C3.ai,1,BigBear.ai,Defence,existing
+CADENAS,1,3ive AI,"ICT, Manufacturing & Operations, Transport & Mobility",existing
+CSM.ai,1,Luma AI,Artificial Intelligence,existing
+Canon,1,ASML,"Hardware, lithography",existing
+Capgemini,1,IBM,"AI model, Cloud Provider, Professional Services",existing
+Captain's Eye,1,Captain AI,"Transport & Mobility, Marine",existing
+Centaur Labs,1,Appen,ICT,existing
+Cerence,1,4.screen,"Transport & Mobility, Media & Entertainment",existing
+Chai Discovery,1,PharmAI,"Biotech, AI model",existing
+ChapsVision,1,Palantir,"Defence, Professional Services, AI model",existing
+Character.ai,1,MiniMax,"AI model, Image generation",existing
+Check Point,1,Cisco,ICT,existing
+Check Point Software,1,Guard Technology,"IT & Security, Cyber",existing
+Ciena,1,Oriole Networks,"Hardware, Photonic",existing
+ClearML,1,Run:ai,AI tools,existing
+ClickUp,1,Glean Technologies,"Professional Services, AI model",existing
+Cloudfactory,1,Scale AI,"Data, Annotation",existing
+Clover,1,Lightspeed,"Professional Services, Retail & E-commerce",existing
+CoCounsel,1,Harvey,"Professional Services, Legal tech",existing
+Codeium,1,Anysphere,"AI model, Code, Saas",existing
+Coforge,1,Indium,Data,existing
+Cogngy,1,SoundHound AI,"AI model, Voice",existing
+Cognitec Systems,1,20face,"Health & Social Care, IT & Security",existing
+Cognition AI,1,Sakana AI,"AI model, Agentic, RSI",existing
+Cognugy,1,Sierra,Sales & Marketing,existing
+Comand AI,1,Airbus,"AI model, Aerospace & Defence",existing
+Comet,1,Doubleword,"AI model, Inference",existing
+Connected Travel,1,4.screen,"Transport & Mobility, Media & Entertainment",existing
+Controlla.xyz,1,Kyutai,"AI model, Voice",existing
+Cortex XDR,1,SentinelOne,Cybersécurité,existing
+Coupa Software,1,Dexter,"Financial Services, AI model, Professional Services",existing
+Covariant,1,Physical Intelligence,"AI model, Robotics",existing
+Credibly,1,Upstart,Financial Services,existing
+Cresta AI,1,Sierra,Sales & Marketing,existing
+CrowdStrike Falcon,1,SentinelOne,Cybersécurité,existing
+Crusoe Energy,1,5C Group,"Hardware, Infrastructure",existing
+Cyera (Sécurité des données applicatives) : 12 milliards $,1,Guard Technology,"IT & Security, Cyber",existing
+D-Fend Solutions,1,Alpine Eagle,"Manufacturing & Operations, Defence, Drone",existing
+Data Annotation,1,Scale AI,"Data, Annotation",existing
+DataLoop,1,Innodata,"Data, Annotation",existing
+DataRobot,1,4Paradigm,"AI model, Professional Services",existing
+Dataiky,1,4Paradigm,"AI model, Professional Services",existing
+Dataloop,1,Appen,ICT,existing
+Datev,1,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+Decagon AI & Sierra AI,1,Ameba,Logistics,existing
+Dedrone,1,Alpine Eagle,"Manufacturing & Operations, Defence, Drone",existing
+Deep Green,1,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Deep Mind,1,OpenAI,ICT,existing
+DeepBrain AI,1,Colossyan,Artificial Intelligence,existing
+DeepJudge,1,Brainial,"Professional Services, Legal tech, tender",existing
+DeepScribe,1,Abridge,"Health & Social Care, AI model",existing
+Deepen AI,1,Teraki,"Transport & Mobility, AV",existing
+Deezer,1,YouTube,Media & Entertainment,existing
+Definely,1,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+Delair,1,Harmattan AI,"Defence, Drone",existing
+Dell,1,Apple,ICT,existing
+Dentalai,1,DentalMonitoring,"AI model, Health & Social Care, dental",existing
+Deppseek,1,Domyn,ICT,existing
+DermaSensor,1,AI Medical Technology,"AI model, Biotech, Oncology",existing
+Descartes Underwriting,1,Shift Technology,"Financial Services, Legal tech",existing
+Dexter,1,Coupa Software,"Financial Services, AI model, Professional Services",existing
+Digital Realty,1,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Digital Realty Trust,1,Fermi Inc.,"Cloud Provider, Energy",existing
+Disney,1,Amazon,"Retail & E-commerce, Cloud Provider, Sales & Marketing",existing
+Docplanner,1,Doctolib,Health & Social Care,existing
+DoorLoop,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Doosan Robotics,1,Franka Emika,"Manufacturing & Operations, Robotics",existing
+Douyin,1,Weibo,Media & Entertainment,existing
+Dow Jones,1,Thomson Reuters,"Data, Media & Entertainment, News",existing
+Duck Creek,1,Shift Technology,"Financial Services, Legal tech",existing
+Durable Capital Partners,1,Celonis,"Manufacturing & Operations, Professional Services",existing
+Dust / Gumloop,1,Glean Technologies,"Professional Services, AI model",existing
+Edge Impulse,1,DarwinAI,"Manufacturing & Operations, ICT",existing
+Egrants,1,HughGrants,"AI model, ICT",existing
+Elasticsearch,1,Glean Technologies,"Professional Services, AI model",existing
+Element Biosciences,1,Oxford Nanopore Technologies,"AI model, Health & Social Care",existing
+Eleven Labs,1,SoundHound AI,"AI model, Voice",existing
+Encord,1,Scale AI,"Data, Annotation",existing
+Enflame,1,Cambricon Technologies,"Hardware, ICT",existing
+Entrata,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Entrepreneur First,1,Y combinator,ICT,existing
+Epic Systems,1,Ambiance Healthcare,Health & Social Care,existing
+Epirus,1,Alpine Eagle,"Manufacturing & Operations, Defence, Drone",existing
+Equinix DataBank,1,WhiteFiber,"Cloud Provider, ICT",existing
+EvolutionaryScale,1,Cradle,Biotech,existing
+FARS,1,Sakana AI,"AI model, Agentic, RSI",existing
+Fabfilter,1,Waves Audio,Audio,existing
+Fanuc,1,Franka Emika,"Manufacturing & Operations, Robotics",existing
+Fastly,1,Cloudflare,"Cloud Provider, IT & Security",existing
+Fidelity Investments,1,BlackRock,ICT,existing
+Field AI,1,Physical Intelligence,"AI model, Robotics",existing
+Figma,1,Adobe,ICT,existing
+Firefly,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Firmus,1,AIME,"Manufacturing & Operations, Professional Services, ICT",existing
+Flair.ai,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Flexbone AI,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+FluidStack,1,dstack,"Hardware, AI tools",existing
+Fractal Analytics,1,Indium,Data,existing
+Franka Robotics,1,RobCo GmbH,"ICT, Manufacturing & Operations",existing
+Freed,1,Abridge,"Health & Social Care, AI model",existing
+Friss,1,Shift Technology,"Financial Services, Legal tech",existing
+Fullstoryn,1,ContentSquare,Sales & Marketing,existing
+Funnel Leasing,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Gatik,1,Aurora Innovation,"R&D, ICT",existing
+Generate Biomedicines,1,Cradle,Biotech,existing
+Githbub,1,Cognition,ICT,existing
+Glassbox,1,ContentSquare,Sales & Marketing,existing
+Global Sources,1,Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce",existing
+GoJob,1,Job&Talent,ICT,existing
+GoTranscript,1,Amberscript,AI model,existing
+Google Assistant,1,Siri,ICT,existing
+Google Translate,1,DeepL,ICT,existing
+Goyo AI,1,Accentize GmbH,"Manufacturing & Operations, R&D, ICT",existing
+Grantify,1,HughGrants,"AI model, ICT",existing
+Grin,1,DentalMonitoring,"AI model, Health & Social Care, dental",existing
+Groupe Kingfisher,1,ManoMano,Retail & E-commerce,existing
+Guardant Health,1,Tempus AI,Biotech,existing
+Guidewire,1,Shift Technology,"Financial Services, Legal tech",existing
+Guru,1,Glean,ICT,existing
+H Company,1,Open1I,"AI model, Agentic",existing
+H company,1,Mistral AI,"AI model, ICT",existing
+H2O.AI,1,4Paradigm,"AI model, Professional Services",existing
+HP,1,Apple,ICT,existing
+HPE,1,Presight AI,"Energy & Utilities, Financial Services, Smart city",existing
+Hailo,1,Teraki,"Transport & Mobility, AV",existing
+Happiest Minds Technologies,1,Indium,Data,existing
+Happy Scribe,1,Amberscript,AI model,existing
+Heidi Health,1,Doctolib,Health & Social Care,existing
+Hephaestus Analytical,1,Art Recognition,"IT & Security, Art",existing
+Heptabase,1,Glean Technologies,"Professional Services, AI model",existing
+Here technologies,1,4.screen,"Transport & Mobility, Media & Entertainment",existing
+Hisense,1,Samsung Electronics,Hardware,existing
+Horowitz,1,Y combinator,ICT,existing
+Hour One,1,Synthesia,"AI model, Computer vision",existing
+HubSpot,1,Salesforce,"Professional Services, Sales & Marketing, CRM",existing
+HubSpot AEO,1,Semrush,"Data, Sales & Marketing",existing
+HughGrants,1,OpenGrants,"AI model, ICT",existing
+Huma,1,Corti,"Health & Social Care, AI model",existing
+Hygon Information Technology,1,Cambricon Technologies,"Hardware, ICT",existing
+Hyperstack,1,Nscale,"Cloud Provider, neocloud",existing
+Hyro AI,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Hyundai-Kia,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+IDnow,1,Ubble,"AI model, IDV",existing
+IQM,1,Multiverse Computing,Quantic,existing
+IREN Cloud,1,WhiteFiber,"Cloud Provider, ICT",existing
+Ibex Medical Analytics,1,Paige AI,"Biotech, Health & Social Care, Oncology",existing
+Ideogram,1,"Midjourney, Inc.","AI model, Computer Vision",existing
+Ideogram AI,1,Black Forest Labs,"AI model, Computer Vision, Image generation",existing
+Iktos,1,Owkin,"AI model, Health & Social Care",existing
+Imperva,1,Cloudflare,"Cloud Provider, IT & Security",existing
+InHand Dental,1,DentalMonitoring,"AI model, Health & Social Care, dental",existing
+InSilicoTrials,1,EbenBuild,Health & Social Care,existing
+Inceptio technology,1,Pony AI,Transport & Mobility,existing
+Incode Technologies,1,20face,"Health & Social Care, IT & Security",existing
+Infineon Technologies,1,Microchip Technology Inc,ICT,existing
+Infleqtion,1,Pasqal,Quantic,existing
+Infosy,1,IBM,"AI model, Cloud Provider, Professional Services",existing
+Infosys,1,Innodata,"Data, Annotation",existing
+Infosys Accenture,1,Indium,Data,existing
+Inmarsat,1,SPACE42,"Data, Space",existing
+InsightART.,1,Art Recognition,"IT & Security, Art",existing
+Insightness,1,Prophesee,"Computer Vision, AI model, Robotics",existing
+Instagram,1,YouTube,Media & Entertainment,existing
+Instrumental,1,DarwinAI,"Manufacturing & Operations, ICT",existing
+Isahit,1,Appen,ICT,existing
+JD Worldwide,1,Kaola,Retail & E-commerce,existing
+JD.com,1,Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce",existing
+Jasper,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Jimeng,1,Kling AI,Image generation,existing
+Jimini AI,1,Maigon AB,Legal tech,existing
+Johnson & Johnson,1,Volta medical,"AI model, Health & Social Care, Cardio",existing
+Juniper Networks,1,Cisco,ICT,existing
+Jus Mundi,1,Luminance,ICT,existing
+KLA Corporation,1,Quantum Diamonds,"R&D, Quantic",existing
+KUKA,1,Franka Emika,"Manufacturing & Operations, Robotics",existing
+Kaggle,1,Hugging Face,"Hardware, ICT",existing
+Kaluza,1,Kraken Technologies,ICT,existing
+Kandou,1,AIME,"Manufacturing & Operations, Professional Services, ICT",existing
+Kinova,1,Franka Emika,"Manufacturing & Operations, Robotics",existing
+Kira Systems,1,Maigon AB,Legal tech,existing
+Kiri Engine,1,Luma AI,ICT,existing
+Kodiak Robitics,1,Pony AI,Transport & Mobility,existing
+Kodiak Robotics,1,Einride,"Transport & Mobility, Trucks",existing
+KodiakRobotics,1,Aurora Innovation,"R&D, ICT",existing
+Kore.AI,1,SoundHound AI,"AI model, Voice",existing
+Kubeflow.,1,Run:ai,AI tools,existing
+LG lectronics,1,Samsung Electronics,Hardware,existing
+LLAMAIndex,1,OLLAMA,"AI model, Inference",existing
+LLama,1,01.AI,"AI model, ICT",existing
+LM studio,1,OLLAMA,"AI model, Inference",existing
+Lalal.ai,1,Kyutai,"AI model, Voice",existing
+Lalals.com,1,Kyutai,"AI model, Voice",existing
+Lambda Labs Bizon Tech,1,AIME,"Manufacturing & Operations, Professional Services, ICT",existing
+Landing AI,1,DarwinAI,"Manufacturing & Operations, ICT",existing
+LangChain,1,OLLAMA,"AI model, Inference",existing
+LangSmith.Arize Phoenix,1,Langfuse,AI model,existing
+LatentView Analytics,1,Indium,Data,existing
+Legora,1,Harvey,"Professional Services, Legal tech",existing
+LendingClub,1,Upstart,Financial Services,existing
+Lenovo,1,Apple,ICT,existing
+Leroy Merlin,1,ManoMano,Retail & E-commerce,existing
+Lexis+ AI / Protégé,1,Harvey,"Professional Services, Legal tech",existing
+Lightmatter,1,Arago,"Hardware, Photonic",existing
+Lip Reading systems,1,Altavo GmbH,"AI model, Computer Vision, Health & Social Care",existing
+Liquid AI,1,Doubleword,"AI model, Inference",existing
+Llama,1,OpenAI,ICT,existing
+Llama.ccp,1,OLLAMA,"AI model, Inference",existing
+Loopio,1,Brainial,"Professional Services, Legal tech, tender",existing
+Lucid Motors,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Luminous Computing,1,Arago,"Hardware, Photonic",existing
+Luzia,1,Zapia AI,AI model,existing
+MGI Tech / Complete Genomics,1,Oxford Nanopore Technologies,"AI model, Health & Social Care",existing
+MLflow,1,Langfuse,AI model,existing
+Mach Industries,1,Anduril Industries,"Defence, AI model, Drone",existing
+Made-in-China.com,1,Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce",existing
+Maiia,1,Doctolib,Health & Social Care,existing
+Make,1,UiPath,"Manufacturing & Operations, Professional Services, ICT",existing
+Manhattan Associates,1,Ameba,Logistics,existing
+Manpower,1,Job&Talent,ICT,existing
+Manus,1,Dust,"Health & Social Care, Agentic",existing
+MarketMuse,1,Semrush,"Data, Sales & Marketing",existing
+Marvell,1,AMD,Hardware,existing
+Mastercard,1,Ant Group,"Financial Services, AI model, ICT",existing
+MedeAnalytics,1,Corti,"Health & Social Care, AI model",existing
+MediaTek,1,Qualcomm,Hardware,existing
+Medtronic,1,Volta medical,"AI model, Health & Social Care, Cardio",existing
+Memorae AI,1,Zapia AI,AI model,existing
+MetaAI,1,AMI,"AI model, World Model",existing
+MetaOptima / DermEngine,1,AI Medical Technology,"AI model, Biotech, Oncology",existing
+Metaflow AI,1,Dust,"Health & Social Care, Agentic",existing
+Mews,1,Lightspeed,"Professional Services, Retail & E-commerce",existing
+Micron technology,1,Samsung Electronics,Hardware,existing
+Microsoft Translator,1,DeepL,ICT,existing
+Microsoft(Nuance/DAX Epic) & Oracle,1,Nabla,"AI model, Health & Social Care",existing
+Middleware,1,Dash0,AI model,existing
+Midjourney / Magnific AI,1,Adobe,ICT,existing
+Miiskin,1,AI Medical Technology,"AI model, Biotech, Oncology",existing
+MindChip,1,Captain AI,"Transport & Mobility, Marine",existing
+MioDottore,1,Doctolib,Health & Social Care,existing
+MisterTempo,1,Job&Talent,ICT,existing
+Mixpanel,1,ContentSquare,Sales & Marketing,existing
+Moore Threads Technology,1,Cambricon Technologies,"Hardware, ICT",existing
+MosaicML,1,dstack,"Hardware, AI tools",existing
+Mureka,1,Suno AI,"AI model, Music",existing
+Musixmatch,1,Shazam,ICT,existing
+N/Baidu,1,Weibo,Media & Entertainment,existing
+NEURA Robotics,1,RobCo GmbH,"ICT, Manufacturing & Operations",existing
+NVision Imaging,1,Quantum Diamonds,"R&D, Quantic",existing
+NXP Semiconductors,1,Microchip Technology Inc,Hardware,existing
+Natera,1,Tempus AI,Biotech,existing
+Nebius,1,5C Group,"Hardware, Infrastructure",existing
+Nikon,1,ASML,"Hardware, lithography",existing
+Nimbus Therapeutics,1,Cradle,Biotech,existing
+Nio,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Nokia,1,Cisco,ICT,existing
+Northrop Grumman,1,Anduril Industries,"Defence, AI model, Drone",existing
+Notable,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Notion,1,Glean Technologies,"Professional Services, AI model",existing
+Notis,1,Zapia AI,AI model,existing
+Nuance Communications,1,SoundHound AI,"AI model, Voice",existing
+Numerion Labs,1,Recursion Pharmaceuticals,Biotech,existing
+Numurus,1,Teraki,"Transport & Mobility, AV",existing
+Nuro,1,Aurora Innovation,"R&D, ICT",existing
+OVHcloud,1,Nscale,"Cloud Provider, neocloud",existing
+Oculi,1,Prophesee,"Computer Vision, AI model, Robotics",existing
+Odyssey,1,World Labs,AI model,existing
+OmniVision Technologies,1,Prophesee,"Computer Vision, AI model, Robotics",existing
+Omron,1,Cognex,"Computer Vision, AI model",existing
+Onfido,1,Ubble,"AI model, IDV",existing
+Oosto,1,20face,"Health & Social Care, IT & Security",existing
+Open source (Libre Office,1,Microsoft,"Cloud Provider, AI model, Professional Services",existing
+Open1I,1,H Company,"AI model, Agentic",existing
+OpenAI Moderation API,1,Bodyguard.ai,"IT & Security, Cyber",existing
+OpenAI(Sora,1,Luma AI,Artificial Intelligence,existing
+OpenGrants,1,HughGrants,"AI model, ICT",existing
+OpenIA,1,IBM,"AI model, Cloud Provider, Professional Services",existing
+Openhands,1,Cognition,ICT,existing
+Oppo,1,Samsung Electronics,Hardware,existing
+Oracle Health,1,Ambiance Healthcare,Health & Social Care,existing
+Orangewood Labs,1,RobCo GmbH,"ICT, Manufacturing & Operations",existing
+Orbify,1,Skylab,ICT,existing
+Orca AI,1,Captain AI,"Transport & Mobility, Marine",existing
+Oriole Networks,1,Ciena,"Hardware, Photonic",existing
+Otter.ai,1,Amberscript,AI model,existing
+Oxa,1,Teraki,"Transport & Mobility, AV",existing
+POly AI,1,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+PTC,1,3ive AI,"ICT, Manufacturing & Operations, Transport & Mobility",existing
+Pacific Biosciences,1,Oxford Nanopore Technologies,"AI model, Health & Social Care",existing
+Palo Alto Networks 100 à 110 milliards $,1,Guard Technology,"IT & Security, Cyber",existing
+Palo alto Networks,1,Cisco,ICT,existing
+PathAI,1,Paige AI,"Biotech, Health & Social Care, Oncology",existing
+Pebblely,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Perplexity,1,you.com,"AI model, Hardware, ICT",existing
+Persistent Systems,1,Indium,Data,existing
+PharmAI,1,Xaira Therapeutics,"Biotech, AI model",existing
+PhaseCraft,1,Quantistry,"R&D, AI model, Chemistry",existing
+Phreesia,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Picterra,1,Skylab,ICT,existing
+Pika Labs,1,Runway,"Media & Entertainment, AI model, Image generation",existing
+Pinduoduo,1,Alibaba,"Cloud Provider, Financial Services, Retail & E-commerce",existing
+Pixelcut,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Plany,1,Job&Talent,ICT,existing
+Playyy,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Plomberie-Pro,1,ManoMano,Retail & E-commerce,existing
+Poke,1,Zapia AI,AI model,existing
+Poly AI,1,Sierra,Sales & Marketing,existing
+PolyAI,1,SoundHound AI,"AI model, Voice",existing
+Pony.AI,1,Wayve,ICT,existing
+Pony.ai,1,WeRide,Transport & Mobility,existing
+Positionnement,1,Ambiance Healthcare,Health & Social Care,existing
+Presight AI,1,HPE,"Energy & Utilities, Financial Services, Smart city",existing
+PrivateID,1,20face,"Health & Social Care, IT & Security",existing
+Proscia,1,Paige AI,"Biotech, Health & Social Care, Oncology",existing
+Prosper,1,Upstart,Financial Services,existing
+PublicAI,1,Scale AI,"Data, Annotation",existing
+QC Ware,1,Multiverse Computing,Quantic,existing
+Quantistry,1,PhaseCraft,"R&D, AI model, Chemistry",existing
+Quantum Design,1,Quantum Diamonds,"R&D, Quantic",existing
+Quantum Systems,1,Anduril Industries,"Defence, AI model, Drone",existing
+Quantum metric,1,ContentSquare,Sales & Marketing,existing
+RAsa,1,SoundHound AI,"AI model, Voice",existing
+Rad AI,1,Gleamer,"AI model, Health & Social Care",existing
+Rain AI,1,Arago,"Hardware, Photonic",existing
+Rambus,1,Kandou AI,"Hardware, Chip",existing
+Randstad,1,Job&Talent,ICT,existing
+Rankfender,1,Semrush,"Data, Sales & Marketing",existing
+RapidAI,1,Gleamer,"AI model, Health & Social Care",existing
+Rasa,1,Domyn,ICT,existing
+RealPage,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Recraft AI,1,Black Forest Labs,"AI model, Computer Vision, Image generation",existing
+Refuel,1,Scale AI,"Data, Annotation",existing
+Relay Therapeutics,1,Recursion Pharmaceuticals,Biotech,existing
+Renesas Electronics,1,Microchip Technology Inc,ICT,existing
+Rephrase.ai,1,Adobe,ICT,existing
+ResiDesk,1,EliseAI,"Real Estate Activities, Health & Social Care, Chatbot",existing
+Resolve AI,1,Dash0,AI model,existing
+Responsive,1,Brainial,"Professional Services, Legal tech, tender",existing
+Reverso and Yandex,1,DeepL,ICT,existing
+Rhoda AI,1,Physical Intelligence,"AI model, Robotics",existing
+Rivian,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Roche,1,Tempus AI,Biotech,existing
+S&P Global,1,Thomson Reuters,"Data, Media & Entertainment, News",existing
+SE ranking,1,Semrush,"Data, Sales & Marketing",existing
+SES Satellites,1,SPACE42,"Data, Space",existing
+SGlang,1,VLLM,"AI model, Hardware, Inference Server",existing
+SK hynix,1,Samsung Electronics,Hardware,existing
+SKF Ensemble,1,Prognostix AB,R&D,existing
+SMEE,1,ASML,"Hardware, lithography",existing
+SMIC,1,TSMC,"Hardware, Chip",existing
+SS&C Blue Prism,1,UiPath,"Manufacturing & Operations, Professional Services, ICT",existing
+SSI,1,Recursive Superintelligence,"AI model, RSI, Agentic",existing
+STMicroelectronics,1,Microchip Technology Inc,ICT,existing
+Sama,1,Scale AI,"Data, Annotation",existing
+SambaNova,1,Groq,"AI model, Inference",existing
+Samsung,1,Apple,ICT,existing
+Samsung Bixby,1,Siri,ICT,existing
+Saunoto,1,Suno AI,"AI model, Music",existing
+Scaleway,1,Nscale,"Cloud Provider, neocloud",existing
+Scribe Médical,1,Doctolib,Health & Social Care,existing
+Sea Machines Robotics,1,Captain AI,"Transport & Mobility, Marine",existing
+Semiconductors,1,Qualcomm,Hardware,existing
+SenseTime,1,N/A,ICT,existing
+Septeo,1,Lawx,"Manufacturing & Operations, Professional Services, LawTech",existing
+Sequoia,1,Y combinator,ICT,existing
+Sereact,1,RobCo GmbH,"ICT, Manufacturing & Operations",existing
+ServiceNow,1,Celonis,"Manufacturing & Operations, Professional Services",existing
+Shengshu Technology,1,Black Forest Labs,"AI model, Computer Vision, Image generation",existing
+Shield AI,1,Anduril Industries,"Defence, AI model, Drone",existing
+Siemens Digital Industries Software,1,3ive AI,"ICT, Manufacturing & Operations, Transport & Mobility",existing
+Sierra AI,1,Domyn,ICT,existing
+SiliconFlow,1,Groq,"AI model, Inference",existing
+Simus Systems,1,3ive AI,"ICT, Manufacturing & Operations, Transport & Mobility",existing
+Sinequa,1,Glean,ICT,existing
+Singular Genomics,1,Oxford Nanopore Technologies,"AI model, Health & Social Care",existing
+Skin Analytics,1,AI Medical Technology,"AI model, Biotech, Oncology",existing
+SkinIO,1,AI Medical Technology,"AI model, Biotech, Oncology",existing
+Skydio,1,Anduril Industries,"Defence, AI model, Drone",existing
+Slack AI,1,Glean,Artificial Intelligence,existing
+Snap,1,Meta,"AI model, Media & Entertainment, Advertising",existing
+SnapChat,1,Meta,"AI model, Media & Entertainment, Advertising",existing
+Snthflow,1,SoundHound AI,"AI model, Voice",existing
+SoFi,1,Upstart,Financial Services,existing
+Software AG,1,Celonis,"Manufacturing & Operations, Professional Services",existing
+Sonix,1,Amberscript,AI model,existing
+Sophos Endpoint,1,SentinelOne,Cybersécurité,existing
+SoundHound,1,Shazam,ICT,existing
+Sourceful,1,Ameba,Logistics,existing
+SpaceX,1,ArianeGroup,"Cloud Provider, Data, Aerospace",existing
+SparkCognition,1,Prognostix AB,R&D,existing
+Spellbook,1,Harvey,"Professional Services, Legal tech",existing
+Spheron,1,Nscale,"Cloud Provider, neocloud",existing
+Spotify,1,Apple,ICT,existing
+Square,1,Lightspeed,"Professional Services, Retail & E-commerce",existing
+Squarespace,1,Shopify,Retail & E-commerce,existing
+Stabilitye AI,1,"Midjourney, Inc.","AI model, Computer Vision",existing
+Stack AV,1,Aurora Innovation,"R&D, ICT",existing
+StaffMe,1,Job&Talent,ICT,existing
+Startbahn,1,Art Recognition,"IT & Security, Art",existing
+State Street Global Advisors,1,BlackRock,ICT,existing
+StepFun,1,01.AI,"AI model, ICT",existing
+Straumann Group,1,DentalMonitoring,"AI model, Health & Social Care, dental",existing
+Stripe,1,Ant Group,"Financial Services, AI model, ICT",existing
+Suki,1,Ambiance Healthcare,Health & Social Care,existing
+Suki AI,1,Corti,"Health & Social Care, AI model",existing
+Superannotate,1,Scale AI,"Data, Annotation",existing
+Supertone,1,Waves Audio,Audio,existing
+Surfer SEO,1,Semrush,"Data, Sales & Marketing",existing
+Surge AI,1,Scale AI,"Data, Annotation",existing
+Symbotic,1,AMC Robotics Corporation,Robotics,existing
+Synapse Medicine,1,Doctolib,Health & Social Care,existing
+System76,1,AIME,"Manufacturing & Operations, Professional Services, ICT",existing
+TCL,1,Samsung Electronics,Hardware,existing
+Talen Energy,1,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+Talkdesk,1,SoundHound AI,"AI model, Voice",existing
+Tandem Health,1,Doctolib,Health & Social Care,existing
+Tanium (Gestion des endpoints) : 8 à 10 milliards $,1,Guard Technology,"IT & Security, Cyber",existing
+Tata,1,IBM,"AI model, Cloud Provider, Professional Services",existing
+Teal Drones,1,Anduril Industries,"Defence, AI model, Drone",existing
+Techstars,1,Y combinator,ICT,existing
+Teledyne,1,Cognex,"Computer Vision, AI model",existing
+Telegram,1,Meta,"AI model, Media & Entertainment, Advertising",existing
+Telenav,1,4.screen,"Transport & Mobility, Media & Entertainment",existing
+Telus digital,1,Scale AI,"Data, Annotation",existing
+Tempus,1,Owkin,"AI model, Health & Social Care",existing
+Tencent Cloud,1,4Paradigm,"AI model, Professional Services",existing
+Texas Instruments,1,Microchip Technology Inc,ICT,existing
+Thales Group,1,20face,"Health & Social Care, IT & Security",existing
+The Librarian,1,Zapia AI,AI model,existing
+The Vanguard Group,1,BlackRock,ICT,existing
+Thinking Machines Lab,1,AMI,"AI model, World Model",existing
+Thonson Reuteur,1,Harvey AI,"Professional Services, LawTech",existing
+TikTok,1,YouTube,Media & Entertainment,existing
+Tisane Labs,1,Bodyguard.ai,"IT & Security, Cyber",existing
+Tmall Global,1,Kaola,Retail & E-commerce,existing
+Toast,1,Lightspeed,"Professional Services, Retail & E-commerce",existing
+Together AI,1,Crusoe,"Manufacturing & Operations, Agentic, Automation",existing
+TogetherAI,1,Hugging Face,"Hardware, ICT",existing
+TopDoctors,1,Doctolib,Health & Social Care,existing
+Torc Robotics,1,Aurora Innovation,"R&D, ICT",existing
+Toyota,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Transkriptor,1,Amberscript,AI model,existing
+Translate.,1,DeepL,ICT,existing
+Tribun Health,1,Owkin,"AI model, Health & Social Care",existing
+Trint,1,Amberscript,AI model,existing
+Trulens,1,Langfuse,AI model,existing
+Twin,1,Dust,"Health & Social Care, Agentic",existing
+Twitch,1,YouTube,Media & Entertainment,existing
+Two Hat,1,Bodyguard.ai,"IT & Security, Cyber",existing
+UNISOC,1,Qualcomm,Hardware,existing
+Udio,1,Suno AI,"AI model, Music",existing
+Unitree,1,Figure AI,Robotics,existing
+Universal Audio,1,Waves Audio,Audio,existing
+Uptake,1,Prognostix AB,R&D,existing
+VIP.com,1,Kaola,Retail & E-commerce,existing
+Valo Health,1,Recursion Pharmaceuticals,Biotech,existing
+Veriff,1,Ubble,"AI model, IDV",existing
+Verisart,1,Art Recognition,"IT & Security, Art",existing
+Vidu,1,Runway,"Media & Entertainment, AI model, Image generation",existing
+Vimeo,1,YouTube,Media & Entertainment,existing
+Virtonomy,1,EbenBuild,Health & Social Care,existing
+Visa,1,Ant Group,"Financial Services, AI model, ICT",existing
+Vision One,1,SentinelOne,Cybersécurité,existing
+Volkswagen Group,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Voltage Park,1,WhiteFiber,"Cloud Provider, ICT",existing
+Walmart,1,Amazon,"Retail & E-commerce, Cloud Provider, Sales & Marketing",existing
+WandB Prompts,1,Langfuse,AI model,existing
+WeChat,1,Meta,"AI model, Media & Entertainment, Advertising",existing
+Windsurf,1,Anysphere,"AI model, Code, Saas",existing
+Wipro,1,Innodata,"Data, Annotation",existing
+Wisedocs,1,Yseop,"AI model, Health & Social Care",existing
+Wix ecommerce,1,Shopify,Retail & E-commerce,existing
+Wiz (Sécurité Cloud) : 32 milliards $,1,Guard Technology,"IT & Security, Cyber",existing
+WizStudio,1,PhotoRoom,"Media & Entertainment, Image generation",existing
+Woocommerce,1,Shopify,Retail & E-commerce,existing
+X,1,Meta,"AI model, Media & Entertainment, Advertising",existing
+Xaira Therapeutics,1,PharmAI,"Biotech, AI model",existing
+Xiaimi,1,Samsung Electronics,Hardware,existing
+Xpeng,1,Tesla,"Energy & Utilities, Transport & Mobility, Robotics",existing
+Yoti,1,Ubble,"AI model, IDV",existing
+Zapata Computing,1,Multiverse Computing,Quantic,existing
+Zapier,1,UiPath,"Manufacturing & Operations, Professional Services, ICT",existing
+Zelty,1,Lightspeed,"Professional Services, Retail & E-commerce",existing
+Zencargo,1,Ameba,Logistics,existing
+Zendesk AI,1,Decagon,"Sales & Marketing, Retail & E-commerce, Chatbot",existing
+Zhihu,1,Weibo,Media & Entertainment,existing
+Zocdoc,1,Doctolib,Health & Social Care,existing
+Zoom,1,Cisco,ICT,existing
+brighter AI,1,20face,"Health & Social Care, IT & Security",existing
+bytedanse,1,Google,"AI model, Media & Entertainment, Sales & Marketing",existing
+civitai,1,Hugging Face,"Hardware, ICT",existing
+grandes CRO,1,Yseop,"AI model, Health & Social Care",existing
+gridX,1,Kraken Technologies,ICT,existing
+iMerit,1,Scale AI,"Data, Annotation",existing
+iProov,1,20face,"Health & Social Care, IT & Security",existing
+illumina,1,Oxford Nanopore Technologies,"AI model, Health & Social Care",existing
+incident.io,1,Dash0,AI model,existing
+iniVation,1,Prophesee,"Computer Vision, AI model, Robotics",existing
+n8n,1,UiPath,"Manufacturing & Operations, Professional Services, ICT",existing
+onsemi,1,Microchip Technology Inc,ICT,existing
+pendo,1,ContentSquare,Sales & Marketing,existing
+similarweb,1,Semrush,"Data, Sales & Marketing",existing
+tl;dv,1,Amberscript,AI model,existing
+xSeek,1,Semrush,"Data, Sales & Marketing",existing
+you.com,1,Perplexity,"AI model, Hardware, ICT",existing
