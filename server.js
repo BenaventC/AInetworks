@@ -40,6 +40,9 @@ function initializeDatabase() {
       capitalization REAL,
       funds_raised REAL,
       revenue_millions REAL,
+      profit_millions REAL,
+      rd_expenses_millions REAL,
+      capex_millions REAL,
       employees_count INTEGER,
       main_investors TEXT,
       main_competitors TEXT,
@@ -96,6 +99,27 @@ function initializeDatabase() {
           db.run('ALTER TABLE enterprises ADD COLUMN revenue_millions REAL', (err) => {
             if (err && !err.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE revenue_millions:', err.message);
+            }
+          });
+        }
+        if (!columns.has('profit_millions')) {
+          db.run('ALTER TABLE enterprises ADD COLUMN profit_millions REAL', (err) => {
+            if (err && !err.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE profit_millions:', err.message);
+            }
+          });
+        }
+        if (!columns.has('rd_expenses_millions')) {
+          db.run('ALTER TABLE enterprises ADD COLUMN rd_expenses_millions REAL', (err) => {
+            if (err && !err.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE rd_expenses_millions:', err.message);
+            }
+          });
+        }
+        if (!columns.has('capex_millions')) {
+          db.run('ALTER TABLE enterprises ADD COLUMN capex_millions REAL', (err) => {
+            if (err && !err.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE capex_millions:', err.message);
             }
           });
         }
@@ -384,6 +408,8 @@ function parseLocaleNumber(value) {
 
 function parseFinancialToMillions(value, options = {}) {
   const {
+    allowNegative = false,
+    allowZero = false,
     autoDetectAbsoluteUsd = false,
     absoluteUsdThresholdInMillions = 10_000_000
   } = options;
@@ -393,7 +419,19 @@ function parseFinancialToMillions(value, options = {}) {
   }
 
   if (typeof value === 'number') {
-    if (!Number.isFinite(value) || value <= 0) {
+    if (!Number.isFinite(value)) {
+      return null;
+    }
+
+    if (!allowNegative && value < 0) {
+      return null;
+    }
+
+    if (!allowZero && value === 0) {
+      return null;
+    }
+
+    if (allowNegative && !allowZero && value === 0) {
       return null;
     }
 
@@ -424,7 +462,15 @@ function parseFinancialToMillions(value, options = {}) {
   }
 
   const numericValue = parseLocaleNumber(match[1]);
-  if (!Number.isFinite(numericValue) || numericValue <= 0) {
+  if (!Number.isFinite(numericValue)) {
+    return null;
+  }
+
+  if (!allowNegative && numericValue < 0) {
+    return null;
+  }
+
+  if (!allowZero && numericValue === 0) {
     return null;
   }
 
@@ -443,7 +489,15 @@ function parseFinancialToMillions(value, options = {}) {
   }
 
   const inMillions = numericValue * multiplier;
-  if (!Number.isFinite(inMillions) || inMillions <= 0) {
+  if (!Number.isFinite(inMillions)) {
+    return null;
+  }
+
+  if (!allowNegative && inMillions < 0) {
+    return null;
+  }
+
+  if (!allowZero && inMillions === 0) {
     return null;
   }
 
@@ -461,7 +515,7 @@ function parseCapitalizationToMillions(value) {
 
 function normalizeMillionsField(value, options = {}) {
   const millions = parseFinancialToMillions(value, options);
-  if (!Number.isFinite(millions) || millions <= 0) {
+  if (!Number.isFinite(millions)) {
     return null;
   }
 
@@ -469,7 +523,7 @@ function normalizeMillionsField(value, options = {}) {
 }
 
 function normalizeEnterpriseFinancialFields() {
-  db.all('SELECT id, capitalization, funds_raised, revenue_millions FROM enterprises', (err, rows) => {
+  db.all('SELECT id, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions FROM enterprises', (err, rows) => {
     if (err) {
       console.error('Erreur SELECT normalisation finance:', err.message);
       return;
@@ -479,6 +533,9 @@ function normalizeEnterpriseFinancialFields() {
       const normalizedCapitalization = normalizeMillionsField(row.capitalization);
       const normalizedFundsRaised = normalizeMillionsField(row.funds_raised);
       const normalizedRevenue = normalizeMillionsField(row.revenue_millions, { autoDetectAbsoluteUsd: true });
+      const normalizedProfit = normalizeMillionsField(row.profit_millions, { allowNegative: true, allowZero: true });
+      const normalizedRdExpenses = normalizeMillionsField(row.rd_expenses_millions);
+      const normalizedCapex = normalizeMillionsField(row.capex_millions);
 
       const currentCapitalization = row.capitalization === null || row.capitalization === undefined
         ? null
@@ -489,27 +546,48 @@ function normalizeEnterpriseFinancialFields() {
       const currentRevenue = row.revenue_millions === null || row.revenue_millions === undefined
         ? null
         : parseLocaleNumber(row.revenue_millions);
+      const currentProfit = row.profit_millions === null || row.profit_millions === undefined
+        ? null
+        : parseLocaleNumber(row.profit_millions);
+      const currentRdExpenses = row.rd_expenses_millions === null || row.rd_expenses_millions === undefined
+        ? null
+        : parseLocaleNumber(row.rd_expenses_millions);
+      const currentCapex = row.capex_millions === null || row.capex_millions === undefined
+        ? null
+        : parseLocaleNumber(row.capex_millions);
 
       const hasCapitalizationRaw = row.capitalization !== null && row.capitalization !== undefined && String(row.capitalization).trim() !== '';
       const hasFundsRaisedRaw = row.funds_raised !== null && row.funds_raised !== undefined && String(row.funds_raised).trim() !== '';
       const hasRevenueRaw = row.revenue_millions !== null && row.revenue_millions !== undefined && String(row.revenue_millions).trim() !== '';
+      const hasProfitRaw = row.profit_millions !== null && row.profit_millions !== undefined && String(row.profit_millions).trim() !== '';
+      const hasRdExpensesRaw = row.rd_expenses_millions !== null && row.rd_expenses_millions !== undefined && String(row.rd_expenses_millions).trim() !== '';
+      const hasCapexRaw = row.capex_millions !== null && row.capex_millions !== undefined && String(row.capex_millions).trim() !== '';
 
       const shouldRewriteCapitalization = typeof row.capitalization === 'string' && (normalizedCapitalization !== null || hasCapitalizationRaw);
       const shouldRewriteFundsRaised = typeof row.funds_raised === 'string' && (normalizedFundsRaised !== null || hasFundsRaisedRaw);
       const shouldRewriteRevenue = typeof row.revenue_millions === 'string' && (normalizedRevenue !== null || hasRevenueRaw);
+      const shouldRewriteProfit = typeof row.profit_millions === 'string' && (normalizedProfit !== null || hasProfitRaw);
+      const shouldRewriteRdExpenses = typeof row.rd_expenses_millions === 'string' && (normalizedRdExpenses !== null || hasRdExpensesRaw);
+      const shouldRewriteCapex = typeof row.capex_millions === 'string' && (normalizedCapex !== null || hasCapexRaw);
 
       const changed =
         (Number.isFinite(currentCapitalization) ? Number(currentCapitalization.toFixed(6)) : null) !== normalizedCapitalization ||
         (Number.isFinite(currentFundsRaised) ? Number(currentFundsRaised.toFixed(6)) : null) !== normalizedFundsRaised ||
         (Number.isFinite(currentRevenue) ? Number(currentRevenue.toFixed(6)) : null) !== normalizedRevenue ||
+        (Number.isFinite(currentProfit) ? Number(currentProfit.toFixed(6)) : null) !== normalizedProfit ||
+        (Number.isFinite(currentRdExpenses) ? Number(currentRdExpenses.toFixed(6)) : null) !== normalizedRdExpenses ||
+        (Number.isFinite(currentCapex) ? Number(currentCapex.toFixed(6)) : null) !== normalizedCapex ||
         shouldRewriteCapitalization ||
         shouldRewriteFundsRaised ||
-        shouldRewriteRevenue;
+        shouldRewriteRevenue ||
+        shouldRewriteProfit ||
+        shouldRewriteRdExpenses ||
+        shouldRewriteCapex;
 
       if (changed) {
         db.run(
-          'UPDATE enterprises SET capitalization = ?, funds_raised = ?, revenue_millions = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
-          [normalizedCapitalization, normalizedFundsRaised, normalizedRevenue, row.id],
+          'UPDATE enterprises SET capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+          [normalizedCapitalization, normalizedFundsRaised, normalizedRevenue, normalizedProfit, normalizedRdExpenses, normalizedCapex, row.id],
           (updateErr) => {
             if (updateErr) {
               console.error(`Erreur normalisation finance id=${row.id}:`, updateErr.message);
@@ -567,10 +645,16 @@ function sanitizeEnterprisePayload(payload) {
   const sanitizedCapitalization = sanitizeTextField(payload.capitalization, 'capitalization');
   const sanitizedFundsRaised = sanitizeTextField(payload.funds_raised, 'funds_raised');
   const sanitizedRevenueMillions = sanitizeTextField(payload.revenue_millions, 'revenue_millions');
+  const sanitizedProfitMillions = sanitizeTextField(payload.profit_millions, 'profit_millions');
+  const sanitizedRdExpensesMillions = sanitizeTextField(payload.rd_expenses_millions, 'rd_expenses_millions');
+  const sanitizedCapexMillions = sanitizeTextField(payload.capex_millions, 'capex_millions');
 
   const normalizedCapitalization = normalizeMillionsField(sanitizedCapitalization);
   const normalizedFundsRaised = normalizeMillionsField(sanitizedFundsRaised);
   const normalizedRevenueMillions = normalizeMillionsField(sanitizedRevenueMillions, { autoDetectAbsoluteUsd: true });
+  const normalizedProfitMillions = normalizeMillionsField(sanitizedProfitMillions, { allowNegative: true, allowZero: true });
+  const normalizedRdExpensesMillions = normalizeMillionsField(sanitizedRdExpensesMillions);
+  const normalizedCapexMillions = normalizeMillionsField(sanitizedCapexMillions);
   return {
     ...payload,
     name: sanitizeTextField(payload.name, 'name'),
@@ -584,6 +668,9 @@ function sanitizeEnterprisePayload(payload) {
     capitalization: normalizedCapitalization,
     funds_raised: normalizedFundsRaised,
     revenue_millions: normalizedRevenueMillions,
+    profit_millions: normalizedProfitMillions,
+    rd_expenses_millions: normalizedRdExpensesMillions,
+    capex_millions: normalizedCapexMillions,
     main_investors: sanitizeTextField(payload.main_investors, 'main_investors'),
     main_competitors: sanitizeTextField(payload.main_competitors, 'main_competitors'),
     participation: sanitizeTextField(payload.participation, 'participation'),
@@ -700,6 +787,20 @@ function parseEnterpriseTopScore(capitalizationValue, fundsRaisedValue) {
   return Math.max(capitalizationScore, fundsRaisedScore);
 }
 
+function isEnterpriseTop100Candidate(row) {
+  const capMillions = parseCapitalizationToMillions(row.capitalization);
+  const fundsMillions = parseCapitalizationToMillions(row.funds_raised);
+
+  const hasLargeCap = Number.isFinite(capMillions) && capMillions > 100;
+  const hasMeaningfulFunds = Number.isFinite(fundsMillions) && fundsMillions > 10;
+
+  return hasLargeCap || hasMeaningfulFunds;
+}
+
+function buildTop100EligibilitySqlClause() {
+  return '(IFNULL(CAST(capitalization AS REAL), 0) > 100 OR IFNULL(CAST(funds_raised AS REAL), 0) > 10)';
+}
+
 function hasEmptyCompetitorsField(value) {
   return !String(value || '').trim();
 }
@@ -786,7 +887,56 @@ app.get('/api/enterprises', (req, res) => {
     params.push(countryFilter);
   }
 
-  if (segment === 'top100' || segment === 'top50' || segment === 'companieswithoutcompetitors') {
+  if (segment === 'top100') {
+    const topClause = buildTop100EligibilitySqlClause();
+    const topConditions = [...conditions, topClause];
+    const whereClause = topConditions.length > 0 ? `WHERE ${topConditions.join(' AND ')}` : '';
+
+    db.get(`SELECT COUNT(*) as total FROM enterprises ${whereClause}`, params, (countErr, countRow) => {
+      if (countErr) {
+        return res.status(500).json({ error: countErr.message });
+      }
+
+      const total = countRow ? countRow.total : 0;
+      const totalPages = Math.max(1, Math.ceil(total / limit));
+      const safePage = Math.min(page, totalPages);
+      const safeOffset = (safePage - 1) * limit;
+
+      db.all(
+        `SELECT *,
+                CASE
+                  WHEN IFNULL(CAST(capitalization AS REAL), 0) >= IFNULL(CAST(funds_raised AS REAL), 0)
+                    THEN IFNULL(CAST(capitalization AS REAL), 0)
+                  ELSE IFNULL(CAST(funds_raised AS REAL), 0)
+                END AS ranking_score
+         FROM enterprises
+         ${whereClause}
+         ORDER BY ranking_score DESC, name
+         LIMIT ? OFFSET ?`,
+        [...params, limit, safeOffset],
+        (err, rows) => {
+          if (err) {
+            return res.status(500).json({ error: err.message });
+          }
+
+          return res.json({
+            items: rows,
+            pagination: {
+              page: safePage,
+              limit,
+              total,
+              totalPages,
+              hasNextPage: safePage < totalPages,
+              hasPreviousPage: safePage > 1
+            }
+          });
+        }
+      );
+    });
+    return;
+  }
+
+  if (segment === 'top50' || segment === 'companieswithoutcompetitors') {
     const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
     db.all(`SELECT * FROM enterprises ${whereClause}`, params, (err, rows) => {
       if (err) {
@@ -811,27 +961,30 @@ app.get('/api/enterprises', (req, res) => {
               return b.ranking_score - a.ranking_score;
             }
             return (a.name || '').localeCompare(b.name || '');
-          })
-          .slice(0, 200);
+          });
+
+        if (segment === 'top50') {
+          sorted = sorted.slice(0, 50);
+        }
       }
 
       const total = sorted.length;
       const totalPages = Math.max(1, Math.ceil(total / limit));
       const safePage = Math.min(page, totalPages);
       const safeOffset = (safePage - 1) * limit;
-      const pageItems = segment === 'top100' || segment === 'top50'
-        ? sorted.slice(0, 200)
+      const pageItems = segment === 'top50'
+        ? sorted.slice(0, 50)
         : sorted.slice(safeOffset, safeOffset + limit);
 
       return res.json({
         items: pageItems,
         pagination: {
-          page: segment === 'top100' || segment === 'top50' ? 1 : safePage,
-          limit: segment === 'top100' || segment === 'top50' ? 100 : limit,
+          page: segment === 'top50' ? 1 : safePage,
+          limit: segment === 'top50' ? 50 : limit,
           total,
-          totalPages: segment === 'top100' || segment === 'top50' ? 1 : totalPages,
-          hasNextPage: segment === 'top100' || segment === 'top50' ? false : safePage < totalPages,
-          hasPreviousPage: segment === 'top100' || segment === 'top50' ? false : safePage > 1
+          totalPages: segment === 'top50' ? 1 : totalPages,
+          hasNextPage: segment === 'top50' ? false : safePage < totalPages,
+          hasPreviousPage: segment === 'top50' ? false : safePage > 1
         }
       });
     });
@@ -873,6 +1026,86 @@ app.get('/api/enterprises', (req, res) => {
       }
     );
   });
+});
+
+app.get('/api/enterprises/counts', (req, res) => {
+  const searchQuery = (req.query.q || '').trim();
+  const sectorFilter = (req.query.sector || '').trim();
+  const countryFilter = (req.query.country || '').trim();
+
+  const conditions = [];
+  const params = [];
+
+  const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
+  if (nameSearch) {
+    conditions.push(nameSearch.clause);
+    params.push(...nameSearch.params);
+  }
+
+  if (sectorFilter) {
+    conditions.push('(sector = ? OR sector LIKE ? OR sector LIKE ? OR sector LIKE ?)');
+    params.push(
+      sectorFilter,
+      `${sectorFilter}, %`,
+      `%, ${sectorFilter}, %`,
+      `%, ${sectorFilter}`
+    );
+  }
+
+  if (countryFilter) {
+    conditions.push('LOWER(TRIM(IFNULL(country, ""))) = LOWER(TRIM(?))');
+    params.push(countryFilter);
+  }
+
+  const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
+
+  const runGet = (sql, queryParams = []) => new Promise((resolve, reject) => {
+    db.get(sql, queryParams, (err, row) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(row || {});
+      }
+    });
+  });
+
+  const runAll = (sql, queryParams = []) => new Promise((resolve, reject) => {
+    db.all(sql, queryParams, (err, rows) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(rows || []);
+      }
+    });
+  });
+
+  Promise.all([
+    runGet(
+      `SELECT
+        SUM(CASE WHEN IFNULL(is_validated, 0) = 0 THEN 1 ELSE 0 END) AS pending,
+        SUM(CASE WHEN IFNULL(is_validated, 0) = 1 THEN 1 ELSE 0 END) AS partial,
+        SUM(CASE WHEN IFNULL(is_validated, 0) = 2 THEN 1 ELSE 0 END) AS validated,
+        SUM(CASE WHEN IFNULL(is_validated, 0) = 3 THEN 1 ELSE 0 END) AS later,
+        SUM(CASE WHEN LENGTH(TRIM(IFNULL(main_competitors, ""))) < 5 THEN 1 ELSE 0 END) AS companieswithoutcompetitors,
+        SUM(CASE WHEN ${buildTop100EligibilitySqlClause()} THEN 1 ELSE 0 END) AS top100
+       FROM enterprises
+       ${whereClause}`,
+      params
+    )
+  ])
+    .then(([validatedCounts]) => {
+      res.json({
+        pending: validatedCounts.pending || 0,
+        partial: validatedCounts.partial || 0,
+        validated: validatedCounts.validated || 0,
+        later: validatedCounts.later || 0,
+        companieswithoutcompetitors: validatedCounts.companieswithoutcompetitors || 0,
+        top100: validatedCounts.top100 || 0
+      });
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message });
+    });
 });
 
 app.get('/api/enterprises/filters', (req, res) => {
@@ -1021,6 +1254,9 @@ app.post('/api/enterprises', (req, res) => {
     capitalization,
     funds_raised,
     revenue_millions,
+    profit_millions,
+    rd_expenses_millions,
+    capex_millions,
     employees_count,
     main_investors,
     main_competitors,
@@ -1036,8 +1272,8 @@ app.post('/api/enterprises', (req, res) => {
   }
 
   db.run(
-    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, employees_count, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       name,
       sector,
@@ -1054,6 +1290,9 @@ app.post('/api/enterprises', (req, res) => {
       capitalization,
       funds_raised,
       revenue_millions,
+      profit_millions,
+      rd_expenses_millions,
+      capex_millions,
       employees_count,
       main_investors,
       main_competitors,
@@ -1105,6 +1344,9 @@ app.put('/api/enterprises/:id', (req, res) => {
     capitalization,
     funds_raised,
     revenue_millions,
+    profit_millions,
+    rd_expenses_millions,
+    capex_millions,
     employees_count,
     main_investors,
     main_competitors,
@@ -1117,7 +1359,7 @@ app.put('/api/enterprises/:id', (req, res) => {
   
   db.run(
     `UPDATE enterprises 
-     SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, employees_count = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
+     SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
      WHERE id = ?`,
     [
       name,
@@ -1135,6 +1377,9 @@ app.put('/api/enterprises/:id', (req, res) => {
       capitalization,
       funds_raised,
       revenue_millions,
+      profit_millions,
+      rd_expenses_millions,
+      capex_millions,
       employees_count,
       main_investors,
       main_competitors,
@@ -1319,6 +1564,52 @@ app.get('/api/partnerships', (req, res) => {
           }
         }
       );
+    }
+  );
+});
+
+app.get('/api/partnerships/counts', (req, res) => {
+  const searchQuery = (req.query.q || '').trim();
+  const hasSearch = searchQuery.length > 0;
+  const searchValue = `%${searchQuery}%`;
+
+  const conditions = [];
+  const params = [];
+
+  if (hasSearch) {
+    conditions.push('(e1.name LIKE ? OR e2.name LIKE ? OR p.partnership_type LIKE ? OR p.type_relation LIKE ? OR p.description LIKE ? OR p.sources_information LIKE ? OR p.infra_commitment_text LIKE ?)');
+    params.push(searchValue, searchValue, searchValue, searchValue, searchValue, searchValue, searchValue);
+  }
+
+  const fromClause = `
+    FROM partnerships p
+    JOIN enterprises e1 ON p.enterprise1_id = e1.id
+    JOIN enterprises e2 ON p.enterprise2_id = e2.id
+  `;
+  const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
+
+  db.get(
+    `SELECT
+      SUM(CASE WHEN IFNULL(p.is_validated, 0) = 0 THEN 1 ELSE 0 END) AS pending,
+      SUM(CASE WHEN IFNULL(p.is_validated, 0) = 1 THEN 1 ELSE 0 END) AS partial,
+      SUM(CASE WHEN IFNULL(p.is_validated, 0) = 2 THEN 1 ELSE 0 END) AS validated,
+      SUM(CASE WHEN IFNULL(p.is_validated, 0) = 3 THEN 1 ELSE 0 END) AS later,
+      SUM(CASE WHEN CAST(IFNULL(p.value_millions, 0) AS REAL) > 0 THEN 1 ELSE 0 END) AS top100
+     ${fromClause}
+     ${whereClause}`,
+    params,
+    (err, row) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.json({
+          pending: row?.pending || 0,
+          partial: row?.partial || 0,
+          validated: row?.validated || 0,
+          later: row?.later || 0,
+          top100: row?.top100 || 0
+        });
+      }
     }
   );
 });

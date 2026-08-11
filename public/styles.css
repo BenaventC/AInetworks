@@ -157,6 +157,10 @@ header h1 {
   margin-bottom: 5px;
 }
 
+.financial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .form-group.span-2 { grid-column: span 2; }
 .form-group.span-4 { grid-column: 1 / -1; }
 
@@ -413,6 +417,7 @@ header h1 {
   .section-header { flex-direction: column; gap: 10px; }
   .section-header .btn { width: 100%; }
   .form-row, .timestamp-grid { grid-template-columns: 1fr; }
+  .financial-grid { grid-template-columns: 1fr; }
   .form-group.span-2, .form-group.span-4 { grid-column: auto; }
   .enterprise-fields-grid { grid-template-columns: 1fr; }
   .field-wide, .field-full { grid-column: auto; }
@@ -429,6 +434,7 @@ header h1 {
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .financial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .form-group.span-2, .form-group.span-4 { grid-column: auto; }
   .enterprise-fields-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

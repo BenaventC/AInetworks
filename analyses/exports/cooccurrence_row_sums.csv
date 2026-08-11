@@ -1,112 +1,147 @@
 name,vulnerability
-Apple,17.0
+Black Forest Labs,15.0
 Tesla,14.0
-OpenAI,12.0
+Sakana AI,13.0
+Scale AI,13.0
+SoundHound AI,13.0
 Meta,12.0
-SoundHound AI,12.0
-Crusoe,11.0
-Doctolib,11.0
+OpenAI,12.0
+Apple,11.0
 Owkin,11.0
-IBM,11.0
 Mistral AI,11.0
-Cisco,10.0
-Black Forest Labs,10.0
-01.AI,10.0
-Alphabet,10.0
+Doctolib,11.0
+Crusoe,11.0
+IBM,11.0
 Amazon,10.0
+Anduril Industries,10.0
+Cisco,10.0
+01.AI,10.0
 Physical Intelligence,10.0
-Black Forest AI GmbH,9.0
+Google,9.0
 Aurora Innovation,9.0
-Nscale,9.0
-Samsung Electronics,9.0
-Sakana AI,9.0
-Prophesee,9.0
 PhotoRoom,9.0
-Google,8.0
+Prophesee,9.0
+Samsung Electronics,9.0
+Recursive Superintelligence,9.0
+Runway,9.0
+Nscale,9.0
+Lawx,8.0
 Lightspeed,8.0
-Palantir,8.0
-WhiteFiber,8.0
-SpaceX,8.0
+Cambricon Technologies,8.0
 Groq,8.0
-MiniMax,8.0
-UiPath,8.0
+Kling AI,8.0
+Celonis,8.0
 Ambiance Healthcare,8.0
 Alibaba,8.0
 AMI,8.0
-Celonis,8.0
-Cambricon Technologies,8.0
-AMD,7.0
-Anysphere,7.0
-ContentSquare,7.0
-Weibo,7.0
-Wayve,7.0
+WhiteFiber,8.0
+Teraki,8.0
+UiPath,8.0
+MiniMax,8.0
+Qualcomm,8.0
+SpaceX,8.0
+Harvey,7.0
+Thomson Reuters,7.0
 Suno AI,7.0
+Microsoft,7.0
+Alphabet,7.0
+5C Group,7.0
+AMD,7.0
 Adobe,7.0
 Recursion Pharmaceuticals,7.0
+Glean Technologies,7.0
+Decagon,7.0
+Dash0,7.0
+ContentSquare,7.0
+Graphcore,7.0
+Wayve,7.0
+Weibo,7.0
+Anysphere,7.0
 Shopify,7.0
-Corti,6.0
-Cerebras,6.0
-Presight AI,6.0
-Pony AI,6.0
-PolyAI,6.0
-Microsoft,6.0
-Hugging Face,6.0
-Kuaishou,6.0
-Glean,6.0
-Pasqal,6.0
-Anthropic,6.0
+Multiverse Computing,7.0
 4Paradigm,6.0
-Zhipu AI,5.0
-Waymo,5.0
-Perplexity,5.0
-Qualcomm,5.0
-Synthesia,5.0
-SentinelOne,5.0
-ByteDance,5.0
-Cloudflare,5.0
+4.screen,6.0
+Cerebras,6.0
+Pony AI,6.0
+Domyn,6.0
+Kraken Technologies,6.0
+Pasqal,6.0
+Sierra,6.0
+PolyAI,6.0
+Palantir,6.0
+Presight AI,6.0
+Kuaishou,6.0
+Corti,6.0
+Luma AI,6.0
+Arago,6.0
+Appen,6.0
+Hugging Face,6.0
+Glean,6.0
+Anthropic,6.0
 1X Technologies,5.0
 ARM Holdings,5.0
-AWS,5.0
-Abridge,5.0
-Doubleword,5.0
-Dynatrace,5.0
-Yseop,5.0
-Kaola,5.0
-GitHub,5.0
-Intel,5.0
-Cognex,5.0
-Dataiku,5.0
-Cohere,5.0
-DeepSeek,5.0
+Alpine Eagle,5.0
 YouTube,5.0
-Oracle,5.0
+DeepSeek,5.0
+Doubleword,5.0
+Abridge,5.0
+AWS,5.0
+3ive AI,5.0
+Cohere,5.0
+Zhipu AI,5.0
 Nvidia,5.0
-Figure AI,5.0
+Oracle,5.0
 "Midjourney, Inc.",5.0
+Waymo,5.0
+Yseop,5.0
+SentinelOne,5.0
+Synthesia,5.0
+Perplexity,5.0
+Dynatrace,5.0
+Intel,5.0
+Kaola,5.0
+Figure AI,5.0
+Cognex,5.0
+ByteDance,5.0
+DarwinAI,5.0
+Cloudflare,5.0
+GitHub,5.0
+Dataiku,5.0
+Accentize GmbH,4.0
+Aleph Alpha,4.0
+Cognition AI,4.0
+Colossyan,4.0
+Ant Group,4.0
+Broadcom,4.0
+Comand AI,4.0
+SPACE42,4.0
 LightOn,4.0
+Salesforce,4.0
+Luminance,4.0
+Mobileye,4.0
+Moonshot AI,4.0
+Harvey AI,4.0
+Boston Dynamics,4.0
 Databricks,4.0
 DeepL,4.0
-Broadcom,4.0
-Boston Dynamics,4.0
-Aleph Alpha,4.0
-Ant Group,4.0
-Colossyan,4.0
-Cognition AI,4.0
 Cognition,4.0
-Comand AI,4.0
-Moonshot AI,4.0
-Mobileye,4.0
-SPACE42,4.0
-Salesforce,4.0
-Fermi Inc.,3.0
+Cradle,4.0
+AMC Robotics Corporation,3.0
 C3 AI,3.0
 Helsing,3.0
-Harmattan AI,3.0
-Snowflake,3.0
-Oriole Networks,3.0
-Ineffable Intelligence,3.0
-IQM Quantum Computers,3.0
-WeRide,3.0
 Stability AI,3.0
+IQM Quantum Computers,3.0
+Harmattan AI,3.0
+Ineffable Intelligence,3.0
+EbenBuild,3.0
+Dexter,3.0
+Fermi Inc.,3.0
+Oriole Networks,3.0
+WeRide,3.0
+PharmAI,3.0
+Quantistry,3.0
+Snowflake,3.0
 World Labs,3.0
+TSMC,3.0
 Nabla,2.0
+BenevolentAI,1.0

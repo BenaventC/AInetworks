@@ -203,3 +203,17 @@ You may share and adapt the content with proper attribution, including a referen
 
 Thanks to all contributors and public sources that supported data collection, normalization, and enrichment.
 
+## Latest UI Update
+
+- Financial values are now normalized and handled as numeric values in base unit USD millions.
+- Company and relationship cards use a dense 4-column layout on desktop (2 columns tablet, 1 mobile).
+- Edit forms were condensed to maximize visible information while keeping mobile usability.
+- Top 200 cards now include a ranking sticker with percentile tiers (Top 1%, Top 5%, Top 10%).
+- Company logos are normalized in a fixed-size frame and consistently right-aligned in cards.
+
+## Recent Project Updates
+
+- Sector labels now include the labels that appear at least 3 times in the database, and the form allows up to 5 labels per company.
+- Competitor names are normalized against canonical enterprise names, including alias rules such as Azure → Microsoft Azure and Cerebras Systems → Cerebras.
+- Competition analysis exports are regenerated regularly and stored in the analyses/exports folder for local review and sharing.
+

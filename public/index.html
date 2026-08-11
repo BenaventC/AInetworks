@@ -135,25 +135,37 @@
           <!-- FINANCIALS -->
           <fieldset class="form-section">
             <legend>Financials & Scale</legend>
-            <div class="form-row">
-              <div class="form-group span-2">
+            <div class="form-row financial-grid">
+              <div class="form-group">
                 <label for="entCapitalization">Mkt cap (USD M)</label>
                 <input type="number" id="entCapitalization" placeholder="e.g. 1000 for 1B USD" step="0.001" min="0">
               </div>
-              <div class="form-group span-2">
+              <div class="form-group">
                 <label for="entFundsRaised">Funds (USD M)</label>
                 <input type="number" id="entFundsRaised" placeholder="e.g. 450" step="0.001" min="0">
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group span-2">
+              <div class="form-group">
                 <label for="entRevenueMillions">Revenue (USD M)</label>
                 <input type="number" id="entRevenueMillions" placeholder="e.g. 12000 = 12B USD" step="0.01" min="0">
-                <small class="field-help">Base unit is million USD for all financial fields (example: 1 billion = 1000).</small>
               </div>
-              <div class="form-group span-2">
+              <div class="form-group">
+                <label for="entProfitMillions">Profit (USD M)</label>
+                <input type="number" id="entProfitMillions" placeholder="e.g. -120" step="0.01">
+              </div>
+              <div class="form-group">
+                <label for="entRdExpensesMillions">R&D expenses (USD M)</label>
+                <input type="number" id="entRdExpensesMillions" placeholder="e.g. 350" step="0.01" min="0">
+              </div>
+              <div class="form-group">
+                <label for="entCapexMillions">Capex (USD M)</label>
+                <input type="number" id="entCapexMillions" placeholder="e.g. 90" step="0.01" min="0">
+              </div>
+              <div class="form-group">
                 <label for="entEmployees">Staff</label>
                 <input type="number" id="entEmployees" placeholder="e.g. 1500">
+              </div>
+              <div class="form-group span-4">
+                <small class="field-help">Base unit is million USD for all financial fields (example: 1 billion = 1000). Profit may be negative.</small>
               </div>
             </div>
           </fieldset>

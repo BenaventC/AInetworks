@@ -7,3 +7,10 @@ database.db
 
 # Sources locales / données brutes non versionnées
 Sources/
+
+# Fichiers temporaires et artefacts de debug
+tmp_*
+*.tmp
+*.bak
+*.orig
+archives/HPV-*.jpg

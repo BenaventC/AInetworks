@@ -14,9 +14,15 @@ let enterpriseSegment = 'later';
 let enterpriseSectorFilter = '';
 let enterpriseCountryFilter = '';
 let enterpriseFilterOptionsLoadingPromise = null;
+let enterpriseListAbortController = null;
+let enterpriseCountsAbortController = null;
+let enterpriseFiltersAbortController = null;
 let partnershipSearchQuery = '';
 let partnershipSearchDebounceTimer = null;
 let partnershipSegment = 'later';
+let partnershipListAbortController = null;
+let partnershipCountsAbortController = null;
+let hasLoadedPartnershipTab = false;
 const enterpriseSegmentCounts = {
   pending: 0,
   partial: 0,
@@ -184,26 +190,29 @@ function formatNumberFr(value, maxFractionDigits = 3) {
 function formatMillionsUsd(value) {
   const millions = parseMillionsValue(value);
   if (millions === null) {
-    return 'N/A';
+    return '—';
   }
 
-  if (millions >= 1000) {
-    const billions = millions / 1000;
-    return `${formatNumberFr(billions, 3)} billion USD`;
+  const sign = millions < 0 ? '-' : '';
+  const absoluteMillions = Math.abs(millions);
+
+  if (absoluteMillions >= 1000) {
+    const billions = absoluteMillions / 1000;
+    return `${sign}${formatNumberFr(billions, 3)} billion USD`;
   }
 
-  if (millions >= 1) {
-    return `${formatNumberFr(millions, 3)} million USD`;
+  if (absoluteMillions >= 1) {
+    return `${sign}${formatNumberFr(absoluteMillions, 3)} million USD`;
   }
 
-  const thousands = millions * 1000;
-  return `${formatNumberFr(thousands, 3)} thousand USD`;
+  const thousands = absoluteMillions * 1000;
+  return `${sign}${formatNumberFr(thousands, 3)} thousand USD`;
 }
 
 function formatAbsoluteUsd(value) {
   const numeric = typeof value === 'number' ? value : Number.parseFloat(value);
   if (!Number.isFinite(numeric) || numeric <= 0) {
-    return 'N/A';
+    return '—';
   }
 
   if (numeric >= 1_000_000_000) {
@@ -220,7 +229,8 @@ function formatAbsoluteUsd(value) {
   return `${formatNumberFr(thousands, 3)} thousand USD`;
 }
 
-function parseMillionsInputValue(elementId, fieldLabel) {
+function parseMillionsInputValue(elementId, fieldLabel, options = {}) {
+  const { allowNegative = false } = options;
   const raw = document.getElementById(elementId).value.trim();
   if (!raw) {
     return null;
@@ -228,7 +238,11 @@ function parseMillionsInputValue(elementId, fieldLabel) {
 
   const normalized = raw.replace(',', '.');
   const parsed = Number.parseFloat(normalized);
-  if (!Number.isFinite(parsed) || parsed < 0) {
+  if (!Number.isFinite(parsed)) {
+    throw new Error(`${fieldLabel} must be a numeric value in USD millions`);
+  }
+
+  if (!allowNegative && parsed < 0) {
     throw new Error(`${fieldLabel} must be a numeric value in USD millions`);
   }
 
@@ -324,9 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventListeners();
   loadEnterpriseFilterOptions();
   refreshEnterpriseSegmentCounts();
-  refreshPartnershipSegmentCounts();
   loadEnterprises();
-  loadPartnerships();
 });
 
 // ===== TABS =====
@@ -349,6 +361,12 @@ function switchTab(tabName) {
 
   document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
   document.getElementById(tabName).classList.add('active');
+
+  if (tabName === 'partnerships' && !hasLoadedPartnershipTab) {
+    hasLoadedPartnershipTab = true;
+    refreshPartnershipSegmentCounts();
+    loadPartnerships();
+  }
 }
 
 // ===== EVENT LISTENERS =====
@@ -401,6 +419,13 @@ function initEventListeners() {
 
 // ===== ENTERPRISES =====
 async function loadEnterprises() {
+  if (enterpriseListAbortController) {
+    enterpriseListAbortController.abort();
+  }
+
+  const abortController = new AbortController();
+  enterpriseListAbortController = abortController;
+
   try {
     const params = new URLSearchParams({
       page: String(enterprisePagination.page),
@@ -419,7 +444,9 @@ async function loadEnterprises() {
       params.set('country', enterpriseCountryFilter);
     }
 
-    const response = await fetch(`/api/enterprises?${params.toString()}`);
+    const response = await fetch(`/api/enterprises?${params.toString()}`, {
+      signal: abortController.signal
+    });
     const payload = await response.json();
 
     if (!response.ok) {
@@ -433,8 +460,15 @@ async function loadEnterprises() {
     }
     renderEnterprises();
   } catch (error) {
+    if (error.name === 'AbortError') {
+      return;
+    }
     console.error('Error while loading companies:', error);
     showError('Error while loading companies');
+  } finally {
+    if (enterpriseListAbortController === abortController) {
+      enterpriseListAbortController = null;
+    }
   }
 }
 
@@ -455,9 +489,12 @@ function renderEnterprises() {
 
   const totalRankedItems = filteredEnterprises.length;
   const topRankingSegment = isTopRankingSegment(enterpriseSegment);
+  const rankOffset = topRankingSegment
+    ? Math.max((enterprisePagination.page - 1) * enterprisePagination.limit, 0)
+    : 0;
 
   container.innerHTML = filteredEnterprises.map((ent, index) => {
-    const rank = index + 1;
+    const rank = rankOffset + index + 1;
     const rankTier = getRankTierClass(rank, totalRankedItems);
 
     return `
@@ -497,6 +534,9 @@ function renderEnterprises() {
         <div class="field"><div class="field-label">Mkt cap</div><div class="field-value">${formatMillionsUsd(ent.capitalization)}</div></div>
         <div class="field"><div class="field-label">Funds</div><div class="field-value">${formatMillionsUsd(ent.funds_raised)}</div></div>
         <div class="field"><div class="field-label">Revenue</div><div class="field-value">${formatMillionsUsd(ent.revenue_millions)}</div></div>
+        <div class="field"><div class="field-label">Profit</div><div class="field-value">${formatMillionsUsd(ent.profit_millions)}</div></div>
+        <div class="field"><div class="field-label">R&D</div><div class="field-value">${formatMillionsUsd(ent.rd_expenses_millions)}</div></div>
+        <div class="field"><div class="field-label">Capex</div><div class="field-value">${formatMillionsUsd(ent.capex_millions)}</div></div>
         ${ent.employees_count ? `<div class="field"><div class="field-label">Staff</div><div class="field-value">${ent.employees_count}</div></div>` : ''}
         ${ent.website ? `<div class="field field-wide"><div class="field-label">Website</div><div class="field-value"><a href="${ent.website}" target="_blank">${ent.website}</a></div></div>` : ''}
         ${ent.logo_url ? `<div class="field field-full field-logo"><div class="field-label">Logo</div><div class="field-value logo-field-value"><div class="logo-frame"><img src="${ent.logo_url}" alt="${ent.name}" loading="lazy"></div></div></div>` : ''}
@@ -562,68 +602,56 @@ function renderEnterpriseSubtabCounters() {
 }
 
 async function refreshEnterpriseSegmentCounts() {
+  if (enterpriseCountsAbortController) {
+    enterpriseCountsAbortController.abort();
+  }
+
+  const abortController = new AbortController();
+  enterpriseCountsAbortController = abortController;
+
   try {
-    const filterParams = new URLSearchParams();
+    const params = new URLSearchParams();
     if (enterpriseSearchQuery) {
-      filterParams.set('q', enterpriseSearchQuery);
+      params.set('q', enterpriseSearchQuery);
     }
     if (enterpriseSectorFilter) {
-      filterParams.set('sector', enterpriseSectorFilter);
+      params.set('sector', enterpriseSectorFilter);
     }
     if (enterpriseCountryFilter) {
-      filterParams.set('country', enterpriseCountryFilter);
+      params.set('country', enterpriseCountryFilter);
     }
 
-    const withFilters = (segment) => {
-      const params = new URLSearchParams(filterParams);
-      params.set('segment', segment);
-      params.set('page', '1');
-      params.set('limit', '1');
-      return `/api/enterprises?${params.toString()}`;
-    };
+    const response = await fetch(`/api/enterprises/counts?${params.toString()}`, {
+      signal: abortController.signal
+    });
+    const payload = await response.json();
 
-    const [pendingRes, partialRes, validatedRes, laterRes, competitionWithoutRes, top100Res] = await Promise.all([
-      fetch(withFilters('pending')),
-      fetch(withFilters('partial')),
-      fetch(withFilters('validated')),
-      fetch(withFilters('later')),
-      fetch(withFilters('companieswithoutcompetitors')),
-      fetch(withFilters('top100'))
-    ]);
-
-    const [pendingData, partialData, validatedData, laterData, competitionWithoutData, top100Data] = await Promise.all([
-      pendingRes.json(),
-      partialRes.json(),
-      validatedRes.json(),
-      laterRes.json(),
-      competitionWithoutRes.json(),
-      top100Res.json()
-    ]);
-
-    if (!pendingRes.ok || !partialRes.ok || !validatedRes.ok || !laterRes.ok || !competitionWithoutRes.ok || !top100Res.ok) {
+    if (!response.ok) {
       throw new Error('Error while loading counters');
     }
 
-    enterpriseSegmentCounts.pending = pendingData.pagination?.total || 0;
-    enterpriseSegmentCounts.partial = partialData.pagination?.total || 0;
-    enterpriseSegmentCounts.validated = validatedData.pagination?.total || 0;
-    enterpriseSegmentCounts.later = laterData.pagination?.total || 0;
-    enterpriseSegmentCounts.companieswithoutcompetitors = competitionWithoutData.pagination?.total || 0;
-    enterpriseSegmentCounts.top100 = top100Data.pagination?.total || 0;
+    enterpriseSegmentCounts.pending = payload.pending || 0;
+    enterpriseSegmentCounts.partial = payload.partial || 0;
+    enterpriseSegmentCounts.validated = payload.validated || 0;
+    enterpriseSegmentCounts.later = payload.later || 0;
+    enterpriseSegmentCounts.companieswithoutcompetitors = payload.companieswithoutcompetitors || 0;
+    enterpriseSegmentCounts.top100 = payload.top100 || 0;
     renderEnterpriseSubtabCounters();
   } catch (error) {
+    if (error.name === 'AbortError') {
+      return;
+    }
     console.error('Error while loading company counters:', error);
+  } finally {
+    if (enterpriseCountsAbortController === abortController) {
+      enterpriseCountsAbortController = null;
+    }
   }
 }
 
 function renderEnterprisePagination() {
   const container = document.getElementById('enterprisePagination');
   if (!container) return;
-
-  if (enterpriseSegment === 'top100') {
-    container.innerHTML = '';
-    return;
-  }
 
   if (enterprisePagination.total <= enterprisePagination.limit) {
     container.innerHTML = '';
@@ -692,6 +720,9 @@ function editEnterprise(id) {
     document.getElementById('entCapitalization').value = parseMillionsValue(ent.capitalization) ?? '';
     document.getElementById('entFundsRaised').value = parseMillionsValue(ent.funds_raised) ?? '';
     document.getElementById('entRevenueMillions').value = parseMillionsValue(ent.revenue_millions) ?? '';
+    document.getElementById('entProfitMillions').value = parseMillionsValue(ent.profit_millions) ?? '';
+    document.getElementById('entRdExpensesMillions').value = parseMillionsValue(ent.rd_expenses_millions) ?? '';
+    document.getElementById('entCapexMillions').value = parseMillionsValue(ent.capex_millions) ?? '';
     document.getElementById('entEmployees').value = ent.employees_count || '';
     document.getElementById('entValidated').value = String(normalizeValidationLevel(ent.is_validated));
     document.getElementById('enterpriseForm').classList.remove('hidden');
@@ -751,11 +782,17 @@ async function submitEnterpriseForm(e) {
   let capitalizationMillions;
   let fundsRaisedMillions;
   let revenueMillions;
+  let profitMillions;
+  let rdExpensesMillions;
+  let capexMillions;
 
   try {
     capitalizationMillions = parseMillionsInputValue('entCapitalization', 'Market cap');
     fundsRaisedMillions = parseMillionsInputValue('entFundsRaised', 'Funds raised');
     revenueMillions = parseMillionsInputValue('entRevenueMillions', 'Revenue');
+    profitMillions = parseMillionsInputValue('entProfitMillions', 'Profit', { allowNegative: true });
+    rdExpensesMillions = parseMillionsInputValue('entRdExpensesMillions', 'R&D expenses');
+    capexMillions = parseMillionsInputValue('entCapexMillions', 'Capex');
   } catch (error) {
     showError(error.message);
     return;
@@ -783,6 +820,9 @@ async function submitEnterpriseForm(e) {
     capitalization: capitalizationMillions,
     funds_raised: fundsRaisedMillions,
     revenue_millions: revenueMillions,
+    profit_millions: profitMillions,
+    rd_expenses_millions: rdExpensesMillions,
+    capex_millions: capexMillions,
     employees_count: document.getElementById('entEmployees').value ? parseInt(document.getElementById('entEmployees').value, 10) : null,
     is_validated: normalizeValidationLevel(document.getElementById('entValidated').value)
   };
@@ -880,9 +920,8 @@ function searchEnterprises(e) {
 
   enterpriseSearchDebounceTimer = setTimeout(async () => {
     await loadEnterpriseFilterOptions();
-    refreshEnterpriseSegmentCounts();
     loadEnterprises();
-  }, 250);
+  }, 400);
 }
 
 async function onEnterpriseFiltersChanged() {
@@ -916,6 +955,13 @@ async function resetEnterpriseFilters() {
 }
 
 async function loadEnterpriseFilterOptions() {
+  if (enterpriseFiltersAbortController) {
+    enterpriseFiltersAbortController.abort();
+  }
+
+  const abortController = new AbortController();
+  enterpriseFiltersAbortController = abortController;
+
   if (enterpriseFilterOptionsLoadingPromise) {
     await enterpriseFilterOptionsLoadingPromise;
     return;
@@ -933,7 +979,9 @@ async function loadEnterpriseFilterOptions() {
       params.set('country', enterpriseCountryFilter);
     }
 
-    const response = await fetch(`/api/enterprises/filters?${params.toString()}`);
+    const response = await fetch(`/api/enterprises/filters?${params.toString()}`, {
+      signal: abortController.signal
+    });
     const payload = await response.json();
 
     if (!response.ok) {
@@ -947,10 +995,16 @@ async function loadEnterpriseFilterOptions() {
   try {
     await enterpriseFilterOptionsLoadingPromise;
   } catch (error) {
+    if (error.name === 'AbortError') {
+      return;
+    }
     console.error('Error while loading company filters:', error);
     showError('Error while loading filters');
   } finally {
     enterpriseFilterOptionsLoadingPromise = null;
+    if (enterpriseFiltersAbortController === abortController) {
+      enterpriseFiltersAbortController = null;
+    }
   }
 }
 
@@ -1040,6 +1094,13 @@ async function ensureEnterpriseOptionsLoaded() {
 
 // ===== PARTNERSHIPS =====
 async function loadPartnerships() {
+  if (partnershipListAbortController) {
+    partnershipListAbortController.abort();
+  }
+
+  const abortController = new AbortController();
+  partnershipListAbortController = abortController;
+
   try {
     const params = new URLSearchParams({
       page: String(partnershipPagination.page),
@@ -1052,7 +1113,9 @@ async function loadPartnerships() {
       params.set('q', partnershipSearchQuery);
     }
 
-    const response = await fetch(`/api/partnerships?${params.toString()}`);
+    const response = await fetch(`/api/partnerships?${params.toString()}`, {
+      signal: abortController.signal
+    });
     const payload = await response.json();
 
     if (!response.ok) {
@@ -1066,8 +1129,15 @@ async function loadPartnerships() {
     }
     renderPartnerships();
   } catch (error) {
+    if (error.name === 'AbortError') {
+      return;
+    }
     console.error('Error while loading relationships:', error);
     showError('Error while loading relationships');
+  } finally {
+    if (partnershipListAbortController === abortController) {
+      partnershipListAbortController = null;
+    }
   }
 }
 
@@ -1174,35 +1244,38 @@ function renderPartnershipSubtabCounters() {
 }
 
 async function refreshPartnershipSegmentCounts() {
+  if (partnershipCountsAbortController) {
+    partnershipCountsAbortController.abort();
+  }
+
+  const abortController = new AbortController();
+  partnershipCountsAbortController = abortController;
+
   try {
-    const [pendingRes, partialRes, validatedRes, laterRes, top100Res] = await Promise.all([
-      fetch('/api/partnerships?segment=pending&page=1&limit=1'),
-      fetch('/api/partnerships?segment=partial&page=1&limit=1'),
-      fetch('/api/partnerships?segment=validated&page=1&limit=1'),
-      fetch('/api/partnerships?segment=later&page=1&limit=1'),
-      fetch('/api/partnerships?segment=top100&page=1&limit=1')
-    ]);
+    const response = await fetch('/api/partnerships/counts', {
+      signal: abortController.signal
+    });
+    const payload = await response.json();
 
-    const [pendingData, partialData, validatedData, laterData, top100Data] = await Promise.all([
-      pendingRes.json(),
-      partialRes.json(),
-      validatedRes.json(),
-      laterRes.json(),
-      top100Res.json()
-    ]);
-
-    if (!pendingRes.ok || !partialRes.ok || !validatedRes.ok || !laterRes.ok || !top100Res.ok) {
+    if (!response.ok) {
       throw new Error('Error while loading relationship counters');
     }
 
-    partnershipSegmentCounts.pending = pendingData.pagination?.total || 0;
-    partnershipSegmentCounts.partial = partialData.pagination?.total || 0;
-    partnershipSegmentCounts.validated = validatedData.pagination?.total || 0;
-    partnershipSegmentCounts.later = laterData.pagination?.total || 0;
-    partnershipSegmentCounts.top100 = top100Data.pagination?.total || 0;
+    partnershipSegmentCounts.pending = payload.pending || 0;
+    partnershipSegmentCounts.partial = payload.partial || 0;
+    partnershipSegmentCounts.validated = payload.validated || 0;
+    partnershipSegmentCounts.later = payload.later || 0;
+    partnershipSegmentCounts.top100 = payload.top100 || 0;
     renderPartnershipSubtabCounters();
   } catch (error) {
+    if (error.name === 'AbortError') {
+      return;
+    }
     console.error('Error while loading relationship counters:', error);
+  } finally {
+    if (partnershipCountsAbortController === abortController) {
+      partnershipCountsAbortController = null;
+    }
   }
 }
 

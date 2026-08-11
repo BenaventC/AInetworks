@@ -2,49 +2,42 @@ name,competitor,count
 Nvidia,AMD,1
 Nvidia,Intel,1
 Nvidia,Google,1
-Nvidia,Broadcom,1
-Nvidia,Qualcomm,1
+Nvidia,Cerebras,1
+Nvidia,Huawei,1
 Google,Microsoft,1
 Google,OpenAI,1
-Google,Perplexity AI,1
 Google,Amazon,1
 Google,ByteDance,1
+Google,Meta,1
 Google,Netflix,1
 Google,Apple,1
 Google,Tesla,1
+Google,Baidu,1
+Apple,Google,1
+Apple,Microsoft,1
+Apple,Samsung,1
+Apple,Xiaomi,1
+Apple,Huawei,1
+Apple,Dell,1
+Apple,Lenovo,1
+Apple,HP,1
+Apple,Spotify,1
+Apple,Netflix,1
+Apple,Amazon,1
 Alphabet,Microsoft,1
 Alphabet,Amazon,1
 Alphabet,Apple,1
 Alphabet,Meta,1
-Alphabet,Oracle,1
-Alphabet,OpenAI,1
-Alphabet,Anthropic,1
 Alphabet,ByteDance,1
 Alphabet,Tesla,1
-Alphabet,Baidu,1
-Apple,Google,1
-Apple,Microsoft,1
-Apple,Samsung,1
-Apple,Amazon,1
-Apple,Xiaomi,1
-Apple,Huawei,1
-Apple,Oppo,1
-Apple,Vivo,1
-Apple,Lenovo,1
-Apple,HP,1
-Apple,Dell,1
-Apple,Spotify,1
-Apple,Netflix,1
-Apple,Amazon Prime Video,1
-Apple,Disney+,1
-Apple,Meta,1
-Apple,OpenAI,1
+Alphabet,Alibaba,1
 Microsoft,Amazon,1
 Microsoft,Google,1
 Microsoft,Meta,1
 Microsoft,Apple,1
 Microsoft,Sony,1
 Microsoft,Oracle,1
+Microsoft,Open source (Libre Office,1
 Amazon,Walmart,1
 Amazon,Temu,1
 Amazon,Shein,1
@@ -55,6 +48,9 @@ Amazon,Netflix,1
 Amazon,Disney,1
 Amazon,Apple,1
 Amazon,Meta,1
+TSMC,Samsung Electronics,1
+TSMC,SMIC,1
+TSMC,Intel,1
 Broadcom,Nvidia,1
 Broadcom,Qualcomm,1
 Broadcom,Intel,1
@@ -150,14 +146,15 @@ YouTube,Meta,1
 YouTube,Twitch,1
 YouTube,Vimeo,1
 YouTube,Deezer,1
+ASML,Nikon,1
+ASML,Canon,1
+ASML,SMEE,1
 Palantir,Lockheed Martin,1
 Palantir,Raytheon,1
 Palantir,Booz Allen Hamilton,1
 Palantir,ChapsVision,1
-Palantir,Snowflake,1
-Palantir,Databricks,1
-Palantir,Microsoft,1
-Palantir,Amazon,1
+Palantir,Anduril,1
+Palantir,Thales,1
 Alibaba,Pinduoduo,1
 Alibaba,JD.com,1
 Alibaba,ByteDance,1
@@ -202,6 +199,9 @@ Qualcomm,Nvidia,1
 Qualcomm,Apple Silicon,1
 Qualcomm,Samsung Electronics,1
 Qualcomm,Intel,1
+Qualcomm,UNISOC,1
+Qualcomm,AMD,1
+Qualcomm,Semiconductors,1
 Shopify,Salesforce,1
 Shopify,Adobe,1
 Shopify,Woocommerce,1
@@ -221,6 +221,10 @@ OpenAI,Alibaba Cloud,1
 OpenAI,Tencent,1
 OpenAI,Baidu,1
 OpenAI,ByteDance,1
+BlackRock,The Vanguard Group,1
+BlackRock,State Street Global Advisors,1
+BlackRock,Fidelity Investments,1
+BlackRock,Brookfield Asset Management,1
 Waymo,Tesla,1
 Waymo,Zoox,1
 Waymo,Cruise,1
@@ -246,16 +250,33 @@ Ant Group,Tencent,1
 Ant Group,Visa,1
 Ant Group,Mastercard,1
 Ant Group,Stripe,1
+Thomson Reuters,Bloomberg,1
+Thomson Reuters,Wolters Kluwer,1
+Thomson Reuters,LexisNexis,1
+Thomson Reuters,Harvey AI,1
+Thomson Reuters,Luminance,1
+Thomson Reuters,Dow Jones,1
+Thomson Reuters,S&P Global,1
 Zhipu AI,Moonshot AI,1
 Zhipu AI,DeepSeek,1
 Zhipu AI,MiniMax,1
 Zhipu AI,OpenAI,1
 Zhipu AI,Anthropic,1
+Anduril Industries,Lockheed Martin,1
+Anduril Industries,Raytheon,1
+Anduril Industries,Boeing,1
+Anduril Industries,Northrop Grumman,1
+Anduril Industries,Shield AI,1
+Anduril Industries,Helsing,1
+Anduril Industries,Mach Industries,1
+Anduril Industries,Skydio,1
+Anduril Industries,Teal Drones,1
+Anduril Industries,Quantum Systems,1
 DeepSeek,OpenAI,1
 DeepSeek,Anthropic,1
 DeepSeek,Moonshot AI,1
 DeepSeek,Zhipu AI,1
-DeepSeek,Alibaba.,1
+DeepSeek,Alibaba,1
 Anysphere,DeepMind,1
 Anysphere,Microsoft,1
 Anysphere,Anthropic,1
@@ -336,11 +357,25 @@ Cerebras,CoreWeave,1
 Helsing,Anduril,1
 Helsing,Palantir,1
 Helsing,Harmattan AI,1
+Kling AI,OpenAI,1
+Kling AI,DeepMind,1
+Kling AI,Runway,1
+Kling AI,Luma AI,1
+Kling AI,BytesDance,1
+Kling AI,Jimeng,1
+Kling AI,Hailuo AI,1
+Kling AI,MiniMax,1
 Dynatrace,Datadog,1
 Dynatrace,Splunk,1
 Dynatrace,New Relic,1
 Dynatrace,Elastic,1
 Dynatrace,Cisco,1
+Sierra,Decagon,1
+Sierra,Cresta AI,1
+Sierra,Poly AI,1
+Sierra,Cognugy,1
+Sierra,Parloa,1
+Sierra,Ada Support,1
 Langfuse,LangSmith.Arize Phoenix,1
 Langfuse,Trulens,1
 Langfuse,WandB Prompts,1
@@ -444,9 +479,22 @@ Wayve,Cruise,1
 Wayve,Mobileye,1
 Wayve,Bosch,1
 Wayve,Pony.AI,1
+Kraken Technologies,Salesforce,1
+Kraken Technologies,Oracle,1
+Kraken Technologies,SAP,1
+Kraken Technologies,Arcadia,1
+Kraken Technologies,gridX,1
+Kraken Technologies,Kaluza,1
 Tempus AI,Guardant Health,1
 Tempus AI,Natera,1
 Tempus AI,Roche,1
+Glean Technologies,Heptabase,1
+Glean Technologies,Notion,1
+Glean Technologies,ClickUp,1
+Glean Technologies,Microsoft,1
+Glean Technologies,Elasticsearch,1
+Glean Technologies,Coveo,1
+Glean Technologies,Dust / Gumloop,1
 SentinelOne,CrowdStrike Falcon,1
 SentinelOne,Microsoft,1
 SentinelOne,Cortex XDR,1
@@ -492,6 +540,15 @@ Suno AI,Saunoto,1
 Suno AI,Mureka,1
 Suno AI,AIVA,1
 Suno AI,Beatoven.ai,1
+Runway,Luma AI,1
+Runway,Pika Labs,1
+Runway,World Labs,1
+Runway,OpenAI,1
+Runway,Adobe,1
+Runway,Kling AI,1
+Runway,Hailuo AI,1
+Runway,MiniMax,1
+Runway,Vidu,1
 Abridge,Microsoft,1
 Abridge,Ambience Healthcare,1
 Abridge,DeepScribe,1
@@ -503,12 +560,28 @@ Ineffable Intelligence,AMI Labs,1
 World Labs,AMI Labs,1
 World Labs,DeepMind,1
 World Labs,Odyssey,1
+Recursive Superintelligence,AMI Labs,1
+Recursive Superintelligence,Ineffable Intelligence,1
+Recursive Superintelligence,SSI,1
+Recursive Superintelligence,Sakana AI,1
+Recursive Superintelligence,Ricursive Intelligence,1
+Recursive Superintelligence,Mirendil,1
+Recursive Superintelligence,OpenAI,1
+Recursive Superintelligence,DeepMind,1
+Recursive Superintelligence,Anthropic,1
 Hugging Face,Microsoft,1
 Hugging Face,Replicate,1
 Hugging Face,TogetherAI,1
 Hugging Face,Fireworks AI,1
 Hugging Face,civitai,1
 Hugging Face,Kaggle,1
+Decagon,Sierra,1
+Decagon,Ada Support,1
+Decagon,Salesforce,1
+Decagon,POly AI,1
+Decagon,Zendesk AI,1
+Decagon,Bland AI,1
+Decagon,Retell AI,1
 Fermi Inc.,Digital Realty Trust,1
 Fermi Inc.,Equinix,1
 Fermi Inc.,Constellation Energy,1
@@ -517,6 +590,12 @@ Synthesia,OpenAI,1
 Synthesia,Runway,1
 Synthesia,Hour One,1
 Synthesia,Colossyan,1
+Luma AI,Runway,1
+Luma AI,OpenAI(Sora,1
+Luma AI,DeepMind,1
+Luma AI,Kiri Engine,1
+Luma AI,CSM.ai,1
+Luma AI,Kling AI,1
 Dataiku,C3 AI,1
 Dataiku,Palentir,1
 Dataiku,Alterx,1
@@ -557,6 +636,11 @@ Black Forest Labs,Zhipu AI,1
 Black Forest Labs,Alibaba,1
 Black Forest Labs,Tencent,1
 Black Forest Labs,ByteDance,1
+Black Forest Labs,Ideogram AI,1
+Black Forest Labs,Recraft AI,1
+Black Forest Labs,Runway,1
+Black Forest Labs,Luma AI,1
+Black Forest Labs,MiniMax,1
 Recursion Pharmaceuticals,Schrödinger,1
 Recursion Pharmaceuticals,Insilico Medicine,1
 Recursion Pharmaceuticals,Exscientia,1
@@ -573,9 +657,10 @@ SoundHound AI,RAsa,1
 SoundHound AI,Cogngy,1
 SoundHound AI,Kore.AI,1
 SoundHound AI,Eleven Labs,1
-SoundHound AI,Microsoft,1
 SoundHound AI,Google Cloud,1
 SoundHound AI,AWS,1
+SoundHound AI,Microsoft,1
+SoundHound AI,Talkdesk,1
 Upstart,LendingClub,1
 Upstart,Prosper,1
 Upstart,SoFi,1
@@ -590,12 +675,27 @@ Sakana AI,Cognition AI,1
 Sakana AI,Poolside,1
 Sakana AI,Hugging Face,1
 Sakana AI,Cohere,1
+Sakana AI,Recursive Superintelligence,1
+Sakana AI,Mirendil,1
+Sakana AI,Ricursive Intelligence,1
+Sakana AI,FARS,1
 ManoMano,Leroy Merlin,1
 ManoMano,Groupe Kingfisher,1
 ManoMano,Bricoman,1
 ManoMano,Bricoprivé,1
 ManoMano,Bricozor,1
 ManoMano,Plomberie-Pro,1
+EliseAI,Funnel Leasing,1
+EliseAI,RealPage,1
+EliseAI,BetterBot,1
+EliseAI,ResiDesk,1
+EliseAI,Entrata,1
+EliseAI,DoorLoop,1
+EliseAI,Hyro AI,1
+EliseAI,Flexbone AI,1
+EliseAI,Assort Health,1
+EliseAI,Notable,1
+EliseAI,Phreesia,1
 SPACE42,Inmarsat,1
 SPACE42,SES Satellites,1
 SPACE42,Palantir,1
@@ -613,6 +713,13 @@ Kaola,VIP.com,1
 Kaola,Tmall Global,1
 Kaola,Xiaohongshu,1
 Kaola,ByteDance,1
+5C Group,CoreWeave,1
+5C Group,Lambda Labs,1
+5C Group,Nebius,1
+5C Group,Crusoe Energy,1
+5C Group,AWS,1
+5C Group,Microsoft,1
+5C Group,Google Cloud,1
 Pasqal,Infleqtion,1
 Pasqal,Atom Computing,1
 Pasqal,Quantinuum,1
@@ -622,6 +729,12 @@ Pasqal,Google,1
 Semrush,Ahrefs,1
 Semrush,similarweb,1
 Semrush,SE ranking,1
+Semrush,HubSpot AEO,1
+Semrush,Rankfender,1
+Semrush,xSeek,1
+Semrush,Surfer SEO,1
+Semrush,MarketMuse,1
+Semrush,Blazy AI,1
 WeRide,Pony.ai,1
 WeRide,Baidu,1
 WeRide,Waymo,1
@@ -635,6 +748,12 @@ Weibo,Tencent,1
 IQM Quantum Computers,Rigetti Computing,1
 IQM Quantum Computers,Quantinuum,1
 IQM Quantum Computers,Pasqal,1
+Domyn,Mistral AI,1
+Domyn,Helsing AI,1
+Domyn,Sierra AI,1
+Domyn,Rasa,1
+Domyn,Deppseek,1
+Domyn,Alibaba,1
 Job&Talent,MisterTempo,1
 Job&Talent,GoJob,1
 Job&Talent,Plany,1
@@ -644,6 +763,10 @@ Job&Talent,Manpower,1
 Job&Talent,Randstad,1
 Job&Talent,StaffMe,1
 Job&Talent,Brigad,1
+Harvey AI,Luminance,1
+Harvey AI,Noxtua,1
+Harvey AI,Thonson Reuteur,1
+Harvey AI,Lawx,1
 Oxford Nanopore Technologies,Pacific Biosciences,1
 Oxford Nanopore Technologies,MGI Tech / Complete Genomics,1
 Oxford Nanopore Technologies,Singular Genomics,1
@@ -714,21 +837,19 @@ Owkin,Tribun Health,1
 Stability AI,Midjourney,1
 Stability AI,BlackForect Labs,1
 Stability AI,OpenAI,1
-Black Forest AI GmbH,Midjourney,1
-Black Forest AI GmbH,Stability AI,1
-Black Forest AI GmbH,Ideogram AI,1
-Black Forest AI GmbH,OpenAI,1
-Black Forest AI GmbH,Recraft AI,1
-Black Forest AI GmbH,Runway,1
-Black Forest AI GmbH,Luma AI,1
-Black Forest AI GmbH,Kuaishou,1
-Black Forest AI GmbH,MiniMax,1
 Franka Emika,Agile Robots,1
 Franka Emika,KUKA,1
 Franka Emika,Kinova,1
 Franka Emika,Universal Robots,1
 Franka Emika,Doosan Robotics,1
 Franka Emika,Fanuc,1
+Dash0,Datadog,1
+Dash0,New Relic,1
+Dash0,Dynatrace,1
+Dash0,Middleware,1
+Dash0,Better Stack,1
+Dash0,Resolve AI,1
+Dash0,incident.io,1
 Glean,Guru,1
 Glean,Amazon,1
 Glean,Coveo,1
@@ -741,6 +862,17 @@ PolyAI,Retell AI,1
 PolyAI,Parloa,1
 PolyAI,IBM,1
 PolyAI,Google Cloud,1
+Run:ai,dstack,1
+Run:ai,ClearML,1
+Run:ai,SkyPilot,1
+Run:ai,Kubeflow.,1
+Graphcore,Nvidia,1
+Graphcore,Google Cloud,1
+Graphcore,AWS,1
+Graphcore,Meta,1
+Graphcore,Groq,1
+Graphcore,Cerebras,1
+Graphcore,Tenstorrent,1
 PhotoRoom,Pixelcut,1
 PhotoRoom,Playyy,1
 PhotoRoom,WizStudio,1
@@ -750,6 +882,14 @@ PhotoRoom,Pebblely,1
 PhotoRoom,Canva,1
 PhotoRoom,Adobe,1
 PhotoRoom,Firefly,1
+Luminance,Harvey AI,1
+Luminance,Noxtua,1
+Luminance,Jus Mundi,1
+Luminance,Lawx,1
+Cradle,EvolutionaryScale,1
+Cradle,Generate Biomedicines,1
+Cradle,Nimbus Therapeutics,1
+Cradle,DeepMind,1
 Dust,Glean,1
 Dust,Twin,1
 Dust,Manus,1
@@ -760,14 +900,31 @@ Corti,Huma,1
 Corti,MedeAnalytics,1
 Corti,Suki AI,1
 Corti,Nabla,1
+Kyutai,Lalal.ai,1
+Kyutai,Audimee,1
+Kyutai,Ace Studio,1
+Kyutai,Controlla.xyz,1
+Kyutai,Lalals.com,1
 LightOn,Yseop,1
 LightOn,Mistral AI,1
 LightOn,Dust,1
 LightOn,Pryon,1
+Appen,Scale AI,1
+Appen,Labelbox,1
+Appen,Snorkel AI,1
+Appen,Dataloop,1
+Appen,Centaur Labs,1
+Appen,Isahit,1
 Gleamer,Aidoc,1
 Gleamer,RapidAI,1
 Gleamer,Rad AI,1
 Gleamer,Annalise.ai,1
+4.screen,Telenav,1
+4.screen,Cerence,1
+4.screen,Connected Travel,1
+4.screen,Here technologies,1
+4.screen,Google,1
+4.screen,Apple,1
 Prophesee,Samsung Electronics,1
 Prophesee,OmniVision Technologies,1
 Prophesee,Sony,1
@@ -788,6 +945,21 @@ Yseop,grandes CRO,1
 Yseop,Cognizant,1
 Nabla,Abridge,1
 Nabla,Microsoft & Oracle,1
+AMC Robotics Corporation,Boston Dynamics,1
+AMC Robotics Corporation,Unitree Robotics,1
+AMC Robotics Corporation,Symbotic,1
+Quantum Diamonds,KLA Corporation,1
+Quantum Diamonds,Applied Materials,1
+Quantum Diamonds,ASML,1
+Quantum Diamonds,Quantum Design,1
+Quantum Diamonds,NVision Imaging,1
+Multiverse Computing,SandboxAQ,1
+Multiverse Computing,Zapata Computing,1
+Multiverse Computing,QC Ware,1
+Multiverse Computing,Neural Magic,1
+Multiverse Computing,Deci AI,1
+Multiverse Computing,Pasqal,1
+Multiverse Computing,IQM,1
 Volta medical,Biosense Webster,1
 Volta medical,Johnson & Johnson,1
 Volta medical,Medtronic,1
@@ -798,21 +970,122 @@ OLLAMA,LM studio,1
 OLLAMA,LangChain,1
 OLLAMA,LLAMAIndex,1
 OLLAMA,Huggingface,1
-4.screen,Telenav,1
-4.screen,Cerence,1
-4.screen,Connected Travel,1
+Paige AI,PathAI,1
+Paige AI,Ibex Medical Analytics,1
+Paige AI,Proscia,1
+Arago,Lightmatter,1
+Arago,Luminous Computing,1
+Arago,Rain AI,1
+Arago,Groq,1
+Arago,Nvidia,1
+Arago,AMD,1
+Bodyguard.ai,Tisane Labs,1
+Bodyguard.ai,Besedo,1
+Bodyguard.ai,Two Hat,1
+Bodyguard.ai,OpenAI Moderation API,1
+Art Recognition,Startbahn,1
+Art Recognition,Verisart,1
+Art Recognition,InsightART.,1
+Art Recognition,Hephaestus Analytical,1
+DarwinAI,Landing AI,1
+DarwinAI,Edge Impulse,1
+DarwinAI,Instrumental,1
+DarwinAI,Neural Magic,1
+DarwinAI,Deci AI,1
 Oriole Networks,Cisco,1
 Oriole Networks,Nvidia,1
 Oriole Networks,Ciena,1
 Colossyan,Synthesia,1
 Colossyan,HeyGen,1
 Colossyan,DeepBrain AI,1
-Colossyan,Runway.,1
+Colossyan,Runway,1
 Doubleword,Baseten Technologies,1
 Doubleword,Fireworks AI,1
 Doubleword,Liquid AI,1
 Doubleword,Scale AI,1
 Doubleword,Comet,1
+Zapia AI,Luzia,1
+Zapia AI,Memorae AI,1
+Zapia AI,Notis,1
+Zapia AI,Poke,1
+Zapia AI,The Librarian,1
+Teraki,Hailo,1
+Teraki,Blaize,1
+Teraki,Ambarella,1
+Teraki,Deepen AI,1
+Teraki,Scale AI,1
+Teraki,Numurus,1
+Teraki,Oxa,1
+Teraki,Applied Intuition,1
+BenevolentAI,Exscientia,1
 EbenBuild,Dassault Systèmes,1
 EbenBuild,InSilicoTrials,1
 EbenBuild,Virtonomy,1
+Alpine Eagle,Anduril Industries,1
+Alpine Eagle,Helsing AI,1
+Alpine Eagle,Epirus,1
+Alpine Eagle,D-Fend Solutions,1
+Alpine Eagle,Dedrone,1
+Altavo GmbH,Atos Medical,1
+Altavo GmbH,Lip Reading systems,1
+Amberscript,Happy Scribe,1
+Amberscript,Sonix,1
+Amberscript,Trint,1
+Amberscript,tl,1
+Amberscript,dv,1
+Amberscript,Otter.ai,1
+Amberscript,Transkriptor,1
+Amberscript,GoTranscript,1
+Quantistry,PhaseCraft,1
+Quantistry,SandboxAQ,1
+Quantistry,Pasqal,1
+Ameba,Decagon AI & Sierra AI,1
+Ameba,Blue Yonder,1
+Ameba,Manhattan Associates,1
+Ameba,Sourceful,1
+Ameba,Zencargo,1
+20face,brighter AI,1
+20face,BioID,1
+20face,iProov,1
+20face,PrivateID,1
+20face,Oosto,1
+20face,Incode Technologies,1
+20face,Thales Group,1
+20face,Cognitec Systems,1
+Lawx,Harvey AI,1
+Lawx,Noxtua,1
+Lawx,Datev,1
+Lawx,LexisNexis,1
+Lawx,Wolters Kluwer,1
+Lawx,Septeo,1
+Lawx,Luminance,1
+Lawx,Definely,1
+3ive AI,Dassault Systèmes,1
+3ive AI,Siemens Digital Industries Software,1
+3ive AI,PTC,1
+3ive AI,Simus Systems,1
+3ive AI,CADENAS,1
+Dexter,Workato,1
+Dexter,Automation Anywhere,1
+Dexter,Coupa Software,1
+PharmAI,Isomorphic Labs,1
+PharmAI,Chai Discovery,1
+PharmAI,Xaira Therapeutics,1
+Accentize GmbH,iZotope,1
+Accentize GmbH,Goyo AI,1
+Accentize GmbH,Waves Audio,1
+Accentize GmbH,Adobe,1
+AI Medical Technology,Skin Analytics,1
+AI Medical Technology,DermaSensor,1
+AI Medical Technology,MetaOptima / DermEngine,1
+AI Medical Technology,Miiskin,1
+AI Medical Technology,SkinIO,1
+HughGrants,Grantify,1
+HughGrants,Egrants,1
+HughGrants,OpenGrants,1
+Skylab,Picterra,1
+Skylab,Orbify,1
+Prognostix AB,SKF Ensemble,1
+Prognostix AB,Ambyint,1
+Prognostix AB,SparkCognition,1
+Prognostix AB,Uptake,1

@@ -1,45 +1,67 @@
 actor,status,is_investor,is_isolated_no_shared_competitor,kept_in_matrix
 SoftBank Group,excluded_investor,True,False,False
-4.screen,excluded_no_shared_competitor,False,True,False
-DarwinAI,excluded_no_shared_competitor,False,True,False
+20face,excluded_no_shared_competitor,False,True,False
+AI Medical Technology,excluded_no_shared_competitor,False,True,False
+ASML,excluded_no_shared_competitor,False,True,False
+Altavo GmbH,excluded_no_shared_competitor,False,True,False
+Amberscript,excluded_no_shared_competitor,False,True,False
+Ameba,excluded_no_shared_competitor,False,True,False
+Art Recognition,excluded_no_shared_competitor,False,True,False
+BlackRock,excluded_no_shared_competitor,False,True,False
+Bodyguard.ai,excluded_no_shared_competitor,False,True,False
 DentalMonitoring,excluded_no_shared_competitor,False,True,False
 Dust,excluded_no_shared_competitor,False,True,False
-EbenBuild,excluded_no_shared_competitor,False,True,False
+EliseAI,excluded_no_shared_competitor,False,True,False
 Franka Emika,excluded_no_shared_competitor,False,True,False
 Gleamer,excluded_no_shared_competitor,False,True,False
-Harvey,excluded_no_shared_competitor,False,True,False
+HughGrants,excluded_no_shared_competitor,False,True,False
 Job&Talent,excluded_no_shared_competitor,False,True,False
+Kyutai,excluded_no_shared_competitor,False,True,False
 Langfuse,excluded_no_shared_competitor,False,True,False
 ManoMano,excluded_no_shared_competitor,False,True,False
 Microchip Technology Inc,excluded_no_shared_competitor,False,True,False
 OLLAMA,excluded_no_shared_competitor,False,True,False
 Oxford Nanopore Technologies,excluded_no_shared_competitor,False,True,False
-Scale AI,excluded_no_shared_competitor,False,True,False
+Paige AI,excluded_no_shared_competitor,False,True,False
+Prognostix AB,excluded_no_shared_competitor,False,True,False
+Quantum Diamonds,excluded_no_shared_competitor,False,True,False
+Run:ai,excluded_no_shared_competitor,False,True,False
 Semrush,excluded_no_shared_competitor,False,True,False
+Skylab,excluded_no_shared_competitor,False,True,False
 Tempus AI,excluded_no_shared_competitor,False,True,False
 Upstart,excluded_no_shared_competitor,False,True,False
 Volta medical,excluded_no_shared_competitor,False,True,False
 Y combinator,excluded_no_shared_competitor,False,True,False
+Zapia AI,excluded_no_shared_competitor,False,True,False
 01.AI,kept,False,False,True
 1X Technologies,kept,False,False,True
+3ive AI,kept,False,False,True
+4.screen,kept,False,False,True
 4Paradigm,kept,False,False,True
+5C Group,kept,False,False,True
+AMC Robotics Corporation,kept,False,False,True
 AMD,kept,False,False,True
 AMI,kept,False,False,True
 ARM Holdings,kept,False,False,True
 AWS,kept,False,False,True
 Abridge,kept,False,False,True
+Accentize GmbH,kept,False,False,True
 Adobe,kept,False,False,True
 Aleph Alpha,kept,False,False,True
 Alibaba,kept,False,False,True
 Alphabet,kept,False,False,True
+Alpine Eagle,kept,False,False,True
 Amazon,kept,False,False,True
 Ambiance Healthcare,kept,False,False,True
+Anduril Industries,kept,False,False,True
 Ant Group,kept,False,False,True
 Anthropic,kept,False,False,True
 Anysphere,kept,False,False,True
+Appen,kept,False,False,True
 Apple,kept,False,False,True
+Arago,kept,False,False,True
 Aurora Innovation,kept,False,False,True
-Black Forest AI GmbH,kept,False,False,True
+BenevolentAI,kept,False,False,True
 Black Forest Labs,kept,False,False,True
 Boston Dynamics,kept,False,False,True
 Broadcom,kept,False,False,True
@@ -58,21 +80,32 @@ Colossyan,kept,False,False,True
 Comand AI,kept,False,False,True
 ContentSquare,kept,False,False,True
 Corti,kept,False,False,True
+Cradle,kept,False,False,True
 Crusoe,kept,False,False,True
+DarwinAI,kept,False,False,True
+Dash0,kept,False,False,True
 Databricks,kept,False,False,True
 Dataiku,kept,False,False,True
+Decagon,kept,False,False,True
 DeepL,kept,False,False,True
 DeepSeek,kept,False,False,True
+Dexter,kept,False,False,True
 Doctolib,kept,False,False,True
+Domyn,kept,False,False,True
 Doubleword,kept,False,False,True
 Dynatrace,kept,False,False,True
+EbenBuild,kept,False,False,True
 Fermi Inc.,kept,False,False,True
 Figure AI,kept,False,False,True
 GitHub,kept,False,False,True
 Glean,kept,False,False,True
+Glean Technologies,kept,False,False,True
 Google,kept,False,False,True
+Graphcore,kept,False,False,True
 Groq,kept,False,False,True
 Harmattan AI,kept,False,False,True
+Harvey,kept,False,False,True
+Harvey AI,kept,False,False,True
 Helsing,kept,False,False,True
 Hugging Face,kept,False,False,True
 IBM,kept,False,False,True
@@ -80,9 +113,14 @@ IQM Quantum Computers,kept,False,False,True
 Ineffable Intelligence,kept,False,False,True
 Intel,kept,False,False,True
 Kaola,kept,False,False,True
+Kling AI,kept,False,False,True
+Kraken Technologies,kept,False,False,True
 Kuaishou,kept,False,False,True
+Lawx,kept,False,False,True
 LightOn,kept,False,False,True
 Lightspeed,kept,False,False,True
+Luma AI,kept,False,False,True
+Luminance,kept,False,False,True
 Meta,kept,False,False,True
 Microsoft,kept,False,False,True
 "Midjourney, Inc.",kept,False,False,True
@@ -90,6 +128,7 @@ MiniMax,kept,False,False,True
 Mistral AI,kept,False,False,True
 Mobileye,kept,False,False,True
 Moonshot AI,kept,False,False,True
+Multiverse Computing,kept,False,False,True
 Nabla,kept,False,False,True
 Nscale,kept,False,False,True
 Nvidia,kept,False,False,True
@@ -100,6 +139,7 @@ Owkin,kept,False,False,True
 Palantir,kept,False,False,True
 Pasqal,kept,False,False,True
 Perplexity,kept,False,False,True
+PharmAI,kept,False,False,True
 PhotoRoom,kept,False,False,True
 Physical Intelligence,kept,False,False,True
 PolyAI,kept,False,False,True
@@ -107,20 +147,28 @@ Pony AI,kept,False,False,True
 Presight AI,kept,False,False,True
 Prophesee,kept,False,False,True
 Qualcomm,kept,False,False,True
+Quantistry,kept,False,False,True
 Recursion Pharmaceuticals,kept,False,False,True
+Recursive Superintelligence,kept,False,False,True
+Runway,kept,False,False,True
 SPACE42,kept,False,False,True
 Sakana AI,kept,False,False,True
 Salesforce,kept,False,False,True
 Samsung Electronics,kept,False,False,True
+Scale AI,kept,False,False,True
 SentinelOne,kept,False,False,True
 Shopify,kept,False,False,True
+Sierra,kept,False,False,True
 Snowflake,kept,False,False,True
 SoundHound AI,kept,False,False,True
 SpaceX,kept,False,False,True
 Stability AI,kept,False,False,True
 Suno AI,kept,False,False,True
 Synthesia,kept,False,False,True
+TSMC,kept,False,False,True
+Teraki,kept,False,False,True
 Tesla,kept,False,False,True
+Thomson Reuters,kept,False,False,True
 UiPath,kept,False,False,True
 Waymo,kept,False,False,True
 Wayve,kept,False,False,True
