@@ -14,7 +14,6 @@ Captain AI,excluded_no_shared_competitor,False,True,False
 DentalMonitoring,excluded_no_shared_competitor,False,True,False
 Dust,excluded_no_shared_competitor,False,True,False
 EliseAI,excluded_no_shared_competitor,False,True,False
-Franka Emika,excluded_no_shared_competitor,False,True,False
 Gleamer,excluded_no_shared_competitor,False,True,False
 HughGrants,excluded_no_shared_competitor,False,True,False
 Job&Talent,excluded_no_shared_competitor,False,True,False
@@ -32,6 +31,7 @@ Semrush,excluded_no_shared_competitor,False,True,False
 Shift Technology,excluded_no_shared_competitor,False,True,False
 Skylab,excluded_no_shared_competitor,False,True,False
 Tempus AI,excluded_no_shared_competitor,False,True,False
+Ubble,excluded_no_shared_competitor,False,True,False
 Upstart,excluded_no_shared_competitor,False,True,False
 Volta medical,excluded_no_shared_competitor,False,True,False
 Y combinator,excluded_no_shared_competitor,False,True,False
@@ -102,12 +102,14 @@ EbenBuild,kept,False,False,True
 Einride,kept,False,False,True
 Fermi Inc.,kept,False,False,True
 Figure AI,kept,False,False,True
+Franka Emika,kept,False,False,True
 GitHub,kept,False,False,True
 Glean,kept,False,False,True
 Glean Technologies,kept,False,False,True
 Google,kept,False,False,True
 Graphcore,kept,False,False,True
 Groq,kept,False,False,True
+H Company,kept,False,False,True
 Harmattan AI,kept,False,False,True
 Harvey,kept,False,False,True
 Harvey AI,kept,False,False,True
@@ -115,6 +117,7 @@ Helsing,kept,False,False,True
 Hugging Face,kept,False,False,True
 IBM,kept,False,False,True
 IQM Quantum Computers,kept,False,False,True
+Indium,kept,False,False,True
 Ineffable Intelligence,kept,False,False,True
 Innodata,kept,False,False,True
 Intel,kept,False,False,True
@@ -157,6 +160,7 @@ Qualcomm,kept,False,False,True
 Quantistry,kept,False,False,True
 Recursion Pharmaceuticals,kept,False,False,True
 Recursive Superintelligence,kept,False,False,True
+RobCo GmbH,kept,False,False,True
 Runway,kept,False,False,True
 SPACE42,kept,False,False,True
 Sakana AI,kept,False,False,True

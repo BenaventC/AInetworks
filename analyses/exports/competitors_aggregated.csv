@@ -833,6 +833,10 @@ WhiteFiber,AWS,1
 01.AI,Tencent,1
 01.AI,Meta,1
 01.AI,MistralAI,1
+H Company,Anthropic,1
+H Company,Open1I,1
+H Company,UiPath,1
+H Company,Mistral AI,1
 Owkin,Isomorphic Labs,1
 Owkin,Exscientia,1
 Owkin,Recursion Pharmaceuticals,1
@@ -856,7 +860,7 @@ Shift Technology,Akur8,1
 4Paradigm,Alibaba Cloud,1
 4Paradigm,Tencent Cloud,1
 Stability AI,Midjourney,1
-Stability AI,BlackForect Labs,1
+Stability AI,BlackForest Labs,1
 Stability AI,OpenAI,1
 Franka Emika,Agile Robots,1
 Franka Emika,KUKA,1
@@ -894,6 +898,13 @@ Graphcore,Meta,1
 Graphcore,Groq,1
 Graphcore,Cerebras,1
 Graphcore,Tenstorrent,1
+RobCo GmbH,Neura Robotics,1
+RobCo GmbH,Orangewood Labs,1
+RobCo GmbH,Sereact,1
+RobCo GmbH,Augmentus,1
+RobCo GmbH,Universal Robots,1
+RobCo GmbH,Franka Robotics,1
+RobCo GmbH,Agile Robots,1
 PhotoRoom,Pixelcut,1
 PhotoRoom,Playyy,1
 PhotoRoom,WizStudio,1
@@ -917,9 +928,16 @@ Kandou AI,Marvell Technology,1
 Kandou AI,Alphawave Semi,1
 Kandou AI,Rambus,1
 Dust,Glean,1
-Dust,Twin,1
+Dust,TWIN,1
 Dust,Manus,1
 Dust,Metaflow AI,1
+Indium,Happiest Minds Technologies,1
+Indium,Persistent Systems,1
+Indium,LatentView Analytics,1
+Indium,Coforge,1
+Indium,Fractal Analytics,1
+Indium,Cognizant,1
+Indium,Infosys Accenture,1
 Corti,Microsoft,1
 Corti,AWS,1
 Corti,Huma,1
@@ -1018,6 +1036,10 @@ DarwinAI,Edge Impulse,1
 DarwinAI,Instrumental,1
 DarwinAI,Neural Magic,1
 DarwinAI,Deci AI,1
+Ubble,Yoti,1
+Ubble,Onfido,1
+Ubble,Veriff,1
+Ubble,IDnow,1
 Oriole Networks,Cisco,1
 Oriole Networks,Nvidia,1
 Oriole Networks,Ciena,1

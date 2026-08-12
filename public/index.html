@@ -24,7 +24,9 @@
 
     <nav class="tabs">
       <button class="tab-btn active" data-tab="enterprises">Companies</button>
+      <button class="tab-btn" data-tab="investors">Investors</button>
       <button class="tab-btn" data-tab="partnerships">Relationships</button>
+      <button class="tab-btn" id="explorerBtn" title="Open Data Explorer in a new tab">📊 Data Explorer</button>
     </nav>
 
     <!-- ===== COMPANIES TAB ===== -->
@@ -282,6 +284,203 @@
       </div>
 
       <div id="enterprisePagination" class="pagination-container"></div>
+    </section>
+
+    <!-- ===== INVESTORS TAB ===== -->
+    <section id="investors" class="tab-content">
+      <div class="section-header">
+        <h2>Investor Management</h2>
+        <button id="addInvestorBtn" class="btn btn-primary">+ Add investor</button>
+      </div>
+
+      <!-- Investor Form -->
+      <div id="investorForm" class="form-container hidden">
+        <h3 id="investorFormTitle">Edit Investor</h3>
+        <form id="investorInputForm">
+          <input type="hidden" id="invId">
+          <fieldset class="form-section">
+            <legend>Identity</legend>
+            <div class="form-group">
+              <label for="invName">Name *</label>
+              <input type="text" id="invName" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="invInvestorType">Investor type</label>
+                <select id="invInvestorType">
+                  <option value="">Not specified</option>
+                  <optgroup label="Fonds privés">
+                    <option value="Venture Capital">Venture Capital</option>
+                    <option value="Private Equity">Private Equity</option>
+                    <option value="Growth Equity">Growth Equity</option>
+                    <option value="Hedge Fund">Hedge Fund</option>
+                    <option value="Fonds de fonds">Fonds de fonds (Fund of Funds)</option>
+                  </optgroup>
+                  <optgroup label="Fonds institutionnels">
+                    <option value="Fonds de pension">Fonds de pension</option>
+                    <option value="Fonds souverain">Fonds souverain</option>
+                    <option value="Fonds public">Fonds public / Organisme d'état</option>
+                    <option value="Fonds de dotation">Fonds de dotation (Endowment)</option>
+                  </optgroup>
+                  <optgroup label="Banques & Finance">
+                    <option value="Banque d'investissement">Banque d'investissement</option>
+                    <option value="Gestionnaire d'actifs">Gestionnaire d'actifs</option>
+                    <option value="Banque de développement">Banque de développement</option>
+                  </optgroup>
+                  <optgroup label="Entreprises & Industriels">
+                    <option value="Holding / Conglomérat">Holding / Conglomérat</option>
+                    <option value="Industriel stratégique">Industriel stratégique</option>
+                    <option value="Corporate VC">Corporate VC</option>
+                  </optgroup>
+                  <optgroup label="Structures légères">
+                    <option value="Family Office">Family Office</option>
+                    <option value="Investisseur individuel">Investisseur individuel</option>
+                    <option value="Club d'investissement">Club d'investissement</option>
+                  </optgroup>
+                  <optgroup label="Écosystème & Recherche">
+                    <option value="Accélérateur / Incubateur">Accélérateur / Incubateur</option>
+                    <option value="Université / Recherche">Université / Recherche</option>
+                    <option value="Fondation">Fondation / Association</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group span-2">
+                <label for="invStatus">Status</label>
+                <select id="invStatus">
+                  <option value="Active">Active</option>
+                  <option value="Acquired">Acquired</option>
+                  <option value="Inactive">Inactive</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="invCountry">Country</label>
+                <input type="text" id="invCountry" placeholder="e.g. United States">
+              </div>
+              <div class="form-group span-2">
+                <label for="invCity">HQ city</label>
+                <input type="text" id="invCity" placeholder="e.g. San Francisco">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="invYear">Founded</label>
+                <input type="number" id="invYear">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Description</legend>
+            <div class="form-group span-4">
+              <label for="invDescription">Description</label>
+              <textarea id="invDescription" rows="3" placeholder="What does this investor do?"></textarea>
+            </div>
+            <div class="form-group span-4">
+              <label for="invOwnership">Owned by <small>(vide = propriétaire de lui-même)</small></label>
+              <input type="text" id="invOwnership" placeholder="e.g. SoftBank Group, Alphabet, BNP Paribas">
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Financials & Scale</legend>
+            <div class="form-row financial-grid">
+              <div class="form-group">
+                <label for="invCapitalization">Mkt cap (USD M)</label>
+                <input type="number" id="invCapitalization" step="0.001" min="0">
+              </div>
+              <div class="form-group">
+                <label for="invFunds">Capital investi (USD M)</label>
+                <input type="number" id="invFunds" step="0.001" min="0">
+              </div>
+              <div class="form-group">
+                <label for="invRevenue">Revenue (USD M)</label>
+                <input type="number" id="invRevenue" step="0.01" min="0">
+              </div>
+              <div class="form-group">
+                <label for="invEmployees">Staff</label>
+                <input type="number" id="invEmployees">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Portfolio & Network</legend>
+            <div class="form-row">
+              <div class="form-group span-4">
+                <label for="invParticipation">Participations <small>(minority stakes)</small></label>
+                <textarea id="invParticipation" rows="3" placeholder="e.g. OpenAI, Anthropic, Mistral AI"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="invAcquisitions">Acquisitions <small>(controlling stake)</small></label>
+                <textarea id="invAcquisitions" rows="2"></textarea>
+              </div>
+              <div class="form-group span-2">
+                <label for="invPartnerships">Strategic partners</label>
+                <textarea id="invPartnerships" rows="2"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="invKeyResources">Key resources</label>
+                <textarea id="invKeyResources" rows="2"></textarea>
+              </div>
+              <div class="form-group span-2">
+                <label for="invCompetitors">Competitors</label>
+                <textarea id="invCompetitors" rows="2"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Links & Media</legend>
+            <div class="form-row">
+              <div class="form-group span-2">
+                <label for="invWebsite">Website</label>
+                <input type="url" id="invWebsite" placeholder="https://...">
+              </div>
+              <div class="form-group span-2">
+                <label for="invLogo">Logo URL</label>
+                <input type="url" id="invLogo" placeholder="https://...">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Validation</legend>
+            <div class="form-group span-2">
+              <label for="invValidated">Validation</label>
+              <select id="invValidated">
+                <option value="0">Not validated</option>
+                <option value="1">Partially validated</option>
+                <option value="2">Validated</option>
+                <option value="3" selected>To review later</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" id="cancelInvestorBtn" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="enterprise-subtabs">
+        <button class="investor-subtab-btn" data-investor-segment="partial">Partially validated</button>
+        <button class="investor-subtab-btn" data-investor-segment="validated">Validated</button>
+        <button class="investor-subtab-btn active" data-investor-segment="later">To review later</button>
+      </div>
+      <div class="search-container">
+        <input type="text" id="investorSearch" placeholder="Search an investor...">
+      </div>
+      <div id="investorsList" class="list-container">
+        <p class="loading">Loading...</p>
+      </div>
+      <div id="investorsPagination" class="pagination-container"></div>
     </section>
 
     <!-- ===== RELATIONSHIPS TAB ===== -->

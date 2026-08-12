@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Explorer — Réseaux d'Acteurs IA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+    
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    
+    .subtitle {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+    }
+    
+    .error {
+      background: #fee;
+      color: #c33;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    
+    .list {
+      list-style: none;
+    }
+    
+    .list-item {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      margin: 0 -12px;
+      border-radius: 4px;
+    }
+    
+    .list-item:last-child {
+      border-bottom: none;
+    }
+    
+    .rank {
+      font-size: 10px;
+      color: #999;
+      min-width: 35px;
+      text-align: right;
+      font-weight: 600;
+    }
+    
+    .name {
+      flex: 1;
+    }
+    
+    .name a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      font-size: 14px;
+    }
+    
+    .name a:hover {
+      text-decoration: underline;
+    }
+    
+    .badge {
+      font-size: 9px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
+    .badge.enterprise {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+    
+    .badge.investor {
+      background: #f3e5f5;
+      color: #7b1fa2;
+    }
+
+    .capitalization {
+      font-size: 11px;
+      color: #666;
+      font-weight: 500;
+      white-space: nowrap;
+      text-align: right;
+      min-width: 100px;
+    }
+
+    /* Hover Tooltip */
+    .tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      padding: 16px 20px;
+      font-size: 11px;
+      z-index: 1000;
+      min-width: 450px;
+      max-width: 550px;
+      bottom: 100%;
+      left: 0;
+      margin-bottom: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+      pointer-events: none;
+    }
+
+    .name a:hover ~ .tooltip,
+    .tooltip:hover {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .tooltip-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #111;
+      font-size: 13px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .tooltip-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 7px;
+      line-height: 1.4;
+    }
+    
+    .tooltip-row:first-of-type {
+      margin-top: 8px;
+    }
+
+    .tooltip-label {
+      font-weight: 600;
+      color: #555;
+      min-width: 100px;
+    }
+
+    .tooltip-value {
+      color: #333;
+    }
+
+    .tooltip-loading {
+      color: #999;
+      font-style: italic;
+    }
+
+    .arrow {
+      position: absolute;
+      bottom: -6px;
+      left: 10px;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Data Explorer</h1>
+    <p class="subtitle">Ranked by capitalization, then funds raised, then revenue</p>
+    <div id="content">
+      <div class="loading">Loading data...</div>
+    </div>
+  </div>
+
+  <script>
+    const FORCED_COUNTRY_COLORS = {
+      "unitedstates": "#2563EB", "usa": "#2563EB", "us": "#2563EB", "u.s.a.": "#2563EB",
+      "etatsunis": "#2563EB", "etats-unis": "#2563EB",
+      "unitedkingdom": "#111827", "uk": "#111827", "u.k.": "#111827", "royaumeuni": "#111827",
+      "china": "#DC2626", "chine": "#DC2626",
+      "canada": "#D97706",
+      "japan": "#DB2777", "japon": "#DB2777",
+      "southkorea": "#0F766E", "coreedusud": "#0F766E",
+      "israel": "#8B5CF6",
+      "india": "#F59E0B", "inde": "#F59E0B",
+      "singapore": "#0EA5E9",
+      "unitedarabemirates": "#7C3AED", "emiratsarabesunis": "#7C3AED",
+      "saudiarabia": "#C2410C",
+      "australia": "#0284C7",
+      "brazil": "#16A34A", "bresil": "#16A34A",
+      "mexico": "#059669",
+      "taiwan": "#7C3AED",
+      "hongkong": "#6366F1"
+    };
+
+    const EUROPE_COUNTRY_KEYS = new Set([
+      "austria", "belgium", "bulgaria", "croatia", "cyprus", "czechrepublic", "czechia",
+      "denmark", "estonia", "finland", "france", "germany", "greece", "hungary", "iceland",
+      "ireland", "italy", "latvia", "lithuania", "luxembourg", "malta", "netherlands",
+      "norway", "poland", "portugal", "romania", "slovakia", "slovenia", "spain", "sweden",
+      "switzerland", "turkey", "turkiye", "ukraine", "unitedkingdom"
+    ]);
+
+    const EUROPE_PALETTE = [
+      "#14532D", "#166534", "#15803D", "#16A34A", "#22C55E", "#4ADE80", "#86EFAC", "#BBF7D0"
+    ];
+
+    const FALLBACK_PALETTE = [
+      "#4F46E5", "#0EA5E9", "#EC4899", "#F97316", "#8B5CF6", "#14B8A6", "#F59E0B", "#64748B"
+    ];
+
+    const tooltipCache = {};
+    let countryColorMap = {};
+
+    function normalizeCountryKey(value) {
+      if (!value) return "";
+      const text = String(value).trim().toLowerCase().normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
+      return text;
+    }
+
+    function simpleHash(str) {
+      // Generate a consistent number from a string
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+      }
+      return Math.abs(hash);
+    }
+
+    function getCountryColor(country, fallbackName) {
+      // If country is empty, return gray
+      if (!country || !String(country).trim()) {
+        return "#999";
+      }
+      
+      const sourceStr = String(country).trim();
+      
+      // Check if we have a pre-computed color for this country
+      if (countryColorMap[sourceStr]) {
+        return countryColorMap[sourceStr];
+      }
+      
+      // If not found in map, check normalized version in FORCED_COUNTRY_COLORS
+      const key = normalizeCountryKey(sourceStr);
+      if (key in FORCED_COUNTRY_COLORS) {
+        return FORCED_COUNTRY_COLORS[key];
+      }
+      
+      // Check if it's a European country
+      if (EUROPE_COUNTRY_KEYS.has(key)) {
+        const hash = simpleHash(sourceStr);
+        return EUROPE_PALETTE[hash % EUROPE_PALETTE.length];
+      }
+      
+      // Fallback palette - use hash of country for variation
+      const hash = simpleHash(sourceStr);
+      return FALLBACK_PALETTE[hash % FALLBACK_PALETTE.length];
+    }
+
+    function buildCountryColorMap(items) {
+      const countries = [...new Set(items.map(i => i.country).filter(Boolean))];
+      const europe = countries
+        .filter(c => EUROPE_COUNTRY_KEYS.has(normalizeCountryKey(c)))
+        .sort();
+      const nonEurope = countries
+        .filter(c => !EUROPE_COUNTRY_KEYS.has(normalizeCountryKey(c)));
+
+      const colorMap = {};
+      europe.forEach((country, idx) => {
+        colorMap[country] = EUROPE_PALETTE[idx % EUROPE_PALETTE.length];
+      });
+
+      let fallbackIdx = 0;
+      nonEurope.forEach(country => {
+        const key = normalizeCountryKey(country);
+        if (key in FORCED_COUNTRY_COLORS) {
+          colorMap[country] = FORCED_COUNTRY_COLORS[key];
+        } else {
+          colorMap[country] = FALLBACK_PALETTE[fallbackIdx % FALLBACK_PALETTE.length];
+          fallbackIdx++;
+        }
+      });
+
+      return colorMap;
+    }
+
+    async function fetchDetails(id, type) {
+      const cacheKey = `${type}-${id}`;
+      if (tooltipCache[cacheKey]) {
+        return tooltipCache[cacheKey];
+      }
+      
+      try {
+        const endpoint = type === 'investor' ? `/api/investors/${id}` : `/api/enterprises/${id}`;
+        const r = await fetch(endpoint);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const data = await r.json();
+        tooltipCache[cacheKey] = data;
+        return data;
+      } catch (e) {
+        console.error('Error fetching details:', e);
+        return null;
+      }
+    }
+
+    function formatValue(val) {
+      if (!val) return '—';
+      if (typeof val === 'number') return val.toLocaleString('fr-FR');
+      return String(val).substring(0, 100);
+    }
+
+    function formatMoney(val) {
+      if (!val) return '—';
+      // Convert millions to billions
+      const billions = val / 1000;
+      return billions.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + 'B';
+    }
+
+    function buildTooltipContent(item, type) {
+      if (!item) {
+        return '<div class="tooltip-loading">Error loading data</div>';
+      }
+
+      let html = `<div class="tooltip-title">${escapeHtml(item.name)}</div>`;
+      
+      if (item.description) {
+        html += `<div class="tooltip-row">
+          <span class="tooltip-value" style="font-style: italic; color: #666;">${escapeHtml(item.description.substring(0, 300))}</span>
+        </div>`;
+      }
+
+      if (type === 'investor') {
+        if (item.investor_type) html += `<div class="tooltip-row"><span class="tooltip-label">Type:</span><span class="tooltip-value">${escapeHtml(item.investor_type)}</span></div>`;
+        if (item.capitalization) html += `<div class="tooltip-row"><span class="tooltip-label">Valuation:</span><span class="tooltip-value">$${formatMoney(item.capitalization)}</span></div>`;
+        if (item.capital_investi) html += `<div class="tooltip-row"><span class="tooltip-label">Capital inv.:</span><span class="tooltip-value">$${formatMoney(item.capital_investi)}</span></div>`;
+        if (item.participations) html += `<div class="tooltip-row"><span class="tooltip-label">Participations:</span><span class="tooltip-value">${escapeHtml((item.participations || '').substring(0, 80))}</span></div>`;
+        if (item.acquisitions) html += `<div class="tooltip-row"><span class="tooltip-label">Acquisitions:</span><span class="tooltip-value">${escapeHtml((item.acquisitions || '').substring(0, 80))}</span></div>`;
+      } else {
+        if (item.sector) html += `<div class="tooltip-row"><span class="tooltip-label">Sector:</span><span class="tooltip-value">${escapeHtml(item.sector)}</span></div>`;
+        if (item.capitalization) html += `<div class="tooltip-row"><span class="tooltip-label">Valuation:</span><span class="tooltip-value">$${formatMoney(item.capitalization)}</span></div>`;
+        if (item.funds_raised) html += `<div class="tooltip-row"><span class="tooltip-label">Funds raised:</span><span class="tooltip-value">$${formatMoney(item.funds_raised)}</span></div>`;
+        if (item.revenue_millions) html += `<div class="tooltip-row"><span class="tooltip-label">Revenue:</span><span class="tooltip-value">$${formatMoney(item.revenue_millions)}</span></div>`;
+      }
+
+      if (item.country) html += `<div class="tooltip-row"><span class="tooltip-label">Country:</span><span class="tooltip-value">${escapeHtml(item.country)}</span></div>`;
+      if (item.headquarter_city || item.headquarters_city) {
+        const city = item.headquarter_city || item.headquarters_city;
+        html += `<div class="tooltip-row"><span class="tooltip-label">City:</span><span class="tooltip-value">${escapeHtml(city)}</span></div>`;
+      }
+      if (item.website) html += `<div class="tooltip-row"><span class="tooltip-label">Website:</span><span class="tooltip-value" style="color: #0066cc;">${escapeHtml((item.website || '').substring(0, 60))}</span></div>`;
+      if (item.founded_year) html += `<div class="tooltip-row"><span class="tooltip-label">Founded:</span><span class="tooltip-value">${item.founded_year}</span></div>`;
+
+      return html;
+    }
+
+    async function showTooltip(e, item) {
+      e.preventDefault();
+      const tooltip = e.target.nextElementSibling;
+      if (!tooltip || !tooltip.classList.contains('tooltip')) return;
+
+      tooltip.innerHTML = '<div class="tooltip-loading">Loading...</div><div class="arrow"></div>';
+      
+      const details = await fetchDetails(item.id, item.type);
+      const content = buildTooltipContent(details, item.type);
+      tooltip.innerHTML = content + '<div class="arrow"></div>';
+    }
+
+    async function loadData() {
+      const content = document.getElementById('content');
+      try {
+        const r = await fetch('/api/data-explorer');
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const items = await r.json();
+
+        if (!items.length) {
+          content.innerHTML = '<p class="error">No data available</p>';
+          return;
+        }
+
+        console.log('First 3 items:', items.slice(0, 3));
+        console.log('Keys in first item:', Object.keys(items[0]));
+
+        // Build country color map
+        countryColorMap = buildCountryColorMap(items);
+
+        const html = `<ol class="list">
+          ${items.map((item, idx) => {
+            const countryColor = getCountryColor(item.country, item.name);
+            return `
+            <li class="list-item">
+              <span class="rank">#${idx + 1}</span>
+              <div class="name">
+                <a href="#" onclick="showTooltip(event, ${JSON.stringify(item).replace(/"/g, '&quot;')})" style="color: ${countryColor};">
+                  ${escapeHtml(item.name)}
+                </a>
+                <div class="tooltip"></div>
+              </div>
+              <span class="badge ${item.type}">
+                ${item.type === 'investor' ? 'Investor' : 'Company'}
+              </span>
+              <span class="capitalization">
+                ${item.value ? '$' + (item.value / 1000).toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + 'B' : '—'}
+              </span>
+            </li>
+          `;
+          }).join('')}
+        </ol>`;
+        content.innerHTML = html;
+      } catch (e) {
+        content.innerHTML = `<p class="error">Error: ${escapeHtml(e.message)}</p>`;
+      }
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

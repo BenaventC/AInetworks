@@ -180,9 +180,9 @@ function initializeDatabase() {
           });
         }
         const setDefaultValidationValue = () => {
-          // Normalize only invalid/null values and preserve the current 3-level model:
-          // 0 = not validated, 1 = partially validated, 2 = validated, 3 = review later.
-          db.run('UPDATE enterprises SET is_validated = 0 WHERE is_validated IS NULL OR is_validated NOT IN (0, 1, 2, 3)', (err) => {
+          // Normalize validation values so the project uses the review-later state (3)
+          // for both missing/empty values and the historical "not validated" state (0).
+          db.run('UPDATE enterprises SET is_validated = 3 WHERE is_validated IS NULL OR is_validated = 0 OR is_validated NOT IN (0, 1, 2, 3)', (err) => {
             if (err) {
               console.error('Erreur UPDATE enterprises.is_validated normalisation:', err.message);
             }
@@ -192,7 +192,7 @@ function initializeDatabase() {
         };
 
         if (!columns.has('is_validated')) {
-          db.run('ALTER TABLE enterprises ADD COLUMN is_validated INTEGER NOT NULL DEFAULT 0', (err) => {
+          db.run('ALTER TABLE enterprises ADD COLUMN is_validated INTEGER NOT NULL DEFAULT 3', (err) => {
             if (err && !err.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE is_validated:', err.message);
               return;
@@ -219,7 +219,7 @@ function initializeDatabase() {
       sources_information TEXT,
       infra_commitment_text TEXT,
       value_millions REAL,
-      is_validated INTEGER NOT NULL DEFAULT 0,
+      is_validated INTEGER NOT NULL DEFAULT 3,
       status TEXT DEFAULT 'active',
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
       updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -307,7 +307,7 @@ function initializeDatabase() {
         };
 
         if (!columns.has('is_validated')) {
-          db.run('ALTER TABLE partnerships ADD COLUMN is_validated INTEGER NOT NULL DEFAULT 0', (alterErr) => {
+          db.run('ALTER TABLE partnerships ADD COLUMN is_validated INTEGER NOT NULL DEFAULT 3', (alterErr) => {
             if (alterErr && !alterErr.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE partnerships.is_validated:', alterErr.message);
               return;
@@ -825,6 +825,58 @@ function sortCompetitionWithoutEnterprises(a, b) {
   return (a.name || '').localeCompare(b.name || '');
 }
 
+function sortEnterprisesForValidation(a, b) {
+  const capA = parseCapitalizationToMillions(a.capitalization);
+  const capB = parseCapitalizationToMillions(b.capitalization);
+  const capAHasValue = Number.isFinite(capA);
+  const capBHasValue = Number.isFinite(capB);
+
+  if (capAHasValue !== capBHasValue) {
+    return capAHasValue ? -1 : 1;
+  }
+  if (capAHasValue && capBHasValue && capB !== capA) {
+    return capB - capA;
+  }
+
+  const fundsA = parseCapitalizationToMillions(a.funds_raised);
+  const fundsB = parseCapitalizationToMillions(b.funds_raised);
+  const fundsAHasValue = Number.isFinite(fundsA);
+  const fundsBHasValue = Number.isFinite(fundsB);
+
+  if (fundsAHasValue !== fundsBHasValue) {
+    return fundsAHasValue ? -1 : 1;
+  }
+  if (fundsAHasValue && fundsBHasValue && fundsB !== fundsA) {
+    return fundsB - fundsA;
+  }
+
+  const employeesA = Number(a.employees_count) || 0;
+  const employeesB = Number(b.employees_count) || 0;
+  const employeesAHasValue = Number.isFinite(employeesA) && employeesA > 0;
+  const employeesBHasValue = Number.isFinite(employeesB) && employeesB > 0;
+
+  if (employeesAHasValue !== employeesBHasValue) {
+    return employeesAHasValue ? -1 : 1;
+  }
+  if (employeesAHasValue && employeesBHasValue && employeesB !== employeesA) {
+    return employeesB - employeesA;
+  }
+
+  const revenueA = parseCapitalizationToMillions(a.revenue_millions);
+  const revenueB = parseCapitalizationToMillions(b.revenue_millions);
+  const revenueAHasValue = Number.isFinite(revenueA);
+  const revenueBHasValue = Number.isFinite(revenueB);
+
+  if (revenueAHasValue !== revenueBHasValue) {
+    return revenueAHasValue ? -1 : 1;
+  }
+  if (revenueAHasValue && revenueBHasValue && revenueB !== revenueA) {
+    return revenueB - revenueA;
+  }
+
+  return (a.name || '').localeCompare(b.name || '');
+}
+
 function buildEnterpriseNameSearchClause(searchQuery) {
   const trimmedQuery = String(searchQuery || '').trim();
   if (!trimmedQuery) {
@@ -850,6 +902,7 @@ app.get('/api/enterprises', (req, res) => {
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
   const segment = req.query.segment || 'pending';
+  const orgTypeFilter = (req.query.orgType || '').trim();
 
   const conditions = [];
   const params = [];
@@ -862,8 +915,15 @@ app.get('/api/enterprises', (req, res) => {
     conditions.push('IFNULL(is_validated, 0) = 2');
   } else if (segment === 'later') {
     conditions.push('IFNULL(is_validated, 0) = 3');
+  } else if (segment === 'investor') {
+    conditions.push("organization_type = 'Investor'");
   } else if (segment === 'reviewed') {
     conditions.push('IFNULL(is_validated, 0) IN (1, 2, 3)');
+  }
+
+  if (orgTypeFilter) {
+    conditions.push('organization_type = ?');
+    params.push(orgTypeFilter);
   }
 
   const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
@@ -1002,29 +1062,58 @@ app.get('/api/enterprises', (req, res) => {
     const safePage = Math.min(page, totalPages);
     const safeOffset = (safePage - 1) * limit;
 
-    db.all(
-      `SELECT * FROM enterprises ${whereClause} ORDER BY ${
-        segment === 'later' ? `(id * ${SESSION_SEED}) % 999983` : 'name'
-      } LIMIT ? OFFSET ?`,
-      [...params, limit, safeOffset],
-      (err, rows) => {
-        if (err) {
-          res.status(500).json({ error: err.message });
-        } else {
-          res.json({
-            items: rows,
-            pagination: {
-              page: safePage,
-              limit,
-              total,
-              totalPages,
-              hasNextPage: safePage < totalPages,
-              hasPreviousPage: safePage > 1
-            }
-          });
+    const fetchRows = (orderClause) => {
+      db.all(
+        `SELECT * FROM enterprises ${whereClause} ${orderClause} LIMIT ? OFFSET ?`,
+        [...params, limit, safeOffset],
+        (err, rows) => {
+          if (err) {
+            res.status(500).json({ error: err.message });
+          } else {
+            res.json({
+              items: rows,
+              pagination: {
+                page: safePage,
+                limit,
+                total,
+                totalPages,
+                hasNextPage: safePage < totalPages,
+                hasPreviousPage: safePage > 1
+              }
+            });
+          }
         }
-      }
-    );
+      );
+    };
+
+    if (segment === 'pending' || segment === 'partial' || segment === 'validated' || segment === 'reviewed' || segment === 'later' || segment === 'investor') {
+      db.all(`SELECT * FROM enterprises ${whereClause}`, params, (err, rows) => {
+        if (err) {
+          return res.status(500).json({ error: err.message });
+        }
+
+        const sortFn = (segment === 'later' || segment === 'investor')
+          ? (a, b) => (a.name || '').localeCompare(b.name || '')
+          : sortEnterprisesForValidation;
+        const sortedRows = [...rows].sort(sortFn);
+        const pageItems = sortedRows.slice(safeOffset, safeOffset + limit);
+
+        res.json({
+          items: pageItems,
+          pagination: {
+            page: safePage,
+            limit,
+            total,
+            totalPages,
+            hasNextPage: safePage < totalPages,
+            hasPreviousPage: safePage > 1
+          }
+        });
+      });
+      return;
+    }
+
+    fetchRows('ORDER BY name');
   });
 });
 
@@ -1032,9 +1121,15 @@ app.get('/api/enterprises/counts', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
+  const orgTypeFilter = (req.query.orgType || '').trim();
 
   const conditions = [];
   const params = [];
+
+  if (orgTypeFilter) {
+    conditions.push('organization_type = ?');
+    params.push(orgTypeFilter);
+  }
 
   const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
   if (nameSearch) {
@@ -1086,6 +1181,7 @@ app.get('/api/enterprises/counts', (req, res) => {
         SUM(CASE WHEN IFNULL(is_validated, 0) = 1 THEN 1 ELSE 0 END) AS partial,
         SUM(CASE WHEN IFNULL(is_validated, 0) = 2 THEN 1 ELSE 0 END) AS validated,
         SUM(CASE WHEN IFNULL(is_validated, 0) = 3 THEN 1 ELSE 0 END) AS later,
+        SUM(CASE WHEN organization_type = 'Investor' THEN 1 ELSE 0 END) AS investor,
         SUM(CASE WHEN LENGTH(TRIM(IFNULL(main_competitors, ""))) < 5 THEN 1 ELSE 0 END) AS companieswithoutcompetitors,
         SUM(CASE WHEN ${buildTop100EligibilitySqlClause()} THEN 1 ELSE 0 END) AS top100
        FROM enterprises
@@ -1099,6 +1195,7 @@ app.get('/api/enterprises/counts', (req, res) => {
         partial: validatedCounts.partial || 0,
         validated: validatedCounts.validated || 0,
         later: validatedCounts.later || 0,
+        investor: validatedCounts.investor || 0,
         companieswithoutcompetitors: validatedCounts.companieswithoutcompetitors || 0,
         top100: validatedCounts.top100 || 0
       });
@@ -1438,6 +1535,137 @@ app.delete('/api/enterprises/:id', (req, res) => {
     } else {
       res.json({ message: 'Entreprise supprimée avec succès' });
     }
+  });
+});
+
+// ===== ROUTES INVESTORS =====
+
+app.get('/api/investors', (req, res) => {
+  const page = parsePositiveInteger(req.query.page, 1);
+  const limit = Math.min(parsePositiveInteger(req.query.limit, 50), 100);
+  const searchQuery = (req.query.q || '').trim();
+  const segment = req.query.segment || 'later';
+
+  const conditions = [];
+  const params = [];
+
+  if (segment === 'partial')   conditions.push('IFNULL(is_validated,0) = 1');
+  else if (segment === 'validated') conditions.push('IFNULL(is_validated,0) = 2');
+  else if (segment === 'later') conditions.push('IFNULL(is_validated,0) = 3');
+
+  if (searchQuery) {
+    conditions.push('(name LIKE ? OR description LIKE ? OR country LIKE ?)');
+    const v = `%${searchQuery}%`;
+    params.push(v, v, v);
+  }
+
+  const where = conditions.length ? `WHERE ${conditions.join(' AND ')}` : '';
+
+  db.get(`SELECT COUNT(*) as total FROM investors ${where}`, params, (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
+    const total = row.total;
+    const totalPages = Math.max(1, Math.ceil(total / limit));
+    const safePage = Math.min(page, totalPages);
+    const offset = (safePage - 1) * limit;
+
+    db.all(
+      `SELECT * FROM investors ${where} ORDER BY name LIMIT ? OFFSET ?`,
+      [...params, limit, offset],
+      (err2, rows) => {
+        if (err2) return res.status(500).json({ error: err2.message });
+        res.json({
+          items: rows,
+          pagination: { page: safePage, limit, total, totalPages,
+            hasNextPage: safePage < totalPages, hasPreviousPage: safePage > 1 }
+        });
+      }
+    );
+  });
+});
+
+app.get('/api/investors/counts', (req, res) => {
+  const searchQuery = (req.query.q || '').trim();
+  const conditions = [];
+  const params = [];
+  if (searchQuery) {
+    conditions.push('(name LIKE ? OR description LIKE ? OR country LIKE ?)');
+    const v = `%${searchQuery}%`;
+    params.push(v, v, v);
+  }
+  const where = conditions.length ? `WHERE ${conditions.join(' AND ')}` : '';
+
+  db.get(`SELECT
+    SUM(CASE WHEN IFNULL(is_validated,0) = 0 THEN 1 ELSE 0 END) AS pending,
+    SUM(CASE WHEN IFNULL(is_validated,0) = 1 THEN 1 ELSE 0 END) AS partial,
+    SUM(CASE WHEN IFNULL(is_validated,0) = 2 THEN 1 ELSE 0 END) AS validated,
+    SUM(CASE WHEN IFNULL(is_validated,0) = 3 THEN 1 ELSE 0 END) AS later,
+    COUNT(*) AS total
+    FROM investors ${where}`, params, (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(row || { pending:0, partial:0, validated:0, later:0, total:0 });
+  });
+});
+
+app.get('/api/investors/:id', (req, res) => {
+  db.get('SELECT * FROM investors WHERE id = ?', [req.params.id], (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
+    if (!row) return res.status(404).json({ error: 'Investor non trouvé' });
+    res.json(row);
+  });
+});
+
+app.post('/api/investors', (req, res) => {
+  const { name, description, country, sector, website, participations, is_validated } = req.body;
+  if (!name) return res.status(400).json({ error: 'name requis' });
+  db.run(
+    `INSERT INTO investors (name, description, country, sector, website, participations, is_validated, created_at, updated_at)
+     VALUES (?,?,?,?,?,?,?,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)`,
+    [name, description||null, country||null, sector||null, website||null, participations||null, parseValidationLevel(is_validated,3)],
+    function(err) {
+      if (err) return res.status(500).json({ error: err.message });
+      res.status(201).json({ id: this.lastID });
+    }
+  );
+});
+
+app.patch('/api/investors/:id', (req, res) => {
+  const allowed = ['name','description','country','headquarter_city','website','logo_url',
+    'capitalization','capital_investi','employees_count','participations','acquisitions','key_resources',
+    'main_competitors','strategic_partnerships','is_validated','company_status','investor_type','ownership'];
+  const updates = [];
+  const params = [];
+  for (const field of allowed) {
+    if (field in req.body) {
+      updates.push(`${field} = ?`);
+      params.push(field === 'is_validated' ? parseValidationLevel(req.body[field], 3) : req.body[field]);
+    }
+  }
+  if (!updates.length) return res.status(400).json({ error: 'Aucun champ à modifier' });
+  updates.push('updated_at = CURRENT_TIMESTAMP');
+  params.push(req.params.id);
+  db.run(`UPDATE investors SET ${updates.join(', ')} WHERE id = ?`, params, function(err) {
+    if (err) return res.status(500).json({ error: err.message });
+    if (!this.changes) return res.status(404).json({ error: 'Investor non trouvé' });
+    res.json({ message: 'Investor mis à jour' });
+  });
+});
+
+app.patch('/api/investors/:id/validation', (req, res) => {
+  const level = parseValidationLevel(req.body.is_validated, -1);
+  if (level < 0 || level > 3) return res.status(400).json({ error: 'is_validated doit être 0-3' });
+  db.run('UPDATE investors SET is_validated=?, updated_at=CURRENT_TIMESTAMP WHERE id=?',
+    [level, req.params.id], function(err) {
+    if (err) return res.status(500).json({ error: err.message });
+    if (!this.changes) return res.status(404).json({ error: 'Investor non trouvé' });
+    res.json({ message: 'Validation mise à jour' });
+  });
+});
+
+app.delete('/api/investors/:id', (req, res) => {
+  db.run('DELETE FROM investors WHERE id=?', [req.params.id], function(err) {
+    if (err) return res.status(500).json({ error: err.message });
+    if (!this.changes) return res.status(404).json({ error: 'Investor non trouvé' });
+    res.json({ message: 'Investor supprimé' });
   });
 });
 
@@ -1782,6 +2010,63 @@ app.delete('/api/partnerships/:id', (req, res) => {
     } else {
       res.json({ message: 'Partenariat supprimé avec succès' });
     }
+  });
+});
+
+// ===== DATA EXPLORER =====
+app.get('/api/data-explorer-debug', (req, res) => {
+  db.all(`SELECT id, name, country FROM enterprises LIMIT 3`, (err, rows) => {
+    if (err) return res.json({ error: err.message, source: 'enterprises' });
+    res.json({ source: 'enterprises', rows });
+  });
+});
+
+app.get('/api/data-explorer', (req, res) => {
+  const results = [];
+
+  // Fetch enterprises
+  db.all(`
+    SELECT id, name, country, capitalization, funds_raised, revenue_millions, 'enterprise' as type
+    FROM enterprises
+    ORDER BY 
+      CASE 
+        WHEN capitalization IS NOT NULL THEN capitalization
+        WHEN funds_raised IS NOT NULL THEN funds_raised
+        WHEN revenue_millions IS NOT NULL THEN revenue_millions
+        ELSE 0
+      END DESC
+  `, (err, enterprises) => {
+    if (err) return res.status(500).json({ error: err.message });
+
+    // Fetch investors
+    db.all(`
+      SELECT id, name, country, capitalization, capital_investi, revenue_millions, 'investor' as type
+      FROM investors
+      ORDER BY 
+        CASE 
+          WHEN capitalization IS NOT NULL THEN capitalization
+          WHEN capital_investi IS NOT NULL THEN capital_investi
+          WHEN revenue_millions IS NOT NULL THEN revenue_millions
+          ELSE 0
+        END DESC
+    `, (err2, investors) => {
+      if (err2) return res.status(500).json({ error: err2.message });
+
+      // Merge, filter (must have cap/funds/revenue), and sort
+      const all = [
+        ...enterprises.map(e => ({
+          id: e.id, name: e.name, type: e.type, country: e.country,
+          value: e.capitalization || e.funds_raised || e.revenue_millions
+        })),
+        ...investors.map(i => ({
+          id: i.id, name: i.name, type: i.type, country: i.country,
+          value: i.capitalization || i.capital_investi || i.revenue_millions
+        }))
+      ].filter(x => x.value !== null && x.value !== undefined);
+
+      all.sort((a, b) => (b.value || 0) - (a.value || 0));
+      res.json(all);
+    });
   });
 });
 

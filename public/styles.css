@@ -251,15 +251,18 @@ header h1 {
 .partnership-subtabs { display: flex; gap: 7px; margin-bottom: 14px; flex-wrap: wrap; }
 
 .enterprise-subtab-btn,
-.partnership-subtab-btn {
+.partnership-subtab-btn,
+.investor-subtab-btn {
   border: 1px solid var(--border); background: var(--surface);
   color: var(--muted); padding: 3px 11px; border-radius: 999px;
   font-size: 0.78em; font-weight: 500; cursor: pointer; transition: all .2s;
 }
 .enterprise-subtab-btn:hover,
-.partnership-subtab-btn:hover { background: var(--rose-pale); border-color: var(--rose); color: var(--rose-dark); }
+.partnership-subtab-btn:hover,
+.investor-subtab-btn:hover { background: var(--rose-pale); border-color: var(--rose); color: var(--rose-dark); }
 .enterprise-subtab-btn.active,
-.partnership-subtab-btn.active { background: var(--rose-dark); color: #fff; border-color: var(--rose-dark); }
+.partnership-subtab-btn.active,
+.investor-subtab-btn.active { background: var(--rose-dark); color: #fff; border-color: var(--rose-dark); }
 
 /* ── CARDS ───────────────────────────────────────────────────────────────── */
 .list-container { display: grid; gap: 8px; }

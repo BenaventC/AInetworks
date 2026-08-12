@@ -127,21 +127,24 @@ Einride,"Transport & Mobility, Trucks","Waymo, Kodiak Robotics, Waabi, Aurora In
 DentalMonitoring,"AI model, Health & Social Care, dental","Grin, Dentalai, InHand Dental, Align Technology, Straumann Group",1200.0
 WhiteFiber,"Cloud Provider, ICT","CoreWeave, Lambda Labs, Voltage Park, IREN Cloud, Equinix DataBank, Google Cloud, Microsoft Azure, AWS(AWS)",1060.0
 01.AI,"AI model, ICT","Moonshot AI, Z.ai, MiniMax, Baichuan Intelligence, StepFun, DeepSeek, Alibaba Cloud, Tencent, LLama, MistralAI",1000.0
+H Company,"AI model, Agentic","Anthropic, Open1I, UiPath, Mistral AI",1000.0
 Owkin,"AI model, Health & Social Care","Isomorphic Labs, Exscientia, Recursion Pharmaceuticals, Insilico Medicine, Schrödinger, Iktos, Aqemia, BioMap, Tempus, Paige AI, Tribun Health",1000.0
 Shift Technology,"Financial Services, Legal tech","Guidewire, Duck Creek, Descartes Underwriting, Friss, Akur8",1000.0
 4Paradigm,"AI model, Professional Services","DataRobot, H2O.AI, Dataiky, Baidu, Alibaba Cloud, Tencent Cloud",1000.0
-Stability AI,,"Midjourney, BlackForect Labs, OpenAI",1000.0
+Stability AI,"AI model, Biotech, Image generation","Midjourney, BlackForest Labs, OpenAI",1000.0
 Franka Emika,"Manufacturing & Operations, Robotics","Agile Robots, KUKA, Kinova, Universal Robots, Doosan Robotics, Fanuc",1000.0
 Dash0,AI model,"Datadog (Bits AI), New Relic, Dynatrace, Middleware (AI Agent), Better Stack, Resolve AI, incident.io",1000.0
 Glean,,"Guru, Amazon(Kendra), Coveo, Sinequa, Slack AI, Google(Gemini)",770.0
 PolyAI,"AI model, Sales & Marketing, Voice","Bland AI, Vapi, Retell AI, Parloa, IBM(watsonx), Google Cloud",750.0
 Run:ai,AI tools,"dstack, ClearML, SkyPilot, Kubeflow.",700.0
 Graphcore,ICT,"Nvidia, Google Cloud, AWS, Meta, Groq, Cerebras, Tenstorrent",682.0
+RobCo GmbH,"ICT, Manufacturing & Operations","NEURA Robotics, Orangewood Labs , Sereact, Augmentus, Universal Robots, Franka Robotics, Agile Robots",500.0
 PhotoRoom,"Media & Entertainment, Image generation","Pixelcut, Playyy, WizStudio, Jasper, Flair.ai, Pebblely, Canva, Adobe, Firefly",500.0
 Luminance,,"Harvey AI, Noxtua, Jus Mundi, Lawx",500.0
 Cradle,Biotech,"EvolutionaryScale, Generate Biomedicines, Nimbus Therapeutics, DeepMind(Alphafold)",420.0
 Kandou AI,"Hardware, Chip","Astera Labs, Broadcom,  Marvell Technology, Alphawave Semi , Rambus",400.0
 Dust,"Health & Social Care, Agentic","Glean, Twin, Manus, Metaflow AI",300.0
+Indium,Data,"Happiest Minds Technologies , Persistent Systems , LatentView Analytics , Coforge, Fractal Analytics, Cognizant , Infosys Accenture",300.0
 Corti,"Health & Social Care, AI model","Microsoft(DAX), AWS(AWS HealthScribe), Huma, MedeAnalytics, Suki AI, Nabla",300.0
 Kyutai,"AI model, Voice","Lalal.ai, Audimee, Ace Studio, Controlla.xyz, Lalals.com",300.0
 LightOn,AI model,"Yseop, Mistral AI, Dust, Pryon",288.0
@@ -162,6 +165,7 @@ Arago,"Hardware, Photonic","Lightmatter, Luminous Computing, Rain AI, Groq, Nvid
 Bodyguard.ai,"IT & Security, Cyber","Tisane Labs, Besedo, Two Hat (Microsoft), OpenAI Moderation API",55.0
 Art Recognition,"IT & Security, Art","Startbahn, Verisart, InsightART., Hephaestus Analytical",50.0
 DarwinAI,"Manufacturing & Operations, ICT","Landing AI, Edge Impulse, Instrumental, Neural Magic, Deci AI",50.0
+Ubble,"AI model, IDV","Yoti, Onfido, Veriff, IDnow",40.0
 Oriole Networks,"Hardware, Photonic","Cisco, Nvidia, Ciena",35.0
 Colossyan,,"Synthesia, HeyGen, DeepBrain AI, Runway",30.0
 Doubleword,"AI model, Inference","Baseten Technologies, Fireworks AI, Liquid AI, Scale AI, Comet",27.0

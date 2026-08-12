@@ -61,6 +61,10 @@ The app is available at http://localhost:3000.
 .
 ├── server.js
 ├── public/
+│   ├── index.html          # main UI (enterprises, investors, relationships)
+│   ├── data-explorer.html  # ranked exploration page (all entities by valuation)
+│   ├── app.js
+│   └── styles.css
 ├── analyses/
 ├── scripts/
 ├── archives/
@@ -205,6 +209,7 @@ Thanks to all contributors and public sources that supported data collection, no
 
 ## Latest UI Update
 
+- **Data Explorer page** (`/data-explorer.html`): unified ranked list of all enterprises and investors sorted by capitalization → funds raised → revenue, with hover tooltips showing description, valuation, sector, country, city, website, and founded year. Names are color-coded by country (greens for Europe, blue for USA, red for China, orange for Canada, etc.).
 - Financial values are now normalized and handled as numeric values in base unit USD millions.
 - Company and relationship cards use a dense 4-column layout on desktop (2 columns tablet, 1 mobile).
 - Edit forms were condensed to maximize visible information while keeping mobile usability.
@@ -213,6 +218,8 @@ Thanks to all contributors and public sources that supported data collection, no
 
 ## Recent Project Updates
 
+- **Database enrichment (Aug 2026)**: systematic description enrichment covering ~2 500 enterprises and ~160 investors, with country normalization and capitalization/funding data. Coverage now exceeds 74% for country and ~90% for descriptions on the main enterprise table.
+- **Investor table**: dedicated `investors` table with capital_investi, participations, acquisitions, investor_type, and full profile fields; visible via the Investors tab and the Data Explorer.
 - Sector labels now include the labels that appear at least 3 times in the database, and the form allows up to 5 labels per company.
 - Competitor names are normalized against canonical enterprise names, including alias rules such as Azure → Microsoft Azure and Cerebras Systems → Cerebras.
 - Competition analysis exports are regenerated regularly and stored in the analyses/exports folder for local review and sharing.

@@ -1,13 +1,39 @@
 ---
 name: database-completion
-description: "Complete and enrich enterprise records in the Réseaux d'Acteurs IA database using reliable web sources (Wikipedia, Wikidata, Forbes AI 50, CompaniesMarketCap, AI Startups Europe): fill missing fields, import missing companies, map funding/market cap to capitalization, normalize countries, and deduplicate close name variants."
+description: "Complete and enrich records in the Réseaux d'Acteurs IA database (tables: enterprises, investors) using reliable web sources (Wikipedia, Wikidata, Forbes AI 50, CompaniesMarketCap, AI Startups Europe): fill missing fields, import missing companies, map funding/market cap to capitalization, normalize countries, classify investor types, and deduplicate close name variants."
 ---
 
 # Complétion de la Base de Données Réseaux d'Acteurs IA
 
 ## Vue d'ensemble
 
-Ce skill guide le processus complet pour identifier et compléter les fiches d'entreprises incomplètes dans la base de données **Réseaux d'Acteurs IA**. L'approche couvre aussi l'import de nouvelles entreprises depuis des listes externes fiables (Wikipedia, Wikidata, Forbes AI 50, CompaniesMarketCap, AI Startups Europe), la normalisation des valeurs et le dédoublonnage.
+Ce skill guide le processus complet pour identifier et compléter les fiches dans la base de données **Réseaux d'Acteurs IA**. La base comporte deux tables principales :
+
+- **`enterprises`** : entités opérationnelles (startups, scale-ups, grands groupes tech, labos).
+- **`investors`** : entités dont l'activité principale est de déployer du capital.
+
+Voir `conventions.md` §1.2 pour la règle de séparation entre les deux tables.
+
+## Table `investors` — Champs spécifiques
+
+Les champs suivants sont propres à la table `investors` (différents de `enterprises`) :
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| `investor_type` | TEXT | Catégorie (voir taxonomie dans `conventions.md` §2.2) |
+| `ownership` | TEXT | Entité mère. Vide = investisseur autonome |
+| `participations` | TEXT | Participations minoritaires (liste séparée par virgules) |
+| `acquisitions` | TEXT | Prises de contrôle majoritaire |
+| `capital_investi` | REAL | Capital déployé en USD millions |
+
+**Règle participation vs acquisition :** voir `conventions.md` §2.3.
+
+Lors de l'enrichissement d'un investisseur :
+1. Identifier son `investor_type` en priorité (taxonomie en 6 groupes dans `conventions.md` §2.2).
+2. Identifier `ownership` si l'investisseur est un bras d'une entité mère.
+3. Enrichir `participations` à partir du champ `main_investors` des entreprises associées.
+4. Description en anglais, 80–150 caractères recommandés.
+5. `country` = pays du siège social (nom complet en anglais).
 
 ## Norme d'Encodage Projet (OBLIGATOIRE)
 

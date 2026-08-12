@@ -13,6 +13,7 @@ let enterpriseSearchDebounceTimer = null;
 let enterpriseSegment = 'later';
 let enterpriseSectorFilter = '';
 let enterpriseCountryFilter = '';
+let enterpriseOrgTypeFilter = '';  // set to 'Investor' when on investors tab
 let enterpriseFilterOptionsLoadingPromise = null;
 let enterpriseListAbortController = null;
 let enterpriseCountsAbortController = null;
@@ -23,11 +24,16 @@ let partnershipSegment = 'later';
 let partnershipListAbortController = null;
 let partnershipCountsAbortController = null;
 let hasLoadedPartnershipTab = false;
+let hasLoadedInvestorTab = false;
+let investorPage = 1;
+let investorSearchQuery = '';
+let investorSearchAbortController = null;
 const enterpriseSegmentCounts = {
   pending: 0,
   partial: 0,
   validated: 0,
   later: 0,
+  investor: 0,
   companieswithoutcompetitors: 0,
   top100: 0
 };
@@ -315,7 +321,9 @@ function getValidationButtonOptions() {
 
 function renderValidationButtons(kind, id, currentLevel) {
   const safeLevel = normalizeValidationLevel(currentLevel);
-  const handlerName = kind === 'enterprise' ? 'toggleEnterpriseValidation' : 'togglePartnershipValidation';
+  const handlerName = kind === 'enterprise' ? 'toggleEnterpriseValidation'
+    : kind === 'investor' ? 'validateInvestor'
+    : 'togglePartnershipValidation';
 
   return `
     <div class="validation-actions">
@@ -336,6 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSectorLabelOptions();
   initTabs();
   initEventListeners();
+  initInvestorForm();
   loadEnterpriseFilterOptions();
   refreshEnterpriseSegmentCounts();
   loadEnterprises();
@@ -343,25 +352,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== TABS =====
 function initTabs() {
-  document.querySelectorAll('.tab-btn').forEach(btn => {
+  document.querySelectorAll('.tab-btn:not(#explorerBtn)').forEach(btn => {
     btn.addEventListener('click', () => {
       const tabName = btn.dataset.tab;
       switchTab(tabName);
     });
   });
+  
+  const explorerBtn = document.getElementById('explorerBtn');
+  if (explorerBtn) {
+    explorerBtn.addEventListener('click', () => {
+      window.open('/data-explorer.html', '_blank');
+    });
+  }
 }
 
 function switchTab(tabName) {
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  document.querySelectorAll('.tab-content').forEach(content => {
-    content.classList.remove('active');
-  });
-
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
   document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+
+  if (tabName === 'investors') {
+    document.getElementById('investors').classList.add('active');
+    if (!hasLoadedInvestorTab) { hasLoadedInvestorTab = true; refreshInvestorCounts(); }
+    loadInvestors();
+    return;
+  }
+
   document.getElementById(tabName).classList.add('active');
 
+  // Reset investor filter when navigating away from investor view
+  if (enterpriseOrgTypeFilter && tabName !== 'investors') {
+    enterpriseOrgTypeFilter = '';
+  }
+
+  if (tabName === 'investors' && !hasLoadedInvestorTab) {
+    hasLoadedInvestorTab = true;
+    loadInvestors();
+  }
   if (tabName === 'partnerships' && !hasLoadedPartnershipTab) {
     hasLoadedPartnershipTab = true;
     refreshPartnershipSegmentCounts();
@@ -389,6 +417,15 @@ function initEventListeners() {
   document.getElementById('entSectorLabels').addEventListener('click', onSectorLabelPickerClick);
   document.getElementById('entEndYear').addEventListener('input', toggleDeadCompanyButton);
   document.getElementById('confirmDeadCompanyBtn').addEventListener('click', confirmDeadCompany);
+  document.getElementById('investorSearch').addEventListener('input', (e) => {
+    investorSearchQuery = e.target.value.trim();
+    investorPage = 1;
+    refreshInvestorCounts();
+    loadInvestors();
+  });
+  document.querySelectorAll('.investor-subtab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchInvestorSegment(btn.dataset.investorSegment));
+  });
   document.getElementById('enterpriseSearch').addEventListener('input', searchEnterprises);
   document.getElementById('enterpriseSectorFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('enterpriseCountryFilter').addEventListener('change', onEnterpriseFiltersChanged);
@@ -417,6 +454,206 @@ function initEventListeners() {
   });
 }
 
+// ===== INVESTORS =====
+let investorSegment = 'later';
+const investorSegmentCounts = { pending:0, partial:0, validated:0, later:0, total:0 };
+
+async function refreshInvestorCounts() {
+  const params = new URLSearchParams();
+  if (investorSearchQuery) params.set('q', investorSearchQuery);
+  try {
+    const r = await fetch(`/api/investors/counts?${params}`);
+    const d = await r.json();
+    Object.assign(investorSegmentCounts, d);
+    renderInvestorSubtabCounters();
+    const btn = document.querySelector('.tab-btn[data-tab="investors"]');
+    if (btn) btn.textContent = `Investors (${d.total || 0})`;
+  } catch(e) { console.error(e); }
+}
+
+function renderInvestorSubtabCounters() {
+  const labels = { pending:'Not validated', partial:'Partially validated', validated:'Validated', later:'To review later' };
+  document.querySelectorAll('.investor-subtab-btn').forEach(btn => {
+    const seg = btn.dataset.investorSegment;
+    btn.textContent = `${labels[seg]} (${investorSegmentCounts[seg] || 0})`;
+    btn.classList.toggle('active', seg === investorSegment);
+  });
+}
+
+function switchInvestorSegment(segment) {
+  investorSegment = segment;
+  investorPage = 1;
+  renderInvestorSubtabCounters();
+  loadInvestors();
+}
+
+async function loadInvestors() {
+  if (investorSearchAbortController) investorSearchAbortController.abort();
+  const abortController = new AbortController();
+  investorSearchAbortController = abortController;
+
+  const params = new URLSearchParams({ segment: investorSegment, page: investorPage, limit: 50 });
+  if (investorSearchQuery) params.set('q', investorSearchQuery);
+
+  try {
+    const response = await fetch(`/api/investors?${params}`, { signal: abortController.signal });
+    const data = await response.json();
+    const container = document.getElementById('investorsList');
+
+    if (!data.items || data.items.length === 0) {
+      container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">💼</div><div class="empty-state-text">No investor found</div></div>';
+    } else {
+      container.innerHTML = data.items.map(inv => `
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <div class="card-title">${escapeHtml(inv.name || '')}</div>
+              </div>
+              <div class="card-subtitle">
+                ${inv.investor_type ? `<span class="badge">${escapeHtml(inv.investor_type)}</span>` : ''}
+                ${inv.sector ? `<span class="badge badge-sector">${escapeHtml(inv.sector)}</span>` : ''}
+                ${inv.country ? `<span class="badge badge-country">${escapeHtml(inv.country)}</span>` : ''}
+                ${inv.founded_year ? `<span class="badge">${inv.founded_year}</span>` : ''}
+                <span class="badge ${getValidationMeta(inv.is_validated, true).badgeClass}">${getValidationMeta(inv.is_validated, true).label}</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              ${renderValidationButtons('investor', inv.id, inv.is_validated)}
+              <button class="btn btn-warning" onclick="editInvestor(${inv.id})">✏️ Edit</button>
+              <button class="btn btn-danger" onclick="deleteInvestor(${inv.id})">🗑️ Delete</button>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="enterprise-fields-grid">
+              ${inv.description ? `<div class="field field-full"><div class="field-label">Description</div><div class="field-value">${escapeHtml(inv.description)}</div></div>` : ''}
+              ${inv.headquarter_city ? `<div class="field"><div class="field-label">HQ city</div><div class="field-value">${escapeHtml(inv.headquarter_city)}</div></div>` : ''}
+              ${inv.ownership ? `<div class="field field-wide"><div class="field-label">Owned by</div><div class="field-value">${escapeHtml(inv.ownership)}</div></div>` : ''}
+              ${inv.participations ? `<div class="field field-wide"><div class="field-label">Participations (minority)</div><div class="field-value">${escapeHtml(inv.participations)}</div></div>` : ''}
+              ${inv.main_competitors ? `<div class="field field-wide"><div class="field-label">Competitors</div><div class="field-value">${escapeHtml(inv.main_competitors)}</div></div>` : ''}
+              ${inv.acquisitions ? `<div class="field field-wide"><div class="field-label">Acquisitions (control)</div><div class="field-value">${escapeHtml(inv.acquisitions)}</div></div>` : ''}
+              ${inv.key_resources ? `<div class="field field-wide"><div class="field-label">Key resources</div><div class="field-value">${escapeHtml(inv.key_resources)}</div></div>` : ''}
+              ${inv.strategic_partnerships ? `<div class="field field-wide"><div class="field-label">Strategic partners</div><div class="field-value">${escapeHtml(inv.strategic_partnerships)}</div></div>` : ''}
+              <div class="field"><div class="field-label">Mkt cap</div><div class="field-value">${formatMillionsUsd(inv.capitalization)}</div></div>
+              <div class="field"><div class="field-label">Capital investi</div><div class="field-value">${formatMillionsUsd(inv.capital_investi)}</div></div>
+              <div class="field"><div class="field-label">Revenue</div><div class="field-value">${formatMillionsUsd(inv.revenue_millions)}</div></div>
+              ${inv.employees_count ? `<div class="field"><div class="field-label">Staff</div><div class="field-value">${inv.employees_count}</div></div>` : ''}
+              ${inv.website ? `<div class="field field-wide"><div class="field-label">Website</div><div class="field-value"><a href="${escapeHtml(inv.website)}" target="_blank">${escapeHtml(inv.website)}</a></div></div>` : ''}
+              ${inv.logo_url ? `<div class="field field-full field-logo"><div class="field-label">Logo</div><div class="field-value logo-field-value"><div class="logo-frame"><img src="${escapeHtml(inv.logo_url)}" alt="${escapeHtml(inv.name)}" loading="lazy"></div></div></div>` : ''}
+              <div class="field field-timestamps field-full"><div class="field-label">Tracking</div><div class="field-value timestamp-grid"><span><strong>Created:</strong> ${formatAuditTimestamp(inv.created_at)}</span><span><strong>Last updated:</strong> ${formatAuditTimestamp(inv.updated_at)}</span></div></div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    const pag = data.pagination;
+    const pagEl = document.getElementById('investorsPagination');
+    pagEl.innerHTML = pag && pag.totalPages > 1 ? `
+      <button onclick="investorPage=${Math.max(1,investorPage-1)};loadInvestors()" ${investorPage===1?'disabled':''}>Previous</button>
+      <span>Page ${pag.page} / ${pag.totalPages} (${pag.total})</span>
+      <button onclick="investorPage=${Math.min(pag.totalPages,investorPage+1)};loadInvestors()" ${investorPage===pag.totalPages?'disabled':''}>Next</button>
+    ` : (pag ? `<span>${pag.total} investors</span>` : '');
+  } catch (e) {
+    if (e.name !== 'AbortError') console.error(e);
+  }
+}
+
+async function validateInvestor(id, level) {
+  await fetch(`/api/investors/${id}/validation`, { method:'PATCH', headers:{'Content-Type':'application/json'}, body: JSON.stringify({is_validated:level}) });
+  refreshInvestorCounts();
+  loadInvestors();
+}
+
+async function deleteInvestor(id) {
+  if (!confirm('Delete this investor?')) return;
+  await fetch(`/api/investors/${id}`, { method: 'DELETE' });
+  refreshInvestorCounts();
+  loadInvestors();
+}
+
+async function editInvestor(id) {
+  const r = await fetch(`/api/investors/${id}`);
+  if (!r.ok) return alert('Investor not found');
+  const inv = await r.json();
+
+  document.getElementById('investorFormTitle').textContent = `Edit: ${inv.name}`;
+  document.getElementById('invId').value = inv.id;
+  document.getElementById('invInvestorType').value = inv.investor_type || '';
+  document.getElementById('invName').value = inv.name || '';
+  document.getElementById('invCountry').value = inv.country || '';
+  document.getElementById('invCity').value = inv.headquarter_city || '';
+  document.getElementById('invYear').value = inv.founded_year || '';
+  document.getElementById('invStatus').value = inv.company_status || 'Active';
+  document.getElementById('invDescription').value = inv.description || '';
+  document.getElementById('invCapitalization').value = inv.capitalization || '';
+  document.getElementById('invFunds').value = inv.capital_investi || '';
+  document.getElementById('invRevenue').value = inv.revenue_millions || '';
+  document.getElementById('invEmployees').value = inv.employees_count || '';
+  document.getElementById('invOwnership').value = inv.ownership || '';
+  document.getElementById('invParticipation').value = inv.participations || '';
+  document.getElementById('invAcquisitions').value = inv.acquisitions || '';
+  document.getElementById('invPartnerships').value = inv.strategic_partnerships || '';
+  document.getElementById('invKeyResources').value = inv.key_resources || '';
+  document.getElementById('invCompetitors').value = inv.main_competitors || '';
+  document.getElementById('invWebsite').value = inv.website || '';
+  document.getElementById('invLogo').value = inv.logo_url || '';
+  document.getElementById('invValidated').value = inv.is_validated ?? 3;
+
+  document.getElementById('investorForm').classList.remove('hidden');
+  document.getElementById('investorForm').scrollIntoView({ behavior: 'smooth' });
+}
+
+function initInvestorForm() {
+  document.getElementById('addInvestorBtn').addEventListener('click', () => {
+    document.getElementById('investorFormTitle').textContent = 'New Investor';
+    document.getElementById('investorInputForm').reset();
+    document.getElementById('invId').value = '';
+    document.getElementById('investorForm').classList.remove('hidden');
+    document.getElementById('investorForm').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('cancelInvestorBtn').addEventListener('click', () => {
+    document.getElementById('investorForm').classList.add('hidden');
+  });
+
+  document.getElementById('investorInputForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('invId').value;
+    const body = {
+      investor_type: document.getElementById('invInvestorType').value || null,
+      name: document.getElementById('invName').value.trim(),
+      country: document.getElementById('invCountry').value.trim() || null,
+      headquarter_city: document.getElementById('invCity').value.trim() || null,
+      founded_year: parseInt(document.getElementById('invYear').value) || null,
+      company_status: document.getElementById('invStatus').value || null,
+      description: document.getElementById('invDescription').value.trim() || null,
+      capitalization: parseFloat(document.getElementById('invCapitalization').value) || null,
+      capital_investi: parseFloat(document.getElementById('invFunds').value) || null,
+      revenue_millions: parseFloat(document.getElementById('invRevenue').value) || null,
+      employees_count: parseInt(document.getElementById('invEmployees').value) || null,
+      ownership: document.getElementById('invOwnership').value.trim() || null,
+      participations: document.getElementById('invParticipation').value.trim() || null,
+      acquisitions: document.getElementById('invAcquisitions').value.trim() || null,
+      strategic_partnerships: document.getElementById('invPartnerships').value.trim() || null,
+      key_resources: document.getElementById('invKeyResources').value.trim() || null,
+      main_competitors: document.getElementById('invCompetitors').value.trim() || null,
+      website: document.getElementById('invWebsite').value.trim() || null,
+      logo_url: document.getElementById('invLogo').value.trim() || null,
+      is_validated: parseInt(document.getElementById('invValidated').value),
+    };
+
+    const url = id ? `/api/investors/${id}` : '/api/investors';
+    const method = id ? 'PATCH' : 'POST';
+    const r = await fetch(url, { method, headers: {'Content-Type':'application/json'}, body: JSON.stringify(body) });
+    if (!r.ok) { const err = await r.json(); return alert(err.error); }
+
+    document.getElementById('investorForm').classList.add('hidden');
+    refreshInvestorCounts();
+    loadInvestors();
+  });
+}
+
 // ===== ENTERPRISES =====
 async function loadEnterprises() {
   if (enterpriseListAbortController) {
@@ -442,6 +679,9 @@ async function loadEnterprises() {
     }
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
+    }
+    if (enterpriseOrgTypeFilter) {
+      params.set('orgType', enterpriseOrgTypeFilter);
     }
 
     const response = await fetch(`/api/enterprises?${params.toString()}`, {
@@ -566,6 +806,9 @@ function getEnterpriseEmptyLabel() {
   if (enterpriseSegment === 'later') {
     return 'No company marked for later review';
   }
+  if (enterpriseSegment === 'investor') {
+    return 'No investor found';
+  }
   if (enterpriseSegment === 'companieswithoutcompetitors') {
     return 'No company without competitors';
   }
@@ -590,6 +833,7 @@ function renderEnterpriseSubtabCounters() {
     partial: 'Partially validated',
     validated: 'Validated',
     later: 'To review later',
+    investor: 'Investors',
     companieswithoutcompetitors: 'Companies without competitors',
     top100: 'Top100'
   };
@@ -599,6 +843,12 @@ function renderEnterpriseSubtabCounters() {
     const count = enterpriseSegmentCounts[segment] || 0;
     btn.textContent = `${labels[segment]} (${count})`;
   });
+
+  // Update the main nav Investors tab button
+  const investorNavBtn = document.querySelector('.tab-btn[data-tab="investors"]');
+  if (investorNavBtn) {
+    investorNavBtn.textContent = `Investors (${enterpriseSegmentCounts.investor || 0})`;
+  }
 }
 
 async function refreshEnterpriseSegmentCounts() {
@@ -620,6 +870,9 @@ async function refreshEnterpriseSegmentCounts() {
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
     }
+    if (enterpriseOrgTypeFilter) {
+      params.set('orgType', enterpriseOrgTypeFilter);
+    }
 
     const response = await fetch(`/api/enterprises/counts?${params.toString()}`, {
       signal: abortController.signal
@@ -634,6 +887,7 @@ async function refreshEnterpriseSegmentCounts() {
     enterpriseSegmentCounts.partial = payload.partial || 0;
     enterpriseSegmentCounts.validated = payload.validated || 0;
     enterpriseSegmentCounts.later = payload.later || 0;
+    enterpriseSegmentCounts.investor = payload.investor || 0;
     enterpriseSegmentCounts.companieswithoutcompetitors = payload.companieswithoutcompetitors || 0;
     enterpriseSegmentCounts.top100 = payload.top100 || 0;
     renderEnterpriseSubtabCounters();
@@ -1588,7 +1842,7 @@ function escapeHtml(text) {
     '"': '&quot;',
     "'": '&#039;'
   };
-  return text.replace(/[&<>"']/g, m => map[m]);
+  return String(text || '').replace(/[&<>"']/g, m => map[m]);
 }
 
 function closeApplication() {
