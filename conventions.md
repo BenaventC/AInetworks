@@ -146,8 +146,71 @@ En cas de doute sur une information, renseigner `NA` plutôt qu'une valeur hypot
 
 ## 5. Règles de secteurs (`enterprises`)
 
-- Champ `sector` : max 3 labels, séparés par virgules.
-- Labels contrôlés via `scripts/normalize_sectors_labels.js`.
+- Champ `sector` : maximum 5 labels, séparés par des virgules.
+- Labels contrôlés via `scripts/normalize_sector_labels.js`.
+- `Robotics` et `Automation` sont deux labels distincts. Ne pas classer automatiquement la robotique dans `Hardware`.
+- `Aerospace`, `Defence` et `Public Sector` sont trois labels distincts. Ne pas les fusionner dans `Public Sector & Aerospace` ni dans `Aerospace & Defence`.
+- Conserver `HealthTech`, `MedTech` et `Biotech` comme labels distincts. Réaffecter `Health & Social Care` et ses variantes à `HealthTech`.
+- Toutes les variantes de secteur juridique (`Legal tech`, `LegalTech`, `LawTech`, `Legal Technology`) deviennent `LegalTech`.
+- `Agentic` est un label distinct. Les autres variantes génériques d'IA (`Artificial Intelligence`, `AI`, `AI lab`, `Computer vision`, `Vision`, `Speech`) deviennent `AI model`.
+- `HR` et `Recruiting` deviennent `HRM`.
+- La politique de consolidation entre `Marketing`, `Sales`, `CRM` et `Advertising` reste à définir avant toute réaffectation.
+- Les placeholders de secteur (`N/A`, `NA`, `N`, `A`) sont supprimés. Si une fiche ne contient aucun autre label, `sector` doit être `NULL`.
+
+### 5.1 Référentiel cible à valider
+
+Le projet vise un référentiel fermé de 50 labels pertinents, en anglais, présenté dans l'ordre alphabétique. Cette liste est une proposition de travail : ne pas l'appliquer aux fiches avant validation des regroupements restants.
+
+1. `Advertising`
+2. `Aerospace`
+3. `Agriculture & Forestry`
+4. `AI model`
+5. `Agentic`
+6. `Automation`
+7. `Biotech`
+8. `Blockchain & Web3`
+9. `Cloud Provider`
+10. `Computer Vision`
+11. `Construction`
+12. `Customer Experience`
+13. `Data`
+14. `Defence`
+15. `Developer Tools`
+16. `Document AI`
+17. `Drone & UAV`
+18. `Education`
+19. `Energy & ClimateTech`
+20. `Financial Services`
+21. `Gaming`
+22. `Generative Media`
+23. `Hardware`
+24. `HealthTech`
+25. `HRM`
+26. `ICT`
+27. `IT & Security`
+28. `Industrial & Manufacturing`
+29. `Inference & Model Serving`
+30. `Infrastructure`
+31. `LegalTech`
+32. `Logistics & Supply Chain`
+33. `Marketing`
+34. `Media & Entertainment`
+35. `MedTech`
+36. `Mobility & Transport`
+37. `Natural Language Processing`
+38. `Operations`
+39. `Professional Services`
+40. `Public Sector`
+41. `R&D`
+42. `Real Estate & PropTech`
+43. `Retail & E-commerce`
+44. `Robotics`
+45. `Sales`
+46. `Semiconductors`
+47. `Spatial Computing`
+48. `Sustainability`
+49. `Voice & Audio AI`
+50. `Workflow & Productivity`
 
 ---
 

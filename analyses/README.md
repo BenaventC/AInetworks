@@ -13,7 +13,6 @@ analyses/
 
 ## Pré requis
 
-- serveur Node lancé sur `http://localhost:3000`
 - environnement Python avec:
 
 ```bash
@@ -27,10 +26,10 @@ Chaque section suit un format lisible: introduction, résultats (table/graphique
 
 Points clés actuels:
 
-- chargement des entreprises via API paginée (segments `pending` et `validated`)
+- chargement direct des entreprises depuis `database.db`
 - conversion de `capitalization` vers `capitalization_millions`
 - section méthodologique en amont avec schéma Mermaid
-- analyse secteur sur le top 20
+- analyse sectorielle par label normalisé: les fiches multi-labels sont comptées pour chaque label, le tableau complet et l'export sont alphabétiques, et `Aerospace`, `Defence` et `Public Sector` sont distincts
 
 ## Exports générés
 
@@ -52,8 +51,8 @@ jupyter nbconvert --to notebook --execute statistiques_entreprises.ipynb --outpu
 
 ## Dépannage rapide
 
-1. Vérifier que `npm start` est actif.
-2. Tester `http://localhost:3000/api/enterprises`.
+1. Vérifier que `database.db` existe à la racine du projet.
+2. Vérifier que les dépendances Python sont installées dans l'environnement actif.
 3. Redémarrer le kernel si les cellules échouent.
 
 Dernière mise à jour: 22/07/2026

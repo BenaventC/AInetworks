@@ -46,7 +46,7 @@ const partnershipSegmentCounts = {
 };
 const selectedSectorLabels = new Set();
 const TOP_RANKING_SEGMENTS = new Set(['top100', 'top50']);
-const SECTOR_LABEL_OPTIONS = [
+let sectorLabelOptions = [
   'Aerospace',
   'Aerospace & Defence',
   'Agriculture & Forestry',
@@ -342,6 +342,7 @@ function renderValidationButtons(kind, id, currentLevel) {
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
   renderSectorLabelOptions();
+  loadSectorLabelOptions();
   initTabs();
   initEventListeners();
   initInvestorForm();
@@ -1859,9 +1860,32 @@ function renderSectorLabelOptions() {
   const picker = document.getElementById('entSectorLabels');
   if (!picker) return;
 
-  picker.innerHTML = SECTOR_LABEL_OPTIONS
-    .map((label) => `<button type="button" class="sector-chip" data-sector-label="${escapeHtml(label)}" role="option" aria-selected="false">${escapeHtml(label)}</button>`)
+  picker.innerHTML = sectorLabelOptions
+    .map((label) => {
+      const isSelected = selectedSectorLabels.has(label);
+      return `<button type="button" class="sector-chip${isSelected ? ' selected' : ''}" data-sector-label="${escapeHtml(label)}" role="option" aria-selected="${isSelected ? 'true' : 'false'}">${escapeHtml(label)}</button>`;
+    })
     .join('');
+}
+
+async function loadSectorLabelOptions() {
+  try {
+    const response = await fetch('/api/enterprises/filters');
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || 'Server error');
+    }
+
+    sectorLabelOptions = (payload.sectors || [])
+      .slice(0, 40)
+      .map((item) => typeof item === 'string' ? item : item.value)
+      .filter(Boolean)
+      .sort((left, right) => left.localeCompare(right));
+    renderSectorLabelOptions();
+  } catch (error) {
+    console.error('Error while loading sector label options:', error);
+  }
 }
 
 function splitSectorLabels(value) {
@@ -1894,7 +1918,7 @@ function setEnterpriseSectorFromValue(value) {
 
   selectedSectorLabels.clear();
   labels
-    .filter((label) => SECTOR_LABEL_OPTIONS.includes(label))
+    .filter((label) => sectorLabelOptions.includes(label))
     .forEach((label) => selectedSectorLabels.add(label));
 
   if (picker) {
@@ -1908,7 +1932,7 @@ function setEnterpriseSectorFromValue(value) {
   }
 
   if (customInput) {
-    const customLabels = labels.filter((label) => !SECTOR_LABEL_OPTIONS.includes(label));
+    const customLabels = labels.filter((label) => !sectorLabelOptions.includes(label));
     customInput.value = customLabels.join(', ');
   }
 }

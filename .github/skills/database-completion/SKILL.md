@@ -63,9 +63,9 @@ Règle de correction :
 
 ## Scripts Réutilisables (Normalisation)
 
-Ces scripts sont conçus pour être rejoués après imports/enrichissements.
+Les normalisations ponctuelles sont retirées après leur exécution. Conserver les règles et les audits, pas les scripts ad hoc qui modifient directement la base. Les utilitaires pérennes sont conçus pour être rejoués après import ou enrichissement.
 
-- `scripts/normalize_sectors_labels.js` : normalise le champ `sector` avec taxonomie contrôlée (labels séparés par virgules, max 3 labels).
+- `scripts/normalize_sector_labels.js` : normalise le champ `sector` avec taxonomie contrôlée (labels séparés par virgules, maximum 5 labels).
 - `scripts/normalize_geo_english.js` : normalise `country` et `headquarter_city` en anglais, corrige alias/typos et convertit les placeholders (`NA`, `N/A`, etc.) en vide (`NULL`).
 - `scripts/generate_relations_from_enterprises.py` : génère automatiquement des relations à partir des champs entreprise `main_investors`, `main_competitors`, `main_acquisitions`, `strategic_partnerships` (split par virgule), avec extraction optionnelle de date en parenthèses vers `start_date`.
 - `scripts/cleanup_generated_relation_targets.py` : nettoyage post-génération des entreprises cibles (correction d'alias/typos, suppression des valeurs invalides). Le split des noms composites est volontairement **désactivé par défaut** et activable via `--split-composites`.
@@ -74,19 +74,60 @@ Exécution recommandée :
 
 ```bash
 # Prévisualiser sans écrire
-node scripts/normalize_sectors_labels.js
+node scripts/normalize_sector_labels.js
 node scripts/normalize_geo_english.js
 python scripts/generate_relations_from_enterprises.py
 python scripts/cleanup_generated_relation_targets.py --min-id 1615
 
 # Appliquer
-node scripts/normalize_sectors_labels.js --apply
+node scripts/normalize_sector_labels.js --apply
 node scripts/normalize_geo_english.js --apply
 python scripts/generate_relations_from_enterprises.py --apply
 python scripts/cleanup_generated_relation_targets.py --min-id 1615 --apply
 ```
 
 Règle projet : les valeurs de données stockées en base doivent rester en anglais.
+
+## Méthode Réutilisable : Import et Normalisation
+
+Appliquer ce protocole à toute nouvelle liste externe ou à toute source dérivée de champs relationnels.
+
+### 1. Préparer et comparer les identifiants
+
+- Résoudre le chemin de la base relativement à la racine du dépôt; ne pas dépendre du répertoire courant.
+- Normaliser les noms pour comparaison : minuscules, translittération des accents, retrait de la ponctuation et des suffixes légaux si nécessaire.
+- Utiliser cette clé seulement pour détecter les candidats existants. En cas de plusieurs correspondances ou d'ambiguïté, ne pas fusionner automatiquement : consigner le cas pour revue.
+- Ne jamais créer une fiche dont le nom est vide, un placeholder ou une valeur manifestement non entité.
+
+### 2. Écrire de façon idempotente et non destructive
+
+- Faire un inventaire avant écriture et produire un audit des décisions `created`, `updated`, `existing`, `skipped` et `ambiguous`.
+- Pour une fiche existante, compléter uniquement les champs manquants. Ne jamais remplacer une valeur existante sans source plus fiable et plus récente, conformément au score de priorité.
+- Pour une nouvelle fiche, fournir au minimum `name`, `organization_type`, `country` si la source le confirme, un secteur contrôlé et une description anglaise factuelle d'au moins 70 caractères.
+- Affecter `is_validated = 3` aux entrées importées automatiquement tant qu'une validation humaine ou une source de niveau supérieur ne les a pas confirmées.
+- Utiliser une transaction; effectuer un rollback complet en cas d'erreur.
+
+### 3. Importer une liste sectorielle ou géographique
+
+- Conserver la provenance exacte de la liste et sa date de consultation dans l'audit.
+- Appliquer les données géographiques confirmées puis normaliser `country` et `headquarter_city` en anglais.
+- Mapper le secteur source vers la taxonomie contrôlée du projet plutôt que de stocker des libellés libres tels que `Generative AI / LLM` ou `Healthtech / MedTech`.
+- N'inférer aucun fait non documenté. Pour une information inconnue, conserver `NA` dans le fichier de travail ou `NULL` dans la base selon la convention du champ.
+
+### 4. Importer des entités citées comme concurrents
+
+- Extraire les noms des champs relationnels en séparant les valeurs par virgule et en retirant uniquement les précisions terminales entre parenthèses.
+- Compter les citations et conserver l'entreprise source dans l'audit; la fréquence est un indice de priorité, pas une preuve de statut ou de secteur.
+- Appliquer les règles canoniques de `conventions.md` pour les groupes et produits (par exemple, remapper les produits Microsoft vers `Microsoft`).
+- Créer les entités absentes avec une description de provenance explicite, sans déduire leurs attributs métier à partir du seul nom ou du secteur de l'entreprise qui les cite.
+- Ne pas remplir `main_competitors` de la nouvelle fiche avec l'entreprise source : cette relation doit être modélisée séparément ou validée avant écriture.
+
+### 5. Contrôler avant et après application
+
+1. Exécuter un mode aperçu qui ne modifie pas la base et examiner l'audit.
+2. Vérifier les doublons de clés normalisées, les pays hors vocabulaire anglais, les secteurs hors taxonomie et les caractères corrompus.
+3. Appliquer dans une transaction, puis produire les compteurs et un export CSV/JSON UTF-8 des décisions.
+4. Contrôler un échantillon des créations et mises à jour dans l'API ou directement en base.
 
 ## Politique de Priorisation des Sources (OBLIGATOIRE)
 

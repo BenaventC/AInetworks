@@ -1,5 +1,5 @@
 /**
- * Normalise le champ `sector` de la table enterprises vers un référentiel fermé de 24 labels.
+ * Normalise le champ `sector` de la table enterprises vers un référentiel fermé.
  * Opère en dry-run par défaut ; passer --apply pour écrire en base.
  */
 const sqlite3 = require('sqlite3').verbose();
@@ -14,29 +14,37 @@ const ATOM_MAP = {
   'Artificial Intelligence': 'AI model',
   'AI':                      'AI model',
   'AI lab':                  'AI model',
-  'Agentic':                 'AI model',
   'Computer vision':         'AI model',
   'Vision':                  'AI model',
   'Speech':                  'AI model',
   // Health
-  'Health':                  'Health & Social Care',
-  'Oncology':                'Health & Social Care',
-  'Brain AI':                'Health & Social Care',
-  'Biotech':                 'Health & Social Care',
+  'Health':                  'HealthTech',
+  'Health & Social Care':    'HealthTech',
+  'Oncology':                'HealthTech',
+  'Brain AI':                'HealthTech',
+  'Healthtech':              'HealthTech',
+  'Med tech':                'MedTech',
+  'Medical Tech':            'MedTech',
+  // Human resources
+  'HR':                      'HRM',
+  'Recruiting':              'HRM',
   // IT & Security
   'Cyber security':          'IT & Security',
   'Identity':                'IT & Security',
-  // Public Sector
-  'Defense':                 'Public Sector & Aerospace',
-  'Defence':                 'Public Sector & Aerospace',
+  // Aerospace, defence and public sector
+  'Defense':                 'Defence',
+  'Aerospace & Defence':     ['Aerospace', 'Defence'],
+  'Public Sector & Aerospace': ['Aerospace', 'Public Sector'],
   // Hardware
   'HPC':                     'Hardware',
-  'Robotics':                'Hardware',
+  // Legal
+  'legaltech':               'LegalTech',
+  'Legal tech':              'LegalTech',
+  'LawTech':                 'LegalTech',
+  'Legal Technology':        'LegalTech',
   // Cloud
   'Cloud Infrastructure':    'Cloud Provider',
   // Professional Services
-  'legaltech':               'Professional Services',
-  'Legal tech':              'Professional Services',
   'consulting':              'Professional Services',
   // Education
   'edtech':                  'Education',
@@ -48,23 +56,37 @@ const ATOM_MAP = {
 };
 
 const CANONICAL = new Set([
-  'Agriculture & Forestry', 'AI model', 'Cloud Provider', 'Construction',
+  'Aerospace', 'Agriculture & Forestry', 'AI model', 'Cloud Provider',
+  'Construction',
   'Cross Industry', 'Data', 'Education', 'Energy & Utilities',
-  'Financial Services', 'Hardware', 'Health & Social Care', 'ICT',
-  'IT & Security', 'Manufacturing', 'Marketing', 'Media & Entertainment',
-  'Operations', 'Professional Services', 'Public Sector & Aerospace',
+  'Agentic', 'Automation', 'Biotech', 'Defence', 'Financial Services', 'Hardware',
+  'HealthTech', 'HRM', 'ICT',
+  'IT & Security', 'LegalTech', 'Manufacturing', 'Marketing', 'MedTech',
+  'Media & Entertainment', 'Operations', 'Professional Services', 'Public Sector',
+  'Robotics',
   'R&D', 'Real Estate Activities', 'Retail & E-commerce', 'Sales',
   'Transport & Mobility',
 ]);
 
+const PLACEHOLDERS = new Set(['N/A', 'NA', 'N', 'A']);
+
 function normalizeAtom(atom) {
   const trimmed = atom.trim();
+  if (PLACEHOLDERS.has(trimmed.toUpperCase())) return null;
   if (ATOM_MAP[trimmed]) return ATOM_MAP[trimmed];
   if (CANONICAL.has(trimmed)) return trimmed;
   // Capitalise le premier caractère (sécurité)
   const capitalized = trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
   if (CANONICAL.has(capitalized)) return capitalized;
-  return null; // non reconnu
+  return trimmed; // conserver en attente d'une règle de normalisation
+}
+
+function isKnownAtom(atom) {
+  const trimmed = atom.trim();
+  const capitalized = trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
+  return Object.prototype.hasOwnProperty.call(ATOM_MAP, trimmed)
+    || CANONICAL.has(trimmed)
+    || CANONICAL.has(capitalized);
 }
 
 function normalizeSector(raw) {
@@ -73,10 +95,14 @@ function normalizeSector(raw) {
   const unknown = [];
   for (const atom of atoms) {
     const mapped = normalizeAtom(atom);
-    if (mapped && !normalized.includes(mapped)) normalized.push(mapped);
-    else if (!mapped) unknown.push(atom);
+    const labels = Array.isArray(mapped) ? mapped : [mapped];
+    for (const label of labels) {
+      if (label && !normalized.includes(label)) normalized.push(label);
+    }
+    if (mapped && !isKnownAtom(atom)) unknown.push(atom);
   }
-  return { normalized: normalized.sort().join(', '), unknown };
+  const sector = normalized.sort().slice(0, 5).join(', ');
+  return { normalized: sector || null, unknown };
 }
 
 const db = new sqlite3.Database(dbPath);
@@ -98,7 +124,7 @@ db.all(`SELECT id, name, sector FROM enterprises WHERE sector IS NOT NULL AND se
   console.log(`\n${rows.length} entreprises analysées — ${changes.length} à modifier\n`);
 
   if (unknownAll.size > 0) {
-    console.log('⚠  Labels atomiques non reconnus (ignorés) :');
+    console.log('⚠  Labels atomiques non reconnus (conservés en attente de règle) :');
     [...unknownAll].forEach(u => console.log(`   • "${u}"`));
     console.log();
   }
