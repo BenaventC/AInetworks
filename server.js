@@ -44,6 +44,7 @@ function initializeDatabase() {
       rd_expenses_millions REAL,
       capex_millions REAL,
       employees_count INTEGER,
+      community_size INTEGER,
       main_investors TEXT,
       main_competitors TEXT,
       participation TEXT,
@@ -120,6 +121,13 @@ function initializeDatabase() {
           db.run('ALTER TABLE enterprises ADD COLUMN capex_millions REAL', (err) => {
             if (err && !err.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE capex_millions:', err.message);
+            }
+          });
+        }
+        if (!columns.has('community_size')) {
+          db.run('ALTER TABLE enterprises ADD COLUMN community_size INTEGER', (err) => {
+            if (err && !err.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE community_size:', err.message);
             }
           });
         }
@@ -1355,6 +1363,7 @@ app.post('/api/enterprises', (req, res) => {
     rd_expenses_millions,
     capex_millions,
     employees_count,
+    community_size,
     main_investors,
     main_competitors,
     participation,
@@ -1369,8 +1378,8 @@ app.post('/api/enterprises', (req, res) => {
   }
 
   db.run(
-    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, community_size, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       name,
       sector,
@@ -1391,6 +1400,7 @@ app.post('/api/enterprises', (req, res) => {
       rd_expenses_millions,
       capex_millions,
       employees_count,
+      community_size,
       main_investors,
       main_competitors,
       participation,
@@ -1445,6 +1455,7 @@ app.put('/api/enterprises/:id', (req, res) => {
     rd_expenses_millions,
     capex_millions,
     employees_count,
+    community_size,
     main_investors,
     main_competitors,
     participation,
@@ -1456,7 +1467,7 @@ app.put('/api/enterprises/:id', (req, res) => {
   
   db.run(
     `UPDATE enterprises 
-     SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
+    SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, community_size = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
      WHERE id = ?`,
     [
       name,
@@ -1478,6 +1489,7 @@ app.put('/api/enterprises/:id', (req, res) => {
       rd_expenses_millions,
       capex_millions,
       employees_count,
+      community_size,
       main_investors,
       main_competitors,
       participation,

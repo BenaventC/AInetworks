@@ -779,6 +779,7 @@ function renderEnterprises() {
         <div class="field"><div class="field-label">R&D</div><div class="field-value">${formatMillionsUsd(ent.rd_expenses_millions)}</div></div>
         <div class="field"><div class="field-label">Capex</div><div class="field-value">${formatMillionsUsd(ent.capex_millions)}</div></div>
         ${ent.employees_count ? `<div class="field"><div class="field-label">Staff</div><div class="field-value">${ent.employees_count}</div></div>` : ''}
+        ${ent.community_size ? `<div class="field"><div class="field-label">Community size</div><div class="field-value">${ent.community_size}</div></div>` : ''}
         ${ent.website ? `<div class="field field-wide"><div class="field-label">Website</div><div class="field-value"><a href="${ent.website}" target="_blank">${ent.website}</a></div></div>` : ''}
         ${ent.logo_url ? `<div class="field field-full field-logo"><div class="field-label">Logo</div><div class="field-value logo-field-value"><div class="logo-frame"><img src="${ent.logo_url}" alt="${ent.name}" loading="lazy"></div></div></div>` : ''}
         <div class="field field-timestamps field-full">
@@ -979,6 +980,7 @@ function editEnterprise(id) {
     document.getElementById('entRdExpensesMillions').value = parseMillionsValue(ent.rd_expenses_millions) ?? '';
     document.getElementById('entCapexMillions').value = parseMillionsValue(ent.capex_millions) ?? '';
     document.getElementById('entEmployees').value = ent.employees_count || '';
+    document.getElementById('entCommunitySize').value = ent.community_size || '';
     document.getElementById('entValidated').value = String(normalizeValidationLevel(ent.is_validated));
     document.getElementById('enterpriseForm').classList.remove('hidden');
     document.getElementById('enterpriseForm').scrollIntoView({ behavior: 'smooth' });
@@ -1079,6 +1081,7 @@ async function submitEnterpriseForm(e) {
     rd_expenses_millions: rdExpensesMillions,
     capex_millions: capexMillions,
     employees_count: document.getElementById('entEmployees').value ? parseInt(document.getElementById('entEmployees').value, 10) : null,
+    community_size: document.getElementById('entCommunitySize').value ? parseInt(document.getElementById('entCommunitySize').value, 10) : null,
     is_validated: normalizeValidationLevel(document.getElementById('entValidated').value)
   };
 
