@@ -17,7 +17,7 @@ analyses/
 - environnement Python avec:
 
 ```bash
-pip install pandas numpy matplotlib seaborn plotly requests jupyter
+pip install pandas numpy matplotlib seaborn plotly umap-learn requests jupyter
 ```
 
 ## Notebook principal
@@ -40,18 +40,22 @@ Le notebook génère:
 - `analyses/exports/statistiques_par_secteur.csv`
 - `analyses/exports/donnees_completes.csv`
 
-## Carte AFC sectorielle
+## Carte sectorielle UMAP
 
-Le notebook `sector_positioning_ca.ipynb` construit une AFC simple de la matrice
-entreprises × labels sectoriels pour les entreprises dont `capitalization > 100`
-(USD millions). Les labels entreprises sont dimensionnés selon leur capitalisation;
+Le notebook `sector_positioning_ca.ipynb` construit une projection UMAP de profils
+entreprises × labels sectoriels pondérés en TF-IDF pour les entreprises dont
+`capitalization > 100` (USD millions). Les entreprises sont projetées avec la
+distance cosinus; les secteurs sont positionnés à leur barycentre TF-IDF dans le
+même espace. Les labels entreprises sont dimensionnés selon leur capitalisation;
 les points secteurs sont dimensionnés selon leur fréquence dans la population analysée.
 
 Exports:
 
-- `analyses/exports/sector_ca_company_coordinates.csv`
-- `analyses/exports/sector_ca_sector_coordinates.csv`
-- `analyses/exports/sector_positioning_ca.html`
+- `analyses/exports/sector_umap_company_coordinates.csv`
+- `analyses/exports/sector_umap_sector_coordinates.csv`
+- `analyses/exports/sector_umap_summary.csv`
+- `analyses/exports/sector_positioning_umap.html`
+- `analyses/exports/sector_positioning_umap.png`
 
 Exécution:
 

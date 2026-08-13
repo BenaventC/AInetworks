@@ -1,0 +1,214 @@
+id,name,country,capitalization_millions,sector,axis_1,axis_2,label_size
+17,Nvidia,United States,5000000.0,"AI model, Hardware",-17.716022,18.822868,22.0
+4,Google,United States,4560000.0,"AI model, Marketing, Media & Entertainment, Sales",-4.034831,8.228491,21.412161807460127
+158,Apple,United States,4500000.0,ICT,29.95353,-0.84570163,21.32984121002066
+5,Microsoft,United States,3450000.0,"AI model, Cloud Provider, Professional Services",-5.6251206,12.27595,19.78857397319924
+1615,Amazon,United States,2900000.0,"Cloud Provider, Marketing, Retail & E-commerce, Sales",-3.6705563,8.798741,18.886373150045277
+1967,TSMC,Taiwan,2170000.0,Hardware,-17.741993,19.45883,17.544003396745595
+53,Broadcom,United States,1835000.0,"Hardware, Industrial & Manufacturing, Operations",-4.6592546,15.015048,16.852103366866878
+1668,Meta,United States,1503000.0,"AI model, Advertising, Media & Entertainment",-6.868502,9.686899,16.10073495845189
+159,SpaceX,United States,1480000.0,"Aerospace, Cloud Provider, Data",-6.580358,11.602804,16.045739931666713
+9,AWS,United States,1200000.0,Hardware,-17.371408,19.404194,15.338438352921349
+160,Tesla,United States,1180000.0,"Energy & ClimateTech, Mobility & Transport, Robotics",-9.435623,6.6766834,15.284900083122114
+1618,AMD,United States,794000.0,Hardware,-17.505884,19.387205,14.144810777349797
+1573,ByteDance,China,550000.0,Media & Entertainment,-6.9927034,9.86485,13.271998251403257
+1619,Intel,United States,508000.0,Hardware,-17.846516,19.390549,13.103338662036432
+161,Oracle,United States,408000.0,"Cloud Provider, Data, Infrastructure, Professional Services",-6.726624,11.731127,12.671201959262334
+1571,YouTube,United States,400000.0,Media & Entertainment,-7.0321016,9.859063,12.63444762085522
+1968,ASML,Netherlands,380000.0,Hardware,-17.41538,19.473013,12.540920540785866
+162,Palantir,United States,318020.0,"AI model, Aerospace, Professional Services, Public Sector",-4.721553,13.578254,12.23425434297969
+163,Alibaba,China,282750.0,"Cloud Provider, Financial Services, Retail & E-commerce",-3.8897064,10.600858,12.046254420250902
+114,ARM Holdings,United Kingdom,253350.0,Hardware,-17.471645,19.312035,11.880369518836714
+165,Adobe,United States,252800.0,ICT,29.72247,-0.9045603,11.877176936443899
+15,IBM,United States,213000.0,"AI model, Cloud Provider, Professional Services",-5.5599356,12.328565,11.636131044260877
+133,Databricks,United States,188000.0,ICT,29.623688,-0.5293917,11.473014461978417
+1791,Salesforce,United States,180000.0,"Marketing, Professional Services, Sales",-3.8847036,8.163334,11.418550313408296
+1569,Qualcomm,United States,172240.0,Hardware,-17.47837,19.564428,11.364551064571774
+1792,Shopify,Canada,160000.0,Retail & E-commerce,-3.5060635,9.653309,11.276841257024238
+90,Waymo,United States,126000.0,"AI model, Mobility & Transport",-9.545591,6.5737333,11.013822815391865
+1568,Snowflake,United States,112000.0,"Data, Infrastructure",-7.0973625,11.112557,10.895260512517462
+164,Cambricon Technologies,China,104500.0,Hardware,-17.445065,19.599308,10.82868470059779
+1612,Cloudflare,United States,103500.0,"Cloud Provider, IT & Security",-6.145275,11.59813,10.819629698224544
+1588,Ant Group,China,103000.0,"AI model, Financial Services",-3.978092,11.126872,10.815085792881083
+1966,Thomson Reuters,Canada,78000.0,"Data, Media & Entertainment",-7.123939,10.186339,10.571830190568019
+2865,RELX,United Kingdom,62000.0,"Data, Media & Entertainment",-7.1438932,10.239804,10.394946619915888
+51,Anduril Industries,United States,61000.0,"AI model, Aerospace, Drone & UAV, Public Sector",-4.5847964,13.813955,10.383171373239902
+28,DeepSeek,China,60000.0,AI model,-18.088478,18.605299,10.371299206049164
+52,Anysphere,United States,60000.0,"AI model, Developer Tools",-17.075636,18.317474,10.371299206049164
+66,Figure AI,United States,39000.0,Robotics,-10.391107,2.9112797,10.094091299454513
+29,Moonshot AI,China,35000.0,AI model,-17.919495,18.336893,10.033344709424151
+10,GitHub,United States,35000.0,"AI model, Professional Services",-5.103553,12.420007,10.033344709424151
+25,Safe Superintelligence,United States,32000.0,"AI model, R&D",-11.251648,19.292463,9.98546938211479
+86,Scale AI,United States,29000.0,Data,-7.0359893,10.638675,9.935292145334213
+147,Reflection,United States,27500.0,AI model,-17.813316,18.496813,9.909229152206562
+57,Cognition AI,United States,26000.0,"AI model, Developer Tools",-17.144659,18.220007,9.882445115199058
+1910,Kuaishou,China,26000.0,"AI model, Computer Vision",-9.37079,8.508328,9.882445115199058
+60,CoreWeave,United States,23000.0,"AI model, Cloud Provider, Hardware, Infrastructure",-6.5530453,12.148459,9.826450537547156
+20,Cohere,Canada,20000.0,"AI model, Cloud Provider",-5.9217486,12.199784,9.766668497306236
+145,Perplexity,United States,20000.0,"AI model, Hardware",-17.666172,18.937237,9.766668497306236
+1921,Boston Dynamics,United States,20000.0,"AI model, Robotics",-10.238957,3.0606675,9.766668497306236
+2,Anthropic,United States,18400.0,Hardware,-17.748291,19.497877,9.732942277900138
+109,Helsing,Germany,18000.0,"Aerospace, Industrial & Manufacturing, Operations, Public Sector",-4.535653,14.359256,9.724283933899892
+1962,Kling AI,China,18000.0,"Computer Vision, Generative Media",-8.941732,8.538906,9.724283933899892
+1,Cerebras,United States,18000.0,Hardware,-17.616077,19.269608,9.724283933899892
+166,Dynatrace,United States,16480.0,ICT,29.555935,-0.87149835,9.690470870705557
+151,Sierra,United States,15800.0,"Marketing, Sales",-3.7104979,8.0353365,9.674839926052378
+922,Langfuse,Germany,15000.0,AI model,-17.99576,18.491566,9.656013397652185
+221,Nscale,United Kingdom,14600.0,Cloud Provider,-5.970586,12.087572,9.646411810435103
+152,Skild AI,United States,14000.0,"Industrial & Manufacturing, Operations",-4.2978964,15.162477,9.63175933130076
+167,Aurora Innovation,United States,12370.0,R&D,-11.301154,19.204638,9.59028692469097
+132,Cyera,United States,12000.0,"Data, IT & Security",-6.6278524,11.108222,9.58049866562182
+223,Celonis,Germany,12000.0,"Industrial & Manufacturing, Operations, Professional Services",-4.3872004,15.115069,9.58049866562182
+2397,Viasat,United States,11900.0,Data,-7.1862135,10.768644,9.57782737597416
+3,Mistral AI,France,11700.0,AI model,-17.717289,18.381004,9.572450910339217
+139,Harvey,United States,11000.0,"LegalTech, Professional Services",-4.6784577,12.066448,9.553261760527052
+146,Physical Intelligence,United States,11000.0,"AI model, Robotics",-10.360707,2.9391906,9.553261760527052
+2320,Elastic,United States,10500.0,"Data, Professional Services",-7.0441546,10.895047,9.53917863268807
+30,MiniMax,China,10300.0,"AI model, Computer Vision, Generative Media",-9.220186,8.50477,9.53345169670315
+77,"Midjourney, Inc.",United States,10000.0,"AI model, Computer Vision",-9.212017,8.580435,9.524756006197464
+129,Cognition,United States,10000.0,ICT,29.627075,-0.7968428,9.524756006197464
+130,Crusoe,United States,10000.0,"Agentic, Automation, Industrial & Manufacturing, Operations",-4.737166,15.389686,9.524756006197464
+111,1X Technologies,United States,10000.0,Robotics,-10.331879,2.9703329,9.524756006197464
+1920,Cognex,United States,9600.0,"AI model, Computer Vision",-9.403788,8.617985,9.512956235972789
+222,Wayve,United Kingdom,8600.0,ICT,29.474995,-0.41372353,9.482333262180285
+230,Kraken Technologies,United Kingdom,8600.0,ICT,30.136312,-0.69534594,9.482333262180285
+168,Tempus AI,United States,8490.0,Biotech,-8.266093,8.357341,9.478858357595831
+68,Glean Technologies,United States,7200.0,"AI model, Professional Services",-5.078395,12.535362,9.436292134085823
+170,SentinelOne,United States,7120.0,IT & Security,-6.3479915,11.26706,9.43353130734062
+224,Neura Robotics,Germany,7000.0,"AI model, Industrial & Manufacturing, Operations",-4.4750557,14.815119,9.42936082007077
+70,Groq,United States,6900.0,"AI model, Inference & Model Serving",-17.386562,17.83587,9.425858027734689
+169,Mobileye,Israel,6700.0,"Computer Vision, Hardware, Mobility & Transport",-9.653591,6.4750366,9.418775451402265
+171,UiPath,United States,6430.0,"Industrial & Manufacturing, Operations, Professional Services",-4.409296,15.176793,9.409044095824086
+225,ContentSquare,France,5600.0,"Marketing, Sales",-3.591529,8.189393,9.377774437322785
+172,Presight AI,United Arab Emirates,5520.0,"Energy & ClimateTech, Financial Services",-4.0709896,11.142283,9.374641444612967
+150,SambaNova,United States,5500.0,"AI model, Hardware",-17.985672,18.975668,9.37385465547001
+154,Suno AI,United States,5400.0,"AI model, Media & Entertainment",-6.9357243,9.594709,9.369899074293393
+85,Runway,United States,5300.0,"AI model, Computer Vision, Generative Media, Media & Entertainment",-9.173202,8.508277,9.365906694635424
+1917,Abridge,United States,5300.0,"AI model, HealthTech",-1.139971,18.724182,9.365906694635424
+228,Ineffable Intelligence,United Kingdom,5100.0,"AI model, R&D",-11.403554,19.146023,9.357807303238037
+157,World Labs,United States,5000.0,AI model,-17.990995,18.165937,9.35369804328072
+232,OakNorth Credit Intelligence,United Kingdom,5000.0,ICT,29.784147,-0.66834134,9.35369804328072
+2191,5C,Canada,5000.0,"Energy & ClimateTech, Industrial & Manufacturing, Operations",-4.313046,15.01484,9.35369804328072
+174,LG CNS,South Korea,4930.0,Workflow & Productivity,-7.9090548,11.530544,9.350797060876134
+240,Recursive Superintelligence,United Kingdom,4650.0,"AI model, Agentic",-10.618243,16.949379,9.338981872578282
+7,Hugging Face,United States,4500.0,Hardware,-17.498985,19.4636,9.332505761577549
+63,Decagon,United States,4500.0,"Marketing, Natural Language Processing, Retail & E-commerce, Sales",-3.6572244,8.779721,9.332505761577549
+173,Fermi Inc.,United States,4240.0,"Cloud Provider, Energy & ClimateTech",-5.8747187,12.0238495,9.321019342152292
+122,Synthesia,United Kingdom,4000.0,AI model,-17.879381,18.383017,9.310099592415208
+16,Dataiku,France,3700.0,ICT,29.92809,-0.96637905,9.29597820637578
+1919,Doctolib,France,3600.0,HealthTech,-1.3439639,18.573376,9.29114463942056
+229,AMI Labs,France,3500.0,AI model,-18.26989,18.52874,9.286243460277982
+175,Pony AI,China,3400.0,Mobility & Transport,-9.499147,6.6196666,9.281271749696502
+126,Black Forest Labs,Germany,3250.0,"AI model, Computer Vision, Generative Media",-9.327381,8.471042,9.273675013533763
+181,Recursion Pharmaceuticals,United States,3005.0,Biotech,-8.236424,8.358956,9.260879587741428
+176,SoundHound AI,United States,2850.0,"AI model, Voice & Audio AI",-17.82213,17.95588,9.252513444710328
+177,Upstart,United States,2800.0,Financial Services,-4.032587,11.108211,9.249766379219997
+105,Sakana AI,Japan,2700.0,"AI model, Agentic",-10.526261,16.869703,9.244197656617608
+236,ManoMano,France,2600.0,Retail & E-commerce,-3.5731928,9.724491,9.238524818703333
+137,Genspark.ai,United States,2600.0,"AI model, Workflow & Productivity",-7.978684,11.570633,9.238524818703333
+134,EliseAI,United States,2200.0,"HealthTech, Natural Language Processing, Real Estate & PropTech",-1.5447991,18.195663,9.214661198356275
+178,SPACE42,United Arab Emirates,2130.0,Data,-7.0375834,10.626766,9.210267934755773
+179,Innodata,United States,2070.0,Data,-7.1182523,10.6805105,9.20644447374279
+1958,Pasqal,,2000.0,ICT,29.900215,-1.0050282,9.201913037470101
+1750,5C Group,Canada,2000.0,"Hardware, Infrastructure",-16.8997,19.543636,9.201913037470101
+1597,Kaola,China,2000.0,Retail & E-commerce,-3.6570644,9.741638,9.201913037470101
+34,Aleph Alpha,Germany,2000.0,AI model,-18.074856,18.072935,9.201913037470101
+8,DeepL,Germany,2000.0,ICT,29.872234,-1.0324847,9.201913037470101
+1716,Semrush,,1960.0,"Data, Marketing, Sales",-3.5903456,8.154767,9.199287991467207
+180,WeRide,China,1940.0,Mobility & Transport,-9.563919,6.553824,9.197965423191894
+1601,Weibo,China,1900.0,Media & Entertainment,-7.106029,9.699831,9.19529967421594
+1926,IQM Quantum Computers,Finland,1800.0,Hardware,-17.788343,19.642885,9.188509861670514
+2202,Ahrefs,,1750.0,"Data, Marketing, Sales",-3.555666,8.036391,9.185044204662988
+256,Domyn,Italy,1700.0,ICT,30.172176,-0.6377417,9.181528674396725
+182,BigBear.ai,United States,1550.0,"Aerospace, Public Sector",-4.6206117,13.78011,9.170659806937705
+227,Job&Talent,Spain,1500.0,ICT,29.764826,-0.6369236,9.16692082250813
+1964,Harvey AI,United States,1500.0,"LegalTech, Professional Services",-4.686661,12.065623,9.16692082250813
+226,Oxford Nanopore Technologies,United Kingdom,1440.0,"AI model, HealthTech",-1.1014413,18.625587,9.162350791151207
+1839,Harmattan AI,France,1400.0,"Aerospace, Drone & UAV, Public Sector",-4.6535273,13.808456,9.159251013288994
+1918,Ambiance Healthcare,United States,1400.0,HealthTech,-1.2143537,18.512928,9.159251013288994
+1767,Lightspeed,,1350.0,"Professional Services, Retail & E-commerce",-3.6054018,9.854062,9.1553133317743
+183,C3 AI,United States,1330.0,ICT,29.915224,-0.4756631,9.153717876613289
+243,Einride,Sweden,1315.0,Mobility & Transport,-9.644266,6.474525,9.152513397847718
+35,DentalMonitoring,France,1200.0,"AI model, HealthTech",-1.0845482,18.642448,9.143040967496807
+2136,Ada Support,Canada,1200.0,"Marketing, Natural Language Processing, Retail & E-commerce, Sales",-3.6079216,8.727124,9.143040967496807
+148,Replit,United States,1160.0,Developer Tools,-16.772413,18.3302,9.139640500471007
+1948,CommerceIQ,United States,1100.0,AI model,-17.768274,18.238543,9.134427901845477
+184,WhiteFiber,United States,1060.0,Cloud Provider,-5.97194,12.066638,9.130873465703749
+27,01.AI,China,1000.0,AI model,-17.670841,18.564314,9.125413590835207
+44,Shift Technology,France,1000.0,"Financial Services, LegalTech",-4.244464,11.448245,9.125413590835207
+37,H Company,France,1000.0,"AI model, Agentic",-10.518186,16.858389,9.125413590835207
+94,4Paradigm,China,1000.0,"AI model, Professional Services",-5.1623793,12.442666,9.125413590835207
+751,Franka Emika,Germany,1000.0,"Industrial & Manufacturing, Operations, Robotics",-4.4201884,15.089547,9.125413590835207
+1887,Dash0,Germany,1000.0,AI model,-18.152847,18.53868,9.125413590835207
+2267,ChapsVision,,1000.0,"AI model, Aerospace, Professional Services, Public Sector",-4.719172,13.62841,9.125413590835207
+285,Agile Robots,Germany,1000.0,"AI model, Robotics",-10.318221,2.9813077,9.125413590835207
+42,Owkin,France,1000.0,"AI model, HealthTech",-1.2813495,18.547413,9.125413590835207
+121,Stability AI,United Kingdom,1000.0,"AI model, Biotech, Computer Vision, Generative Media",-8.903227,8.371056,9.125413590835207
+234,Mollie,Netherlands,865.0,ICT,29.966862,-0.3843243,9.112495499792537
+124,Applied Intuition,United States,850.0,Mobility & Transport,-9.708623,6.4107985,9.110999669475854
+141,Legora,Sweden,815.0,ICT,30.07263,-0.7959552,9.107457218089976
+1836,PolyAI,United Kingdom,750.0,"AI model, Marketing, Sales, Voice & Audio AI",-3.6574526,8.106165,9.100670358346859
+185,ODDITY Tech,Israel,740.0,"AI model, HealthTech",-1.1068658,18.690193,9.099600495041278
+235,Mews,Netherlands,718.0,ICT,29.858978,-0.2657292,9.097221052284683
+1637,Run:ai,Israel,700.0,AI model,-17.58687,18.246773,9.095246984237601
+238,Exscientia,United Kingdom,675.0,ICT,29.88322,-0.66293013,9.092462622936408
+239,Acronis,Switzerland,658.0,ICT,29.349329,-0.76615936,9.090539700982468
+241,Nothing,United Kingdom,645.0,ICT,29.416332,-0.9479031,9.089052411422122
+242,Stark,Germany,627.0,ICT,29.395542,-1.0908626,9.08696811826688
+244,Boom,Belgium,613.0,ICT,29.550112,-0.5708329,9.085326231908239
+1752,2CRSI,France,610.0,Hardware,-17.669748,19.779976,9.084971967653676
+125,Baseten,United States,585.0,ICT,30.04299,-0.23583585,9.081985218146784
+245,Parloa,Germany,564.0,Media & Entertainment,-7.150748,9.84388,9.079426653481677
+156,Together AI,United States,548.0,"AI model, Inference & Model Serving, Infrastructure",-17.106169,17.646835,9.077445136448041
+246,CuspAI,United Kingdom,530.0,ICT,29.658459,-0.2240999,9.075181027906629
+11,Perplexity AI,United States,520.0,ICT,30.333609,-0.79296046,9.073906558966629
+36,Sidetrade,France,500.0,Financial Services,-4.1641574,11.234465,9.071320313362653
+104,Hailo Technologies,Israel,500.0,"AI model, R&D",-11.493863,19.05677,9.071320313362653
+1267,RobCo GmbH,Germany,500.0,"Industrial & Manufacturing, Operations",-4.4974904,15.115661,9.071320313362653
+1822,PhotoRoom,France,500.0,"Computer Vision, Generative Media, Media & Entertainment",-8.991162,8.61616,9.071320313362653
+248,Ki Insurance,United Kingdom,500.0,ICT,29.31649,-0.5340936,9.071320313362653
+249,Quantum Systems,Germany,498.0,ICT,29.652988,-1.2191371,9.071058866205309
+250,PhysicsX,United Kingdom,487.0,ICT,30.010553,-0.5241051,9.069611427033529
+186,AIAI Holdings Corporation,United States,470.0,AI model,-18.200226,18.420233,9.067341932891367
+187,Serve Robotics,United States,450.0,Robotics,-10.213312,3.0889056,9.06461872546286
+253,Builder,United Kingdom,445.0,ICT,29.570665,-0.30390623,9.06392851877656
+252,Exotec,France,445.0,"Industrial & Manufacturing, Operations",-4.589699,15.021691,9.06392851877656
+1835,Cradle,Switzerland,420.0,Biotech,-8.2670145,8.292228,9.060417797941778
+254,Aiven,Finland,420.0,ICT,29.472383,-0.5480524,9.060417797941778
+1562,Procore,United States,406.0,"Construction, Real Estate & PropTech",-1.8516288,17.784975,9.058406054519335
+247,Kandou AI,Switzerland,400.0,Hardware,-17.669476,19.578693,9.057533272643656
+1923,OLLAMA,,400.0,"AI model, Inference & Model Serving",-17.32479,17.778763,9.057533272643656
+255,Pigment,France,389.0,ICT,30.238317,-1.0274183,9.055915998224457
+257,Entrepreneurs First,United Kingdom,381.0,ICT,30.339102,-0.65463644,9.05472538838936
+258,Gousto,United Kingdom,374.0,ICT,29.898964,-0.86777246,9.053673309728243
+1422,Text,Poland,345.0,"AI model, Media & Entertainment",-7.0204945,9.732292,9.049206053094647
+188,One Stop Systems,United States,340.0,"AI model, Cloud Provider, Infrastructure",-6.402396,12.132463,9.048417108341637
+135,Fal,United States,330.0,Media & Entertainment,-7.1682744,9.621008,9.046821619856699
+144,Notion,United States,330.0,Workflow & Productivity,-7.998183,11.617608,9.046821619856699
+1809,Musixmatch,Italy,300.0,Media & Entertainment,-7.1842003,9.831137,9.041884278376006
+1834,Indium,United States,300.0,Data,-7.2560306,10.545947,9.041884278376006
+1925,Corti,Danemark,300.0,"AI model, HealthTech",-1.2081405,18.701797,9.041884278376006
+1823,Dust,France,300.0,"Agentic, HealthTech",-10.383266,16.787756,9.041884278376006
+38,LightOn,France,288.0,AI model,-18.189426,18.2717,9.039840498221329
+192,Appen,Australia,263.0,ICT,29.6195,-1.0919464,9.03544108219173
+189,Duos Technologies Group,United States,260.0,"Automation, IT & Security",-6.243538,11.365795,9.034899341849592
+1563,Apollo,United States,250.0,"Marketing, Sales",-3.770031,8.121006,9.033070590045206
+190,Palladyne AI,United States,240.0,"AI model, Data, Workflow & Productivity",-7.7894506,11.3870535,9.031204882556375
+1824,Gleamer,France,230.0,"AI model, HealthTech",-1.3489983,18.5474,9.0292998840844
+1564,BuildOps,United States,226.0,"Industrial & Manufacturing, Operations",-4.5064073,15.266015,9.028526312108054
+127,Chai Discovery,United States,225.0,"AI model, Biotech",-8.250259,8.330949,9.028331851796544
+191,"QumulusAI, Inc.",United States,220.0,"AI model, Cloud Provider",-5.863716,12.261901,9.027353002498167
+128,Clay,United States,210.0,"Marketing, Sales",-3.8961132,8.242268,9.025361347459114
+1872,Aqemia,France,180.0,"AI model, HealthTech, R&D",-11.306259,19.193304,9.019083223719674
+1565,Qualified,United States,163.0,"Marketing, Sales",-3.6455348,7.924229,9.015291346042776
+153,Speak,United States,162.0,"AI model, Education",-18.033957,18.0677,9.015062270979799
+149,Rogo,United States,150.0,Professional Services,-5.0058312,12.411157,9.012256170094904
+193,Healwell AI,Canada,150.0,"AI model, HealthTech",-1.0790406,18.809143,9.012256170094904
+194,Almawave,Italy,150.0,AI model,-18.154583,18.274117,9.012256170094904
+266,4.screen,Germany,150.0,"Media & Entertainment, Mobility & Transport",-9.685232,6.4295993,9.012256170094904
+1559,Cognism,United Kingdom,130.0,"Marketing, Sales",-3.6763794,7.919248,9.007317074110917
+1866,Comand AI,France,124.0,"AI model, Aerospace, Defence",-4.637718,13.632251,9.005762241389828
+2034,Doctrine,France,120.0,LegalTech,-4.5435214,11.837881,9.004704696891867
+1828,Yseop,France,120.0,"AI model, HealthTech",-1.3000066,18.601587,9.004704696891867
+195,AMC Robotics Corporation,United States,110.0,Robotics,-10.416434,2.8855822,9.00198100638239
+1560,PlanRadar,Austria,103.0,"Construction, Real Estate & PropTech",-1.7806402,17.852167,9.0

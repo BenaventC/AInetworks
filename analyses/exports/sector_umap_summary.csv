@@ -1,0 +1,10 @@
+metric,value
+enterprises,213
+sectors,39
+enterprise_sector_links,378
+capitalization_threshold_millions,100.0
+projection_method,UMAP on TF-IDF enterprise-sector profiles
+distance_metric,cosine
+umap_neighbors,20
+umap_min_dist,0.15
+random_state,42
