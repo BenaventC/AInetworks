@@ -188,9 +188,7 @@ function initializeDatabase() {
           });
         }
         const setDefaultValidationValue = () => {
-          // Normalize validation values so the project uses the review-later state (3)
-          // for both missing/empty values and the historical "not validated" state (0).
-          db.run('UPDATE enterprises SET is_validated = 3 WHERE is_validated IS NULL OR is_validated = 0 OR is_validated NOT IN (0, 1, 2, 3)', (err) => {
+          db.run('UPDATE enterprises SET is_validated = 3 WHERE is_validated IS NULL OR is_validated NOT IN (0, 1, 2, 3)', (err) => {
             if (err) {
               console.error('Erreur UPDATE enterprises.is_validated normalisation:', err.message);
             }
@@ -1561,7 +1559,8 @@ app.get('/api/investors', (req, res) => {
   const conditions = [];
   const params = [];
 
-  if (segment === 'partial')   conditions.push('IFNULL(is_validated,0) = 1');
+  if (segment === 'pending')   conditions.push('IFNULL(is_validated,0) = 0');
+  else if (segment === 'partial')   conditions.push('IFNULL(is_validated,0) = 1');
   else if (segment === 'validated') conditions.push('IFNULL(is_validated,0) = 2');
   else if (segment === 'later') conditions.push('IFNULL(is_validated,0) = 3');
 

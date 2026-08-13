@@ -349,9 +349,10 @@ function getValidationMeta(level, feminine = true) {
 
 function getValidationButtonOptions() {
   return [
+    { level: 0, label: 'Not validated', activeClass: 'btn-validation-neutral-active' },
+    { level: 3, label: 'Review later', activeClass: 'btn-validation-later-active' },
     { level: 1, label: 'Partial', activeClass: 'btn-validation-partial-active' },
-    { level: 2, label: 'Validated', activeClass: 'btn-validation-success-active' },
-    { level: 3, label: 'Review later', activeClass: 'btn-validation-later-active' }
+    { level: 2, label: 'Validated', activeClass: 'btn-validation-success-active' }
   ];
 }
 
