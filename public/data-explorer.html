@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Explorer — Réseaux d'Acteurs IA</title>
+  <title>Quick Data Explorer — Réseaux d'Acteurs IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --rose: #B8727A;
+      --rose-dark: #8B4A52;
+      --chart: #516B0E;
+      --chart-pale: #E8F0BC;
+      --yellow-pale: #FBF0C0;
+      --blue: #2E5280;
+      --ink: #28241E;
+      --muted: #7A6E67;
+      --bg: #F2EDE4;
+      --surface: #FDFAF4;
+      --border: #D5CDC5;
+      --radius: 8px;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,44 +30,101 @@
     }
     
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      padding: 20px;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 12px;
     }
     
     .container {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 0 auto;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-      padding: 30px;
+      background: var(--surface);
+      border-radius: 14px;
+      box-shadow: 0 8px 36px rgba(40,36,30,.15);
+      overflow: hidden;
     }
+
+    .explorer-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 20px 12px;
+      background: var(--chart);
+      border-bottom: 3px solid var(--rose);
+    }
+
+    .explorer-content { padding: 20px; }
     
     h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-      color: #222;
+      font-size: 1.8em;
+      margin-bottom: 3px;
+      color: #F5EFE0;
     }
     
     .subtitle {
       font-size: 12px;
-      color: #666;
-      margin-bottom: 25px;
+      color: var(--chart-pale);
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 14px;
+      align-items: center;
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .legend-label { font-weight: 600; color: var(--ink); }
+    .legend-item { display: inline-flex; align-items: center; gap: 5px; }
+    .legend-swatch { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .legend-swatch.europe { background: #15803D; }
+    .legend-swatch.usa { background: #2563EB; }
+    .legend-swatch.china { background: #DC2626; }
+    .legend-swatch.canada { background: #D97706; }
+    .legend-swatch.asia { background: #7C3AED; }
+    .legend-swatch.other { background: #64748B; }
+    .legend-swatch.company { background: var(--chart-pale); border: 1px solid var(--chart); }
+    .legend-swatch.investor { background: var(--yellow-pale); border: 1px solid #C89010; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: var(--radius);
+      color: #F5EFE0;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      background: rgba(255,255,255,.10);
+      transition: background .2s, transform .15s;
+    }
+
+    .back-link:hover {
+      background: rgba(255,255,255,.22);
+      transform: translateY(-1px);
     }
     
     .loading {
       text-align: center;
       padding: 40px 20px;
-      color: #999;
+      color: var(--muted);
     }
     
     .error {
-      background: #fee;
-      color: #c33;
+      background: #F5E8EA;
+      color: var(--rose-dark);
       padding: 15px;
-      border-radius: 4px;
+      border: 1px solid var(--rose);
+      border-radius: var(--radius);
       margin-bottom: 20px;
     }
     
@@ -59,22 +134,25 @@
     
     .list-item {
       padding: 12px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
       gap: 12px;
       position: relative;
       margin: 0 -12px;
-      border-radius: 4px;
+      border-radius: var(--radius);
+      transition: background .15s;
     }
     
     .list-item:last-child {
       border-bottom: none;
     }
+
+    .list-item:hover { background: #F5EFE0; }
     
     .rank {
       font-size: 10px;
-      color: #999;
+      color: var(--muted);
       min-width: 35px;
       text-align: right;
       font-weight: 600;
@@ -85,7 +163,7 @@
     }
     
     .name a {
-      color: #0066cc;
+      color: var(--blue);
       text-decoration: none;
       font-weight: 500;
       cursor: pointer;
@@ -100,24 +178,24 @@
     .badge {
       font-size: 9px;
       padding: 3px 8px;
-      border-radius: 3px;
+      border-radius: var(--radius);
       font-weight: 600;
       white-space: nowrap;
     }
     
     .badge.enterprise {
-      background: #e3f2fd;
-      color: #1976d2;
+      background: var(--chart-pale);
+      color: var(--chart);
     }
     
     .badge.investor {
-      background: #f3e5f5;
-      color: #7b1fa2;
+      background: var(--yellow-pale);
+      color: #7A5800;
     }
 
     .capitalization {
       font-size: 11px;
-      color: #666;
+      color: var(--muted);
       font-weight: 500;
       white-space: nowrap;
       text-align: right;
@@ -127,10 +205,10 @@
     /* Hover Tooltip */
     .tooltip {
       position: absolute;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(40,36,30,.20);
       padding: 16px 20px;
       font-size: 11px;
       z-index: 1000;
@@ -155,9 +233,9 @@
     .tooltip-title {
       font-weight: 700;
       margin-bottom: 10px;
-      color: #111;
+      color: var(--chart);
       font-size: 13px;
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid var(--chart-pale);
       padding-bottom: 8px;
     }
 
@@ -174,16 +252,16 @@
 
     .tooltip-label {
       font-weight: 600;
-      color: #555;
+      color: var(--muted);
       min-width: 100px;
     }
 
     .tooltip-value {
-      color: #333;
+      color: var(--ink);
     }
 
     .tooltip-loading {
-      color: #999;
+      color: var(--muted);
       font-style: italic;
     }
 
@@ -193,22 +271,52 @@
       left: 10px;
       width: 12px;
       height: 12px;
-      background: white;
-      border: 1px solid #ddd;
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-top: none;
       border-left: none;
       transform: rotate(45deg);
       z-index: 999;
     }
+
+    @media (max-width: 640px) {
+      body { padding: 0; }
+      .container { border-radius: 0; min-height: 100vh; }
+      .explorer-header { padding: 14px; }
+      .explorer-content { padding: 14px; }
+      .back-link { font-size: 11px; }
+      .tooltip { min-width: min(320px, calc(100vw - 28px)); max-width: calc(100vw - 28px); }
+      .capitalization { min-width: 60px; font-size: 10px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Data Explorer</h1>
-    <p class="subtitle">Ranked by capitalization, then funds raised, then revenue</p>
-    <div id="content">
-      <div class="loading">Loading data...</div>
-    </div>
+    <header class="explorer-header">
+      <div>
+        <h1>Quick Data Explorer</h1>
+        <p class="subtitle">Ranked by market capitalization, funds raised, then revenue</p>
+      </div>
+      <a class="back-link" href="/index.html" title="Back to the main page">← Back to main</a>
+    </header>
+    <main class="explorer-content">
+      <div class="legend" aria-label="Ranking and color legend">
+        <span class="legend-label">Ranking:</span>
+        <span class="legend-item">Market cap → funds raised → revenue (USD M)</span>
+        <span class="legend-label">Colour codes:</span>
+        <span class="legend-item"><span class="legend-swatch europe"></span>Europe: green</span>
+        <span class="legend-item"><span class="legend-swatch usa"></span>United States: blue</span>
+        <span class="legend-item"><span class="legend-swatch china"></span>China: red</span>
+        <span class="legend-item"><span class="legend-swatch canada"></span>Canada: orange</span>
+        <span class="legend-item"><span class="legend-swatch asia"></span>Asia: violet</span>
+        <span class="legend-item"><span class="legend-swatch other"></span>Other countries: slate</span>
+        <span class="legend-item"><span class="legend-swatch company"></span>Company</span>
+        <span class="legend-item"><span class="legend-swatch investor"></span>Investor</span>
+      </div>
+      <div id="content">
+        <div class="loading">Loading data...</div>
+      </div>
+    </main>
   </div>
 
   <script>

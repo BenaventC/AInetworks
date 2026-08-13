@@ -154,12 +154,19 @@ En cas de doute sur une information, renseigner `NA` plutôt qu'une valeur hypot
 - Toutes les variantes de secteur juridique (`Legal tech`, `LegalTech`, `LawTech`, `Legal Technology`) deviennent `LegalTech`.
 - `Agentic` est un label distinct. Les autres variantes génériques d'IA (`Artificial Intelligence`, `AI`, `AI lab`, `Computer vision`, `Vision`, `Speech`) deviennent `AI model`.
 - `HR` et `Recruiting` deviennent `HRM`.
+- Les labels de type `Venture & ...`, `Venture and ...` et `Venture Capital &/and ...` deviennent `Venture Capital`.
 - La politique de consolidation entre `Marketing`, `Sales`, `CRM` et `Advertising` reste à définir avant toute réaffectation.
 - Les placeholders de secteur (`N/A`, `NA`, `N`, `A`) sont supprimés. Si une fiche ne contient aucun autre label, `sector` doit être `NULL`.
 
-### 5.1 Référentiel cible à valider
+### 5.1 Référentiel canonique de 50 labels
 
-Le projet vise un référentiel fermé de 50 labels pertinents, en anglais, présenté dans l'ordre alphabétique. Cette liste est une proposition de travail : ne pas l'appliquer aux fiches avant validation des regroupements restants.
+Le projet utilise un référentiel fermé de 50 labels pertinents, en anglais, présenté dans l'ordre alphabétique. Tout label existant doit être réaffecté à cette liste, sans conserver de variante libre dans `sector`.
+
+Le fichier `public/sector_ontology.csv` est la source éditable du référentiel: il définit les labels canoniques, leurs grands groupes, leurs alias et leurs mots-clés. Toute modification manuelle de ce fichier est prise en compte par le normaliseur et le sélecteur de secteurs.
+
+Colonnes du CSV: `canonical_label`, `group`, `alias_terms`, `keyword_terms`, `description`. Les alias et mots-clés multiples sont séparés par `|`; ne pas utiliser de virgule dans une cellule. Après modification, exécuter `node scripts/normalize_sector_labels.js` en aperçu avant toute application avec `--apply`.
+
+Lorsque `ICT` est accompagné d'au moins un autre label, supprimer `ICT` : les catégories plus spécifiques priment. Le conserver uniquement lorsqu'il est le seul label.
 
 1. `Advertising`
 2. `Aerospace`
@@ -208,7 +215,7 @@ Le projet vise un référentiel fermé de 50 labels pertinents, en anglais, pré
 45. `Sales`
 46. `Semiconductors`
 47. `Spatial Computing`
-48. `Sustainability`
+48. `Venture Capital`
 49. `Voice & Audio AI`
 50. `Workflow & Productivity`
 

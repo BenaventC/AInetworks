@@ -1,0 +1,51 @@
+canonical_label,group,alias_terms,keyword_terms,description
+Advertising,Business Functions,AdTech,advertising|adtech,Digital advertising and media buying.
+Aerospace,Industry & Mobility,Aviation,aviation|aerospace|satellite|space,Aircraft space and satellite technologies.
+Agriculture & Forestry,Sector Applications,AgriTech|FoodTech,agriculture|agri|farming|foodtech|forestry,Food agriculture and forestry applications.
+AI model,AI & Data,Artificial Intelligence|AI|AI lab|LLM|LLMs,artificial intelligence|language model|foundation model|machine learning|multimodal|world model,Model development and model providers.
+Agentic,AI & Data,Agents,agentic|agents,Autonomous agent systems.
+Automation,Industry & Mobility,Autonomous Security,automation|autonomous security,Process and decision automation.
+Biotech,Sector Applications,Oncology|AI Pharma,biotech|pharma|drug discovery|oncology,Biotechnology and drug discovery.
+Blockchain & Web3,Business Functions,Blockchain|Web3,blockchain|web3|cryptocurrency,Blockchain and decentralized technologies.
+Cloud Provider,Infrastructure & Engineering,Cloud Infrastructure|Cloud Computing,cloud|neocloud|edge computing|data center|networking|iaas|paas,Cloud platforms and network services.
+Computer Vision,AI & Data,Computer vision|Imaging,image|imaging|geospatial|computer vision,Visual perception and image analysis.
+Construction,Industry & Mobility,BIM,construction|built environment|bim,Construction and built environment.
+Customer Experience,Business Functions,CX|Customer service,customer experience|customer service|cx,Customer support and experience.
+Data,AI & Data,Data Services,data|analytics|business intelligence|annotation|training data,Data platforms analytics and labelling.
+Defence,Industry & Mobility,Defense,defence|defense|military,Defence technologies.
+Developer Tools,Infrastructure & Engineering,Code|IDE,developer|ide|code|no-code|app development|testing|quality assurance,Developer productivity and software engineering.
+Document AI,Sector Applications,Document Management,document ai|document management|document,Document intelligence and processing.
+Drone & UAV,Industry & Mobility,Drone|UAV,drone|uav,Uncrewed aerial systems.
+Education,Sector Applications,EdTech,education|edtech|learning|tutoring,Education and learning technologies.
+Energy & ClimateTech,Sector Applications,ClimateTech|Clean Tech,energy|climate|green tech|clean tech|utilities|marine,Energy climate and environmental technologies.
+Financial Services,Business Functions,FinTech,finance|fintech|banking|payment|insurance|trading,Financial products and services.
+Gaming,Sector Applications,Games,gaming|game,Games and interactive entertainment.
+Generative Media,AI & Data,Image generation|Creative AI,video|creative ai|digital art|image generation|generative media,Generated visual and creative media.
+Hardware,Infrastructure & Engineering,GPU|CPU,gpu|cpu|chip|processor|accelerator|hardware|electronic|photonic|lithography,Computing and physical hardware.
+HealthTech,Sector Applications,Health|Healthcare AI,healthtech|healthcare|health care|medical ai|care tech|cardio|dental|radiology,Digital health and care technologies.
+HRM,Business Functions,HR|Recruiting,human resources|recruit|hrm,Human resources and recruiting.
+ICT,Infrastructure & Engineering,Software,software|saas|ict,General information and communication technologies.
+IT & Security,Public Research & Trust,Cybersecurity|Cyber Security,cyber|security|identity|data protection,Information technology and cybersecurity.
+Industrial & Manufacturing,Industry & Mobility,Industrial|Manufacturing,manufacturing|industrial|factory|assembly|cad|cam|engineering simulation,Industrial production and manufacturing.
+Inference & Model Serving,AI & Data,Inference|Model Serving,inference|model serving|api|ml infrastructure,Model deployment and inference systems.
+Infrastructure,Infrastructure & Engineering,Database|Datalake,infrastructure|database|datalake,Data and technical infrastructure.
+LegalTech,Business Functions,Legal tech|LawTech,legal|lawtech|compliance,Legal services and compliance technology.
+Logistics & Supply Chain,Industry & Mobility,Logistics|Supply Chain,logistics|supply chain|shipping|freight,Logistics procurement and supply chains.
+Marketing,Business Functions,SEO,marketing|seo|brand|campaign,Marketing technology and brand operations.
+Media & Entertainment,Sector Applications,Media|Entertainment,entertainment|media|music|publishing|news|sports,Media content and entertainment.
+MedTech,Sector Applications,Med tech|Medical Tech,medtech|med tech|medical tech,Medical devices and clinical technology.
+Mobility & Transport,Industry & Mobility,Mobility|Transport,mobility|transport|autonomous vehicle|truck,Transport mobility and autonomous vehicles.
+Natural Language Processing,AI & Data,NLP|Chatbot,nlp|conversational|chatbot|translation|langops|search,Language and conversational systems.
+Operations,Industry & Mobility,Ops,operations|procurement|purchasing|ops|predictive maintenance,Operational processes and maintenance.
+Professional Services,Business Functions,Consulting,professional|consulting|business services|technical services,Professional and advisory services.
+Public Sector,Public Research & Trust,Government,public sector|government|public administration|social security,Government and public administration.
+R&D,Public Research & Trust,Research,research|r&d|innovation,Research and development.
+Real Estate & PropTech,Sector Applications,PropTech|Real Estate,real estate|proptech|property,Real estate and property technology.
+Retail & E-commerce,Sector Applications,Retail|E-commerce,retail|e-commerce|marketplace,Retail commerce and marketplaces.
+Robotics,Industry & Mobility,Robotics,robot,Robotic systems.
+Sales,Business Functions,CRM,sales|crm|lead generation|go-to-market,Sales and commercial enablement.
+Semiconductors,Infrastructure & Engineering,Semiconductor,semiconductor,Semiconductor technologies.
+Spatial Computing,Industry & Mobility,Extended Reality,spatial|extended reality|virtual reality|augmented reality,Spatial and immersive computing.
+Venture Capital,Business Functions,Venture Capital,venture|private equity|hedge fund|asset management|investment company|investment management|angel investment,Investment and venture capital.
+Voice & Audio AI,AI & Data,Audio AI|Sound,voice|audio|sound|speech,Speech audio and sound AI.
+Workflow & Productivity,Infrastructure & Engineering,Workflow|Productivity,workflow|productivity|enterprise software|erp|collaboration,Workflow and productivity software.

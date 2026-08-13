@@ -6,6 +6,7 @@ Ce dossier contient le notebook d'analyse principal et ses exports.
 
 ```text
 analyses/
+├── sector_positioning_ca.ipynb
 ├── statistiques_entreprises.ipynb
 ├── exports/
 └── README.md
@@ -16,7 +17,7 @@ analyses/
 - environnement Python avec:
 
 ```bash
-pip install pandas numpy matplotlib seaborn requests jupyter
+pip install pandas numpy matplotlib seaborn plotly requests jupyter
 ```
 
 ## Notebook principal
@@ -38,6 +39,25 @@ Le notebook génère:
 - `analyses/exports/statistiques_par_pays.csv`
 - `analyses/exports/statistiques_par_secteur.csv`
 - `analyses/exports/donnees_completes.csv`
+
+## Carte AFC sectorielle
+
+Le notebook `sector_positioning_ca.ipynb` construit une AFC simple de la matrice
+entreprises × labels sectoriels pour les entreprises dont `capitalization > 100`
+(USD millions). Les labels entreprises sont dimensionnés selon leur capitalisation;
+les points secteurs sont dimensionnés selon leur fréquence dans la population analysée.
+
+Exports:
+
+- `analyses/exports/sector_ca_company_coordinates.csv`
+- `analyses/exports/sector_ca_sector_coordinates.csv`
+- `analyses/exports/sector_positioning_ca.html`
+
+Exécution:
+
+```bash
+jupyter nbconvert --to notebook --execute analyses/sector_positioning_ca.ipynb --output sector_positioning_ca_output.ipynb
+```
 
 ## Exécution
 

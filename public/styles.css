@@ -212,10 +212,22 @@ header h1 {
 
 /* ── SECTOR CHIPS ────────────────────────────────────────────────────────── */
 .sector-label-picker {
-  display: flex; flex-wrap: wrap; gap: 4px;
-  min-height: 34px; padding: 5px;
+  display: grid; gap: 5px;
+  min-height: 34px; padding: 6px;
   border: 1px solid var(--border); border-radius: 4px; background: #fff;
 }
+.sector-label-group { border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+.sector-label-group:last-child { border-bottom: none; padding-bottom: 0; }
+.sector-label-group summary {
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; color: var(--chart); font-size: 0.76em; font-weight: 700;
+  letter-spacing: 0.35px; list-style: none;
+}
+.sector-label-group summary::-webkit-details-marker { display: none; }
+.sector-label-group summary::before { content: '+'; margin-right: 6px; color: var(--rose-dark); }
+.sector-label-group[open] summary::before { content: '−'; }
+.sector-label-group summary span { color: var(--muted); font-weight: 500; }
+.sector-label-group-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 .sector-chip {
   border: 1px solid var(--border); background: var(--surface);
   color: var(--muted); padding: 2px 8px; border-radius: 999px;

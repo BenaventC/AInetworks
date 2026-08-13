@@ -46,9 +46,37 @@ const partnershipSegmentCounts = {
 };
 const selectedSectorLabels = new Set();
 const TOP_RANKING_SEGMENTS = new Set(['top100', 'top50']);
+const SECTOR_LABEL_GROUPS = [
+  {
+    name: 'AI & Data',
+    labels: new Set(['AI model', 'Agentic', 'Audio AI', 'Computer Vision', 'Data', 'Generative Media', 'Inference & Model Serving', 'Model Serving', 'Natural Language Processing', 'Voice & Audio AI', 'Artificial Intelligence', 'Image generation', 'Inference', 'Quantic', 'Sound', 'Voice'])
+  },
+  {
+    name: 'Infrastructure & Engineering',
+    labels: new Set(['Cloud Provider', 'Developer Tools', 'Hardware', 'ICT', 'Infrastructure', 'Productivity', 'Semiconductors', 'Workflow', 'Workflow & Productivity', 'GPU', 'IT', 'Security'])
+  },
+  {
+    name: 'Industry & Mobility',
+    labels: new Set(['Aerospace', 'Automation', 'Construction', 'Drone & UAV', 'Industrial', 'Industrial & Manufacturing', 'Logistics', 'Logistics & Supply Chain', 'Mobility & Transport', 'Operations', 'Robotics', 'Spatial Computing', 'Supply Chain', 'UAV', 'Defence', 'Drone', 'Manufacturing', 'Transport', 'Mobility'])
+  },
+  {
+    name: 'Business Functions',
+    labels: new Set(['Advertising', 'Blockchain', 'Blockchain & Web3', 'Customer Experience', 'Financial Services', 'HRM', 'LegalTech', 'Marketing', 'Professional Services', 'Sales', 'Venture Capital', 'Web3'])
+  },
+  {
+    name: 'Sector Applications',
+    labels: new Set(['Agriculture', 'Agriculture & Forestry', 'Biotech', 'ClimateTech', 'Document AI', 'Education', 'Energy & ClimateTech', 'Forestry', 'Gaming', 'HealthTech', 'MedTech', 'Media & Entertainment', 'PropTech', 'Real Estate', 'Real Estate & PropTech', 'Retail & E-commerce', 'E-commerce', 'Energy', 'Entertainment', 'Health', 'Media', 'Oncology', 'Retail', 'Social Care', 'Utilities'])
+  },
+  {
+    name: 'Public, Research & Trust',
+    labels: new Set(['IT & Security', 'Public Sector', 'R&D', 'Sustainability'])
+  }
+];
+let sectorLabelGroups = SECTOR_LABEL_GROUPS;
+let sectorOntologyEntries = [];
 let sectorLabelOptions = [
   'Aerospace',
-  'Aerospace & Defence',
+  'Defence',
   'Agriculture & Forestry',
   'AI model',
   'Artificial Intelligence',
@@ -60,27 +88,35 @@ let sectorLabelOptions = [
   'Defence',
   'Drone',
   'Education',
-  'Energy & Utilities',
+  'Energy',
+  'Utilities',
   'Financial Services',
   'GPU',
   'Hardware',
-  'Health & Social Care',
+  'Health',
+  'Social Care',
   'ICT',
   'Image generation',
   'Inference',
-  'IT & Security',
-  'Manufacturing & Operations',
-  'Media & Entertainment',
+  'IT',
+  'Security',
+  'Manufacturing',
+  'Operations',
+  'Media',
+  'Entertainment',
   'Oncology',
   'Professional Services',
   'Public Sector',
   'Quantic',
   'R&D',
   'Real Estate Activities',
-  'Retail & E-commerce',
+  'Retail',
+  'E-commerce',
   'Robotics',
-  'Sales & Marketing',
-  'Transport & Mobility',
+  'Sales',
+  'Marketing',
+  'Transport',
+  'Mobility',
   'Voice',
 ];
 const enterprisePagination = {
@@ -1863,28 +1899,93 @@ function renderSectorLabelOptions() {
   const picker = document.getElementById('entSectorLabels');
   if (!picker) return;
 
-  picker.innerHTML = sectorLabelOptions
-    .map((label) => {
-      const isSelected = selectedSectorLabels.has(label);
-      return `<button type="button" class="sector-chip${isSelected ? ' selected' : ''}" data-sector-label="${escapeHtml(label)}" role="option" aria-selected="${isSelected ? 'true' : 'false'}">${escapeHtml(label)}</button>`;
+  const assignedLabels = new Set();
+  const groups = sectorLabelGroups
+    .map((group) => {
+      const labels = sectorLabelOptions.filter((label) => group.labels.has(label));
+      labels.forEach((label) => assignedLabels.add(label));
+      return { ...group, labels };
     })
-    .join('');
+    .filter((group) => group.labels.length > 0);
+  const remainingLabels = sectorLabelOptions.filter((label) => !assignedLabels.has(label));
+  if (remainingLabels.length > 0) {
+    groups.push({ name: 'Other labels', labels: remainingLabels });
+  }
+
+  picker.innerHTML = groups.map((group) => `
+    <details class="sector-label-group" open>
+      <summary>${escapeHtml(group.name)} <span>${group.labels.length}</span></summary>
+      <div class="sector-label-group-chips">
+        ${group.labels.map((label) => {
+          const isSelected = selectedSectorLabels.has(label);
+          return `<button type="button" class="sector-chip${isSelected ? ' selected' : ''}" data-sector-label="${escapeHtml(label)}" role="option" aria-selected="${isSelected ? 'true' : 'false'}">${escapeHtml(label)}</button>`;
+        }).join('')}
+      </div>
+    </details>
+  `).join('');
+}
+
+function buildSectorLabelGroups(entries, labels) {
+  if (!entries.length) return SECTOR_LABEL_GROUPS;
+
+  const grouped = new Map(entries.map((entry) => [entry.group, []]));
+  const other = [];
+  for (const label of labels) {
+    const normalized = label.toLowerCase();
+    const exactEntry = entries.find((candidate) => (
+      candidate.canonicalLabel.toLowerCase() === normalized
+      || candidate.aliases.some((alias) => alias.toLowerCase() === normalized)
+    ));
+    const keywordEntry = entries.find((candidate) => (
+      candidate.keywords.some((keyword) => normalized.includes(keyword))
+    ));
+    const entry = exactEntry || keywordEntry;
+    if (entry) {
+      grouped.get(entry.group).push(label);
+    } else {
+      other.push(label);
+    }
+  }
+
+  const groups = [...grouped.entries()]
+    .map(([name, groupLabels]) => ({ name, labels: new Set(groupLabels) }))
+    .filter((group) => group.labels.size > 0);
+  if (other.length) groups.push({ name: 'Other labels', labels: new Set(other) });
+  return groups;
 }
 
 async function loadSectorLabelOptions() {
   try {
-    const response = await fetch('/api/enterprises/filters');
+    const [response, ontologyResponse] = await Promise.all([
+      fetch('/api/enterprises/filters'),
+      fetch('/sector_ontology.csv')
+    ]);
     const payload = await response.json();
 
     if (!response.ok) {
       throw new Error(payload.error || 'Server error');
     }
 
+    if (ontologyResponse.ok) {
+      const ontologyText = await ontologyResponse.text();
+      sectorOntologyEntries = ontologyText.trim().split(/\r?\n/).slice(1)
+        .map((row) => row.split(',', 5))
+        .map(([canonicalLabel, group, aliases, keywords]) => ({
+          canonicalLabel,
+          group,
+          aliases: (aliases || '').split('|').map((value) => value.trim()).filter(Boolean),
+          keywords: (keywords || '').split('|').map((value) => value.trim().toLowerCase()).filter(Boolean)
+        }))
+        .filter((entry) => entry.canonicalLabel && entry.group);
+    }
+
     sectorLabelOptions = (payload.sectors || [])
-      .slice(0, 40)
       .map((item) => typeof item === 'string' ? item : item.value)
+      .flatMap((label) => splitSectorLabels(label))
       .filter(Boolean)
+      .filter((label, index, labels) => labels.indexOf(label) === index)
       .sort((left, right) => left.localeCompare(right));
+    sectorLabelGroups = buildSectorLabelGroups(sectorOntologyEntries, sectorLabelOptions);
     renderSectorLabelOptions();
   } catch (error) {
     console.error('Error while loading sector label options:', error);
