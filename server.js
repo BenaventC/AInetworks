@@ -241,6 +241,57 @@ function initializeDatabase() {
       });
     });
 
+    // Table des investisseurs; keep the schema available on fresh installations too.
+    db.run(`CREATE TABLE IF NOT EXISTS investors (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL UNIQUE,
+      sector TEXT,
+      country TEXT,
+      headquarter_city TEXT,
+      founded_year INTEGER,
+      description TEXT,
+      website TEXT,
+      logo_url TEXT,
+      capitalization REAL,
+      capital_investi REAL,
+      revenue_millions REAL,
+      employees_count INTEGER,
+      main_competitors TEXT,
+      participations TEXT,
+      acquisitions TEXT,
+      key_resources TEXT,
+      strategic_partnerships TEXT,
+      investor_type TEXT,
+      ownership TEXT,
+      is_validated INTEGER NOT NULL DEFAULT 3,
+      end_year INTEGER,
+      end_reason TEXT,
+      company_status TEXT,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )`, (err) => {
+      if (err) {
+        console.error('Erreur CREATE TABLE investors:', err.message);
+        return;
+      }
+
+      db.all('PRAGMA table_info(investors)', (pragmaErr, rows) => {
+        if (pragmaErr) {
+          console.error('Erreur PRAGMA table_info investors:', pragmaErr.message);
+          return;
+        }
+
+        const columns = new Set(rows.map((row) => row.name));
+        if (!columns.has('sector')) {
+          db.run('ALTER TABLE investors ADD COLUMN sector TEXT', (alterErr) => {
+            if (alterErr && !alterErr.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE investors.sector:', alterErr.message);
+            }
+          });
+        }
+      });
+    });
+
     // Table des partenariats
     db.run(`CREATE TABLE IF NOT EXISTS partnerships (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -1951,12 +2002,29 @@ app.get('/api/investors/:id', (req, res) => {
 });
 
 app.post('/api/investors', (req, res) => {
-  const { name, description, country, sector, website, participations, is_validated } = req.body;
+  const {
+    name, description, country, sector, headquarter_city, founded_year, website, logo_url,
+    capitalization, capital_investi, revenue_millions, employees_count, main_competitors,
+    participations, acquisitions, key_resources, strategic_partnerships,
+    investor_type, ownership, is_validated, end_year, end_reason, company_status
+  } = req.body;
   if (!name) return res.status(400).json({ error: 'name requis' });
   db.run(
-    `INSERT INTO investors (name, description, country, sector, website, participations, is_validated, created_at, updated_at)
-     VALUES (?,?,?,?,?,?,?,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)`,
-    [name, description||null, country||null, sector||null, website||null, participations||null, parseValidationLevel(is_validated,3)],
+    `INSERT INTO investors (
+      name, description, country, sector, headquarter_city, founded_year, website, logo_url,
+      capitalization, capital_investi, revenue_millions, employees_count, main_competitors,
+      participations, acquisitions, key_resources, strategic_partnerships, investor_type,
+      ownership, is_validated, end_year, end_reason, company_status, created_at, updated_at
+    ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)`,
+    [
+      name, description || null, country || null, sector || null, headquarter_city || null,
+      founded_year || null, website || null, logo_url || null, capitalization ?? null,
+      capital_investi ?? null, revenue_millions ?? null, employees_count ?? null,
+      main_competitors || null, participations || null, acquisitions || null,
+      key_resources || null, strategic_partnerships || null, investor_type || null,
+      ownership || null, parseValidationLevel(is_validated, 3), end_year || null,
+      end_reason || null, company_status || null
+    ],
     function(err) {
       if (err) return res.status(500).json({ error: err.message });
       res.status(201).json({ id: this.lastID });

@@ -32,6 +32,7 @@ Requirements:
 
 - Node.js 18+
 - npm
+- the project database `database.db` at the repository root
 
 ### Local Installation
 
@@ -48,6 +49,8 @@ npm start
 ```
 
 The app is available at http://localhost:3000.
+
+The application expects `database.db` to be present at the repository root. The server applies compatible schema migrations at startup; keep a backup before applying substantial database changes.
 
 ### Local Usage
 

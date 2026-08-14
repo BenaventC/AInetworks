@@ -13,4 +13,7 @@ tmp_*
 *.tmp
 *.bak
 *.orig
+server.audit.*
+__pycache__/
+*.pyc
 archives/HPV-*.jpg

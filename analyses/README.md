@@ -6,8 +6,13 @@ Ce dossier contient le notebook d'analyse principal et ses exports.
 
 ```text
 analyses/
+├── competition_analysis.ipynb
+├── evolution_capitalisation_meta_google_nvidia.ipynb
+├── procrustes_alignment_analysis.ipynb
 ├── sector_positioning_ca.ipynb
+├── semantic_similarity_analysis.ipynb
 ├── statistiques_entreprises.ipynb
+├── value_concentration.ipynb
 ├── exports/
 │   └── images/
 └── README.md
@@ -21,7 +26,19 @@ analyses/
 pip install pandas numpy matplotlib seaborn plotly umap-learn requests jupyter
 ```
 
-## Notebook principal
+## Notebooks
+
+Les notebooks sont en anglais pour les titres de graphiques et suivent une structure reproductible : chargement, contrôles, analyse, visualisation et exports.
+
+- `competition_analysis.ipynb` : réseau de concurrence, communautés et cartes 2D.
+- `semantic_similarity_analysis.ipynb` : proximité sémantique des descriptions.
+- `procrustes_alignment_analysis.ipynb` : comparaison des espaces concurrentiel et sémantique.
+- `sector_positioning_ca.ipynb` : positionnement sectoriel et projection UMAP.
+- `statistiques_entreprises.ipynb` : qualité, couverture, pays et secteurs.
+- `evolution_capitalisation_meta_google_nvidia.ipynb` : évolution de capitalisation des grands acteurs technologiques.
+- `value_concentration.ipynb` : concentration cumulative de la capitalisation du Top 200.
+
+## Notebook principal historique
 
 Le notebook `statistiques_entreprises.ipynb` est structuré en 8 sections.
 Chaque section suit un format lisible: introduction, résultats (table/graphique), début d'analyse.
@@ -82,5 +99,5 @@ jupyter nbconvert --to notebook --execute statistiques_entreprises.ipynb --outpu
 2. Vérifier que les dépendances Python sont installées dans l'environnement actif.
 3. Redémarrer le kernel si les cellules échouent.
 
-Dernière mise à jour: 22/07/2026
+Dernière mise à jour: 14/08/2026
 
