@@ -136,6 +136,7 @@ header h1 {
   padding: 10px 10px 8px; margin-bottom: 10px;
 }
 .form-container.hidden { display: none; }
+.hidden { display: none !important; }
 .form-container h3 { font-size: 1.1em; color: var(--rose-dark); margin-bottom: 10px; }
 
 .form-section {
@@ -286,6 +287,8 @@ header h1 {
   border-radius: var(--radius);
   padding: 10px 12px; animation: slideIn .25s;
   transition: box-shadow .2s, border-left-color .2s;
+  content-visibility: auto;
+  contain-intrinsic-size: 360px;
 }
 .card:hover { box-shadow: var(--shadow); border-left-color: var(--rose); }
 
@@ -355,6 +358,118 @@ header h1 {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+}
+
+.enterprise-metrics-panel {
+  margin-top: 8px;
+}
+
+.metric-history-vignette {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.metric-history-title {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--rose-dark);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.metric-history-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.metric-history-form input,
+.metric-history-form select {
+  width: 100%;
+  min-height: 28px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 0.8em;
+}
+
+.metric-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+}
+
+.metric-history-table-wrap {
+  overflow-x: auto;
+}
+
+.metric-history-table th,
+.metric-history-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.metric-history-table th {
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 0.3px;
+}
+
+.metric-history-year {
+  font-weight: 700;
+  color: var(--chart);
+  min-width: 64px;
+}
+
+.metric-cell-empty {
+  color: var(--muted);
+}
+
+.metric-cell-filled {
+  min-width: 124px;
+}
+
+.metric-cell-value {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.metric-cell-unit {
+  color: var(--muted);
+  font-size: 0.86em;
+  margin-top: 1px;
+}
+
+.metric-cell-actions {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.metric-history-empty,
+.metric-history-loading,
+.metric-history-error {
+  color: var(--muted);
+  font-size: 0.8em;
+}
+
+.metric-history-error {
+  color: #b32442;
+}
+
+.btn-mini {
+  padding: 3px 8px;
+  min-width: auto;
+  font-size: 0.75em;
 }
 
 .field-logo {
@@ -442,6 +557,7 @@ header h1 {
   .tab-btn { flex: 1 1 auto; min-width: 130px; }
   .card-header { flex-direction: column; }
   .card-actions { width: 100%; margin-top: 10px; }
+  .metric-history-form { grid-template-columns: 1fr; }
   .partnership-row { grid-template-columns: 1fr; }
   .pagination-content { flex-direction: column; }
   .partnership-arrow { display: none; }

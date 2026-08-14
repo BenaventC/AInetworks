@@ -51,6 +51,15 @@ Règle de correction :
 
 - Si un artefact d'encodage est détecté, corriger immédiatement la source et régénérer l'export concerné.
 
+## Leçons Réutilisables du Projet
+
+- Pour une évolution temporelle, utiliser la table `enterprise_metrics_history` avec l'indicateur contrôlé `capitalization` et l'unité `usd_m`; convertir les milliards en millions avant insertion.
+- Résoudre d'abord l'entité canonique dans la table appropriée (`enterprises` ou `investors`) et vérifier les variantes proches avant tout import. Par exemple, `Google` et `Alphabet` sont deux fiches distinctes dans le modèle actuel.
+- Rendre les imports rejouables et non destructifs avec la clé logique `(enterprise_name, indicator, year)`; contrôler le nombre de lignes avant et après l'opération.
+- Ne jamais compléter une année sans valeur fournie par une estimation implicite : conserver `NA` dans le fichier de travail ou `NULL` dans la base.
+- Pour les notebooks d'analyse, conserver un JSON valide, des cellules identifiables, des textes de graphique en anglais et une validation d'exécution après chaque modification.
+- Les images générées par les notebooks doivent être écrites dans `analyses/exports/images/`, quel que soit leur format; les CSV et les HTML restent dans `analyses/exports/`.
+
 ## Workflows Disponibles
 
 - **Complétion qualitative (Wikipedia)** : enrichir description, website, capitalization, employees_count.

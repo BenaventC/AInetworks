@@ -9,6 +9,7 @@ analyses/
 ├── sector_positioning_ca.ipynb
 ├── statistiques_entreprises.ipynb
 ├── exports/
+│   └── images/
 └── README.md
 ```
 
@@ -34,6 +35,8 @@ Points clés actuels:
 
 ## Exports générés
 
+Les images générées sont stockées dans `analyses/exports/images/`, quel que soit leur format.
+
 Le notebook génère:
 
 - `analyses/exports/statistiques_par_pays.csv`
@@ -55,7 +58,7 @@ Exports:
 - `analyses/exports/sector_umap_sector_coordinates.csv`
 - `analyses/exports/sector_umap_summary.csv`
 - `analyses/exports/sector_positioning_umap.html`
-- `analyses/exports/sector_positioning_umap.png`
+- `analyses/exports/images/sector_positioning_umap.png`
 
 Exécution:
 

@@ -10,6 +10,28 @@ const dbPath = path.join(__dirname, 'database.db');
 // Seed aléatoire fixé pour toute la session — nouvel ordre à chaque redémarrage
 const SESSION_SEED = Math.floor(Math.random() * 999983) + 1;
 
+const METRIC_HISTORY_ALLOWED_INDICATORS = new Set([
+  'capitalization',
+  'funds_raised',
+  'revenue_millions',
+  'profit_millions',
+  'rd_expenses_millions',
+  'capex_millions',
+  'employees_count',
+  'community_size'
+]);
+
+const METRIC_HISTORY_ALLOWED_UNITS = new Set([
+  'usd_m',
+  'employees',
+  'users',
+  'developers',
+  'downloads',
+  'customers',
+  'percent',
+  'index'
+]);
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
@@ -45,6 +67,7 @@ function initializeDatabase() {
       capex_millions REAL,
       employees_count INTEGER,
       community_size INTEGER,
+      community_unit TEXT,
       main_investors TEXT,
       main_competitors TEXT,
       participation TEXT,
@@ -128,6 +151,13 @@ function initializeDatabase() {
           db.run('ALTER TABLE enterprises ADD COLUMN community_size INTEGER', (err) => {
             if (err && !err.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE community_size:', err.message);
+            }
+          });
+        }
+        if (!columns.has('community_unit')) {
+          db.run('ALTER TABLE enterprises ADD COLUMN community_unit TEXT', (err) => {
+            if (err && !err.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE community_unit:', err.message);
             }
           });
         }
@@ -335,6 +365,57 @@ function initializeDatabase() {
           }
         );
 
+      });
+    });
+
+    // Table d'historique des indicateurs d'entreprise
+    db.run(`CREATE TABLE IF NOT EXISTS enterprise_metrics_history (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      enterprise_name TEXT NOT NULL,
+      indicator TEXT NOT NULL,
+      year INTEGER NOT NULL,
+      value REAL,
+      unit TEXT,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      UNIQUE(enterprise_name, indicator, year)
+    )`, (err) => {
+      if (err) {
+        console.error('Erreur CREATE TABLE enterprise_metrics_history:', err.message);
+        return;
+      }
+
+      db.all('PRAGMA table_info(enterprise_metrics_history)', (pragmaErr, rows) => {
+        if (pragmaErr) {
+          console.error('Erreur PRAGMA table_info enterprise_metrics_history:', pragmaErr.message);
+          return;
+        }
+
+        const columns = new Set(rows.map((row) => row.name));
+
+        if (!columns.has('unit')) {
+          db.run('ALTER TABLE enterprise_metrics_history ADD COLUMN unit TEXT', (alterErr) => {
+            if (alterErr && !alterErr.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE enterprise_metrics_history.unit:', alterErr.message);
+            }
+          });
+        }
+
+        if (!columns.has('created_at')) {
+          db.run('ALTER TABLE enterprise_metrics_history ADD COLUMN created_at DATETIME DEFAULT CURRENT_TIMESTAMP', (alterErr) => {
+            if (alterErr && !alterErr.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE enterprise_metrics_history.created_at:', alterErr.message);
+            }
+          });
+        }
+
+        if (!columns.has('updated_at')) {
+          db.run('ALTER TABLE enterprise_metrics_history ADD COLUMN updated_at DATETIME DEFAULT CURRENT_TIMESTAMP', (alterErr) => {
+            if (alterErr && !alterErr.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE enterprise_metrics_history.updated_at:', alterErr.message);
+            }
+          });
+        }
       });
     });
   });
@@ -677,6 +758,7 @@ function sanitizeEnterprisePayload(payload) {
     profit_millions: normalizedProfitMillions,
     rd_expenses_millions: normalizedRdExpensesMillions,
     capex_millions: normalizedCapexMillions,
+    community_unit: normalizeCommunityUnit(payload.community_unit),
     main_investors: sanitizeTextField(payload.main_investors, 'main_investors'),
     main_competitors: sanitizeTextField(payload.main_competitors, 'main_competitors'),
     participation: sanitizeTextField(payload.participation, 'participation'),
@@ -726,6 +808,34 @@ function normalizeOrganizationType(value) {
   return sanitized;
 }
 
+function normalizeCommunityUnit(value) {
+  const sanitized = nullIfEmptyText(sanitizeTextField(value, 'community_unit'));
+  if (!sanitized) {
+    return null;
+  }
+
+  const normalized = sanitized
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim();
+
+  if (normalized === 'user' || normalized === 'users') {
+    return 'user';
+  }
+  if (normalized === 'developer' || normalized === 'developers') {
+    return 'developers';
+  }
+  if (normalized === 'download' || normalized === 'downloads') {
+    return 'download';
+  }
+  if (normalized === 'customer' || normalized === 'customers') {
+    return 'customer';
+  }
+
+  return sanitized;
+}
+
 function parseNullableYear(value) {
   if (value === null || value === undefined || value === '') {
     return null;
@@ -755,6 +865,64 @@ function sanitizePartnershipPayload(payload) {
     sources_information: sanitizeTextField(payload.sources_information, 'sources_information'),
     infra_commitment_text: sanitizeTextField(payload.infra_commitment_text, 'infra_commitment_text')
   };
+}
+
+function sanitizeEnterpriseMetricHistoryPayload(payload) {
+  const indicator = normalizeMetricHistoryIndicator(payload.indicator);
+  const unit = normalizeMetricHistoryUnit(payload.unit);
+  const year = parseNullableYear(payload.year);
+
+  let value = null;
+  if (payload.value !== null && payload.value !== undefined && payload.value !== '') {
+    if (typeof payload.value === 'number') {
+      value = Number.isFinite(payload.value) ? payload.value : null;
+    } else {
+      const parsedValue = parseLocaleNumber(payload.value);
+      value = Number.isFinite(parsedValue) ? parsedValue : null;
+    }
+  }
+
+  return {
+    indicator,
+    unit,
+    year,
+    value
+  };
+}
+
+function normalizeMetricHistoryIndicator(value) {
+  const sanitized = nullIfEmptyText(sanitizeTextField(value, 'indicator'));
+  if (!sanitized) {
+    return null;
+  }
+
+  const normalized = sanitized
+    .toLowerCase()
+    .trim();
+
+  if (METRIC_HISTORY_ALLOWED_INDICATORS.has(normalized)) {
+    return normalized;
+  }
+
+  return sanitized;
+}
+
+function normalizeMetricHistoryUnit(value) {
+  const sanitized = nullIfEmptyText(sanitizeTextField(value, 'unit'));
+  if (!sanitized) {
+    return null;
+  }
+
+  const normalized = sanitized
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .trim();
+
+  if (METRIC_HISTORY_ALLOWED_UNITS.has(normalized)) {
+    return normalized;
+  }
+
+  return sanitized;
 }
 
 // ===== ROUTES ENTREPRISES =====
@@ -1329,6 +1497,130 @@ app.get('/api/enterprises/:id', (req, res) => {
   });
 });
 
+app.get('/api/enterprises/:id/metrics-history', (req, res) => {
+  db.get('SELECT name FROM enterprises WHERE id = ?', [req.params.id], (enterpriseErr, enterpriseRow) => {
+    if (enterpriseErr) {
+      return res.status(500).json({ error: enterpriseErr.message });
+    }
+
+    if (!enterpriseRow) {
+      return res.status(404).json({ error: 'Entreprise non trouvée' });
+    }
+
+    db.all(
+      `SELECT id, enterprise_name, indicator, year, value, unit, created_at, updated_at
+       FROM enterprise_metrics_history
+       WHERE LOWER(TRIM(enterprise_name)) = LOWER(TRIM(?))
+       ORDER BY indicator ASC, year DESC`,
+      [enterpriseRow.name],
+      (historyErr, rows) => {
+        if (historyErr) {
+          return res.status(500).json({ error: historyErr.message });
+        }
+
+        return res.json({
+          enterprise_name: enterpriseRow.name,
+          items: rows || []
+        });
+      }
+    );
+  });
+});
+
+app.post('/api/enterprises/:id/metrics-history', (req, res) => {
+  db.get('SELECT name FROM enterprises WHERE id = ?', [req.params.id], (enterpriseErr, enterpriseRow) => {
+    if (enterpriseErr) {
+      return res.status(500).json({ error: enterpriseErr.message });
+    }
+
+    if (!enterpriseRow) {
+      return res.status(404).json({ error: 'Entreprise non trouvée' });
+    }
+
+    let payload;
+    try {
+      payload = sanitizeEnterpriseMetricHistoryPayload(req.body || {});
+    } catch (err) {
+      if (err.code === 'INVALID_ENCODING') {
+        return res.status(400).json({ error: err.message });
+      }
+      return res.status(500).json({ error: err.message });
+    }
+
+    if (!payload.indicator) {
+      return res.status(400).json({ error: 'Le champ indicator est requis' });
+    }
+
+    if (!METRIC_HISTORY_ALLOWED_INDICATORS.has(payload.indicator)) {
+      return res.status(400).json({
+        error: `Indicator invalide. Valeurs autorisées: ${[...METRIC_HISTORY_ALLOWED_INDICATORS].join(', ')}`
+      });
+    }
+
+    if (!payload.unit) {
+      return res.status(400).json({ error: 'Le champ unit est requis' });
+    }
+
+    if (!METRIC_HISTORY_ALLOWED_UNITS.has(payload.unit)) {
+      return res.status(400).json({
+        error: `Unit invalide. Valeurs autorisées: ${[...METRIC_HISTORY_ALLOWED_UNITS].join(', ')}`
+      });
+    }
+
+    if (!payload.year) {
+      return res.status(400).json({ error: 'Le champ year est requis et doit être valide' });
+    }
+
+    if (payload.value === null) {
+      return res.status(400).json({ error: 'Le champ value est requis et doit être numérique' });
+    }
+
+    db.run(
+      `INSERT INTO enterprise_metrics_history (enterprise_name, indicator, year, value, unit, updated_at)
+       VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+       ON CONFLICT(enterprise_name, indicator, year)
+       DO UPDATE SET value = excluded.value, unit = excluded.unit, updated_at = CURRENT_TIMESTAMP`,
+      [enterpriseRow.name, payload.indicator, payload.year, payload.value, payload.unit],
+      (saveErr) => {
+        if (saveErr) {
+          return res.status(500).json({ error: saveErr.message });
+        }
+
+        return res.json({ message: 'Historique indicateur enregistré avec succès' });
+      }
+    );
+  });
+});
+
+app.delete('/api/enterprises/:id/metrics-history/:metricId', (req, res) => {
+  db.get('SELECT name FROM enterprises WHERE id = ?', [req.params.id], (enterpriseErr, enterpriseRow) => {
+    if (enterpriseErr) {
+      return res.status(500).json({ error: enterpriseErr.message });
+    }
+
+    if (!enterpriseRow) {
+      return res.status(404).json({ error: 'Entreprise non trouvée' });
+    }
+
+    db.run(
+      `DELETE FROM enterprise_metrics_history
+       WHERE id = ? AND LOWER(TRIM(enterprise_name)) = LOWER(TRIM(?))`,
+      [req.params.metricId, enterpriseRow.name],
+      function(deleteErr) {
+        if (deleteErr) {
+          return res.status(500).json({ error: deleteErr.message });
+        }
+
+        if (this.changes === 0) {
+          return res.status(404).json({ error: 'Entrée historique non trouvée' });
+        }
+
+        return res.json({ message: 'Entrée historique supprimée avec succès' });
+      }
+    );
+  });
+});
+
 // Créer une nouvelle entreprise
 app.post('/api/enterprises', (req, res) => {
   let payload;
@@ -1362,6 +1654,7 @@ app.post('/api/enterprises', (req, res) => {
     capex_millions,
     employees_count,
     community_size,
+    community_unit,
     main_investors,
     main_competitors,
     participation,
@@ -1376,8 +1669,8 @@ app.post('/api/enterprises', (req, res) => {
   }
 
   db.run(
-    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, community_size, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, community_size, community_unit, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       name,
       sector,
@@ -1399,6 +1692,7 @@ app.post('/api/enterprises', (req, res) => {
       capex_millions,
       employees_count,
       community_size,
+      community_unit,
       main_investors,
       main_competitors,
       participation,
@@ -1454,6 +1748,7 @@ app.put('/api/enterprises/:id', (req, res) => {
     capex_millions,
     employees_count,
     community_size,
+    community_unit,
     main_investors,
     main_competitors,
     participation,
@@ -1463,50 +1758,80 @@ app.put('/api/enterprises/:id', (req, res) => {
     is_validated
   } = payload;
   
-  db.run(
-    `UPDATE enterprises 
-    SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, community_size = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
-     WHERE id = ?`,
-    [
-      name,
-      sector,
-      organization_type,
-      country,
-      headquarter_city,
-      founded_year,
-      company_status,
-      end_year,
-      end_reason,
-      description,
-      website,
-      logo_url,
-      capitalization,
-      funds_raised,
-      revenue_millions,
-      profit_millions,
-      rd_expenses_millions,
-      capex_millions,
-      employees_count,
-      community_size,
-      main_investors,
-      main_competitors,
-      participation,
-      main_acquisitions,
-      key_resources,
-      strategic_partnerships,
-      parseValidationLevel(is_validated),
-      req.params.id
-    ],
-    function(err) {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else if (this.changes === 0) {
-        res.status(404).json({ error: 'Entreprise non trouvée' });
-      } else {
-        res.json({ message: 'Entreprise mise à jour avec succès' });
-      }
+  db.get('SELECT name FROM enterprises WHERE id = ?', [req.params.id], (lookupErr, existingEnterprise) => {
+    if (lookupErr) {
+      return res.status(500).json({ error: lookupErr.message });
     }
-  );
+
+    if (!existingEnterprise) {
+      return res.status(404).json({ error: 'Entreprise non trouvée' });
+    }
+
+    db.run(
+      `UPDATE enterprises 
+      SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, community_size = ?, community_unit = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
+       WHERE id = ?`,
+      [
+        name,
+        sector,
+        organization_type,
+        country,
+        headquarter_city,
+        founded_year,
+        company_status,
+        end_year,
+        end_reason,
+        description,
+        website,
+        logo_url,
+        capitalization,
+        funds_raised,
+        revenue_millions,
+        profit_millions,
+        rd_expenses_millions,
+        capex_millions,
+        employees_count,
+        community_size,
+        community_unit,
+        main_investors,
+        main_competitors,
+        participation,
+        main_acquisitions,
+        key_resources,
+        strategic_partnerships,
+        parseValidationLevel(is_validated),
+        req.params.id
+      ],
+      function(err) {
+        if (err) {
+          return res.status(500).json({ error: err.message });
+        }
+
+        if (this.changes === 0) {
+          return res.status(404).json({ error: 'Entreprise non trouvée' });
+        }
+
+        const previousName = existingEnterprise.name;
+        if (!previousName || !name || previousName === name) {
+          return res.json({ message: 'Entreprise mise à jour avec succès' });
+        }
+
+        db.run(
+          `UPDATE enterprise_metrics_history
+           SET enterprise_name = ?, updated_at = CURRENT_TIMESTAMP
+           WHERE LOWER(TRIM(enterprise_name)) = LOWER(TRIM(?))`,
+          [name, previousName],
+          (historyErr) => {
+            if (historyErr) {
+              return res.status(500).json({ error: historyErr.message });
+            }
+
+            return res.json({ message: 'Entreprise mise à jour avec succès' });
+          }
+        );
+      }
+    );
+  });
 });
 
 // Mettre a jour uniquement le statut de validation d'une entreprise

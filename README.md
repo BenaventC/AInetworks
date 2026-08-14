@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="analyses/exports/competition_map_2d_voronoi.html">
-    <img src="analyses/exports/competition_map_2d_voronoi.png?v=20260808" alt="AI competition map (Voronoi)" width="100%" />
+    <img src="analyses/exports/images/competition_map_2d_voronoi.png?v=20260808" alt="AI competition map (Voronoi)" width="100%" />
   </a>
 </p>
 
@@ -73,7 +73,31 @@ The app is available at http://localhost:3000.
 
 ## Analyses
 
-The `analyses/` folder contains the main notebooks used to explore the database from different perspectives.
+The [`analyses/`](analyses/) folder contains the notebooks used to explore the database from different perspectives. The reusable preparation and normalization scripts are grouped in [`scripts/`](scripts/).
+
+### Analysis Notebooks
+
+- [`competition_analysis.ipynb`](analyses/competition_analysis.ipynb): competition network, 2D positioning, communities, and map exports.
+- [`semantic_similarity_analysis.ipynb`](analyses/semantic_similarity_analysis.ipynb): semantic proximity from enterprise descriptions.
+- [`procrustes_alignment_analysis.ipynb`](analyses/procrustes_alignment_analysis.ipynb): alignment of competition and semantic spaces.
+- [`sector_positioning_ca.ipynb`](analyses/sector_positioning_ca.ipynb): sector positioning with correspondence analysis and UMAP.
+- [`statistiques_entreprises.ipynb`](analyses/statistiques_entreprises.ipynb): database coverage, quality, country, and sector statistics.
+- [`evolution_capitalisation_meta_google_nvidia.ipynb`](analyses/evolution_capitalisation_meta_google_nvidia.ipynb): capitalization evolution of major technology companies.
+- [`value_concentration.ipynb`](analyses/value_concentration.ipynb): cumulative capitalization concentration among the Top 200 enterprises.
+
+Notebook conventions and execution notes are documented in [`analyses/README.md`](analyses/README.md). Generated images are stored in [`analyses/exports/images/`](analyses/exports/images/), while tabular and interactive HTML exports remain in [`analyses/exports/`](analyses/exports/).
+
+### Analysis and Data Scripts
+
+The [`scripts/`](scripts/) directory contains reusable data preparation tools, including:
+
+- [`normalize_geo_english.js`](scripts/normalize_geo_english.js), [`normalize_sector_labels.js`](scripts/normalize_sector_labels.js), and [`normalize_partnership_types_english.js`](scripts/normalize_partnership_types_english.js): controlled-label normalization.
+- [`normalize_all_entity_lists.js`](scripts/normalize_all_entity_lists.js) and [`normalize_competitor_names.js`](scripts/normalize_competitor_names.js): entity and competitor-name normalization.
+- [`generate_relations_from_enterprises.py`](scripts/generate_relations_from_enterprises.py) and [`cleanup_generated_relation_targets.py`](scripts/cleanup_generated_relation_targets.py): relation generation and cleanup.
+- [`enrich_relations_from_enterprises.js`](scripts/enrich_relations_from_enterprises.js) and [`enrich_top500_websites_logos.js`](scripts/enrich_top500_websites_logos.js): targeted enrichment utilities.
+- [`migrate_enterprises_investor_type_to_investors.js`](scripts/migrate_enterprises_investor_type_to_investors.js): reusable enterprise-to-investor migration with dry-run support.
+
+Scripts that modify data should be reviewed in dry-run or preview mode first, and their outputs should preserve the project conventions described in [`conventions.md`](conventions.md).
 
 ### 1. Competition Analysis
 

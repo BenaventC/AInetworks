@@ -28,6 +28,7 @@ let hasLoadedInvestorTab = false;
 let investorPage = 1;
 let investorSearchQuery = '';
 let investorSearchAbortController = null;
+const enterpriseMetricHistoryCache = new Map();
 const enterpriseSegmentCounts = {
   pending: 0,
   partial: 0,
@@ -45,6 +46,36 @@ const partnershipSegmentCounts = {
   top100: 0
 };
 const selectedSectorLabels = new Set();
+const METRIC_HISTORY_INDICATOR_OPTIONS = [
+  'capitalization',
+  'funds_raised',
+  'revenue_millions',
+  'profit_millions',
+  'rd_expenses_millions',
+  'capex_millions',
+  'employees_count',
+  'community_size'
+];
+const METRIC_HISTORY_UNIT_OPTIONS = [
+  'usd_m',
+  'employees',
+  'users',
+  'developers',
+  'downloads',
+  'customers',
+  'percent',
+  'index'
+];
+const METRIC_HISTORY_DEFAULT_UNIT_BY_INDICATOR = {
+  capitalization: 'usd_m',
+  funds_raised: 'usd_m',
+  revenue_millions: 'usd_m',
+  profit_millions: 'usd_m',
+  rd_expenses_millions: 'usd_m',
+  capex_millions: 'usd_m',
+  employees_count: 'employees',
+  community_size: 'users'
+};
 const TOP_RANKING_SEGMENTS = new Set(['top100', 'top50']);
 const SECTOR_LABEL_GROUPS = [
   {
@@ -732,6 +763,7 @@ async function loadEnterprises() {
     }
 
     enterprises = payload.items || [];
+  enterpriseMetricHistoryCache.clear();
     filteredEnterprises = enterprises;
     if (payload.pagination) {
       Object.assign(enterprisePagination, payload.pagination);
@@ -816,9 +848,9 @@ function renderEnterprises() {
         <div class="field"><div class="field-label">R&D</div><div class="field-value">${formatMillionsUsd(ent.rd_expenses_millions)}</div></div>
         <div class="field"><div class="field-label">Capex</div><div class="field-value">${formatMillionsUsd(ent.capex_millions)}</div></div>
         ${ent.employees_count ? `<div class="field"><div class="field-label">Staff</div><div class="field-value">${ent.employees_count}</div></div>` : ''}
-        ${ent.community_size ? `<div class="field"><div class="field-label">Community size</div><div class="field-value">${ent.community_size}</div></div>` : ''}
+        ${ent.community_size ? `<div class="field"><div class="field-label">Community size</div><div class="field-value">${ent.community_size}${ent.community_unit ? ` ${escapeHtml(ent.community_unit)}` : ''}</div></div>` : ''}
         ${ent.website ? `<div class="field field-wide"><div class="field-label">Website</div><div class="field-value"><a href="${ent.website}" target="_blank">${ent.website}</a></div></div>` : ''}
-        ${ent.logo_url ? `<div class="field field-full field-logo"><div class="field-label">Logo</div><div class="field-value logo-field-value"><div class="logo-frame"><img src="${ent.logo_url}" alt="${ent.name}" loading="lazy"></div></div></div>` : ''}
+        ${ent.logo_url ? `<div class="field field-full field-logo"><div class="field-label">Logo</div><div class="field-value logo-field-value"><div class="logo-frame"><img src="${ent.logo_url}" alt="${ent.name}" loading="lazy" decoding="async"></div></div></div>` : ''}
         <div class="field field-timestamps field-full">
           <div class="field-label">Tracking</div>
           <div class="field-value timestamp-grid">
@@ -979,6 +1011,7 @@ function openEnterpriseForm() {
   currentEditingId = null;
   document.getElementById('formTitle').textContent = 'New Company';
   clearEnterpriseForm();
+  hideEnterpriseFormMetricsPanel();
   document.getElementById('entValidated').value = String(getValidationLevelForSegment(enterpriseSegment));
   setEnterpriseSectorFromValue('');
   document.getElementById('enterpriseForm').classList.remove('hidden');
@@ -1018,9 +1051,11 @@ function editEnterprise(id) {
     document.getElementById('entCapexMillions').value = parseMillionsValue(ent.capex_millions) ?? '';
     document.getElementById('entEmployees').value = ent.employees_count || '';
     document.getElementById('entCommunitySize').value = ent.community_size || '';
+    document.getElementById('entCommunityUnit').value = ent.community_unit || '';
     document.getElementById('entValidated').value = String(normalizeValidationLevel(ent.is_validated));
     document.getElementById('enterpriseForm').classList.remove('hidden');
-    document.getElementById('enterpriseForm').scrollIntoView({ behavior: 'smooth' });
+    renderEnterpriseFormMetricsPanel(id);
+    document.getElementById('enterpriseForm').scrollIntoView({ behavior: 'auto' });
   }
 }
 
@@ -1030,6 +1065,7 @@ function clearEnterpriseForm() {
 
 function closeEnterpriseForm() {
   document.getElementById('enterpriseForm').classList.add('hidden');
+  hideEnterpriseFormMetricsPanel();
   clearEnterpriseForm();
   isEditingEnterprise = false;
   currentEditingId = null;
@@ -1119,6 +1155,7 @@ async function submitEnterpriseForm(e) {
     capex_millions: capexMillions,
     employees_count: document.getElementById('entEmployees').value ? parseInt(document.getElementById('entEmployees').value, 10) : null,
     community_size: document.getElementById('entCommunitySize').value ? parseInt(document.getElementById('entCommunitySize').value, 10) : null,
+    community_unit: document.getElementById('entCommunityUnit').value?.trim() || null,
     is_validated: normalizeValidationLevel(document.getElementById('entValidated').value)
   };
 
@@ -1356,6 +1393,296 @@ function goToNextEnterprisePage() {
   enterprisePagination.page += 1;
   loadEnterprises();
 }
+
+function formatMetricHistoryValue(value) {
+  if (value === null || value === undefined || value === '') {
+    return 'NA';
+  }
+
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) {
+    return escapeHtml(String(value));
+  }
+
+  return numeric.toLocaleString(undefined, { maximumFractionDigits: 6 });
+}
+
+function formatMetricHistoryUnit(unit) {
+  if (!unit) {
+    return 'NA';
+  }
+  return escapeHtml(String(unit));
+}
+
+function buildMetricHistoryIndicatorOptionsHtml() {
+  return METRIC_HISTORY_INDICATOR_OPTIONS
+    .map((indicator) => `<option value="${indicator}">${indicator}</option>`)
+    .join('');
+}
+
+function buildMetricHistoryUnitOptionsHtml() {
+  return METRIC_HISTORY_UNIT_OPTIONS
+    .map((unit) => `<option value="${unit}">${unit}</option>`)
+    .join('');
+}
+
+function sortMetricHistoryYearsAsc(items) {
+  return [...new Set((items || []).map((item) => item.year).filter((year) => Number.isFinite(Number(year))))]
+    .map((year) => Number(year))
+    .sort((a, b) => a - b);
+}
+
+function buildMetricHistoryCellIndex(items) {
+  const byYear = new Map();
+
+  (items || []).forEach((item) => {
+    const numericYear = Number(item?.year);
+    if (!Number.isFinite(numericYear) || !item?.indicator) {
+      return;
+    }
+
+    let byIndicator = byYear.get(numericYear);
+    if (!byIndicator) {
+      byIndicator = new Map();
+      byYear.set(numericYear, byIndicator);
+    }
+
+    byIndicator.set(item.indicator, item);
+  });
+
+  return byYear;
+}
+
+function buildEnterpriseMetricsHistoryHtml(enterpriseId, enterpriseName, items) {
+  const indicators = METRIC_HISTORY_INDICATOR_OPTIONS;
+  const years = sortMetricHistoryYearsAsc(items);
+  const itemIndex = buildMetricHistoryCellIndex(items);
+
+  const tableRows = years.length === 0
+    ? `<tr><td colspan="${indicators.length + 1}" class="metric-history-empty">No history yet</td></tr>`
+    : years.map((year) => {
+      const byIndicator = itemIndex.get(year) || new Map();
+      const indicatorCells = indicators.map((indicator) => {
+        const cell = byIndicator.get(indicator);
+        if (!cell) {
+          return '<td class="metric-cell-empty">-</td>';
+        }
+
+        return `
+          <td class="metric-cell-filled">
+            <div class="metric-cell-value">${formatMetricHistoryValue(cell.value)}</div>
+            <div class="metric-cell-unit">${formatMetricHistoryUnit(cell.unit)}</div>
+            <div class="metric-cell-actions">
+              <button type="button" class="btn btn-warning btn-mini" onclick="editEnterpriseMetricHistoryCell(${enterpriseId}, ${cell.id})">Edit</button>
+              <button type="button" class="btn btn-danger btn-mini" onclick="deleteEnterpriseMetricHistory(${enterpriseId}, ${cell.id})">Delete</button>
+            </div>
+          </td>
+        `;
+      }).join('');
+
+      return `
+        <tr>
+          <td class="metric-history-year">${year}</td>
+          ${indicatorCells}
+        </tr>
+      `;
+    }).join('');
+
+  return `
+    <div class="metric-history-vignette">
+      <div class="metric-history-title">Metric history - ${escapeHtml(enterpriseName || '')}</div>
+      <div class="metric-history-form">
+        <select id="metricIndicator-${enterpriseId}" onchange="syncMetricHistoryUnit(${enterpriseId})">
+          ${buildMetricHistoryIndicatorOptionsHtml()}
+        </select>
+        <input type="number" id="metricYear-${enterpriseId}" placeholder="year" min="1900" max="3000" step="1">
+        <input type="number" id="metricValue-${enterpriseId}" placeholder="value" step="0.000001">
+        <select id="metricUnit-${enterpriseId}">
+          ${buildMetricHistoryUnitOptionsHtml()}
+        </select>
+        <button type="button" class="btn btn-success btn-mini" onclick="saveEnterpriseMetricHistory(${enterpriseId})">Add</button>
+      </div>
+      <div class="metric-history-table-wrap">
+        <table class="metric-history-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              ${indicators.map((indicator) => `<th>${escapeHtml(indicator)}</th>`).join('')}
+            </tr>
+          </thead>
+          <tbody>
+            ${tableRows}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function editEnterpriseMetricHistoryCell(enterpriseId, metricId) {
+  const payload = enterpriseMetricHistoryCache.get(enterpriseId);
+  const item = payload?.items?.find((entry) => Number(entry.id) === Number(metricId));
+  if (!item) {
+    showError('Metric entry not found');
+    return;
+  }
+
+  const indicatorInput = document.getElementById(`metricIndicator-${enterpriseId}`);
+  const yearInput = document.getElementById(`metricYear-${enterpriseId}`);
+  const valueInput = document.getElementById(`metricValue-${enterpriseId}`);
+  const unitInput = document.getElementById(`metricUnit-${enterpriseId}`);
+
+  if (!indicatorInput || !yearInput || !valueInput || !unitInput) {
+    return;
+  }
+
+  indicatorInput.value = item.indicator || '';
+  yearInput.value = item.year ?? '';
+  valueInput.value = item.value ?? '';
+  unitInput.value = item.unit || '';
+  valueInput.focus();
+}
+
+async function loadEnterpriseMetricsHistory(enterpriseId, { force = false } = {}) {
+  if (!force && enterpriseMetricHistoryCache.has(enterpriseId)) {
+    return enterpriseMetricHistoryCache.get(enterpriseId);
+  }
+
+  const response = await fetch(`/api/enterprises/${enterpriseId}/metrics-history`);
+  const payload = await response.json();
+
+  if (!response.ok) {
+    throw new Error(payload?.error || 'Error while loading metric history');
+  }
+
+  enterpriseMetricHistoryCache.set(enterpriseId, payload);
+  return payload;
+}
+
+async function renderEnterpriseFormMetricsPanel(enterpriseId, { force = false } = {}) {
+  const panel = document.getElementById('enterpriseFormMetricsPanel');
+  if (!panel) {
+    return;
+  }
+
+  panel.classList.remove('hidden');
+  panel.innerHTML = '<div class="metric-history-loading">Loading history...</div>';
+
+  try {
+    const payload = await loadEnterpriseMetricsHistory(enterpriseId, { force });
+    panel.innerHTML = buildEnterpriseMetricsHistoryHtml(enterpriseId, payload.enterprise_name, payload.items || []);
+    syncMetricHistoryUnit(enterpriseId);
+  } catch (error) {
+    console.error('Error while loading metric history:', error);
+    panel.innerHTML = `<div class="metric-history-error">${escapeHtml(error.message || 'Unable to load history')}</div>`;
+  }
+}
+
+function hideEnterpriseFormMetricsPanel() {
+  const panel = document.getElementById('enterpriseFormMetricsPanel');
+  if (!panel) {
+    return;
+  }
+
+  panel.classList.add('hidden');
+  panel.innerHTML = '';
+}
+
+function syncMetricHistoryUnit(enterpriseId) {
+  const indicatorInput = document.getElementById(`metricIndicator-${enterpriseId}`);
+  const unitInput = document.getElementById(`metricUnit-${enterpriseId}`);
+  if (!indicatorInput || !unitInput) {
+    return;
+  }
+
+  const suggestedUnit = METRIC_HISTORY_DEFAULT_UNIT_BY_INDICATOR[indicatorInput.value];
+  if (suggestedUnit && METRIC_HISTORY_UNIT_OPTIONS.includes(suggestedUnit)) {
+    unitInput.value = suggestedUnit;
+  }
+}
+
+async function saveEnterpriseMetricHistory(enterpriseId) {
+  const indicatorInput = document.getElementById(`metricIndicator-${enterpriseId}`);
+  const yearInput = document.getElementById(`metricYear-${enterpriseId}`);
+  const valueInput = document.getElementById(`metricValue-${enterpriseId}`);
+  const unitInput = document.getElementById(`metricUnit-${enterpriseId}`);
+
+  if (!indicatorInput || !yearInput || !valueInput || !unitInput) {
+    return;
+  }
+
+  const indicator = indicatorInput.value.trim();
+  const unit = unitInput.value.trim();
+  const year = yearInput.value ? parseInt(yearInput.value, 10) : null;
+  const value = valueInput.value ? Number(valueInput.value) : null;
+
+  if (!indicator) {
+    showError('Indicator is required');
+    return;
+  }
+
+  if (!year || Number.isNaN(year)) {
+    showError('Year is required');
+    return;
+  }
+
+  if (value === null || Number.isNaN(value)) {
+    showError('Value must be numeric');
+    return;
+  }
+
+  if (!unit) {
+    showError('Unit is required');
+    return;
+  }
+
+  try {
+    const response = await fetch(`/api/enterprises/${enterpriseId}/metrics-history`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ indicator, year, value, unit })
+    });
+
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload?.error || 'Save failed');
+    }
+
+    showSuccess('Metric history saved ✓');
+    if (isEditingEnterprise && currentEditingId === enterpriseId) {
+      await renderEnterpriseFormMetricsPanel(enterpriseId, { force: true });
+    }
+  } catch (error) {
+    console.error('Error while saving metric history:', error);
+    showError(error.message || 'Error while saving metric history');
+  }
+}
+
+async function deleteEnterpriseMetricHistory(enterpriseId, metricId) {
+  try {
+    const response = await fetch(`/api/enterprises/${enterpriseId}/metrics-history/${metricId}`, {
+      method: 'DELETE'
+    });
+
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload?.error || 'Delete failed');
+    }
+
+    showSuccess('Metric history deleted ✓');
+    if (isEditingEnterprise && currentEditingId === enterpriseId) {
+      await renderEnterpriseFormMetricsPanel(enterpriseId, { force: true });
+    }
+  } catch (error) {
+    console.error('Error while deleting metric history:', error);
+    showError(error.message || 'Error while deleting metric history');
+  }
+}
+
+window.saveEnterpriseMetricHistory = saveEnterpriseMetricHistory;
+window.deleteEnterpriseMetricHistory = deleteEnterpriseMetricHistory;
+window.syncMetricHistoryUnit = syncMetricHistoryUnit;
+window.editEnterpriseMetricHistoryCell = editEnterpriseMetricHistoryCell;
 
 async function ensureEnterpriseOptionsLoaded() {
   if (enterpriseOptionsLoaded) return;

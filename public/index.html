@@ -170,6 +170,16 @@
                 <label for="entCommunitySize">Community size</label>
                 <input type="number" id="entCommunitySize" placeholder="e.g. 25000" min="0" step="1">
               </div>
+              <div class="form-group">
+                <label for="entCommunityUnit">Community unit</label>
+                <select id="entCommunityUnit">
+                  <option value="">Not specified</option>
+                  <option value="user">user</option>
+                  <option value="developers">developers</option>
+                  <option value="download">download</option>
+                  <option value="customer">Customer</option>
+                </select>
+              </div>
               <div class="form-group span-4">
                 <small class="field-help">Base unit is million USD for all financial fields (example: 1 billion = 1000). Profit may be negative.</small>
               </div>
@@ -245,6 +255,7 @@
             <button type="button" id="cancelEnterpriseBtn" class="btn btn-secondary">Cancel</button>
           </div>
         </form>
+        <div id="enterpriseFormMetricsPanel" class="enterprise-metrics-panel hidden"></div>
       </div>
 
       <!-- Company List -->
