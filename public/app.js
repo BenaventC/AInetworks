@@ -9,6 +9,7 @@ let enterpriseOptions = [];
 let enterpriseOptionsLoaded = false;
 let enterpriseOptionsLoadingPromise = null;
 let enterpriseSearchQuery = '';
+let enterpriseAnythingQuery = '';
 let enterpriseSearchDebounceTimer = null;
 let enterpriseSegment = 'later';
 let enterpriseSectorFilter = '';
@@ -152,7 +153,7 @@ let sectorLabelOptions = [
 ];
 const enterprisePagination = {
   page: 1,
-  limit: 50,
+  limit: 25,
   total: 0,
   totalPages: 1,
   hasNextPage: false,
@@ -496,6 +497,7 @@ function initEventListeners() {
     btn.addEventListener('click', () => switchInvestorSegment(btn.dataset.investorSegment));
   });
   document.getElementById('enterpriseSearch').addEventListener('input', searchEnterprises);
+  document.getElementById('enterpriseAnythingSearch').addEventListener('input', searchAnythingEnterprises);
   document.getElementById('enterpriseSectorFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('enterpriseCountryFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('resetEnterpriseFiltersBtn').addEventListener('click', resetEnterpriseFilters);
@@ -743,6 +745,9 @@ async function loadEnterprises() {
     if (enterpriseSearchQuery) {
       params.set('q', enterpriseSearchQuery);
     }
+    if (enterpriseAnythingQuery) {
+      params.set('anything', enterpriseAnythingQuery);
+    }
     if (enterpriseSectorFilter) {
       params.set('sector', enterpriseSectorFilter);
     }
@@ -934,6 +939,9 @@ async function refreshEnterpriseSegmentCounts() {
     const params = new URLSearchParams();
     if (enterpriseSearchQuery) {
       params.set('q', enterpriseSearchQuery);
+    }
+    if (enterpriseAnythingQuery) {
+      params.set('anything', enterpriseAnythingQuery);
     }
     if (enterpriseSectorFilter) {
       params.set('sector', enterpriseSectorFilter);
@@ -1251,8 +1259,23 @@ function searchEnterprises(e) {
   }
 
   enterpriseSearchDebounceTimer = setTimeout(async () => {
-    await loadEnterpriseFilterOptions();
     loadEnterprises();
+  }, 400);
+}
+
+function searchAnythingEnterprises(e) {
+  enterpriseAnythingQuery = e.target.value.trim();
+  enterprisePagination.page = 1;
+
+  if (enterpriseSearchDebounceTimer) {
+    clearTimeout(enterpriseSearchDebounceTimer);
+  }
+
+  enterpriseSearchDebounceTimer = setTimeout(async () => {
+    await Promise.all([
+      refreshEnterpriseSegmentCounts(),
+      loadEnterprises()
+    ]);
   }, 400);
 }
 
@@ -1262,28 +1285,35 @@ async function onEnterpriseFiltersChanged() {
   enterprisePagination.page = 1;
   await loadEnterpriseFilterOptions();
   syncEnterpriseFilterStateFromInputs();
-  refreshEnterpriseSegmentCounts();
-  loadEnterprises();
+  await Promise.all([
+    refreshEnterpriseSegmentCounts(),
+    loadEnterprises()
+  ]);
 }
 
 async function resetEnterpriseFilters() {
   enterpriseSearchQuery = '';
+  enterpriseAnythingQuery = '';
   enterpriseSectorFilter = '';
   enterpriseCountryFilter = '';
   enterprisePagination.page = 1;
 
   const searchInput = document.getElementById('enterpriseSearch');
+  const anythingSearchInput = document.getElementById('enterpriseAnythingSearch');
   const sectorSelect = document.getElementById('enterpriseSectorFilter');
   const countrySelect = document.getElementById('enterpriseCountryFilter');
 
   if (searchInput) searchInput.value = '';
+  if (anythingSearchInput) anythingSearchInput.value = '';
   if (sectorSelect) sectorSelect.value = '';
   if (countrySelect) countrySelect.value = '';
 
   await loadEnterpriseFilterOptions();
   syncEnterpriseFilterStateFromInputs();
-  refreshEnterpriseSegmentCounts();
-  loadEnterprises();
+  await Promise.all([
+    refreshEnterpriseSegmentCounts(),
+    loadEnterprises()
+  ]);
 }
 
 async function loadEnterpriseFilterOptions() {
@@ -1301,9 +1331,6 @@ async function loadEnterpriseFilterOptions() {
 
   enterpriseFilterOptionsLoadingPromise = (async () => {
     const params = new URLSearchParams();
-    if (enterpriseSearchQuery) {
-      params.set('q', enterpriseSearchQuery);
-    }
     if (enterpriseSectorFilter) {
       params.set('sector', enterpriseSectorFilter);
     }

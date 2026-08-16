@@ -1,0 +1,42 @@
+{
+  "source_date": "2026-08-15",
+  "database": "C:\\Users\\33623\\Documents\\___Projets\\AI\\Reseaux d'acteurs\\database.db",
+  "mode": "apply",
+  "companies": [
+    {
+      "name": "Fractal Analytics",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2341,
+      "updates": []
+    },
+    {
+      "name": "Sarvam AI",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 100,
+      "updates": []
+    },
+    {
+      "name": "Krutrim AI",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2869,
+      "updates": []
+    },
+    {
+      "name": "Uniphore",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2870,
+      "updates": []
+    },
+    {
+      "name": "Neysa",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2871,
+      "updates": []
+    }
+  ]
+}

@@ -217,10 +217,18 @@ header h1 {
   min-height: 34px; padding: 6px;
   border: 1px solid var(--border); border-radius: 4px; background: #fff;
 }
-.sector-label-group { border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+.sector-label-group {
+  display: grid;
+  grid-template-columns: minmax(145px, 190px) minmax(0, 1fr);
+  align-items: start;
+  column-gap: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+}
 .sector-label-group:last-child { border-bottom: none; padding-bottom: 0; }
 .sector-label-group summary {
   display: flex; justify-content: space-between; align-items: center;
+  min-height: 24px;
   cursor: pointer; color: var(--chart); font-size: 0.76em; font-weight: 700;
   letter-spacing: 0.35px; list-style: none;
 }
@@ -228,7 +236,7 @@ header h1 {
 .sector-label-group summary::before { content: '+'; margin-right: 6px; color: var(--rose-dark); }
 .sector-label-group[open] summary::before { content: '−'; }
 .sector-label-group summary span { color: var(--muted); font-weight: 500; }
-.sector-label-group-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+.sector-label-group-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; min-width: 0; }
 .sector-chip {
   border: 1px solid var(--border); background: var(--surface);
   color: var(--muted); padding: 2px 8px; border-radius: 999px;
@@ -239,9 +247,9 @@ header h1 {
 .sector-chip.selected{ background: var(--chart); border-color: var(--chart); color: #fff; }
 
 /* ── SEARCH & FILTERS ────────────────────────────────────────────────────── */
-.search-container { margin-bottom: 10px; }
+.search-container { display: flex; gap: 6px; margin-bottom: 10px; }
 .search-container input {
-  width: 100%; padding: 6px 12px;
+  flex: 1; min-width: 0; padding: 6px 12px;
   border: 1px solid var(--border); border-radius: var(--radius);
   font-size: 0.88em; background: #fff;
 }
@@ -558,6 +566,8 @@ header h1 {
   .card-header { flex-direction: column; }
   .card-actions { width: 100%; margin-top: 10px; }
   .metric-history-form { grid-template-columns: 1fr; }
+  .sector-label-group { grid-template-columns: 1fr; row-gap: 3px; }
+  .sector-label-group-chips { padding-left: 18px; }
   .partnership-row { grid-template-columns: 1fr; }
   .pagination-content { flex-direction: column; }
   .partnership-arrow { display: none; }

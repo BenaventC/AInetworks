@@ -54,7 +54,10 @@ const CUSTOM_COMPETITOR_ALIASES = new Map([
   [normalizeKey('Microsoft Azure'), 'Microsoft Azure'],
   [normalizeKey('Azure'), 'Microsoft Azure'],
   [normalizeKey('Cerebras'), 'Cerebras'],
-  [normalizeKey('Cerebras Systems'), 'Cerebras']
+  [normalizeKey('Cerebras Systems'), 'Cerebras'],
+  [normalizeKey('bytedanse'), 'ByteDance'],
+  [normalizeKey('BytesDance'), 'ByteDance'],
+  [normalizeKey('Byte Dance'), 'ByteDance']
 ]);
 
 function parseCompetitorItems(value) {

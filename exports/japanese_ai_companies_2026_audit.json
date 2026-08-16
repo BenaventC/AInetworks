@@ -1,0 +1,43 @@
+{
+  "source_date": "2026-08-15",
+  "usd_per_jpy_working_rate": 0.006666666666666667,
+  "database": "C:\\Users\\33623\\Documents\\___Projets\\AI\\Reseaux d'acteurs\\database.db",
+  "mode": "apply",
+  "companies": [
+    {
+      "name": "Sakana AI",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 105,
+      "updates": []
+    },
+    {
+      "name": "Preferred Networks",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2872,
+      "updates": []
+    },
+    {
+      "name": "SmartNews",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2873,
+      "updates": []
+    },
+    {
+      "name": "LayerX",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2874,
+      "updates": []
+    },
+    {
+      "name": "Turing",
+      "match": "exact",
+      "action": "unchanged",
+      "id": 2875,
+      "updates": []
+    }
+  ]
+}

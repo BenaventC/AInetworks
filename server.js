@@ -1102,10 +1102,23 @@ function sortEnterprisesForValidation(a, b) {
   return (a.name || '').localeCompare(b.name || '');
 }
 
-function buildEnterpriseNameSearchClause(searchQuery) {
+function buildEnterpriseSearchClause(searchQuery, searchMode = 'name') {
   const trimmedQuery = String(searchQuery || '').trim();
   if (!trimmedQuery) {
     return null;
+  }
+
+  if (searchMode === 'anything') {
+    const searchableFields = [
+      'name', 'sector', 'organization_type', 'country', 'headquarter_city',
+      'description', 'website', 'logo_url', 'main_investors', 'main_competitors',
+      'participation', 'main_acquisitions', 'key_resources', 'strategic_partnerships',
+      'company_status', 'end_reason'
+    ];
+    return {
+      clause: `(${searchableFields.map((field) => `LOWER(IFNULL(${field}, "")) LIKE LOWER(?)`).join(' OR ')})`,
+      params: searchableFields.map(() => `%${trimmedQuery}%`)
+    };
   }
 
   const compactQuery = trimmedQuery
@@ -1121,9 +1134,10 @@ function buildEnterpriseNameSearchClause(searchQuery) {
 // Récupérer les entreprises avec pagination
 app.get('/api/enterprises', (req, res) => {
   const page = parsePositiveInteger(req.query.page, 1);
-  const requestedLimit = parsePositiveInteger(req.query.limit, 50);
+  const requestedLimit = parsePositiveInteger(req.query.limit, 25);
   const limit = Math.min(requestedLimit, 100);
   const searchQuery = (req.query.q || '').trim();
+  const anythingQuery = (req.query.anything || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
   const segment = req.query.segment || 'pending';
@@ -1151,10 +1165,15 @@ app.get('/api/enterprises', (req, res) => {
     params.push(orgTypeFilter);
   }
 
-  const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
-  if (nameSearch) {
-    conditions.push(nameSearch.clause);
-    params.push(...nameSearch.params);
+  const enterpriseSearch = buildEnterpriseSearchClause(searchQuery, 'name');
+  if (enterpriseSearch) {
+    conditions.push(enterpriseSearch.clause);
+    params.push(...enterpriseSearch.params);
+  }
+  const anythingSearch = buildEnterpriseSearchClause(anythingQuery, 'anything');
+  if (anythingSearch) {
+    conditions.push(anythingSearch.clause);
+    params.push(...anythingSearch.params);
   }
 
   if (sectorFilter) {
@@ -1344,6 +1363,7 @@ app.get('/api/enterprises', (req, res) => {
 
 app.get('/api/enterprises/counts', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
+  const anythingQuery = (req.query.anything || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
   const orgTypeFilter = (req.query.orgType || '').trim();
@@ -1356,10 +1376,15 @@ app.get('/api/enterprises/counts', (req, res) => {
     params.push(orgTypeFilter);
   }
 
-  const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
-  if (nameSearch) {
-    conditions.push(nameSearch.clause);
-    params.push(...nameSearch.params);
+  const enterpriseSearch = buildEnterpriseSearchClause(searchQuery, 'name');
+  if (enterpriseSearch) {
+    conditions.push(enterpriseSearch.clause);
+    params.push(...enterpriseSearch.params);
+  }
+  const anythingSearch = buildEnterpriseSearchClause(anythingQuery, 'anything');
+  if (anythingSearch) {
+    conditions.push(anythingSearch.clause);
+    params.push(...anythingSearch.params);
   }
 
   if (sectorFilter) {
@@ -1432,6 +1457,7 @@ app.get('/api/enterprises/counts', (req, res) => {
 
 app.get('/api/enterprises/filters', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
+  const anythingQuery = (req.query.anything || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
   const countryFilter = (req.query.country || '').trim();
 
@@ -1451,10 +1477,15 @@ app.get('/api/enterprises/filters', (req, res) => {
     const params = [];
 
     if (includeSearch) {
-      const nameSearch = buildEnterpriseNameSearchClause(searchQuery);
-      if (nameSearch) {
-        conditions.push(nameSearch.clause);
-        params.push(...nameSearch.params);
+      const enterpriseSearch = buildEnterpriseSearchClause(searchQuery, 'name');
+      if (enterpriseSearch) {
+        conditions.push(enterpriseSearch.clause);
+        params.push(...enterpriseSearch.params);
+      }
+      const anythingSearch = buildEnterpriseSearchClause(anythingQuery, 'anything');
+      if (anythingSearch) {
+        conditions.push(anythingSearch.clause);
+        params.push(...anythingSearch.params);
       }
     }
 
