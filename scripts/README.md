@@ -32,6 +32,7 @@ Les scripts s'appuient sur quatre modules communs plutôt que de redupliquer leu
 | `infer_country_from_description.js` | oui | Déduit le pays manquant à partir de la description et de la ville. |
 | `normalize_all_entity_lists.js` | oui | Aligne les listes d'entités sur les noms canoniques de la table `enterprises`. |
 | `normalize_competitor_names.js` | oui | Déduplique et normalise `main_competitors`. |
+| `migrate_investors_from_enterprises.js` | oui | Déplace vers `investors` les fiches dont l'activité principale est de déployer du capital, en reportant les citations dans `participations`. Option `--ids` pour les cas hors `organization_type = 'Investor'`. |
 
 ### Relations et enrichissement
 

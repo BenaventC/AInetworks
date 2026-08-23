@@ -1,0 +1,257 @@
+{
+  "generated_at": "2026-08-23T18:10:39.567Z",
+  "applied": true,
+  "candidates": [
+    {
+      "enterprise_id": 1708,
+      "name": "Altaba",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Holding / Conglomérat",
+      "participations": "Alibaba",
+      "fields": [
+        "description",
+        "logo_url",
+        "sector",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1699,
+      "name": "Coatue Management",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Hedge Fund",
+      "participations": "Cerebras, CoreWeave, Databricks, Replit",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1557,
+      "name": "EQT Ventures",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "1X Technologies",
+      "fields": [
+        "country",
+        "description",
+        "website",
+        "logo_url",
+        "company_status",
+        "investor_type",
+        "ownership",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1778,
+      "name": "Fika Ventures",
+      "action": "merge",
+      "investor_id": 57,
+      "investor_type": "Venture Capital",
+      "participations": "BuildOps",
+      "fields": [
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type"
+      ]
+    },
+    {
+      "enterprise_id": 1667,
+      "name": "Founders Fund",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "Cognition AI, Cognition, Replit, Stripe, Netic",
+      "fields": [
+        "country",
+        "description",
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1816,
+      "name": "Inovia Capital",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "DarwinAI",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1743,
+      "name": "Notable Angels",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Club d'investissement",
+      "participations": "4.screen",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1815,
+      "name": "Obvious Ventures",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "DarwinAI, Boltz",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1735,
+      "name": "Romain Moulin",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Investisseur individuel",
+      "participations": "Exotec",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1742,
+      "name": "S4S Ventures",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "4.screen",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1780,
+      "name": "SIG Venture Capital",
+      "action": "merge",
+      "investor_id": 123,
+      "investor_type": "Corporate VC",
+      "participations": "Gushwork",
+      "fields": [
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type",
+        "ownership"
+      ]
+    },
+    {
+      "enterprise_id": 1689,
+      "name": "Sandwater",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "1X Technologies",
+      "fields": [
+        "description",
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type",
+        "participations"
+      ]
+    },
+    {
+      "enterprise_id": 1691,
+      "name": "Skagerak Capital",
+      "action": "insert",
+      "investor_id": null,
+      "investor_type": "Venture Capital",
+      "participations": "1X Technologies",
+      "fields": [
+        "country",
+        "description",
+        "logo_url",
+        "company_status",
+        "sector",
+        "investor_type",
+        "participations"
+      ]
+    }
+  ],
+  "deleted_partnerships": [
+    {
+      "id": 148,
+      "from": "Cognition AI",
+      "to": "Founders Fund"
+    },
+    {
+      "id": 185,
+      "from": "Cognition",
+      "to": "Founders Fund"
+    },
+    {
+      "id": 186,
+      "from": "Databricks",
+      "to": "Coatue Management"
+    },
+    {
+      "id": 207,
+      "from": "Alibaba",
+      "to": "Altaba"
+    },
+    {
+      "id": 259,
+      "from": "Exotec",
+      "to": "Romain Moulin"
+    },
+    {
+      "id": 310,
+      "from": "BuildOps",
+      "to": "Fika Ventures"
+    },
+    {
+      "id": 312,
+      "from": "Gushwork",
+      "to": "SIG Venture Capital"
+    },
+    {
+      "id": 415,
+      "from": "DarwinAI",
+      "to": "Obvious Ventures"
+    },
+    {
+      "id": 416,
+      "from": "DarwinAI",
+      "to": "Inovia Capital"
+    }
+  ]
+}
