@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const dbPath = path.join(__dirname, 'database.db');
@@ -214,6 +215,14 @@ function initializeDatabase() {
           db.run('ALTER TABLE enterprises ADD COLUMN company_status TEXT', (err) => {
             if (err && !err.message.includes('duplicate column name')) {
               console.error('Erreur ALTER TABLE company_status:', err.message);
+            }
+          });
+        }
+        // Derived from `sector` via public/sector_ontology.csv; regenerate with scripts/backfill_sector_domains.js
+        if (!columns.has('sector_domains')) {
+          db.run('ALTER TABLE enterprises ADD COLUMN sector_domains TEXT', (err) => {
+            if (err && !err.message.includes('duplicate column name')) {
+              console.error('Erreur ALTER TABLE sector_domains:', err.message);
             }
           });
         }
@@ -779,6 +788,43 @@ function sanitizeTextField(value, fieldName) {
   return text;
 }
 
+// Meta level of the sector ontology: canonical label -> domain.
+// Reloaded when public/sector_ontology.csv changes on disk.
+const sectorOntologyPath = path.join(__dirname, 'public', 'sector_ontology.csv');
+let sectorDomainCache = { mtimeMs: 0, map: new Map() };
+
+function getSectorDomainMap() {
+  try {
+    const { mtimeMs } = fs.statSync(sectorOntologyPath);
+    if (mtimeMs === sectorDomainCache.mtimeMs) return sectorDomainCache.map;
+
+    const map = new Map();
+    const lines = fs.readFileSync(sectorOntologyPath, 'utf8').trim().split(/\r?\n/).slice(1);
+    for (const line of lines) {
+      const cells = line.split(',');
+      const label = (cells[0] || '').trim();
+      const domain = (cells[5] || '').trim();
+      if (label && domain) map.set(label.toLowerCase(), domain);
+    }
+    sectorDomainCache = { mtimeMs, map };
+    return map;
+  } catch (err) {
+    console.error('Lecture de sector_ontology.csv impossible:', err.message);
+    return sectorDomainCache.map;
+  }
+}
+
+function computeSectorDomains(sector) {
+  const map = getSectorDomainMap();
+  const domains = [];
+  for (const raw of String(sector || '').split(',')) {
+    const domain = map.get(raw.trim().toLowerCase());
+    if (domain && !domains.includes(domain)) domains.push(domain);
+  }
+  // Sorted so the stored value matches scripts/backfill_sector_domains.js output.
+  return domains.length ? domains.sort().join(', ') : null;
+}
+
 function sanitizeEnterprisePayload(payload) {
   const sanitizedCapitalization = sanitizeTextField(payload.capitalization, 'capitalization');
   const sanitizedFundsRaised = sanitizeTextField(payload.funds_raised, 'funds_raised');
@@ -1139,6 +1185,7 @@ app.get('/api/enterprises', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
   const anythingQuery = (req.query.anything || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
+  const domainFilter = (req.query.domain || '').trim();
   const countryFilter = (req.query.country || '').trim();
   const segment = req.query.segment || 'pending';
   const orgTypeFilter = (req.query.orgType || '').trim();
@@ -1189,6 +1236,16 @@ app.get('/api/enterprises', (req, res) => {
   if (countryFilter) {
     conditions.push('LOWER(TRIM(IFNULL(country, ""))) = LOWER(TRIM(?))');
     params.push(countryFilter);
+  }
+
+  if (domainFilter) {
+    conditions.push('(sector_domains = ? OR sector_domains LIKE ? OR sector_domains LIKE ? OR sector_domains LIKE ?)');
+    params.push(
+      domainFilter,
+      `${domainFilter}, %`,
+      `%, ${domainFilter}, %`,
+      `%, ${domainFilter}`
+    );
   }
 
   if (segment === 'top100') {
@@ -1459,6 +1516,7 @@ app.get('/api/enterprises/filters', (req, res) => {
   const searchQuery = (req.query.q || '').trim();
   const anythingQuery = (req.query.anything || '').trim();
   const sectorFilter = (req.query.sector || '').trim();
+  const domainFilter = (req.query.domain || '').trim();
   const countryFilter = (req.query.country || '').trim();
 
   const addSectorCondition = (conditions, params, value) => {
@@ -1472,7 +1530,18 @@ app.get('/api/enterprises/filters', (req, res) => {
     );
   };
 
-  const buildWhere = ({ includeSearch, includeSector, includeCountry }) => {
+  const addDomainCondition = (conditions, params, value) => {
+    if (!value) return;
+    conditions.push('(sector_domains = ? OR sector_domains LIKE ? OR sector_domains LIKE ? OR sector_domains LIKE ?)');
+    params.push(
+      value,
+      `${value}, %`,
+      `%, ${value}, %`,
+      `%, ${value}`
+    );
+  };
+
+  const buildWhere = ({ includeSearch, includeSector, includeDomain, includeCountry }) => {
     const conditions = [];
     const params = [];
 
@@ -1491,6 +1560,10 @@ app.get('/api/enterprises/filters', (req, res) => {
 
     if (includeSector) {
       addSectorCondition(conditions, params, sectorFilter);
+    }
+
+    if (includeDomain) {
+      addDomainCondition(conditions, params, domainFilter);
     }
 
     if (includeCountry && countryFilter) {
@@ -1537,18 +1610,21 @@ app.get('/api/enterprises/filters', (req, res) => {
       .sort(sortByCountThenName);
   };
 
-  const sectorScope = buildWhere({ includeSearch: true, includeSector: false, includeCountry: true });
-  const countryScope = buildWhere({ includeSearch: true, includeSector: true, includeCountry: false });
+  const sectorScope = buildWhere({ includeSearch: true, includeSector: false, includeDomain: true, includeCountry: true });
+  const domainScope = buildWhere({ includeSearch: true, includeSector: true, includeDomain: false, includeCountry: true });
+  const countryScope = buildWhere({ includeSearch: true, includeSector: true, includeDomain: true, includeCountry: false });
 
   Promise.all([
     runQuery(`SELECT sector FROM enterprises ${sectorScope.whereClause}`, sectorScope.params),
+    runQuery(`SELECT sector_domains FROM enterprises ${domainScope.whereClause}`, domainScope.params),
     runQuery(`SELECT country FROM enterprises ${countryScope.whereClause}`, countryScope.params)
   ])
-    .then(([sectorRows, countryRows]) => {
+    .then(([sectorRows, domainRows, countryRows]) => {
       const sectors = aggregateFromRows(sectorRows, (row) => String(row.sector || '').split(','));
+      const domains = aggregateFromRows(domainRows, (row) => String(row.sector_domains || '').split(','));
       const countries = aggregateFromRows(countryRows, (row) => [row.country]);
 
-      res.json({ sectors, countries });
+      res.json({ sectors, domains, countries });
     })
     .catch((err) => {
       res.status(500).json({ error: err.message });
@@ -1751,11 +1827,12 @@ app.post('/api/enterprises', (req, res) => {
   }
 
   db.run(
-    `INSERT INTO enterprises (name, sector, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, community_size, community_unit, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO enterprises (name, sector, sector_domains, organization_type, country, headquarter_city, founded_year, company_status, end_year, end_reason, description, website, logo_url, capitalization, funds_raised, revenue_millions, profit_millions, rd_expenses_millions, capex_millions, employees_count, community_size, community_unit, main_investors, main_competitors, participation, main_acquisitions, key_resources, strategic_partnerships, is_validated) 
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       name,
       sector,
+      computeSectorDomains(sector),
       organization_type,
       country,
       headquarter_city,
@@ -1851,11 +1928,12 @@ app.put('/api/enterprises/:id', (req, res) => {
 
     db.run(
       `UPDATE enterprises 
-      SET name = ?, sector = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, community_size = ?, community_unit = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
+      SET name = ?, sector = ?, sector_domains = ?, organization_type = ?, country = ?, headquarter_city = ?, founded_year = ?, company_status = ?, end_year = ?, end_reason = ?, description = ?, website = ?, logo_url = ?, capitalization = ?, funds_raised = ?, revenue_millions = ?, profit_millions = ?, rd_expenses_millions = ?, capex_millions = ?, employees_count = ?, community_size = ?, community_unit = ?, main_investors = ?, main_competitors = ?, participation = ?, main_acquisitions = ?, key_resources = ?, strategic_partnerships = ?, is_validated = ?, updated_at = CURRENT_TIMESTAMP
        WHERE id = ?`,
       [
         name,
         sector,
+        computeSectorDomains(sector),
         organization_type,
         country,
         headquarter_city,

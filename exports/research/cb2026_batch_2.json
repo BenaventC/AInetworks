@@ -1,0 +1,249 @@
+[
+  {
+    "input_name": "MainFunc",
+    "name_official": "MainFunc",
+    "website": "https://mainfunc.ai",
+    "country": "United States",
+    "headquarter_city": "Palo Alto",
+    "founded_year": 2023,
+    "funds_raised": 275,
+    "employees_count": null,
+    "main_investors": "Emergence Capital, LG Technology Ventures",
+    "founders": "Eric Jing, Kay Zhu",
+    "description": "MainFunc is the Palo Alto, California company behind Genspark, an AI workspace product. Its own site states the company is based in Palo Alto, was founded by alumni from Microsoft, Google, Meta and Pinterest, and has offices in Singapore and Tokyo. Secondary startup databases date the founding to 2023 and name Eric Jing and Kay Zhu, described as former Baidu executives, as the founders. In 2025 the company announced an oversubscribed $275 million Series B at a $1.25 billion post-money valuation, backed by Emergence Capital; a press release reproduced by LG Technology Ventures was distributed via Business Wire from Palo Alto. In February 2026 Genspark ran a Super Bowl LX commercial starring Matthew Broderick, an ad reported by Wikipedia's Super Bowl commercials article as written entirely by AI and produced in about five weeks.\nThe value proposition is to replace fragmented office busywork with an agentic workspace. Genspark's public site advertises an integrated suite: AI Slides, AI Sheets, AI Docs, GenMail, AI Chat, AI Image, AI Video, AI Pods, plugins for Google Workspace and Microsoft 365 (PowerPoint, Excel, Word), a build suite for design/prototyping, code and dashboards/CRM, plus an AI phone-call tool. A third-party profile describes the product as orchestrating 70+ AI models to turn a business objective into finished deliverables.\nOn the business model, the company sells consumer and business subscription tiers (a \"Business\" offering and paid plans are listed on genspark.ai) and distributes mobile apps through the Apple App Store and Google Play. Exact pricing mechanics and enterprise contract terms were not verified on a fetched page.",
+    "sources": [
+      "https://www.genspark.ai/",
+      "https://en.wikipedia.org/wiki/Super_Bowl_commercials",
+      "https://html.duckduckgo.com/html/?q=Genspark+MainFunc+funding+Palo+Alto"
+    ],
+    "confidence_notes": "Founding year (2023) and founder names (Eric Jing, Kay Zhu) come from a third-party profile (siliconvalleyinvestclub.com) seen only as a search-result snippet, not from a primary page — treat as unverified. funds_raised = 275 is the Series B amount only; total cumulative funding was not confirmed (one aggregator snippet suggests a later $1.6B valuation). Employees count unknown. The legal entity name may be 'MainFunc Inc.' / 'Genspark Inc.' (the genspark.ai footer reads '© 2026 Genspark Inc.'), so name_official is uncertain."
+  },
+  {
+    "input_name": "Narada",
+    "name_official": "Narada AI, Inc.",
+    "website": "https://narada.ai",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": null,
+    "funds_raised": null,
+    "employees_count": null,
+    "main_investors": null,
+    "founders": null,
+    "description": "Narada AI, Inc. is a US enterprise AI company whose technology is described on its own site as originating from the UC Berkeley AI Research Lab (BAIR), under Prof. Kurt Keutzer. The site states that its founders are AI researchers and serial entrepreneurs with enterprise backgrounds who previously built companies acquired by Tesla and Synopsys, but does not name them in the material retrieved. Narada AI also appears as a TechCrunch Startup Battlefield company.\nThe value proposition is enterprise agentic process automation and orchestration: according to the TechCrunch Startup Battlefield listing, the product captures action items from conversations and executes them across enterprise tools using AI orchestration. Company materials and third-party write-ups refer to \"large action models\" applied to enterprise workflows spanning multiple SaaS systems.\nNo reliable business-model detail (pricing, contract structure) or named customer was confirmed on a page that was actually fetched, so the commercial model is left undocumented here.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Narada+AI%22+funding+enterprise+agents+founders"
+    ],
+    "confidence_notes": "Low confidence overall. Only search-result snippets of narada.ai and techcrunch.com were seen; the pages themselves were not fetched in full. Funding is ambiguous: one aggregator (trysignalbase.com) headlines 'Narada AI Raises $8.0M Series A' while its URL slug reads '80m' — the amount is therefore left null. Headquarters city, founding year, founders and investors are unconfirmed. Note the homonym risk: 'Narada' is also a common name in other contexts (mythology, unrelated firms); the entity described here is the BAIR-linked enterprise-agent company at narada.ai."
+  },
+  {
+    "input_name": "Pokee AI",
+    "name_official": "Pokee AI",
+    "website": "https://pokee.ai",
+    "country": "United States",
+    "headquarter_city": "Seattle",
+    "founded_year": null,
+    "funds_raised": 12,
+    "employees_count": null,
+    "main_investors": "Point72 Ventures, Qualcomm Ventures, Samsung, Walden International, Firsthand Alliance",
+    "founders": "Zheqing (Bill) Zhu",
+    "description": "Pokee AI is a US AI-agent startup founded by Zheqing (Bill) Zhu, a Stanford PhD and former Meta reinforcement-learning manager. In mid-2025 the company announced a $12 million seed round led by Point72 Ventures; coverage and investor lists cite Qualcomm and Samsung as participants, alongside Walden International and Firsthand Alliance. Reporting from GeekWire and LinkedIn posts describes the company as Seattle-based, with the stated mission of automating human workflows online.\nThe value proposition is a general-purpose agent that actually executes tasks rather than only generating text. Pokee's own site positions the product as a \"frontier agent deployed in your infrastructure\" — that is, an agent that can run inside a customer VPC, on-premises or on device. The company publishes a model, Pokee-Isaac 28B, presented on its console as reasoning, planning and using tools across context windows up to 10 million tokens under a compute budget small enough for private deployment, benchmarked by Pokee against cost-optimised cloud tiers and leading open-weight models. Marketing materials also emphasise reinforcement-learning-based tool selection across a large integration catalogue (1,000+ integrations mentioned on the company's YouTube channel description).\nOn the business model, the company operates a hosted console (console.pokee.ai) and markets enterprise deployment inside customer infrastructure, which points to enterprise licensing/subscription rather than pure consumer sales. Precise pricing and named paying customers were not confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Pokee+AI%22+funding+seed+founder+Meta",
+      "https://html.duckduckgo.com/html/?q=Pokee.ai+official+website+Pokee+AI+agent"
+    ],
+    "confidence_notes": "Facts come from search-result snippets (GeekWire, LinkedIn, Tracxn, StartupHub, pokee.ai and console.pokee.ai) rather than fully fetched primary pages. Headquarters city 'Seattle' is reported by GeekWire/LinkedIn snippets ('Seattle-based', 'Seattle-area') but the exact city (Seattle vs. Bellevue/Redmond) is not certain. Founding year unknown. funds_raised = 12 reflects the 2025 seed round only; any later round was not verified. Investor list mixes GeekWire (Qualcomm, Samsung) and StartupHub (Walden International, Firsthand Alliance) snippets."
+  },
+  {
+    "input_name": "Serval",
+    "name_official": "Serval",
+    "website": "https://www.serval.com",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": null,
+    "funds_raised": 52,
+    "employees_count": null,
+    "main_investors": "Redpoint Ventures, First Round Capital, General Catalyst, BoxGroup, Bessemer Venture Partners, Chemistry",
+    "founders": "Jake Stauch",
+    "description": "Serval is a US company building AI agents for IT service management (ITSM). It was founded by Jake Stauch, who announced on LinkedIn in October 2025 that the company had raised a $47 million Series A. TechCrunch covered the round on 21 October 2025 under the headline \"Serval raises $47M to bring AI agents to IT service management\", noting the company's approach aims to exploit agentic AI while avoiding its common pitfalls. The round was led by Redpoint Ventures with participation from First Round Capital, General Catalyst, BoxGroup, Bessemer Venture Partners and Chemistry, bringing total funding to $52 million.\nThe value proposition is to automate the internal IT help desk. Third-party profiles describe Serval as resolving help-desk tickets under human control and unifying ticketing, workflow and automation into a single AI-native system, in contrast with incumbents retrofitting legacy ITSM suites. The company publishes its own funding announcement at serval.com/serval-news/series-a and positions the product for IT service management at enterprise scale.\nThe business model was not documented on any page actually fetched. As an enterprise ITSM platform sold to internal IT organisations, subscription/seat- or resolution-based enterprise contracts are the plausible model, but no pricing page, contract structure or named customer was verified here.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Serval%22+AI+IT+service+desk+funding+series+A+founders"
+    ],
+    "confidence_notes": "Only search-result snippets were seen (TechCrunch, serval.com, LinkedIn, thesaasnews, newsbreak); the primary pages were not fetched in full. funds_raised = 52 is the post-Series-A total reported in October 2025. One aggregator (siliconvalleyinvestclub.com) claims a $75M Series B led by Sequoia Capital in December 2025 at a $1B valuation, which would raise the total to about $127M — this was NOT corroborated and is deliberately excluded. Headquarters city, founding year and any co-founders are unknown. Homonym warning: 'Serval' is also an animal and a name used by unrelated firms; one snippet (fenomstalent.com) mis-describes Serval's Series A as being about 'enterprise data security', and another article about an Australian founder named McLeod appears to concern a different company."
+  },
+  {
+    "input_name": "Actively AI",
+    "name_official": "Actively",
+    "website": "https://www.actively.ai",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": null,
+    "funds_raised": 68,
+    "employees_count": null,
+    "main_investors": "TCV, First Harmonic, Bain Capital Ventures, First Round Capital, Alkeon",
+    "founders": null,
+    "description": "Actively (marketed as Actively AI) is a New York-based startup applying AI agents to enterprise revenue teams. TechCrunch reported in April 2025 that the company raised $22.5 million to offer sales \"superintelligence\", explicitly framing the product against the earlier wave of AI SDR tools. In April 2026 the company announced a $45 million Series B co-led by TCV and First Harmonic, with participation from Bain Capital Ventures, First Round and Alkeon, bringing total capital to $68 million; Forbes covered the round under the framing of a $250 million-valuation startup challenging Salesforce with AI agents. Third-party profiles describe the founding team as Stanford researchers, but no founder name was confirmed on a fetched page.\nThe value proposition is what the company calls Intelligence-Led Revenue. Its site describes Per-Account Agents that work every account 24/7, maintain context, identify opportunities, formulate strategies and direct revenue teams — generating next-best-action recommendations for AEs, AMs, SDRs and sales leaders rather than blasting automated outreach. The system is described as ingesting the customer's GTM stack (CRM, engagement platforms, call transcripts, historical data) to model how top performers sell.\nCommercially, Actively sells a B2B SaaS platform to enterprise go-to-market organisations. Publicly cited customers include Samsara, Ramp, Ironclad, Attentive and Verkada; at Samsara the agents are reported to be deployed across a 1,000-plus-person go-to-market team spanning sales, account development, revenue operations and customer success. Exact pricing was not verified.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Actively+AI%22+funding+series+B+founders+sales",
+      "https://html.duckduckgo.com/html/?q=actively.ai+%22Actively%22+superintelligence+sales+official+site"
+    ],
+    "confidence_notes": "Evidence is from search-result snippets (TechCrunch, Forbes, founderland.ai, seriesb.tech, startuphub.ai, datahyena, techstartups.com, actively.ai) rather than fully fetched primary pages. Founder names are unknown — only 'founded by Stanford researchers' (yespress.io snippet) was seen, which is not sufficient. Founding year unknown. Headquarters 'New York' comes from the Series B coverage describing 'the New York startup'."
+  },
+  {
+    "input_name": "Netic",
+    "name_official": "Netic",
+    "website": "https://www.netic.ai",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2023,
+    "funds_raised": 43,
+    "employees_count": null,
+    "main_investors": "Founders Fund, Greylock Partners, Hanabi Capital, Day One Ventures, SV Angel",
+    "founders": "Melisa Tokmak",
+    "description": "Netic is a US AI company serving home and essential service businesses — HVAC, plumbing, roofing and similar trades. It was founded by Melisa Tokmak, who previously built the government and enterprise business units at Scale AI; Tracxn dates the founding to 2023. Its seed round was led by Greylock Partners with Founders Fund participating, and its Series A was led by Founders Fund. In November 2025 Netic announced a $23 million Series B led by Founders Fund at a reported $450 million valuation, with participation from Greylock, Mike Volpi's Hanabi Capital, Day One Ventures and SV Angel; Tracxn puts cumulative funding at $43 million.\nThe value proposition is a revenue engine for service enterprises. Founders Fund and Greylock describe Netic as combining real-time AI agents with automated marketing campaigns to capture every potential lead across phone calls, texts, online widgets and third-party channels, then proactively surfacing new revenue opportunities. Netic's own site presents an AI-driven platform that helps service enterprises boost revenue, engage customers and scale growth through intelligent automation and a multi-channel engine; trade coverage (Roofing Contractor) notes further integration with the wider home-services software ecosystem. Tokmak has publicly stated that the team built its own agent framework from the ground up — reasoning, planning and recovery — because off-the-shelf frontier models were not sufficient for real-world demands.\nThe business model is B2B software sold to service contractors and multi-site service enterprises, but no pricing structure or named customer was confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Netic%22+AI+home+services+funding+founders",
+      "https://html.duckduckgo.com/html/?q=Netic+AI+official+website+netic.com+Melisa+Tokmak+San+Francisco"
+    ],
+    "confidence_notes": "Based on search-result snippets (techfundingnews, menlotimes, foundersfund.com, greylock.com, roofingcontractor.com, Tracxn, netic.ai, LinkedIn, X) rather than fully fetched primary pages. Founding year 2023 and total funding $43M come from Tracxn (aggregator) — moderate confidence. Headquarters city is unconfirmed (San Francisco was assumed in the query but never verified), so it is left null. The $450M valuation is reported by secondary outlets only. Homonym warning: 'Netic' is a short name; the entity here is netic.ai, the Melisa Tokmak / Founders Fund company for essential services."
+  },
+  {
+    "input_name": "Reevo",
+    "name_official": "Reevo",
+    "website": "https://reevo.ai",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": null,
+    "funds_raised": 80,
+    "employees_count": null,
+    "main_investors": "Khosla Ventures, Kleiner Perkins, Zhu Ventures",
+    "founders": null,
+    "description": "Reevo is a US AI-native go-to-market software company that emerged publicly on 5 November 2025. According to its Business Wire launch release, Reevo \"debuts with $80 million in funding as the only AI-native GTM platform spanning marketing, sales and customer success\", with the round co-led by Khosla Ventures and Kleiner Perkins; Yahoo Finance's reproduction of the release also lists Zhu Ventures among the backers. Trade coverage described it as one of the largest seed rounds ever raised by a go-to-market technology platform, with capital earmarked for product development, R&D and hiring engineering talent.\nThe value proposition is to collapse a fragmented GTM stack — CRM, sales-engagement tooling, dialler and third-party data vendors — into one system. Reevo's own site describes an AI-native sales platform covering prospecting, outreach, deal management, forecasting, coaching and CRM, all \"powered by the full context of your business\"; its Foundation product page describes unifying standard and custom objects into a single context layer that stays current automatically. The stated goal is one unified platform for an entire GTM team, from first touch to closed-won.\nThe business model is enterprise/B2B SaaS replacing several existing subscriptions with one platform, but no pricing tiers, contract structure or named customer were confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Reevo%22+AI+CRM+funding+founders",
+      "https://html.duckduckgo.com/html/?q=Reevo+AI+official+website+reevo.ai+GTM+platform"
+    ],
+    "confidence_notes": "Evidence is from search-result snippets (businesswire.com, financialcontent.com, finance.yahoo.com, techfundingnews, reevo.ai) rather than fully fetched pages. Founder is unconfirmed: Tracxn names 'Clement Fang' but this was seen only in an aggregator snippet, so the field is left null. Headquarters is unconfirmed — VCBacked lists Santa Clara, California, which is plausible but unverified, hence null. Founding year unknown. Strong homonym risk: unrelated entities use the name Reevo, including reevotech.com (an iGaming casino aggregator), reevocrm.com (a Salesforce consultancy) and revo.ai; the company described here is reevo.ai, the Khosla/Kleiner-backed AI GTM platform."
+  },
+  {
+    "input_name": "Antithesis",
+    "name_official": "Antithesis",
+    "website": "https://antithesis.com",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2018,
+    "funds_raised": 77,
+    "employees_count": null,
+    "main_investors": "Amplify Partners, Tamarack Global, First In Ventures, Spark Capital, Jane Street",
+    "founders": "Will Wilson, Aparna Saxena",
+    "description": "Antithesis is an autonomous software testing company based in Virginia. Its co-founder Will Wilson previously worked on FoundationDB — which Apple acquired in 2015 — and had stints in distributed systems at Apple and Google before returning to Virginia to co-found Antithesis; Tracxn dates the founding to 2018 and names Aparna Saxena as co-founder. The company spent roughly five years in stealth before announcing a $47 million seed round, reported by Reuters at a $215 million valuation and led by Amplify Partners, Tamarack Global and First In Ventures. A subsequent $30 million round was led by Amplify Partners with participation from Spark Capital. Fortune profiled the company in March 2026, noting backers including Jane Street and Patrick Collison.\nThe value proposition is to find bugs that conventional testing misses. Antithesis runs software inside a deterministic simulated environment where faults, timing and inputs can be injected and, critically, any failure can be perfectly reproduced. By plugging the platform into the development workflow, teams automatically detect defects before release; Wilson has claimed Antithesis is the only commercially available system of its kind for general-purpose software testing, and the company's about page positions the outcome as \"bug-free software\". Reported users span demanding domains such as financial trading and blockchain infrastructure (Jane Street, Ethereum-related work).\nCommercially, Antithesis sells its testing platform to engineering organisations; the exact pricing model (compute-based, subscription or enterprise licence) was not verified on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Antithesis%22+autonomous+software+testing+funding+founders+Will+Wilson"
+    ],
+    "confidence_notes": "Based on search-result snippets (antithesis.com, frontlines.io, fortune.com, qa-financial.com, citybiz.co, tech.yahoo.com/Reuters, Tracxn) rather than fully fetched pages. funds_raised = 77 sums the reported $47M seed and $30M follow-on; Tracxn instead reports $182M total, a significant discrepancy that is unresolved. Founding year 2018 and co-founder Aparna Saxena come from Tracxn only. Headquarters city is left null: sources say 'Virginia' and Reuters says 'Washington-based' (i.e. the Washington, D.C. area), without a confirmed city. Homonym warning: 'Antithesis' is a common noun and a name used by unrelated organisations."
+  },
+  {
+    "input_name": "PlayerZero",
+    "name_official": "PlayerZero",
+    "website": "https://playerzero.ai",
+    "country": "United States",
+    "headquarter_city": "Atlanta",
+    "founded_year": null,
+    "funds_raised": 20,
+    "employees_count": null,
+    "main_investors": "Foundation Capital, WndrCo, Green Bay Ventures",
+    "founders": "Animesh Koratana",
+    "description": "PlayerZero is a US software-quality company based in Atlanta, Georgia. Its founder Animesh Koratana announced in 2025 that the company had raised a $20 million Series A led by Foundation Capital, with WndrCo and Green Bay Ventures participating alongside angels including Guillermo Rauch (Vercel) and Dylan Field. Foundation Capital published its own rationale for leading the round, describing PlayerZero as a software quality platform purpose-built for the AI-code-generation era. The company frames the founding problem plainly: software creation has gone supersonic, but quality has not kept up.\nThe value proposition is predictive software quality rather than reactive debugging. PlayerZero builds what it calls AI production engineers — living models of software systems that understand, maintain and operate complex production environments. The platform integrates telemetry, user sessions, support tickets and code repositories to trace problems directly to specific lines of code, simulates code changes, predicts failures before deployment and continuously learns from every issue. The pitch to enterprises is shipping bug-free code faster and preventing customer-impacting defects instead of triaging them after the fact.\nThe business model is enterprise B2B software sold to engineering organisations. No pricing tiers, contract structure or named customer were confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22PlayerZero%22+AI+software+quality+funding+founders"
+    ],
+    "confidence_notes": "Based on search-result snippets (playerzero.ai, foundationcapital.com, hackernoon.com, LinkedIn, Crunchbase, VCBacked, prospeo.io) rather than fully fetched pages. Headquarters 'Atlanta' comes from VCBacked (aggregator). Founding year unknown. funds_raised = 20 is the Series A; earlier pre-seed/seed amounts, if any, are not included. Any co-founders beyond Animesh Koratana are unknown."
+  },
+  {
+    "input_name": "Superblocks",
+    "name_official": "Superblocks",
+    "website": "https://www.superblocks.com",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": 2021,
+    "funds_raised": 60,
+    "employees_count": null,
+    "main_investors": "Kleiner Perkins, Spark Capital, Greenoaks, Meritech Capital",
+    "founders": "Brad Menezes, Ran Ma",
+    "description": "Superblocks is a New York-based enterprise application platform, founded in 2021 by Brad Menezes (co-founder and CEO) and Ran Ma; a VC profile gives the legal name as DayZero Software, Inc. In May 2025 the company announced via Business Wire, datelined New York, that it had raised $23 million as part of its Series A, bringing total funding to $60 million. Investors include Kleiner Perkins, Spark Capital, Greenoaks and Meritech Capital, as well as, according to a Forbes Councils profile of Menezes, the founders of Airtable, Twilio, Okta, Instacart, Box and DocuSign. The stated purpose of the funding was to address the security risks of AI app generation in the era of \"vibe coding\".\nThe value proposition is to let teams build internal enterprise applications quickly while keeping them secure and under IT control. The platform is a programmable, low-code environment in which engineering teams assemble admin panels, dashboards, workflows, scheduled jobs and CRUD applications connected to enterprise data sources, mixing pre-built UI components with custom code. Its AI layer includes an agent named Clark that generates enterprise apps within organisational guardrails, so that AI-generated internal tooling inherits governance, permissions and security policy rather than bypassing them.\nThe business model is B2B SaaS sold to enterprise engineering and IT organisations. Specific pricing tiers, contract structure and named customers were not confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Superblocks%22+internal+apps+platform+funding+founders+New+York"
+    ],
+    "confidence_notes": "Based on search-result snippets (businesswire.com, intelligence360.news, cioinfluence.com, councils.forbes.com, settervc.com, neuronfeed.com, Crunchbase) rather than fully fetched pages. Founding year 2021, founder names and the DayZero Software legal name come from SetterVC, a secondary aggregator. The website URL was inferred from the company name plus a parsers.vc entry titled 'superblocks.com' and was not itself fetched — verify before import."
+  },
+  {
+    "input_name": "Alta",
+    "name_official": "Alta",
+    "website": "https://www.altadaily.com",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": null,
+    "funds_raised": 11,
+    "employees_count": null,
+    "main_investors": "Menlo Ventures, Aglaé Ventures, LVMH",
+    "founders": "Jenny Wang",
+    "description": "Alta is an AI personal styling and shopping company founded by Jenny Wang, profiled by Forbes, Vogue and ELLE as the creator of a \"Clueless closet\" app for the AI era. The company raised an $11 million seed round led by Menlo Ventures, with Aglaé Ventures — the Arnault family's investment vehicle — and LVMH also investing, a line-up reported by Business of Fashion. Menlo Ventures published its own investment rationale, describing Alta as agentic styling and shopping.\nThe value proposition is to make professional-grade personal styling available to ordinary consumers. Users build a virtual closet by uploading wardrobe photos or receipts, or by drawing on Alta's product database; the system then generates outfit recommendations and allows virtual try-ons on a digital avatar, factoring in the user's budget, lifestyle, calendar and local weather. Company and press descriptions mention more than a dozen specialised models working together to decide what to wear, what to pack and what to buy, with real-time shopping recommendations tailored to individual style and the clothes the user already owns.\nThe business model was not documented on any page actually fetched. For a consumer styling and shopping app, subscription tiers and/or retail affiliate commissions are the plausible revenue routes, but neither was verified, and no commercial partner beyond the LVMH investment was confirmed.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Alta%22+AI+personal+styling+fashion+startup+funding+New+York",
+      "https://html.duckduckgo.com/html/?q=Alta+AI+stylist+Jenny+Wang+official+website+shopwithalta"
+    ],
+    "confidence_notes": "Strong homonym risk — 'Alta' is used by many unrelated companies (including an unrelated AI sales agent company and Alta the magazine). The entity described here is altadaily.com, Jenny Wang's Menlo Ventures-backed AI stylist, matching the requested sector hint. All facts come from search-result snippets (businessoffashion.com, menlovc.com, vogue.com, elle.com, forbes.com, modernluxury.com, startuphub.ai, neuronfeed.com, altadaily.com) rather than fully fetched pages. Headquarters 'New York' comes from NeuronFeed (aggregator). Founding year unknown; business model unverified."
+  },
+  {
+    "input_name": "Oboe",
+    "name_official": "Oboe",
+    "website": "https://oboe.com",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": null,
+    "funds_raised": 20,
+    "employees_count": null,
+    "main_investors": "Andreessen Horowitz (a16z), Eniac Ventures, Haystack, Offline Ventures, Factorial",
+    "founders": "Nir Zicherman, Michael Mignano",
+    "description": "Oboe is an AI-powered learning company founded by Nir Zicherman and Michael Mignano, the co-founders of the podcasting platform Anchor, which was acquired by Spotify. TechCrunch covered the product launch on 10 September 2025, and Zicherman published a co-written introduction on Medium the same week. An initial round of about $4 million accompanied the launch; on 10 December 2025 TechCrunch reported a $16 million Series A led by a16z, with participation from existing investors Eniac, Haystack, Offline and Factorial, taking cumulative funding to roughly $20 million. Mignano remains a full-time partner at Lightspeed while serving as co-founder.\nThe value proposition is to let anyone learn anything by generating a personalised course on demand. The chat-based app first identifies the learner's goal, then generates chapters and materials in multiple formats — lessons and articles, AI-generated podcasts, images and diagrams, flashcards, study guides and quizzes. Oboe's own site summarises this as \"chat that actually teaches you\": structured, cited, personalised and interactive, in contrast with generic chatbot answers. The company has since shipped a rebuilt version described in its blog post \"Introducing the All New Oboe\".\nOn the business model, coverage of the September 2025 launch reports that Oboe offers both a free tier and paid tiers, i.e. a consumer freemium subscription. Enterprise or education licensing was not confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Oboe%22+AI+learning+startup+funding+founders",
+      "https://html.duckduckgo.com/html/?q=Oboe+AI+learning+app+official+website+oboe.fyi+Zicherman"
+    ],
+    "confidence_notes": "Homonym risk is high: oboe.ai (digital.oboe.ai) and oboeapp.com are unrelated products, and 'oboe' is a musical instrument. The company described here is oboe.com, the Zicherman/Mignano AI learning app, matching the requested sector hint. Facts come from search-result snippets (techcrunch.com, oboe.com, medium.com, techbuzz.ai, aipressroom.com, techbriefly.com, techinasia.com, edtechstartups.org, Tracxn) rather than fully fetched pages. funds_raised = 20 combines a reported ~$4M initial round and the $16M Series A, consistent with Tracxn's '$20M over 2 rounds'. Headquarters 'New York' is inferred from the founders' Anchor/New York background and aggregator listings — not directly verified. Founding year unknown."
+  },
+  {
+    "input_name": "Raspberry AI",
+    "name_official": "Raspberry AI",
+    "website": "https://www.raspberry.ai",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": 2022,
+    "funds_raised": 28.5,
+    "employees_count": null,
+    "main_investors": "Andreessen Horowitz (a16z), Greycroft, Correlation Ventures, MVP Ventures, Khosla Ventures",
+    "founders": "Cheryl Liu",
+    "description": "Raspberry AI is a generative-AI platform for fashion and apparel creatives, founded by Cheryl Liu; Tracxn dates the founding to 2022. On 13 January 2025 the company announced, via Business Wire and covered by TechCrunch and Retail Technology Innovation Hub, a $24 million Series A led by Andreessen Horowitz (a16z), with existing investors Greycroft, Correlation Ventures and MVP Ventures participating alongside angels including Gokul Rajaram and Ken Pilot; the round followed an earlier seed. Tracxn puts cumulative funding at $28.5 million and also lists Khosla Ventures among backers. Forbes profiled Liu in May 2025, reporting that Raspberry AI cuts fashion design time and cost roughly in half. TechCrunch noted plans to hire more professionals and expand beyond apparel into home, furniture and cosmetics product design.\nThe value proposition is to compress the apparel design-to-market cycle. The platform lets brands and retailers generate mood boards, lifestyle photography, product photography and technical drawings from text prompts, then iterate on colourways, materials and silhouettes without physical samples or photo shoots — rethinking how collections are conceived, developed and delivered.\nCommercially, Raspberry AI sells its platform to fashion brands, retailers and sourcing groups. Publicly named customers include Under Armour, MCM Worldwide, Gruppo Teddy and Li & Fung. Specific pricing (per-seat, per-brand or enterprise licence) was not confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22Raspberry+AI%22+fashion+generative+AI+funding+founders"
+    ],
+    "confidence_notes": "Based on search-result snippets (businesswire.com, techcrunch.com, forbes.com, retailtechinnovationhub.com, raspberry.ai press page, feedtheai.com, Crunchbase, Tracxn) rather than fully fetched pages. Founding year 2022, total funding $28.5M and the Khosla Ventures mention come from Tracxn (aggregator). Headquarters 'New York' is taken from the user-supplied sector hint and general coverage but was not independently verified on a fetched page — confirm before import. Note the unrelated 'Raspberry Pi' brand when deduplicating."
+  },
+  {
+    "input_name": "AgentSmyth",
+    "name_official": "AgentSmyth",
+    "website": "https://agentsmyth.com",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": 2024,
+    "funds_raised": 11.2,
+    "employees_count": null,
+    "main_investors": "FinTech Collective, Thomson Reuters",
+    "founders": "Daniel McCooey, Michael (Mike) Block, Pulkit Jaiswal",
+    "description": "AgentSmyth is a New York-based company building autonomous AI agents for capital markets, founded in 2024 by Wall Street veterans Daniel McCooey and Michael (Mike) Block, with Pulkit Jaiswal also listed as a co-founder. The company first surfaced publicly with a PRWeb announcement of a $2.5 million seed round from industry veterans, combining expertise in equity trading with large-language-model methodology. On 2 June 2025 it announced via Business Wire an $8.7 million seed round from FinTech Collective, Thomson Reuters and others to scale its autonomous agent platform for trading and investment, bringing total funding to $11.2 million, with the new capital earmarked for product expansion and institutional adoption.\nThe value proposition is to deliver real-time, institutional-grade market intelligence to professional traders and asset managers. The company's site describes six AI agents operating as one system, adapting and delivering strategy at the speed of decision-making, and claims deployment at leading financial institutions spanning trillions in assets under management. Third-party profiles describe the agent suite as covering equities market research, macroeconomic insight, sentiment analysis, technical analysis and options-flow monitoring, producing the current intelligence traders need without manual research.\nThe business model is described by aggregators as a SaaS financial-data and intelligence platform sold to institutional trading desks and asset managers; Thomson Reuters is both an investor and a strategic industry partner. Precise pricing and named client institutions were not confirmed on a fetched page.",
+    "sources": [
+      "https://html.duckduckgo.com/html/?q=%22AgentSmyth%22+AI+agents+finance+funding",
+      "https://html.duckduckgo.com/html/?q=AgentSmyth+official+website+agentsmyth.ai"
+    ],
+    "confidence_notes": "Based on search-result snippets (businesswire.com, prweb.com, finance.yahoo.com, financedigest.com, theindustryspread.com, thesaasnews.com, agentsmyth.com, LinkedIn, Tracxn, indexed.vc) rather than fully fetched pages. Founding year 2024, the third co-founder Pulkit Jaiswal and the $11.2M total come from Tracxn/indexed.vc (aggregators). Homonym warning: do not confuse with SmythOS (smythos.com), AgentSmith (agentsmith.so), Smithery (smithery.ai), LangSmith or Smith.ai — all unrelated. The correct domain is agentsmyth.com (not agentsmyth.ai)."
+  }
+]

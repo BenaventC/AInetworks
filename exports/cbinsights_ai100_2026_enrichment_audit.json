@@ -1,0 +1,711 @@
+{
+  "applied": false,
+  "consulted_at": "2026-08-23",
+  "counts": {
+    "updated": 78
+  },
+  "audit": [
+    {
+      "name": "Anam",
+      "id": 2891,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Strella",
+      "id": 2892,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "7AI",
+      "id": 2893,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Aurascape",
+      "id": 2894,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "depthfirst",
+      "id": 2895,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Lumana",
+      "id": 2896,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Prophet Security",
+      "id": 2897,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Simbian",
+      "id": 2898,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Alex",
+      "id": 2899,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Tako",
+      "id": 2900,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Bluefish",
+      "id": 2901,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Creatify AI",
+      "id": 2902,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Newton Research",
+      "id": 2903,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "Profound",
+      "id": 2904,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_1.json"
+    },
+    {
+      "name": "MainFunc",
+      "id": 2905,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Narada",
+      "id": 2906,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Pokee AI",
+      "id": 2907,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Serval",
+      "id": 2908,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Actively AI",
+      "id": 2909,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Netic",
+      "id": 2910,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Reevo",
+      "id": 2911,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Antithesis",
+      "id": 2912,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "PlayerZero",
+      "id": 2913,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Superblocks",
+      "id": 2914,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Alta",
+      "id": 2915,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Oboe",
+      "id": 2916,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Raspberry AI",
+      "id": 2917,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_2.json"
+    },
+    {
+      "name": "Avantos",
+      "id": 2919,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Bretton AI",
+      "id": 2920,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Further AI",
+      "id": 2922,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Questflow",
+      "id": 2923,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Salient",
+      "id": 2924,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "TidalWave",
+      "id": 2925,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Boltz",
+      "id": 2926,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Elicit",
+      "id": 2927,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Ellipsis Health",
+      "id": 2928,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Layer Health",
+      "id": 2929,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Penguin Ai",
+      "id": 2930,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Periodic Labs",
+      "id": 2931,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Qualified Health",
+      "id": 2932,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_3.json"
+    },
+    {
+      "name": "Atomic Canyon",
+      "id": 2933,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Leo AI",
+      "id": 2934,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Procure Ai",
+      "id": 2935,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Qbiq",
+      "id": 2936,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Ankar",
+      "id": 2937,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Enter",
+      "id": 2938,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Rhino Federated Computing",
+      "id": 2939,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Aaru",
+      "id": 2940,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "LanceDB",
+      "id": 2941,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Applied Compute",
+      "id": 2943,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "E2B",
+      "id": 2944,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Lyzr",
+      "id": 2945,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Maisa AI",
+      "id": 2946,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_4.json"
+    },
+    {
+      "name": "Seekr",
+      "id": 2947,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "StackOne",
+      "id": 2948,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Thread AI",
+      "id": 2949,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "FriendliAI",
+      "id": 2950,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Moonlake AI",
+      "id": 2951,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Moonvalley",
+      "id": 2952,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "ChipAgents",
+      "id": 2953,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Unconventional AI",
+      "id": 2954,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Majestic Labs AI",
+      "id": 2955,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Positron",
+      "id": 2956,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Geordie AI",
+      "id": 2957,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "InCountry",
+      "id": 2958,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Knostic",
+      "id": 2959,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "LMArena",
+      "id": 2960,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_5.json"
+    },
+    {
+      "name": "Keycard",
+      "id": 2961,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "Straiker",
+      "id": 2962,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "Virtue AI",
+      "id": 2963,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "Generalist AI",
+      "id": 2964,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "InOrbit",
+      "id": 2965,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "Blue Water Autonomy",
+      "id": 2966,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "BOS Semiconductors",
+      "id": 2967,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "DYNA",
+      "id": 2968,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "Gravis Robotics",
+      "id": 2969,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "Persona AI",
+      "id": 2970,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    },
+    {
+      "name": "The Bot Company",
+      "id": 2971,
+      "decision": "updated",
+      "fields": [
+        "description"
+      ],
+      "source_file": "cb2026_batch_6.json"
+    }
+  ]
+}

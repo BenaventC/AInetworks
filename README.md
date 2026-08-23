@@ -95,6 +95,7 @@ Notebook conventions and execution notes are documented in [`analyses/README.md`
 The [`scripts/`](scripts/) directory contains reusable data preparation tools, including:
 
 - [`normalize_geo_english.js`](scripts/normalize_geo_english.js), [`normalize_sector_labels.js`](scripts/normalize_sector_labels.js), and [`normalize_partnership_types_english.js`](scripts/normalize_partnership_types_english.js): controlled-label normalization.
+- [`audit_sector_label_variants.js`](scripts/audit_sector_label_variants.js) and [`backfill_sector_domains.js`](scripts/backfill_sector_domains.js): sector ontology audit and derivation of the domain level.
 - [`normalize_all_entity_lists.js`](scripts/normalize_all_entity_lists.js) and [`normalize_competitor_names.js`](scripts/normalize_competitor_names.js): entity and competitor-name normalization.
 - [`generate_relations_from_enterprises.py`](scripts/generate_relations_from_enterprises.py) and [`cleanup_generated_relation_targets.py`](scripts/cleanup_generated_relation_targets.py): relation generation and cleanup.
 - [`enrich_relations_from_enterprises.js`](scripts/enrich_relations_from_enterprises.js) and [`enrich_top500_websites_logos.js`](scripts/enrich_top500_websites_logos.js): targeted enrichment utilities.
@@ -185,11 +186,12 @@ Compiled lists were cleaned with automated scripts:
 
 ### 3. Automated Enrichment
 
-Missing fields were enriched with GitHub Copilot-assisted research:
-- structured extraction from Wikipedia and Wikidata,
-- targeted queries on public sources,
-- mapping of market capitalization and funding amounts,
-- metadata completion (founded year, sector, description).
+Missing fields were enriched with GitHub Copilot-assisted research, in two separate phases:
+
+- **research**: web sources are read company by company and written to JSON working files under `exports/research/`, each record keeping its `sources` and `confidence_notes`; any field not confirmed by a consulted page stays `null`,
+- **application**: a distinct script writes to the database in a single transaction, filling only missing values and never overwriting an existing one without a more reliable and more recent source.
+
+This separation makes research replayable and auditable, and keeps every arbitration traceable for manual review.
 
 ### 4. Systematic Manual Review
 
@@ -234,20 +236,36 @@ You may share and adapt the content with proper attribution, including a referen
 
 Thanks to all contributors and public sources that supported data collection, normalization, and enrichment.
 
-## Latest UI Update
+## Sector Ontology
 
-- **Data Explorer page** (`/data-explorer.html`): unified ranked list of all enterprises and investors sorted by capitalization → funds raised → revenue, with hover tooltips showing description, valuation, sector, country, city, website, and founded year. Names are color-coded by country (greens for Europe, blue for USA, red for China, orange for Canada, etc.).
-- Financial values are now normalized and handled as numeric values in base unit USD millions.
-- Company and relationship cards use a dense 4-column layout on desktop (2 columns tablet, 1 mobile).
-- Edit forms were condensed to maximize visible information while keeping mobile usability.
-- Top 200 cards now include a ranking sticker with percentile tiers (Top 1%, Top 5%, Top 10%).
-- Company logos are normalized in a fixed-size frame and consistently right-aligned in cards.
+Sectors are described at three levels of granularity, all defined in a single editable file, [`public/sector_ontology.csv`](public/sector_ontology.csv).
 
-## Recent Project Updates
+| Level | Column | Count | Purpose |
+|-------|--------|-------|---------|
+| Label | `canonical_label` | 56 | The only values allowed in `enterprises.sector` (max 5 per company) |
+| Group | `group` | 6 | Inherited intermediate level |
+| Domain | `domain` | 12 | Meta level used for filtering and aggregation |
 
-- **Database enrichment (Aug 2026)**: systematic description enrichment covering ~2 500 enterprises and ~160 investors, with country normalization and capitalization/funding data. Coverage now exceeds 74% for country and ~90% for descriptions on the main enterprise table.
-- **Investor table**: dedicated `investors` table with capital_investi, participations, acquisitions, investor_type, and full profile fields; visible via the Investors tab and the Data Explorer.
-- Sector labels now include the labels that appear at least 3 times in the database, and the form allows up to 5 labels per company.
-- Competitor names are normalized against canonical enterprise names, including alias rules such as Azure → Microsoft Azure and Cerebras Systems → Cerebras.
-- Competition analysis exports are regenerated regularly and stored in the analyses/exports folder for local review and sharing.
+The design goal is to **keep fine-grained labels while offering a coarse reading**. Rather than merging labels to simplify a chart, aggregate at the domain level.
+
+`enterprises.sector_domains` is a derived field, never entered by hand: the server recomputes it on every create and update, and [`scripts/backfill_sector_domains.js`](scripts/backfill_sector_domains.js) regenerates it after bulk imports or ontology edits.
+
+To reduce a label variant, add an alias in `alias_terms` instead of creating a new label, then run:
+
+```bash
+node scripts/audit_sector_label_variants.js                       # read-only inventory
+node scripts/normalize_sector_labels.js --aliases-only            # preview, conservative
+node scripts/normalize_sector_labels.js --aliases-only --apply    # write
+```
+
+The `--aliases-only` mode merges declared aliases only and leaves canonical labels untouched. Without the flag, keyword classification also applies and may reassign already-canonical labels.
+
+## Latest Updates
+
+- **Three-level sector ontology (Aug 2026)**: added the `domain` meta level (12 domains) and the derived `sector_domains` column. Sector label variants were reduced from 129 to 67 through alias merging, with no loss of granularity. The UI adds a domain filter and a domain badge on each card.
+- **CB Insights AI 100 2026 import**: 81 new companies researched from public sources and added with three-paragraph descriptions (history, value proposition, business model). Raw research including sources and confidence notes is kept in `exports/research/`.
+- **Data Explorer page** (`/data-explorer.html`): unified ranked list of enterprises and investors sorted by capitalization → funds raised → revenue, with country-coded names and hover tooltips.
+- **Investor table**: dedicated `investors` table with `capital_investi`, `participations`, `acquisitions`, and `investor_type`.
+- **Financial normalization**: all monetary fields are numeric, in USD millions.
+- **Descriptions**: systematic enrichment covering ~2 600 enterprises and ~160 investors; coverage exceeds 74% for country and ~90% for descriptions.
 

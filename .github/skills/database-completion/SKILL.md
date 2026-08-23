@@ -1,6 +1,6 @@
 ---
 name: database-completion
-description: "Complete and enrich records in the Réseaux d'Acteurs IA database (tables: enterprises, investors) using reliable web sources (Wikipedia, Wikidata, Forbes AI 50, CompaniesMarketCap, AI Startups Europe): fill missing fields, import missing companies, map funding/market cap to capitalization, normalize countries, classify investor types, and deduplicate close name variants."
+description: "Complete and enrich records in the Réseaux d'Acteurs IA database (tables: enterprises, investors) using reliable web sources (Wikipedia, Wikidata, Forbes AI 50, CB Insights, CompaniesMarketCap, AI Startups Europe): fill missing fields, import missing companies, map funding/market cap to capitalization, normalize countries, maintain the three-level sector ontology (label, group, domain), classify investor types, and deduplicate close name variants."
 ---
 
 # Complétion de la Base de Données Réseaux d'Acteurs IA
@@ -64,17 +64,35 @@ Règle de correction :
 
 - **Complétion qualitative (Wikipedia)** : enrichir description, website, capitalization, employees_count.
 - **Complétion par batch (Wikidata)** : enrichir description, website, country, headquarter_city, main_investors avec contrôle du rate limit.
-- **Import listes privées (Forbes AI 50)** : ajouter les entreprises absentes et mapper `funding` vers `capitalization`.
+- **Import listes privées (Forbes AI 50, CB Insights AI 100)** : ajouter les entreprises absentes en deux phases (recherche puis application) et mapper `funding` vers `capitalization`.
 - **Import sociétés cotées (CompaniesMarketCap)** : ajouter les absentes et mapper `market cap` vers `capitalization`.
 - **Import annuaire européen massif (AI Startups Europe)** : crawler pagination (1312 fiches), extraire description + pays + website + secteur, puis insert/update.
-- **Normalisation** : harmoniser `country` et `headquarter_city` en anglais, homogénéiser les formats de capitalisation.
+- **Normalisation** : harmoniser `country` et `headquarter_city` en anglais, fusionner les variantes de labels sectoriels, régénérer `sector_domains`.
 - **Dédoublonnage** : fusionner variantes de noms proches en conservant la fiche la plus riche.
+
+## Ontologie Sectorielle à Trois Niveaux
+
+`public/sector_ontology.csv` est la source unique du référentiel. Colonnes : `canonical_label`, `group`, `alias_terms`, `keyword_terms`, `description`, `domain`.
+
+| Niveau | Colonne | Nombre | Usage |
+|--------|---------|--------|-------|
+| Label | `canonical_label` | 56 | Seule valeur autorisée dans `enterprises.sector` (5 max) |
+| Groupe | `group` | 6 | Niveau intermédiaire hérité |
+| Domaine | `domain` | 12 | Niveau méta : filtrage, agrégation, badge d'interface |
+
+Principe : **ne jamais appauvrir `sector` pour simplifier une analyse**. Agréger au niveau `domain` à la place.
+
+`enterprises.sector_domains` est un champ **dérivé** de `sector`, trié alphabétiquement. Le serveur le recalcule à chaque `POST` et `PUT`. Après un import en masse ou une édition du CSV, le régénérer avec `scripts/backfill_sector_domains.js`.
+
+Pour réduire une variante de label, **ajouter un alias** dans `alias_terms` plutôt que créer un label. Un alias ne doit apparaître que dans une seule ligne du CSV : en cas de doublon, la dernière ligne l'emporte silencieusement.
 
 ## Scripts Réutilisables (Normalisation)
 
 Les normalisations ponctuelles sont retirées après leur exécution. Conserver les règles et les audits, pas les scripts ad hoc qui modifient directement la base. Les utilitaires pérennes sont conçus pour être rejoués après import ou enrichissement.
 
-- `scripts/normalize_sector_labels.js` : normalise le champ `sector` avec taxonomie contrôlée (labels séparés par virgules, maximum 5 labels).
+- `scripts/normalize_sector_labels.js` : normalise le champ `sector`. Deux modes — `--aliases-only` fusionne uniquement les alias déclarés dans le CSV (**mode conservateur, à utiliser après un import**) ; sans ce drapeau, la classification par mots-clés s'ajoute et peut réaffecter des labels déjà canoniques.
+- `scripts/audit_sector_label_variants.js` : inventaire en lecture seule des labels distincts et détection des doublons morphologiques (casse, accents, ponctuation, pluriels, `&`/`and`).
+- `scripts/backfill_sector_domains.js` : régénère `enterprises.sector_domains` depuis `sector` et le CSV ; signale les labels sans domaine déclaré.
 - `scripts/normalize_geo_english.js` : normalise `country` et `headquarter_city` en anglais, corrige alias/typos et convertit les placeholders (`NA`, `N/A`, etc.) en vide (`NULL`).
 - `scripts/generate_relations_from_enterprises.py` : génère automatiquement des relations à partir des champs entreprise `main_investors`, `main_competitors`, `main_acquisitions`, `strategic_partnerships` (split par virgule), avec extraction optionnelle de date en parenthèses vers `start_date`.
 - `scripts/cleanup_generated_relation_targets.py` : nettoyage post-génération des entreprises cibles (correction d'alias/typos, suppression des valeurs invalides). Le split des noms composites est volontairement **désactivé par défaut** et activable via `--split-composites`.
@@ -83,16 +101,17 @@ Exécution recommandée :
 
 ```bash
 # Prévisualiser sans écrire
-node scripts/normalize_sector_labels.js
+node scripts/audit_sector_label_variants.js
+node scripts/normalize_sector_labels.js --aliases-only
+node scripts/backfill_sector_domains.js
 node scripts/normalize_geo_english.js
 python scripts/generate_relations_from_enterprises.py
-python scripts/cleanup_generated_relation_targets.py --min-id 1615
 
 # Appliquer
-node scripts/normalize_sector_labels.js --apply
+node scripts/normalize_sector_labels.js --aliases-only --apply
+node scripts/backfill_sector_domains.js --apply
 node scripts/normalize_geo_english.js --apply
 python scripts/generate_relations_from_enterprises.py --apply
-python scripts/cleanup_generated_relation_targets.py --min-id 1615 --apply
 ```
 
 Règle projet : les valeurs de données stockées en base doivent rester en anglais.
@@ -137,6 +156,43 @@ Appliquer ce protocole à toute nouvelle liste externe ou à toute source dériv
 2. Vérifier les doublons de clés normalisées, les pays hors vocabulaire anglais, les secteurs hors taxonomie et les caractères corrompus.
 3. Appliquer dans une transaction, puis produire les compteurs et un export CSV/JSON UTF-8 des décisions.
 4. Contrôler un échantillon des créations et mises à jour dans l'API ou directement en base.
+
+## Import en Deux Phases : Recherche puis Application
+
+Pour un lot de plus d'une dizaine d'entreprises, séparer la recherche documentaire de l'écriture en base. Cette séparation rend la recherche rejouable, auditable et parallélisable.
+
+### Phase 1 — Recherche
+
+Découper la liste en batches d'une quinzaine d'entreprises et produire un fichier JSON par batch sous `exports/research/<source>_batch_<n>.json`. Chaque objet contient :
+
+`input_name`, `name_official`, `website`, `country`, `headquarter_city`, `founded_year`, `funds_raised` (USD millions), `employees_count`, `main_investors`, `founders`, `description`, `sources` (URLs consultées), `confidence_notes`.
+
+Règles :
+
+- Un champ non confirmé par une page consultée reste `null`. Ne jamais compléter par déduction.
+- Consigner dans `confidence_notes` tout écart entre sources, tout fait issu d'un simple extrait de résultat de recherche, et toute ambiguïté d'homonymie.
+- Vérifier les homonymes : un nom court et courant (`Light`, `Alex`, `Parallel`, `Profound`) doit être recoupé avec la catégorie ou le secteur d'origine.
+
+### Phase 2 — Application
+
+Un script distinct lit tous les batches et écrit en base :
+
+- champ `null` = aucune écriture, la valeur existante n'est jamais effacée ;
+- portée limitée au lot importé, identifié par la ligne de provenance et `is_validated = 3` ;
+- transaction unique avec rollback, sauvegarde préalable dans `database_backups/` ;
+- audit JSON des décisions par fiche et par champ.
+
+Conserver les fichiers de `exports/research/` après l'import : ils documentent les arbitrages pour la revue manuelle.
+
+### Structure imposée des descriptions
+
+Trois paragraphes, dans cet ordre, en anglais :
+
+1. **Histoire** — fondation, fondateurs, tours de financement, faits marquants datés.
+2. **Proposition de valeur** — produit, technologie, problème adressé.
+3. **Modèle économique** — facturation, clients, canaux de distribution.
+
+Ajouter en dernière ligne la provenance (source et catégorie d'origine). Cette ligne sert ensuite de marqueur pour isoler le lot dans l'interface via la recherche tous champs.
 
 ## Politique de Priorisation des Sources (OBLIGATOIRE)
 
@@ -401,8 +457,7 @@ Méthode recommandée :
 5. Mettre à jour les existantes uniquement si des champs sont manquants.
 6. Générer un audit JSON détaillé.
 
-Script de référence :
-- `analyses/import_ai_startups_europe_1312.py`
+Script de référence : archivé dans `archives/manual_ops/` après exécution.
 
 Résultat observé sur ce projet :
 - 132 pages crawlées, 1312 lignes sources, 1301 uniques
@@ -419,22 +474,14 @@ Stratégie recommandée :
 4. Implémenter un **backoff exponentiel** en cas de 429.
 5. Garder un matching conservateur pour éviter les faux positifs.
 
-Scripts de référence :
-- `analyses/enrich_missing_profiles_wikidata.py`
-- `analyses/enrich_missing_profiles_wikipedia.py`
-
 Astuce batch :
-- `MAX_TARGETS=60` pour traiter par lots et monitorer la progression.
+- traiter par lots d'environ 60 entreprises pour monitorer la progression et limiter les blocages.
 
 ### 11. Export des Fiches à Traiter
 
 Objectif : produire rapidement une file de travail pour les enrichissements manuels restants.
 
-Script :
-- `analyses/export_missing_descriptions.py`
-
-Sortie :
-- `exports/entreprises_sans_description.csv`
+Sortie : `exports/entreprises_sans_description.csv`
 
 Colonnes recommandées :
 - `id`, `name`, `country`, `headquarter_city`, `sector`, `website`, `founded_year`, `capitalization`, `employees_count`, `main_investors`
@@ -580,25 +627,15 @@ Colonnes supplémentaires ajoutées (migrations automatiques au démarrage du se
 
 **Champs monétaires :** `capitalization`, `funds_raised`, `revenue_millions` — tous en **USD millions** (numérique, séparateur `.`).
 
-## Taxonomie Secteurs (25 labels canoniques)
+## Taxonomie Secteurs
 
-```
-Aerospace | Agriculture & Forestry | AI model | Biotech | Cloud Provider
-Computer Vision | Construction | Data | Defence | Education
-Energy & Utilities | Financial Services | Hardware | Health & Social Care
-IT & Security | Manufacturing & Operations | Media & Entertainment
-Professional Services | Public Sector | R&D | Real Estate Activities
-Retail & E-commerce | Robotics | Sales & Marketing | Transport & Mobility
-```
+Voir la section « Ontologie Sectorielle à Trois Niveaux » plus haut. Le référentiel vit exclusivement dans `public/sector_ontology.csv` ; aucune liste de labels ne doit être recopiée ailleurs, sous peine de divergence.
 
-Script de (re)normalisation : `analyses/normalize_sector_labels.js --apply`
+Règles de mapping structurantes :
 
-**Mappings importants :**
-- `ICT` → label supprimé du picker (données existantes conservées)
-- `Aerospace & Defence` → éclaté en `Aerospace` + `Defence`
-- `Manufacturing` + `Operations` → `Manufacturing & Operations`
-- `Sales` + `Marketing` → `Sales & Marketing`
-- Filiales mappées vers groupe parent : YouTube/DeepMind → `Alphabet`, Instagram/WhatsApp → `Meta Platforms`, etc.
+- `ICT` est un repli : il est retiré dès qu'un label plus spécifique est présent.
+- `Aerospace & Defence` est éclaté en `Aerospace` + `Defence` ; ne jamais fusionner ces deux labels.
+- Les filiales sont remappées vers leur entité canonique selon `conventions.md` §1.3 à §1.6.
 
 ## Analyse Concurrentielle (Notebook)
 
@@ -617,10 +654,10 @@ Pipeline :
 node -e "fetch('http://localhost:3000/api/enterprises/ID', {method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify({...data})}).then(r=>r.json()).then(console.log)"
 ```
 
-## Nouveaux Scripts Opérationnels
+## Organisation des Scripts
 
-- `analyses/import_ai_startups_europe_1312.py`
-- `analyses/enrich_missing_profiles_wikipedia.py`
-- `analyses/enrich_missing_profiles_wikidata.py`
-- `analyses/normalize_countries_post_ai_europe.py`
-- `analyses/export_missing_descriptions.py`
+- `scripts/` ne contient que les outils récurrents et maintenus ; leur inventaire à jour est dans `scripts/README.md`.
+- `scripts/lib/` regroupe le socle commun : chemin de base résolu depuis la racine, helpers SQLite promisifiés, transactions, lecture de l'ontologie, affichage aperçu/application.
+- `archives/manual_ops/` conserve les imports et correctifs ponctuels déjà exécutés, pour traçabilité uniquement.
+
+Ne jamais recopier dans ce skill la liste des scripts : elle diverge immédiatement. S'y référer par le README du dossier.

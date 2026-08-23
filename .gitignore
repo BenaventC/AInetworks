@@ -17,3 +17,7 @@ server.audit.*
 __pycache__/
 *.pyc
 archives/HPV-*.jpg
+
+# Sauvegardes locales de la base et documents de reference non redistribuables
+database_backups/
+archives/*.pdf

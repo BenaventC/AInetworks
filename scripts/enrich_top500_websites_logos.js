@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 
-const DB_PATH = 'database.db';
+const DB_PATH = require('./lib/db').DB_PATH;
 const TOP_LIMIT = 500;
 
 function all(db, sql, params = []) {

@@ -1,0 +1,710 @@
+{
+  "applied": false,
+  "source": "CB Insights company profiles",
+  "consulted_at": "2026-08-23",
+  "counts": {
+    "existing": 100
+  },
+  "decisions": [
+    {
+      "name": "Anam",
+      "decision": "existing",
+      "matched_id": 2891,
+      "matched_name": "Anam",
+      "sector": "Customer Experience, Generative Media, Agentic"
+    },
+    {
+      "name": "Strella",
+      "decision": "existing",
+      "matched_id": 2892,
+      "matched_name": "Strella",
+      "sector": "Customer Experience, Marketing, Agentic"
+    },
+    {
+      "name": "7AI",
+      "decision": "existing",
+      "matched_id": 2893,
+      "matched_name": "7AI",
+      "sector": "IT & Security, Agentic"
+    },
+    {
+      "name": "Aurascape",
+      "decision": "existing",
+      "matched_id": 2894,
+      "matched_name": "Aurascape",
+      "sector": "IT & Security"
+    },
+    {
+      "name": "depthfirst",
+      "decision": "existing",
+      "matched_id": 2895,
+      "matched_name": "depthfirst",
+      "sector": "IT & Security, Agentic"
+    },
+    {
+      "name": "Lumana",
+      "decision": "existing",
+      "matched_id": 2896,
+      "matched_name": "Lumana",
+      "sector": "IT & Security, Computer Vision"
+    },
+    {
+      "name": "Prophet Security",
+      "decision": "existing",
+      "matched_id": 2897,
+      "matched_name": "Prophet Security",
+      "sector": "IT & Security, Agentic"
+    },
+    {
+      "name": "Simbian",
+      "decision": "existing",
+      "matched_id": 2898,
+      "matched_name": "Simbian",
+      "sector": "IT & Security, Agentic"
+    },
+    {
+      "name": "Alex",
+      "decision": "existing",
+      "matched_id": 2899,
+      "matched_name": "Alex",
+      "sector": "HRM, Agentic"
+    },
+    {
+      "name": "Tako",
+      "decision": "existing",
+      "matched_id": 2900,
+      "matched_name": "Tako",
+      "sector": "HRM"
+    },
+    {
+      "name": "Bluefish",
+      "decision": "existing",
+      "matched_id": 2901,
+      "matched_name": "Bluefish",
+      "sector": "Marketing"
+    },
+    {
+      "name": "Creatify AI",
+      "decision": "existing",
+      "matched_id": 2902,
+      "matched_name": "Creatify AI",
+      "sector": "Marketing, Generative Media, Advertising"
+    },
+    {
+      "name": "Newton Research",
+      "decision": "existing",
+      "matched_id": 2903,
+      "matched_name": "Newton Research",
+      "sector": "Marketing"
+    },
+    {
+      "name": "Profound",
+      "decision": "existing",
+      "matched_id": 2904,
+      "matched_name": "Profound",
+      "sector": "Marketing"
+    },
+    {
+      "name": "MainFunc",
+      "decision": "existing",
+      "matched_id": 2905,
+      "matched_name": "MainFunc",
+      "sector": "Workflow & Productivity, Agentic"
+    },
+    {
+      "name": "Narada",
+      "decision": "existing",
+      "matched_id": 2906,
+      "matched_name": "Narada",
+      "sector": "Workflow & Productivity, Agentic"
+    },
+    {
+      "name": "Pokee AI",
+      "decision": "existing",
+      "matched_id": 2907,
+      "matched_name": "Pokee AI",
+      "sector": "Workflow & Productivity, Agentic"
+    },
+    {
+      "name": "Serval",
+      "decision": "existing",
+      "matched_id": 2908,
+      "matched_name": "Serval",
+      "sector": "Workflow & Productivity, IT & Security, Agentic"
+    },
+    {
+      "name": "Actively AI",
+      "decision": "existing",
+      "matched_id": 2909,
+      "matched_name": "Actively AI",
+      "sector": "Sales, Agentic"
+    },
+    {
+      "name": "Netic",
+      "decision": "existing",
+      "matched_id": 2910,
+      "matched_name": "Netic",
+      "sector": "Sales, Customer Experience, Agentic"
+    },
+    {
+      "name": "Reevo",
+      "decision": "existing",
+      "matched_id": 2911,
+      "matched_name": "Reevo",
+      "sector": "Sales, Agentic"
+    },
+    {
+      "name": "Antithesis",
+      "decision": "existing",
+      "matched_id": 2912,
+      "matched_name": "Antithesis",
+      "sector": "Developer Tools"
+    },
+    {
+      "name": "PlayerZero",
+      "decision": "existing",
+      "matched_id": 2913,
+      "matched_name": "PlayerZero",
+      "sector": "Developer Tools"
+    },
+    {
+      "name": "Resolve AI",
+      "decision": "existing",
+      "matched_id": 2545,
+      "matched_name": "Resolve AI",
+      "sector": "AI model"
+    },
+    {
+      "name": "Superblocks",
+      "decision": "existing",
+      "matched_id": 2914,
+      "matched_name": "Superblocks",
+      "sector": "Developer Tools"
+    },
+    {
+      "name": "Alta",
+      "decision": "existing",
+      "matched_id": 2915,
+      "matched_name": "Alta",
+      "sector": "Retail & E-commerce, Generative Media"
+    },
+    {
+      "name": "Oboe",
+      "decision": "existing",
+      "matched_id": 2916,
+      "matched_name": "Oboe",
+      "sector": "Education, Generative Media"
+    },
+    {
+      "name": "Raspberry AI",
+      "decision": "existing",
+      "matched_id": 2917,
+      "matched_name": "Raspberry AI",
+      "sector": "Retail & E-commerce, Generative Media"
+    },
+    {
+      "name": "AgentSmyth",
+      "decision": "existing",
+      "matched_id": 2918,
+      "matched_name": "AgentSmyth",
+      "sector": "Financial Services, Agentic, SaaS"
+    },
+    {
+      "name": "Avantos",
+      "decision": "existing",
+      "matched_id": 2919,
+      "matched_name": "Avantos",
+      "sector": "Financial Services, Workflow & Productivity, Agentic"
+    },
+    {
+      "name": "Bretton AI",
+      "decision": "existing",
+      "matched_id": 2920,
+      "matched_name": "Bretton AI",
+      "sector": "Financial Services, Agentic"
+    },
+    {
+      "name": "Casap",
+      "decision": "existing",
+      "matched_id": 2921,
+      "matched_name": "Casap",
+      "sector": "Financial Services, Customer Experience, Agentic"
+    },
+    {
+      "name": "Further AI",
+      "decision": "existing",
+      "matched_id": 2922,
+      "matched_name": "Further AI",
+      "sector": "Financial Services, Workflow & Productivity, Agentic"
+    },
+    {
+      "name": "Light",
+      "decision": "existing",
+      "matched_id": 1845,
+      "matched_name": "Light",
+      "sector": "AI model"
+    },
+    {
+      "name": "Questflow",
+      "decision": "existing",
+      "matched_id": 2923,
+      "matched_name": "Questflow",
+      "sector": "Financial Services, Agentic, Blockchain & Web3"
+    },
+    {
+      "name": "Salient",
+      "decision": "existing",
+      "matched_id": 2924,
+      "matched_name": "Salient",
+      "sector": "Financial Services, Voice & Audio AI, Agentic"
+    },
+    {
+      "name": "TidalWave",
+      "decision": "existing",
+      "matched_id": 2925,
+      "matched_name": "TidalWave",
+      "sector": "Financial Services, Real Estate & PropTech"
+    },
+    {
+      "name": "Assort Health",
+      "decision": "existing",
+      "matched_id": 2222,
+      "matched_name": "Assort Health",
+      "sector": "HealthTech, Natural Language Processing, Real Estate & PropTech"
+    },
+    {
+      "name": "Boltz",
+      "decision": "existing",
+      "matched_id": 2926,
+      "matched_name": "Boltz",
+      "sector": "Biotech, AI model, R&D"
+    },
+    {
+      "name": "Chai Discovery",
+      "decision": "existing",
+      "matched_id": 127,
+      "matched_name": "Chai Discovery",
+      "sector": "AI model, Biotech"
+    },
+    {
+      "name": "Elicit",
+      "decision": "existing",
+      "matched_id": 2927,
+      "matched_name": "Elicit",
+      "sector": "R&D, Natural Language Processing"
+    },
+    {
+      "name": "Ellipsis Health",
+      "decision": "existing",
+      "matched_id": 2928,
+      "matched_name": "Ellipsis Health",
+      "sector": "HealthTech, Voice & Audio AI"
+    },
+    {
+      "name": "Layer Health",
+      "decision": "existing",
+      "matched_id": 2929,
+      "matched_name": "Layer Health",
+      "sector": "HealthTech, Document AI"
+    },
+    {
+      "name": "Penguin Ai",
+      "decision": "existing",
+      "matched_id": 2930,
+      "matched_name": "Penguin Ai",
+      "sector": "HealthTech, Workflow & Productivity"
+    },
+    {
+      "name": "Periodic Labs",
+      "decision": "existing",
+      "matched_id": 2931,
+      "matched_name": "Periodic Labs",
+      "sector": "R&D, AI model, Robotics"
+    },
+    {
+      "name": "Qualified Health",
+      "decision": "existing",
+      "matched_id": 2932,
+      "matched_name": "Qualified Health",
+      "sector": "HealthTech, Infrastructure"
+    },
+    {
+      "name": "Atomic Canyon",
+      "decision": "existing",
+      "matched_id": 2933,
+      "matched_name": "Atomic Canyon",
+      "sector": "Energy & ClimateTech, Document AI"
+    },
+    {
+      "name": "CuspAI",
+      "decision": "existing",
+      "matched_id": 246,
+      "matched_name": "CuspAI",
+      "sector": "ICT"
+    },
+    {
+      "name": "Leo AI",
+      "decision": "existing",
+      "matched_id": 2934,
+      "matched_name": "Leo AI",
+      "sector": "Industrial & Manufacturing, R&D"
+    },
+    {
+      "name": "Procure Ai",
+      "decision": "existing",
+      "matched_id": 2935,
+      "matched_name": "Procure Ai",
+      "sector": "Logistics & Supply Chain, Operations, Agentic"
+    },
+    {
+      "name": "Qbiq",
+      "decision": "existing",
+      "matched_id": 2936,
+      "matched_name": "Qbiq",
+      "sector": "Real Estate & PropTech, Construction"
+    },
+    {
+      "name": "Ankar",
+      "decision": "existing",
+      "matched_id": 2937,
+      "matched_name": "Ankar",
+      "sector": "LegalTech, Agentic"
+    },
+    {
+      "name": "DeepJudge",
+      "decision": "existing",
+      "matched_id": 1937,
+      "matched_name": "DeepJudge",
+      "sector": "AI model"
+    },
+    {
+      "name": "Enter",
+      "decision": "existing",
+      "matched_id": 2938,
+      "matched_name": "Enter",
+      "sector": "HealthTech, Financial Services, Automation"
+    },
+    {
+      "name": "Rhino Federated Computing",
+      "decision": "existing",
+      "matched_id": 2939,
+      "matched_name": "Rhino Federated Computing",
+      "sector": "Data, Infrastructure, IT & Security"
+    },
+    {
+      "name": "Aaru",
+      "decision": "existing",
+      "matched_id": 2940,
+      "matched_name": "Aaru",
+      "sector": "Data, AI model"
+    },
+    {
+      "name": "LanceDB",
+      "decision": "existing",
+      "matched_id": 2941,
+      "matched_name": "LanceDB",
+      "sector": "Data, Infrastructure, Developer Tools"
+    },
+    {
+      "name": "AMESA",
+      "decision": "existing",
+      "matched_id": 2942,
+      "matched_name": "AMESA",
+      "sector": "Developer Tools, Agentic"
+    },
+    {
+      "name": "Applied Compute",
+      "decision": "existing",
+      "matched_id": 2943,
+      "matched_name": "Applied Compute",
+      "sector": "AI model, Developer Tools"
+    },
+    {
+      "name": "E2B",
+      "decision": "existing",
+      "matched_id": 2944,
+      "matched_name": "E2B",
+      "sector": "Developer Tools, Infrastructure, Agentic"
+    },
+    {
+      "name": "Linkup",
+      "decision": "existing",
+      "matched_id": 2112,
+      "matched_name": "LINKUP",
+      "sector": "AI model"
+    },
+    {
+      "name": "Lyzr",
+      "decision": "existing",
+      "matched_id": 2945,
+      "matched_name": "Lyzr",
+      "sector": "Agentic, Developer Tools"
+    },
+    {
+      "name": "Maisa AI",
+      "decision": "existing",
+      "matched_id": 2946,
+      "matched_name": "Maisa AI",
+      "sector": "Agentic, Developer Tools"
+    },
+    {
+      "name": "Parallel",
+      "decision": "existing",
+      "matched_id": 1995,
+      "matched_name": "PARALLEL",
+      "sector": "HealthTech"
+    },
+    {
+      "name": "Seekr",
+      "decision": "existing",
+      "matched_id": 2947,
+      "matched_name": "Seekr",
+      "sector": "AI model, Infrastructure"
+    },
+    {
+      "name": "StackOne",
+      "decision": "existing",
+      "matched_id": 2948,
+      "matched_name": "StackOne",
+      "sector": "Developer Tools, Infrastructure, Agentic"
+    },
+    {
+      "name": "Thread AI",
+      "decision": "existing",
+      "matched_id": 2949,
+      "matched_name": "Thread AI",
+      "sector": "Workflow & Productivity, Developer Tools, Agentic"
+    },
+    {
+      "name": "Browser Use",
+      "decision": "existing",
+      "matched_id": 1935,
+      "matched_name": "Browser Use",
+      "sector": "AI model"
+    },
+    {
+      "name": "LlamaIndex",
+      "decision": "existing",
+      "matched_id": 2420,
+      "matched_name": "LLAMAIndex",
+      "sector": "AI model, Inference & Model Serving"
+    },
+    {
+      "name": "FriendliAI",
+      "decision": "existing",
+      "matched_id": 2950,
+      "matched_name": "FriendliAI",
+      "sector": "Inference & Model Serving, Infrastructure"
+    },
+    {
+      "name": "Ami Labs",
+      "decision": "existing",
+      "matched_id": 229,
+      "matched_name": "AMI Labs",
+      "sector": "AI model"
+    },
+    {
+      "name": "Black Forest Labs",
+      "decision": "existing",
+      "matched_id": 126,
+      "matched_name": "Black Forest Labs",
+      "sector": "AI model, Computer Vision, Generative Media"
+    },
+    {
+      "name": "Moonlake AI",
+      "decision": "existing",
+      "matched_id": 2951,
+      "matched_name": "Moonlake AI",
+      "sector": "AI model, Generative Media"
+    },
+    {
+      "name": "Moonvalley",
+      "decision": "existing",
+      "matched_id": 2952,
+      "matched_name": "Moonvalley",
+      "sector": "AI model, Generative Media, Media & Entertainment"
+    },
+    {
+      "name": "Paid",
+      "decision": "existing",
+      "matched_id": 1881,
+      "matched_name": "Paid",
+      "sector": "AI model"
+    },
+    {
+      "name": "ChipAgents",
+      "decision": "existing",
+      "matched_id": 2953,
+      "matched_name": "ChipAgents",
+      "sector": "Semiconductors, Developer Tools, Agentic"
+    },
+    {
+      "name": "SiPearl",
+      "decision": "existing",
+      "matched_id": 1882,
+      "matched_name": "SiPearl",
+      "sector": "AI model"
+    },
+    {
+      "name": "Unconventional AI",
+      "decision": "existing",
+      "matched_id": 2954,
+      "matched_name": "Unconventional AI",
+      "sector": "Hardware, Infrastructure"
+    },
+    {
+      "name": "Majestic Labs AI",
+      "decision": "existing",
+      "matched_id": 2955,
+      "matched_name": "Majestic Labs AI",
+      "sector": "Hardware, Semiconductors, Infrastructure"
+    },
+    {
+      "name": "Positron",
+      "decision": "existing",
+      "matched_id": 2956,
+      "matched_name": "Positron",
+      "sector": "Hardware, Semiconductors, Inference & Model Serving"
+    },
+    {
+      "name": "Dash0",
+      "decision": "existing",
+      "matched_id": 1887,
+      "matched_name": "Dash0",
+      "sector": "AI model"
+    },
+    {
+      "name": "Geordie AI",
+      "decision": "existing",
+      "matched_id": 2957,
+      "matched_name": "Geordie AI",
+      "sector": "Operations, Agentic"
+    },
+    {
+      "name": "InCountry",
+      "decision": "existing",
+      "matched_id": 2958,
+      "matched_name": "InCountry",
+      "sector": "Data, IT & Security, Infrastructure"
+    },
+    {
+      "name": "Knostic",
+      "decision": "existing",
+      "matched_id": 2959,
+      "matched_name": "Knostic",
+      "sector": "IT & Security, Data"
+    },
+    {
+      "name": "Thinking Machines Lab",
+      "decision": "existing",
+      "matched_id": 88,
+      "matched_name": "Thinking Machines Lab",
+      "sector": "AI model, R&D"
+    },
+    {
+      "name": "LMArena",
+      "decision": "existing",
+      "matched_id": 2960,
+      "matched_name": "LMArena",
+      "sector": "AI model, R&D, Developer Tools"
+    },
+    {
+      "name": "Keycard",
+      "decision": "existing",
+      "matched_id": 2961,
+      "matched_name": "Keycard",
+      "sector": "IT & Security, Agentic"
+    },
+    {
+      "name": "Straiker",
+      "decision": "existing",
+      "matched_id": 2962,
+      "matched_name": "Straiker",
+      "sector": "IT & Security, Agentic"
+    },
+    {
+      "name": "Virtue AI",
+      "decision": "existing",
+      "matched_id": 2963,
+      "matched_name": "Virtue AI",
+      "sector": "IT & Security, AI model"
+    },
+    {
+      "name": "Augmentus",
+      "decision": "existing",
+      "matched_id": 2229,
+      "matched_name": "Augmentus",
+      "sector": "Industrial & Manufacturing, Robotics"
+    },
+    {
+      "name": "FieldAI",
+      "decision": "existing",
+      "matched_id": 2335,
+      "matched_name": "Field AI",
+      "sector": "AI model, Robotics"
+    },
+    {
+      "name": "Generalist AI",
+      "decision": "existing",
+      "matched_id": 2964,
+      "matched_name": "Generalist AI",
+      "sector": "Robotics, AI model"
+    },
+    {
+      "name": "InOrbit",
+      "decision": "existing",
+      "matched_id": 2965,
+      "matched_name": "InOrbit",
+      "sector": "Robotics, Operations, Automation"
+    },
+    {
+      "name": "Blue Water Autonomy",
+      "decision": "existing",
+      "matched_id": 2966,
+      "matched_name": "Blue Water Autonomy",
+      "sector": "Naval, Defence, Robotics"
+    },
+    {
+      "name": "BOS Semiconductors",
+      "decision": "existing",
+      "matched_id": 2967,
+      "matched_name": "BOS Semiconductors",
+      "sector": "Semiconductors, Mobility & Transport, Hardware"
+    },
+    {
+      "name": "DYNA",
+      "decision": "existing",
+      "matched_id": 2968,
+      "matched_name": "DYNA",
+      "sector": "Robotics, Hardware"
+    },
+    {
+      "name": "Gravis Robotics",
+      "decision": "existing",
+      "matched_id": 2969,
+      "matched_name": "Gravis Robotics",
+      "sector": "Robotics, Construction, Automation"
+    },
+    {
+      "name": "Humanoid",
+      "decision": "existing",
+      "matched_id": 1850,
+      "matched_name": "Humanoid",
+      "sector": "AI model"
+    },
+    {
+      "name": "Persona AI",
+      "decision": "existing",
+      "matched_id": 2970,
+      "matched_name": "Persona AI",
+      "sector": "Robotics, Hardware, Industrial & Manufacturing"
+    },
+    {
+      "name": "The Bot Company",
+      "decision": "existing",
+      "matched_id": 2971,
+      "matched_name": "The Bot Company",
+      "sector": "Robotics, Hardware"
+    }
+  ]
+}

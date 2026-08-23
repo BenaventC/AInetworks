@@ -514,6 +514,7 @@ header h1 {
   display: inline-block; padding: 1px 7px; border-radius: 999px;
   font-size: 0.70em; font-weight: 500; margin-right: 4px;
 }
+.badge-domain          { background: var(--chart);       color: #fff; font-weight: 600; }
 .badge-sector          { background: var(--chart-pale);  color: var(--chart); }
 .badge-country         { background: var(--yellow-pale); color: #7A5800; }
 .badge-status-active   { background: var(--chart-pale);  color: var(--chart); }

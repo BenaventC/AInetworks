@@ -11,6 +11,7 @@ This file records the source families used to enrich the local database. Volatil
 - [Forbes AI 50](https://www.forbes.com/ai/)
 - [Sifted AI 100](https://sifted.eu/)
 - [AI Startups Europe](https://www.aistartupseurope.com/)
+- [cbinsights](https://www.cbinsights.com/research/report/artificial-intelligence-top-startups-2026/)
 
 ### Structured and encyclopedic references
 
@@ -43,10 +44,11 @@ For each reviewed entity, record:
 
 - canonical name and entity type (`enterprise` or `investor`),
 - history and value proposition,
+- economic model
 - founding date and headquarters,
-- market capitalization,
+- market capitalization, profit
 - funds raised or capital invested,
-- revenue and headcount,
+- revenue and headcount, CAPEX, R&D
 - investors and participations,
 - acquisitions and competitors,
 - source URLs, fact dates, and arbitration notes.

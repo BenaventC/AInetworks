@@ -1,0 +1,303 @@
+[
+  {
+    "input_name": "Atomic Canyon",
+    "name_official": "Atomic Canyon, Inc.",
+    "website": "https://www.atomic-canyon.com",
+    "country": "United States",
+    "headquarter_city": "San Luis Obispo",
+    "founded_year": null,
+    "funds_raised": 7,
+    "employees_count": null,
+    "main_investors": "Energy Impact Partners (Elevate Future Fund), Commonweal Ventures, Plug and Play Ventures, Wischoff Ventures, Tower Research Ventures",
+    "founders": "Trey Lauderdale",
+    "description": "Atomic Canyon was founded by Trey Lauderdale, who serves as Founder & CEO and who describes on the company's About page how living in San Luis Obispo, near the Diablo Canyon plant, inspired him to bring AI to the nuclear energy sector. On 28 May 2025 the company announced a $7 million seed round led by the Elevate Future Fund from Energy Impact Partners, with participation from Commonweal Ventures, Plug and Play Ventures, Wischoff Ventures, Tower Research Ventures and previous angel investors; the round followed the deployment of its Neutron product at PG&E's Diablo Canyon Power Plant, described by the company as the first on-site AI deployment at a US nuclear facility. The round was covered by TechCrunch and Axios, and in August 2026 Axios reported a further funding lift involving Nvidia alongside the launch of a nuclear-industry AI tool.\nAtomic Canyon builds Neutron, an AI-powered workbench designed specifically for nuclear energy professionals, helping teams work faster and more accurately across document review, compliance and operational analysis. It is powered by the company's proprietary FERMI AI models and, according to secondary coverage, is trained on the US Nuclear Regulatory Commission's ADAMS database of tens of millions of pages of documentation, so that nuclear power plants, reactor manufacturers and national laboratories can search, retrieve and act on decades of operational records and technical documentation. The company positions the product as purpose-built rather than adapted, emphasising regulatory expertise (NRC, IAEA and industry standards), the scale and complexity of nuclear documentation sets, and security and reliability expectations for mission-critical environments. It also markets NIVA, a nuclear industry virtual assistant.\nThe business model was not verified: no pricing tiers or commercial terms are published on the company's website, which routes prospects to a contact form. Public materials indicate deployments with utilities, operators, national laboratories and regulators (PG&E and INPO are shown as trusted partners), which is consistent with an enterprise sales motion, but no published pricing was found.",
+    "sources": [
+      "https://www.atomic-canyon.com/about/",
+      "https://www.atomic-canyon.com/news/2025-05-28-seed-funding/",
+      "https://www.vcbacked.co/company/atomic-canyon",
+      "https://indexed.vc/companies/atomic-canyon",
+      "https://smrintel.com/news/atomic-canyon-niva-ai-nuclear-industry-virtual-assistant/"
+    ],
+    "confidence_notes": "The domain atomiccanyon.com belongs to an unrelated UK accountancy firm; the correct site is atomic-canyon.com. Founding year and employee count were not found on any fetched page. The San Luis Obispo location comes from a secondary funding database plus the founder's letter on the About page referencing his life there; the About page itself only says 'based in the United States'. The $7M figure is the seed round total; a later Nvidia-related investment (Axios, Aug 2026) was referenced in search results but the amount was not confirmed, so total funding may now be higher. Founders list may be incomplete: the About page says the company 'was founded by a team' but names only Trey Lauderdale."
+  },
+  {
+    "input_name": "Leo AI",
+    "name_official": "Leo AI, Inc.",
+    "website": "https://www.getleo.ai",
+    "country": "United States",
+    "headquarter_city": "Boston",
+    "founded_year": 2023,
+    "funds_raised": 9.7,
+    "employees_count": null,
+    "main_investors": "Flint Capital, Andreessen Horowitz (a16z)",
+    "founders": "Maor Farid, Moti Moravia",
+    "description": "Leo AI was founded in 2023 by Maor Farid (Co-Founder & CEO) and Moti Moravia (Co-Founder & CTO). Farid holds a PhD in mechanical engineering, was a Fulbright fellow and MIT postdoc in applied mathematics and AI in the Mechanical Engineering department, a Technion AI researcher and a Forbes 30 Under 30 honoree; Moravia is an AI expert and mechanical/systems engineer, a Technion graduate from the Israeli Unit 81 'Brakim' elite program, who previously led AI and multidisciplinary engineering development for Israeli armoured vehicle programmes. In September 2025 the company announced it had raised $9.7 million in seed funding, bringing total funding to $9.7 million, with investors reported to include Flint Capital and Andreessen Horowitz. The company name is a reference to Leonardo da Vinci.\nLeo AI markets itself as the first AI copilot built by and for mechanical engineers. Its team is building a proprietary foundational 'Large Mechanical Model' trained on millions of man-made products that uses machine parts (bolts, bearings and similar) as tokens and combines them into DFMA-compliant products, accepting multimodal engineering input such as textual requirements, hand-drawn sketches, 2D images and 3D CAD files. Capabilities advertised include building complete assemblies from high-level design to detailed geometry, answering technical questions grounded in a customer's PLM data plus over one million engineering sources, retrieving parts from a customer's PLM and from more than 120 million vendor parts, and running engineering calculations such as stress analysis and material selection with cited sources. It integrates with SOLIDWORKS, SOLIDWORKS PDM, Autodesk Inventor, Autodesk Fusion, NX, Teamcenter and SAP PLM, and is SOC 2 certified and GDPR compliant with no training on customer data.\nThe business model was not verified: no pricing page or published tiers were found on getleo.ai. The site offers a self-serve onboarding flow ('Start with Leo') alongside an enterprise pitch with white-glove support and an educational programme, which is consistent with a subscription/enterprise licence model, but no pricing figures are published.",
+    "sources": [
+      "https://www.getleo.ai/",
+      "https://www.getleo.ai/about",
+      "https://www.thesaasnews.com/news/leo-ai-raises-9-7-million-seed-round/",
+      "https://techstartups.com/2025/09/02/leo-ai-raises-9-7m-backed-by-google-vp-and-a16z-to-transform-mechanical-engineering-with-worlds-first-large-mechanical-model/",
+      "https://www.ai-market-watch.com/company/leo-ai",
+      "https://tracxn.com/d/companies/leoai"
+    ],
+    "confidence_notes": "The company footer gives the address 50 Milk Street, Boston, MA 02109; some secondary sources say Cambridge, Massachusetts, so the exact city is ambiguous (Boston is taken from the company's own site). Founding year (2023) and investor names come from secondary sources (AI Market Watch, Tracxn, TechStartups), not from the company site. Employee count not published; the About page lists roughly 20 named team members but this is not a verified headcount."
+  },
+  {
+    "input_name": "Procure Ai",
+    "name_official": "Procure Ai",
+    "website": "https://www.procure.ai",
+    "country": "United Kingdom",
+    "headquarter_city": "London",
+    "founded_year": null,
+    "funds_raised": 13,
+    "employees_count": null,
+    "main_investors": "Headline, C4 Ventures, Futury Capital",
+    "founders": "Konstantin von Büren, Yves Bauer",
+    "description": "Procure Ai was co-founded by Konstantin von Büren and Yves Bauer, who are both listed as Co-founder & Chief Executive Officer on the company's Company page (Francesco Peroni is Chief Revenue Officer and is described as a founding team member in some coverage). The company announced a $13 million seed round led by Headline, with participation from C4 Ventures and Futury Capital as well as angel investors from the procurement industry; the funds are earmarked for expanding technical capabilities and the go-to-market team and accelerating European growth. Secondary coverage describes the company as London-based with a strong footprint in Germany, Austria and Switzerland, and names EnBW (Energie Baden-Württemberg) and Kärcher among reference customers; DMG MORI and Naturenergie also appear as customer testimonials on the site.\nProcure Ai sells an AI-native Procurement Automation Platform for enterprises. It offers more than 40 AI agents and use cases across the end-to-end procurement process, including guided buying and intake management, spend analytics, tactical sourcing, supplier management and purchasing. Product modules include Unified Spend Analytics, Generative Intake Management, Autonomous Sourcing & Negotiations, Augmented Strategic Sourcing, Intelligent Supplier Management and Seamless Purchasing Operations. The platform connects to ERPs, eProcurement suites and third-party data providers through pre-configured connectors and transformers, combining generative AI, predictive analytics and autonomous execution; the company states that more than €50 billion of annual spend is managed on the platform.\nThe business model was not verified: no pricing is published on procure.ai. The site routes prospects to a demo hub and contact form and targets large enterprises, which is consistent with an enterprise software licence or subscription model, but no tiers or figures are disclosed.",
+    "sources": [
+      "https://www.procure.ai/",
+      "https://www.procure.ai/company",
+      "https://www.procure.ai/blog/seed-funding-announcement",
+      "https://futurycapital.vc/procure-ai-secures-13m-seed-funding-to-transform-procurement-through-ai-native-autonomous-agents/",
+      "https://justainews.com/companies/funding-news/procure-ai-raises-13m-to-transform-procurement-with-ai-agents/",
+      "https://app.dealroom.co/news/feed/procure-ai-raises-13m-for-ai-procurement"
+    ],
+    "confidence_notes": "The London headquarters comes from secondary funding coverage, not from a page on procure.ai that was fetched (the site footer only says 'Built in Europe'); the company also has a German-language site and a German imprint, so its legal seat may be in Germany. Founding year and employee count were not found. The Procure Ai Company page lists two co-founders both titled CEO; some coverage names Francesco Peroni as a third founder, which is why he is excluded from the founders field."
+  },
+  {
+    "input_name": "Qbiq",
+    "name_official": "qbiq",
+    "website": "https://www.qbiq.ai",
+    "country": "Israel",
+    "headquarter_city": "Tel Aviv",
+    "founded_year": 2019,
+    "funds_raised": 16,
+    "employees_count": null,
+    "main_investors": "Insight Partners, JLL Spark, 10D, Ocean Azul Partners, Random Forest VC, M-Fund",
+    "founders": "Leeor Solnik, Elad Kaminer, Noam Diamantstein, Roey Granot",
+    "description": "qbiq was founded in 2019 by a team of technologists, architects and PhDs to automate architectural planning, according to the company's Company page. Its leadership includes Leeor Solnik (Founder & CEO), Elad Kaminer (Founder & CTO) and Noam Diamantstein (Founder); press coverage of the funding round also names Roey Granot as a co-founder. In January 2025 the company announced a $16 million Series A round led by Insight Partners with participation from JLL Spark, 10D, Ocean Azul, Random Forest and M-Fund. qbiq is headquartered in Tel Aviv with offices in New York and Miami. The company states it has processed over one billion square feet of space, delivered 650 million square feet of plans to clients, rendered 11,000 fly-throughs and served clients in dozens of countries.\nqbiq's platform automates architectural space planning for both architects and non-architects. A user uploads a space plan in CAD, PDF or JPEG format, defines the programme (usage needs, capacity, specifications) or lets the AI recommend one, and chooses an aesthetic theme; the system returns a full planning package. Outputs include 2D floor plans (single or multi-floor), photorealistic rendered images, rendered virtual tours, Revit and CAD model generation, quantity takeoffs with materials and furniture inventories, area calculations and a marketing suite. Additional capabilities include a program generator, customisable planning engines that encode a client's own guidelines and furniture libraries, an admin interface, AI-powered iterations and qbiq Studio for manual refinement of AI-generated layouts. Target customers are landlords, tenants, architects and construction firms, and real estate service providers, with plans validated by in-house architects.\nThe business model was not verified: qbiq publishes no pricing on its website and routes all prospects through a 'Book a Demo' or 'Let's Connect' form, which is consistent with a B2B subscription or per-project commercial model, but no tiers or figures are disclosed.",
+    "sources": [
+      "https://www.qbiq.ai/",
+      "https://www.qbiq.ai/company",
+      "https://www.prnewswire.com/news-releases/qbiq-ai-raises-16m-series-a-led-by-insight-partners-to-meet-booming-demand-for-its-automated-architectural-solutions-302347354.html",
+      "https://www.insightpartners.com/ideas/qbiq-ai-raises-16m-series-a-led-by-insight-partners-to-meet-booming-demand-for-its-automated-architectural-solutions/",
+      "https://www.calcalistech.com/ctechnews/article/hkp1100svdkx",
+      "https://www.timesofisrael.com/israeli-generative-ai-startup-raises-16-million-to-automate-architectural-planning/"
+    ],
+    "confidence_notes": "$16M is the Series A amount; earlier rounds may exist, so total funding could be higher. Employee count not published. The number of countries served is stated inconsistently on qbiq's own pages (62 on the homepage, 100 on the Company page), so it was not used as a data field. Roey Granot is named as a co-founder in press releases but does not appear on the current leadership page."
+  },
+  {
+    "input_name": "Ankar",
+    "name_official": "Ankar AI",
+    "website": "https://ankar.ai",
+    "country": "United Kingdom",
+    "headquarter_city": "London",
+    "founded_year": 2024,
+    "funds_raised": 24,
+    "employees_count": 20,
+    "main_investors": "Atomico, Index Ventures, Norrsken VC, Daphni",
+    "founders": "Tamar Gomez, Wiem Gharbi",
+    "description": "Ankar was founded by Tamar Gomez and Wiem Gharbi, both former Palantir leaders who built mission-critical software for the company in Europe and the United States. On 17 December 2025 the London-based company announced a $20 million Series A round led by Atomico, with Index Ventures doubling down and Norrsken VC and Daphni participating, bringing total funding to $24 million; the round followed a previously announced earlier round. The company said the capital would double its 20-person team, expand engineering, product and design, and grow its go-to-market organisation across Europe and the United States. Customers already include Fortune 500 companies such as L'Oréal and the global law firm Vorys, and the company has hired Harm van der Heijden, a senior patent partner with 17 years in private practice, as Head of Patent Innovation.\nAnkar builds what it calls an AI operating system for innovation, unifying the entire patent lifecycle into a single secure workflow for corporate patent teams, R&D teams and law firms. The platform performs instant novelty and prior-art analysis across more than 150 million patent applications and 250 million scientific publications, turns invention disclosures into high-quality draft applications with strategic guidance on claim strength and scope, and consolidates history and analysis into a single view for responding to examiner office actions. Published product areas include patent drafting, small-molecule analysis, sequence analysis, office action responses, claim charts, invention disclosure, research intelligence, traceable citations, and guidelines and case law. It is positioned as an assistant rather than an autopilot, and the founders' Palantir background informs its approach to secure patent retrieval, claim-level reasoning, LLM governance and AI safety inside enterprise-controlled environments. The company reports an average 40% productivity gain for patent teams.\nThe business model was not verified: Ankar publishes no pricing and routes prospects to a 'Book a demo' flow. Its customers are enterprises and patent law firms, which is consistent with an enterprise SaaS licence, but no tiers or figures are disclosed.",
+    "sources": [
+      "https://ankar.ai/blog/ankar-raises-20m-in-series-a-funding-led-by-atomico-to-transform-how-breakthrough-ideas-become-protected-innovation",
+      "https://fortune.com/2025/12/17/exclusive-palantir-alums-aiming-to-streamline-patent-filings-with-ai-secure-20-million-in-series-a-venture-funding/",
+      "https://www.uktech.news/ai/ankar-funding-patent-20251217",
+      "https://www.legaltech-talk.com/ai-patent-startup-ankar-raises-15m-series-a/",
+      "https://www.ai-market-watch.com/company/ankar"
+    ],
+    "confidence_notes": "Founding year 2024 comes from a secondary profile (AI Market Watch), not from the company site. Employee count of 20 is the team size stated in the December 2025 Series A announcement and is now likely higher, since the stated aim of the round was to double the team. Some coverage lists additional Series A participants (Motier Ventures, Puzzle Ventures, Boom) that do not appear in Ankar's own press release, so they were excluded."
+  },
+  {
+    "input_name": "Enter",
+    "name_official": "Enter Inc. (ENTER)",
+    "website": "https://www.enter.health",
+    "country": "United States",
+    "headquarter_city": "Claymont",
+    "founded_year": null,
+    "funds_raised": null,
+    "employees_count": null,
+    "main_investors": "500 Global",
+    "founders": null,
+    "description": "ENTER (legal entity Enter Inc., operating entity Enter RCM LLC) is a healthcare revenue cycle management company whose stated mission is to lower the cost of healthcare, starting with revenue cycle management. Its headquarters address published on its own site is 2093A Philadelphia Pike, Suite 530, Claymont, Delaware, with a medical billing mailbox in Henderson, Nevada. Jordan Kelley describes himself publicly as CEO of ENTER. A third-party company database attributes the founding to John Russell and reports undisclosed funding from 500 Global, but no funding announcement, round size or founding date was found on ENTER's own website or in a primary source.\nENTER sells an AI-powered revenue cycle management platform for healthcare providers. The company describes one RCM engine plus one AI layer: the core platform automates revenue from the EMR to the bank, while CTRL ENTER provides every team member with an AI assistant layered on top of the tools they already use, with the stated aim of turning manual, fragile RCM into a predictable, scalable process. Published solution areas include integrations, claims, reporting and security, and third-party descriptions reference proprietary AI modules such as ClaimAI, PaymentAI, DenialAI and ContractAI covering claim creation and scrubbing and real-time eligibility checks. The company positions itself as covering medical billing, revenue cycle management and patient collections across fee-for-service, value-based care, employer plans and workers' compensation. ENTER is HIPAA compliant and SOC 2 Type 2 certified, and publishes a trust centre and a status page. Named clients include Tellica Imaging (an Intermountain Healthcare company) and DataDx/HPA.\nThe business model was not verified in detail: ENTER publishes a pricing page (enter.health/pricing) but its contents were not retrieved, so no tiers or rates can be stated. The product is sold as a platform plus service to healthcare providers.",
+    "sources": [
+      "https://www.enter.health/about-enter",
+      "https://www.enter.health/",
+      "https://tracxn.com/d/companies/enter",
+      "https://www.crunchbase.com/organization/enter-health",
+      "https://physicianaitools.com/companies/enter/",
+      "https://www.linkedin.com/in/mrkelley"
+    ],
+    "confidence_notes": "Identity confirmed as the healthcare RCM company at enter.health (not the many other companies named 'Enter'). Founder attribution to John Russell comes only from a Tracxn snippet and conflicts with Jordan Kelley being the current CEO, so the founders field is left null. Funding amount is unknown: 500 Global is reported as an investor with an undisclosed amount. Founding year and headcount not found. The Claymont, Delaware address is the registered headquarters on the company's own footer, which for a Delaware address may be administrative rather than the operational office."
+  },
+  {
+    "input_name": "Rhino Federated Computing",
+    "name_official": "Rhino Federated Computing (Rhino FCP)",
+    "website": "https://www.rhinofcp.com",
+    "country": "United States",
+    "headquarter_city": "Boston",
+    "founded_year": 2021,
+    "funds_raised": 30,
+    "employees_count": null,
+    "main_investors": "AlleyCorp, LionBird, Fusion Fund, Arkin Digital Health, Qiming Venture Partners USA, TELUS Global Ventures, Wilson's Bird Capital, Keren Maccabi",
+    "founders": "Ittai Dayan, Yuval Baror",
+    "description": "Rhino was co-founded by Dr. Ittai Dayan (Co-founder & CEO) and Yuval Baror, and grew out of the EXAM study, a landmark multi-institutional federated learning effort published in Nature Medicine in September 2021 that showed AI models could be trained across institutions without moving data; the company began its work in collaboration with NVIDIA. The company originally operated as Rhino Health before evolving into Rhino Federated Computing. On 22 May 2025 it announced an oversubscribed $15 million Series A led by AlleyCorp, with participation from LionBird, Fusion Fund, Arkin Digital Health, Qiming Venture Partners USA, TELUS Global Ventures, Wilson's Bird Capital and Keren Maccabi, bringing total funding to more than $30 million and, in the company's words, making it the most well-funded Federated Computing company in the world. The company is based in Boston.\nRhino sells an enterprise-grade Federated Computing platform that lets AI and analytics run across distributed environments without moving or centralising sensitive data, using centralised orchestration with edge execution plus federated learning and analytics aggregation. It is designed for regulated industries where data cannot be pooled: healthcare, life sciences and biopharma, financial services, public sector and insurance. Products include the Rhino Platform and RhinoDHE. The company reports more than 100 active edge nodes connecting data centres, virtual private clouds and secure environments worldwide, and multi-cloud and hybrid deployments integrated into regulated enterprise IT ecosystems. Reference use cases include federated generative AI for drug development and protein design (the FAITE Biopharma Consortium), hospital data harmonisation (Sheba Medical Center) and shared fraud-fighting models in finance. It holds GDPR, ISO 27001, SOC 2 and HIPAA compliance attestations.\nThe business model was not verified: no pricing is published on rhinofcp.com, which routes prospects to a 'Request a Demo' form. The customer base of large hospitals, top-10 global pharmaceutical companies and financial institutions is consistent with enterprise licensing, but no tiers or figures are disclosed.",
+    "sources": [
+      "https://www.rhinofcp.com/blog/series-a",
+      "https://www.einpresswire.com/article/815062109/rhino-federated-computing-raises-15m-series-a-to-scale-federated-ai-across-regulated-industries",
+      "https://theaiinsider.tech/2025/05/27/rhino-federated-computing-raises-15m-series-a-to-scale-federated-ai-across-regulated-industries/",
+      "https://www.calcalistech.com/ctechnews/article/syeu3o2wle",
+      "https://tracxn.com/d/companies/rhino",
+      "https://startupfundraising.com/founders/ittai-dayan"
+    ],
+    "confidence_notes": "Total funding is reported as 'over $30M' in secondary coverage of the Series A; the exact cumulative figure is not published, so 30 is a floor. Founding year 2021 comes from Tracxn and is consistent with the EXAM study timeline referenced by the company, but is not stated on the company site. Boston headquarters comes from the Series A press release dateline and secondary databases. Employee count not published."
+  },
+  {
+    "input_name": "Aaru",
+    "name_official": "Aaru",
+    "website": "https://aaru.com",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": null,
+    "funds_raised": null,
+    "employees_count": null,
+    "main_investors": "Redpoint Ventures, General Catalyst, Felicis, Abstract Ventures, K5 Global, Nordstar",
+    "founders": "Cam Fink, John Kessler, Ned Koh",
+    "description": "Aaru was founded by Cam Fink, John Kessler and Ned Koh, who began with the question of whether human behaviour could be simulated at the scale and complexity of the real world; the founders were widely covered as having started the company as teenagers. John Kessler is Co-Founder and CTO and previously conducted simulation research at MIT's City Science Lab. In December 2025 TechCrunch reported that Aaru had raised a Series A led by Redpoint Ventures at a $1 billion headline valuation; the Wall Street Journal (March 2026) and Vanity Fair (April 2026) subsequently profiled the company, and the founders appeared on CNBC in March and April 2026. The company's listed investors are Abstract Ventures, Felicis, General Catalyst, K5 Global, Nordstar and Redpoint. Aaru has offices in New York and Singapore, and its team includes people from Centerview Partners, Citadel, D. E. Shaw, Datadog, Hebbia, Jane Street, NORC, Qualtrics, Ramp, Renaissance Technologies, Rippling, Robinhood, the U.S. Census Bureau, World Labs and Worldcoin.\nAaru grounds large-scale populations of AI agents in real demographic, behavioural and outcomes data to produce simulations that, the company says, often predict behaviour more accurately than asking people directly, letting decision-makers test outcomes before committing money, time or reputation. In practice this positions the product as a replacement for traditional surveys and focus groups, using synthetic populations to predict consumer and audience responses. Named customers and partners include EY (whose Americas Behavioral Science and Simulation Leader is quoted), Accenture Song and Interpublic Group; press coverage also mentions McDonald's.\nThe business model was not verified: Aaru publishes no pricing and routes prospects to a contact form, with a customer login portal and a billing contact address (billing@aaru.com) indicating a paid commercial product. Its named partnerships with large advertising and consulting holding companies suggest enterprise contracts, but no tiers or figures are disclosed.",
+    "sources": [
+      "https://aaru.com/about",
+      "https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation/",
+      "https://www.wsj.com/business/ai-startup-aaru-young-founders-35da7f87",
+      "https://www.vanityfair.com/news/story/aaru-founders-ai-simulation",
+      "https://www.techbuzz.ai/articles/aaru-hits-1b-valuation-with-multi-tier-series-a-funding"
+    ],
+    "confidence_notes": "The Series A amount was not disclosed in any source fetched (only a $1B headline valuation was reported, by TechCrunch citing unnamed sources), so funds_raised is left null; one low-reliability aggregator listed $50M but this was not corroborated. Founder names come from an image caption on Aaru's own About page ('Aaru founders Cam Fink, John Kessler, and Ned Koh in New York'); only Kessler's role is confirmed there. Founding year and employee count not published. Headquarters listed as New York because the company states it is based in New York and Singapore."
+  },
+  {
+    "input_name": "LanceDB",
+    "name_official": "LanceDB",
+    "website": "https://www.lancedb.com",
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": 2021,
+    "funds_raised": 41,
+    "employees_count": null,
+    "main_investors": "Theory Ventures, CRV, Y Combinator, Databricks Ventures, Runway, Swift Ventures, Zero Prime Ventures",
+    "founders": "Chang She, Lei Xu",
+    "description": "LanceDB was founded by Chang She (Co-Founder and CEO) and Lei Xu, with secondary sources dating the founding to December 2021 and noting the company went through Y Combinator (W22 batch). It first raised an $8 million seed round led by CRV, and in June 2025 announced a $30 million Series A led by Theory Ventures with participation from CRV, Y Combinator, Databricks Ventures, Runway, Swift Ventures and Zero Prime Ventures, bringing total funding to approximately $41 million. The company is based in San Francisco. Named production users and case studies include Netflix, Midjourney, Runway, CodeRabbit, Exa, CrewAI, Dosu and AnythingLLM.\nLanceDB describes itself as the AI-native Multimodal Lakehouse, built on top of the open-source Lance columnar format (lance.org), and positions itself as one table for all training data. It covers curation (deduplicating hundreds of billions of rows, finding optimal data distributions, identifying edge cases for labelling), feature engineering (Python UDFs that run at petabyte scale with automatic embedding updates and the ability to add columns without rewriting the table), training (dedicated fast training storage with low-overhead random access, global shuffles and ad-hoc transforms, with the company claiming up to 70% Model FLOPS Utilization), and search and retrieval (vector/semantic, full-text and hybrid search combined with SQL filters against a single table, horizontally scalable to 100,000+ queries per second). Every write is automatically versioned, supporting branching, tagging and rollback without duplicating data, and the platform is stated to handle tables of over 100 billion rows.\nThe business model is open-source core plus a commercial cloud/enterprise offering: the underlying Lance format is open source and LanceDB provides a documented quickstart for self-service adoption, while the company's calls to action for the Multimodal Lakehouse route to 'Contact Sales'. No pricing tiers are published on lancedb.com, so specific rates were not verified. The company publishes GDPR and HIPAA compliance badges.",
+    "sources": [
+      "https://www.lancedb.com/",
+      "https://www.lancedb.com/blog/series-a-funding",
+      "https://www.crv.com/companies/lancedb",
+      "https://aiworld.eu/story/lancedb-raises-30m-to-power-multimodal-ai-infrastructure",
+      "https://tracxn.com/d/companies/lancedb",
+      "https://www.crunchbase.com/organization/lancedb"
+    ],
+    "confidence_notes": "Founding year is inconsistent across sources: aiworld.eu says December 2021, Tracxn says 2022 and Seedtable says 2021; 2021 was chosen as the most specific claim, but this is uncertain. Total funding of $41M is from secondary sources (Tracxn, aiworld.eu); Indexed.vc reports $38M, so the exact figure is uncertain. Founder names are corroborated by CRV (which quotes Chang She as Co-Founder and CEO) and multiple databases. Employee count not published."
+  },
+  {
+    "input_name": "AMESA",
+    "name_official": "amesa, Inc. (AMESA — Advanced Modular Enterprise Systems of Autonomy; formerly Composabl)",
+    "website": "https://www.amesa.com",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": null,
+    "funds_raised": null,
+    "employees_count": null,
+    "main_investors": "Ridgeline",
+    "founders": "Kence Anderson",
+    "description": "AMESA is the rebranded identity of Composabl: the company's own site states 'Composabl is now AMESA' and its documentation still lives at docs.composabl.com. It was founded by Kence Anderson, who is Founder & CEO and the author of the book 'Designing Autonomous AI'; Jake Reichert is VP of Engineering. The name stands for Advanced Modular Enterprise Systems of Autonomy. On 5–7 May 2026 the company announced it had been named to CB Insights' tenth annual AI 100, cited for simulation-driven AI and agent orchestration. Ridgeline is publicly associated with the company as an investor, having posted about the AI 100 recognition, and AMESA has published a Q&A with Andrew McMahon of Ridgeline.\nAMESA sells an Intelligence Engineering Platform built around machine teaching, in which engineers teach agents using human expertise and data rather than relying on general-purpose models. The product suite comprises an Agent Orchestration Studio for designing and configuring multi-agent systems with a no-code, drag-and-drop interface, modular architecture and visual debugging; an Agent Cloud that provides a secure 'proving ground' where agents (imported or built from scratch) are trained and validated using simulation-driven training, benchmarking and safe scalable testing environments; and AMESA Agents deployed into production for human–agent collaboration and continuous learning. The company also publishes a 'Data to Autonomy' methodology for deploying trusted industrial AI at enterprise scale. Published results are industrial: agents that improved blending over a state-of-the-art algorithm by 15% for a stated $400k/day ROI, 3% better autonomous control on a Siemens gPROMS digital twin for a stated $1.7M/year ROI, throughput gains in aluminium can production, quality improvements at a CPG manufacturer, a 38% improvement in thermal reactor control, and faster CNC machine calibration. A named customer is one of the world's largest glass container manufacturers.\nThe business model was not verified: no pricing is published on amesa.com, which routes prospects to a contact form and a 'book a consultation' offer (bundled with a free copy of the founder's book). The industrial and enterprise customer profile is consistent with enterprise licensing plus services, but no tiers or figures are disclosed.",
+    "sources": [
+      "https://www.amesa.com/",
+      "https://www.amesa.com/company",
+      "https://www.prweb.com/releases/amesa-named-to-the-2026-cb-insights-list-of-the-100-most-innovative-artificial-intelligence-startups-302765280.html",
+      "https://www.cbinsights.com/company/composabl",
+      "https://www.cbinsights.com/research/finalist-interview-amesa/",
+      "https://www.linkedin.com/posts/ridgelinevc_industrialai-enterpriseai-activity-7465111468733128704-_4vh"
+    ],
+    "confidence_notes": "Identity confirmed: this is the industrial-autonomy AI company formerly named Composabl (CB Insights still indexes it under /company/composabl), not any other entity named Amesa. Headquarters city, founding year, employee count and total funding were not found on any fetched page; the country is inferred as the United States from 'amesa, Inc.' and the US-based press release distribution, and should be treated as probable rather than confirmed. Ridgeline is listed as an investor based on its LinkedIn post and AMESA's own Q&A article; the round size is unknown. The domain amesa.com/about returns 404; the correct page is /company."
+  },
+  {
+    "input_name": "Applied Compute",
+    "name_official": "Applied Compute",
+    "website": "https://www.appliedcompute.com",
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": 2025,
+    "funds_raised": 160,
+    "employees_count": null,
+    "main_investors": "Kleiner Perkins, Elad Gil, Lux Capital, Greenoaks, Neo, Hanabi",
+    "founders": "Yash Patil, Rhythm Garg, Linden Li",
+    "description": "Applied Compute was founded in 2025 by three former OpenAI researchers, Yash Patil (CEO), Rhythm Garg and Linden Li, who worked on reinforcement learning at OpenAI: Patil contributed to Codex, OpenAI's agentic software engineering project; Garg helped develop the first reasoning model trained with reinforcement learning; and Li focused on infrastructure and ML systems. The company raised roughly $20 million pre-launch at a $100 million valuation, then a round at a reported $500 million valuation in late 2025, and on 8 April 2026 announced $80 million in new financing at a $1.3 billion post-money valuation led by Kleiner Perkins with continued participation from Elad Gil, Lux, Greenoaks, Neo and Hanabi, bringing total funding to $160 million. Named customers include Cognition, Microsoft, NVIDIA, Harvey, Handshake, DoorDash, NTT Data, Bridge, Mercor and Latch Bio, and the company's CEO has held a public fireside chat with Microsoft chairman and CEO Satya Nadella.\nApplied Compute sells what it calls the AI supercloud for open models, or the 'specialization layer', built on the thesis that the best AI is built rather than bought. Its Agent Cloud lets enterprises train, serve and continuously improve proprietary models on their own data: post-training for tool-using long-horizon agents across text, images, code and structured data using the customer's own harness and graders; a developer SDK covering training, inference, sandboxes, evals, memory and agent serving compatible with any agent framework; observability that traces and analyses every rollout with automated detection of reward hacking, regressions and edge cases; high-throughput low-latency single-tenant inference; and continual improvement by mining training data and reward signals from production traces, including online RL and self-distillation with A/B testing of release candidates. It supports open-weight models from 1 billion to over 1 trillion parameters, elastic on-demand compute with automatic scheduling and fault tolerance, and deployment either serverless on Applied Compute's cloud or fully inside a customer's VPC from one control plane. The company is SOC 2 and ISO 42001 certified and emphasises that the customer owns the model and can opt out of training at any time.\nThe business model was not verified: no pricing is published. The company describes two engagement modes — 'Embedded', where its team sits with the customer's engineers from co-designing the first eval through deployment, and 'Managed', where the customer designs and runs experiments while Applied Compute handles training, serving and infrastructure — which points to enterprise contracts combining platform access with applied research services, but no rates or tiers are disclosed.",
+    "sources": [
+      "https://www.appliedcompute.com/",
+      "https://www.appliedcompute.com/company/fundraise",
+      "https://www.upstartsmedia.com/p/ex-openai-applied-compute-raises-20m",
+      "https://techstartups.com/2025/09/26/ex-openai-researchers-startup-applied-compute-targets-500m-valuation-in-new-funding-round/",
+      "https://techstartups.com/2026/01/20/applied-compute-ai-startup-founded-by-ex-openai-researchers-in-talks-to-raise-funds-at-1-3b-valuation-just-months-after-500m-round/",
+      "https://grokipedia.com/page/applied-compute"
+    ],
+    "confidence_notes": "Total funding of $160M and the $1.3B post-money valuation are stated in the company's own April 2026 fundraise post, which is high confidence. Founding year (2025, reported as May 2025 by one aggregator) and the San Francisco headquarters come from secondary sources, not from the company site. Yash Patil is identified as CEO on the company's own site; the specific roles of Garg and Li were not confirmed. Employee count not published."
+  },
+  {
+    "input_name": "E2B",
+    "name_official": "E2B",
+    "website": "https://e2b.dev",
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": null,
+    "funds_raised": 32,
+    "employees_count": null,
+    "main_investors": "Insight Partners, Decibel, Sunflower Capital, Kaya, Scott Johnston (angel)",
+    "founders": "Vasek Mlejnsky, Tomas Valenta",
+    "description": "E2B was co-founded by Vasek Mlejnsky (CEO) and Tomas Valenta (CTO), who are shown together in the company's funding announcement. The company announced a $21 million Series A led by global software investor Insight Partners, with participation from Decibel, Sunflower Capital and Kaya plus angels including former Docker CEO Scott Johnston, bringing total funding to $32 million. At the time of the announcement the company stated that 88% of the Fortune 100 were signed up on the platform and that it had grown from a handful of early adopters to hundreds of millions of cloud sandboxes initiated at more than half of the Fortune 500; its homepage now claims 94% of Fortune 100 companies, over 7 million monthly downloads and more than 1 billion started sandboxes. The funding is being used to expand engineering, product and go-to-market teams in San Francisco. Published case studies cover Hugging Face (replicating DeepSeek R1), LMArena, Genspark, Manus, Groq, Lindy, Gumloop and Rogo.\nE2B provides open-source, secure cloud sandboxes for AI-generated code — instant-on cloud machines that give AI agents a place to run untrusted code safely. Each sandbox is powered by Firecracker microVMs for full isolation, starts in under 200 milliseconds when in the same region as the client, and can run for up to 24 hours. The platform is LLM-agnostic (OpenAI, Anthropic, Llama, Mistral or custom models), supports any language or framework that runs on Linux, and allows installing packages, using a terminal and browsers, inspecting errors, and saving and uploading files, with custom sandbox templates. A Desktop Sandbox provides virtual computers for computer-use agents. Target use cases are deep research agents, AI data analysis and visualisation, coding agents, vibe coding runtimes, reinforcement learning (running tens of thousands of concurrent sandboxes to evaluate reward functions) and secure MCPs. It can be deployed BYOC, on-premises or self-hosted in a customer's AWS, GCP or Azure account or VPC, and the roadmap includes pluggable modules such as a Secrets Vault, Sandbox Observability and Shared Context.\nThe business model is open source plus a hosted commercial cloud with published, usage-based pricing. There is a free Hobby tier with a one-time $100 of usage credits, community support, sandbox sessions up to one hour and up to 20 concurrent sandboxes; a Pro tier at $150 per month plus usage costs adding customisable sandbox CPU and RAM, sessions up to 24 hours, up to 100 concurrent sandboxes and the ability to purchase extra concurrency up to 1,100; and an Ultimate/Enterprise tier with custom pricing. Usage is charged per second of a running sandbox, with rates published per vCPU count (for example $0.000014/s for 1 vCPU and $0.000028/s for the default 2 vCPUs) plus RAM and storage. Payment for the Pro tier is handled by Stripe, and there is a startups programme.",
+    "sources": [
+      "https://e2b.dev/",
+      "https://e2b.dev/blog/series-a",
+      "https://e2b.dev/pricing",
+      "https://github.com/e2b-dev"
+    ],
+    "confidence_notes": "Founding year and employee count are not published on the site. The Series A post names 'Tomas (CTO) and Vasek (CEO)' in an image caption without surnames; Vasek Mlejnsky is bylined as CEO on the post, while the surname Valenta for Tomas was not confirmed on a fetched page and should be treated as uncertain. San Francisco is stated in the funding post as the location where the team is being expanded, which is taken as the headquarters. The company is Czech in origin according to common knowledge, but no fetched page confirmed this, so the country reflects the stated San Francisco base."
+  },
+  {
+    "input_name": "Lyzr",
+    "name_official": "Lyzr AI",
+    "website": "https://www.lyzr.ai",
+    "country": "United States",
+    "headquarter_city": "Jersey City",
+    "founded_year": null,
+    "funds_raised": 14.5,
+    "employees_count": null,
+    "main_investors": null,
+    "founders": "Siva Surendira, Anirudh Narayan, Jithin George",
+    "description": "Lyzr was co-founded by Siva Surendira (CEO & Co-Founder, based in San Francisco), Anirudh Narayan (CGO & Co-Founder, Bangalore) and Jithin George (CTO & Co-Founder, Bangalore). Its published timeline starts in 2023 with early enterprise agents automating research, support and internal knowledge flows; in Q1 2024 it turned those learnings into a full-stack platform with private cloud, observability, guardrails and governance; in Q3 2024 it was selected for the NASSCOM GenAI Foundry and won the Accenture Venture Award and Startup World Cup NY; and by 2025 it had raised a total of $14.5 million with a last valuation of $250 million. The company's blog announces a Series A raise, and TechCrunch and Bloomberg logos on its site reference a $100 million fundraise and $500 million valuation as press mentions. Its registered address is 525 Washington Blvd, 2410, Jersey City, NJ 07310, USA. Named enterprise deployments include Accenture, Willis Towers Watson, Hitachi, First Source and Verifone, and it was named a Google I/O 2025 Agent2Agent launch partner and added to the IBM watsonx Orchestrate catalogue.\nLyzr sells an enterprise AI agent platform focused on getting agents from prototype into production. Three offerings are marketed: a neutral Control Plane that registers agents built on any framework (AWS Bedrock, Azure AI, GCP Vertex, LangChain, on-prem) and adds policy, observability and cost controls; an Agentic OS providing a dedicated agent stack per business function with Agent Studio, workflows, shared memory and blueprints; and Sovereign AI, a full-stack air-gapped, audit-ready deployment for governments, banks and healthcare with data residency and customer-held keys. Supporting layers include a simulation engine for adversarial pre-production testing, end-to-end tracing and latency/cost monitoring, a hallucination and PII guard, SSO/RBAC access governance, and audit and compliance logging. Architect lets non-developers describe a workflow in plain English and generates a working agent stack with integrations and access controls. Prebuilt agents are marketed by name (Jazon for sales development, Skott for marketing, Diane for HR, Jeff for support, Kathy for competitor analysis, Dwight for RFPs). Customers can engage via platform-plus-their-own-team, platform-plus-Lyzr-engineers, or through partners. The company holds SOC 2 Type II, ISO 27001, GDPR, HIPAA and CCPA attestations.\nThe business model is usage-based pricing per agent run rather than per seat: $0.08 per agent run on Lyzr Cloud (fully managed) and $0.03 per agent run for Lyzr VPC/on-premises self-hosting, in both cases with LLM costs billed separately at pass-through usage rates and, for VPC/on-prem, compute billed on usage. A single agent run bundles knowledge base calls, tool calls, agent calls, memory calls, Responsible AI guardrails and agent security policy. The company benchmarks this against US human labour rates, giving a worked example of a corporate banking KYC workflow requiring 20+ agents at a total cost of about $1.02 per run.",
+    "sources": [
+      "https://www.lyzr.ai/",
+      "https://www.lyzr.ai/about-us/",
+      "https://www.lyzr.ai/pricing/"
+    ],
+    "confidence_notes": "No founding year is stated; the company timeline begins in 2023, which suggests but does not confirm a 2022–2023 founding. Total funding of $14.5M with a $250M valuation is stated on Lyzr's own About page for 2025, but the same site displays press logos referencing a '$100M fundraise' and '$500M valuation' and a blog post titled 'Lyzr raises Series A', so the current total may be materially higher; $14.5M is the only figure stated in prose. No investor names are published on the site, so main_investors is null. Headquarters is taken from the published Jersey City address, though leadership is split between San Francisco, Bangalore and New York. Employee count not published as a number."
+  },
+  {
+    "input_name": "Maisa AI",
+    "name_official": "Maisa AI",
+    "website": "https://maisa.ai",
+    "country": "Spain",
+    "headquarter_city": "Valencia",
+    "founded_year": 2024,
+    "funds_raised": 30,
+    "employees_count": null,
+    "main_investors": "Creandum, Forgepoint Capital International, NFX, Village Global",
+    "founders": "David Villalón, Manuel Romero",
+    "description": "Maisa was founded in 2024 by David Villalón (Co-Founder & CEO), previously at Clibrain, and Manuel Romero (Co-Founder & Chief Scientific Officer), a leading Hugging Face contributor with over 700 open-source models. The company raised a $5 million pre-seed round in December 2024 with participation from NFX and Village Global, and in August 2025 announced a $25 million (€21.4 million) seed round led by Creandum with participation from Forgepoint Capital International, via its European joint venture with Banco Santander, and returning investors NFX and Village Global — reported as the largest seed round recorded in the Spanish AI sector — bringing total funding to about $30 million. The company operates a dual headquarters model between Valencia, Spain and San Francisco, and says the funding supports hiring across AI R&D, engineering, sales and customer success and expansion in Europe and North America. Maisa has been named by Gartner across more than 15 Hype Cycle reports, as a top vendor in business process automation and a front runner in AI agents.\nMaisa sells Digital Workers: unlike single-task AI agents or copilots, these run entire business processes end to end, with traces that are auditable and reproducible, aimed at regulated industries. The stack comprises the Digital Workers themselves; Maisa Studio, where business teams onboard their own Digital Workers using natural language without needing developers; the proprietary Knowledge Processing Unit (KPU), which combines the intelligence of AI with the control of code to resist hallucination and deliver accuracy and reliability; and Custom AI Models, in which a customer's accumulated traces become IP the company owns and are used to train models tuned to how it works, reducing dependence on frontier labs. Published target processes include loan origination, invoice reconciliation, KYC verification, claims intake (FNOL), trade finance and compliance report generation, across banking, insurance, energy, manufacturing, mobility and engineering/infrastructure. Named customers include Grupo Santander (quoted via its Chief AI Officer), Indigo and Elecnor. The company markets a 1-3-6 method taking clients from pilot to production in 60 days and claims 10x average first-year ROI.\nThe business model was not verified in detail: Maisa publishes no pricing page and routes prospects to a 'Request Demo' form and a 60-day pilot. Its marketing emphasises cost predictability per business case — claiming to be roughly 10x cheaper by default, about 90x cheaper per run at scale and 150x lower cost than AI agents — and a customer CIO is quoted praising being able to know the cost of each business case in advance, which implies per-process or per-run enterprise pricing, but no rates or tiers are disclosed.",
+    "sources": [
+      "https://maisa.ai/",
+      "https://maisa.ai/blog/maisa-raises-25m-from-creandum-and-forgepoint",
+      "https://www.eu-startups.com/2025/08/spains-maisa-raises-over-e21-million-to-deliver-trustworthy-and-digital-workers-that-dont-hallucinate/",
+      "https://capital-riesgo.es/en/articles/maisa-headquartered-in-valencia-closes-25-million-funding-round-led-by-creandum/",
+      "https://cincodias.elpais.com/companias/2025-08-29/maisa-start-up-valenciana-de-ia-levanta-25-millones-en-la-mayor-ronda-semilla-del-sector-registrada-en-espana.html",
+      "https://indexed.vc/companies/maisa-ai",
+      "https://www.unite.ai/manuel-romero-co-founder-and-chief-scientific-officer-at-maisa-interview-series/"
+    ],
+    "confidence_notes": "Sources disagree on how to label the $25M round (seed in most coverage including the company's own blog, 'Series A' in one outlet, 'pre-seed' in another); seed is used here. Total funding of $30M is the sum of the $5M pre-seed and $25M seed as reported by Indexed.vc and capital-riesgo.es. The company has a dual headquarters (Valencia and San Francisco); Valencia is recorded as it is the stated Spanish base and the country given in the task hint. Founding year 2024 comes from secondary sources (Indexed.vc, Unite.AI interview). Employee count not published."
+  }
+]

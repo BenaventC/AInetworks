@@ -1,4 +1,4 @@
-# Conventions
+﻿# Conventions
 
 Ce document centralise les conventions du projet.
 Il est conçu pour être enrichi progressivement, par domaine.
@@ -18,7 +18,7 @@ Il est conçu pour être enrichi progressivement, par domaine.
 Le projet distingue deux tables distinctes :
 
 - **`enterprises`** : entités opérationnelles (startups, scale-ups, grands groupes tech, labos) dont l'activité principale est de créer des produits ou services.
-- **`investors`** : entités dont l'activité principale est de déployer du capital (VC, PE, fonds souverains, banques, etc.).
+- **`investors`** : entités dont l'activité principale est de déployer du capital (VC, PE, fonds souverains, banques, Holdings, etc.).
 
 **Règle de séparation :**
 - Un investisseur qui possède aussi des produits (ex: SoftBank) reste dans `investors`.
@@ -158,13 +158,51 @@ En cas de doute sur une information, renseigner `NA` plutôt qu'une valeur hypot
 - La politique de consolidation entre `Marketing`, `Sales`, `CRM` et `Advertising` reste à définir avant toute réaffectation.
 - Les placeholders de secteur (`N/A`, `NA`, `N`, `A`) sont supprimés. Si une fiche ne contient aucun autre label, `sector` doit être `NULL`.
 
-### 5.1 Référentiel canonique de 50 labels
+### 5.1 Ontologie sectorielle à trois niveaux
 
-Le projet utilise un référentiel fermé de 50 labels pertinents, en anglais, présenté dans l'ordre alphabétique. Tout label existant doit être réaffecté à cette liste, sans conserver de variante libre dans `sector`.
+Le référentiel est structuré en trois granularités, décrites dans un seul fichier : `public/sector_ontology.csv`.
 
-Le fichier `public/sector_ontology.csv` est la source éditable du référentiel: il définit les labels canoniques, leurs grands groupes, leurs alias et leurs mots-clés. Toute modification manuelle de ce fichier est prise en compte par le normaliseur et le sélecteur de secteurs.
+| Niveau | Colonne CSV | Cardinalité | Rôle |
+|--------|-------------|-------------|------|
+| **Label** | `canonical_label` | 56 | Étiquette fine, seule valeur autorisée dans `enterprises.sector` |
+| **Groupe** | `group` | 6 | Niveau intermédiaire, hérité, conservé pour compatibilité |
+| **Domaine** | `domain` | 12 | Niveau méta, sert au filtrage et à l'agrégation |
 
-Colonnes du CSV: `canonical_label`, `group`, `alias_terms`, `keyword_terms`, `description`. Les alias et mots-clés multiples sont séparés par `|`; ne pas utiliser de virgule dans une cellule. Après modification, exécuter `node scripts/normalize_sector_labels.js` en aperçu avant toute application avec `--apply`.
+Le principe est de **conserver la finesse des étiquettes** tout en offrant une lecture agrégée : on n'appauvrit jamais `sector`, on ajoute une couche de lecture au-dessus.
+
+Colonnes du CSV : `canonical_label`, `group`, `alias_terms`, `keyword_terms`, `description`, `domain`. Les alias et mots-clés multiples sont séparés par `|` ; ne pas utiliser de virgule dans une cellule. Toute modification manuelle du fichier est prise en compte par le normaliseur, par le sélecteur de secteurs et par le serveur, sans redémarrage.
+
+### 5.2 Les 12 domaines
+
+`Artificial Intelligence`, `Commercial Functions`, `Compute & Infrastructure`, `Consumer & Society`, `Data & Knowledge`, `Environment & Resources`, `Finance & Capital`, `Health & Life Sciences`, `Industry & Manufacturing`, `Mobility Space & Defence`, `Public Research & Trust`, `Software & Delivery`.
+
+Un label appartient à exactement un domaine. Une entreprise portant plusieurs labels hérite donc de plusieurs domaines.
+
+### 5.3 Champ dérivé `sector_domains`
+
+La colonne `enterprises.sector_domains` stocke les domaines déduits de `sector`, séparés par des virgules et triés alphabétiquement.
+
+- Ce champ est **dérivé, jamais saisi à la main**.
+- Il est recalculé automatiquement par le serveur à chaque création et à chaque édition d'entreprise.
+- Après un import en masse ou une modification du CSV, le régénérer avec `node scripts/backfill_sector_domains.js` (aperçu) puis `--apply`.
+- Un label sans domaine déclaré ne produit aucune valeur : la fiche reste sans domaine plutôt que d'être rattachée arbitrairement.
+
+L'interface expose un filtre `domain` (API : `/api/enterprises?domain=...`) et affiche le domaine en badge sur chaque fiche.
+
+### 5.4 Normalisation des labels
+
+Deux modes existent, à choisir selon l'intention :
+
+- `node scripts/normalize_sector_labels.js --aliases-only` : fusionne uniquement les variantes déclarées dans `alias_terms`. **Mode conservateur à privilégier après un import** ; il ne touche à aucun label déjà canonique.
+- `node scripts/normalize_sector_labels.js` : applique en plus la classification par `keyword_terms`, qui peut réaffecter des labels déjà canoniques. À réserver aux reprises volontaires.
+
+Ajouter `--apply` pour écrire ; sans ce drapeau les deux modes sont en aperçu.
+
+Inventaire des variantes et détection des doublons morphologiques : `node scripts/audit_sector_label_variants.js` (lecture seule).
+
+Règle d'extension : pour réduire une variante, **ajouter un alias** dans le CSV plutôt que créer un label. Un alias ne doit apparaître que dans une seule ligne, sinon la dernière occurrence l'emporte silencieusement.
+
+### 5.5 Liste des 56 labels canoniques
 
 Lorsque `ICT` est accompagné d'au moins un autre label, supprimer `ICT` : les catégories plus spécifiques priment. Le conserver uniquement lorsqu'il est le seul label.
 
@@ -218,10 +256,44 @@ Lorsque `ICT` est accompagné d'au moins un autre label, supprimer `ICT` : les c
 48. `Venture Capital`
 49. `Voice & Audio AI`
 50. `Workflow & Productivity`
+51. `Digital Twins`
+52. `Naval`
+53. `RAG`
+54. `Quantic`
+55. `Sustainability`
+56. `SaaS`
+
+`SaaS` appartient au groupe `Business Model` et au domaine `Software & Delivery` : il qualifie le mode de distribution (abonnement logiciel) et non un secteur d'activité. Ce groupe est destiné à accueillir d'autres modèles (licence, services managés, place de marché) lorsqu'ils seront nécessaires.
 
 ---
 
-## 6. Règles de validation (`is_validated`)
+## 6. Import d'une liste externe
+
+Protocole appliqué à toute nouvelle liste (CB Insights, Forbes AI 50, annuaires nationaux). Voir le skill `database-completion` pour le détail.
+
+1. **Comparer** les noms normalisés à la base avant toute écriture ; consigner les décisions `created`, `existing`, `ambiguous`.
+2. **Rechercher** les faits sur le web, source par source, et conserver `sources` et `confidence_notes` dans un fichier de travail sous `exports/research/`.
+3. **Créer** les fiches absentes avec `is_validated = 3` et les seuls champs confirmés ; laisser `NULL` le reste.
+4. **Appliquer** l'enrichissement dans une transaction, avec sauvegarde préalable de `database.db` dans `database_backups/`.
+5. **Contrôler** encodage, complétude, taxonomie sectorielle et géographie, puis normaliser avec `--aliases-only`.
+
+### 6.1 Traçabilité des imports
+
+Chaque fiche importée porte dans sa `description` une ligne de provenance finale mentionnant la source et la catégorie d'origine. Cette ligne sert de marqueur de filtrage : combinée au segment `is_validated = 3`, elle permet d'isoler exactement le lot importé pour la revue manuelle.
+
+### 6.2 Structure des descriptions
+
+Une description d'entreprise suit trois paragraphes, dans cet ordre :
+
+1. **Histoire** : fondation, fondateurs, étapes de financement, faits marquants datés.
+2. **Proposition de valeur** : produit, technologie, problème adressé.
+3. **Modèle économique** : mode de facturation, clients, canaux de distribution.
+
+En anglais, minimum 70 caractères, uniquement des faits vérifiés sur une page consultée.
+
+---
+
+## 7. Règles de validation (`is_validated`)
 
 | Valeur | Signification |
 |--------|--------------|
@@ -230,96 +302,13 @@ Lorsque `ICT` est accompagné d'au moins un autre label, supprimer `ICT` : les c
 | `2` | Validé |
 | `3` | À revoir plus tard (review later) |
 
+Toute fiche créée automatiquement reçoit `3` tant qu'une vérification humaine ne l'a pas confirmée.
+
 ---
 
-## 7. Prochaines sections à documenter
+## 8. Prochaines sections à documenter
 
-- Règles de temporalité (dates d'acquisition, end_year)
-- Règles de relations/partenariats
+- Règles de temporalité (dates d'acquisition, `end_year`)
+- Règles de relations et de partenariats
 - Règles de déduplication inter-tables
-
-
-### 1.1 Principe général
-
-- Les listes de concurrents doivent contenir des entités opérationnelles comparables.
-- On privilégie les entités qui agissent réellement sur un marché (produits, plateformes, business units, filiales opérantes).
-- Les holdings et structures d'investissement ne doivent pas être mélangées avec les entités opérationnelles dans les listes de concurrents.
-
-### 1.3 Règle d'application pour les listes de concurrents
-
-- `Alphabet` est traité comme investisseur (holding) et non comme entité concurrente opérationnelle de premier niveau.
-- Les entités à utiliser dans les listes de concurrents sont:
-  - `Google` (incluant `Google Search`, `YouTube`, `Chrome`, `Translate`, `Assistant`)
-  - `Google Cloud` (incluant `TPU`,)
-  - `Waymo`
-  - `DeepMind` (Incluant `Antigravity`)
-
-### 1.3 Règle d'application pour les listes de concurrents
-
-- Si une source mentionne `Alphabet` comme concurrent, remapper vers l'entité opérationnelle pertinente parmi:
-  - `Google`
-  - `Google Cloud`
-  - `Waymo`
-  - `DeepMind`
-- En cas d'ambiguïté, utiliser `Google` par défaut.
-- Les variantes de nommage (ex: `Youtube`, `YouTube`, `Google Search`) doivent être normalisées selon cette convention.
-
-### 1.4 Liste des entités: Meta
-
-- `Meta` est l'entité corporate de référence dans les listes de concurrents.
-- Les actifs/produits suivants sont inclus dans `Meta` et doivent être remappés vers `Meta`:
-  - `Facebook`
-  - `Instagram`
-  - `WhatsApp` (et variante `Whatsapp`)
-  - `Threads`
-  - `Oculus`
-  - `Meta Quest`
-- Les actifs/produits suivants sont inclus dans `MetaAI` et doivent être remappés vers `MetaAI`:
-  - `LLaMA`
-  - `Llama`
-
-Règle d'application:
-
-- Si une source cite un de ces noms, normaliser vers `Meta`.
-- En cas d'ambiguïté entre produit et entité, garder `Meta` comme valeur canonique.
-
-### 1.5 Liste des entités: Microsoft
-
-- `Microsoft` est l'entité corporate de référence dans les listes de concurrents.
-- Les actifs/produits/filiales suivants sont inclus dans `Microsoft` et doivent être remappés vers `Microsoft`:
-  - `Azure` / `Microsoft Azure`
-  - `LinkedIn` (et variante `Linkedin`)
-  - `GitHub` (et variante `Github`)
-  - `Skype`
-  - `Bing`
-  - `Nuance` / `Nuance Communications`
-  - `Activision` / `Activision Blizzard`
-  - `Xbox`
-  - `Microsoft Translator`
-  - `Office 365`
-
-Règle d'application:
-
-- Si une source cite un de ces noms, normaliser vers `Microsoft`.
-- En cas d'ambiguïté entre marque produit et groupe, garder `Microsoft` comme valeur canonique.
-
-### 1.6 Liste des entités: Z.AI
-
-- `Z.AI` est l'entité de référence pour les mentions liées à Zhipu AI, Zhipu, Z.ai, et leurs variantes orthographiques.
-- Toute occurrence de `Zhipu AI` ou de ses variantes dans les champs de concurrents doit être normalisée vers `Z.AI`.
-- Cette règle s'applique également aux variantes telles que `Zhipu`, `Z.ai`, `Z AI`, ou toute autre forme similaire lorsque le contexte correspond à la même entreprise.
-
-Règle d'application:
-
-- Si une source cite `Zhipu AI` ou une variante proche, normaliser vers `Z.AI`.
-- En cas d'ambiguïté, conserver `Z.AI` comme valeur canonique si l'entité correspond bien à la société chinoise de modèles de langage.
-
----
-
-Prochaines sections à ajouter au fur et à mesure:
-
-- Règles de géographie (pays, villes, régions)
-- Règles de secteurs
-- Règles investisseurs / partenaires / acquisitions
-- Règles de temporalité et récence
-- Règles de qualité des sources
+- Extension du groupe `Business Model` au-delà de `SaaS`

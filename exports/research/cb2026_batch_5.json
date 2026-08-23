@@ -1,0 +1,285 @@
+[
+  {
+    "input_name": "Seekr",
+    "name_official": "Seekr Technologies, Inc.",
+    "website": "https://www.seekr.com",
+    "country": "United States",
+    "headquarter_city": "Reston",
+    "founded_year": null,
+    "funds_raised": null,
+    "employees_count": null,
+    "main_investors": "Danu Venture Group, AMD Ventures",
+    "founders": "Pat Condo",
+    "description": "Seekr Technologies, Inc. is an enterprise and government-focused AI company headquartered at Reston Town Center, Reston, Virginia, with additional offices including Capital Factory in Austin, Texas and Palm Beach, Florida. It is led by CEO Pat Condo, a serial founder of six search companies, alongside President Rob Clark and Chief Technology and AI Officer Stefanos Poulis. In June 2025 the company announced it had commenced a $100 million funding round at a $1.2 billion valuation led by Danu Venture Group and AMD Ventures. Recent milestones published by the company include CMMC Level 2 certification for trusted AI deployment (July 2026), a strategic partnership with SNC for AI-enabled multi-domain defense technologies (June 2026), a partnership with Enabled Intelligence for precision data labeling (July 2026), and selection by Anderson Merchandisers to deploy edge AI across US retail (July 2026).\nSeekr positions itself as a provider of decision-ready, explainable and sovereign AI for enterprises, government agencies and critical infrastructure operators. Its AI Operating System, SeekrFlow, lets organizations build, govern and deploy secure explainable AI grounded in their own data across cloud, on-premises, edge and air-gapped environments. The product family also includes SeekrGuard (testing, evaluating and certifying AI models for trust using the organization's own context as benchmark), SeekrGeo (multimodal sensor and temporal signal synthesis for decision-ready intelligence) and SeekrIntel (turning raw data into actionable intelligence and mapping hidden links across criminal, terrorist, financial and supply chain networks). Target verticals stated on the site are defense and government, telecommunications, finance, supply chain and utilities. Partners and customers displayed include AMD, Oracle, AWS, Carahsoft, Bayobab, VEON, StarzPlay, Murex, Anderson Merchandisers, US Special Operations Command, the US Navy and the US Army.\nThe company sells through enterprise and government engagements: it offers a request-a-demo and contact-sales motion, a developer API with quickstart guides and API reference documentation, a sign-in portal at apps.seekr.com, and a partner/reseller channel (Carahsoft, Impres, Canda Solutions, Tradewinds). No public pricing tiers were published on the pages consulted, so the exact commercial model (subscription vs. usage-based vs. licence) was not verified.",
+    "sources": [
+      "https://www.seekr.com/",
+      "https://www.seekr.com/about/",
+      "https://www.prnewswire.com/news-releases/seekr-raising-100mm-funding-round-at-a-1-2b-valuation-led-by-danu-venture-group-and-amd-ventures-302484636.html"
+    ],
+    "confidence_notes": "Founded year not stated on any page consulted, left null. Total funds raised not verified: only the June 2025 round (announced as a $100M raise at a $1.2B valuation) was confirmed via the PRNewswire headline; aggregator snippets suggested $110M-$134M total but were not confirmed on a primary source, so the field is null. Founder attribution: the About page describes Pat Condo as CEO and a founder of six search companies but does not explicitly label him as Seekr's founder; other co-founders, if any, are unknown. Employees count and valuation figures on the About page are rendered as animated counters (displayed as 0) and could not be read."
+  },
+  {
+    "input_name": "StackOne",
+    "name_official": "StackOne Technologies Limited",
+    "website": "https://www.stackone.com",
+    "country": "United Kingdom",
+    "headquarter_city": "Newbury",
+    "founded_year": 2023,
+    "funds_raised": 23.6,
+    "employees_count": null,
+    "main_investors": "Sequoia Capital, GV (Google Ventures), XTX Ventures, Episode One, Playfair, Workday Ventures, Blissgrowth",
+    "founders": "Romain Sestier, Guillaume Lebedel",
+    "description": "StackOne Technologies Limited was founded by Romain Sestier (Co-Founder & CEO) and Guillaume Lebedel (Co-Founder & CTO), who had worked together for over ten years at several SaaS companies before starting the business. The company's published timeline records launching out of stealth in Q1 2023, an investment from a co-founder of GitHub in Q2 2023, 100 million API calls and 20 integrations by Q3 2023, a $3.6M seed round with 50+ integrations in Q4 2023, 100+ integrations across six categories and customers on three continents by Q2 2024, and a current state of a $20M Series A with 450+ integrations, 10 categories and 30,000+ AI actions. The company is incorporated in England and Wales (company number 14684360) with registered offices at 2 Communications Road, Newbury, Berkshire, and a team distributed across Europe and the United States. It is backed by Sequoia, GV, XTX Ventures, Episode One, Playfair, Workday Ventures and Blissgrowth, and lists angels or operators from GitHub, MuleSoft, OpenAI, DeepMind and Microsoft.\nStackOne provides real-time integration infrastructure purpose-built for AI agents acting across enterprise SaaS. It exposes 450+ pre-built connectors and 30,000+ agent-ready actions spanning HRIS, ATS, LMS, CRM, IAM, messaging and document systems, reachable through MCP (Model Context Protocol), A2A, REST APIs or Python/TypeScript SDKs. Key components are an AI Connector Builder for custom connectors on any API (including SOAP, OData and proprietary systems), Managed Authentication handling OAuth, SAML, API keys and scopes, Agent Webhooks, a Prompt Injection Guard (open-source Defender library, claimed 88.7% accuracy in under 4 ms), action/field/user-level permissions, observability with request tracing and audit logs, Tool Discovery for semantic tool search, Managed Data Sync, and the Falcon execution engine. The company is SOC 2 Type II certified and states GDPR, HIPAA and CCPA compliance, with multi-region processing on AWS, GCP or Azure and self-hosting options. Customers named on the site include Drata, Synthesia, Reachdesk, Pillar, Mindtools, Amiqus, Localyze, Kinfolk, getAbstract, Fuse and Attensi.\nThe business model is a credit-based freemium SaaS subscription. A Gateway Starter plan is free to start and includes 1,000 credits per seat per month plus all 450+ pre-built connectors with no credit card required; a Team plan adds the AI Connector Builder, StackOne Agents (A2A), Defender Premium and SAML SSO; an Enterprise plan adds custom credit volume, audit logs with SIEM export and on-premise options; an OEM Core plan is free for embedding StackOne inside another product. Full pricing details are published on the company's pricing page.",
+    "sources": [
+      "https://www.stackone.com/",
+      "https://www.stackone.com/about",
+      "https://www.stackone.com/pricing/"
+    ],
+    "confidence_notes": "Founded year 2023 is inferred from the company's own timeline ('Q1 2023 — Launched out of stealth') and is not stated explicitly as an incorporation date. funds_raised = 23.6 is the arithmetic sum of the two disclosed rounds on the company timeline ($3.6M seed + $20M Series A); there may be undisclosed pre-seed or angel money (an investment from a GitHub co-founder in Q2 2023 is mentioned without an amount). Headquarter city set to Newbury because that is the registered office stated on the About page; the operating team is distributed across Europe and the US and the company is commonly described as London-based, which was not confirmed on the site. Employee count not published."
+  },
+  {
+    "input_name": "Thread AI",
+    "name_official": "Thread AI, Inc.",
+    "website": "https://www.threadai.com",
+    "country": "United States",
+    "headquarter_city": "New York",
+    "founded_year": null,
+    "funds_raised": 20,
+    "employees_count": null,
+    "main_investors": "Greycroft, Index Ventures, Scale Venture Partners, Plug and Play",
+    "founders": "Angela McNeal, Mayada Gonimah",
+    "description": "Thread AI, Inc. was founded by Angela McNeal and Mayada Gonimah, former leaders of AI/ML product and engineering at Palantir. After years of deploying large-scale data systems for critical institutions, they concluded that as AI models became more powerful the bottleneck for adoption shifted from model capability to infrastructure complexity, and they built the Lemma platform to bridge that gap. In June 2025 the company announced a $20 million Series A led by Greycroft with participation from Index Ventures. Its investor logos also include Scale Venture Partners and Plug and Play. The company is based at 666 Broadway, Floor 5, New York, NY 10012, and all its open roles are listed in New York.\nThe company's product, Lemma, is a composable AI orchestration platform and workflow builder that sits on top of a composable infrastructure layer. It lets organizations design, deploy and manage AI-powered workflows and the agents that run inside them, binding autonomous agentic actions within governance, control and traceability guardrails. Lemma securely orchestrates systems, applications and APIs so enterprises get the flexibility of a custom build at the speed of off-the-shelf software, without replacing their existing tech stack. The company targets large enterprises and public sector agencies operating in regulated and demanding environments, with an emphasis on auditability for regulators — a theme in its 'Day Two' blog series. It maintains a Trust Center and is available through the Carahsoft government reseller marketplace, and it advertises a Federal Deployment Lead role.\nBusiness model was not verified: no pricing page or published tiers were found on the pages consulted. Distribution signals point to an enterprise/government sales motion (contact-us and demo funnel, enterprise account executives, business development representatives, and a Carahsoft public-sector reseller listing).",
+    "sources": [
+      "https://www.threadai.com/company",
+      "https://www.businesswire.com/news/home/20250605564102/en/Thread-AI-Secures-$20M-Series-A-to-Transform-Enterprise-AI-Workflows",
+      "https://www.threadai.com/platform"
+    ],
+    "confidence_notes": "Founded year is not published on the company site; left null. funds_raised = 20 reflects only the disclosed June 2025 Series A (Business Wire headline seen via search results); any earlier seed round is unknown, so total funding may be higher. The Business Wire page itself was only seen through a search-result excerpt, not fetched directly (the businesswire.com domain returned HTTP 403). Investor list combines the Series A lead/participant named in the headline excerpt with the four investor logos on the company page. Employee count not published."
+  },
+  {
+    "input_name": "FriendliAI",
+    "name_official": "FriendliAI Corp.",
+    "website": "https://friendli.ai",
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": null,
+    "funds_raised": 20,
+    "employees_count": null,
+    "main_investors": null,
+    "founders": "Byung-Gon Chun, Gyeong-In Yu",
+    "description": "FriendliAI Corp. was founded by Byung-Gon Chun, a professor of computer science and engineering at Seoul National University (on sabbatical leave) who previously worked as a visiting research scientist at Facebook, principal scientist at Microsoft and research scientist at Yahoo! and Intel, and holds a PhD from UC Berkeley. Gyeong-In Yu, who holds a PhD from Seoul National University, is CTO. The company's corporate entity is listed as San Francisco, California with a hub in Seoul, Korea, and it announced a San Francisco office expansion in May 2026. In August 2025 it closed a $20 million seed extension round. In April 2026 it appointed Brian Yoo, former COO of Moloco, as Chief Business Officer, and in the same month announced a strategic alliance with Samsung Cloud Platform to serve frontier model inference on NVIDIA B300 GPUs.\nFriendliAI operates what it calls the Frontier AI Inference Cloud: a platform for deploying frontier open-weight and custom models with high efficiency. Its stack combines model-level optimizations (custom GPU kernels, caching, continuous batching, speculative decoding including draft-model speculative decoding, parallel inference, host KV cache) with infrastructure-level optimizations such as advanced caching and multi-cloud scaling, claiming more than 2x faster inference, 99.99% uptime SLAs, geo-distributed infrastructure and enterprise-grade fault tolerance. Users can deploy any of roughly 605,000 Hugging Face models in one click or bring their own fine-tuned and proprietary models. Documented customers include LG AI Research, SK Telecom, Upstage, Scatter Lab, Kilo Code and NextDay AI. It states HIPAA compliance and SOC 2 Type II, supports the Anthropic Messages API, and publishes day-0 support for models such as NVIDIA Nemotron, GLM-5.2, DeepSeek V4 and Kimi K2.6.\nThe commercial model is a three-product usage-based cloud: Model APIs (pay-per-token serverless endpoints), Dedicated Endpoints (reserved capacity for custom or fine-tuned models) and Container (self-hosted deployment of the Friendli Engine). Pricing is published on a dedicated pricing page; specific rates were not read during this research.",
+    "sources": [
+      "https://friendli.ai/",
+      "https://friendli.ai/about",
+      "https://friendli.ai/pricing",
+      "https://www.einpresswire.com/article/843686113/friendliai-closes-20m-seed-extension-round-to-accelerate-ai-inference-platform-growth"
+    ],
+    "confidence_notes": "The company originated in South Korea (Seoul National University roots, Seoul hub) but its own site lists 'FriendliAI Corp: San Francisco, CA' as the corporate entity with Seoul as a 'Hub', so country/city are recorded as the US HQ. Founded year not stated on the site (aggregator snippets say 2021, unverified) — left null. funds_raised = 20 is the August 2025 seed extension only (seen via an EIN Presswire search excerpt and a Crunchbase News headline); total funding is likely higher (aggregators suggest ~$27M) but was not confirmed. Investors of the seed extension were not confirmed on a primary source, so main_investors is null. Employee count not published."
+  },
+  {
+    "input_name": "Moonlake AI",
+    "name_official": null,
+    "website": "https://www.moonlakeai.com",
+    "country": null,
+    "headquarter_city": null,
+    "founded_year": 2025,
+    "funds_raised": 28,
+    "employees_count": null,
+    "main_investors": "Threshold Ventures, AIX Ventures, NVentures (NVIDIA), Steve Chen",
+    "founders": "Sharon Lee",
+    "description": "Moonlake AI emerged from stealth around 1 October 2025 with a $28 million seed round co-led by Threshold Ventures, AIX Ventures and NVIDIA's venture arm NVentures, with angel participation reported to include YouTube co-founder Steve Chen. Company profiles describe it as founded in 2025 by researchers holding Stanford AI PhDs, one of them Sharon Lee (a Stanford PhD researcher in generative AI and computer graphics) and a co-founder with an ex-NVIDIA background in 3D generation and robot simulation. A Generative Game Engine was reported to have entered open beta in February 2026.\nThe company builds generative models for interactive, real-time content rather than passive media: users describe a world, scene or simulation in natural language and the platform compiles that description into a playable 2D or 3D environment within minutes, which can then be tweaked instantly. Its work is described as combining diffusion models, 3D engines and spatial reasoning so that both humans and AI agents can interact with rich dynamic environments. Its own LinkedIn positioning is 'world models and simulation infrastructure for physical AI', which broadens the use case beyond entertainment to simulation for robotics and embodied AI.\nBusiness model was not verified: no pricing page or commercial terms were retrievable. The company's website returned only a client-side rendered application shell during this research, so no product tiers or monetisation details could be read.",
+    "sources": [
+      "https://techstartups.com/2025/10/01/moonlake-ai-launches-with-28m-to-let-anyone-build-interactive-game-worlds-in-minutes/",
+      "https://www.startuphub.ai/ai-news/startup-news/2025/moonlake-ai-funding-hits-28m-to-build-worlds-with-words",
+      "https://www.founderstoday.news/moonlake-ai-emerges-from-stealth-with-28m/",
+      "https://www.linkedin.com/company/moonlake-ai/",
+      "https://www.moonlakeai.com/"
+    ],
+    "confidence_notes": "LOW CONFIDENCE on identity details. The official site (moonlakeai.com) returned only a JavaScript bundle with no readable content, so nothing could be confirmed from a primary source; all facts here come from search-result excerpts of secondary tech-press articles and aggregator profiles, not from pages I could read in full. The prompt's hint ('generative AI models for media') only partly matches what sources describe: the company builds interactive world models / generative game and simulation environments. Legal name, country, city and employee count are unknown. Only one founder name (Sharon Lee) was found; the co-founder's name was not. Founded year 2025 comes from an aggregator profile."
+  },
+  {
+    "input_name": "Moonvalley",
+    "name_official": "Moonvalley AI Inc.",
+    "website": "https://www.moonvalley.com",
+    "country": "Canada",
+    "headquarter_city": "Toronto",
+    "founded_year": null,
+    "funds_raised": 154,
+    "employees_count": null,
+    "main_investors": "General Catalyst, Comcast Ventures, CoreWeave, Khosla Ventures, Y Combinator",
+    "founders": "Naeem Talukdar",
+    "description": "Moonvalley AI Inc. is an AI research company headquartered in Toronto, Canada, describing itself as 'the imagination research company' and a research lab pushing the frontiers of creativity through deep learning. It is led by CEO and co-founder Naeem Talukdar, with John Thomas as Chief Operating Officer; its research leadership is heavily ex-DeepMind and ex-Google Research, including Chief Scientific Officer Mateusz Malinowski (ex-DeepMind), VP of Research Mikolaj Binkowski (ex-DeepMind), Principal Research Scientist Yu-Chuan Su (ex-Google Research) and Principal Research Scientist Chris Burgess (ex-DeepMind). Its Marey video model was released to the general public in July 2025 and covered by TechCrunch, Deadline and Fast Company as an 'ethical' AI video model for filmmakers. In July 2025 the company announced an additional $84 million round led by existing investor General Catalyst, bringing total reported funding to $154 million. Marey launched on fal.ai in August 2025 and is also natively available in ComfyUI.\nMarey is a text-to-video and image-to-video generative model built for professional filmmaking and trained exclusively on licensed data, which the company markets as 'fully licensed, commercially safe'. It is aimed at filmmakers, studios, brands and creative teams and emphasises prompt adherence, high-resolution cinematic detail, physically believable motion, dynamic motion, composable layers and studio-grade lighting continuity across frames. Its differentiated control surface includes pose transfer (apply reference performance timing and intent to any subject), camera control (turn a single 2D image into a 3D environment and direct camera moves), motion transfer (extract motion from a reference video and apply it to new subjects) and trajectory control (draw a path for an element instead of re-prompting).\nMonetisation is a self-serve web application at app.moonvalley.com with a sign-up flow, complemented by an enterprise 'partner with us' / contact sales motion for studios and brands, and an API that was still on a waitlist at the time of research. Distribution also runs through inference partners fal.ai and ComfyUI. No pricing tiers were published on the pages consulted, so the exact pricing model (credit packs, subscription or per-generation) was not verified.",
+    "sources": [
+      "https://www.moonvalley.com/",
+      "https://www.moonvalley.com/team",
+      "https://techstartups.com/2025/07/14/moonvalley-raises-84m-to-scale-ethical-ai-video-production-for-hollywood-and-enterprise-clients/",
+      "https://betakit.com/moonvalley-raises-additional-84-million-to-meet-demand-for-its-hollywood-friendly-ai-video-generator/",
+      "https://techcrunch.com/2025/07/08/moonvalleys-ethical-ai-video-model-for-filmmakers-is-now-publicly-available/"
+    ],
+    "confidence_notes": "Founded year not stated on the company website (secondary aggregators say 2023) — left null. funds_raised = 154 comes from tech-press coverage of the July 2025 $84M round stating it brought the total to $154M, seen via search-result excerpts rather than a fetched primary press release (businesswire.com returned HTTP 403). Toronto HQ is from BetaKit/Forbes coverage, not from the company site, which does not list an address. Only Naeem Talukdar is explicitly identified as a co-founder; other co-founders were not confirmed by name. Employee count not published."
+  },
+  {
+    "input_name": "ChipAgents",
+    "name_official": "Alpha Design AI, Inc. (dba ChipAgents)",
+    "website": "https://chipagents.ai",
+    "country": "United States",
+    "headquarter_city": "San Jose",
+    "founded_year": 2024,
+    "funds_raised": 134,
+    "employees_count": null,
+    "main_investors": "B Capital, Bessemer Venture Partners, Matter Venture Partners, ScOp Venture Capital, Micron Technology, MediaTek, Samsung, Ericsson",
+    "founders": "William Wang",
+    "description": "ChipAgents operates under the corporate name Alpha Design AI (the site footer reads '© Alpha Design AI 2026' and its LinkedIn handle is alpha-design-ai). It was founded by CEO William Yang Wang, and company profiles date its founding to July 2024. Headquarters are at 6280 America Center Drive, Suite 200, San Jose, California, with research and development at 110 Castilian Drive, Suite 102, Goleta, California. In July 2026 the company announced an additional $60 million Series A2 led by new investor B Capital, bringing its expanded Series A to $134 million roughly six months after the initial Series A close, and it announced an expanded collaboration with NVIDIA to advance agentic AI for chip design. Its leadership includes Chief Product Officer Solaiman Rahim, Head of Engineering Mehir Arora, Head of Research Kexun Zhang, Head of Business Development Harrison Balistreri, VP of Application Engineering Cindy Cui and Head of Marketing Emily Yan. Its advisory board and board are unusually senior for the EDA sector: Walden Rhines (former CEO of Mentor Graphics/Siemens EDA), Raul Camposano (former CTO of Synopsys), Jack Harding, Sandeep Bharathi (President of Marvell's Data Center Group), Erez Tsur, John Bowers, plus board members Wen Hsieh (Matter Venture Partners), Lance Co Ting Keh (Bessemer Venture Partners), Daisy Cai (B Capital) and Ivan Bercovich (ScOp Venture Capital).\nThe product is an agentic AI chip design environment aimed at semiconductor design and verification teams, marketed on the promise of iterating on chip design and verification roughly ten times faster. Published material covers multi-agent orchestration for ASIC flows, AI agent-driven timing closure with faster validation loops, and root-cause analysis in verification; press coverage reports that its root-cause analysis reduced debugging from days to 15-60 minutes for one customer, Whalechip, avoiding two weeks of delay. Its strategic investors are semiconductor and systems companies — Micron Technology, MediaTek, Samsung and Ericsson — alongside financial investors B Capital, Bessemer Venture Partners and Matter Venture Partners.\nThe company sells to semiconductor design organisations through a book-a-demo enterprise motion with a customer log-in portal at agent.chipagents.ai, a Trust Center, and presence at industry events such as DVCon Taiwan and DVCon Japan. Press coverage referenced annual recurring revenue in early 2026, implying a recurring software licence or subscription model, but no pricing tiers are published, so the commercial model was not verified in detail.",
+    "sources": [
+      "https://chipagents.ai/",
+      "https://chipagents.ai/newsroom",
+      "https://www.unite.ai/chipagents-expands-series-a-to-134-million-as-ai-agents-move-deeper-into-semiconductor-design/",
+      "https://www.semiconductor-digest.com/chipagents-expands-series-a-funding-to-134-million-as-demand-grows-for-agentic-ai-in-semiconductor-design/",
+      "https://dealroom.co/companies/alpha-design-ai/"
+    ],
+    "confidence_notes": "Founded year (July 2024) and the exact legal-entity form come from a Dealroom profile excerpt, not from a primary filing; the site only shows '© Alpha Design AI' and a contact address at william@alphadesign.ai. Note the Dealroom excerpt says Santa Clara while the company's own footer says San Jose — San Jose was used. funds_raised = 134 is the expanded Series A total per the company's own newsroom headline and multiple trade-press excerpts; there may be earlier pre-seed/seed money not included. Investor list mixes the named Series A2 lead (B Capital) with the 'Backed by' logos on the homepage and board affiliations. Employee count not published."
+  },
+  {
+    "input_name": "Unconventional AI",
+    "name_official": null,
+    "website": null,
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2025,
+    "funds_raised": 475,
+    "employees_count": null,
+    "main_investors": "Andreessen Horowitz, Lightspeed Venture Partners, Lux Capital, DCVC, Databricks, Jeff Bezos",
+    "founders": "Naveen Rao, Michael Carbin, Sara Achour, MeeLan Lee",
+    "description": "Unconventional AI was co-founded by Naveen Rao, the former AI chief at Databricks and founder of MosaicML (and earlier Nervana Systems), together with Michael Carbin, Sara Achour and MeeLan Lee, described as researchers spanning AI systems, analog circuits, computing theory and neuroscience. In December 2025 the company closed a $475 million seed round at a $4.5 billion valuation — one of the largest seed financings on record — co-led by Andreessen Horowitz and Lightspeed Venture Partners, with participation from Lux Capital, DCVC and Databricks, and angel participation reported from Jeff Bezos and Rao himself. Reporting indicates the company intends to raise up to $1 billion in this initial phase. A first artefact, Un-0, released on 25 June, is described in the company's own blog as an image generator powered by a simulated system of coupled oscillators.\nThe company is building a radically more energy-efficient computer purpose-built for AI, bringing what it calls biology-scale efficiency to artificial intelligence. Its stated architectural approach bypasses the limitations of traditional von Neumann systems, drawing on biological inspiration — Rao notes the human brain performs enormous computation on roughly 20 watts — and reporting describes coupled oscillators, analog computing, pulsed/spiking neurons and mixed-signal SoCs with non-volatile memory, targeting on the order of a 1,000x reduction in AI energy consumption relative to datacenter GPUs.\nBusiness model was not verified. The company is pre-product in commercial terms and no pricing, licensing or hardware sales terms were found on any page consulted.",
+    "sources": [
+      "https://techfundingnews.com/former-databricks-ai-chiefs-unconventional-ai-raises-475m-at-4-5b-valuation-to-redesign-computing/",
+      "https://www.crunchbase.com/organization/unconventional-ai",
+      "https://startupfortune.com/unconventional-ai-raises-475-million-at-a-45-billion-seed-valuation-to-cut-ais-power-bill-by-a-factor-of-1000/",
+      "https://dataphoenix.info/unconventional-ai-raises-475m-for-energy-efficient-computing/",
+      "https://urbangeekz.com/2025/12/unconventional-ai-raises-475m-energy-efficient-computers/"
+    ],
+    "confidence_notes": "MEDIUM CONFIDENCE. No official website was identified or fetched, so every fact here comes from search-result excerpts of tech-press articles and aggregator profiles; nothing was read on a primary company page. Multiple independent outlets agree on the $475M seed, $4.5B valuation, the four founder names and the a16z/Lightspeed co-lead, which raises confidence on those points. Founded year 2025 is inferred from the December 2025 seed announcement describing it as launching 'just 2 months' after formation in one headline; treat as approximate. Legal name, website, HQ city and employee count are unknown. The Un-0 release date is reported as 25 June without a confirmed year."
+  },
+  {
+    "input_name": "Majestic Labs AI",
+    "name_official": "Majestic Labs",
+    "website": null,
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": null,
+    "funds_raised": 100,
+    "employees_count": null,
+    "main_investors": "Lux Capital, Bow Wave Capital, SBI, Upfront Ventures, Aleph",
+    "founders": "Ofer Shacham, Sha Rabii, Masumi Reynders",
+    "description": "Majestic Labs emerged from stealth on 10 November 2025 with over $100 million in total funding, including a Series A reported at approximately $90 million. It was co-founded by Ofer Shacham, Sha Rabii and Masumi Reynders, who spent years together leading silicon products at Meta and Google. The launch announcement was datelined San Francisco and Tel Aviv, Israel, indicating a dual US/Israel presence.\nThe company develops next-generation servers designed to tear down the 'memory wall' that constrains AI workloads. Its pitch is a single server delivering on the order of 1,000x the memory capacity of a top-of-the-line GPU, replacing what would otherwise be multiple racks — reporting cites packing the memory of roughly ten racks of servers into one system — with corresponding improvements in performance, power consumption and operational efficiency. The target customers are cloud providers and AI datacenter operators seeking to reduce the capital and energy cost of buildouts.\nBusiness model was not verified. As a hardware company still pre-general-availability at the time of research, no pricing, sales terms or delivery model were published on any page consulted.",
+    "sources": [
+      "https://www.businesswire.com/news/home/20251110896482/en/Led-by-Ex-Google-and-Meta-Executives-Majestic-Labs-Emerges-From-Stealth-with-$100M-To-Redefine-AI-Infrastructure-by-Tearing-Down-the-Memory-Wall",
+      "https://techfundingnews.com/majestic-labs-nabs-100m-to-build-ai-servers-with-1000x-gpu-memory-capacity/",
+      "https://www.calcalistech.com/ctechnews/article/hktmbi1lbe",
+      "https://techstartups.com/2025/11/10/ex-google-and-meta-execs-raise-100m-for-ai-chip-startup-majestic-labs-to-shrink-data-centers-with-memory-efficient-servers/"
+    ],
+    "confidence_notes": "LOW-TO-MEDIUM CONFIDENCE on several fields. The Business Wire press release could not be fetched (HTTP 403) and businesswire content was only visible through search-result excerpts. The domain majesticlabs.ai is NOT the company: it is parked and listed for sale on spaceship.com for $30,000, so the website field is null — I could not identify the real official domain. main_investors is the weakest field here: the investor names listed are commonly cited in coverage of the launch but I did NOT see them confirmed in any excerpt I actually read, so they should be re-verified or dropped before import. Reported funding is inconsistent across sources ($100M total vs a $90M Series A per Calcalist); 100 is used as the announced total. Founded year and employee count unknown. Headquarters recorded as San Francisco from the press-release dateline, which also names Tel Aviv."
+  },
+  {
+    "input_name": "Positron",
+    "name_official": "Positron AI",
+    "website": "https://www.positron.ai",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2023,
+    "funds_raised": 292,
+    "employees_count": null,
+    "main_investors": "Arena, Jump Trading, Unless, Qatar Investment Authority, Arm Holdings, Helena, DFJ Growth, Atreides Management, Valor Equity Partners, Resilience Reserve, Flume Ventures, 1517 Fund",
+    "founders": null,
+    "description": "Positron AI was founded in the spring of 2023 and publishes a detailed month-by-month progress timeline: a first prototype running Llama-2 7B on an FPGA at month 8 with fewer than ten people and $6M raised; the first-generation Atlas product built and shipped at month 15 with 15 people and under $12M raised; ranked #3 on The Information's 50 Most Promising Startups in 2024 at month 18; a new CEO recruited at month 21 (Mitesh Agrawal, who had scaled a GPU neocloud from zero to over $500M ARR); first full-scale production rack deployed to a major cloud provider at month 22; a $50M+ Series A at month 26; a demonstration of 3x lower end-to-end latency than comparable H100 systems at one third the power for trading inference at month 32; and a $230M+ Series B at month 34 at a valuation above $1 billion, co-led by Arena, Jump Trading and Unless with strategic investors QIA, Arm Holdings and Helena. Other investors include DFJ Growth, Atreides, Valor, Resilience Reserve, Flume Ventures and 1517. Its leadership includes CEO Mitesh Agrawal, CTO Thomas Sohmers, Edward Kmett (Science), John Fry (Product), Greg Davis (Engineering), Cameron McCaskill (Sales), Bernie Sardinia (Operations) and Sheryl Savage (Legal).\nPositron builds purpose-built hardware for transformer inference, claiming the highest performance, lowest power and best total cost of ownership at any scale, designed, fabricated and assembled in the United States. Its shipping product is Atlas, a production-ready inference appliance supporting models up to 500B parameters and described as the world's first LLM-inference-first accelerator, built in 18 months. Announced for 2027 are Titan, a 'superintelligence-in-a-box' system with 8TB+ of memory powered by four Asimov chips, and Asimov, purpose-built inference accelerator silicon with 2TB+ of memory per chip, aimed at near-limitless context and holding large numbers of models and agents resident for instant querying without liquid cooling or specialised networking. Any model from the HuggingFace Transformers library can be mapped onto the hardware: users upload a .pt or .safetensors file to the Positron Model Manager and point existing OpenAI-API-compatible clients at api.positron.ai. Reported deployments span networking, gaming, content moderation, CDN and token-as-a-service companies.\nThe business model is hardware sales of inference appliances to cloud providers and enterprises, sold through a contact-sales motion ('you can buy Atlas today'), with an OpenAI-API-compatible software layer and Model Manager included. No published price list was found, so unit pricing and any recurring software component were not verified.",
+    "sources": [
+      "https://www.positron.ai/",
+      "https://www.positron.ai/about",
+      "https://www.positron.ai/press",
+      "https://www.positron.ai/atlas"
+    ],
+    "confidence_notes": "funds_raised = 292 is DERIVED, not directly published: it sums the disclosed rounds on the company's own About timeline (~$12M raised by month 15, a $50M+ Series A, and a $230M+ Series B). The company states 'more than' for the two large rounds, so the true total is at least this and likely higher; treat 292 as a floor estimate and re-verify before import. Headquarter city is not published anywhere on the site (only 'designed, fabricated and assembled in the United States'), so it is null. Founders are not named as such: the About page tells a founding story about 'a visionary, an applied mathematician, and an engineer' without naming them, and notes the CEO was recruited later at month 21, so Mitesh Agrawal is explicitly NOT a founder; Thomas Sohmers (CTO) is a likely founder but this was not confirmed. Founded year 2023 is from 'since our founding in the spring of 2023'. Employee count not published (the timeline mentions 10 people at month 8 and 15 at month 15, now outdated)."
+  },
+  {
+    "input_name": "Geordie AI",
+    "name_official": "Geordie AI",
+    "website": "https://www.geordie.ai",
+    "country": "United Kingdom",
+    "headquarter_city": "London",
+    "founded_year": null,
+    "funds_raised": 36.5,
+    "employees_count": null,
+    "main_investors": "Balderton Capital, Crosspoint Capital, General Catalyst, Ten Eleven Ventures",
+    "founders": null,
+    "description": "Geordie AI is a London-based security and governance company for enterprise AI agents. In May 2026 it raised a $30 million Series A (reported as around EUR 25 million) led by Balderton Capital with participation from Crosspoint Capital, General Catalyst and Ten Eleven Ventures, bringing its disclosed total funding to $36.5 million. The company has collected several industry awards: winner of the RSA Conference Innovation Sandbox 2026, winner of the Black Hat Europe Startup Spotlight, and a Gartner Cool Vendor designation for innovations in AI software security. Named customers include Xapo Bank, Fitch Group, Interra Health, Synthesia, AlphaSense, A+E Global Media, Forge Holidays, OakNorth, 118 118 Money, Advt Group and Owkin.\nThe platform gives security and IT teams a single source of truth for agentic risk. It automatically discovers every AI agent across cloud, code, endpoint and SaaS environments and keeps that inventory continuously updated; performs posture management by mapping each agent's permissions, tool and MCP connections, knowledge sources, system prompts, models and sub-tools; provides behavioural observability as a continuous auditable record of every prompt, plan, response and tool invocation with behavioural baselining and anomaly detection; and delivers risk intelligence using proprietary risk and threat modelling mapped to OWASP, NIST, ISO 42001, the EU AI Act and AIUC-1. Remediation is handled by a proprietary engine called Beam, which intervenes directly at the agent level in real time with deterministic controls and no gateway latency, alongside advisory mitigations for teams that want a human in the loop. The company argues existing endpoint, cloud, IAM and MCP-gateway tools were built to evaluate point-in-time transactions and are an architectural mismatch for sequential, cross-surface, continuous agentic risk. It holds SOC 2 Type II and SOC 3 attestations, ISO/IEC 27001 certification and states GDPR compliance, and runs an EU instance at app.eu.geordie.ai.\nBusiness model was not verified: no pricing page or tiers are published. Distribution is an enterprise sales motion via a 'Book a Demo' funnel with a customer log-in portal, consistent with an enterprise SaaS subscription, but no commercial terms were confirmed.",
+    "sources": [
+      "https://www.geordie.ai/",
+      "https://www.geordie.ai/about/",
+      "https://fortune.com/2026/05/28/geordie-security-governance-ai-agents/",
+      "https://dlptest.com/geordie-raises-30-million-series-a-for-ai-agent-security/",
+      "https://www.crunchbase.com/organization/geordie-ai"
+    ],
+    "confidence_notes": "Identity confirmed: geordie.ai is unambiguously the AI agent governance/observability company described in the prompt. Founder names and founding year were not found — the About page was not fetched directly and no source read named the founders, so both fields are null. funds_raised = 36.5 (disclosed total after the $30M Series A) comes from a secondary source excerpt, as does the investor list; the Fortune and Crunchbase pages were only seen through search-result excerpts. London HQ comes from consistent secondary sources (Fortune, VCBacked, PitchBook excerpts) rather than an address on the company site. Employee count not published."
+  },
+  {
+    "input_name": "InCountry",
+    "name_official": "InCountry, Inc.",
+    "website": "https://incountry.com",
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": null,
+    "funds_raised": 10,
+    "employees_count": null,
+    "main_investors": "Arbor Ventures, Caffeinated Ventures, Accelerator Ventures",
+    "founders": "Peter Yared",
+    "description": "InCountry, Inc. is a San Francisco-based data protection company founded and led by CEO Peter Yared. On 22 September 2025 it announced a $10 million funding round led by Arbor Ventures with participation from Caffeinated Ventures and new investor Accelerator Ventures, used to accelerate global deployment of AgentCloak, its AI agent data protection product launched the same day after more than a year of collaboration with customers and partners. In March 2026 it announced AgentCloak support for zero-trust AI agents with unified identity and data security, and its AgentCloak product was named to CB Insights' 2026 list of the 100 most innovative AI startups. Customers and references include NVIDIA and Publicis Sapient, and the company states it serves Global 2000 companies in life sciences, semiconductors and financial services.\nInCountry operates at the intersection of AI, identity and data sovereignty. Its core technology is 'secure digital twins' that fully isolate PII, PHI and PCI data in its country of origin, governed by identity context from identity servers and authorization tokens, with masking, tokenization, hashing, searchable encryption using NIST standards and AI-based generalization. The product line covers InCountry for Apps (a web services proxy that automatically redacts and reinserts personal information from existing web services with no application changes, plus a REST API and mail proxy), InCountry for Identity, InCountry for Salesforce, InCountry for China (Alibaba Cloud, addressing PIPL and MLPS), and the AgentCloak family for AI security: AgentCloak Data Protection, AgentCloak Agentic Identity, AgentCloak Sovereign AI and AgentCloak for Agentforce. AgentCloak performs bidirectional cloaking — generalizing 'headache' to 'minor neurological condition', 'Berlin' to 'EU', an age of 32 to a 30-39 bracket — and can distinguish separate individuals within an interaction. It is invocable as an MCP Tool, MCP Proxy, A2A Proxy, Web Service Proxy, REST API or CLI, and integrates with Claude Code, OpenCode, OpenAI Codex and Grok Build. The platform advertises two points of presence per country with active-active failover, SaaS, single-tenant, AWS Outposts and sovereign cloud deployment options, plus OpenTelemetry observability. It supports compliance with the EU AI Act, China's PIPL, Saudi Arabia's PDPL and GDPR, and cites regulatory approvals from the Cyberspace Administration of China, the Saudi Arabian Monetary Authority and European Data Protection Authorities.\nThe business model is an enterprise SaaS/infrastructure subscription: the company maintains a customer portal at portal.incountry.com, a published pricing page, a demo funnel, and a partner channel (including Copado and Salesforce). Specific pricing tiers on that page were not read during this research.",
+    "sources": [
+      "https://incountry.com/",
+      "https://incountry.com/press-releases/incountry-raises-10-million-in-funding-and-launches-agentcloak-ai-agent-data-protection/",
+      "https://incountry.com/press-releases/incountry-agentcloak-enables-zero-trust-ai-agents-with-unified-identity-and-data-security/",
+      "https://incountry.com/pricing/"
+    ],
+    "confidence_notes": "Founded year is not stated on the company site or the press releases consulted; left null. funds_raised = 10 covers only the September 2025 round announced in the press release — InCountry has existed since well before that and earlier rounds were not disclosed on the pages consulted, so total funding is almost certainly higher. San Francisco is taken from the press release dateline. Employee count not published. Pricing page exists but its content was not read, so tier structure is unverified."
+  },
+  {
+    "input_name": "Knostic",
+    "name_official": "Knostic",
+    "website": "https://www.knostic.ai",
+    "country": "United States",
+    "headquarter_city": "Herndon",
+    "founded_year": 2023,
+    "funds_raised": 14,
+    "employees_count": null,
+    "main_investors": "Bright Pixel Capital, Seedcamp, SVCI, DNX Ventures, Pitango, Shield Capital",
+    "founders": "Gadi Evron, Sounil Yu",
+    "description": "Knostic was founded in 2023 by Gadi Evron and Sounil Yu. Evron is a serial cybersecurity entrepreneur who founded the ACoD conference and Cymmetria (acquired, where he was CEO), led PwC's Cyber Security Center and served as CISO for the Israeli National Digital Authority. Yu is the creator of the Cyber Defense Matrix and the DIE Triad, and was previously Chief Security Scientist at Bank of America and CISO at JupiterOne. The company is headquartered at 205 Van Buren St, Suite 120, Herndon, Virginia. In March 2025 it announced an $11 million investment led by Bright Pixel Capital, bringing total funding to $14 million, following wins at the Black Hat and RSA startup competitions. Its investors include Bright Pixel (Sonae), Seedcamp, SVCI, DNX Ventures, Pitango and Shield Capital, and its advisory board includes Wendy Nather, Adm. Mike Rogers (Ret.), Caleb Sima, Doron Shikmoni, Allison Miller, Charles Blauner, Gal Tal-Hochberg and Chris Inglis.\nKnostic describes itself as the world's first provider of need-to-know based access controls for LLM-based enterprise AI. Its original focus was visibility for Microsoft 365 Copilot, Glean and similar tools, identifying oversharing, undersharing and inference risks so that AI outputs respect an organisation's need-to-know principles. Its current positioning covers security across the agentic lifecycle: discovering and securing AI agents and coding assistants along with their supply chain — MCP servers, skills, IDE extensions, rules and hooks — detecting shadow AI, blocking data exfiltration and stopping destructive commands such as rm -rf. Capabilities include agent discovery (Cursor, Claude and others), detection and response, inventory and supply chain analysis, security posture management and a reputation service. It publishes named security research such as CodeRelay (12 VS Code extensions disguised as developer tools) and targets energy, finance, healthcare, pharmaceuticals and government, addressing CISOs, CIOs, IAM managers, red teams and governance teams.\nThe company runs a freemium/open-source-led motion feeding an enterprise sales funnel. Free and open tools include Kirin (secure coding agents, getkirin.com), AgentMesh (AI supply chain threat intelligence, with published access tiers), OpenAnt (open-source vulnerability discovery), OpenClaw Detect / openclaw-shield on GitHub, an LLM oversharing tester and a prompt injection defence training simulator. Paid enterprise licensing is sold through a 'Schedule a Demo' motion, supported by a partner programme with an application process and partner portal. No pricing tiers are published, so the paid commercial model was not verified.",
+    "sources": [
+      "https://www.knostic.ai/",
+      "https://www.knostic.ai/about-us",
+      "https://www.knostic.ai/blog/ending-llm-oversharing-we-raised-11-million-to-secure-enterprise-ai",
+      "https://www.securityweek.com/knostic-secures-11-million-to-rein-in-enterprise-ai-data-leakage-oversharing/"
+    ],
+    "confidence_notes": "Founded year 2023 and the $14M total funding come from secondary coverage (SecurityWeek, Calcalist, Dealroom excerpts) of the March 2025 $11M round, not from the company's own About page, which lists investor logos but no amounts or dates. The company has strong Israeli ties (Evron's background, Israeli press coverage, Israel-based engineering staff) but the only address published on its site is Herndon, Virginia, so the US is recorded as the HQ country. Employee count not published. Note the product scope has shifted materially since the 'need-to-know access controls for LLMs' framing in the prompt toward agentic/coding-agent security and AI supply chain risk."
+  },
+  {
+    "input_name": "LMArena",
+    "name_official": "Arena (formerly LMArena and Chatbot Arena)",
+    "website": "https://arena.ai",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2025,
+    "funds_raised": 250,
+    "employees_count": null,
+    "main_investors": "Andreessen Horowitz, UC Investments, Felicis, Lightspeed Venture Partners, Kleiner Perkins, The House Fund, LDVP, Laude Ventures",
+    "founders": "Wei-Lin Chiang, Anastasios N. Angelopoulos, Ion Stoica",
+    "description": "Chatbot Arena was released on 24 April 2023 as a UC Berkeley research project, founded by Wei-Lin Chiang, Anastasios N. Angelopoulos and Ion Stoica. It added image support in June 2024 and moved to its own domain, lmarena.ai, in September 2024. In April 2025 LMArena incorporated as an independent company; in May 2025 it raised $100 million in a seed round at a $600 million valuation with participation from Andreessen Horowitz, UC Investments, Lightspeed Venture Partners, Felicis Ventures and Kleiner Perkins. On 6 January 2026 it closed a $150 million Series A at an approximately $1.7 billion post-money valuation, led by Felicis and UC Investments with participation from Andreessen Horowitz, The House Fund, LDVP, Kleiner Perkins, Lightspeed Venture Partners and Laude Ventures. It added video support in January 2026 and rebranded from LMArena to Arena on 28 January 2026. An earlier incident in April 2025, when Meta's Llama 4 Maverick beat GPT-4o and Gemini 2.0 Flash on the leaderboard with a version that differed from the public release, led the company to update its policies.\nArena is a public web-based platform that evaluates large language models through crowdsourced human preference. Users enter a prompt, two anonymous models respond, the user votes for the better response, and the model identities are then revealed; a 'Direct' mode also lets users choose specific models to test. Registration is optional. Model providers including OpenAI, Google DeepMind and Anthropic supply models to the platform, and it is widely used for pre-release testing — DeepSeek tested prototype models there months before R1 gained attention, OpenAI's GPT-5 appeared under the codename 'summit', and Google DeepMind's Gemini 2.5 Flash Image appeared as 'Nano Banana'. Coverage now spans text, image and video arenas. Research has also identified methodological limitations, including that hundreds of rigged votes can skew rankings. CEO Anastasios Angelopoulos frames the mission as measuring the real utility of AI by putting it in the hands of real users.\nBusiness model was not verified. The public leaderboard and voting interface are free and registration is optional; the company's monetisation approach was not published on any page consulted, and the arena.ai site returned only a cookie consent notice during this research.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/LMArena",
+      "https://arena.ai/",
+      "https://techcrunch.com/2025/05/21/lm-arena-the-organization-behind-popular-ai-leaderboards-lands-100m/",
+      "https://www.prnewswire.com/news-releases/lmarena-raises-150-million-to-build-the-worlds-most-trusted-ai-evaluation-platform-302653012.html",
+      "https://arena.ai/blog/lmarena-is-now-arena/"
+    ],
+    "confidence_notes": "The company rebranded from LMArena to Arena on 28 January 2026 and the site now redirects lmarena.ai to arena.ai; name_official reflects this. founded_year = 2025 is the year of incorporation as an independent company (April 2025); the underlying Chatbot Arena project launched 24 April 2023 at UC Berkeley — pick whichever convention the database uses. funds_raised = 250 is the arithmetic sum of the two disclosed rounds ($100M seed + $150M Series A) as reported by Wikipedia citing TechCrunch and PR Newswire. Headquarter city is not stated on Wikipedia or the site (the project originated at UC Berkeley, so Berkeley or San Francisco is plausible but unverified) — left null. Employee count not published. The arena.ai homepage itself yielded only a cookie banner, so all facts come from the Wikipedia article and the press coverage it cites."
+  }
+]

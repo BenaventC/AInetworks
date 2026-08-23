@@ -1,24 +1,61 @@
 # Scripts
 
-Ce dossier contient les scripts opérationnels récurrents et maintenus.
+Outils récurrents et maintenus. Toute opération ponctuelle déjà exécutée est archivée dans [`../archives/manual_ops/`](../archives/manual_ops/).
 
-## Familles de scripts
+## Module partagé `lib/`
 
-- Normalisation : `normalize_geo_english.js`, `normalize_sector_labels.js`, `normalize_all_entity_lists.js`, `normalize_competitor_names.js`.
-- Relations : `generate_relations_from_enterprises.py`, `cleanup_generated_relation_targets.py`, `enrich_relations_from_enterprises.js`.
-- Enrichissement : `enrich_top500_websites_logos.js`, `infer_country_from_description.js`.
-- Imports : `import_sifted_ai100_2025.js` et variantes documentées dans leurs en-têtes.
-- Migration : `migrate_enterprises_investor_type_to_investors.js`, avec mode `--dry-run`.
+Les scripts s'appuient sur quatre modules communs plutôt que de redupliquer leur socle technique :
 
-Les scripts qui modifient la base doivent être exécutés avec leur mode aperçu ou dry-run lorsque celui-ci existe. Les opérations ponctuelles non maintenues restent dans `archives/manual_ops/`.
+| Module | Rôle |
+|--------|------|
+| `lib/db.js` | Chemin de la base résolu depuis la racine du dépôt, helpers `all` / `get` / `run` promisifiés, `withTransaction`, drapeau `APPLY` |
+| `lib/ontology.js` | Lecture unique de `public/sector_ontology.csv` avec parseur CSV gérant les champs entre guillemets, validation de l'en-tête, dérivation des domaines |
+| `lib/text.js` | Clés de comparaison de noms, suppression des diacritiques, découpage et recomposition des listes séparées par virgules |
+| `lib/report.js` | Affichage uniforme aperçu / application et écriture des audits JSON sous `exports/` |
+
+## Scripts disponibles
+
+### Secteurs
+
+| Script | Écrit | Rôle |
+|--------|:-----:|------|
+| `audit_sector_label_variants.js` | non | Inventaire des labels utilisés, détection des variantes morphologiques et des labels hors ontologie. Option `--min N`. |
+| `normalize_sector_labels.js` | oui | Normalise `sector`. `--aliases-only` fusionne les seuls alias déclarés (conservateur) ; sans le drapeau, la classification par mots-clés s'ajoute. |
+| `backfill_sector_domains.js` | oui | Régénère `sector_domains` depuis `sector` et l'ontologie. |
+| `enrich_sectors_from_descriptions.js` | oui | Propose des labels supplémentaires déduits des descriptions. |
+
+### Géographie et entités
+
+| Script | Écrit | Rôle |
+|--------|:-----:|------|
+| `normalize_geo_english.js` | oui | Harmonise `country` et `headquarter_city` en anglais, convertit les placeholders en `NULL`. |
+| `infer_country_from_description.js` | oui | Déduit le pays manquant à partir de la description et de la ville. |
+| `normalize_all_entity_lists.js` | oui | Aligne les listes d'entités sur les noms canoniques de la table `enterprises`. |
+| `normalize_competitor_names.js` | oui | Déduplique et normalise `main_competitors`. |
+
+### Relations et enrichissement
+
+| Script | Écrit | Rôle |
+|--------|:-----:|------|
+| `generate_relations_from_enterprises.py` | oui | Génère les relations depuis les champs texte de `enterprises`. |
+| `cleanup_generated_relation_targets.py` | oui | Nettoie les cibles générées. `--split-composites` désactivé par défaut. |
+| `enrich_relations_from_enterprises.js` | oui | Complète les relations existantes. |
+| `normalize_partnership_types_english.js` | oui | Normalise `partnerships.partnership_type`. |
+| `enrich_top500_websites_logos.js` | non | Identifie les sites et logos manquants sur le top 500. |
 
 ## Conventions d'exécution
 
-- Depuis la racine du dépôt, pour que les chemins relatifs vers `database.db` soient stables.
-- Utiliser UTF-8 pour les entrées/sorties texte.
-- Conserver les valeurs monétaires en millions de dollars US lorsque le champ est suffixé `_millions` ou `capitalization`.
-- Produire un audit avant/après pour les imports et ne jamais remplacer une donnée confirmée sans arbitrage documenté.
+- **Aperçu d'abord.** Les scripts d'écriture sont en mode aperçu par défaut ; ajouter `--apply` pour écrire.
+- **Sauvegarder** `database.db` dans `database_backups/` avant toute application massive.
+- Le chemin de la base est résolu depuis la racine du dépôt : les scripts fonctionnent quel que soit le répertoire courant.
+- Encodage UTF-8 en entrée comme en sortie ; valeurs stockées en base en anglais.
+- Montants en millions de dollars US pour `capitalization`, `funds_raised` et les champs suffixés `_millions`.
 
-Les scripts ponctuels (imports one-shot, correctifs ad hoc, opérations manuelles) sont conservés dans :
+## Ordre recommandé après un import
 
-- ../archives/manual_ops/
+```bash
+node scripts/normalize_geo_english.js --apply
+node scripts/normalize_sector_labels.js --aliases-only --apply
+node scripts/backfill_sector_domains.js --apply
+node scripts/audit_sector_label_variants.js
+```

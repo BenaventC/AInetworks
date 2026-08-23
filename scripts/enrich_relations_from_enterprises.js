@@ -3,7 +3,7 @@ const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
 const APPLY = process.argv.includes('--apply');
-const DB_PATH = path.resolve('database.db');
+const DB_PATH = require('./lib/db').DB_PATH;
 
 const RELATION_SOURCES = [
   { column: 'main_investors', relationType: 'Investor' },

@@ -1,0 +1,236 @@
+[
+  {
+    "input_name": "Keycard",
+    "name_official": "Keycard Labs, Inc.",
+    "website": "https://www.keycard.ai",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2025,
+    "funds_raised": 38,
+    "employees_count": null,
+    "main_investors": "Andreessen Horowitz (a16z), boldstart ventures, Acrew Capital, Modern Technical Fund (mtf.vc), Essence VC, Mantis VC, Exceptional Capital, Vermilion Cliffs, Tapestry VC",
+    "founders": "Ian Livingstone, Jared Hanson, Matthew Creager",
+    "description": "Keycard Labs, Inc. was founded in 2025 by Ian Livingstone (CEO, previously Principal Engineer at Salesforce and Platform Strategy leader at Snyk), Jared Hanson (creator of Passport.js, former Chief Architect at Auth0 and product leader at Okta) and Matthew Creager (co-founder of Manifold, former VP of Product at Snyk and Director of Developer Relations at Heroku). The company emerged from stealth in October 2025 with $38 million raised in combined seed and Series A rounds: an $8 million seed co-led by Andreessen Horowitz and boldstart ventures, and a $30 million Series A led by Acrew Capital, with participation from Modern Technical Fund, Essence VC, Mantis, Exceptional Capital, Vermilion Cliffs and Tapestry VC, plus angel investors including Matias Woloski (CTO, Auth0), Karl McGuinness (Okta), Dane Knecht (CTO, Cloudflare) and Emilio Escobar (CISO, Datadog). The company website confirms SOC 2 Type II certification.\nKeycard sells an identity and access control plane for AI agents: it lets enterprises govern which tools, APIs and data an agent may reach, with cryptographic workload identity, task-scoped credentials, runtime policy evaluation and a full audit trail linking each action back to the human who authorized it. The platform supports application, user, workload and device identity providers, RBAC/ABAC/ReBAC authorization models, app-binding, zone, org and device-based policies, and protocols including MCP, A2A, WIMSE, API, CLI and custom SDK integrations. It hooks into agent frameworks and coding agents (for example Claude Code) and streams telemetry to SIEM systems.\nKeycard uses published usage-based SaaS pricing built on a single metric, the transaction (issuing a credential, validating an access request, exchanging a credential, or handling a step-up approval). A free Starter tier includes 5,000 transactions per month; a Team tier costs $500 per month with 100,000 transactions included and $1 per additional 1,000 transactions; an Enterprise tier is priced on request with annual commitment and adds SCIM/AD/LDAP provisioning, dedicated, BYOC or on-premises deployment, private networking, customer-managed KMS and 24/7 support.",
+    "sources": [
+      "https://www.keycard.ai/",
+      "https://www.keycard.ai/about",
+      "https://www.keycard.ai/press",
+      "https://www.keycard.ai/pricing",
+      "https://pulse2.com/keycard-launched-with-38-million-to-transform-identity-and-access-for-ai-agents/",
+      "https://siliconangle.com/2025/10/21/ai-agent-security-startup-keycard-reels-38m/"
+    ],
+    "confidence_notes": "Identity confirmed: keycard.sh redirects to keycard.ai, the company is Keycard Labs, Inc. building IAM for AI agents (matches the stated domain). Headquarter city not stated on the company site and not verified elsewhere, so left null. Founding year 2025 comes from secondary press coverage (Daily Security Review), not from the company site. Employee count unknown."
+  },
+  {
+    "input_name": "Straiker",
+    "name_official": "Straiker AI, Inc.",
+    "website": "https://www.straiker.ai",
+    "country": "United States",
+    "headquarter_city": "Mountain View",
+    "founded_year": 2025,
+    "funds_raised": 85,
+    "employees_count": null,
+    "main_investors": "Marathon Management Partners, Citi Ventures, Illuminate Financial, Workday Ventures, Bain Capital Ventures, Lightspeed Venture Partners, GTM Capital, Rain Capital, Neva SGR, Firebolt Ventures, Sixty Degree Ventures",
+    "founders": "Ankur Shah, Sreenath Kurupati",
+    "description": "Straiker was co-founded by Ankur Shah (CEO), previously SVP and GM of Palo Alto Networks' Prisma Cloud business, and Sreenath Kurupati (CTO), who led AI and security research at Akamai after it acquired Cyberfend, the fraud detection company he founded. The company launched publicly out of stealth in 2025 with $21 million in initial funding from Lightspeed Venture Partners and Bain Capital Ventures. On 29 June 2026 Straiker announced a $64 million Series A led by Marathon Management Partners, Citi Ventures, Illuminate Financial and Workday Ventures, with continued support from Bain Capital Ventures and Lightspeed, and participation from GTM Capital, Rain Capital, Neva SGR, Firebolt Ventures and Sixty Degree Ventures; Gokul Rajaram of Marathon joined the board. Total funding reached $85 million and the company reported more than 15x run-rate revenue growth in under a year.\nStraiker positions itself as \"The Agentic Security Company\" and sells a platform to discover, test and protect enterprise AI agents. It comprises three products: Discover AI, which maps every AI agent, MCP server and agentic workflow in an environment with continuous posture monitoring and misconfiguration detection; Ascend AI, an adversarial testing engine that probes for prompt injection, goal hijacking, tool misuse and inter-agent manipulation before deployment; and Defend AI, a runtime protection layer that detects and blocks identity abuse, memory poisoning, data exfiltration and resource exploitation. A shared intelligence layer feeds production threat data back into pre-deployment testing. The company runs STAR Labs, its own AI threat research arm, and holds SOC 2 and ISO/IEC 27001 certifications. Customers cited publicly include Omada Health, Coupa, American Express Global Business Travel, EnterpriseDB and Automation Anywhere.\nStraiker sells to enterprises and frontier AI labs through a demo-request and direct sales motion; no public price list is available on the company website, so the exact commercial model (enterprise subscription vs. usage-based) was not verified.",
+    "sources": [
+      "https://www.straiker.ai/",
+      "https://www.straiker.ai/blog/straiker-raises-64m-series-a-to-secure-the-agentic-workforce",
+      "https://www.prnewswire.com/news-releases/straiker-raises-64m-series-a-to-secure-the-agentic-workforce-302812638.html",
+      "https://www.prnewswire.com/news-releases/straiker-launches-with-21-million-to-safeguard-ai-302412224.html",
+      "https://www.citi.com/ventures/perspectives/opinion/securing-ai-agents-straiker-investment.html"
+    ],
+    "confidence_notes": "The June 2026 press release datelines Mountain View, California, while earlier third-party profiles (VCBacked) list Sunnyvale; the company may have moved, so Mountain View is used as the most recent value. Founding year: the press release says \"since launching in 2025\"; incorporation may predate that. Business model not published; pricing not verified. Employee count unknown."
+  },
+  {
+    "input_name": "Virtue AI",
+    "name_official": "Virtue AI",
+    "website": "https://www.virtueai.com",
+    "country": "United States",
+    "headquarter_city": "San Francisco",
+    "founded_year": 2024,
+    "funds_raised": 30,
+    "employees_count": null,
+    "main_investors": "Lightspeed Venture Partners",
+    "founders": "Bo Li, Dawn Song, Sanmi Koyejo, Carlos Guestrin",
+    "description": "Virtue AI was founded in 2024 by four academic AI-security researchers: Bo Li (CEO, professor at the University of Illinois Urbana-Champaign), Dawn Song, Sanmi Koyejo and Carlos Guestrin. The team's \"DecodingTrust\" paper is presented by the company as the work that defined AI risk assessment, and Virtue AI describes a founding team with an average h-index of 108. The company raised $30 million with Lightspeed Venture Partners as lead investor. In June 2026 Meta hired co-founders Bo Li, Dawn Song and Sanmi Koyejo plus additional team members into Meta Superintelligence Labs, and roughly two months later Fortinet announced the acquisition of Virtue AI, so the company is no longer independent.\nVirtue AI sells an enterprise AI security platform organised around four product lines. AgentSuite-Red provides enterprise-scale red-teaming for agentic systems with 50+ sandboxed environments across 14 domains, support for major agent frameworks and an injection MCP server. AgentSuite-Blue delivers runtime protection with MCP Guard, Action Guard, Shadow AI discovery and agent trajectory observability. VirtueRed performs continuous automated red-teaming with 100+ proprietary algorithms, 600+ attack vectors and 1,000+ risk categories, aligned with the EU AI Act, GDPR, OWASP LLM Top 10, NIST AI RMF, MITRE and FINRA. VirtueGuard is a family of real-time guardrail models (PolicyGuard, TextGuard Lite, ImageGuard, VideoGuard, AudioGuard, CodeGuard) with sub-10ms multimodal latency across 100+ languages. Reference customers cited on the site include AllianceBernstein, Uber and OpenAI.\nThe company sells to enterprises via a contact-sales motion with SaaS, dedicated or fully on-premises deployment options; no public pricing is published, and the business model was not verified from primary sources.",
+    "sources": [
+      "https://virtueai.com/",
+      "https://www.virtueai.com/author/bo-li",
+      "https://www.axios.com/2026/06/25/meta-hires-virtue-ai-founders-security",
+      "https://tracxn.com/d/companies/virtue-ai/__l5m_HYaWYFhNwlcSguNp_8K_34L8rZPgGtDg9YZHSTY",
+      "https://www.crunchbase.com/organization/virtue-ai",
+      "https://lsvp.com/company/virtue-ai/"
+    ],
+    "confidence_notes": "Funding of $30M and San Francisco HQ come from aggregator profiles (Tracxn/Crunchbase snippets), not from a primary press release; Tracxn also shows an inconsistent 2014 founding date while other sources say 2024 — 2024 is used as it matches the DecodingTrust timeline and Meta/Axios coverage. Virtue AI has been acquired by Fortinet (2026) and three of four co-founders left for Meta, so current status is 'acquired', not independent. Employee count unknown."
+  },
+  {
+    "input_name": "Generalist AI",
+    "name_official": "Generalist AI, Inc.",
+    "website": "https://generalistai.com",
+    "country": "United States",
+    "headquarter_city": "San Mateo",
+    "founded_year": 2024,
+    "funds_raised": 500,
+    "employees_count": null,
+    "main_investors": "Radical Ventures, 8VC, Union Square Ventures, Hanabi Capital, Norwest, NVIDIA (NVentures), Boldstart Ventures, Spark Capital, Bezos Expeditions, NFDG",
+    "founders": "Pete Florence, Andy Zeng, Andrew Barry",
+    "description": "Generalist AI was founded in 2024 by Pete Florence (CEO, formerly senior research scientist at Google DeepMind and a contributor to PaLM-E and RT-2, PhD at MIT with Russ Tedrake), Andy Zeng (chief scientist, also from Google DeepMind) and Andrew Barry (CTO, previously a roboticist at Boston Dynamics). The company released GEN-0 in November 2025, which it describes as bringing robotics into the pretraining era by demonstrating scaling laws from large-scale real-world physical data; GEN-1 followed in April 2026 with claims of 99% reliability across diverse dexterous tasks and up to 3x faster execution than prior state of the art; GEN-1.5 was published in August 2026 with in-context learning of new tasks from as little as 12 seconds of demonstration. On 4 June 2026 the company announced $400 million in new funding, bringing total raised to more than half a billion dollars, led by Radical Ventures with 8VC, Union Square Ventures, Hanabi Capital and Norwest joining, and significant participation from existing investors NVIDIA, Boldstart Ventures, Spark Capital, Bezos Expeditions and NFDG; new angels included Bin Lin, Fei-Fei Li and Naval Ravikant. Press coverage reported a $2 billion valuation.\nGeneralist builds embodied foundation models — general intelligence for the physical world — starting with dexterous manipulation. The GEN model family is designed to transfer across form factors and end effectors: the company published work showing GEN-1 supporting a broad range of robot hands and grippers, and positions its models as the intelligence layer for humanoids, robotic arms, mobile robots and space systems rather than for one specific robot. The team spans researchers from OpenAI, Boston Dynamics and Google DeepMind, with sites in the Bay Area (California) and Boston (Massachusetts).\nGeneralist is a frontier research lab in a pre-commercial phase; its blog states it is beginning to work with the industries that will bring these systems into everyday use, but no pricing, licensing terms or robot-as-a-service offering is published. The business model was not verified.",
+    "sources": [
+      "https://generalistai.com/",
+      "https://generalistai.com/about",
+      "https://generalistai.com/blog/accelerating-the-next-phase-of-physical-ai",
+      "https://www.therobotreport.com/generalist-raises-400m-to-scale-its-general-purpose-ai-models/",
+      "https://www.peteflorence.com/"
+    ],
+    "confidence_notes": "Identity confirmed: generalistai.com is the robot-foundation-model company (GEN-0/GEN-1/GEN-1.5), not another firm named 'Generalist'. Total funding of ~$500M is the company's own wording ('more than half a billion dollars'); the precise cumulative figure is not disclosed. San Mateo HQ comes from The Robot Report, while the company site only says 'Bay Area (CA) and Boston (MA)'. Founding year 2024 and the founder trio come from secondary sources (Business Insider, Tracxn); the site itself does not state them. Employee count unknown."
+  },
+  {
+    "input_name": "InOrbit",
+    "name_official": "InOrbit, Inc.",
+    "website": "https://www.inorbit.ai",
+    "country": "United States",
+    "headquarter_city": "Mountain View",
+    "founded_year": 2017,
+    "funds_raised": 12.7,
+    "employees_count": null,
+    "main_investors": "L'ATTITUDE Ventures, Globant Ventures, Animo Ventures, Yamaha Motor Ventures, Kärcher New Ventures, Motus Ventures, Creative Destruction Lab, Berkeley Angel Network",
+    "founders": "Florian Pestoni",
+    "description": "InOrbit, Inc. was co-founded by Florian Pestoni, who serves as CEO and also co-founded the Robot Operations Group, a community organisation of experts in scaling robot deployments; Ramiro Diaz Trepat joined in January 2024 as Head of AI and later became CTO, leading the launch of RobOps Copilot. The company closed a $2.6 million seed round early on and later announced a Series A co-led by L'ATTITUDE Ventures and Globant Ventures, the corporate venture arm of Globant (NYSE: GLOB). Its investor page also lists Animo Ventures, Yamaha Motor Ventures, Kärcher New Ventures, Motus Ventures, Creative Destruction Lab and the Berkeley Angel Network.\nInOrbit sells an AI-powered robot orchestration platform for software-defined robot operations, a category it calls RobOps. The flagship offering, InOrbit Space Intelligence, integrates autonomous robots, IoT devices, non-robotic equipment, line-of-business systems (WMS, ERP, WES) and human workers into a single execution and control layer for warehouses, manufacturing plants and other demanding environments. Capabilities include Unified Command for cross-system orchestration, Intelligent Orchestration for mapping and fleet management, Actionable Insights with real-time monitoring, alerts and AI-powered vision, plus missions, NVIDIA Isaac Sim-based simulation, RTLS integration and a RobOps Copilot for analytics. A separate developer-facing product, InOrbit Ground Control, targets robot manufacturers, alongside a robot directory, the InOrbit Connect partner ecosystem and an education edition.\nInOrbit operates a two-sided commercial motion — enterprise robot operators and robot developers — driven by a contact-sales and demo-request funnel. No public price list is available on the website, so the exact commercial model (per-robot subscription, SaaS tiers, or other) was not verified.",
+    "sources": [
+      "https://www.inorbit.ai/",
+      "https://www.inorbit.ai/company",
+      "https://www.inorbit.ai/press/series-a-investment",
+      "https://www.globant.com/news/inorbitai-secures-series-a-funding",
+      "https://tracxn.com/d/companies/inorbit/__2VLTx5AkIy11BJBAPBu10AlKAJWkbymd3q9RgCMOdc0",
+      "https://www.vcnewsdaily.com/inorbit/venture-capital-funding/qwmmrdpdvc"
+    ],
+    "confidence_notes": "Founding year (2017), Mountain View HQ and the $12.7M total funding figure come from aggregator profiles (Tracxn, SetterVC, FundedIQ), not from InOrbit's own site; the Series A amount was not disclosed publicly. SetterVC lists Mario Munich and Julian Cerruti as additional co-founders, but this is unconfirmed by the company site, so only Florian Pestoni is recorded. Employee count unknown."
+  },
+  {
+    "input_name": "Blue Water Autonomy",
+    "name_official": "Blue Water Autonomy, Inc.",
+    "website": "https://www.blw.ai",
+    "country": "United States",
+    "headquarter_city": "Boston",
+    "founded_year": 2024,
+    "funds_raised": 64,
+    "employees_count": null,
+    "main_investors": "GV (Google Ventures)",
+    "founders": "Rylan Hamilton, Austin Gray",
+    "description": "Blue Water Autonomy was founded in 2024 by Rylan Hamilton (CEO), a former U.S. Navy engineering and surface warfare officer who was an early leader at Amazon Robotics and then founded 6 River Systems, the warehouse automation company sold to Shopify for $450 million, and Austin Gray (CSO), a former U.S. Navy intelligence officer with master's degrees from MIT and Harvard who volunteered in a Ukrainian drone factory after business school. The company raised a $14 million seed round announced in April 2025 and a $50 million Series A led by GV in August 2025, bringing total equity funding to about $64 million. In early 2026 it unveiled its first vessel, the Liberty class — a roughly 190-foot steel autonomous ship with more than 10,000 nautical miles of range and over 150 metric tons of payload capacity — and the CEO told Mergermarket he expected the next financing round to be a multiple of the $50 million Series A, with a first autonomous naval vessel launch targeted for the second half of 2026. The company has sites in Boston (Massachusetts), Washington D.C., Morgan City (Louisiana) and San Diego (California).\nThe company designs and builds fully autonomous, unmanned ships from the keel up for the U.S. Navy and allied navies, integrating hardware, software and AI so the vessel can operate unmanned on the open ocean for extended periods. Its stated design principles are mass producibility with reliability, endurance on the open ocean, and the ability to evolve alongside human crews as warfare changes. The team draws on shipbuilding programs that delivered more than 30 naval vessels and on DARPA's NOMARS fully-autonomous-vessel effort.\nBlue Water Autonomy is a defense prime-style shipbuilder whose revenue is expected to come from naval vessel programs and contracts, but no contract values, pricing or commercial terms are published on its website, so the business model was not verified.",
+    "sources": [
+      "https://blw.ai/",
+      "https://www.prnewswire.com/news-releases/blue-water-autonomy-announces-50-million-series-a-led-by-gv-to-strengthen-us-maritime-power-with-autonomous-unmanned-ships-302538277.html",
+      "https://www.therobotreport.com/blue-water-autonomy-nets-50m-to-build-autonomous-ships/",
+      "https://www.navalnews.com/naval-news/2026/02/video-blue-water-autonomy-introduces-liberty-class-autonomous-ship/",
+      "https://ionanalytics.com/insights/mergermarket/blue-water-autonomy-eyes-larger-funding-round-as-first-unmanned-naval-vessel-nears-launch/"
+    ],
+    "confidence_notes": "bluewaterautonomy.com redirects to blw.ai (identity confirmed). Founding year 2024, the $14M seed and $50M Series A amounts and the $64M total come from secondary sources (The Robot Report, PR Newswire, Mergermarket); the company site does not state funding. GV is the only named lead investor found; other participants were not verified. Employee count unknown (one aggregator says 11-50, unverified)."
+  },
+  {
+    "input_name": "BOS Semiconductors",
+    "name_official": "BOS Semiconductors Inc.",
+    "website": "https://www.bos-semi.com",
+    "country": "South Korea",
+    "headquarter_city": "Seongnam",
+    "founded_year": 2022,
+    "funds_raised": null,
+    "employees_count": 220,
+    "main_investors": "Hyundai Motor Group, Kia",
+    "founders": "Jaehong Park",
+    "description": "BOS Semiconductors — the name stands for \"Best Of Silicon\" — was established by CEO Dr. Jaehong Park, a former Executive Vice President of Samsung Semiconductor's System LSI and Foundry business with roughly 23 years at Samsung Electronics, together with other semiconductor industry veterans. Within a year of its establishment the company secured more than 10 billion Korean won in funding from Hyundai Motor Group, Kia and several venture capital firms. In late 2023 BOS announced a partnership with Tenstorrent to license NPU IP for its automotive SoCs, and in December 2024 the two companies unveiled Eagle-N, presented as the industry's first automotive AI accelerator chiplet SoC. BOS was recognised in EE Times' Silicon 100 list of startups to watch in 2025 and presented Eagle-N at Hot Chips 2026. Headquarters are in the Pangyo district of Seongnam, Gyeonggi-do, South Korea, with an R&D centre in Ho Chi Minh City, Vietnam.\nBOS designs high-performance system semiconductors for mobility: its Eagle family is a chiplet SoC line for automotive and robotics, comprising Eagle-N, a 250 TOPS chiplet AI accelerator SoC for ADAS and in-vehicle infotainment systems, and Eagle-A, a 150 TOPS all-in-one ADAS SoC. The chiplet approach is intended to let automakers customise the system to their needs and reduce cost by updating specific functionalities rather than the whole chip. The leadership team is described as 220+ engineers including senior veterans with over 20 years of experience who worked on the Apple iPhone, Tesla FSD, Samsung smartphones and Baidu AI silicon.\nAs a fabless semiconductor company BOS sells automotive SoCs and related AI models to automakers and Tier-1 suppliers; no pricing or contract terms are published, so the business model was not verified beyond chip sales and design partnerships.",
+    "sources": [
+      "https://www.bos-semi.com/",
+      "https://www.bos-semi.com/about-us",
+      "https://www.bos-semi.com/post/bos-and-tenstorrent-partner-to-develop-automotive-semiconductor",
+      "https://tenstorrent.com/en/newsroom/bos-and-tenstorrent-partner-to-develop-automotive-semiconductor",
+      "https://www.prnewswire.com/news-releases/bos-and-tenstorrent-unveil-eagle-n-industrys-first-automotive-ai-accelerator-chiplet-soc-302328727.html",
+      "https://www.reuters.com/technology/artificial-intelligence/tenstorrent-hyundai-backed-bos-unveil-automotive-ai-chips-2024-12-13/"
+    ],
+    "confidence_notes": "Founding year 2022 comes from secondary profiles (Grokipedia, AI Market Watch), not from the company site; it is consistent with the 2023 statement that BOS raised >10bn KRW 'within one year since its establishment'. Total funds raised is left null because only the early >10bn KRW (~$7-8M) figure is documented and no cumulative total was found. The 220+ figure is the company's own wording for engineers, so total headcount may be higher. Only Jaehong Park is named as founder; 'other industry veterans' are unnamed in sources."
+  },
+  {
+    "input_name": "DYNA",
+    "name_official": "Dyna Robotics Inc.",
+    "website": "https://www.dyna.co",
+    "country": "United States",
+    "headquarter_city": "Redwood City",
+    "founded_year": 2024,
+    "funds_raised": 144,
+    "employees_count": null,
+    "main_investors": "CRV, First Round Capital, LG Technology Ventures",
+    "founders": "Lindon Gao, Jason Ma, York Yang",
+    "description": "Dyna Robotics Inc. was founded in 2024 by Lindon Gao (CEO) and York Yang, who previously built and sold Caper AI, the AI-powered smart shopping cart company acquired by Instacart for $350 million, together with Jason Ma, a former Google DeepMind and Meta AI research scientist who completed his PhD at the University of Pennsylvania's GRASP Laboratory. The team also includes people from DeepMind, MIT, NVIDIA and Meta. The company released DYNA-1 in 2025 as a dexterous robot foundation model, published DYNA-1 pre-training results in November 2025, and in August 2026 released DYNA-2, a World Action Model trained on roughly one million hours of human activity video, together with a paper on training it at million-hour scale. Dyna Robotics raised a $120 million Series A in 2025 with CRV and First Round Capital among its backers, bringing reported total funding to about $144 million; LG Technology Ventures also publicised the round.\nDyna builds the full stack of embodied AI: hardware plus foundation models for mobile, dexterous robots that complete end-to-end workflows in hospitality, logistics and factory operations. Its model stack is layered as DYNA-VLM for high-level agentic reasoning (~1 Hz), DYNA-2 for mid-level task dexterity (~10 Hz) and DYNA-System0 for low-level whole-body control (~1 kHz), running on the DYNA-SAUR embodiment with vision, tactile and proprioceptive sensing. Published deployment metrics include 100 items per hour from dryer to folded, stacked and bagged laundry with ≥98% delivery-ready quality; 180 items per hour of bus-tub pre-scraping, sorting and racking in food service at under 90 seconds per tub; and 200 units per hour of pick, inspect, place and seal in factory and assembly work with ±2 mm placement accuracy on changing SKUs.\nDyna sells through customer pilot programs (\"Explore a pilot\") with robots deployed on customer sites shift after shift, and states that every deployment strengthens the fleet. No pricing, subscription tiers or robot-as-a-service terms are published, so the exact business model was not verified.",
+    "sources": [
+      "https://www.dyna.co/",
+      "https://www.dyna.co/company",
+      "https://www.therobotreport.com/dyna-robotics-closes-120m-funding-round-to-scale-robotics-foundation-model/",
+      "https://www.lgtechventures.com/news/dyna-robotics-raises-120-million-to-advance-robotic-foundation-models-on-the-path-to-physical-artificial-general-intelligence",
+      "https://tracxn.com/d/companies/dyna-robotics/__SQrTmIVEp-T3NjnfTDEZIWLc4jDDBWe4IodOJneuT1Y"
+    ],
+    "confidence_notes": "Identity confirmed: 'DYNA' at dyna.co is Dyna Robotics Inc. (robot arms and manipulation foundation models), matching the stated domain. Redwood City HQ, the 2024 founding year, the founder trio and the $144M cumulative funding come from aggregator profiles (Tracxn, startupfundraising, indexed.vc), not from the company site; only the $120M Series A is corroborated by trade press. Employee count unknown."
+  },
+  {
+    "input_name": "Gravis Robotics",
+    "name_official": "Gravis Robotics AG",
+    "website": "https://www.gravisrobotics.com",
+    "country": "Switzerland",
+    "headquarter_city": "Zurich",
+    "founded_year": 2022,
+    "funds_raised": 223,
+    "employees_count": null,
+    "main_investors": "SoftBank Group",
+    "founders": "Ryan Luke Johns, Dominic Jud",
+    "description": "Gravis Robotics was founded in 2022 as a spin-out of ETH Zurich to bring software-defined intelligence to heavy construction machinery. Ryan Luke Johns is CEO and co-founder and Dominic Jud is CTO and co-founder. In November 2025 the company announced it had raised $23 million and signed a series of landmark deals to expand into the UK, US and EU, and it won gold at the 2025 Construction Startup Challenge. On 17 August 2026 Gravis announced a $200 million Series A funded by SoftBank Group — described as the largest Series A in construction robotics history — with Dai Sakata, Managing Director of SoftBank Group, commenting on the investment. Headquarters are in Zurich, Switzerland, with offices in Austin, Texas and Oxford, United Kingdom, and deployments across four continents. Gravis was also selected to lead an $8 million UK government-backed CAM Pathfinder project with Flannery Plant Hire to retrofit excavator fleets.\nGravis retrofits existing construction machines with the Gravis Rack, an autonomous control kit combining sensors and an intuitive touchscreen interface, turning standard excavators into autonomous robotic teammates. The software acts as an operating system for mixed fleets and has been installed across Caterpillar, Case, Develon, John Deere, JCB, Hitachi, Sumitomo, Yanmar and Volvo machinery, with the same core models driving compact excavators or machines five times larger without custom reprogramming. Training relies heavily on simulation to bridge the sim-to-real gap across soil types from soft clay to rock-filled ground. The company claims up to a 30% productivity increase versus peak manual operation, and offers a spectrum from AI-augmented manual control (Gravis Copilot, with real-time 3D guidance and hazard detection) through full autonomy where one operator supervises a robotic fleet; every equipped machine also acts as a continuous site sensor automating surveying and hazard mapping.\nGravis sells hardware retrofit kits (the Gravis Rack) plus autonomy software to contractors and equipment fleet operators, and works with rental partners such as Flannery Plant Hire to give contractors turnkey, on-demand access to autonomous machinery. No price list is published, so the precise commercial terms were not verified.",
+    "sources": [
+      "https://www.gravisrobotics.com/",
+      "https://www.gravisrobotics.com/about-us",
+      "https://www.gravisrobotics.com/series-a",
+      "https://www.gravisrobotics.com/press-release",
+      "https://www.inc.com/georgia-fearn/exclusive-softbank-is-investing-200-million-in-autonomous-construction-startup-gravis-robotics/91390995"
+    ],
+    "confidence_notes": "The $223M total is the sum of the $200M SoftBank Series A (Aug 2026) and the $23M announced in Nov 2025 as listed on the company's own news page; earlier pre-seed/seed amounts may not be included, so the true cumulative total could be higher. Only two co-founders (Ryan Luke Johns, Dominic Jud) are named on the company site; there may be others. Legal entity name 'Gravis Robotics AG' inferred from Swiss incorporation and not directly verified. Employee count unknown."
+  },
+  {
+    "input_name": "Persona AI",
+    "name_official": "Persona AI Inc.",
+    "website": "https://www.personainc.ai",
+    "country": "United States",
+    "headquarter_city": "Houston",
+    "founded_year": 2024,
+    "funds_raised": 42,
+    "employees_count": null,
+    "main_investors": null,
+    "founders": "Nicolaus Radford, Jerry Pratt, Jide Akinyode",
+    "description": "Persona AI Inc. was founded in 2024 (reported as May 2024) in Houston, Texas by Nicolaus \"Nic\" Radford (CEO), a NASA veteran who led development of the Valkyrie humanoid space robot, Jerry Pratt (CTO), formerly CTO of humanoid maker Figure AI and a DARPA Robotics Challenge veteran, and Jide Akinyode (COO). The company raised more than $10 million in pre-seed funding within its first year, then announced an oversubscribed $27 million pre-seed round in 2025; by December 2025, when it revealed its Gen1 robot and a tendon-driven hand, reported pre-seed funding had reached about $42 million. Persona AI has announced partnerships with HD Korea Shipbuilding & Offshore Engineering, HD Hyundai Robotics and the Korean manufacturing firm Vazil Company, targeting initial robot deliveries to HD Hyundai within 18 months of the 2025 round, plus a materials collaboration with Under Armour to protect its robots.\nPersona AI designs purpose-built industrial humanoid robots for physically demanding environments — shipyards, factories, construction sites and energy infrastructure — with welding in shipyards as the beachhead application. Rather than pursuing a general-purpose humanoid from day one, the company deliberately narrows scope to tasks that can be commercially viable in the near term, combining its founders' space-robotics and commercial-humanoid backgrounds.\nThe intended revenue model is delivery of humanoid robots to industrial partners such as HD Hyundai, but no pricing, lease terms or robot-as-a-service structure has been published, so the business model was not verified.",
+    "sources": [
+      "https://www.prnewswire.com/news-releases/persona-ai-raises-27m-oversubscribed-pre-seed-to-deliver-the-future-of-humanoid-robotics-302455330.html",
+      "https://www.therobotreport.com/persona-ai-raises-27m-develops-purpose-built-humanoid-robots-shipyards/",
+      "https://robohorizon.com/en-us/news/2025/12/persona-ai-unveils-humanoid-bot-with-42m-to-weld-in-shipyards/",
+      "https://houston.innovationmap.com/persona-ai-under-armour-2676928987.html",
+      "https://www.humanoidsdaily.com/news/persona-ai-lands-27m-pre-seed-to-fast-track-humanoid-robots-for-heavy-industry"
+    ],
+    "confidence_notes": "The official website personainc.ai returned no extractable content when fetched, so all facts come from secondary sources; the URL is therefore listed with moderate confidence. Funding is uncertain: $27M was the announced 2025 oversubscribed pre-seed, while December 2025 coverage cites $42M total pre-seed — the more recent $42M figure is recorded, but this needs verification. Named investors were not found in the fetched material, so main_investors is null. Founding month/year (May 2024) comes from a wiki-style source. Identity disambiguation: this is the Houston industrial-humanoid company, NOT the identity-verification company Persona (withpersona.com)."
+  },
+  {
+    "input_name": "The Bot Company",
+    "name_official": "The Bot Company",
+    "website": "https://www.thebotcompany.com",
+    "country": "United States",
+    "headquarter_city": null,
+    "founded_year": 2024,
+    "funds_raised": 300,
+    "employees_count": null,
+    "main_investors": "Greenoaks",
+    "founders": "Kyle Vogt, Paril Jain, Luke Holoubek",
+    "description": "The Bot Company was co-founded in 2024 by Kyle Vogt, former CEO and co-founder of the autonomous vehicle company Cruise, together with Paril Jain and Luke Holoubek. The company raised an initial $150 million round shortly after founding, and in March 2025 raised a further $150 million at a $2 billion valuation, with participation from the San Francisco-based global investment firm Greenoaks — a valuation reached before any commercial product or revenue. Later coverage reported the company preparing to raise roughly $250 million more at a valuation above $4 billion, though this had not been confirmed as closed.\nThe Bot Company is developing non-humanoid consumer robots for the home, aimed at household chores such as tidying, cleaning and organising. Reporting describes a wheeled household robot and an autonomy-first approach in which the system operates on near-raw sensor and motor signals so that it acquires common-sense reasoning without depending on teleoperation, a deliberate contrast with humanoid-form-factor competitors.\nThe company has not launched a product, published pricing or disclosed a commercial model; it had no revenue at the time of its $2 billion valuation. The business model was not verified.",
+    "sources": [
+      "https://www.therobotreport.com/the-bot-company-led-by-kyle-vogt-brings-in-another-150m/",
+      "https://economictimes.indiatimes.com/tech/funding/ex-cruise-ceo-kyle-vogts-robotics-startup-valued-at-2-billion/articleshow/119407569.cms",
+      "https://sacra.com/c/the-bot-company/",
+      "https://www.wizcase.com/news/the-bot-company-hits-2-billion-valuation/"
+    ],
+    "confidence_notes": "The official site thebotcompany.com returned no extractable content when fetched, so every fact comes from secondary press; the URL is listed with moderate confidence. The $300M total is the sum of two reported $150M rounds (2024 and March 2025) and is an inference, not a figure stated by the company. Headquarter city left null: San Francisco is widely assumed but was not verified in a fetched source. Founding year 2024 is inferred from the timing of the first round and Vogt's departure from Cruise; not directly confirmed. Greenoaks is the only named investor found."
+  }
+]

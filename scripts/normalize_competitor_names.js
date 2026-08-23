@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 const APPLY = process.argv.includes('--apply');
-const DB_PATH = 'database.db';
+const DB_PATH = require('./lib/db').DB_PATH;
 
 const LEGAL_SUFFIX_RE = /\b(incorporated|inc|corp|corporation|company|co|llc|ltd|limited|plc|gmbh|ag|sa|sas|sasu|sarl|spa|srl|bv|nv|oy|ab|pte|kg|kgaa)\b/g;
 
@@ -218,20 +218,27 @@ async function main() {
         }
 
         if (APPLY && updates.length > 0) {
+          let failed = null;
           let completed = 0;
-          const stmt = db.prepare('UPDATE enterprises SET main_competitors = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?');
 
-          updates.forEach((u) => {
-            stmt.run([u.to, u.id], (err) => {
-              if (err) {
-                console.error(`Error updating #${u.id}:`, err.message);
-              }
-              completed++;
-              if (completed === updates.length) {
-                stmt.finalize();
-                console.log(`\nApplied updates: ${completed}`);
-                db.close(() => resolve());
-              }
+          db.serialize(() => {
+            db.run('BEGIN TRANSACTION');
+            const stmt = db.prepare('UPDATE enterprises SET main_competitors = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?');
+
+            updates.forEach((u) => {
+              stmt.run([u.to, u.id], (err) => {
+                if (err && !failed) failed = new Error(`#${u.id}: ${err.message}`);
+                completed += 1;
+                if (completed !== updates.length) return;
+
+                stmt.finalize(() => {
+                  db.run(failed ? 'ROLLBACK' : 'COMMIT', () => {
+                    if (failed) console.error(`Rollback: ${failed.message}`);
+                    else console.log(`\nApplied updates: ${completed}`);
+                    db.close(() => (failed ? reject(failed) : resolve()));
+                  });
+                });
+              });
             });
           });
         } else {

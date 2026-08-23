@@ -13,6 +13,7 @@ let enterpriseAnythingQuery = '';
 let enterpriseSearchDebounceTimer = null;
 let enterpriseSegment = 'later';
 let enterpriseSectorFilter = '';
+let enterpriseDomainFilter = '';
 let enterpriseCountryFilter = '';
 let enterpriseOrgTypeFilter = '';  // set to 'Investor' when on investors tab
 let enterpriseFilterOptionsLoadingPromise = null;
@@ -81,7 +82,7 @@ const TOP_RANKING_SEGMENTS = new Set(['top100', 'top50']);
 const SECTOR_LABEL_GROUPS = [
   {
     name: 'AI & Data',
-    labels: new Set(['AI model', 'Agentic', 'Audio AI', 'Computer Vision', 'Data', 'Generative Media', 'Inference & Model Serving', 'Model Serving', 'Natural Language Processing', 'Voice & Audio AI', 'Artificial Intelligence', 'Image generation', 'Inference', 'Quantic', 'Sound', 'Voice'])
+    labels: new Set(['AI model', 'Agentic', 'Computer Vision', 'Data', 'Generative Media', 'Inference & Model Serving', 'Model Serving', 'Natural Language Processing', 'Voice & Audio AI', 'Artificial Intelligence', 'Image generation', 'Inference', 'Quantic'])
   },
   {
     name: 'Infrastructure & Engineering',
@@ -149,7 +150,6 @@ let sectorLabelOptions = [
   'Marketing',
   'Transport',
   'Mobility',
-  'Voice',
 ];
 const enterprisePagination = {
   page: 1,
@@ -499,6 +499,7 @@ function initEventListeners() {
   document.getElementById('enterpriseSearch').addEventListener('input', searchEnterprises);
   document.getElementById('enterpriseAnythingSearch').addEventListener('input', searchAnythingEnterprises);
   document.getElementById('enterpriseSectorFilter').addEventListener('change', onEnterpriseFiltersChanged);
+  document.getElementById('enterpriseDomainFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('enterpriseCountryFilter').addEventListener('change', onEnterpriseFiltersChanged);
   document.getElementById('resetEnterpriseFiltersBtn').addEventListener('click', resetEnterpriseFilters);
   document.querySelectorAll('.enterprise-subtab-btn').forEach((btn) => {
@@ -751,6 +752,9 @@ async function loadEnterprises() {
     if (enterpriseSectorFilter) {
       params.set('sector', enterpriseSectorFilter);
     }
+    if (enterpriseDomainFilter) {
+      params.set('domain', enterpriseDomainFilter);
+    }
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
     }
@@ -821,6 +825,7 @@ function renderEnterprises() {
             ${topRankingSegment ? `<span class="rank-sticker ${rankTier.cssClass}" title="Top ${rankTier.percentile.toFixed(1)}%">#${rank}</span>` : ''}
           </div>
           <div class="card-subtitle">
+            ${ent.sector_domains ? `<span class="badge badge-domain">${escapeHtml(ent.sector_domains)}</span>` : ''}
             ${ent.sector ? `<span class="badge badge-sector">${ent.sector}</span>` : ''}
             ${ent.organization_type ? `<span class="badge">${escapeHtml(ent.organization_type)}</span>` : ''}
             ${ent.country ? `<span class="badge badge-country">${ent.country}</span>` : ''}
@@ -945,6 +950,9 @@ async function refreshEnterpriseSegmentCounts() {
     }
     if (enterpriseSectorFilter) {
       params.set('sector', enterpriseSectorFilter);
+    }
+    if (enterpriseDomainFilter) {
+      params.set('domain', enterpriseDomainFilter);
     }
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
@@ -1281,6 +1289,7 @@ function searchAnythingEnterprises(e) {
 
 async function onEnterpriseFiltersChanged() {
   enterpriseSectorFilter = document.getElementById('enterpriseSectorFilter').value;
+  enterpriseDomainFilter = document.getElementById('enterpriseDomainFilter').value;
   enterpriseCountryFilter = document.getElementById('enterpriseCountryFilter').value;
   enterprisePagination.page = 1;
   await loadEnterpriseFilterOptions();
@@ -1295,17 +1304,20 @@ async function resetEnterpriseFilters() {
   enterpriseSearchQuery = '';
   enterpriseAnythingQuery = '';
   enterpriseSectorFilter = '';
+  enterpriseDomainFilter = '';
   enterpriseCountryFilter = '';
   enterprisePagination.page = 1;
 
   const searchInput = document.getElementById('enterpriseSearch');
   const anythingSearchInput = document.getElementById('enterpriseAnythingSearch');
   const sectorSelect = document.getElementById('enterpriseSectorFilter');
+  const domainSelect = document.getElementById('enterpriseDomainFilter');
   const countrySelect = document.getElementById('enterpriseCountryFilter');
 
   if (searchInput) searchInput.value = '';
   if (anythingSearchInput) anythingSearchInput.value = '';
   if (sectorSelect) sectorSelect.value = '';
+  if (domainSelect) domainSelect.value = '';
   if (countrySelect) countrySelect.value = '';
 
   await loadEnterpriseFilterOptions();
@@ -1334,6 +1346,9 @@ async function loadEnterpriseFilterOptions() {
     if (enterpriseSectorFilter) {
       params.set('sector', enterpriseSectorFilter);
     }
+    if (enterpriseDomainFilter) {
+      params.set('domain', enterpriseDomainFilter);
+    }
     if (enterpriseCountryFilter) {
       params.set('country', enterpriseCountryFilter);
     }
@@ -1348,6 +1363,7 @@ async function loadEnterpriseFilterOptions() {
     }
 
     populateEnterpriseFilterSelect('enterpriseSectorFilter', payload.sectors || [], 'All sectors');
+    populateEnterpriseFilterSelect('enterpriseDomainFilter', payload.domains || [], 'All domains');
     populateEnterpriseFilterSelect('enterpriseCountryFilter', payload.countries || [], 'All countries');
   })();
 
@@ -1369,9 +1385,11 @@ async function loadEnterpriseFilterOptions() {
 
 function syncEnterpriseFilterStateFromInputs() {
   const sectorSelect = document.getElementById('enterpriseSectorFilter');
+  const domainSelect = document.getElementById('enterpriseDomainFilter');
   const countrySelect = document.getElementById('enterpriseCountryFilter');
 
   enterpriseSectorFilter = sectorSelect ? sectorSelect.value : '';
+  enterpriseDomainFilter = domainSelect ? domainSelect.value : '';
   enterpriseCountryFilter = countrySelect ? countrySelect.value : '';
 }
 
@@ -2283,7 +2301,8 @@ function renderSectorLabelOptions() {
 function buildSectorLabelGroups(entries, labels) {
   if (!entries.length) return SECTOR_LABEL_GROUPS;
 
-  const grouped = new Map(entries.map((entry) => [entry.group, []]));
+  // The picker is grouped by the meta level (domain); `group` stays the intermediate level.
+  const grouped = new Map(entries.map((entry) => [entry.domain, []]));
   const other = [];
   for (const label of labels) {
     const normalized = label.toLowerCase();
@@ -2296,7 +2315,7 @@ function buildSectorLabelGroups(entries, labels) {
     ));
     const entry = exactEntry || keywordEntry;
     if (entry) {
-      grouped.get(entry.group).push(label);
+      grouped.get(entry.domain).push(label);
     } else {
       other.push(label);
     }
@@ -2324,10 +2343,11 @@ async function loadSectorLabelOptions() {
     if (ontologyResponse.ok) {
       const ontologyText = await ontologyResponse.text();
       sectorOntologyEntries = ontologyText.trim().split(/\r?\n/).slice(1)
-        .map((row) => row.split(',', 5))
-        .map(([canonicalLabel, group, aliases, keywords]) => ({
+        .map((row) => row.split(','))
+        .map(([canonicalLabel, group, aliases, keywords, , domain]) => ({
           canonicalLabel,
           group,
+          domain: domain || group,
           aliases: (aliases || '').split('|').map((value) => value.trim()).filter(Boolean),
           keywords: (keywords || '').split('|').map((value) => value.trim().toLowerCase()).filter(Boolean)
         }))

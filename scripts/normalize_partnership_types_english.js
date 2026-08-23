@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 const APPLY = process.argv.includes('--apply');
-const DB_PATH = 'database.db';
+const DB_PATH = require('./lib/db').DB_PATH;
 
 const TOKEN_MAP = new Map([
   ['investissement', 'Investment'],

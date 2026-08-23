@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 const APPLY = process.argv.includes('--apply');
-const DB_PATH = 'database.db';
+const DB_PATH = require('./lib/db').DB_PATH;
 
 const FIELDS_TO_NORMALIZE = [
   'main_competitors',
@@ -124,30 +124,29 @@ async function main() {
       }
 
       if (APPLY && updates.length > 0) {
+        let failed = null;
         let completed = 0;
 
-        updates.forEach((u) => {
-          const setClauses = [];
-          const params = [];
+        db.serialize(() => {
+          db.run('BEGIN TRANSACTION');
 
-          Object.keys(u.changes).forEach((field) => {
-            setClauses.push(`${field} = ?`);
-            params.push(u.changes[field].to);
-          });
+          updates.forEach((u) => {
+            const fields = Object.keys(u.changes);
+            const setClauses = fields.map((field) => `${field} = ?`);
+            const params = [...fields.map((field) => u.changes[field].to), u.id];
+            const updateSql = `UPDATE enterprises SET ${setClauses.join(', ')}, updated_at = CURRENT_TIMESTAMP WHERE id = ?`;
 
-          params.push(u.id);
+            db.run(updateSql, params, (err) => {
+              if (err && !failed) failed = new Error(`#${u.id}: ${err.message}`);
+              completed += 1;
+              if (completed !== updates.length) return;
 
-          const updateSql = `UPDATE enterprises SET ${setClauses.join(', ')}, updated_at = CURRENT_TIMESTAMP WHERE id = ?`;
-
-          db.run(updateSql, params, (err) => {
-            if (err) {
-              console.error(`Error updating #${u.id}:`, err.message);
-            }
-            completed++;
-            if (completed === updates.length) {
-              console.log(`\nApplied updates: ${completed}`);
-              db.close(() => resolve());
-            }
+              db.run(failed ? 'ROLLBACK' : 'COMMIT', () => {
+                if (failed) console.error(`Rollback: ${failed.message}`);
+                else console.log(`\nApplied updates: ${completed}`);
+                db.close(() => (failed ? reject(failed) : resolve()));
+              });
+            });
           });
         });
       } else {
