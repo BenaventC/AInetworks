@@ -7,6 +7,7 @@ database.db
 
 # Sources locales / données brutes non versionnées
 Sources/
+complementsMIA/
 
 # Fichiers temporaires et artefacts de debug
 tmp_*
