@@ -1,6 +1,45 @@
 const fs = require('fs');
 const path = require('path');
-const { openDb, withTransaction, APPLY } = require('./lib/db');
+const crypto = require('crypto');
+const { ROOT, openDb, withTransaction, APPLY } = require('./lib/db');
+const { normalizeKey } = require('./lib/text');
+const { writeAudit, main } = require('./lib/report');
+
+function getSourcePaths() {
+  const sources = [];
+  for (let index = 2; index < process.argv.length; index++) {
+    if (process.argv[index] !== '--source') continue;
+    const source = process.argv[index + 1];
+    if (!source || source.startsWith('--')) throw new Error('Each --source option requires a CSV path.');
+    sources.push(path.resolve(ROOT, source));
+    index++;
+  }
+  if (!sources.length) {
+    throw new Error('No CSV source provided. Usage: node scripts/import_af_complements.js --source <file.csv> [--source <file.csv>] [--apply]');
+  }
+  return sources;
+}
+
+function loadSources(sourcePaths) {
+  const hashes = new Map();
+  const loaded = [];
+  const duplicateSources = [];
+  for (const sourcePath of sourcePaths) {
+    if (!fs.existsSync(sourcePath)) throw new Error(`CSV source not found: ${sourcePath}`);
+    const content = fs.readFileSync(sourcePath);
+    const hash = crypto.createHash('sha256').update(content).digest('hex');
+    if (hashes.has(hash)) {
+      duplicateSources.push({ source: path.relative(ROOT, sourcePath), duplicate_of: hashes.get(hash) });
+      continue;
+    }
+    const source = path.relative(ROOT, sourcePath);
+    hashes.set(hash, source);
+    const rows = parseCSV(sourcePath);
+    loaded.push({ source, rows });
+    console.log(`Loaded ${rows.length} records from ${source}`);
+  }
+  return { loaded, duplicateSources };
+}
 
 function parseCSV(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
@@ -118,53 +157,45 @@ function cleanText(val) {
 
 async function runImport() {
   const db = openDb();
-
-  const chinaFile = path.join(__dirname, '..', 'complementsMIA', 'AF_Daphine_new_companies_china.csv');
-  const commFile = path.join(__dirname, '..', 'complementsMIA', 'AFentreprises_communication.csv');
-  const blagomiraFile = path.join(__dirname, '..', 'complementsMIA', 'Blagomira_Petkova_groupe_avec_Thomas_Lin.csv');
-
-  const chinaRows = parseCSV(chinaFile);
-  const commRows = parseCSV(commFile);
-  const blagomiraRows = parseCSV(blagomiraFile);
-
-  console.log(`Loaded ${chinaRows.length} records from AF_Daphine_new_companies_china.csv`);
-  console.log(`Loaded ${commRows.length} records from AFentreprises_communication.csv`);
-  console.log(`Loaded ${blagomiraRows.length} records from Blagomira_Petkova_groupe_avec_Thomas_Lin.csv`);
-
-  const allRecords = [
-    ...chinaRows.map(r => ({ ...r, _source: 'AF_Daphine_new_companies_china.csv' })),
-    ...commRows.map(r => ({ ...r, _source: 'AFentreprises_communication.csv' })),
-    ...blagomiraRows.map(r => ({ ...r, _source: 'Blagomira_Petkova_groupe_avec_Thomas_Lin.csv' }))
-  ];
+  const { loaded, duplicateSources } = loadSources(getSourcePaths());
+  const allRecords = loaded.flatMap(({ source, rows }) => rows.map((record) => ({ ...record, _source: source })));
 
   // Snapshot existing enterprises
-  const existingEnterprises = await db.all('SELECT id, LOWER(TRIM(name)) as norm_name, name FROM enterprises');
-  const existingMap = new Map(existingEnterprises.map(e => [e.norm_name, e]));
+  const existingEnterprises = await db.all('SELECT id, name FROM enterprises');
+  const existingMap = new Map();
+  for (const enterprise of existingEnterprises) {
+    const key = normalizeKey(enterprise.name);
+    if (!existingMap.has(key)) existingMap.set(key, []);
+    existingMap.get(key).push(enterprise);
+  }
 
   const summary = {
     created: 0,
     updated: 0,
     skipped: 0,
+    ambiguous: 0,
     details: []
   };
-
-  const fieldsToInsert = [
-    'name', 'sector', 'organization_type', 'country', 'headquarter_city',
-    'founded_year', 'description', 'website', 'logo_url', 'capitalization',
-    'funds_raised', 'revenue_millions', 'profit_millions', 'rd_expenses_millions',
-    'capex_millions', 'employees_count', 'community_size', 'community_unit',
-    'main_investors', 'main_competitors', 'participation', 'main_acquisitions',
-    'key_resources', 'strategic_partnerships', 'is_validated', 'company_status',
-    'end_year', 'end_reason', 'sector_domains'
-  ];
 
   await withTransaction(db, async () => {
     for (const record of allRecords) {
       const companyName = cleanText(record.name);
       if (!companyName) continue;
 
-      const normName = companyName.toLowerCase();
-      const existing = existingMap.get(normName);
+      const normName = normalizeKey(companyName);
+      const matches = existingMap.get(normName) || [];
+      const existing = matches[0];
+
+      if (matches.length > 1) {
+        summary.ambiguous++;
+        summary.details.push({
+          action: 'ambiguous',
+          name: companyName,
+          source: record._source,
+          candidates: matches.map(({ id, name }) => ({ id, name })),
+        });
+        continue;
+      }
 
       const parsedData = {
         name: companyName,
@@ -192,7 +223,7 @@ async function runImport() {
         key_resources: cleanText(record.key_resources),
         strategic_partnerships: cleanText(record.strategic_partnerships),
         is_validated: parseIsValidated(record.is_validated),
-        company_status: cleanText(record.company_status) || 'Active',
+        company_status: cleanText(record.company_status),
         end_year: parseIntVal(record.end_year),
         end_reason: cleanText(record.end_reason),
         sector_domains: cleanText(record.sector_domains)
@@ -200,14 +231,21 @@ async function runImport() {
 
       if (!existing) {
         summary.created++;
-        summary.details.push(`[CREATE] ${companyName} (${parsedData.country || 'N/A'}) - ${record._source}`);
+        const decision = { action: 'created', name: companyName, source: record._source, fields: Object.keys(parsedData).filter((key) => parsedData[key] !== null) };
+        summary.details.push(decision);
         if (APPLY) {
           const keys = Object.keys(parsedData);
           const placeholders = keys.map(() => '?').join(', ');
           const sql = `INSERT INTO enterprises (${keys.join(', ')}, created_at, updated_at) VALUES (${placeholders}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)`;
           const params = keys.map(k => parsedData[k]);
-          await db.run(sql, params);
+          const result = await db.run(sql, params);
+          existingMap.set(normName, [{ id: result.lastID, name: companyName }]);
+        } else {
+          existingMap.set(normName, [{ id: null, name: companyName, pending: true }]);
         }
+      } else if (existing.pending) {
+        summary.skipped++;
+        summary.details.push({ action: 'skipped', name: companyName, source: record._source, reason: 'duplicate normalized name in input' });
       } else {
         // Check for non-destructive update (fill missing fields only)
         const dbRow = await db.get('SELECT * FROM enterprises WHERE id = ?', [existing.id]);
@@ -219,7 +257,7 @@ async function runImport() {
         }
         if (Object.keys(updateFields).length > 0) {
           summary.updated++;
-          summary.details.push(`[UPDATE] ${companyName} (ID ${existing.id}) - Fields: ${Object.keys(updateFields).join(', ')}`);
+          summary.details.push({ action: 'updated', id: existing.id, name: companyName, source: record._source, fields: Object.keys(updateFields) });
           if (APPLY) {
             const setClause = Object.keys(updateFields).map(k => `${k} = ?`).join(', ');
             const sql = `UPDATE enterprises SET ${setClause}, updated_at = CURRENT_TIMESTAMP WHERE id = ?`;
@@ -228,7 +266,7 @@ async function runImport() {
           }
         } else {
           summary.skipped++;
-          summary.details.push(`[SKIP] ${companyName} (ID ${existing.id}) - Already complete`);
+          summary.details.push({ action: 'skipped', id: existing.id, name: companyName, source: record._source, reason: 'already complete' });
         }
       }
     }
@@ -239,10 +277,18 @@ async function runImport() {
   console.log(`Created: ${summary.created}`);
   console.log(`Updated: ${summary.updated}`);
   console.log(`Skipped: ${summary.skipped}`);
+  console.log(`Ambiguous: ${summary.ambiguous}`);
   console.log('\nDetails:');
-  summary.details.forEach(d => console.log('  ' + d));
+  summary.details.forEach((decision) => console.log(`  [${decision.action.toUpperCase()}] ${decision.name} - ${decision.source}`));
+
+  writeAudit('af_complements_import_audit.json', {
+    sources: loaded.map(({ source, rows }) => ({ source, rows: rows.length })),
+    duplicate_sources: duplicateSources,
+    counts: { created: summary.created, updated: summary.updated, skipped: summary.skipped, ambiguous: summary.ambiguous },
+    decisions: summary.details,
+  });
 
   await db.close();
 }
 
-runImport().catch(console.error);
+main(runImport);

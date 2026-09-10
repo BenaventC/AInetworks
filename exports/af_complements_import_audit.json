@@ -1,0 +1,445 @@
+{
+  "generated_at": "2026-09-10T17:42:25.236Z",
+  "applied": false,
+  "sources": [
+    {
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "rows": 59
+    }
+  ],
+  "duplicate_sources": [
+    {
+      "source": "complementsMIA\\education_companies_Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "duplicate_of": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv"
+    }
+  ],
+  "counts": {
+    "created": 0,
+    "updated": 0,
+    "skipped": 58,
+    "ambiguous": 1
+  },
+  "decisions": [
+    {
+      "action": "skipped",
+      "id": 311,
+      "name": "aiomics",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2988,
+      "name": "Amboss",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 377,
+      "name": "Astrid Education",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 432,
+      "name": "Blended",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2989,
+      "name": "Brightwheel",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2990,
+      "name": "Brisk Teaching",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1983,
+      "name": "Cardiologs",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1979,
+      "name": "Chronolife",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1977,
+      "name": "Cibiltech",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2991,
+      "name": "ClassDojo",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 531,
+      "name": "CodeEasy AB",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2888,
+      "name": "Coursera",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2992,
+      "name": "Diffit",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2887,
+      "name": "Duolingo",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 664,
+      "name": "EdAider",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 667,
+      "name": "EdTools AB",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2993,
+      "name": "Eduaide.ai",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2994,
+      "name": "edX",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 670,
+      "name": "eKidz.eu",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 722,
+      "name": "FeedbackFruits",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 725,
+      "name": "Fictive Reality AB",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 758,
+      "name": "FruitPunch AI",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2995,
+      "name": "Gizmo",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 793,
+      "name": "Gyde",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 825,
+      "name": "Hypocampus AB",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 200,
+      "name": "iLearningEngines",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2889,
+      "name": "Kahoot!",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2996,
+      "name": "Khanmigo",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 885,
+      "name": "KIMO",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2997,
+      "name": "Lecturio",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 938,
+      "name": "Lexplore",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2998,
+      "name": "LinkedIn Learning",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 960,
+      "name": "Lumi Labs",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2999,
+      "name": "MagicSchool AI",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 995,
+      "name": "MemoryLab",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 117,
+      "name": "Mind Foundry",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1041,
+      "name": "Myracle.io",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "ambiguous",
+      "name": "Nebius Group",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "candidates": [
+        {
+          "id": 2161,
+          "name": "Nebius Group"
+        },
+        {
+          "id": 3421,
+          "name": "Nebius Group (Nebius)"
+        }
+      ]
+    },
+    {
+      "action": "skipped",
+      "id": 2916,
+      "name": "Oboe",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3000,
+      "name": "OnlineMedEd",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 79,
+      "name": "OpenEvidence",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3001,
+      "name": "Osmosis",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1156,
+      "name": "Parsd AB",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3002,
+      "name": "Picmonic",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3003,
+      "name": "Playlab",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3004,
+      "name": "Pluralsight",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2987,
+      "name": "Praktika",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3005,
+      "name": "Remind",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 2986,
+      "name": "Riiid",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3006,
+      "name": "Seesaw",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3007,
+      "name": "Skillshare",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1334,
+      "name": "Skoolie AB",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 153,
+      "name": "Speak",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1426,
+      "name": "The Simulation Crew",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1429,
+      "name": "Thinki",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1608,
+      "name": "Turi",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3008,
+      "name": "Udemy",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 1766,
+      "name": "University of Berlin",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    },
+    {
+      "action": "skipped",
+      "id": 3009,
+      "name": "UWorld",
+      "source": "complementsMIA\\Blagomira_Petkova_groupe_avec_Thomas_Lin.csv",
+      "reason": "already complete"
+    }
+  ]
+}

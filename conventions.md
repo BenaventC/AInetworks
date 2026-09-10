@@ -155,7 +155,7 @@ En cas de doute sur une information, renseigner `NA` plutôt qu'une valeur hypot
 - `Agentic` est un label distinct. Les autres variantes génériques d'IA (`Artificial Intelligence`, `AI`, `AI lab`, `Computer vision`, `Vision`, `Speech`) deviennent `AI model`.
 - `HR` et `Recruiting` deviennent `HRM`.
 - Les labels de type `Venture & ...`, `Venture and ...` et `Venture Capital &/and ...` deviennent `Venture Capital`.
-- La politique de consolidation entre `Marketing`, `Sales`, `CRM` et `Advertising` reste à définir avant toute réaffectation.
+- `CRM` est un alias de `Sales`. `Marketing` et `Advertising` restent des labels distincts.
 - Les placeholders de secteur (`N/A`, `NA`, `N`, `A`) sont supprimés. Si une fiche ne contient aucun autre label, `sector` doit être `NULL`.
 
 ### 5.1 Ontologie sectorielle à trois niveaux
@@ -274,12 +274,12 @@ Protocole appliqué à toute nouvelle liste (CB Insights, Forbes AI 50, annuaire
 1. **Comparer** les noms normalisés à la base avant toute écriture ; consigner les décisions `created`, `existing`, `ambiguous`.
 2. **Rechercher** les faits sur le web, source par source, et conserver `sources` et `confidence_notes` dans un fichier de travail sous `exports/research/`.
 3. **Créer** les fiches absentes avec `is_validated = 3` et les seuls champs confirmés ; laisser `NULL` le reste.
-4. **Appliquer** l'enrichissement dans une transaction, avec sauvegarde préalable de `database.db` dans `database_backups/`.
+4. **Appliquer** l'enrichissement dans une transaction. Sauvegarder préalablement `database.db` dans `database_backups/` pour un import massif, une fusion, une suppression ou le remplacement de valeurs existantes.
 5. **Contrôler** encodage, complétude, taxonomie sectorielle et géographie, puis normaliser avec `--aliases-only`.
 
 ### 6.1 Traçabilité des imports
 
-Chaque fiche importée porte dans sa `description` une ligne de provenance finale mentionnant la source et la catégorie d'origine. Cette ligne sert de marqueur de filtrage : combinée au segment `is_validated = 3`, elle permet d'isoler exactement le lot importé pour la revue manuelle.
+Chaque import conserve sa provenance, sa catégorie d'origine et ses décisions par champ dans un audit sous `exports/`. Les descriptions restent consacrées aux faits sur l'entité ; `is_validated = 3` permet d'isoler les fiches à revoir.
 
 ### 6.2 Structure des descriptions
 
@@ -306,9 +306,17 @@ Toute fiche créée automatiquement reçoit `3` tant qu'une vérification humain
 
 ---
 
-## 8. Prochaines sections à documenter
+## 8. Cycle de vie des entités
 
-- Règles de temporalité (dates d'acquisition, `end_year`)
+- `company_status = Active` implique que `end_year` et `end_reason` sont `NULL`.
+- Une entité terminée porte l'année du fait dans `end_year` et une raison contrôlée dans `end_reason`.
+- `Acquisition` correspond à `Acquired`; `Bankruptcy` à `Bankrupt`; `Merger` et `Closure` à `Inactive`.
+- Ne pas déduire un statut ou une année de fin sans source. En cas d'information incomplète, conserver `NULL` et consigner le cas pour revue.
+
+---
+
+## 9. Prochaines sections à documenter
+
 - Règles de relations et de partenariats
 - Règles de déduplication inter-tables
 - Extension du groupe `Business Model` au-delà de `SaaS`

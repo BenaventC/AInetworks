@@ -8,6 +8,7 @@ Use this checklist for a targeted enterprise or investor update. The database sc
 - [ ] Keep descriptions in English and use controlled sector labels.
 - [ ] Use `NULL` for unknown values; do not overwrite existing values with blanks.
 - [ ] Store monetary fields as numeric USD millions.
+- [ ] Back up the database for bulk or destructive changes and value replacements.
 - [ ] Preview the update and inspect the audit.
 - [ ] Apply inside a transaction.
 - [ ] Verify the written record and scan text for encoding errors.

@@ -79,4 +79,4 @@ For `investors`, classify `investor_type` first, then record `ownership`, minori
 
 ## Safety
 
-Create a database backup before destructive merges, deletions, or deduplication. For ordinary non-destructive imports, use the transaction and validation workflow above. Never treat a preview as an applied update.
+Create a database backup before bulk imports, destructive merges, deletions, deduplication, or replacement of existing values. For small non-destructive imports, use the transaction and validation workflow above. Never treat a preview as an applied update.

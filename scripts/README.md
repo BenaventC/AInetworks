@@ -17,7 +17,7 @@ Les scripts s'appuient sur quatre modules communs plutôt que de redupliquer leu
 
 ### Secteurs
 
-| Script | Écrit | Rôle |
+| Script | Modifie la DB | Rôle |
 |--------|:-----:|------|
 | `audit_sector_label_variants.js` | non | Inventaire des labels utilisés, détection des variantes morphologiques et des labels hors ontologie. Option `--min N`. |
 | `normalize_sector_labels.js` | oui | Normalise `sector`. `--aliases-only` fusionne les seuls alias déclarés (conservateur) ; sans le drapeau, la classification par mots-clés s'ajoute. |
@@ -26,17 +26,18 @@ Les scripts s'appuient sur quatre modules communs plutôt que de redupliquer leu
 
 ### Géographie et entités
 
-| Script | Écrit | Rôle |
+| Script | Modifie la DB | Rôle |
 |--------|:-----:|------|
 | `normalize_geo_english.js` | oui | Harmonise `country` et `headquarter_city` en anglais, convertit les placeholders en `NULL`. |
 | `infer_country_from_description.js` | oui | Déduit le pays manquant à partir de la description et de la ville. |
 | `normalize_all_entity_lists.js` | oui | Aligne les listes d'entités sur les noms canoniques de la table `enterprises`. |
 | `normalize_competitor_names.js` | oui | Déduplique et normalise `main_competitors`. |
 | `migrate_investors_from_enterprises.js` | oui | Déplace vers `investors` les fiches dont l'activité principale est de déployer du capital, en reportant les citations dans `participations`. Option `--ids` pour les cas hors `organization_type = 'Investor'`. |
+| `import_af_complements.js` | oui | Importe un ou plusieurs CSV passés avec `--source`, ignore les sources identiques et écrit un audit sous `exports/`. |
 
 ### Relations et enrichissement
 
-| Script | Écrit | Rôle |
+| Script | Modifie la DB | Rôle |
 |--------|:-----:|------|
 | `generate_relations_from_enterprises.py` | oui | Génère les relations depuis les champs texte de `enterprises`. |
 | `cleanup_generated_relation_targets.py` | oui | Nettoie les cibles générées. `--split-composites` désactivé par défaut. |
@@ -47,7 +48,7 @@ Les scripts s'appuient sur quatre modules communs plutôt que de redupliquer leu
 ## Conventions d'exécution
 
 - **Aperçu d'abord.** Les scripts d'écriture sont en mode aperçu par défaut ; ajouter `--apply` pour écrire.
-- **Sauvegarder** `database.db` dans `database_backups/` avant toute application massive.
+- **Sauvegarder** `database.db` dans `database_backups/` avant une application massive, une fusion, une suppression ou le remplacement de valeurs existantes.
 - Le chemin de la base est résolu depuis la racine du dépôt : les scripts fonctionnent quel que soit le répertoire courant.
 - Encodage UTF-8 en entrée comme en sortie ; valeurs stockées en base en anglais.
 - Montants en millions de dollars US pour `capitalization`, `funds_raised` et les champs suffixés `_millions`.

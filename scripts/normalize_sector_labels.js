@@ -40,6 +40,10 @@ const KEYWORD_RULES = [
   [/defen[cs]e|military/, 'Defence'],
 ];
 
+const CONSERVATIVE_RULES = [
+  [/^venture(?: capital)?\s*(?:&|and)\b/i, 'Venture Capital'],
+];
+
 /** Maps one raw label to zero or more canonical labels. */
 function classify(atom) {
   const text = atom.trim();
@@ -49,6 +53,9 @@ function classify(atom) {
   const value = text.toLowerCase();
   const alias = aliasToCanonical.get(value);
   if (alias) return [alias];
+  for (const [pattern, label] of CONSERVATIVE_RULES) {
+    if (pattern.test(text)) return [label];
+  }
   if (ALIASES_ONLY) return [text];
 
   const labels = new Set();
