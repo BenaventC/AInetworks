@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-09-09T13:53:21.122Z",
+  "applied": false,
+  "distinct_labels": 71,
+  "merges": [],
+  "orphans": [
+    [
+      "Sport",
+      4
+    ],
+    [
+      "LLM gateways",
+      1
+    ],
+    [
+      "Cosmetics",
+      1
+    ],
+    [
+      "Sovereign",
+      1
+    ],
+    [
+      "Bee",
+      1
+    ],
+    [
+      "Audit",
+      1
+    ],
+    [
+      "EDI",
+      1
+    ],
+    [
+      "Fashion",
+      1
+    ],
+    [
+      "Hair Care",
+      1
+    ],
+    [
+      "Search",
+      1
+    ],
+    [
+      "Conglomerate",
+      1
+    ],
+    [
+      "Communication",
+      1
+    ],
+    [
+      "Content moderation",
+      1
+    ],
+    [
+      "IT services",
+      1
+    ],
+    [
+      "Social simulation",
+      1
+    ],
+    [
+      "Meteo",
+      1
+    ]
+  ]
+}
