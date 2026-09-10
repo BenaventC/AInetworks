@@ -1,12 +1,36 @@
 {
-  "generated_at": "2026-09-09T13:53:21.122Z",
+  "generated_at": "2026-09-10T17:35:20.027Z",
   "applied": false,
-  "distinct_labels": 71,
+  "distinct_labels": 79,
   "merges": [],
   "orphans": [
     [
+      "Communication",
+      28
+    ],
+    [
+      "AI Automation",
+      7
+    ],
+    [
+      "AI Analytics",
+      5
+    ],
+    [
       "Sport",
       4
+    ],
+    [
+      "AI Optimization",
+      3
+    ],
+    [
+      "Search",
+      2
+    ],
+    [
+      "Creative Technology",
+      2
     ],
     [
       "LLM gateways",
@@ -41,15 +65,7 @@
       1
     ],
     [
-      "Search",
-      1
-    ],
-    [
       "Conglomerate",
-      1
-    ],
-    [
-      "Communication",
       1
     ],
     [
@@ -66,6 +82,22 @@
     ],
     [
       "Meteo",
+      1
+    ],
+    [
+      "AI Contextual",
+      1
+    ],
+    [
+      "Brand Safety",
+      1
+    ],
+    [
+      "Personalization",
+      1
+    ],
+    [
+      "AI Editing",
       1
     ]
   ]
