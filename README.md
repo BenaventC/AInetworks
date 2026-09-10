@@ -76,93 +76,9 @@ The application expects `database.db` to be present at the repository root. The 
 
 ## Analyses
 
-The [`analyses/`](analyses/) folder contains the notebooks used to explore the database from different perspectives. The reusable preparation and normalization scripts are grouped in [`scripts/`](scripts/).
+The [`analyses/`](analyses/) folder contains notebooks for competition mapping, semantic similarity, sector positioning, company statistics, and financial evolution. Their generated tables, maps, and images are available in [`analyses/exports/`](analyses/exports/).
 
-### Analysis Notebooks
-
-- [`competition_analysis.ipynb`](analyses/competition_analysis.ipynb): competition network, 2D positioning, communities, and map exports.
-- [`semantic_similarity_analysis.ipynb`](analyses/semantic_similarity_analysis.ipynb): semantic proximity from enterprise descriptions.
-- [`procrustes_alignment_analysis.ipynb`](analyses/procrustes_alignment_analysis.ipynb): alignment of competition and semantic spaces.
-- [`sector_positioning_ca.ipynb`](analyses/sector_positioning_ca.ipynb): sector positioning with correspondence analysis and UMAP.
-- [`statistiques_entreprises.ipynb`](analyses/statistiques_entreprises.ipynb): database coverage, quality, country, and sector statistics.
-- [`evolution_capitalisation_meta_google_nvidia.ipynb`](analyses/evolution_capitalisation_meta_google_nvidia.ipynb): capitalization evolution of major technology companies.
-- [`value_concentration.ipynb`](analyses/value_concentration.ipynb): cumulative capitalization concentration among the Top 200 enterprises.
-
-Notebook conventions and execution notes are documented in [`analyses/README.md`](analyses/README.md). Generated images are stored in [`analyses/exports/images/`](analyses/exports/images/), while tabular and interactive HTML exports remain in [`analyses/exports/`](analyses/exports/).
-
-### Analysis and Data Scripts
-
-The [`scripts/`](scripts/) directory contains reusable data preparation tools, including:
-
-- [`normalize_geo_english.js`](scripts/normalize_geo_english.js), [`normalize_sector_labels.js`](scripts/normalize_sector_labels.js), and [`normalize_partnership_types_english.js`](scripts/normalize_partnership_types_english.js): controlled-label normalization.
-- [`audit_sector_label_variants.js`](scripts/audit_sector_label_variants.js) and [`backfill_sector_domains.js`](scripts/backfill_sector_domains.js): sector ontology audit and derivation of the domain level.
-- [`normalize_all_entity_lists.js`](scripts/normalize_all_entity_lists.js) and [`normalize_competitor_names.js`](scripts/normalize_competitor_names.js): entity and competitor-name normalization.
-- [`generate_relations_from_enterprises.py`](scripts/generate_relations_from_enterprises.py) and [`cleanup_generated_relation_targets.py`](scripts/cleanup_generated_relation_targets.py): relation generation and cleanup.
-- [`enrich_relations_from_enterprises.js`](scripts/enrich_relations_from_enterprises.js) and [`enrich_top500_websites_logos.js`](scripts/enrich_top500_websites_logos.js): targeted enrichment utilities.
-- [`migrate_enterprises_investor_type_to_investors.js`](scripts/migrate_enterprises_investor_type_to_investors.js): reusable enterprise-to-investor migration with dry-run support.
-
-Scripts that modify data should be reviewed in dry-run or preview mode first, and their outputs should preserve the project conventions described in [`conventions.md`](conventions.md).
-
-### 1. Competition Analysis
-
-Notebook: `analyses/competition_analysis.ipynb`
-
-Goal: map company-competitor relationships and produce a fully 2D final community map.
-
-Current pipeline (simple view):
-- clean and normalize competitor names,
-- build a directed matrix (`company -> competitor`),
-- apply sample selection rules (exclude investor profiles and isolated companies),
-- project actors with 2D t-SNE,
-- detect Louvain communities on a 2D k-NN graph,
-- render multicolor blob communities with thematic labels (no company names in community labels).
-
-Main outputs in `analyses/exports/`:
-- `competitors_raw.csv`
-- `competitors_long.csv`
-- `competitors_aggregated.csv`
-- `cooccurrence_matrix.csv`
-- `coords_2d.csv`
-- `communities_kmeans_2d.csv`
-- `community_labels_short.csv`
-- `selection_audit_summary.csv`
-- `selection_audit_details.csv`
-- `competition_map_2d_kmeans.html`
-
-### 2. Semantic Similarity Analysis
-
-Notebook: `analyses/semantic_similarity_analysis.ipynb`
-
-Goal: measure semantic proximity between companies from textual descriptions using multilingual embeddings.
-
-Main filter: companies with valuation/funding > 100 and a non-empty description.
-
-Main outputs in `analyses/exports/`:
-- `semantic_raw.csv`
-- `semantic_distance_matrix.csv`
-- `semantic_coords_2d.csv`
-- `semantic_similarity_pairs.csv`
-- `semantic_similarity_map_2d.html`
-
-### 3. Procrustes Alignment of Both Spaces
-
-Notebook: `analyses/procrustes_alignment_analysis.ipynb`
-
-Goal: align competition and semantic spaces on common companies, then measure residual gaps per company.
-
-Main outputs in `analyses/exports/`:
-- `procrustes_aligned_positions.csv`
-- `procrustes_top_gaps.csv`
-- `procrustes_summary.csv`
-- `procrustes_robust_comparison.csv`
-
-### Recommended Execution Order
-
-1. `competition_analysis.ipynb`
-2. `semantic_similarity_analysis.ipynb`
-3. `procrustes_alignment_analysis.ipynb`
-
-This order ensures all required exports are available for cross-analysis.
+Detailed notebook conventions are documented in [`analyses/README.md`](analyses/README.md). Data preparation and maintenance utilities are grouped in [`scripts/`](scripts/), with project conventions described in [`conventions.md`](conventions.md).
 
 ## Dataset Construction Methodology
 
@@ -257,17 +173,7 @@ Sectors are described at three levels of granularity, all defined in a single ed
 
 The design goal is to **keep fine-grained labels while offering a coarse reading**. Rather than merging labels to simplify a chart, aggregate at the domain level.
 
-`enterprises.sector_domains` is a derived field, never entered by hand: the server recomputes it on every create and update, and [`scripts/backfill_sector_domains.js`](scripts/backfill_sector_domains.js) regenerates it after bulk imports or ontology edits.
-
-To reduce a label variant, add an alias in `alias_terms` instead of creating a new label, then run:
-
-```bash
-node scripts/audit_sector_label_variants.js                       # read-only inventory
-node scripts/normalize_sector_labels.js --aliases-only            # preview, conservative
-node scripts/normalize_sector_labels.js --aliases-only --apply    # write
-```
-
-The `--aliases-only` mode merges declared aliases only and leaves canonical labels untouched. Without the flag, keyword classification also applies and may reassign already-canonical labels.
+`enterprises.sector_domains` is a derived field maintained from the controlled sector vocabulary. The ontology and its aliases are defined in [`public/sector_ontology.csv`](public/sector_ontology.csv); the server keeps derived values aligned when data changes.
 
 ## Latest Updates
 
