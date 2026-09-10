@@ -216,6 +216,15 @@ The dataset is designed to evolve through focused contributions:
 - review and validation process for updates,
 - source traceability and change documentation.
 
+### 7. Further developments
+
+- Automation of the agentic search process with solutions like LinkUp (including a question index)
+- Development of a judge module
+- Database expansion through systematic processing of Competitors, Investors, and Partners fields
+- Processing of historical data
+- Graphical and statistical visualizations
+
+
 ## Disclaimer
 
 At this stage, the data is not yet complete or fully validated; this is an ongoing process focused on the 200 companies with the highest market capitalization and fundraising levels.
