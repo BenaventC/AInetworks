@@ -121,16 +121,20 @@ async function runImport() {
 
   const chinaFile = path.join(__dirname, '..', 'complementsMIA', 'AF_Daphine_new_companies_china.csv');
   const commFile = path.join(__dirname, '..', 'complementsMIA', 'AFentreprises_communication.csv');
+  const blagomiraFile = path.join(__dirname, '..', 'complementsMIA', 'Blagomira_Petkova_groupe_avec_Thomas_Lin.csv');
 
   const chinaRows = parseCSV(chinaFile);
   const commRows = parseCSV(commFile);
+  const blagomiraRows = parseCSV(blagomiraFile);
 
   console.log(`Loaded ${chinaRows.length} records from AF_Daphine_new_companies_china.csv`);
   console.log(`Loaded ${commRows.length} records from AFentreprises_communication.csv`);
+  console.log(`Loaded ${blagomiraRows.length} records from Blagomira_Petkova_groupe_avec_Thomas_Lin.csv`);
 
   const allRecords = [
     ...chinaRows.map(r => ({ ...r, _source: 'AF_Daphine_new_companies_china.csv' })),
-    ...commRows.map(r => ({ ...r, _source: 'AFentreprises_communication.csv' }))
+    ...commRows.map(r => ({ ...r, _source: 'AFentreprises_communication.csv' })),
+    ...blagomiraRows.map(r => ({ ...r, _source: 'Blagomira_Petkova_groupe_avec_Thomas_Lin.csv' }))
   ];
 
   // Snapshot existing enterprises
