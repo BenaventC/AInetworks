@@ -177,10 +177,9 @@ The design goal is to **keep fine-grained labels while offering a coarse reading
 
 ## Latest Updates
 
-- **Three-level sector ontology (Aug 2026)**: added the `domain` meta level (12 domains) and the derived `sector_domains` column. Sector label variants were reduced from 129 to 67 through alias merging, with no loss of granularity. The UI adds a domain filter and a domain badge on each card.
-- **CB Insights AI 100 2026 import**: 81 new companies researched from public sources and added with three-paragraph descriptions (history, value proposition, business model). Raw research including sources and confidence notes is kept in `exports/research/`.
-- **Data Explorer page** (`/data-explorer.html`): unified ranked list of enterprises and investors sorted by capitalization → funds raised → revenue, with country-coded names and hover tooltips.
-- **Investor table**: dedicated `investors` table with `capital_investi`, `participations`, `acquisitions`, and `investor_type`.
-- **Financial normalization**: all monetary fields are numeric, in USD millions.
-- **Descriptions**: systematic enrichment covering ~2 600 enterprises and ~160 investors; coverage exceeds 74% for country and ~90% for descriptions.
+- **Recent data enrichment (Sep 2026)**: imported and reviewed new sectoral datasets, including 59 education-related records from the Blagomira Petkova group, while preserving existing records and filling only missing fields.
+- **CB Insights AI 100 2026 import**: 81 new companies researched from public sources and added with traceable descriptions and source notes.
+- **Three-level sector ontology (Aug 2026)**: introduced labels, groups, and 12 domains, with derived `sector_domains` values and domain-based filtering in the UI.
+- **Investor data model**: added a dedicated `investors` table with investor type, invested capital, participations, and acquisitions.
+- **Exploration and data quality**: added the ranked Data Explorer and standardized financial values in USD millions, alongside systematic coverage improvements for company descriptions and countries.
 
