@@ -96,6 +96,7 @@ Les normalisations ponctuelles sont retirées après leur exécution. Conserver 
 - `scripts/normalize_geo_english.js` : normalise `country` et `headquarter_city` en anglais, corrige alias/typos et convertit les placeholders (`NA`, `N/A`, etc.) en vide (`NULL`).
 - `scripts/generate_relations_from_enterprises.py` : génère automatiquement des relations à partir des champs entreprise `main_investors`, `main_competitors`, `main_acquisitions`, `strategic_partnerships` (split par virgule), avec extraction optionnelle de date en parenthèses vers `start_date`.
 - `scripts/cleanup_generated_relation_targets.py` : nettoyage post-génération des entreprises cibles (correction d'alias/typos, suppression des valeurs invalides). Le split des noms composites est volontairement **désactivé par défaut** et activable via `--split-composites`.
+- `scripts/import_af_complements.js` : import réutilisable de listes CSV structurées, en mode aperçu par défaut et avec mise à jour non destructive via `--apply`.
 
 Exécution recommandée :
 
@@ -156,6 +157,19 @@ Appliquer ce protocole à toute nouvelle liste externe ou à toute source dériv
 2. Vérifier les doublons de clés normalisées, les pays hors vocabulaire anglais, les secteurs hors taxonomie et les caractères corrompus.
 3. Appliquer dans une transaction, puis produire les compteurs et un export CSV/JSON UTF-8 des décisions.
 4. Contrôler un échantillon des créations et mises à jour dans l'API ou directement en base.
+
+### 6. Vérifier et publier une mise à jour locale
+
+Pour toute modification durable de la base, le dossier local et `database.db` constituent la source de vérité :
+
+1. Inspecter les fichiers source, leur encodage et les doublons éventuels avant l'import.
+2. Exécuter l'import en aperçu, puis appliquer uniquement après vérification des compteurs et des décisions.
+3. Relancer l'aperçu après application : une opération correctement rejouable doit produire zéro nouvelle création et zéro nouvelle mise à jour.
+4. Exécuter `PRAGMA integrity_check` et contrôler les volumes principaux des tables avant publication.
+5. Vérifier `git status`, indexer uniquement les fichiers liés à la mise à jour et conserver les modifications utilisateur hors périmètre.
+6. Committer et pousser la base et les artefacts durables, puis confirmer que la branche locale est propre et synchronisée avec le dépôt distant.
+
+Ne pas conserver dans le skill les noms de fichiers, valeurs ou scripts créés pour un seul traitement. Une règle appartient au workflow réutilisable uniquement si elle s'applique à plusieurs imports ou enrichissements futurs.
 
 ## Import en Deux Phases : Recherche puis Application
 
